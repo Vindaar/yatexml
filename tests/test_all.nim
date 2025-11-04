@@ -616,6 +616,84 @@ suite "siunitx Tests":
     check result.isOk
     check "GW" in result.value
 
+suite "Shorthand Unit Notation Tests":
+  test "Simple shorthand - single unit":
+    let result = latexToMathML(r"\si{km}")
+    check result.isOk
+    check "km" in result.value
+
+  test "Shorthand matches longform - km":
+    let shorthand = latexToMathML(r"\si{km}")
+    let longform = latexToMathML(r"\si{\kilo\meter}")
+    check shorthand.isOk
+    check longform.isOk
+    # Both should produce "km"
+    check "km" in shorthand.value
+    check "km" in longform.value
+
+  test "Shorthand with dot separator":
+    let result = latexToMathML(r"\si{m.s}")
+    check result.isOk
+    check "<mi>m</mi>" in result.value
+    check "<mi>s</mi>" in result.value
+
+  test "Shorthand with prefix - millivolt":
+    let result = latexToMathML(r"\si{mV}")
+    check result.isOk
+    check "mV" in result.value
+
+  test "Shorthand with negative power":
+    let result = latexToMathML(r"\si{m.s^{-1}}")
+    check result.isOk
+    check "<mi>m</mi>" in result.value
+    check "/" in result.value
+    check "<mi>s</mi>" in result.value
+
+  test "Shorthand with negative power squared":
+    let result = latexToMathML(r"\si{m.s^{-2}}")
+    check result.isOk
+    check "<mi>m</mi>" in result.value
+    check "/" in result.value
+    check "s²" in result.value
+
+  test "Complex shorthand - force":
+    let result = latexToMathML(r"\si{kg.m.s^{-2}}")
+    check result.isOk
+    check "kg" in result.value
+    check "<mi>m</mi>" in result.value
+    check "/" in result.value
+    check "s²" in result.value
+
+  test "Shorthand with positive power":
+    let result = latexToMathML(r"\si{m^{2}}")
+    check result.isOk
+    check "m²" in result.value
+
+  test "Shorthand with \\SI command":
+    let result = latexToMathML(r"\SI{100}{mV}")
+    check result.isOk
+    check "100" in result.value
+    check "mV" in result.value
+    check "<mspace" in result.value
+
+  test "Shorthand multiple units with \\SI":
+    let result = latexToMathML(r"\SI{3.14}{kg.m.s^{-2}}")
+    check result.isOk
+    check "3.14" in result.value
+    check "kg" in result.value
+    check "m" in result.value
+    check "s²" in result.value
+
+  test "Shorthand with various prefixes":
+    let result = latexToMathML(r"\si{kHz}")
+    check result.isOk
+    check "kHz" in result.value
+
+  test "Shorthand mega prefix":
+    let result = latexToMathML(r"\si{MW}")
+    check result.isOk
+    check "MW" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

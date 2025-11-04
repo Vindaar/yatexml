@@ -8,7 +8,7 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 
 ## 📊 Implementation Status
 
-**Last Updated:** 2025-11-04 (Milestone 4 Update - siunitx Support)
+**Last Updated:** 2025-11-04 (Milestone 4.5 Update - Shorthand Unit Notation)
 **Current Phase:** Phase 1-5 Complete ✅
 
 ### Completed ✅
@@ -47,16 +47,17 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
   - ✅ SI prefixes (20 prefixes: yocto through yotta)
   - ✅ Unit operations (\per, \squared, \cubed, \tothe)
   - ✅ Unit composition (numerator/denominator with prefix support)
+  - ✅ **Shorthand notation** (e.g., \si{m.s^{-2}}, \si{mV.kg}) ⭐ NEW
 
 ### Not Started ⏳
 - **Phase 6:** Advanced features (macros, advanced error recovery)
 - **Phase 7:** Compile-time execution (partial - has issues with table initialization)
 
 ### Test Status
-- **Tests Passing:** 103/103 (99.0%)
-- **Test Count:** 102 passing + 1 skipped = 103 total
+- **Tests Passing:** 115/115 (99.1%)
+- **Test Count:** 114 passing + 1 skipped = 115 total
 - **Backends:** Both C and JS backends working ✅
-- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Text Mode, Spacing, Color, siunitx
+- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Text Mode, Spacing, Color, siunitx, Shorthand Units
 
 ---
 
@@ -579,6 +580,14 @@ Implicit (adjacent) or explicit:
 - Registered 4 unit operations: \per, \squared, \cubed, \tothe
 - Implemented `parseSIUnitExpr` helper function for parsing unit expressions
 - Implemented parsing logic for all three main commands with proper error handling
+- **⭐ NEW: Shorthand notation support**:
+  * Added `parseShorthandUnits` function (91 lines) for text-based unit notation
+  * Added `shorthandToUnit` and `shorthandToPrefix` helper functions
+  * Handles dot-separated units (e.g., "m.s" → meter × second)
+  * Handles prefix+unit combinations (e.g., "km" → kilo meter, "mV" → milli volt)
+  * Handles power notation with ^ (e.g., "s^{-2}" → per second squared)
+  * Supports multi-byte Unicode prefixes (μ for micro)
+  * Enhanced lexer to accept dot (.) as operator token for unit separation
 
 **MathML Generation** (src/yatexml/mathml_generator.nim):
 - Implemented `generateNum`: creates `<mn>` elements for formatted numbers
@@ -596,12 +605,21 @@ Implicit (adjacent) or explicit:
   * 3 tests for \SI command (basic, complex, with prefix)
   * 3 tests for derived units (newton, joule, watt)
   * 3 tests for prefixes (mega, milli, giga)
+  * 2 tests verifying shorthand vs longform equivalence
+- **⭐ NEW: Added 12 shorthand notation tests**:
+  * Simple shorthand (km, mV)
+  * Dot-separated units (m.s)
+  * Negative powers (m.s^{-1}, m.s^{-2})
+  * Positive powers (m^{2})
+  * Complex units (kg.m.s^{-2})
+  * With \SI command
+  * Prefix variations (kHz, MW)
 - All tests pass on both C and JS backends ✅
 
 **Test Results**:
-- 103 total tests (102 passing + 1 skipped)
-- 100% pass rate on both C and JS backends
-- Test coverage: All core siunitx features
+- 115 total tests (114 passing + 1 skipped)
+- 99.1% pass rate on both C and JS backends
+- Test coverage: All core siunitx features + shorthand notation
 
 ---
 
@@ -1117,12 +1135,21 @@ nim c -d:release tests/benchmark.nim
 - [x] Prefix handling correct (20 prefixes: yocto through yotta)
 - [x] Unit composition working (numerator/denominator with \per)
 - [x] Unit operations working (\per, \squared, \cubed, \tothe)
-- [x] 103 tests passing (99.0%)
+- [x] 115 tests passing (99.1%)
 - [x] Both C and JS backends fully functional
 - [x] Phase 5 100% complete ✅
 
+### Milestone 4.5: Shorthand Unit Notation ✅ COMPLETE
+- [x] Shorthand unit notation working: `\si{km}`, `\si{mV.kg}`, `\si{m.s^{-2}}`
+- [x] Dot-separated unit composition (m.s → m·s)
+- [x] Power notation with carets (^{2}, ^{-1}, ^{-2})
+- [x] Prefix+unit combinations (km, mV, MHz, etc.)
+- [x] Multi-byte Unicode support (μV for microvolt)
+- [x] Shorthand matches longform output (\si{km} ≡ \si{\kilo\meter})
+- [x] 12 new shorthand tests, all passing
+- [x] Works on both C and JS backends ✅
+
 ### Milestone 5: Polish (Weeks 11-14)
-- [ ] `siunitx` commands with shorthand units, like `\si{mV.kg}`, `\si{m.s^{-2}`
 - [ ] Support for unicode characters like `unicode-math`, e.g. `α + x`, `E = mc²`, ...
 - [ ] Additional environments (aligned, gather, split)
 - [ ] Good error messages

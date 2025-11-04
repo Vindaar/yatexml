@@ -388,6 +388,162 @@ proc cmdNameToSIPrefix(name: string): SIPrefixKind =
   of "yotta": pkYotta
   else: pkNone
 
+# Helper: Map shorthand unit string to SIUnitKind
+proc shorthandToUnit(s: string): SIUnitKind =
+  case s
+  of "m": ukMeter
+  of "s": ukSecond
+  of "kg": ukKilogram
+  of "g": ukGram
+  of "A": ukAmpere
+  of "K": ukKelvin
+  of "mol": ukMole
+  of "cd": ukCandela
+  of "Hz": ukHertz
+  of "N": ukNewton
+  of "Pa": ukPascal
+  of "J": ukJoule
+  of "W": ukWatt
+  of "C": ukCoulomb
+  of "V": ukVolt
+  of "F": ukFarad
+  of "Ω", "ohm": ukOhm
+  of "S": ukSiemens
+  of "Wb": ukWeber
+  of "T": ukTesla
+  of "H": ukHenry
+  of "lm": ukLumen
+  of "lx": ukLux
+  of "Bq": ukBecquerel
+  of "Gy": ukGray
+  of "Sv": ukSievert
+  else: ukMeter  # fallback
+
+# Helper: Map shorthand prefix character to SIPrefixKind
+proc shorthandToPrefix(c: char): SIPrefixKind =
+  case c
+  of 'y': pkYocto
+  of 'z': pkZepto
+  of 'a': pkAtto
+  of 'f': pkFemto
+  of 'p': pkPico
+  of 'n': pkNano
+  of 'u': pkMicro  # 'u' as ASCII fallback for micro (μ handled separately)
+  of 'm': pkMilli
+  of 'c': pkCenti
+  of 'd': pkDeci
+  of 'h': pkHecto
+  of 'k': pkKilo
+  of 'M': pkMega
+  of 'G': pkGiga
+  of 'P': pkPeta
+  of 'E': pkExa
+  of 'Z': pkZetta
+  of 'Y': pkYotta
+  else: pkNone
+
+# Helper: Map shorthand prefix string to SIPrefixKind (for multi-byte chars)
+proc shorthandStrToPrefix(s: string): SIPrefixKind =
+  if s.len == 1:
+    return shorthandToPrefix(s[0])
+  elif s == "μ":
+    return pkMicro
+  else:
+    return pkNone
+
+# Helper: Parse shorthand unit notation like "m.s^{-2}" or "mV.kg"
+proc parseShorthandUnits(s: string): tuple[numerator: seq[SIUnitComponent], denominator: seq[SIUnitComponent]] =
+  var numerator: seq[SIUnitComponent] = @[]
+  var denominator: seq[SIUnitComponent] = @[]
+
+  # Split by dots
+  let segments = s.split('.')
+
+  for segment in segments:
+    if segment.len == 0:
+      continue
+
+    var unitStr = segment
+    var power = 1
+
+    # Check for power notation: ^{n} or ^n
+    let caretPos = unitStr.find('^')
+    if caretPos >= 0:
+      var powerStr = unitStr[caretPos + 1 .. ^1]
+      unitStr = unitStr[0 ..< caretPos]
+
+      # Remove braces if present
+      if powerStr.startsWith("{") and powerStr.endsWith("}"):
+        powerStr = powerStr[1 .. ^2]
+
+      try:
+        power = parseInt(powerStr)
+      except:
+        power = 1
+
+    # Try to match known multi-character units first
+    var prefix = pkNone
+    var unit = ukMeter
+    var matched = false
+
+    # Check for multi-char units (kg, Hz, mol, cd, etc.)
+    if unitStr in ["kg", "Hz", "mol", "cd", "Pa", "Wb", "lm", "lx", "Bq", "Gy", "Sv"]:
+      unit = shorthandToUnit(unitStr)
+      matched = true
+    # Check for units with Ω
+    elif unitStr.contains("Ω") or unitStr == "ohm":
+      # Could be "mΩ" (milliohm) or just "Ω"
+      if unitStr.len > 2 and unitStr.endsWith("Ω"):  # mΩ, kΩ, etc. (Ω is 2 bytes)
+        let prefixPart = unitStr[0 .. ^3]  # Everything except Ω
+        prefix = shorthandStrToPrefix(prefixPart)
+        unit = ukOhm
+      elif unitStr == "Ω":
+        unit = ukOhm
+      else:
+        unit = ukOhm
+      matched = true
+    # Check for single-char units (m, s, g, A, K, V, W, C, F, S, T, H, N, J)
+    elif unitStr.len == 1:
+      unit = shorthandToUnit(unitStr)
+      matched = true
+    # Check for prefix + single-char unit (km, ms, mA, μV, etc.)
+    elif unitStr.len >= 2:
+      # Try different prefix lengths (for μ which is 2 bytes in UTF-8)
+      var prefixStr = ""
+      var unitPart = ""
+
+      # Check if starts with μ (2-byte UTF-8 character)
+      if unitStr.startsWith("μ"):
+        prefixStr = "μ"
+        unitPart = unitStr[2 .. ^1]
+      elif unitStr.len == 2:
+        prefixStr = $unitStr[0]
+        unitPart = $unitStr[1]
+      elif unitStr.len > 2:
+        # Could be prefix + multi-char unit
+        let possibleUnit = unitStr[1 .. ^1]
+        if possibleUnit in ["Hz", "Pa", "Wb", "lm", "lx", "Bq", "Gy", "Sv", "mol", "cd"]:
+          prefixStr = $unitStr[0]
+          unitPart = possibleUnit
+        else:
+          # Try as single-char prefix + single-char unit
+          prefixStr = $unitStr[0]
+          unitPart = $unitStr[1]
+
+      if unitPart.len > 0:
+        prefix = shorthandStrToPrefix(prefixStr)
+        unit = shorthandToUnit(unitPart)
+        matched = true
+
+    if matched:
+      let component = newSIUnitComponent(prefix, unit, abs(power))
+      if power < 0:
+        denominator.add(component)
+      else:
+        numerator.add(component)
+
+  result = (numerator: numerator, denominator: denominator)
+
 # Helper: Parse SI unit expression
 proc parseSIUnitExpr(stream: var TokenStream): Result[AstNode] =
   ## Parse a unit expression like \meter\per\second or \kilo\meter
@@ -474,8 +630,36 @@ proc parseSIUnitExpr(stream: var TokenStream): Result[AstNode] =
         # Unknown command, skip
         discard stream.advance()
     else:
-      # Non-command token, skip
-      discard stream.advance()
+      # Non-command token - could be shorthand notation
+      # Collect all text until right brace (including operators, numbers, ^, {, })
+      var shorthandStr = ""
+      var braceDepth = 0
+      while not stream.isAtEnd():
+        let t = stream.peek()
+
+        # Stop at right brace if we're at depth 0 (the closing brace of \si{...})
+        if t.kind == tkRightBrace and braceDepth == 0:
+          break
+
+        # Stop if we hit a command (unless it's inside braces for powers)
+        if t.kind == tkCommand and braceDepth == 0:
+          break
+
+        # Track brace depth for power notation like ^{-2}
+        if t.kind == tkLeftBrace:
+          braceDepth += 1
+        elif t.kind == tkRightBrace:
+          braceDepth -= 1
+
+        shorthandStr.add(t.value)
+        discard stream.advance()
+
+      # If we collected text, try to parse it as shorthand notation
+      if shorthandStr.len > 0:
+        let (shortNum, shortDenom) = parseShorthandUnits(shorthandStr)
+        numerator.add(shortNum)
+        denominator.add(shortDenom)
+        break  # Shorthand notation replaces the entire unit expression
 
   return ok(newSIUnit(numerator, denominator))
 

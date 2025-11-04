@@ -195,7 +195,7 @@ proc lex*(source: string): Result[seq[Token]] =
       discard lexer.advance()
       lexer.addToken(tkAmpersand, "&", startPos)
 
-    of '+', '-', '*', '/', '=', '<', '>':
+    of '+', '-', '*', '/', '=', '<', '>', '.':
       discard lexer.advance()
       lexer.addToken(tkOperator, $c, startPos)
 
