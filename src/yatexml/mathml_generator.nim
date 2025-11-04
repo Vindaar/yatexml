@@ -241,7 +241,30 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
       rowContent.add(tag("mtd", cellContent))
     tableContent.add(tag("mtr", rowContent))
 
-  let table = tag("mtable", tableContent)
+  # Determine column alignment based on environment type
+  var tableAttrs: seq[(string, string)] = @[]
+
+  case node.matrixType
+  of "align", "aligned":
+    # Alignment environments: alternate right/left for each & separator
+    # Standard pattern is: expr & = expr, so right-align first column, left-align second
+    if node.matrixRows.len > 0 and node.matrixRows[0].len > 0:
+      var colAlign = ""
+      for i in 0 ..< node.matrixRows[0].len:
+        if i > 0:
+          colAlign.add(" ")
+        colAlign.add(if i mod 2 == 0: "right" else: "left")
+      tableAttrs.add(("columnalign", colAlign))
+  of "gather", "gathered":
+    # Gather environments: center all equations
+    tableAttrs.add(("columnalign", "center"))
+  else:
+    discard  # Default alignment for matrices
+
+  let table = if tableAttrs.len > 0:
+                tag("mtable", tableContent, tableAttrs)
+              else:
+                tag("mtable", tableContent)
 
   # Add delimiters based on matrix type
   case node.matrixType
@@ -264,6 +287,9 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
   of "cases":
     let left = tag("mo", "{", [("fence", "true")])
     tag("mrow", left & table)
+  of "align", "aligned", "gather", "gathered":
+    # No delimiters for alignment environments
+    table
   else:
     table
 

@@ -111,6 +111,11 @@ echo equation
 - Determinant: `\begin{vmatrix} ... \end{vmatrix}`
 - Cases: `\begin{cases} ... \end{cases}`
 
+✅ **Alignment Environments**
+- Aligned equations: `\begin{align} ... \end{align}`, `\begin{aligned} ... \end{aligned}`
+- Gathered equations: `\begin{gather} ... \end{gather}`, `\begin{gathered} ... \end{gathered}`
+- Multi-line equations with `&` alignment points and `\\` line breaks
+
 ✅ **Text Mode**
 - `\text{text with spaces}` - Preserve whitespace
 
@@ -206,6 +211,21 @@ latexToMathML(r"\alpha + \beta = \gamma")
 ```nim
 latexToMathML(r"\sum_{i=0}^n i^2")
 # Generates MathML with proper limits positioning
+```
+
+### Alignment Environments
+
+```nim
+# Aligned equations with alignment points
+latexToMathML(r"\begin{aligned} a&=b+c \\ d+e&=f \end{aligned}")
+# Generates MathML with right/left column alignment
+
+# Centered equations
+latexToMathML(r"\begin{gather} x=1 \\ y=2 \\ z=3 \end{gather}")
+# Generates MathML with centered alignment
+
+# Complex expressions in aligned environment
+latexToMathML(r"\begin{aligned} x^2 + y^2 &= r^2 \\ \frac{a}{b} &= c \end{aligned}")
 ```
 
 ### User-Defined Macros

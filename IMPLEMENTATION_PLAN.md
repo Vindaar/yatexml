@@ -8,8 +8,8 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 
 ## 📊 Implementation Status
 
-**Last Updated:** 2025-11-04 (Milestone 6 Complete - Macro System)
-**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System)
+**Last Updated:** 2025-11-05 (Alignment Environments Complete)
+**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System), Alignment Environments Complete ✅
 
 ### Completed ✅
 - **Phase 1: Foundation & Architecture** - Complete (100%)
@@ -57,10 +57,10 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 - **Phase 7:** Compile-time execution (partial - has issues with table initialization)
 
 ### Test Status
-- **Tests Passing:** 155/156 (99.4%) ✅
-- **Test Count:** 155 passing + 1 skipped = 156 total
+- **Tests Passing:** 161/162 (99.4%) ✅
+- **Test Count:** 161 passing + 1 skipped = 162 total
 - **Backends:** Both C and JS backends working ✅
-- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Text Mode, Spacing, Color, siunitx, Shorthand Units, Unicode Characters, **Macro System** ⭐
+- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, **Alignment Environments** ⭐, Text Mode, Spacing, Color, siunitx, Shorthand Units, Unicode Characters, Macro System
 
 ---
 
@@ -406,6 +406,38 @@ Most commonly used features:
 - MathML: Generates `<mspace>` with width attribute
 - Testing: 7 tests covering all spacing commands and combinations
 
+#### 10.5. Alignment Environments ✅ COMPLETE
+- [x] `\begin{align}...\end{align}` - Multi-line aligned equations (with numbering in LaTeX, MathML doesn't handle numbering)
+- [x] `\begin{aligned}...\end{aligned}` - Aligned equations for use inside other environments
+- [x] `\begin{gather}...\end{gather}` - Centered equations (with numbering in LaTeX)
+- [x] `\begin{gathered}...\end{gathered}` - Centered equations for use inside other environments
+- [x] `&` for alignment points
+- [x] `\\` for line breaks
+- [x] Full expression support in cells (fractions, superscripts, etc.)
+
+**Implementation Details:**
+- Parser: Reuses `parseMatrixEnvironment()` with new environment names ("align", "aligned", "gather", "gathered")
+- MathML Generation:
+  * `align`/`aligned`: Generates `<mtable>` with `columnalign="right left right left..."` (alternating for each `&`)
+  * `gather`/`gathered`: Generates `<mtable>` with `columnalign="center"`
+  * No delimiters (unlike matrix environments)
+- Standard usage pattern for align: `expr & = expr \\` (right-align before &, left-align after)
+- Testing: 6 tests covering basic aligned, align, multiple columns, gather, gathered, and complex expressions
+
+**Usage Examples:**
+```latex
+\begin{aligned}
+  a &= b + c \\
+  d + e &= f
+\end{aligned}
+
+\begin{gather}
+  x = 1 \\
+  y = 2 \\
+  z = 3
+\end{gather}
+```
+
 #### 11. Vertical Layout ⏳ NOT STARTED
 - [ ] `\stackrel{above}{base}` - Stack symbols
 - [ ] `\overset{above}{base}` - Set above
@@ -449,13 +481,13 @@ Most commonly used features:
 - MathML: Generates `<mstyle>` with mathcolor attribute
 - Testing: 4 tests (simple textcolor, multiple colors, color command, nested colors)
 
-#### 15. Environments
-- `equation` - Numbered equation
-- `align`, `aligned` - Aligned equations
-- `gather`, `gathered` - Centered equations
-- `split` - Split equation
-- `multline` - Multi-line equation
-- `array` - Generic array
+#### 15. Environments ✅ PARTIAL (align/gather complete)
+- [ ] `equation` - Numbered equation (not implemented)
+- [x] `align`, `aligned` - Aligned equations ✅
+- [x] `gather`, `gathered` - Centered equations ✅
+- [ ] `split` - Split equation (not implemented)
+- [ ] `multline` - Multi-line equation (not implemented)
+- [ ] `array` - Generic array (not implemented)
 
 #### 16. Extensible Arrows
 - `\xrightarrow{text}` - Arrow with text above

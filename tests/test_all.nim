@@ -408,6 +408,73 @@ suite "Cases Environment Tests":
       pos = idx + 5
     check count == 3
 
+suite "Alignment Environment Tests":
+  test "Basic aligned environment":
+    let result = latexToMathML(r"\begin{aligned} a&=b+c \\ d+e&=f \end{aligned}")
+    check result.isOk
+    check "<mtable" in result.value
+    check "columnalign" in result.value
+    check "right" in result.value
+    check "left" in result.value
+    check "<mtr>" in result.value
+    check "<mtd>" in result.value
+
+  test "Align environment (same as aligned for MathML)":
+    let result = latexToMathML(r"\begin{align} x&=y+z \\ a&=b \end{align}")
+    check result.isOk
+    check "<mtable" in result.value
+    check "columnalign" in result.value
+    check "right" in result.value
+
+  test "Aligned with multiple columns":
+    let result = latexToMathML(r"\begin{aligned} x&=1 & y&=2 \\ a&=3 & b&=4 \end{aligned}")
+    check result.isOk
+    check "<mtable" in result.value
+    check "columnalign" in result.value
+    # Should have 4 columns (right left right left)
+    var count = 0
+    var pos = 0
+    # Count cells in first row
+    let firstRowStart = result.value.find("<mtr>")
+    let firstRowEnd = result.value.find("</mtr>", firstRowStart)
+    var searchPos = firstRowStart
+    while true:
+      let idx = result.value.find("<mtd>", searchPos)
+      if idx == -1 or idx >= firstRowEnd: break
+      count += 1
+      searchPos = idx + 5
+    check count == 4
+
+  test "Basic gather environment":
+    let result = latexToMathML(r"\begin{gather} a=b \\ c=d \\ e=f \end{gather}")
+    check result.isOk
+    check "<mtable" in result.value
+    check "columnalign" in result.value
+    check "center" in result.value
+    # Should have 3 rows
+    var count = 0
+    var pos = 0
+    while true:
+      let idx = result.value.find("<mtr>", pos)
+      if idx == -1: break
+      count += 1
+      pos = idx + 5
+    check count == 3
+
+  test "Gathered environment (same as gather for MathML)":
+    let result = latexToMathML(r"\begin{gathered} x+y \\ a-b \end{gathered}")
+    check result.isOk
+    check "<mtable" in result.value
+    check "columnalign" in result.value
+    check "center" in result.value
+
+  test "Aligned with complex expressions":
+    let result = latexToMathML(r"\begin{aligned} x^2 + y^2 &= r^2 \\ \frac{a}{b} &= c \end{aligned}")
+    check result.isOk
+    check "<mtable" in result.value
+    check "<msup>" in result.value  # Superscripts
+    check "<mfrac>" in result.value  # Fraction
+
 suite "Text Mode Tests":
   test "Simple text":
     let result = latexToMathML(r"\text{hello world}")

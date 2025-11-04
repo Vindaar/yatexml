@@ -1090,8 +1090,9 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           if not closeResult.isOk:
             return err[AstNode](ekMismatchedBraces, "Expected } after environment name", nameToken.position)
 
-          # Check if it's a matrix environment
-          if envName in ["matrix", "pmatrix", "bmatrix", "vmatrix", "Vmatrix", "cases"]:
+          # Check if it's a matrix or alignment environment
+          if envName in ["matrix", "pmatrix", "bmatrix", "vmatrix", "Vmatrix", "cases",
+                         "align", "aligned", "gather", "gathered"]:
             return parseMatrixEnvironment(stream, envName)
           else:
             return err[AstNode](ekInvalidCommand, "Unknown environment: " & envName, token.position)
