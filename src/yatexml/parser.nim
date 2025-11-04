@@ -53,6 +53,13 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["star"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["circ"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["bullet"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["oplus"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["otimes"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ominus"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["cup"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["cap"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["wedge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vee"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Relations
   result["ne"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -70,6 +77,12 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["rightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["in"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["notin"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["subset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["supset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["subseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["supseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -92,14 +105,23 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["widetilde"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["overline"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["underline"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["overbrace"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["underbrace"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["overrightarrow"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["overleftarrow"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
 
   # Big operators
   result["sum"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["prod"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["int"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["iint"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["iiint"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["oint"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["lim"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["max"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["min"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigcup"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigcap"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
 
   # Functions
   result["sin"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
@@ -112,6 +134,16 @@ proc initCommandTable(): Table[string, CommandInfo] =
   # Delimiters
   result["left"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
   result["right"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["langle"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["rangle"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["lbrace"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["rbrace"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["lfloor"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["rfloor"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["lceil"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["rceil"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["{"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+  result["}"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
 
 let commandTable = initCommandTable()
 
@@ -199,6 +231,19 @@ proc operatorToUnicode(name: string): string =
   of "to", "rightarrow": "\u2192"
   of "leftarrow": "\u2190"
   of "leftrightarrow": "\u2194"
+  of "oplus": "\u2295"
+  of "otimes": "\u2297"
+  of "ominus": "\u2296"
+  of "cup": "\u222A"
+  of "cap": "\u2229"
+  of "wedge": "\u2227"
+  of "vee": "\u2228"
+  of "in": "\u2208"
+  of "notin": "\u2209"
+  of "subset": "\u2282"
+  of "supset": "\u2283"
+  of "subseteq": "\u2286"
+  of "supseteq": "\u2287"
   else: name
 
 # Parser implementation
@@ -310,6 +355,10 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           of "widetilde": akWidetilde
           of "overline": akOverline
           of "underline": akUnderline
+          of "overbrace": akOverbrace
+          of "underbrace": akUnderbrace
+          of "overrightarrow": akOverrightarrow
+          of "overleftarrow": akOverleftarrow
           else: akHat
 
         let argResult = parseGroup(stream)
@@ -322,6 +371,11 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           of "sum": boSum
           of "prod": boProd
           of "int": boInt
+          of "iint": boIInt
+          of "iiint": boIIInt
+          of "oint": boOint
+          of "bigcup": boUnion
+          of "bigcap": boIntersect
           of "lim": boLim
           of "max": boMax
           of "min": boMin
@@ -351,6 +405,109 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
       of ctFunction:
         # Function name becomes identifier in roman style
         return ok(newFunction(cmdName, nil))
+
+      of ctDelimiter:
+        # Handle \left and \right delimiters
+        if cmdName == "left":
+          # Parse the delimiter token
+          let delimToken = stream.peek()
+          var leftDelim: string
+
+          case delimToken.kind
+          of tkLeftParen:
+            discard stream.advance()
+            leftDelim = "("
+          of tkLeftBracket:
+            discard stream.advance()
+            leftDelim = "["
+          of tkLeftVert:
+            discard stream.advance()
+            leftDelim = "|"
+          of tkOperator:
+            if delimToken.value == "{":
+              discard stream.advance()
+              leftDelim = "{"
+            elif delimToken.value == "}":
+              discard stream.advance()
+              leftDelim = "}"
+            else:
+              return err[AstNode](ekInvalidArgument, "Invalid left delimiter: " & delimToken.value, delimToken.position)
+          of tkCommand:
+            discard stream.advance()
+            case delimToken.value
+            of "lbrace", "{": leftDelim = "{"
+            of "rbrace", "}": leftDelim = "}"
+            of "langle": leftDelim = "⟨"
+            of "rangle": leftDelim = "⟩"
+            of "lfloor": leftDelim = "⌊"
+            of "rfloor": leftDelim = "⌋"
+            of "lceil": leftDelim = "⌈"
+            of "rceil": leftDelim = "⌉"
+            else:
+              return err[AstNode](ekInvalidArgument, "Unknown left delimiter: \\" & delimToken.value, delimToken.position)
+          else:
+            return err[AstNode](ekInvalidArgument, "Expected delimiter after \\left", delimToken.position)
+
+          # Parse the content
+          let contentResult = parseExpression(stream)
+          if not contentResult.isOk:
+            return err[AstNode](contentResult.error)
+
+          # Expect \right
+          let rightCmdToken = stream.peek()
+          if rightCmdToken.kind != tkCommand or rightCmdToken.value != "right":
+            return err[AstNode](ekMismatchedBraces, "Expected \\right after \\left", rightCmdToken.position)
+          discard stream.advance()
+
+          # Parse the right delimiter token
+          let rightDelimToken = stream.peek()
+          var rightDelim: string
+
+          case rightDelimToken.kind
+          of tkRightParen:
+            discard stream.advance()
+            rightDelim = ")"
+          of tkRightBracket:
+            discard stream.advance()
+            rightDelim = "]"
+          of tkLeftVert, tkRightVert:
+            discard stream.advance()
+            rightDelim = "|"
+          of tkOperator:
+            if rightDelimToken.value == "{":
+              discard stream.advance()
+              rightDelim = "{"
+            elif rightDelimToken.value == "}":
+              discard stream.advance()
+              rightDelim = "}"
+            else:
+              return err[AstNode](ekInvalidArgument, "Invalid right delimiter: " & rightDelimToken.value, rightDelimToken.position)
+          of tkCommand:
+            discard stream.advance()
+            case rightDelimToken.value
+            of "rbrace", "}": rightDelim = "}"
+            of "lbrace", "{": rightDelim = "{"
+            of "rangle": rightDelim = "⟩"
+            of "langle": rightDelim = "⟨"
+            of "rfloor": rightDelim = "⌋"
+            of "lfloor": rightDelim = "⌊"
+            of "rceil": rightDelim = "⌉"
+            of "lceil": rightDelim = "⌈"
+            else:
+              return err[AstNode](ekInvalidArgument, "Unknown right delimiter: \\" & rightDelimToken.value, rightDelimToken.position)
+          else:
+            return err[AstNode](ekInvalidArgument, "Expected delimiter after \\right", rightDelimToken.position)
+
+          return ok(newDelimited(leftDelim, rightDelim, contentResult.value))
+        else:
+          return err[AstNode](ekInvalidCommand, "\\right must be paired with \\left", token.position)
+
+      of ctMatrix:
+        return err[AstNode](
+          ekInvalidCommand,
+          "Matrix environments not yet implemented",
+          token.position
+        )
 
       else:
         return err[AstNode](
@@ -434,6 +591,10 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
         not stream.match(tkRightBrace) and
         not stream.match(tkRightParen) and
         not stream.match(tkRightBracket):
+
+    # Stop if we encounter \right (for delimiter parsing)
+    if stream.match(tkCommand) and stream.peek().value == "right":
+      break
 
     let primResult = parsePrimary(stream)
     if not primResult.isOk:

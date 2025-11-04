@@ -187,6 +187,150 @@ suite "Error Handling Tests":
     # Should not crash, might parse as identifier
     check result.isOk or result.isErr
 
+suite "Delimiter Tests":
+  test "Left-right delimiters: parentheses":
+    let result = latexToMathML(r"\left( x \right)")
+    check result.isOk
+    check "(" in result.value and ")" in result.value
+
+  test "Left-right delimiters: brackets":
+    let result = latexToMathML(r"\left[ x \right]")
+    check result.isOk
+    check result.value.len > 0
+
+  test "Left-right delimiters: braces":
+    let result = latexToMathML(r"\left\{ x \right\}")
+    check result.isOk
+    check result.value.len > 0
+
+  test "Left-right delimiters: angle brackets":
+    let result = latexToMathML(r"\left\langle x \right\rangle")
+    check result.isOk
+    check result.value.len > 0
+
+  test "Left-right delimiters: pipes":
+    let result = latexToMathML(r"\left| x \right|")
+    check result.isOk
+    check result.value.len > 0
+
+suite "Binary Operator Tests":
+  test "Circled operators: oplus":
+    let result = latexToMathML(r"a \oplus b")
+    check result.isOk
+    check "\u2295" in result.value  # ⊕
+
+  test "Circled operators: otimes":
+    let result = latexToMathML(r"a \otimes b")
+    check result.isOk
+    check "\u2297" in result.value  # ⊗
+
+  test "Circled operators: ominus":
+    let result = latexToMathML(r"a \ominus b")
+    check result.isOk
+    check "\u2296" in result.value  # ⊖
+
+  test "Set operators: cup":
+    let result = latexToMathML(r"A \cup B")
+    check result.isOk
+    check "\u222A" in result.value  # ∪
+
+  test "Set operators: cap":
+    let result = latexToMathML(r"A \cap B")
+    check result.isOk
+    check "\u2229" in result.value  # ∩
+
+  test "Logic operators: wedge":
+    let result = latexToMathML(r"p \wedge q")
+    check result.isOk
+    check "\u2227" in result.value  # ∧
+
+  test "Logic operators: vee":
+    let result = latexToMathML(r"p \vee q")
+    check result.isOk
+    check "\u2228" in result.value  # ∨
+
+suite "Set Relation Tests":
+  test "Set membership: in":
+    let result = latexToMathML(r"x \in A")
+    check result.isOk
+    check "\u2208" in result.value  # ∈
+
+  test "Set membership: notin":
+    let result = latexToMathML(r"x \notin B")
+    check result.isOk
+    check "\u2209" in result.value  # ∉
+
+  test "Subset relation: subset":
+    let result = latexToMathML(r"A \subset B")
+    check result.isOk
+    check "\u2282" in result.value  # ⊂
+
+  test "Superset relation: supset":
+    let result = latexToMathML(r"A \supset B")
+    check result.isOk
+    check "\u2283" in result.value  # ⊃
+
+  test "Subset or equal: subseteq":
+    let result = latexToMathML(r"A \subseteq B")
+    check result.isOk
+    check "\u2286" in result.value  # ⊆
+
+  test "Superset or equal: supseteq":
+    let result = latexToMathML(r"A \supseteq B")
+    check result.isOk
+    check "\u2287" in result.value  # ⊇
+
+suite "Multiple Integral Tests":
+  test "Double integral: iint":
+    let result = latexToMathML(r"\iint f")
+    check result.isOk
+    check "\u222C" in result.value  # ∬
+
+  test "Triple integral: iiint":
+    let result = latexToMathML(r"\iiint g")
+    check result.isOk
+    check "\u222D" in result.value  # ∭
+
+  test "Contour integral: oint":
+    let result = latexToMathML(r"\oint_C h")
+    check result.isOk
+    check "\u222E" in result.value  # ∮
+
+  test "Big union: bigcup":
+    let result = latexToMathML(r"\bigcup_{i=1}^n A_i")
+    check result.isOk
+    check "\u22C3" in result.value  # ⋃
+
+  test "Big intersection: bigcap":
+    let result = latexToMathML(r"\bigcap_{i=1}^n B_i")
+    check result.isOk
+    check "\u22C2" in result.value  # ⋂
+
+suite "Extensible Accent Tests":
+  test "Overbrace":
+    let result = latexToMathML(r"\overbrace{x+y}")
+    check result.isOk
+    check "<mover>" in result.value
+    check "\u23DE" in result.value  # ⏞
+
+  test "Underbrace":
+    let result = latexToMathML(r"\underbrace{a+b}")
+    check result.isOk
+    check "<munder>" in result.value
+    check "\u23DF" in result.value  # ⏟
+
+  test "Overrightarrow":
+    let result = latexToMathML(r"\overrightarrow{AB}")
+    check result.isOk
+    check "<mover>" in result.value
+    check "\u2192" in result.value  # →
+
+  test "Overleftarrow":
+    let result = latexToMathML(r"\overleftarrow{BA}")
+    check result.isOk
+    check "<mover>" in result.value
+    check "\u2190" in result.value  # ←
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)
