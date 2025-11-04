@@ -11,7 +11,7 @@ import tables, strutils
 type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
-    ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText
+    ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText, ctSpace, ctColor
 
   CommandInfo = object
     cmdType: CommandType
@@ -151,6 +151,18 @@ proc initCommandTable(): Table[string, CommandInfo] =
 
   # Text mode
   result["text"] = CommandInfo(cmdType: ctText, numArgs: 1)
+
+  # Spacing commands
+  result["quad"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+  result["qquad"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+  result[","] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+  result[":"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+  result[";"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+  result["!"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+
+  # Color commands
+  result["textcolor"] = CommandInfo(cmdType: ctColor, numArgs: 2)
+  result["color"] = CommandInfo(cmdType: ctColor, numArgs: 1)
 
 let commandTable = initCommandTable()
 
@@ -593,6 +605,67 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           return err[AstNode](ekMismatchedBraces, "Expected } after text content", token.position)
 
         return ok(newText(textContent))
+
+      of ctSpace:
+        # Parse spacing commands
+        # Map command name to MathML width specification
+        let width = case cmdName
+          of "quad": "1em"
+          of "qquad": "2em"
+          of ",": "0.1667em"    # thin space (3/18 em)
+          of ":": "0.2222em"    # medium space (4/18 em)
+          of ";": "0.2778em"    # thick space (5/18 em)
+          of "!": "-0.1667em"   # negative thin space (-3/18 em)
+          else: "0.5em"         # default
+
+        return ok(newSpace(width))
+
+      of ctColor:
+        # Parse color commands: \textcolor{color}{content} or \color{color}
+        if cmdName == "textcolor":
+          # \textcolor{color}{content}
+          # First argument: color name
+          let colorBraceResult = stream.expect(tkLeftBrace)
+          if not colorBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\textcolor", token.position)
+
+          var colorName = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let colorToken = stream.advance()
+            colorName.add(colorToken.value)
+
+          let colorCloseResult = stream.expect(tkRightBrace)
+          if not colorCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after color name", token.position)
+
+          # Second argument: content to color
+          let contentResult = parseGroup(stream)
+          if not contentResult.isOk:
+            return err[AstNode](contentResult.error)
+
+          return ok(newColor(colorName, contentResult.value))
+
+        else:  # \color{color}
+          # \color{color} - colors all following content
+          let colorBraceResult = stream.expect(tkLeftBrace)
+          if not colorBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\color", token.position)
+
+          var colorName = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let colorToken = stream.advance()
+            colorName.add(colorToken.value)
+
+          let colorCloseResult = stream.expect(tkRightBrace)
+          if not colorCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after color name", token.position)
+
+          # Parse rest of expression with this color
+          let contentResult = parseExpression(stream)
+          if not contentResult.isOk:
+            return err[AstNode](contentResult.error)
+
+          return ok(newColor(colorName, contentResult.value))
 
       else:
         return err[AstNode](

@@ -434,6 +434,76 @@ suite "Text Mode Tests":
       pos = idx + 7
     check count == 2
 
+suite "Spacing Command Tests":
+  test "Quad spacing":
+    let result = latexToMathML(r"a \quad b")
+    check result.isOk
+    check "<mspace" in result.value
+    check "1em" in result.value
+
+  test "Qquad spacing":
+    let result = latexToMathML(r"x \qquad y")
+    check result.isOk
+    check "<mspace" in result.value
+    check "2em" in result.value
+
+  test "Thin space":
+    let result = latexToMathML(r"a \, b")
+    check result.isOk
+    check "<mspace" in result.value
+    check "0.1667em" in result.value
+
+  test "Medium space":
+    let result = latexToMathML(r"a \: b")
+    check result.isOk
+    check "<mspace" in result.value
+    check "0.2222em" in result.value
+
+  test "Thick space":
+    let result = latexToMathML(r"a \; b")
+    check result.isOk
+    check "<mspace" in result.value
+    check "0.2778em" in result.value
+
+  test "Negative thin space":
+    let result = latexToMathML(r"a \! b")
+    check result.isOk
+    check "<mspace" in result.value
+    check "-0.1667em" in result.value
+
+  test "Multiple spaces in expression":
+    let result = latexToMathML(r"x^2 \quad + \quad y^2 \; = \; z^2")
+    check result.isOk
+    check "<mspace" in result.value
+    check "1em" in result.value
+    check "0.2778em" in result.value
+
+suite "Color Tests":
+  test "Textcolor with simple expression":
+    let result = latexToMathML(r"\textcolor{red}{x^2}")
+    check result.isOk
+    check "<mstyle" in result.value
+    check "mathcolor" in result.value
+    check "red" in result.value
+
+  test "Textcolor with multiple colors":
+    let result = latexToMathML(r"\textcolor{blue}{a} + \textcolor{green}{b}")
+    check result.isOk
+    check "blue" in result.value
+    check "green" in result.value
+
+  test "Color command":
+    let result = latexToMathML(r"\color{red}x + y")
+    check result.isOk
+    check "mathcolor" in result.value
+    check "red" in result.value
+
+  test "Nested color":
+    let result = latexToMathML(r"\textcolor{blue}{\textcolor{red}{x}}")
+    check result.isOk
+    check "blue" in result.value
+    check "red" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)
