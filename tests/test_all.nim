@@ -698,6 +698,227 @@ suite "Shorthand Unit Notation Tests":
     check result.isOk
     check "MW" in result.value
 
+suite "Unicode Character Support Tests":
+  test "Greek letters - lowercase alpha":
+    let result = latexToMathML("α + x")
+    check result.isOk
+    check "α" in result.value
+    check "<mi>" in result.value
+
+  test "Greek letters - multiple":
+    let result = latexToMathML("α + β + γ")
+    check result.isOk
+    check "α" in result.value
+    check "β" in result.value
+    check "γ" in result.value
+
+  test "Greek letters - uppercase":
+    let result = latexToMathML("Δ = Σ")
+    check result.isOk
+    check "Δ" in result.value
+    check "Σ" in result.value
+
+  test "Greek letters - variants":
+    let result = latexToMathML("ε vs ϵ")
+    check result.isOk
+    check "ε" in result.value
+    check "ϵ" in result.value
+
+  test "Binary operators - times":
+    let result = latexToMathML("a × b")
+    check result.isOk
+    check "×" in result.value
+
+  test "Binary operators - div and pm":
+    let result = latexToMathML("a ÷ b ± c")
+    check result.isOk
+    check "÷" in result.value
+    check "±" in result.value
+
+  test "Binary operators - circled":
+    let result = latexToMathML("a ⊕ b ⊗ c")
+    check result.isOk
+    check "⊕" in result.value
+    check "⊗" in result.value
+
+  test "Binary operators - set operations":
+    let result = latexToMathML("A ∪ B ∩ C")
+    check result.isOk
+    check "∪" in result.value
+    check "∩" in result.value
+
+  test "Relations - inequalities":
+    let result = latexToMathML("x ≤ y ≥ z")
+    check result.isOk
+    check "≤" in result.value
+    check "≥" in result.value
+
+  test "Relations - not equal and approx":
+    let result = latexToMathML("a ≠ b ≈ c")
+    check result.isOk
+    check "≠" in result.value
+    check "≈" in result.value
+
+  test "Relations - set membership":
+    let result = latexToMathML("x ∈ A, y ∉ B")
+    check result.isOk
+    check "∈" in result.value
+    check "∉" in result.value
+
+  test "Relations - subset":
+    let result = latexToMathML("A ⊂ B ⊆ C")
+    check result.isOk
+    check "⊂" in result.value
+    check "⊆" in result.value
+
+  test "Relations - arrows":
+    let result = latexToMathML("x → y ← z ⇒ w")
+    check result.isOk
+    check "→" in result.value
+    check "←" in result.value
+    check "⇒" in result.value
+
+  test "Superscript - squared":
+    let result = latexToMathML("x²")
+    check result.isOk
+    check "<msup>" in result.value
+    check "2" in result.value
+
+  test "Superscript - cubed":
+    let result = latexToMathML("x³")
+    check result.isOk
+    check "<msup>" in result.value
+    check "3" in result.value
+
+  test "Superscript - multiple":
+    let result = latexToMathML("a² + b³")
+    check result.isOk
+    check "<msup>" in result.value
+    check "2" in result.value
+    check "3" in result.value
+
+  test "Subscript - single":
+    let result = latexToMathML("x₀")
+    check result.isOk
+    check "<msub>" in result.value
+    check "0" in result.value
+
+  test "Subscript - multiple":
+    let result = latexToMathML("a₁ + a₂ + a₃")
+    check result.isOk
+    check "<msub>" in result.value
+    check "1" in result.value
+    check "2" in result.value
+    check "3" in result.value
+
+  test "Big operators - sum":
+    let result = latexToMathML("∑ x")
+    check result.isOk
+    check "∑" in result.value
+    check "<mo" in result.value
+
+  test "Big operators - product and integral":
+    let result = latexToMathML("∏ ∫")
+    check result.isOk
+    check "∏" in result.value
+    check "∫" in result.value
+
+  test "Big operators - multiple integrals":
+    let result = latexToMathML("∬ ∭")
+    check result.isOk
+    check "∬" in result.value
+    check "∭" in result.value
+
+  test "Big operators - union and intersection":
+    let result = latexToMathML("⋃ ⋂")
+    check result.isOk
+    check "⋃" in result.value
+    check "⋂" in result.value
+
+  test "Mathematical symbols - infinity":
+    let result = latexToMathML("x → ∞")
+    check result.isOk
+    check "∞" in result.value
+
+  test "Mathematical symbols - partial and nabla":
+    let result = latexToMathML("∂f = ∇·v")
+    check result.isOk
+    check "∂" in result.value
+    check "∇" in result.value
+
+  test "Mathematical symbols - forall and exists":
+    let result = latexToMathML("∀x ∃y")
+    check result.isOk
+    check "∀" in result.value
+    check "∃" in result.value
+
+  test "Mathematical symbols - empty set":
+    let result = latexToMathML("A = ∅")
+    check result.isOk
+    check "∅" in result.value
+
+  test "Mathematical symbols - ellipsis":
+    let result = latexToMathML("1, 2, …, n")
+    check result.isOk
+    check "…" in result.value
+
+  test "Complex expression - Pythagorean theorem with Unicode":
+    let result = latexToMathML("a² + b² = c²")
+    check result.isOk
+    check "<msup>" in result.value
+    check "2" in result.value
+
+  test "Complex expression - quadratic formula with Unicode":
+    let result = latexToMathML("x = (-b ± √{b² - 4ac}) ÷ 2a")
+    check result.isOk
+    check "±" in result.value
+    check "÷" in result.value
+    check "<msqrt>" in result.value
+
+  test "Complex expression - Greek with operators":
+    let result = latexToMathML("α × β + γ ÷ δ")
+    check result.isOk
+    check "α" in result.value
+    check "β" in result.value
+    check "γ" in result.value
+    check "δ" in result.value
+    check "×" in result.value
+    check "÷" in result.value
+
+  test "Complex expression - set theory":
+    let result = latexToMathML("A ∪ B ⊂ C, x ∈ A")
+    check result.isOk
+    check "∪" in result.value
+    check "⊂" in result.value
+    check "∈" in result.value
+
+  test "Complex expression - physics equation":
+    let result = latexToMathML("E = mc²")
+    check result.isOk
+    check "<msup>" in result.value
+    check "2" in result.value
+
+  test "Complex expression - summation with Unicode":
+    let result = latexToMathML("∑ aᵢ²")
+    check result.isOk
+    check "∑" in result.value
+    # This produces <msubsup> which combines subscript and superscript
+    check "<msubsup>" in result.value
+
+  test "Mixed Unicode and LaTeX":
+    let result = latexToMathML(r"α + \beta = γ²")
+    check result.isOk
+    check "α" in result.value
+    check "β" in result.value
+    check "γ" in result.value
+    check "<msup>" in result.value
+
+  test "Mixed Unicode operators and LaTeX commands":
+    let result = latexToMathML(r"x × y = \frac{a}{b}")
+    check result.isOk
+    check "×" in result.value
+    check "<mfrac>" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

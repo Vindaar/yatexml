@@ -3,6 +3,8 @@
 ## This module tokenizes LaTeX input into a stream of tokens.
 
 import error_handling
+import unicode_mappings
+import unicode
 
 type
   TokenKind* = enum
@@ -139,6 +141,80 @@ proc lexIdentifier(lex: var Lexer): Result[Token] =
   let c = lex.advance()
   return ok(Token(kind: tkIdentifier, value: $c, position: startPos))
 
+proc readUtf8Char(lex: var Lexer): string =
+  ## Read a single UTF-8 character (which may be multi-byte)
+  let startPos = lex.position
+  let firstByte = lex.peek().ord
+
+  # Determine number of bytes in this UTF-8 character
+  var numBytes = 1
+  if (firstByte and 0b10000000) == 0:
+    # ASCII character (0xxxxxxx)
+    numBytes = 1
+  elif (firstByte and 0b11100000) == 0b11000000:
+    # 2-byte character (110xxxxx)
+    numBytes = 2
+  elif (firstByte and 0b11110000) == 0b11100000:
+    # 3-byte character (1110xxxx)
+    numBytes = 3
+  elif (firstByte and 0b11111000) == 0b11110000:
+    # 4-byte character (11110xxx)
+    numBytes = 4
+
+  # Read all bytes of the character
+  result = ""
+  for i in 0 ..< numBytes:
+    if lex.position < lex.source.len:
+      result.add(lex.advance())
+    else:
+      break
+
+proc lexUnicodeChar(lex: var Lexer): Result[seq[Token]] =
+  ## Lex a Unicode character and convert it to appropriate token(s)
+  let startPos = lex.position
+  let unicodeChar = lex.readUtf8Char()
+
+  if not isUnicodeChar(unicodeChar):
+    return err[seq[Token]](
+      ekUnexpectedToken,
+      "Unexpected character: " & unicodeChar,
+      startPos,
+      ""
+    )
+
+  let mapping = getUnicodeMapping(unicodeChar)
+  var tokens: seq[Token] = @[]
+
+  case mapping.category
+  of mcGreekLetter, mcCommand:
+    # Greek letters and commands become command tokens: α → \alpha, √ → \sqrt
+    tokens.add(Token(kind: tkCommand, value: mapping.latex, position: startPos))
+
+  of mcOperator, mcRelation, mcSymbol, mcBigOp:
+    # Operators and symbols keep their Unicode representation
+    tokens.add(Token(kind: tkOperator, value: mapping.latex, position: startPos))
+
+  of mcSuperscript:
+    # Superscripts: ² → ^{2}
+    tokens.add(Token(kind: tkSuperscript, value: "^", position: startPos))
+    tokens.add(Token(kind: tkLeftBrace, value: "{", position: startPos))
+    tokens.add(Token(kind: tkNumber, value: mapping.latex, position: startPos))
+    tokens.add(Token(kind: tkRightBrace, value: "}", position: startPos))
+
+  of mcSubscript:
+    # Subscripts: ₂ → _{2}
+    # Note: For subscript letters like ᵢ, we generate identifier tokens instead of number tokens
+    tokens.add(Token(kind: tkSubscript, value: "_", position: startPos))
+    tokens.add(Token(kind: tkLeftBrace, value: "{", position: startPos))
+    # Check if it's a digit or letter
+    if mapping.latex.len == 1 and mapping.latex[0] in {'0'..'9'}:
+      tokens.add(Token(kind: tkNumber, value: mapping.latex, position: startPos))
+    else:
+      tokens.add(Token(kind: tkIdentifier, value: mapping.latex, position: startPos))
+    tokens.add(Token(kind: tkRightBrace, value: "}", position: startPos))
+
+  return ok(tokens)
+
 proc lex*(source: string): Result[seq[Token]] =
   ## Tokenize a LaTeX math expression
   var lexer = Lexer(source: source, position: 0, tokens: @[])
@@ -195,7 +271,7 @@ proc lex*(source: string): Result[seq[Token]] =
       discard lexer.advance()
       lexer.addToken(tkAmpersand, "&", startPos)
 
-    of '+', '-', '*', '/', '=', '<', '>', '.':
+    of '+', '-', '*', '/', '=', '<', '>', '.', ',':
       discard lexer.advance()
       lexer.addToken(tkOperator, $c, startPos)
 
@@ -222,6 +298,14 @@ proc lex*(source: string): Result[seq[Token]] =
         if not identResult.isOk:
           return err[seq[Token]](identResult.error)
         lexer.tokens.add(identResult.value)
+      elif c.ord >= 128:
+        # Multi-byte UTF-8 character - check if it's a supported Unicode char
+        let unicodeResult = lexer.lexUnicodeChar()
+        if not unicodeResult.isOk:
+          return err[seq[Token]](unicodeResult.error)
+        # Add all generated tokens
+        for token in unicodeResult.value:
+          lexer.tokens.add(token)
       else:
         return err[seq[Token]](
           ekUnexpectedToken,
