@@ -408,6 +408,32 @@ suite "Cases Environment Tests":
       pos = idx + 5
     check count == 3
 
+suite "Text Mode Tests":
+  test "Simple text":
+    let result = latexToMathML(r"\text{hello world}")
+    check result.isOk
+    check "<mtext>" in result.value
+    check "hello world" in result.value
+
+  test "Text in expression":
+    let result = latexToMathML(r"x + \text{if} y > 0")
+    check result.isOk
+    check "<mtext>" in result.value
+    check "if" in result.value
+
+  test "Multiple text blocks":
+    let result = latexToMathML(r"\text{For} x > 0 \text{we have} y = 1")
+    check result.isOk
+    check "<mtext>" in result.value
+    var count = 0
+    var pos = 0
+    while true:
+      let idx = result.value.find("<mtext>", pos)
+      if idx == -1: break
+      count += 1
+      pos = idx + 7
+    check count == 2
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

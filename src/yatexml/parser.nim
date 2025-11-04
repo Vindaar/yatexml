@@ -4,14 +4,14 @@
 ## tokens into an AST.
 
 import error_handling, ast, lexer
-import tables
+import tables, strutils
 
 # Command registry - maps command names to their properties
 
 type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
-    ctBigOp, ctFunction, ctDelimiter, ctMatrix
+    ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText
 
   CommandInfo = object
     cmdType: CommandType
@@ -148,6 +148,9 @@ proc initCommandTable(): Table[string, CommandInfo] =
   # Matrix environments
   result["begin"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
   result["end"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
+
+  # Text mode
+  result["text"] = CommandInfo(cmdType: ctText, numArgs: 1)
 
 let commandTable = initCommandTable()
 
@@ -536,6 +539,60 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         else:
           # \end command should only appear inside matrix parsing
           return err[AstNode](ekInvalidCommand, "Unexpected \\end command", token.position)
+
+      of ctText:
+        # Parse \text{content} - content is literal text, not math
+        let braceResult = stream.expect(tkLeftBrace)
+        if not braceResult.isOk:
+          return err[AstNode](ekMismatchedBraces, "Expected { after \\text", token.position)
+
+        # Collect all tokens until right brace as text
+        # We need to preserve whitespace, so we build text with spaces between tokens
+        var textContent = ""
+        var lastPos = braceResult.value.position + 1  # Position after {
+        while not stream.match(tkRightBrace) and not stream.isAtEnd():
+          let textToken = stream.peek()
+
+          # Add spaces for gaps between last position and current token
+          let gap = textToken.position - lastPos
+          if gap > 0:
+            textContent.add(" ".repeat(gap))
+
+          discard stream.advance()
+          case textToken.kind
+          of tkIdentifier, tkNumber:
+            textContent.add(textToken.value)
+            lastPos = textToken.position + textToken.value.len
+          of tkOperator:
+            textContent.add(textToken.value)
+            lastPos = textToken.position + textToken.value.len
+          of tkLeftParen:
+            textContent.add("(")
+            lastPos = textToken.position + 1
+          of tkRightParen:
+            textContent.add(")")
+            lastPos = textToken.position + 1
+          of tkLeftBracket:
+            textContent.add("[")
+            lastPos = textToken.position + 1
+          of tkRightBracket:
+            textContent.add("]")
+            lastPos = textToken.position + 1
+          of tkCommand:
+            # Handle escaped characters in text mode
+            textContent.add("\\")
+            textContent.add(textToken.value)
+            lastPos = textToken.position + 1 + textToken.value.len
+          else:
+            # For other tokens, just add their value
+            textContent.add(textToken.value)
+            lastPos = textToken.position + textToken.value.len
+
+        let closeResult = stream.expect(tkRightBrace)
+        if not closeResult.isOk:
+          return err[AstNode](ekMismatchedBraces, "Expected } after text content", token.position)
+
+        return ok(newText(textContent))
 
       else:
         return err[AstNode](
