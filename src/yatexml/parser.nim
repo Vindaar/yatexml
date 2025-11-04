@@ -3,7 +3,7 @@
 ## This module implements a recursive descent parser that converts
 ## tokens into an AST.
 
-import error_handling, ast, lexer
+import error_handling, ast, lexer, macros as macro_module
 import tables, strutils
 
 # Command registry - maps command names to their properties
@@ -12,11 +12,14 @@ type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText, ctSpace, ctColor,
-    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp
+    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef
 
   CommandInfo = object
     cmdType: CommandType
     numArgs: int  # Number of required arguments
+
+# Module-level macro registry
+var globalMacroRegistry* = macro_module.newMacroRegistry()
 
 # Build command table
 
@@ -227,6 +230,10 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["squared"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 0)
   result["cubed"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 0)
   result["tothe"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 1)
+
+  # Macro definitions
+  result["def"] = CommandInfo(cmdType: ctMacroDef, numArgs: 0)  # Special handling
+  result["newcommand"] = CommandInfo(cmdType: ctMacroDef, numArgs: 0)  # Special handling
 
 let commandTable = initCommandTable()
 
@@ -662,6 +669,151 @@ proc parseSIUnitExpr(stream: var TokenStream): Result[AstNode] =
         break  # Shorthand notation replaces the entire unit expression
 
   return ok(newSIUnit(numerator, denominator))
+
+# Macro-related helper functions
+
+proc parseMacroDef(stream: var TokenStream, cmdName: string, position: int): Result[bool] =
+  ## Parse \def or \newcommand and register the macro
+  ## Returns ok(true) if macro was successfully defined
+  ## This does NOT return an AST node because macro definitions don't produce output
+
+  if cmdName == "def":
+    # \def\macroname{body}
+    # Expect \macroname
+    let macroToken = stream.peek()
+    if macroToken.kind != tkCommand:
+      return err[bool](ekInvalidArgument, "Expected command after \\def", position)
+    let macroName = macroToken.value
+    discard stream.advance()
+
+    # Parse body in braces
+    let bodyResult = stream.expect(tkLeftBrace)
+    if not bodyResult.isOk:
+      return err[bool](bodyResult.error)
+
+    # Collect all tokens until matching right brace
+    var body: seq[Token] = @[]
+    var braceDepth = 1
+    while not stream.isAtEnd() and braceDepth > 0:
+      let t = stream.peek()
+      if t.kind == tkLeftBrace:
+        braceDepth += 1
+        body.add(t)
+        discard stream.advance()
+      elif t.kind == tkRightBrace:
+        braceDepth -= 1
+        if braceDepth > 0:
+          body.add(t)
+        discard stream.advance()
+      else:
+        body.add(t)
+        discard stream.advance()
+
+    # Register the macro (assumes no arguments for \def)
+    macro_module.defineMacro(globalMacroRegistry, macroName, 0, body)
+    return ok(true)
+
+  elif cmdName == "newcommand":
+    # \newcommand{\macroname}[numargs]{body}
+    # Expect left brace
+    let braceResult = stream.expect(tkLeftBrace)
+    if not braceResult.isOk:
+      return err[bool](braceResult.error)
+
+    # Expect \macroname
+    let macroToken = stream.peek()
+    if macroToken.kind != tkCommand:
+      return err[bool](ekInvalidArgument, "Expected command in \\newcommand", position)
+    let macroName = macroToken.value
+    discard stream.advance()
+
+    # Expect right brace
+    let closeResult = stream.expect(tkRightBrace)
+    if not closeResult.isOk:
+      return err[bool](closeResult.error)
+
+    # Check for optional [numargs]
+    var numArgs = 0
+    if stream.match(tkLeftBracket):
+      discard stream.advance()
+      let argToken = stream.peek()
+      if argToken.kind != tkNumber:
+        return err[bool](ekInvalidArgument, "Expected number in \\newcommand argument count", argToken.position)
+      try:
+        numArgs = parseInt(argToken.value)
+      except:
+        return err[bool](ekInvalidArgument, "Invalid argument count in \\newcommand", argToken.position)
+      discard stream.advance()
+      let closeBracketResult = stream.expect(tkRightBracket)
+      if not closeBracketResult.isOk:
+        return err[bool](closeBracketResult.error)
+
+    # Parse body in braces
+    let bodyBraceResult = stream.expect(tkLeftBrace)
+    if not bodyBraceResult.isOk:
+      return err[bool](bodyBraceResult.error)
+
+    # Collect all tokens until matching right brace
+    var body: seq[Token] = @[]
+    var braceDepth = 1
+    while not stream.isAtEnd() and braceDepth > 0:
+      let t = stream.peek()
+      if t.kind == tkLeftBrace:
+        braceDepth += 1
+        body.add(t)
+        discard stream.advance()
+      elif t.kind == tkRightBrace:
+        braceDepth -= 1
+        if braceDepth > 0:
+          body.add(t)
+        discard stream.advance()
+      else:
+        body.add(t)
+        discard stream.advance()
+
+    # Register the macro
+    macro_module.defineMacro(globalMacroRegistry, macroName, numArgs, body)
+    return ok(true)
+
+  else:
+    return err[bool](ekInvalidCommand, "Unknown macro definition command: \\" & cmdName, position)
+
+proc expandMacroInStream(stream: var TokenStream, macroName: string, macroDef: macro_module.MacroDefinition): Result[seq[Token]] =
+  ## Expand a macro by parsing its arguments and substituting them in the body
+  ## Returns the expanded tokens
+
+  var args: seq[seq[Token]] = @[]
+
+  # Parse arguments if macro has any
+  for i in 0 ..< macroDef.numArgs:
+    # Each argument should be in braces
+    let braceResult = stream.expect(tkLeftBrace)
+    if not braceResult.isOk:
+      return err[seq[Token]](braceResult.error)
+
+    # Collect tokens until matching right brace
+    var argTokens: seq[Token] = @[]
+    var braceDepth = 1
+    while not stream.isAtEnd() and braceDepth > 0:
+      let t = stream.peek()
+      if t.kind == tkLeftBrace:
+        braceDepth += 1
+        argTokens.add(t)
+        discard stream.advance()
+      elif t.kind == tkRightBrace:
+        braceDepth -= 1
+        if braceDepth > 0:
+          argTokens.add(t)
+        discard stream.advance()
+      else:
+        argTokens.add(t)
+        discard stream.advance()
+
+    args.add(argTokens)
+
+  # Expand the macro
+  let expandedTokens = macro_module.expandMacro(globalMacroRegistry, macroDef, args)
+  return ok(expandedTokens)
 
 proc parsePrimary(stream: var TokenStream): Result[AstNode] =
   ## Parse a primary expression (atom)
@@ -1133,6 +1285,15 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         else:
           return err[AstNode](ekInvalidCommand, "Unknown siunitx command: \\" & cmdName, token.position)
 
+      of ctMacroDef:
+        # Handle \def and \newcommand - these don't produce AST nodes
+        let defResult = parseMacroDef(stream, cmdName, token.position)
+        if not defResult.isOk:
+          return err[AstNode](defResult.error)
+
+        # Macro definitions don't produce output, so parse the next expression
+        return parsePrimary(stream)
+
       of ctSIUnit, ctSIPrefix, ctSIUnitOp:
         # These should only appear within \si or \SI contexts
         # If they appear outside, treat as error
@@ -1142,8 +1303,24 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           token.position
         )
     else:
-      # Unknown command - treat as identifier
-      return ok(newIdentifier(cmdName))
+      # Unknown command - check if it's a macro
+      if macro_module.hasMacro(globalMacroRegistry, cmdName):
+        let macroDef = macro_module.getMacro(globalMacroRegistry, cmdName)
+
+        # Expand the macro
+        let expandResult = expandMacroInStream(stream, cmdName, macroDef)
+        if not expandResult.isOk:
+          return err[AstNode](expandResult.error)
+
+        # Create a new token stream from the expanded tokens
+        let expandedTokens = expandResult.value
+        var expandedStream = newTokenStream(expandedTokens)
+
+        # Parse the expanded expression (use parseExpression to handle scripts)
+        return parseExpression(expandedStream)
+      else:
+        # Not a macro - treat as identifier
+        return ok(newIdentifier(cmdName))
 
   of tkEof:
     return err[AstNode](ekUnexpectedEof, "Unexpected end of input", token.position)

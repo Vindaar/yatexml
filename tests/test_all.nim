@@ -919,6 +919,58 @@ suite "Unicode Character Support Tests":
     check "×" in result.value
     check "<mfrac>" in result.value
 
+suite "Macro System Tests":
+  test "Simple macro definition with \\def":
+    let result = latexToMathML(r"\def\R{\mathbb{R}} \R")
+    check result.isOk
+    check "<mi" in result.value
+    check "mathvariant" in result.value
+
+  test "Simple macro expansion":
+    let result = latexToMathML(r"\def\half{\frac{1}{2}} \half")
+    check result.isOk
+    check "<mfrac>" in result.value
+    check "<mn>1</mn>" in result.value
+    check "<mn>2</mn>" in result.value
+
+  test "Macro with one argument using \\newcommand":
+    let result = latexToMathML(r"\newcommand{\bold}[1]{\mathbf{#1}} \bold{x}")
+    check result.isOk
+    check "mathvariant" in result.value
+    check "bold" in result.value
+
+  test "Macro with multiple arguments":
+    let result = latexToMathML(r"\newcommand{\frc}[2]{\frac{#1}{#2}} \frc{a}{b}")
+    check result.isOk
+    check "<mfrac>" in result.value
+    # Check for presence of numerator and denominator
+    check "a" in result.value
+    check "b" in result.value
+
+  test "Macro in expression context":
+    # Note: Macros must expand to complete expressions in current implementation
+    let result = latexToMathML(r"\def\sq{x^2} \sq + y")
+    check result.isOk
+    check "<msup>" in result.value
+
+  test "Macro reuse":
+    let result = latexToMathML(r"\def\unit{\mathbb{1}} \unit + \unit = 2\unit")
+    check result.isOk
+    check "mathvariant" in result.value
+
+  test "Macro with complex expression":
+    let result = latexToMathML(r"\def\deriv{\frac{d}{dx}} \deriv f(x)")
+    check result.isOk
+    check "<mfrac>" in result.value
+    check "d" in result.value
+    check "f" in result.value
+
+  test "Multiple macro definitions":
+    let result = latexToMathML(r"\def\N{\mathbb{N}} \def\Z{\mathbb{Z}} \N \subset \Z")
+    check result.isOk
+    check "⊂" in result.value
+    check "mathvariant" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

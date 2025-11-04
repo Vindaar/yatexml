@@ -8,8 +8,8 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 
 ## 📊 Implementation Status
 
-**Last Updated:** 2025-11-04 (Milestone 5 Complete - Unicode Character Support)
-**Current Phase:** Phase 1-5 Complete ✅, Phase 6 (Advanced Features) In Progress
+**Last Updated:** 2025-11-04 (Milestone 6 Complete - Macro System)
+**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System)
 
 ### Completed ✅
 - **Phase 1: Foundation & Architecture** - Complete (100%)
@@ -48,18 +48,19 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
   - ✅ Unit operations (\per, \squared, \cubed, \tothe)
   - ✅ Unit composition (numerator/denominator with prefix support)
   - ✅ Shorthand notation (e.g., \si{m.s^{-2}}, \si{mV.kg})
-- **Phase 6: Advanced Features** - In Progress (20%)
-  - ✅ **Unicode character support** (unicode-math style) - 150+ characters ⭐ NEW
+- **Phase 6: Advanced Features** - Partial (40%)
+  - ✅ **Unicode character support** (unicode-math style) - 150+ characters
+  - ✅ **Macro system** (\def and \newcommand with arguments) ⭐ NEW
 
 ### Not Started ⏳
-- **Phase 6:** Macro system, advanced error recovery, custom command definitions
+- **Phase 6:** Advanced error recovery
 - **Phase 7:** Compile-time execution (partial - has issues with table initialization)
 
 ### Test Status
-- **Tests Passing:** 147/148 (99.3%) ✅
-- **Test Count:** 147 passing + 1 skipped = 148 total
+- **Tests Passing:** 155/156 (99.4%) ✅
+- **Test Count:** 155 passing + 1 skipped = 156 total
 - **Backends:** Both C and JS backends working ✅
-- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Text Mode, Spacing, Color, siunitx, Shorthand Units, **Unicode Characters** ⭐
+- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Text Mode, Spacing, Color, siunitx, Shorthand Units, Unicode Characters, **Macro System** ⭐
 
 ---
 
@@ -801,27 +802,134 @@ latexToMathML(r"α + \beta = \frac{γ²}{δ}")  # Works seamlessly
 
 ---
 
-## Phase 6: Advanced Features - IN PROGRESS (20%)
+## Phase 6: Advanced Features - IN PROGRESS (40%)
 
-### 6.2 Macro System ⏳ NOT STARTED
+### 6.2 Macro System ✅ COMPLETE
 
-**Timeline**: Weeks 13-14
+**Status**: 100% Complete
+**Completion Date**: 2025-11-04
 
-### 6.1 Macro System
+#### Overview
+Comprehensive support for user-defined LaTeX macros using `\def` and `\newcommand`, enabling custom command definitions with argument substitution.
 
-#### User-Defined Macros
-Support `\def` and `\newcommand`:
+#### Supported Commands
 
+**`\def` - Simple Macro Definition**
 ```latex
 \def\R{\mathbb{R}}
-\newcommand{\norm}[1]{\left\| #1 \right\|}
+\def\half{\frac{1}{2}}
 ```
 
-#### Implementation
-- Macro table/registry
-- Argument substitution (`#1`, `#2`, etc.)
-- Recursive expansion with depth limits
-- Scope handling (global vs. local)
+**`\newcommand` - Macro with Arguments**
+```latex
+\newcommand{\bold}[1]{\mathbf{#1}}
+\newcommand{\frc}[2]{\frac{#1}{#2}}
+```
+
+#### Implementation Details
+
+**Module Structure** (src/yatexml/macros.nim):
+- `MacroDefinition` type: Stores macro name, argument count, and body tokens
+- `MacroRegistry` type: Global registry for storing defined macros
+- `defineMacro`: Register a new macro
+- `hasMacro`: Check if macro exists
+- `getMacro`: Retrieve macro definition
+- `expandMacro`: Expand macro by substituting arguments
+
+**Parser Integration** (src/yatexml/parser.nim):
+- Added `ctMacroDef` command type
+- `parseMacroDef`: Parses `\def` and `\newcommand` syntax
+- `expandMacroInStream`: Expands macro and parses arguments
+- Macro expansion happens at parse time
+- Global macro registry persists across expressions
+
+**Lexer Changes** (src/yatexml/lexer.nim):
+- Added `#` character support for argument placeholders
+
+#### Features
+
+**Argument Substitution**:
+- Arguments referenced as `#1`, `#2`, ..., `#9`
+- Automatic token-level substitution
+- Supports nested braces in arguments
+
+**Macro Expansion**:
+- Parse-time expansion (not compile-time)
+- Expanded tokens parsed as full expressions
+- Supports macros expanding to complex expressions (fractions, scripts, etc.)
+
+**Limitations**:
+- No recursive macro expansion (single-level only)
+- Global scope only (no local scoping)
+- No macro redefinition warnings
+- Arguments must be in braces
+
+#### Usage Examples
+
+**Simple Replacement**:
+```nim
+latexToMathML(r"\def\R{\mathbb{R}} x \in \R")
+# \R expands to \mathbb{R}
+```
+
+**Macro with Arguments**:
+```nim
+latexToMathML(r"\newcommand{\bold}[1]{\mathbf{#1}} \bold{x}")
+# \bold{x} expands to \mathbf{x}
+```
+
+**Multiple Arguments**:
+```nim
+latexToMathML(r"\newcommand{\frc}[2]{\frac{#1}{#2}} \frc{a}{b}")
+# \frc{a}{b} expands to \frac{a}{b}
+```
+
+**Complex Expressions**:
+```nim
+latexToMathML(r"\def\half{\frac{1}{2}} \half + \half = 1")
+# Each \half expands to \frac{1}{2}
+```
+
+**Macro Reuse**:
+```nim
+latexToMathML(r"\def\N{\mathbb{N}} \N \subset \Z")
+# Can define and use multiple macros
+```
+
+#### Testing
+
+**Test Coverage** (8 new tests):
+- Simple `\def` macro definition
+- Simple macro expansion
+- `\newcommand` with one argument
+- `\newcommand` with multiple arguments
+- Macros in expression context
+- Macro reuse
+- Macros with complex expressions
+- Multiple macro definitions
+
+**Test Results**:
+- 155 total tests (155 passing + 1 skipped)
+- 99.4% pass rate on both C and JS backends
+- All macro tests passing ✅
+
+#### Technical Highlights
+
+**Token-Based Expansion**:
+- Macros stored as token sequences
+- Arguments collected as token sequences
+- Substitution at token level before parsing
+- Enables complex expression expansion
+
+**Parser Compatibility**:
+- Macro definitions don't produce AST nodes
+- Macro calls expand inline during parsing
+- Seamless integration with existing parser
+
+**Error Handling**:
+- Validates argument counts
+- Proper error messages for malformed macros
+- Graceful handling of unknown macros (treated as identifiers)
 
 ### 6.2 Advanced Error Recovery
 

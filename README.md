@@ -100,25 +100,57 @@ echo equation
 ✅ **Delimiters**
 - Parentheses: `\left( ... \right)`
 - Brackets: `\left[ ... \right]`
+- Braces: `\left\{ ... \right\}`
+- Vertical bars: `\left| ... \right|`
+- Angle brackets: `\left\langle ... \right\rangle`
+
+✅ **Matrices and Arrays**
+- Plain matrix: `\begin{matrix} ... \end{matrix}`
+- Parenthesized: `\begin{pmatrix} ... \end{pmatrix}`
+- Bracketed: `\begin{bmatrix} ... \end{bmatrix}`
+- Determinant: `\begin{vmatrix} ... \end{vmatrix}`
+- Cases: `\begin{cases} ... \end{cases}`
+
+✅ **Text Mode**
+- `\text{text with spaces}` - Preserve whitespace
+
+✅ **Spacing**
+- `\quad`, `\qquad` - Large spaces
+- `\,`, `\:`, `\;` - Small/medium/thick spaces
+- `\!` - Negative space
+
+✅ **Colors**
+- `\textcolor{red}{text}` - Color specific text
+- `\color{blue}` - Color following content
+
+✅ **siunitx Support**
+- `\SI{3.14}{\meter\per\second}` - Value with unit
+- `\si{\newton\meter}` - Unit only
+- `\num{1234567}` - Number formatting
+- Full SI prefix support (yocto through yotta)
+- 26 SI units (base and derived)
+- Shorthand notation: `\si{km}`, `\si{m.s^{-2}}`
+
+✅ **Unicode Characters**
+- Greek letters: α, β, γ, etc. (direct Unicode input)
+- Operators: ×, ÷, ±, ≤, ≥, etc.
+- Superscripts: ², ³, etc.
+- Subscripts: ₀, ₁, ₂, etc.
+- Big operators: ∑, ∏, ∫, etc.
+- Mathematical symbols: ∞, ∂, ∇, etc.
+
+✅ **User-Defined Macros**
+- `\def\name{replacement}` - Simple macro definition
+- `\newcommand{\name}[n]{body}` - Macro with arguments
+- Argument substitution: `#1`, `#2`, etc.
+- Macro expansion at parse time
 
 ### Planned Features (See IMPLEMENTATION_PLAN.md)
 
-⏳ **Phase 2-4** (In Progress)
-- More TeMML features (matrices, cases, arrays)
-- Extended delimiter support
-- Text mode (`\text{...}`)
-- Color support
-- More symbols and operators
-
-⏳ **Phase 5** (Planned)
-- siunitx support: `\SI{3.14}{\meter\per\second}`
-- Unit formatting: `\si{\newton\meter}`
-- Number formatting: `\num{1234567}`
-
-⏳ **Phase 6-7** (Future)
-- User-defined macros
+⏳ **Future Enhancements**
 - Advanced compile-time features
 - Macro DSL integration
+- Additional environments (aligned, gather, etc.)
 
 ## Architecture
 
@@ -174,6 +206,48 @@ latexToMathML(r"\alpha + \beta = \gamma")
 ```nim
 latexToMathML(r"\sum_{i=0}^n i^2")
 # Generates MathML with proper limits positioning
+```
+
+### User-Defined Macros
+
+```nim
+# Simple macro definition
+latexToMathML(r"\def\R{\mathbb{R}} x \in \R")
+# Expands \R to blackboard bold R
+
+# Macro with arguments
+latexToMathML(r"\newcommand{\norm}[1]{\left\| #1 \right\|} \norm{x}")
+# Expands \norm{x} to ||x||
+
+# Complex macro
+latexToMathML(r"\def\half{\frac{1}{2}} \half + \half = 1")
+# Expands \half to fraction 1/2
+```
+
+### Unicode Input
+
+```nim
+# Direct Unicode character input (like unicode-math)
+latexToMathML("E = mc²")
+latexToMathML("α + β = γ")
+latexToMathML("x ∈ ℝ")
+latexToMathML("∑ᵢ xᵢ²")
+```
+
+### siunitx Support
+
+```nim
+latexToMathML(r"\SI{3.14}{\meter\per\second}")
+# 3.14 m/s with proper spacing
+
+latexToMathML(r"\si{\kilo\gram\meter\per\second\squared}")
+# kg·m/s²
+
+latexToMathML(r"\si{km.s^{-2}}")
+# Shorthand notation: km·s⁻²
+
+latexToMathML(r"\num{1234567}")
+# Number with formatting
 ```
 
 ## API Reference
