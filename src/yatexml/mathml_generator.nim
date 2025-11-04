@@ -339,16 +339,20 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
   # Generate numerator units
   for i, comp in node.unitNumerator:
     if i > 0:
-      content.add(tag("mo", "\u00A0"))  # Non-breaking space
-    content.add(tag("mi", unitToString(comp)))
+      # Use thin space between units (much smaller than normal space)
+      content.add(tag("mspace", [("width", "0.167em")]))
+    # Units should be upright (normal/roman), not italic
+    content.add(tag("mi", unitToString(comp), [("mathvariant", "normal")]))
 
   # Generate denominator units (if any)
   if node.unitDenominator.len > 0:
     content.add(tag("mo", "/"))
     for i, comp in node.unitDenominator:
       if i > 0:
-        content.add(tag("mo", "\u00A0"))
-      content.add(tag("mi", unitToString(comp)))
+        # Use thin space between units
+        content.add(tag("mspace", [("width", "0.167em")]))
+      # Units should be upright (normal/roman), not italic
+      content.add(tag("mi", unitToString(comp), [("mathvariant", "normal")]))
 
   tag("mrow", content)
 

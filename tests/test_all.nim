@@ -526,19 +526,19 @@ suite "siunitx Tests":
   test "\\si command - single unit":
     let result = latexToMathML(r"\si{\meter}")
     check result.isOk
-    check "<mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
     check "m" in result.value
 
   test "\\si command - unit with prefix":
     let result = latexToMathML(r"\si{\kilo\meter}")
     check result.isOk
-    check "<mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
     check "km" in result.value
 
   test "\\si command - unit with \\per":
     let result = latexToMathML(r"\si{\meter\per\second}")
     check result.isOk
-    check "<mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
     check "m" in result.value
     check "/" in result.value
     check "s" in result.value
@@ -554,13 +554,13 @@ suite "siunitx Tests":
   test "\\si command - squared unit":
     let result = latexToMathML(r"\si{\meter\squared}")
     check result.isOk
-    check "<mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
     check "m²" in result.value
 
   test "\\si command - cubed unit":
     let result = latexToMathML(r"\si{\meter\cubed}")
     check result.isOk
-    check "<mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
     check "m³" in result.value
 
   test "\\SI command - value with unit":
@@ -568,7 +568,7 @@ suite "siunitx Tests":
     check result.isOk
     check "<mn>" in result.value
     check "42" in result.value
-    check "<mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
     check "m" in result.value
     check "<mspace" in result.value
 
@@ -634,8 +634,9 @@ suite "Shorthand Unit Notation Tests":
   test "Shorthand with dot separator":
     let result = latexToMathML(r"\si{m.s}")
     check result.isOk
-    check "<mi>m</mi>" in result.value
-    check "<mi>s</mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
+    check "m" in result.value
+    check "s" in result.value
 
   test "Shorthand with prefix - millivolt":
     let result = latexToMathML(r"\si{mV}")
@@ -645,22 +646,25 @@ suite "Shorthand Unit Notation Tests":
   test "Shorthand with negative power":
     let result = latexToMathML(r"\si{m.s^{-1}}")
     check result.isOk
-    check "<mi>m</mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
+    check "m" in result.value
     check "/" in result.value
-    check "<mi>s</mi>" in result.value
+    check "s" in result.value
 
   test "Shorthand with negative power squared":
     let result = latexToMathML(r"\si{m.s^{-2}}")
     check result.isOk
-    check "<mi>m</mi>" in result.value
+    check "mathvariant=\"normal\"" in result.value
+    check "m" in result.value
     check "/" in result.value
     check "s²" in result.value
 
   test "Complex shorthand - force":
     let result = latexToMathML(r"\si{kg.m.s^{-2}}")
     check result.isOk
+    check "mathvariant=\"normal\"" in result.value
     check "kg" in result.value
-    check "<mi>m</mi>" in result.value
+    check "m" in result.value
     check "/" in result.value
     check "s²" in result.value
 
