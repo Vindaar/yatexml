@@ -1,0 +1,29 @@
+# Nim compiled output
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+tests/test_all
+tests/test_all.js
+
+# Example binaries
+examples/basic_usage
+examples/*.exe
+
+# Nim cache
+nimcache/
+*.cache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
