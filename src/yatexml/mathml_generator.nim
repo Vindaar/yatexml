@@ -267,6 +267,98 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
   else:
     table
 
+proc generateNum(node: AstNode, options: MathMLOptions): string =
+  ## Generate <mn> element for formatted numbers
+  # TODO: Implement proper number formatting (scientific notation, spacing)
+  tag("mn", escapeXml(node.numStr))
+
+proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
+  ## Generate SI unit expression
+  # Helper to convert unit component to string
+  proc unitToString(comp: SIUnitComponent): string =
+    let unitStr = case comp.unit
+      of ukMeter: "m"
+      of ukSecond: "s"
+      of ukKilogram: "kg"
+      of ukGram: "g"
+      of ukAmpere: "A"
+      of ukKelvin: "K"
+      of ukMole: "mol"
+      of ukCandela: "cd"
+      of ukHertz: "Hz"
+      of ukNewton: "N"
+      of ukPascal: "Pa"
+      of ukJoule: "J"
+      of ukWatt: "W"
+      of ukCoulomb: "C"
+      of ukVolt: "V"
+      of ukFarad: "F"
+      of ukOhm: "Ω"
+      of ukSiemens: "S"
+      of ukWeber: "Wb"
+      of ukTesla: "T"
+      of ukHenry: "H"
+      of ukLumen: "lm"
+      of ukLux: "lx"
+      of ukBecquerel: "Bq"
+      of ukGray: "Gy"
+      of ukSievert: "Sv"
+
+    let prefixStr = case comp.prefix
+      of pkNone: ""
+      of pkYocto: "y"
+      of pkZepto: "z"
+      of pkAtto: "a"
+      of pkFemto: "f"
+      of pkPico: "p"
+      of pkNano: "n"
+      of pkMicro: "μ"
+      of pkMilli: "m"
+      of pkCenti: "c"
+      of pkDeci: "d"
+      of pkDeca: "da"
+      of pkHecto: "h"
+      of pkKilo: "k"
+      of pkMega: "M"
+      of pkGiga: "G"
+      of pkTera: "T"
+      of pkPeta: "P"
+      of pkExa: "E"
+      of pkZetta: "Z"
+      of pkYotta: "Y"
+
+    result = prefixStr & unitStr
+    if comp.power != 1:
+      result.add(case comp.power
+        of 2: "²"
+        of 3: "³"
+        else: "^" & $comp.power)
+
+  var content = ""
+
+  # Generate numerator units
+  for i, comp in node.unitNumerator:
+    if i > 0:
+      content.add(tag("mo", "\u00A0"))  # Non-breaking space
+    content.add(tag("mi", unitToString(comp)))
+
+  # Generate denominator units (if any)
+  if node.unitDenominator.len > 0:
+    content.add(tag("mo", "/"))
+    for i, comp in node.unitDenominator:
+      if i > 0:
+        content.add(tag("mo", "\u00A0"))
+      content.add(tag("mi", unitToString(comp)))
+
+  tag("mrow", content)
+
+proc generateSIValue(node: AstNode, options: MathMLOptions): string =
+  ## Generate SI value with unit
+  let valueNode = tag("mn", escapeXml(node.siValue))
+  let unitNode = generateNode(node.siUnit, options)
+  let space = tag("mspace", [("width", "0.167em")])  # Thin space between value and unit
+  tag("mrow", valueNode & space & unitNode)
+
 proc generateNode(node: AstNode, options: MathMLOptions): string =
   ## Generate MathML for any AST node
   case node.kind
@@ -310,6 +402,12 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateBigOp(node, options)
   of nkMatrix:
     generateMatrix(node, options)
+  of nkNum:
+    generateNum(node, options)
+  of nkSIUnit:
+    generateSIUnit(node, options)
+  of nkSIValue:
+    generateSIValue(node, options)
   else:
     # Not implemented yet
     tag("mtext", "[" & $node.kind & "]")

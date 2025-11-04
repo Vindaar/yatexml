@@ -40,6 +40,11 @@ type
     nkUnderOver           ## Under/over: \underset, \overset
     nkStackrel            ## Stacked relation: \stackrel{above}{base}
 
+    # siunitx nodes
+    nkNum                 ## Number with formatting: \num{1234567}
+    nkSIUnit              ## SI unit expression: \si{\meter\per\second}
+    nkSIValue             ## SI value with unit: \SI{3.14}{\meter}
+
   AccentKind* = enum
     ## Different kinds of accents
     akHat                 ## \hat
@@ -92,6 +97,74 @@ type
     dkDVert               ## || ||
     dkFloor               ## \lfloor \rfloor
     dkCeil                ## \lceil \rceil
+
+  SIUnitKind* = enum
+    ## Base and derived SI units
+    # Base units
+    ukMeter               ## m - meter
+    ukSecond              ## s - second
+    ukKilogram            ## kg - kilogram
+    ukGram                ## g - gram (for \kilo\gram support)
+    ukAmpere              ## A - ampere
+    ukKelvin              ## K - kelvin
+    ukMole                ## mol - mole
+    ukCandela             ## cd - candela
+    # Derived units
+    ukHertz               ## Hz - hertz
+    ukNewton              ## N - newton
+    ukPascal              ## Pa - pascal
+    ukJoule               ## J - joule
+    ukWatt                ## W - watt
+    ukCoulomb             ## C - coulomb
+    ukVolt                ## V - volt
+    ukFarad               ## F - farad
+    ukOhm                 ## Ω - ohm
+    ukSiemens             ## S - siemens
+    ukWeber               ## Wb - weber
+    ukTesla               ## T - tesla
+    ukHenry               ## H - henry
+    ukLumen               ## lm - lumen
+    ukLux                 ## lx - lux
+    ukBecquerel           ## Bq - becquerel
+    ukGray                ## Gy - gray
+    ukSievert             ## Sv - sievert
+
+  SIPrefixKind* = enum
+    ## SI prefixes
+    pkNone                ## No prefix (10⁰)
+    pkYocto               ## y - 10⁻²⁴
+    pkZepto               ## z - 10⁻²¹
+    pkAtto                ## a - 10⁻¹⁸
+    pkFemto               ## f - 10⁻¹⁵
+    pkPico                ## p - 10⁻¹²
+    pkNano                ## n - 10⁻⁹
+    pkMicro               ## μ - 10⁻⁶
+    pkMilli               ## m - 10⁻³
+    pkCenti               ## c - 10⁻²
+    pkDeci                ## d - 10⁻¹
+    pkDeca                ## da - 10¹
+    pkHecto               ## h - 10²
+    pkKilo                ## k - 10³
+    pkMega                ## M - 10⁶
+    pkGiga                ## G - 10⁹
+    pkTera                ## T - 10¹²
+    pkPeta                ## P - 10¹⁵
+    pkExa                 ## E - 10¹⁸
+    pkZetta               ## Z - 10²¹
+    pkYotta               ## Y - 10²⁴
+
+  SIUnitOp* = enum
+    ## SI unit operations
+    uoPer                 ## \per - division (/)
+    uoSquared             ## \squared - power of 2
+    uoCubed               ## \cubed - power of 3
+    uoToThe               ## \tothe{n} - power of n
+
+  SIUnitComponent* = object
+    ## A single SI unit component (prefix + unit + power)
+    prefix*: SIPrefixKind   ## SI prefix (pkNone if no prefix)
+    unit*: SIUnitKind       ## Base or derived unit
+    power*: int             ## Power (1 for normal, 2 for squared, etc.)
 
   AstNode* = ref object
     ## Main AST node type
@@ -198,6 +271,18 @@ type
       stackrelAbove*: AstNode     ## Above content
       stackrelBase*: AstNode      ## Base content
 
+    # siunitx nodes
+    of nkNum:
+      numStr*: string             ## Number string to format
+
+    of nkSIUnit:
+      unitNumerator*: seq[SIUnitComponent]   ## Units in numerator
+      unitDenominator*: seq[SIUnitComponent] ## Units in denominator (after \per)
+
+    of nkSIValue:
+      siValue*: string            ## Value/number
+      siUnit*: AstNode            ## Unit expression (nkSIUnit)
+
 # Constructor helpers
 
 proc newNumber*(value: string): AstNode =
@@ -280,6 +365,22 @@ proc newBigOp*(kind: BigOpKind, lower: AstNode = nil, upper: AstNode = nil, base
   ## Create a big operator node
   AstNode(kind: nkBigOp, bigopKind: kind, bigopLower: lower, bigopUpper: upper, bigopBase: base)
 
+proc newNum*(numStr: string): AstNode =
+  ## Create a number formatting node
+  AstNode(kind: nkNum, numStr: numStr)
+
+proc newSIUnit*(numerator: seq[SIUnitComponent], denominator: seq[SIUnitComponent] = @[]): AstNode =
+  ## Create an SI unit node
+  AstNode(kind: nkSIUnit, unitNumerator: numerator, unitDenominator: denominator)
+
+proc newSIValue*(value: string, unit: AstNode): AstNode =
+  ## Create an SI value with unit node
+  AstNode(kind: nkSIValue, siValue: value, siUnit: unit)
+
+proc newSIUnitComponent*(prefix: SIPrefixKind, unit: SIUnitKind, power: int = 1): SIUnitComponent =
+  ## Create an SI unit component
+  SIUnitComponent(prefix: prefix, unit: unit, power: power)
+
 # Helper functions
 
 proc `$`*(node: AstNode): string =
@@ -299,5 +400,11 @@ proc `$`*(node: AstNode): string =
     result = "Sub(" & $node.subBase & ", " & $node.subScript & ")"
   of nkRow:
     result = "Row(" & $node.rowChildren.len & " children)"
+  of nkNum:
+    result = "Num(" & node.numStr & ")"
+  of nkSIUnit:
+    result = "SIUnit(" & $node.unitNumerator.len & " numerator, " & $node.unitDenominator.len & " denominator)"
+  of nkSIValue:
+    result = "SIValue(" & node.siValue & ", " & $node.siUnit & ")"
   else:
     result = $node.kind

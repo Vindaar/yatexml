@@ -504,6 +504,118 @@ suite "Color Tests":
     check "blue" in result.value
     check "red" in result.value
 
+suite "siunitx Tests":
+  test "\\num command - simple number":
+    let result = latexToMathML(r"\num{123}")
+    check result.isOk
+    check "<mn>" in result.value
+    check "123" in result.value
+
+  test "\\num command - decimal":
+    let result = latexToMathML(r"\num{3.14159}")
+    check result.isOk
+    check "<mn>" in result.value
+    check "3.14159" in result.value
+
+  test "\\num command - scientific notation":
+    let result = latexToMathML(r"\num{6.022e23}")
+    check result.isOk
+    check "<mn>" in result.value
+    check "6.022e23" in result.value
+
+  test "\\si command - single unit":
+    let result = latexToMathML(r"\si{\meter}")
+    check result.isOk
+    check "<mi>" in result.value
+    check "m" in result.value
+
+  test "\\si command - unit with prefix":
+    let result = latexToMathML(r"\si{\kilo\meter}")
+    check result.isOk
+    check "<mi>" in result.value
+    check "km" in result.value
+
+  test "\\si command - unit with \\per":
+    let result = latexToMathML(r"\si{\meter\per\second}")
+    check result.isOk
+    check "<mi>" in result.value
+    check "m" in result.value
+    check "/" in result.value
+    check "s" in result.value
+
+  test "\\si command - complex unit":
+    let result = latexToMathML(r"\si{\kilo\gram\meter\per\second\squared}")
+    check result.isOk
+    check "kg" in result.value
+    check "m" in result.value
+    check "/" in result.value
+    check "s²" in result.value
+
+  test "\\si command - squared unit":
+    let result = latexToMathML(r"\si{\meter\squared}")
+    check result.isOk
+    check "<mi>" in result.value
+    check "m²" in result.value
+
+  test "\\si command - cubed unit":
+    let result = latexToMathML(r"\si{\meter\cubed}")
+    check result.isOk
+    check "<mi>" in result.value
+    check "m³" in result.value
+
+  test "\\SI command - value with unit":
+    let result = latexToMathML(r"\SI{42}{\meter}")
+    check result.isOk
+    check "<mn>" in result.value
+    check "42" in result.value
+    check "<mi>" in result.value
+    check "m" in result.value
+    check "<mspace" in result.value
+
+  test "\\SI command - decimal value with complex unit":
+    let result = latexToMathML(r"\SI{3.14}{\meter\per\second}")
+    check result.isOk
+    check "3.14" in result.value
+    check "m" in result.value
+    check "/" in result.value
+    check "s" in result.value
+
+  test "\\SI command - with prefix":
+    let result = latexToMathML(r"\SI{100}{\kilo\gram}")
+    check result.isOk
+    check "100" in result.value
+    check "kg" in result.value
+
+  test "Derived units - Newton":
+    let result = latexToMathML(r"\si{\newton}")
+    check result.isOk
+    check "N" in result.value
+
+  test "Derived units - Joule":
+    let result = latexToMathML(r"\si{\joule}")
+    check result.isOk
+    check "J" in result.value
+
+  test "Derived units - Watt":
+    let result = latexToMathML(r"\si{\watt}")
+    check result.isOk
+    check "W" in result.value
+
+  test "Prefixes - mega":
+    let result = latexToMathML(r"\si{\mega\hertz}")
+    check result.isOk
+    check "MHz" in result.value
+
+  test "Prefixes - milli":
+    let result = latexToMathML(r"\si{\milli\meter}")
+    check result.isOk
+    check "mm" in result.value
+
+  test "Prefixes - giga":
+    let result = latexToMathML(r"\si{\giga\watt}")
+    check result.isOk
+    check "GW" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

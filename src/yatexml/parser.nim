@@ -11,7 +11,8 @@ import tables, strutils
 type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
-    ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText, ctSpace, ctColor
+    ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText, ctSpace, ctColor,
+    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp
 
   CommandInfo = object
     cmdType: CommandType
@@ -164,6 +165,69 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["textcolor"] = CommandInfo(cmdType: ctColor, numArgs: 2)
   result["color"] = CommandInfo(cmdType: ctColor, numArgs: 1)
 
+  # siunitx commands
+  result["num"] = CommandInfo(cmdType: ctSIunitx, numArgs: 1)
+  result["si"] = CommandInfo(cmdType: ctSIunitx, numArgs: 1)
+  result["SI"] = CommandInfo(cmdType: ctSIunitx, numArgs: 2)
+
+  # SI base units
+  result["meter"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["second"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["kilogram"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["gram"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)  # For \kilo\gram support
+  result["ampere"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["kelvin"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["mole"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["candela"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+
+  # SI derived units
+  result["hertz"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["newton"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["pascal"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["joule"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["watt"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["coulomb"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["volt"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["farad"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["ohm"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["siemens"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["weber"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["tesla"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["henry"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["lumen"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["lux"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["becquerel"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["gray"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+  result["sievert"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
+
+  # SI prefixes
+  result["yocto"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["zepto"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["atto"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["femto"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["pico"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["nano"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["micro"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["milli"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["centi"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["deci"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["deca"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["hecto"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["kilo"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["mega"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["giga"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["tera"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["peta"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["exa"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["zetta"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+  result["yotta"] = CommandInfo(cmdType: ctSIPrefix, numArgs: 0)
+
+  # Unit operations
+  result["per"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 0)
+  result["squared"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 0)
+  result["cubed"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 0)
+  result["tothe"] = CommandInfo(cmdType: ctSIUnitOp, numArgs: 1)
+
 let commandTable = initCommandTable()
 
 # Forward declarations
@@ -267,6 +331,153 @@ proc operatorToUnicode(name: string): string =
   else: name
 
 # Parser implementation
+
+# Helper: Map command name to SI unit kind
+proc cmdNameToSIUnit(name: string): SIUnitKind =
+  case name
+  of "meter": ukMeter
+  of "second": ukSecond
+  of "kilogram": ukKilogram
+  of "gram": ukGram
+  of "ampere": ukAmpere
+  of "kelvin": ukKelvin
+  of "mole": ukMole
+  of "candela": ukCandela
+  of "hertz": ukHertz
+  of "newton": ukNewton
+  of "pascal": ukPascal
+  of "joule": ukJoule
+  of "watt": ukWatt
+  of "coulomb": ukCoulomb
+  of "volt": ukVolt
+  of "farad": ukFarad
+  of "ohm": ukOhm
+  of "siemens": ukSiemens
+  of "weber": ukWeber
+  of "tesla": ukTesla
+  of "henry": ukHenry
+  of "lumen": ukLumen
+  of "lux": ukLux
+  of "becquerel": ukBecquerel
+  of "gray": ukGray
+  of "sievert": ukSievert
+  else: ukMeter  # fallback
+
+# Helper: Map command name to SI prefix kind
+proc cmdNameToSIPrefix(name: string): SIPrefixKind =
+  case name
+  of "yocto": pkYocto
+  of "zepto": pkZepto
+  of "atto": pkAtto
+  of "femto": pkFemto
+  of "pico": pkPico
+  of "nano": pkNano
+  of "micro": pkMicro
+  of "milli": pkMilli
+  of "centi": pkCenti
+  of "deci": pkDeci
+  of "deca": pkDeca
+  of "hecto": pkHecto
+  of "kilo": pkKilo
+  of "mega": pkMega
+  of "giga": pkGiga
+  of "tera": pkTera
+  of "peta": pkPeta
+  of "exa": pkExa
+  of "zetta": pkZetta
+  of "yotta": pkYotta
+  else: pkNone
+
+# Helper: Parse SI unit expression
+proc parseSIUnitExpr(stream: var TokenStream): Result[AstNode] =
+  ## Parse a unit expression like \meter\per\second or \kilo\meter
+  var numerator: seq[SIUnitComponent] = @[]
+  var denominator: seq[SIUnitComponent] = @[]
+  var inDenominator = false
+  var currentPrefix = pkNone
+  var currentPower = 1
+
+  while not stream.match(tkRightBrace) and not stream.isAtEnd():
+    let token = stream.peek()
+
+    if token.kind == tkCommand:
+      let cmdName = token.value
+      if commandTable.hasKey(cmdName):
+        let cmdInfo = commandTable[cmdName]
+
+        case cmdInfo.cmdType
+        of ctSIPrefix:
+          # Store prefix for next unit
+          discard stream.advance()
+          currentPrefix = cmdNameToSIPrefix(cmdName)
+
+        of ctSIUnit:
+          # Add unit component
+          discard stream.advance()
+          let unitKind = cmdNameToSIUnit(cmdName)
+          let component = newSIUnitComponent(currentPrefix, unitKind, currentPower)
+          if inDenominator:
+            denominator.add(component)
+          else:
+            numerator.add(component)
+          # Reset for next unit
+          currentPrefix = pkNone
+          currentPower = 1
+
+        of ctSIUnitOp:
+          discard stream.advance()
+          case cmdName
+          of "per":
+            inDenominator = true
+          of "squared":
+            # Apply to last unit
+            if inDenominator and denominator.len > 0:
+              denominator[^1].power = 2
+            elif numerator.len > 0:
+              numerator[^1].power = 2
+          of "cubed":
+            # Apply to last unit
+            if inDenominator and denominator.len > 0:
+              denominator[^1].power = 3
+            elif numerator.len > 0:
+              numerator[^1].power = 3
+          of "tothe":
+            # Parse power argument
+            let braceResult = stream.expect(tkLeftBrace)
+            if not braceResult.isOk:
+              return err[AstNode](ekMismatchedBraces, "Expected { after \\tothe", token.position)
+
+            var powerStr = ""
+            while not stream.match(tkRightBrace) and not stream.isAtEnd():
+              let powerToken = stream.advance()
+              powerStr.add(powerToken.value)
+
+            let closeResult = stream.expect(tkRightBrace)
+            if not closeResult.isOk:
+              return err[AstNode](ekMismatchedBraces, "Expected } after power", token.position)
+
+            try:
+              let power = parseInt(powerStr)
+              if inDenominator and denominator.len > 0:
+                denominator[^1].power = power
+              elif numerator.len > 0:
+                numerator[^1].power = power
+            except:
+              discard  # Invalid power, ignore
+
+          else:
+            discard
+        else:
+          # Non-unit command in unit expression, skip
+          discard stream.advance()
+      else:
+        # Unknown command, skip
+        discard stream.advance()
+    else:
+      # Non-command token, skip
+      discard stream.advance()
+
+  return ok(newSIUnit(numerator, denominator))
 
 proc parsePrimary(stream: var TokenStream): Result[AstNode] =
   ## Parse a primary expression (atom)
@@ -667,10 +878,83 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
 
           return ok(newColor(colorName, contentResult.value))
 
-      else:
+      of ctSIunitx:
+        # Parse siunitx commands: \num{number}, \si{unit}, \SI{value}{unit}
+        if cmdName == "num":
+          # \num{number}
+          let braceResult = stream.expect(tkLeftBrace)
+          if not braceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\num", token.position)
+
+          var numberStr = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let numToken = stream.advance()
+            numberStr.add(numToken.value)
+
+          let closeResult = stream.expect(tkRightBrace)
+          if not closeResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after number", token.position)
+
+          return ok(newNum(numberStr))
+
+        elif cmdName == "si":
+          # \si{unit}
+          let braceResult = stream.expect(tkLeftBrace)
+          if not braceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\si", token.position)
+
+          # Parse unit expression
+          let unitResult = parseSIUnitExpr(stream)
+          if not unitResult.isOk:
+            return err[AstNode](unitResult.error)
+
+          let closeResult = stream.expect(tkRightBrace)
+          if not closeResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after unit", token.position)
+
+          return ok(unitResult.value)
+
+        elif cmdName == "SI":
+          # \SI{value}{unit}
+          # First argument: value
+          let valueBraceResult = stream.expect(tkLeftBrace)
+          if not valueBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\SI", token.position)
+
+          var valueStr = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let valueToken = stream.advance()
+            valueStr.add(valueToken.value)
+
+          let valueCloseResult = stream.expect(tkRightBrace)
+          if not valueCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after value", token.position)
+
+          # Second argument: unit
+          let unitBraceResult = stream.expect(tkLeftBrace)
+          if not unitBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { for unit", token.position)
+
+          # Parse unit expression
+          let unitResult = parseSIUnitExpr(stream)
+          if not unitResult.isOk:
+            return err[AstNode](unitResult.error)
+
+          let unitCloseResult = stream.expect(tkRightBrace)
+          if not unitCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after unit", token.position)
+
+          return ok(newSIValue(valueStr, unitResult.value))
+
+        else:
+          return err[AstNode](ekInvalidCommand, "Unknown siunitx command: \\" & cmdName, token.position)
+
+      of ctSIUnit, ctSIPrefix, ctSIUnitOp:
+        # These should only appear within \si or \SI contexts
+        # If they appear outside, treat as error
         return err[AstNode](
           ekInvalidCommand,
-          "Command not yet implemented: \\" & cmdName,
+          "Unit command \\" & cmdName & " can only be used within \\si or \\SI",
           token.position
         )
     else:
