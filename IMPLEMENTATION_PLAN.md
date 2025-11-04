@@ -1122,6 +1122,8 @@ nim c -d:release tests/benchmark.nim
 - [x] Phase 5 100% complete ✅
 
 ### Milestone 5: Polish (Weeks 11-14)
+- [ ] `siunitx` commands with shorthand units, like `\si{mV.kg}`, `\si{m.s^{-2}`
+- [ ] Support for unicode characters like `unicode-math`, e.g. `α + x`, `E = mc²`, ...
 - [ ] Additional environments (aligned, gather, split)
 - [ ] Good error messages
 - [ ] Performance optimizations
@@ -1129,6 +1131,9 @@ nim c -d:release tests/benchmark.nim
 - [ ] 100+ tests passing
 
 ### Milestone 6: Advanced (Weeks 15-16)
+- [ ] Support for custom commands in a preamble. I.e. allow to define
+      direct replacements, say `\dd` -> `\mathrm{d}`, which are
+      handled at the TeX level (likely the easiest)
 - [ ] Compile-time execution working
 - [ ] Macro system implemented
 - [ ] Integration examples
