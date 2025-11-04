@@ -331,6 +331,83 @@ suite "Extensible Accent Tests":
     check "<mover>" in result.value
     check "\u2190" in result.value  # ←
 
+suite "Matrix Tests":
+  test "Basic matrix: plain matrix":
+    let result = latexToMathML(r"\begin{matrix} a & b \\ c & d \end{matrix}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "<mtr>" in result.value
+    check "<mtd>" in result.value
+
+  test "Matrix with parentheses: pmatrix":
+    let result = latexToMathML(r"\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "(" in result.value
+    check ")" in result.value
+
+  test "Matrix with brackets: bmatrix":
+    let result = latexToMathML(r"\begin{bmatrix} x \\ y \\ z \end{bmatrix}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "[" in result.value
+    check "]" in result.value
+
+  test "Determinant matrix: vmatrix":
+    let result = latexToMathML(r"\begin{vmatrix} a & b \\ c & d \end{vmatrix}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "|" in result.value
+
+  test "Double bar matrix: Vmatrix":
+    let result = latexToMathML(r"\begin{Vmatrix} 1 & 2 \\ 3 & 4 \end{Vmatrix}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "\u2016" in result.value  # ‖
+
+  test "Matrix with expressions":
+    let result = latexToMathML(r"\begin{pmatrix} x^2 & y^2 \\ z_1 & z_2 \end{pmatrix}")
+    check result.isOk
+    check "<msup>" in result.value
+    check "<msub>" in result.value
+
+  test "3x3 matrix":
+    let result = latexToMathML(r"\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}")
+    check result.isOk
+    check "<mtable>" in result.value
+    # Should have 3 rows
+    var count = 0
+    var pos = 0
+    while true:
+      let idx = result.value.find("<mtr>", pos)
+      if idx == -1: break
+      count += 1
+      pos = idx + 5
+    check count == 3
+
+suite "Cases Environment Tests":
+  test "Basic cases: piecewise function":
+    let result = latexToMathML(r"\begin{cases} x & x > 0 \\ -x & x \leq 0 \end{cases}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "{" in result.value
+    check "fence" in result.value
+
+  test "Cases with multiple conditions":
+    let result = latexToMathML(r"\begin{cases} 1 & x = 0 \\ 2 & x = 1 \\ 3 & x = 2 \end{cases}")
+    check result.isOk
+    check "<mtable>" in result.value
+    check "{" in result.value
+    # Should have 3 rows
+    var count = 0
+    var pos = 0
+    while true:
+      let idx = result.value.find("<mtr>", pos)
+      if idx == -1: break
+      count += 1
+      pos = idx + 5
+    check count == 3
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

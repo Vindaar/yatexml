@@ -145,6 +145,10 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["{"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
   result["}"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
 
+  # Matrix environments
+  result["begin"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
+  result["end"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
+
 let commandTable = initCommandTable()
 
 # Forward declarations
@@ -152,6 +156,7 @@ let commandTable = initCommandTable()
 proc parseExpression(stream: var TokenStream): Result[AstNode]
 proc parsePrimary(stream: var TokenStream): Result[AstNode]
 proc parseGroup(stream: var TokenStream): Result[AstNode]
+proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result[AstNode]
 
 # Greek letter to Unicode mapping
 
@@ -503,11 +508,34 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           return err[AstNode](ekInvalidCommand, "\\right must be paired with \\left", token.position)
 
       of ctMatrix:
-        return err[AstNode](
-          ekInvalidCommand,
-          "Matrix environments not yet implemented",
-          token.position
-        )
+        # Handle \begin{matrix_type}
+        if cmdName == "begin":
+          # Expect environment name in braces
+          let braceResult = stream.expect(tkLeftBrace)
+          if not braceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\begin", token.position)
+
+          # Read environment name (multiple identifiers like "pmatrix")
+          var envName = ""
+          let nameToken = stream.peek()
+          if nameToken.kind == tkIdentifier:
+            while stream.peek().kind == tkIdentifier and not stream.match(tkRightBrace):
+              envName.add(stream.advance().value)
+          else:
+            return err[AstNode](ekInvalidArgument, "Expected environment name after \\begin{", nameToken.position)
+
+          let closeResult = stream.expect(tkRightBrace)
+          if not closeResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after environment name", nameToken.position)
+
+          # Check if it's a matrix environment
+          if envName in ["matrix", "pmatrix", "bmatrix", "vmatrix", "Vmatrix", "cases"]:
+            return parseMatrixEnvironment(stream, envName)
+          else:
+            return err[AstNode](ekInvalidCommand, "Unknown environment: " & envName, token.position)
+        else:
+          # \end command should only appear inside matrix parsing
+          return err[AstNode](ekInvalidCommand, "Unexpected \\end command", token.position)
 
       else:
         return err[AstNode](
@@ -528,6 +556,128 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
       "Unexpected token: " & $token.kind,
       token.position
     )
+
+proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result[AstNode] =
+  ## Parse a matrix environment: rows separated by \\, columns by &
+  var rows: seq[seq[AstNode]] = @[]
+  var currentRow: seq[AstNode] = @[]
+  var cellExpressions: seq[AstNode] = @[]
+
+  # Parse matrix content until we hit \end
+  while not stream.isAtEnd():
+    let token = stream.peek()
+
+    # Check for \end command
+    if token.kind == tkCommand and token.value == "end":
+      # Save current cell if any
+      if cellExpressions.len > 0:
+        if cellExpressions.len == 1:
+          currentRow.add(cellExpressions[0])
+        else:
+          currentRow.add(newRow(cellExpressions))
+        cellExpressions = @[]
+
+      # Save current row if any
+      if currentRow.len > 0:
+        rows.add(currentRow)
+
+      # Consume \end
+      discard stream.advance()
+
+      # Expect environment name in braces
+      let braceResult = stream.expect(tkLeftBrace)
+      if not braceResult.isOk:
+        return err[AstNode](ekMismatchedBraces, "Expected { after \\end", token.position)
+
+      # Read environment name
+      let nameToken = stream.peek()
+      var endEnvName = ""
+      if nameToken.kind == tkIdentifier:
+        while stream.peek().kind == tkIdentifier and not stream.match(tkRightBrace):
+          endEnvName.add(stream.advance().value)
+      else:
+        return err[AstNode](ekInvalidArgument, "Expected environment name after \\end{", nameToken.position)
+
+      let closeResult = stream.expect(tkRightBrace)
+      if not closeResult.isOk:
+        return err[AstNode](ekMismatchedBraces, "Expected } after environment name", nameToken.position)
+
+      # Verify environment names match
+      if endEnvName != matrixType:
+        return err[AstNode](ekInvalidArgument, "Environment mismatch: \\begin{" & matrixType & "} ended with \\end{" & endEnvName & "}", token.position)
+
+      # Return matrix node
+      return ok(newMatrix(rows, matrixType))
+
+    # Check for line break (\\)
+    elif token.kind == tkLineBreak:
+      discard stream.advance()
+
+      # Save current cell if any
+      if cellExpressions.len > 0:
+        if cellExpressions.len == 1:
+          currentRow.add(cellExpressions[0])
+        else:
+          currentRow.add(newRow(cellExpressions))
+        cellExpressions = @[]
+
+      # Save current row
+      if currentRow.len > 0:
+        rows.add(currentRow)
+        currentRow = @[]
+
+    # Check for column separator (&)
+    elif token.kind == tkAmpersand:
+      discard stream.advance()
+
+      # Save current cell
+      if cellExpressions.len == 0:
+        # Empty cell - use empty row
+        currentRow.add(newRow(@[]))
+      elif cellExpressions.len == 1:
+        currentRow.add(cellExpressions[0])
+      else:
+        currentRow.add(newRow(cellExpressions))
+      cellExpressions = @[]
+
+    # Regular expression - parse it
+    else:
+      let exprResult = parsePrimary(stream)
+      if not exprResult.isOk:
+        return err[AstNode](exprResult.error)
+
+      # Check for scripts after the primary
+      var node = exprResult.value
+      while stream.match(tkSubscript) or stream.match(tkSuperscript):
+        if stream.match(tkSubscript):
+          discard stream.advance()
+          let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                          else: parsePrimary(stream)
+          if not subResult.isOk:
+            return err[AstNode](subResult.error)
+
+          # Check if followed by superscript
+          if stream.match(tkSuperscript):
+            discard stream.advance()
+            let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                            else: parsePrimary(stream)
+            if not supResult.isOk:
+              return err[AstNode](supResult.error)
+            node = newSubSup(node, subResult.value, supResult.value)
+          else:
+            node = newSub(node, subResult.value)
+
+        elif stream.match(tkSuperscript):
+          discard stream.advance()
+          let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                          else: parsePrimary(stream)
+          if not supResult.isOk:
+            return err[AstNode](supResult.error)
+          node = newSup(node, supResult.value)
+
+      cellExpressions.add(node)
+
+  return err[AstNode](ekUnexpectedEof, "Matrix environment not closed with \\end{" & matrixType & "}", 0)
 
 proc parseGroup(stream: var TokenStream): Result[AstNode] =
   ## Parse a group {...}

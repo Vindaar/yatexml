@@ -261,6 +261,9 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
     let left = tag("mo", "\u2016", [("fence", "true")])
     let right = tag("mo", "\u2016", [("fence", "true")])
     tag("mrow", left & table & right)
+  of "cases":
+    let left = tag("mo", "{", [("fence", "true")])
+    tag("mrow", left & table)
   else:
     table
 
