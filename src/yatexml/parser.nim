@@ -424,7 +424,7 @@ proc shorthandToUnit(s: string): SIUnitKind =
   of "Bq": ukBecquerel
   of "Gy": ukGray
   of "Sv": ukSievert
-  else: ukMeter  # fallback
+  else: ukCustom  # Unknown unit - will be handled as custom
 
 # Helper: Map shorthand prefix character to SIPrefixKind
 proc shorthandToPrefix(c: char): SIPrefixKind =
@@ -491,6 +491,7 @@ proc parseShorthandUnits(s: string): tuple[numerator: seq[SIUnitComponent], deno
     # Try to match known multi-character units first
     var prefix = pkNone
     var unit = ukMeter
+    var customUnitStr = ""  # For unknown units
     var matched = false
 
     # Check for multi-char units (kg, Hz, mol, cd, etc.)
@@ -512,6 +513,9 @@ proc parseShorthandUnits(s: string): tuple[numerator: seq[SIUnitComponent], deno
     # Check for single-char units (m, s, g, A, K, V, W, C, F, S, T, H, N, J)
     elif unitStr.len == 1:
       unit = shorthandToUnit(unitStr)
+      if unit == ukCustom:
+        # Unknown single-char unit - preserve it as custom
+        customUnitStr = unitStr
       matched = true
     # Check for prefix + single-char unit (km, ms, mA, μV, etc.)
     elif unitStr.len >= 2:
@@ -540,10 +544,23 @@ proc parseShorthandUnits(s: string): tuple[numerator: seq[SIUnitComponent], deno
       if unitPart.len > 0:
         prefix = shorthandStrToPrefix(prefixStr)
         unit = shorthandToUnit(unitPart)
+        if unit == ukCustom:
+          # Unknown unit - preserve original string as custom (don't use prefix)
+          customUnitStr = unitStr
+          prefix = pkNone  # Reset prefix since it's part of the custom unit string
         matched = true
 
+    # If no match at all, treat entire string as custom unit
+    if not matched:
+      customUnitStr = unitStr
+      matched = true
+
     if matched:
-      let component = newSIUnitComponent(prefix, unit, abs(power))
+      let component = if customUnitStr.len > 0:
+        newCustomUnitComponent(customUnitStr, pkNone, abs(power))  # Never use prefix with custom units
+      else:
+        newSIUnitComponent(prefix, unit, abs(power))
+
       if power < 0:
         denominator.add(component)
       else:

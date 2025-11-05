@@ -767,6 +767,49 @@ suite "Shorthand Unit Notation Tests":
     check result.isOk
     check "MW" in result.value
 
+suite "Custom Unit Support Tests":
+  test "Custom units - imperial units (ft.lbf)":
+    let result = latexToMathML(r"\SI{10}{ft.lbf}")
+    check result.isOk
+    check "10" in result.value
+    check "ft" in result.value
+    check "lbf" in result.value
+    check "mathvariant=\"normal\"" in result.value
+
+  test "Custom units - single unknown unit":
+    let result = latexToMathML(r"\si{mph}")
+    check result.isOk
+    check "mph" in result.value
+    check "mathvariant=\"normal\"" in result.value
+
+  test "Custom units - mixed known and unknown":
+    let result = latexToMathML(r"\SI{5}{m.mph}")
+    check result.isOk
+    check "5" in result.value
+    check "m" in result.value
+    check "mph" in result.value
+
+  test "Custom units - with power notation":
+    let result = latexToMathML(r"\si{ft^{2}}")
+    check result.isOk
+    check "ft²" in result.value
+
+  test "Custom units - in denominator":
+    let result = latexToMathML(r"\si{m.ft^{-1}}")
+    check result.isOk
+    check "m" in result.value
+    check "/" in result.value
+    check "ft" in result.value
+
+  test "Known units still work after custom unit support":
+    let result = latexToMathML(r"\SI{100}{kg.m.s^{-2}}")
+    check result.isOk
+    check "100" in result.value
+    check "kg" in result.value
+    check "m" in result.value
+    check "/" in result.value
+    check "s²" in result.value
+
 suite "Unicode Character Support Tests":
   test "Greek letters - lowercase alpha":
     let result = latexToMathML("α + x")

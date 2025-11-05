@@ -146,6 +146,10 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
 - Full SI prefix support (yocto through yotta)
 - 26 SI units (base and derived)
 - Shorthand notation: `\si{km}`, `\si{m.s^{-2}}`
+- **Custom/unknown units**: Unknown units in shorthand notation are preserved as-is
+  - Example: `\SI{10}{ft.lbf}` renders "ft·lbf" (imperial units)
+  - Example: `\SI{5}{mph}` renders "mph"
+  - No fallback to default units - your input is preserved
 
 ✅ **Unicode Characters**
 - Greek letters: α, β, γ, etc. (direct Unicode input)
@@ -279,6 +283,13 @@ latexToMathML(r"\si{km.s^{-2}}")
 
 latexToMathML(r"\num{1234567}")
 # Number with formatting
+
+# Custom/unknown units (imperial, etc.) are preserved
+latexToMathML(r"\SI{10}{ft.lbf}")
+# 10 ft·lbf (foot-pound force)
+
+latexToMathML(r"\SI{65}{mph}")
+# 65 mph (miles per hour)
 ```
 
 ## API Reference

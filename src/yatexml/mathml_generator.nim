@@ -377,6 +377,7 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
       of ukBecquerel: "Bq"
       of ukGray: "Gy"
       of ukSievert: "Sv"
+      of ukCustom: comp.customUnit  # Use the preserved custom unit string
 
     let prefixStr = case comp.prefix
       of pkNone: ""

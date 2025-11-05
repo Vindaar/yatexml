@@ -8,8 +8,8 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 
 ## 📊 Implementation Status
 
-**Last Updated:** 2025-11-05 (Alignment Environments Complete)
-**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System), Alignment Environments Complete ✅
+**Last Updated:** 2025-11-05 (Custom Units in siunitx)
+**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System), Alignment Environments Complete ✅, Custom Units ✅
 
 ### Completed ✅
 - **Phase 1: Foundation & Architecture** - Complete (100%)
@@ -48,6 +48,7 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
   - ✅ Unit operations (\per, \squared, \cubed, \tothe)
   - ✅ Unit composition (numerator/denominator with prefix support)
   - ✅ Shorthand notation (e.g., \si{m.s^{-2}}, \si{mV.kg})
+  - ✅ **Custom/unknown units** - Unknown units in shorthand notation are preserved (e.g., \SI{10}{ft.lbf} for imperial units) ⭐ NEW
 - **Phase 6: Advanced Features** - Partial (40%)
   - ✅ **Unicode character support** (unicode-math style) - 150+ characters
   - ✅ **Macro system** (\def and \newcommand with arguments) ⭐ NEW
@@ -57,10 +58,10 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 - **Phase 7:** Compile-time execution (partial - has issues with table initialization)
 
 ### Test Status
-- **Tests Passing:** 161/162 (99.4%) ✅
-- **Test Count:** 161 passing + 1 skipped = 162 total
+- **Tests Passing:** 167/168 (99.4%) ✅
+- **Test Count:** 167 passing + 1 skipped = 168 total
 - **Backends:** Both C and JS backends working ✅
-- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, **Alignment Environments** ⭐, Text Mode, Spacing, Color, siunitx, Shorthand Units, Unicode Characters, Macro System
+- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Alignment Environments, Text Mode, Spacing, Color, siunitx, Shorthand Units, **Custom Units** ⭐, Unicode Characters, Macro System
 
 ---
 

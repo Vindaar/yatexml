@@ -128,6 +128,8 @@ type
     ukBecquerel           ## Bq - becquerel
     ukGray                ## Gy - gray
     ukSievert             ## Sv - sievert
+    # Custom units
+    ukCustom              ## Custom/unknown unit (string preserved)
 
   SIPrefixKind* = enum
     ## SI prefixes
@@ -162,8 +164,12 @@ type
 
   SIUnitComponent* = object
     ## A single SI unit component (prefix + unit + power)
+    case unit*: SIUnitKind  ## Base or derived unit
+    of ukCustom:
+      customUnit*: string   ## Custom unit string (for unknown units)
+    else:
+      discard
     prefix*: SIPrefixKind   ## SI prefix (pkNone if no prefix)
-    unit*: SIUnitKind       ## Base or derived unit
     power*: int             ## Power (1 for normal, 2 for squared, etc.)
 
   AstNode* = ref object
@@ -378,8 +384,12 @@ proc newSIValue*(value: string, unit: AstNode): AstNode =
   AstNode(kind: nkSIValue, siValue: value, siUnit: unit)
 
 proc newSIUnitComponent*(prefix: SIPrefixKind, unit: SIUnitKind, power: int = 1): SIUnitComponent =
-  ## Create an SI unit component
-  SIUnitComponent(prefix: prefix, unit: unit, power: power)
+  ## Create an SI unit component (for known units)
+  SIUnitComponent(unit: unit, prefix: prefix, power: power)
+
+proc newCustomUnitComponent*(customUnit: string, prefix: SIPrefixKind = pkNone, power: int = 1): SIUnitComponent =
+  ## Create a custom SI unit component (for unknown units)
+  SIUnitComponent(unit: ukCustom, customUnit: customUnit, prefix: prefix, power: power)
 
 # Helper functions
 
