@@ -1185,6 +1185,13 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
             textContent.add(textToken.value)
             lastPos = textToken.position + textToken.value.len
 
+        # Check for trailing whitespace before closing brace
+        if stream.match(tkRightBrace):
+          let closeBrace = stream.peek()
+          let trailingGap = closeBrace.position - lastPos
+          if trailingGap > 0:
+            textContent.add(" ".repeat(trailingGap))
+
         let closeResult = stream.expect(tkRightBrace)
         if not closeResult.isOk:
           return err[AstNode](ekMismatchedBraces, "Expected } after text content", token.position)

@@ -199,7 +199,8 @@ proc generateRow(node: AstNode, options: MathMLOptions): string =
 proc generateDelimited(node: AstNode, options: MathMLOptions): string =
   ## Generate delimited expression with fences
   let content = generateNode(node.delimContent, options)
-  let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true")])
+  # Use lspace="0" on left fence to prevent extra space before parentheses (e.g., in f(x))
+  let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true"), ("lspace", "0")])
   let rightFence = tag("mo", node.delimRight, [("fence", "true"), ("stretchy", "true")])
   tag("mrow", leftFence & content & rightFence)
 
@@ -230,7 +231,8 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   let opNode = if node.bigopKind in {boLim, boMax, boMin}:
     tag("mo", opSymbol)
   else:
-    tag("mo", opSymbol, [("largeop", "true")])
+    # Add symmetric="true" and controlled spacing for large operators
+    tag("mo", opSymbol, [("largeop", "true"), ("symmetric", "true"), ("lspace", "thinmathspace"), ("rspace", "thinmathspace")])
 
   # Handle limits
   if node.bigopLower != nil and node.bigopUpper != nil:
