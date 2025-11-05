@@ -8,8 +8,8 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 
 ## 📊 Implementation Status
 
-**Last Updated:** 2025-11-05 (Custom Units in siunitx)
-**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System), Alignment Environments Complete ✅, Custom Units ✅
+**Last Updated:** 2025-11-05 (Infix Operators & Mozilla Test Suite)
+**Current Phase:** Phase 1-5 Complete ✅, Phase 6.2 Complete ✅ (Macro System), Alignment Environments Complete ✅, Infix Operators Complete ✅, Mozilla Test Suite Added ✅
 
 ### Completed ✅
 - **Phase 1: Foundation & Architecture** - Complete (100%)
@@ -35,6 +35,9 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
   - ✅ Accents (hat, bar, tilde, dot, ddot, vec, widehat, widetilde, overline, underline)
   - ✅ Extensible accents (overbrace, underbrace, overrightarrow, overleftarrow)
   - ✅ Delimiters (\left \right with parens, brackets, braces, pipes, angle brackets, floor, ceil)
+  - ✅ **Infix operators** (\over, \choose, \atop) ⭐ NEW
+  - ✅ **Continued fractions** (\cfrac) ⭐ NEW
+  - ✅ **Additional symbols** (\partial, \vdots, \cdots, \ldots, \dots, \lvert, \rvert) ⭐ NEW
   - ✅ Matrices and arrays (matrix, pmatrix, bmatrix, vmatrix, Vmatrix)
   - ✅ Cases environment (\begin{cases})
   - ✅ Text mode (\text{} with whitespace preservation)
@@ -58,10 +61,87 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 - **Phase 7:** Compile-time execution (partial - has issues with table initialization)
 
 ### Test Status
+
+#### Unit Tests
 - **Tests Passing:** 167/168 (99.4%) ✅
 - **Test Count:** 167 passing + 1 skipped = 168 total
 - **Backends:** Both C and JS backends working ✅
-- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Alignment Environments, Text Mode, Spacing, Color, siunitx, Shorthand Units, **Custom Units** ⭐, Unicode Characters, Macro System
+- **Coverage:** Lexer, Parser, MathML Generation, Integration, Error Handling, Delimiters, Operators, Accents, Matrices, Cases, Alignment Environments, Text Mode, Spacing, Color, siunitx, Shorthand Units, **Custom Units** ⭐, Unicode Characters, Macro System, **Infix Operators** ⭐
+
+#### Mozilla Torture Test (TeXbook Examples)
+- **Tests Passing:** 26/30 (86.7%) ✅
+- **Source:** TeMML's mozilla-tests.html (30 tests from The TeXbook by Knuth)
+- **Test Suite:** `tests/test_mozilla.nim`
+- **Visual Comparison:** Generated HTML file for manual verification
+- **Test Extraction:** Automated tools in `tools/` directory
+
+### Known Issues & Remaining Work 🔧
+
+#### Failing Mozilla Tests (4/30)
+
+1. **Test 2: Subscript Without Base** - `_2F_3` (TeXbook p128)
+   - **Issue:** LaTeX allows subscripts at the start of expressions without a base
+   - **Error:** "Unexpected token: tkSubscript"
+   - **Status:** Edge case, rarely used in practice
+   - **Priority:** Low
+
+2. **Test 18: Semicolon in Text Mode** - `\text{if }0 \le x \le 1;` (TeXbook p175)
+   - **Issue:** Semicolon `;` not recognized as valid character inside `\text{}`
+   - **Error:** "Unexpected character: ;"
+   - **Status:** Character escaping/whitelist issue in text mode
+   - **Priority:** Medium (affects cases environment with text conditions)
+
+3. **Test 28: Multiple Primes** - `y_3'''` (TeXbook p130)
+   - **Issue:** Multiple apostrophes (prime marks) for derivatives not supported
+   - **Error:** "Unexpected character: '"
+   - **Status:** Need to implement prime mark handling
+   - **Priority:** Medium (common in calculus/derivatives)
+
+4. **Test 29: Factorial and \genfrac** - `n!` and `\genfrac (){}{}n{e}`
+   - **Issue 1:** Factorial operator `!` not recognized
+   - **Issue 2:** `\genfrac` command (generalized fraction) not implemented
+   - **Error:** "Unexpected character: !"
+   - **Status:** Two separate features needed
+   - **Priority:**
+     - Factorial: High (very common)
+     - `\genfrac`: Low (advanced/rare command)
+
+#### Missing Commands (Identified but Not Yet Implemented)
+
+1. **Delimiter Sizing Commands**
+   - **Commands:** `\big`, `\Big`, `\bigg`, `\Bigg`
+   - **Purpose:** Control delimiter size (bigger than default)
+   - **Example:** `\bigg( \frac{a}{b} \bigg)`
+   - **Status:** Not implemented
+   - **Priority:** Medium (used in complex expressions)
+   - **Note:** Currently returns "Empty expression" error
+
+2. **Display Style Commands**
+   - **Commands:** `\displaystyle`, `\textstyle`, `\scriptstyle`, `\scriptscriptstyle`
+   - **Purpose:** Control math style (size/spacing)
+   - **Example:** `\scriptstyle x` (smaller text)
+   - **Status:** Registered in parser but not fully handled
+   - **Priority:** Low (mostly affects rendering style)
+
+3. **Miscellaneous TeXbook Commands**
+   - **\genfrac**: Generalized fraction with custom delimiters/thickness
+   - **\mathstrut**: Invisible vertical strut for alignment
+   - **\rq**: Right quote (apostrophe) - may be needed for primes
+   - **Prime marks** (`'`, `''`, `'''`): Derivative notation
+   - **Factorial** (`!`): Postfix operator for factorials
+   - **Status:** Various levels of priority
+
+#### Other Issues
+
+1. **Whitespace Rendering**
+   - **Description:** Some spacing issues noted in integrals and determinants
+   - **Status:** Minor visual differences, doesn't affect correctness
+   - **Priority:** Low
+
+2. **Error Messages**
+   - **Description:** Some error messages could be more helpful
+   - **Status:** Functional but could be improved
+   - **Priority:** Low
 
 ---
 
