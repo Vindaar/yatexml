@@ -250,16 +250,22 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
       let cellContent = generateNode(cell, options)
       var cellAttrs: seq[(string, string)] = @[]
 
-      # Add CSS class for alignment (required for text-align to work properly)
+      # Add CSS class and padding for alignment (required for text-align to work properly)
       if isAlignmentEnv:
         case node.matrixType
         of "align", "aligned":
-          # Alternate right/left alignment
+          # Alternate right/left alignment with TeMML-style padding
           let alignClass = if cellIdx mod 2 == 0: "tml-right" else: "tml-left"
           cellAttrs.add(("class", alignClass))
+          # Right-aligned cells get left padding, left-aligned cells get no padding
+          # This creates space before the alignment point but not after
+          let padding = if cellIdx mod 2 == 0: "padding-left:1em;padding-right:0em;"
+                        else: "padding-left:0em;padding-right:0em;"
+          cellAttrs.add(("style", padding))
         of "gather", "gathered":
-          # Center alignment
+          # Center alignment with symmetric padding
           cellAttrs.add(("class", "tml-center"))
+          cellAttrs.add(("style", "padding-left:0em;padding-right:0em;"))
         else:
           discard
 

@@ -27,3 +27,4 @@ nimcache/
 # OS
 .DS_Store
 Thumbs.db
+/teml_web/
