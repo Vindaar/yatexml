@@ -1369,6 +1369,22 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         # Not a macro - treat as identifier
         return ok(newIdentifier(cmdName))
 
+  of tkSubscript, tkSuperscript:
+    # Leading subscript or superscript (e.g., _2F_3 for hypergeometric functions)
+    # Create with empty/phantom base
+    discard stream.advance()
+    let scriptResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                       else: parsePrimary(stream)
+    if not scriptResult.isOk:
+      return err[AstNode](scriptResult.error)
+
+    # Use empty row as phantom base
+    let emptyBase = newRow(@[])
+    if token.kind == tkSubscript:
+      return ok(newSub(emptyBase, scriptResult.value))
+    else:
+      return ok(newSup(emptyBase, scriptResult.value))
+
   of tkEof:
     return err[AstNode](ekUnexpectedEof, "Unexpected end of input", token.position)
 
@@ -1504,6 +1520,11 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
                 return err[AstNode](supResult.error)
               node = newSup(node, supResult.value)
 
+          # Check for factorial operator
+          if stream.match(tkOperator) and stream.peek().value == "!":
+            discard stream.advance()
+            node = newRow(@[node, newOperator("factorial", "!", "postfix")])
+
           cellExpressions.add(node)
 
         # Add cell to row
@@ -1563,6 +1584,11 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
           return err[AstNode](supResult.error)
         node = newSup(node, supResult.value)
 
+    # Check for factorial operator
+    if stream.match(tkOperator) and stream.peek().value == "!":
+      discard stream.advance()
+      node = newRow(@[node, newOperator("factorial", "!", "postfix")])
+
     children.add(node)
 
     # Check for infix fraction commands (\over, \choose, \atop) - same as in parseExpression
@@ -1605,6 +1631,11 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
               if not supResult.isOk:
                 return err[AstNode](supResult.error)
               rightNode = newSup(rightNode, supResult.value)
+
+          # Check for factorial operator
+          if stream.match(tkOperator) and stream.peek().value == "!":
+            discard stream.advance()
+            rightNode = newRow(@[rightNode, newOperator("factorial", "!", "postfix")])
 
           rightChildren.add(rightNode)
 
@@ -1681,6 +1712,11 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
         if not supResult.isOk:
           return err[AstNode](supResult.error)
         node = newSup(node, supResult.value)
+
+    # Check for factorial operator
+    if stream.match(tkOperator) and stream.peek().value == "!":
+      discard stream.advance()
+      node = newRow(@[node, newOperator("factorial", "!", "postfix")])
 
     children.add(node)
 
