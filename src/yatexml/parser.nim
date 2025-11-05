@@ -12,7 +12,7 @@ type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText, ctSpace, ctColor,
-    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef
+    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac
 
   CommandInfo = object
     cmdType: CommandType
@@ -28,6 +28,12 @@ proc initCommandTable(): Table[string, CommandInfo] =
 
   # Fractions
   result["frac"] = CommandInfo(cmdType: ctFrac, numArgs: 2)
+  result["cfrac"] = CommandInfo(cmdType: ctFrac, numArgs: 2)  # Continued fractions (same as frac for now)
+
+  # Infix fraction-like commands
+  result["over"] = CommandInfo(cmdType: ctInfixFrac, numArgs: 0)
+  result["choose"] = CommandInfo(cmdType: ctInfixFrac, numArgs: 0)
+  result["atop"] = CommandInfo(cmdType: ctInfixFrac, numArgs: 0)
 
   # Square roots
   result["sqrt"] = CommandInfo(cmdType: ctSqrt, numArgs: 1)
@@ -87,6 +93,15 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["supset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["subseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["supseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Additional symbols
+  result["partial"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vdots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["cdots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ldots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["dots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lvert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rvert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -335,6 +350,11 @@ proc operatorToUnicode(name: string): string =
   of "supset": "\u2283"
   of "subseteq": "\u2286"
   of "supseteq": "\u2287"
+  of "partial": "\u2202"
+  of "vdots": "\u22EE"
+  of "cdots": "\u22EF"
+  of "ldots", "dots": "\u2026"
+  of "lvert", "rvert": "|"
   else: name
 
 # Parser implementation
@@ -1312,6 +1332,15 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         # Macro definitions don't produce output, so parse the next expression
         return parsePrimary(stream)
 
+      of ctInfixFrac:
+        # Infix fractions (\over, \choose, \atop) are handled in parseExpression
+        # If we reach here, it's an error (no left operand)
+        return err[AstNode](
+          ekInvalidCommand,
+          "Infix command \\" & cmdName & " requires a left operand",
+          token.position
+        )
+
       of ctSIUnit, ctSIPrefix, ctSIUnitOp:
         # These should only appear within \si or \SI contexts
         # If they appear outside, treat as error
@@ -1536,6 +1565,65 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
 
     children.add(node)
 
+    # Check for infix fraction commands (\over, \choose, \atop) - same as in parseExpression
+    if stream.match(tkCommand):
+      let cmdName = stream.peek().value
+      if cmdName in commandTable and commandTable[cmdName].cmdType == ctInfixFrac:
+        discard stream.advance()  # consume the command
+
+        # Take all children so far as the numerator/left operand
+        let leftNode = if children.len == 1: children[0] else: newRow(children)
+
+        # Parse the rest as the denominator/right operand (until closing brace)
+        var rightChildren: seq[AstNode] = @[]
+        while not stream.match(tkRightBrace) and not stream.isAtEnd():
+          let primResult = parsePrimary(stream)
+          if not primResult.isOk:
+            return err[AstNode](primResult.error)
+
+          var rightNode = primResult.value
+          while stream.match(tkSubscript) or stream.match(tkSuperscript):
+            if stream.match(tkSubscript):
+              discard stream.advance()
+              let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                              else: parsePrimary(stream)
+              if not subResult.isOk:
+                return err[AstNode](subResult.error)
+              if stream.match(tkSuperscript):
+                discard stream.advance()
+                let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                                else: parsePrimary(stream)
+                if not supResult.isOk:
+                  return err[AstNode](supResult.error)
+                rightNode = newSubSup(rightNode, subResult.value, supResult.value)
+              else:
+                rightNode = newSub(rightNode, subResult.value)
+            elif stream.match(tkSuperscript):
+              discard stream.advance()
+              let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                              else: parsePrimary(stream)
+              if not supResult.isOk:
+                return err[AstNode](supResult.error)
+              rightNode = newSup(rightNode, supResult.value)
+
+          rightChildren.add(rightNode)
+
+        let rightNode = if rightChildren.len == 1: rightChildren[0] else: newRow(rightChildren)
+
+        # Create the appropriate node based on the command
+        let resultNode = case cmdName
+          of "over": newFrac(leftNode, rightNode)
+          of "choose": newBinomial(leftNode, rightNode)
+          of "atop": newAtop(leftNode, rightNode)
+          else: leftNode  # shouldn't happen
+
+        # Expect closing brace
+        let closeResult = stream.expect(tkRightBrace)
+        if not closeResult.isOk:
+          return err[AstNode](closeResult.error)
+
+        return ok(resultNode)
+
   let closeResult = stream.expect(tkRightBrace)
   if not closeResult.isOk:
     return err[AstNode](closeResult.error)
@@ -1595,6 +1683,33 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
         node = newSup(node, supResult.value)
 
     children.add(node)
+
+    # Check for infix fraction commands (\over, \choose, \atop)
+    if stream.match(tkCommand):
+      let cmdName = stream.peek().value
+      if cmdName in commandTable and commandTable[cmdName].cmdType == ctInfixFrac:
+        discard stream.advance()  # consume the command
+
+        # Take all children so far as the numerator/left operand
+        let leftNode = if children.len == 1: children[0] else: newRow(children)
+
+        # Parse the rest as the denominator/right operand
+        let rightResult = parseExpression(stream)
+        if not rightResult.isOk:
+          return err[AstNode](rightResult.error)
+
+        # Create the appropriate node based on the command
+        case cmdName
+        of "over":
+          return ok(newFrac(leftNode, rightResult.value))
+        of "choose":
+          # Binomial coefficient: wrapped in parentheses, no fraction line
+          return ok(newBinomial(leftNode, rightResult.value))
+        of "atop":
+          # Stacked without line: like frac but no line
+          return ok(newAtop(leftNode, rightResult.value))
+        else:
+          discard  # shouldn't happen
 
   # If only one child, return it directly; otherwise wrap in row
   if children.len == 0:

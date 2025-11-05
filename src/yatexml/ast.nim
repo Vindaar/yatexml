@@ -23,6 +23,8 @@ type
 
     # Binary nodes
     nkFrac                ## Fraction: \frac{a}{b}
+    nkBinomial            ## Binomial coefficient: \choose
+    nkAtop                ## Stacked expression without line: \atop
     nkSub                 ## Subscript: x_i
     nkSup                 ## Superscript: x^2
     nkSubSup              ## Combined sub and superscript: x_i^2
@@ -224,6 +226,14 @@ type
       fracNum*: AstNode           ## Numerator
       fracDenom*: AstNode         ## Denominator
 
+    of nkBinomial:
+      binomTop*: AstNode          ## Top value (n)
+      binomBottom*: AstNode       ## Bottom value (k)
+
+    of nkAtop:
+      atopTop*: AstNode           ## Top expression
+      atopBottom*: AstNode        ## Bottom expression
+
     of nkSub:
       subBase*: AstNode           ## Base expression
       subScript*: AstNode         ## Subscript
@@ -338,6 +348,14 @@ proc newColor*(color: string, base: AstNode): AstNode =
 proc newFrac*(num: AstNode, denom: AstNode): AstNode =
   ## Create a fraction node
   AstNode(kind: nkFrac, fracNum: num, fracDenom: denom)
+
+proc newBinomial*(top: AstNode, bottom: AstNode): AstNode =
+  ## Create a binomial coefficient node
+  AstNode(kind: nkBinomial, binomTop: top, binomBottom: bottom)
+
+proc newAtop*(top: AstNode, bottom: AstNode): AstNode =
+  ## Create an atop node (stacked without line)
+  AstNode(kind: nkAtop, atopTop: top, atopBottom: bottom)
 
 proc newSub*(base: AstNode, script: AstNode): AstNode =
   ## Create a subscript node

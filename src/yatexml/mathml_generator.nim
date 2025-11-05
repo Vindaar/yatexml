@@ -87,6 +87,21 @@ proc generateFrac(node: AstNode, options: MathMLOptions): string =
   let denom = generateNode(node.fracDenom, options)
   tag("mfrac", num & denom)
 
+proc generateBinomial(node: AstNode, options: MathMLOptions): string =
+  ## Generate binomial coefficient (n choose k) with parentheses
+  let top = generateNode(node.binomTop, options)
+  let bottom = generateNode(node.binomBottom, options)
+  # Use mfrac with linethickness="0px" for no line, wrapped in parentheses
+  let frac = tag("mfrac", top & bottom, [("linethickness", "0px")])
+  tag("mrow", tag("mo", "(", [("fence", "true")]) & frac & tag("mo", ")", [("fence", "true")]))
+
+proc generateAtop(node: AstNode, options: MathMLOptions): string =
+  ## Generate stacked expression without line
+  let top = generateNode(node.atopTop, options)
+  let bottom = generateNode(node.atopBottom, options)
+  # Use mfrac with linethickness="0px" for no line
+  tag("mfrac", top & bottom, [("linethickness", "0px")])
+
 proc generateSqrt(node: AstNode, options: MathMLOptions): string =
   ## Generate <msqrt> element for square roots
   let base = generateNode(node.sqrtBase, options)
@@ -455,6 +470,10 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateSpace(node, options)
   of nkFrac:
     generateFrac(node, options)
+  of nkBinomial:
+    generateBinomial(node, options)
+  of nkAtop:
+    generateAtop(node, options)
   of nkSqrt:
     generateSqrt(node, options)
   of nkRoot:
