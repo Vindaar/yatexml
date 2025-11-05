@@ -41,13 +41,13 @@ proc extractTests(htmlFile: string): seq[TestCase] =
     result.add(TestCase(num: num, latex: latex, comment: comment))
 
 proc generateHtmlComparison(tests: seq[TestCase], outputFile: string) =
-  ## Generate HTML file with visual comparison
+  ## Generate HTML file with visual comparison that executes LaTeX to MathML conversion client-side
   var html = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1">
-  <title>yatexml Mozilla Tests Comparison</title>
+  <title>yatexml Mozilla Tests Comparison (Dynamic)</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     h1 { color: #333; }
@@ -61,14 +61,16 @@ proc generateHtmlComparison(tests: seq[TestCase], outputFile: string) =
     .error { color: red; font-weight: bold; }
     .success { color: green; }
     .comment { font-size: 0.85em; color: #666; }
+    .loading { color: #666; font-style: italic; }
   </style>
 </head>
 <body>
-  <h1>yatexml Mozilla Tests Comparison</h1>
+  <h1>yatexml Mozilla Tests Comparison (Dynamic)</h1>
   <p>Generated from TeMML's mozilla-tests.html - 30 test cases from the TeXbook</p>
-  <p><strong>Status:</strong> <span id="status"></span></p>
+  <p><strong>Status:</strong> <span id="status" class="loading">Loading...</span></p>
+  <p><em>This page dynamically executes LaTeX to MathML conversion using the compiled yatexml library.</em></p>
 
-  <table>
+  <table id="test-table">
     <tr>
       <th>#</th>
       <th>LaTeX Source</th>
@@ -78,46 +80,85 @@ proc generateHtmlComparison(tests: seq[TestCase], outputFile: string) =
     </tr>
 """
 
-  var successCount = 0
-  var totalCount = tests.len
-
+  # Generate table rows with data attributes containing LaTeX
   for test in tests:
-    let result = latexToMathML(test.latex)
-    let status = if result.isOk:
-      successCount.inc
-      "✓"
-    else:
-      "✗"
+    let escapedLatex = test.latex.multiReplace([
+      ("<", "&lt;"), (">", "&gt;"), ("&", "&amp;"), ("\"", "&quot;")
+    ])
 
-    html &= "    <tr>\n"
+    html &= "    <tr data-latex=\"" & escapedLatex & "\">\n"
     html &= "      <td class='test-num'>" & $test.num & "</td>\n"
-    html &= "      <td class='latex-source'>" & test.latex.multiReplace([
-      ("<", "&lt;"), (">", "&gt;"), ("&", "&amp;")
-    ]) & "</td>\n"
-
-    if result.isOk:
-      html &= "      <td class='mathml-output'>" & result.value & "</td>\n"
-      html &= "      <td class='success'>" & status & "</td>\n"
-    else:
-      html &= "      <td class='error'>" & result.error.message & "</td>\n"
-      html &= "      <td class='error'>" & status & "</td>\n"
-
+    html &= "      <td class='latex-source'>" & escapedLatex & "</td>\n"
+    html &= "      <td class='mathml-output loading'>Converting...</td>\n"
+    html &= "      <td class='status loading'>⏳</td>\n"
     html &= "      <td class='comment'>" & test.comment & "</td>\n"
     html &= "    </tr>\n"
 
   html &= """  </table>
 
+  <!-- Import the compiled yatexml JavaScript library -->
+  <script src="examples/latexToMathML.js"></script>
+
   <script>
-    document.getElementById('status').innerHTML = '""" & $successCount & "/" & $totalCount & """ tests passing (' + Math.round(""" & $successCount & """ / """ & $totalCount & """ * 100) + '%)';
+    // Wait for the module to load
+    window.addEventListener('load', function() {
+      // Give the WASM/JS module time to initialize
+      setTimeout(function() {
+        const table = document.getElementById('test-table');
+        const rows = table.querySelectorAll('tr[data-latex]');
+        let successCount = 0;
+        let totalCount = rows.length;
+
+        rows.forEach(function(row) {
+          const latex = row.getAttribute('data-latex')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&')
+            .replace(/&quot;/g, '"');
+
+          const outputCell = row.querySelector('.mathml-output');
+          const statusCell = row.querySelector('.status');
+
+          try {
+            // Call the compiled Nim function
+            const mathml = latexToMathML(latex);
+
+            if (mathml && mathml !== 'ERROR') {
+              outputCell.innerHTML = mathml;
+              outputCell.className = 'mathml-output';
+              statusCell.innerHTML = '✓';
+              statusCell.className = 'success';
+              successCount++;
+            } else {
+              outputCell.innerHTML = 'Conversion error';
+              outputCell.className = 'error';
+              statusCell.innerHTML = '✗';
+              statusCell.className = 'error';
+            }
+          } catch (e) {
+            outputCell.innerHTML = 'Error: ' + e.message;
+            outputCell.className = 'error';
+            statusCell.innerHTML = '✗';
+            statusCell.className = 'error';
+          }
+        });
+
+        // Update status
+        const percentage = Math.round(successCount / totalCount * 100);
+        document.getElementById('status').innerHTML =
+          successCount + '/' + totalCount + ' tests passing (' + percentage + '%)';
+        document.getElementById('status').className = '';
+      }, 100);
+    });
   </script>
 </body>
 </html>
 """
 
   writeFile(outputFile, html)
-  echo "Generated HTML comparison: ", outputFile
-  echo "Status: ", successCount, "/", totalCount, " tests passing (",
-       int(successCount / totalCount * 100), "%)"
+  echo "Generated dynamic HTML comparison: ", outputFile
+  echo "Note: Compile examples/latexToMathML.nim to JS before opening the HTML file:"
+  echo "  nim js -d:release examples/latexToMathML.nim"
 
 proc generateTestSuite(tests: seq[TestCase], outputFile: string) =
   ## Generate Nim test suite
