@@ -234,11 +234,26 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
 proc generateMatrix(node: AstNode, options: MathMLOptions): string =
   ## Generate matrix
   var tableContent = ""
+
+  # Check if this is an alignment environment (needs padding columns)
+  let isAlignmentEnv = node.matrixType in ["align", "aligned", "gather", "gathered"]
+
   for row in node.matrixRows:
     var rowContent = ""
+
+    # Add left padding cell for alignment environments
+    if isAlignmentEnv:
+      rowContent.add(tag("mtd", "", @[("style", "padding:0;width:50%")]))
+
+    # Add content cells
     for cell in row:
       let cellContent = generateNode(cell, options)
       rowContent.add(tag("mtd", cellContent))
+
+    # Add right padding cell for alignment environments (for equation numbers)
+    if isAlignmentEnv:
+      rowContent.add(tag("mtd", "", @[("style", "padding:0;width:50%")]))
+
     tableContent.add(tag("mtr", rowContent))
 
   # Determine column alignment based on environment type
@@ -246,18 +261,30 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
 
   case node.matrixType
   of "align", "aligned":
-    # Alignment environments: alternate right/left for each & separator
+    # Alignment environments: with padding columns, we have:
+    # [padding-right] [content-right] [content-left] ... [padding-left]
     # Standard pattern is: expr & = expr, so right-align first column, left-align second
     if node.matrixRows.len > 0 and node.matrixRows[0].len > 0:
-      var colAlign = ""
+      var colAlign = "right"  # Left padding column
       for i in 0 ..< node.matrixRows[0].len:
-        if i > 0:
-          colAlign.add(" ")
+        colAlign.add(" ")
         colAlign.add(if i mod 2 == 0: "right" else: "left")
+      colAlign.add(" left")  # Right padding column
       tableAttrs.add(("columnalign", colAlign))
+    # Add displaystyle and width for proper rendering
+    tableAttrs.add(("displaystyle", "true"))
+    tableAttrs.add(("style", "width:100%"))
   of "gather", "gathered":
-    # Gather environments: center all equations
-    tableAttrs.add(("columnalign", "center"))
+    # Gather environments: center all equations with padding
+    if node.matrixRows.len > 0 and node.matrixRows[0].len > 0:
+      var colAlign = "center"  # Left padding
+      for i in 0 ..< node.matrixRows[0].len:
+        colAlign.add(" center")
+      colAlign.add(" center")  # Right padding
+      tableAttrs.add(("columnalign", colAlign))
+    # Add displaystyle and width for proper rendering
+    tableAttrs.add(("displaystyle", "true"))
+    tableAttrs.add(("style", "width:100%"))
   else:
     discard  # Default alignment for matrices
 
