@@ -49,6 +49,16 @@ const equation = latexToMathMLStatic(r"E = mc^2")
 echo equation
 ```
 
+### CSS for Proper Rendering
+
+For alignment environments (`align`, `aligned`, `gather`, `gathered`) to render correctly, include the provided CSS file in your HTML:
+
+```html
+<link rel="stylesheet" href="yatexml.css">
+```
+
+Or copy the styles from `yatexml.css` into your existing stylesheet. These styles are essential for proper text alignment in multi-line equation environments.
+
 ## Supported Features
 
 ### Currently Implemented
@@ -115,6 +125,7 @@ echo equation
 - Aligned equations: `\begin{align} ... \end{align}`, `\begin{aligned} ... \end{aligned}`
 - Gathered equations: `\begin{gather} ... \end{gather}`, `\begin{gathered} ... \end{gathered}`
 - Multi-line equations with `&` alignment points and `\\` line breaks
+- **CSS Required**: Include `yatexml.css` in your HTML for proper alignment rendering
 
 ✅ **Text Mode**
 - `\text{text with spaces}` - Preserve whitespace

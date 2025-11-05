@@ -417,7 +417,9 @@ suite "Alignment Environment Tests":
     check "right" in result.value
     check "left" in result.value
     check "<mtr>" in result.value
-    check "<mtd>" in result.value
+    check "<mtd" in result.value  # Changed: mtd now has class attributes
+    check "tml-right" in result.value  # Verify CSS classes are present
+    check "tml-left" in result.value
 
   test "Align environment (same as aligned for MathML)":
     let result = latexToMathML(r"\begin{align} x&=y+z \\ a&=b \end{align}")
@@ -431,19 +433,19 @@ suite "Alignment Environment Tests":
     check result.isOk
     check "<mtable" in result.value
     check "columnalign" in result.value
-    # Should have 4 columns (right left right left)
+    # Should have 6 cells total (2 padding + 4 content)
     var count = 0
     var pos = 0
-    # Count cells in first row
+    # Count all cells in first row
     let firstRowStart = result.value.find("<mtr>")
     let firstRowEnd = result.value.find("</mtr>", firstRowStart)
     var searchPos = firstRowStart
     while true:
-      let idx = result.value.find("<mtd>", searchPos)
+      let idx = result.value.find("<mtd", searchPos)  # Changed: look for "<mtd" not "<mtd>"
       if idx == -1 or idx >= firstRowEnd: break
       count += 1
-      searchPos = idx + 5
-    check count == 4
+      searchPos = idx + 4  # Changed: skip 4 chars for "<mtd" instead of 5 for "<mtd>"
+    check count == 6  # Changed: 2 padding + 4 content = 6 total
 
   test "Basic gather environment":
     let result = latexToMathML(r"\begin{gather} a=b \\ c=d \\ e=f \end{gather}")

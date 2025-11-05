@@ -246,9 +246,24 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
       rowContent.add(tag("mtd", "", @[("style", "padding:0;width:50%")]))
 
     # Add content cells
-    for cell in row:
+    for cellIdx, cell in row:
       let cellContent = generateNode(cell, options)
-      rowContent.add(tag("mtd", cellContent))
+      var cellAttrs: seq[(string, string)] = @[]
+
+      # Add CSS class for alignment (required for text-align to work properly)
+      if isAlignmentEnv:
+        case node.matrixType
+        of "align", "aligned":
+          # Alternate right/left alignment
+          let alignClass = if cellIdx mod 2 == 0: "tml-right" else: "tml-left"
+          cellAttrs.add(("class", alignClass))
+        of "gather", "gathered":
+          # Center alignment
+          cellAttrs.add(("class", "tml-center"))
+        else:
+          discard
+
+      rowContent.add(tag("mtd", cellContent, cellAttrs))
 
     # Add right padding cell for alignment environments (for equation numbers)
     if isAlignmentEnv:

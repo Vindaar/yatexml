@@ -23,6 +23,17 @@
     }
     .error { color: #b00020; font-size: .9rem; min-height: 1.2em; }
     .muted { color: #666; font-size: .9rem; }
+
+    /* MathML alignment classes for align/aligned/gather/gathered environments */
+    .tml-right { text-align: right; }
+    .tml-left { text-align: left; }
+    .tml-center { text-align: center; }
+
+    /* Chromium-specific overrides for better alignment */
+    @supports (not (-webkit-backdrop-filter: blur(1px))) and (not (-moz-appearance: none)) {
+      .tml-right { text-align: -webkit-right; }
+      .tml-left { text-align: -webkit-left; }
+    }
   </style>
 </head>
 <body>
