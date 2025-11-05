@@ -1337,7 +1337,12 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
   ## Parse a matrix environment: rows separated by \\, columns by &
   var rows: seq[seq[AstNode]] = @[]
   var currentRow: seq[AstNode] = @[]
-  var cellExpressions: seq[AstNode] = @[]
+
+  # Check if this is an alignment environment (needs expression-level parsing)
+  let isAlignmentEnv = matrixType in ["align", "aligned", "gather", "gathered"]
+
+  # Track if we're at the start of a new cell
+  var startOfCell = true
 
   # Parse matrix content until we hit \end
   while not stream.isAtEnd():
@@ -1345,18 +1350,6 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
 
     # Check for \end command
     if token.kind == tkCommand and token.value == "end":
-      # Save current cell if any
-      if cellExpressions.len > 0:
-        if cellExpressions.len == 1:
-          currentRow.add(cellExpressions[0])
-        else:
-          currentRow.add(newRow(cellExpressions))
-        cellExpressions = @[]
-
-      # Save current row if any
-      if currentRow.len > 0:
-        rows.add(currentRow)
-
       # Consume \end
       discard stream.advance()
 
@@ -1382,6 +1375,10 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
       if endEnvName != matrixType:
         return err[AstNode](ekInvalidArgument, "Environment mismatch: \\begin{" & matrixType & "} ended with \\end{" & endEnvName & "}", token.position)
 
+      # Save current row if any
+      if currentRow.len > 0:
+        rows.add(currentRow)
+
       # Return matrix node
       return ok(newMatrix(rows, matrixType))
 
@@ -1389,69 +1386,92 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
     elif token.kind == tkLineBreak:
       discard stream.advance()
 
-      # Save current cell if any
-      if cellExpressions.len > 0:
-        if cellExpressions.len == 1:
-          currentRow.add(cellExpressions[0])
-        else:
-          currentRow.add(newRow(cellExpressions))
-        cellExpressions = @[]
-
       # Save current row
       if currentRow.len > 0:
         rows.add(currentRow)
         currentRow = @[]
 
+      startOfCell = true
+
     # Check for column separator (&)
     elif token.kind == tkAmpersand:
       discard stream.advance()
-
-      # Save current cell
-      if cellExpressions.len == 0:
-        # Empty cell - use empty row
-        currentRow.add(newRow(@[]))
-      elif cellExpressions.len == 1:
-        currentRow.add(cellExpressions[0])
-      else:
-        currentRow.add(newRow(cellExpressions))
-      cellExpressions = @[]
+      startOfCell = true
 
     # Regular expression - parse it
-    else:
-      let exprResult = parsePrimary(stream)
-      if not exprResult.isOk:
-        return err[AstNode](exprResult.error)
-
-      # Check for scripts after the primary
-      var node = exprResult.value
-      while stream.match(tkSubscript) or stream.match(tkSuperscript):
-        if stream.match(tkSubscript):
-          discard stream.advance()
-          let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
-                          else: parsePrimary(stream)
-          if not subResult.isOk:
-            return err[AstNode](subResult.error)
-
-          # Check if followed by superscript
-          if stream.match(tkSuperscript):
-            discard stream.advance()
-            let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
-                            else: parsePrimary(stream)
-            if not supResult.isOk:
-              return err[AstNode](supResult.error)
-            node = newSubSup(node, subResult.value, supResult.value)
+    elif startOfCell:
+      # For alignment environments, parse entire cell as one expression
+      # For matrices, parse as before (accumulate primaries)
+      if isAlignmentEnv:
+        # Parse the entire cell expression (stops at & or \\)
+        let cellResult = parseExpression(stream)
+        if not cellResult.isOk:
+          # Empty cell is okay - add empty row
+          if cellResult.error.kind == ekUnexpectedEof:
+            currentRow.add(newRow(@[]))
+            startOfCell = false
           else:
-            node = newSub(node, subResult.value)
+            return err[AstNode](cellResult.error)
+        else:
+          currentRow.add(cellResult.value)
+          startOfCell = false
+      else:
+        # Original logic for matrices: accumulate expressions per cell
+        var cellExpressions: seq[AstNode] = @[]
 
-        elif stream.match(tkSuperscript):
-          discard stream.advance()
-          let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
-                          else: parsePrimary(stream)
-          if not supResult.isOk:
-            return err[AstNode](supResult.error)
-          node = newSup(node, supResult.value)
+        # Collect all expressions until & or \\
+        while not stream.isAtEnd():
+          let t = stream.peek()
+          if t.kind in [tkAmpersand, tkLineBreak] or (t.kind == tkCommand and t.value == "end"):
+            break
 
-      cellExpressions.add(node)
+          let exprResult = parsePrimary(stream)
+          if not exprResult.isOk:
+            return err[AstNode](exprResult.error)
+
+          # Check for scripts after the primary
+          var node = exprResult.value
+          while stream.match(tkSubscript) or stream.match(tkSuperscript):
+            if stream.match(tkSubscript):
+              discard stream.advance()
+              let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                              else: parsePrimary(stream)
+              if not subResult.isOk:
+                return err[AstNode](subResult.error)
+
+              # Check if followed by superscript
+              if stream.match(tkSuperscript):
+                discard stream.advance()
+                let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                                else: parsePrimary(stream)
+                if not supResult.isOk:
+                  return err[AstNode](supResult.error)
+                node = newSubSup(node, subResult.value, supResult.value)
+              else:
+                node = newSub(node, subResult.value)
+
+            elif stream.match(tkSuperscript):
+              discard stream.advance()
+              let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                              else: parsePrimary(stream)
+              if not supResult.isOk:
+                return err[AstNode](supResult.error)
+              node = newSup(node, supResult.value)
+
+          cellExpressions.add(node)
+
+        # Add cell to row
+        if cellExpressions.len == 0:
+          currentRow.add(newRow(@[]))
+        elif cellExpressions.len == 1:
+          currentRow.add(cellExpressions[0])
+        else:
+          currentRow.add(newRow(cellExpressions))
+
+        startOfCell = false
+    else:
+      # Skip any other tokens (shouldn't happen)
+      discard stream.advance()
 
   return err[AstNode](ekUnexpectedEof, "Matrix environment not closed with \\end{" & matrixType & "}", 0)
 
@@ -1516,10 +1536,12 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
   while not stream.isAtEnd() and
         not stream.match(tkRightBrace) and
         not stream.match(tkRightParen) and
-        not stream.match(tkRightBracket):
+        not stream.match(tkRightBracket) and
+        not stream.match(tkLineBreak) and
+        not stream.match(tkAmpersand):
 
-    # Stop if we encounter \right (for delimiter parsing)
-    if stream.match(tkCommand) and stream.peek().value == "right":
+    # Stop if we encounter \right (for delimiter parsing) or \end (for environments)
+    if stream.match(tkCommand) and (stream.peek().value == "right" or stream.peek().value == "end"):
       break
 
     let primResult = parsePrimary(stream)
