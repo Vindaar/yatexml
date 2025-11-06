@@ -243,9 +243,10 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   let opNode = if node.bigopKind in {boLim, boMax, boMin}:
     tag("mo", opSymbol)
   else:
-    # Use movablelimits="false" to force limits above/below (not to the side)
-    # This matches TeMML behavior and ensures proper rendering
-    tag("mo", opSymbol, [("movablelimits", "false")])
+    # Use both largeop (for larger size) and movablelimits (for positioning)
+    # largeop="true" makes the operator display larger
+    # movablelimits="false" forces limits above/below (not to the side)
+    tag("mo", opSymbol, [("largeop", "true"), ("movablelimits", "false")])
 
   # Handle limits
   # Wrap each big operator in mrow for proper spacing (matches TeMML behavior)
