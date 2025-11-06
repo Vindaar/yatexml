@@ -3,22 +3,22 @@ var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
 var NTI1577058307 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058876 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058870 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058867 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058856 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058853 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058807 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058804 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058801 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058798 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058795 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058792 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058789 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058786 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058783 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058701 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058634 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058875 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058869 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058866 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058855 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058852 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058806 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058803 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058800 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058797 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058794 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058791 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058788 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058785 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058782 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058700 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058633 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058583 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058555 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058550 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
@@ -39,7 +39,7 @@ var NTI1577058445 = {size: 0, kind: 18, base: null, node: null, finalizer: null}
 var NTI1577058442 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058439 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058420 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058885 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058884 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1409286312 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1543509265 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1560281161 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
@@ -512,9 +512,9 @@ NTI1543509015.node = NNI1543509015;
 NTI1560281161.base = NTI1409286148;
 NTI1543509265.base = NTI1409286148;
 NTI1409286312.base = NTI1409286148;
-var NNI1577058885 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1577058884 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058885.node = NNI1577058885;
+NTI1577058884.node = NNI1577058884;
 var NNI1577058420 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1577058420.node = NNI1577058420;
@@ -575,54 +575,54 @@ NTI1577058555.node = NNI1577058555;
 var NNI1577058583 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1577058583.node = NNI1577058583;
-var NNI1577058634 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1577058633 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058634.node = NNI1577058634;
-var NNI1577058701 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058633.node = NNI1577058633;
+var NNI1577058700 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058701.node = NNI1577058701;
-var NNI1577058783 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058700.node = NNI1577058700;
+var NNI1577058782 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058783.node = NNI1577058783;
-var NNI1577058786 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058782.node = NNI1577058782;
+var NNI1577058785 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058786.node = NNI1577058786;
-var NNI1577058789 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058785.node = NNI1577058785;
+var NNI1577058788 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058789.node = NNI1577058789;
-var NNI1577058792 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058788.node = NNI1577058788;
+var NNI1577058791 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058792.node = NNI1577058792;
-var NNI1577058795 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058791.node = NNI1577058791;
+var NNI1577058794 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058795.node = NNI1577058795;
-var NNI1577058798 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058794.node = NNI1577058794;
+var NNI1577058797 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058798.node = NNI1577058798;
-var NNI1577058801 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058797.node = NNI1577058797;
+var NNI1577058800 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058801.node = NNI1577058801;
-var NNI1577058804 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058800.node = NNI1577058800;
+var NNI1577058803 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058804.node = NNI1577058804;
-var NNI1577058807 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058803.node = NNI1577058803;
+var NNI1577058806 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058807.node = NNI1577058807;
-var NNI1577058853 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058806.node = NNI1577058806;
+var NNI1577058852 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058853.node = NNI1577058853;
-var NNI1577058856 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058852.node = NNI1577058852;
+var NNI1577058855 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058856.node = NNI1577058856;
-var NNI1577058867 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058855.node = NNI1577058855;
+var NNI1577058866 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058867.node = NNI1577058867;
-var NNI1577058870 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058866.node = NNI1577058866;
+var NNI1577058869 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058870.node = NNI1577058870;
-var NNI1577058876 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058869.node = NNI1577058869;
+var NNI1577058875 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058876.node = NNI1577058876;
+NTI1577058875.node = NNI1577058875;
 var NNI1577058307 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "displayStyle", len: 0, typ: NTI33554466, name: "displayStyle", sons: null}, 
 {kind: 1, offset: "prettyPrint", len: 0, typ: NTI33554466, name: "prettyPrint", sons: null}, 
 {kind: 1, offset: "indentSize", len: 0, typ: NTI33554435, name: "indentSize", sons: null}]};
@@ -8077,7 +8077,7 @@ function generateBigOp__OOZsrcZyatexmlZmathml95generator_u312(node_p0, options_p
     Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058620, []);
     }
     else {
-    Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058620, [nimCopy(null, {Field0: [108,97,114,103,101,111,112], Field1: [116,114,117,101]}, NTI1577058583), nimCopy(null, {Field0: [115,121,109,109,101,116,114,105,99], Field1: [116,114,117,101]}, NTI1577058583)]);
+    Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058620, [nimCopy(null, {Field0: [109,111,118,97,98,108,101,108,105,109,105,116,115], Field1: [102,97,108,115,101]}, NTI1577058583)]);
     }
     
     var opNode_1577058626 = nimCopy(null, Temporary3, NTI33554449);
@@ -8166,7 +8166,7 @@ function generateMatrix__OOZsrcZyatexmlZmathml95generator_u343(node_p0, options_
             row_1577058681 = colontmp__1207959719[chckIndx(i_1207959721, 0, (colontmp__1207959719).length - 1)];
             var rowContent_1577058682 = [];
             if (isAlignmentEnv_1577058658) {
-            rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058634)]));;
+            rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058633)]));;
             }
             
             Label6: {
@@ -8226,7 +8226,7 @@ function generateMatrix__OOZsrcZyatexmlZmathml95generator_u343(node_p0, options_
               };
             };
             if (isAlignmentEnv_1577058658) {
-            rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058701)]));;
+            rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058700)]));;
             }
             
             tableContent_1577058651.push.apply(tableContent_1577058651, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,114], rowContent_1577058682, []));;
@@ -8327,27 +8327,27 @@ function generateMatrix__OOZsrcZyatexmlZmathml95generator_u343(node_p0, options_
     if (ConstSet176[Temporary33.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary33.kind, NTI1392508931)); }
     switch (toJSStr(Temporary33.matrixType)) {
     case "pmatrix":
-      var left_1577058821 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058783)]);
-      var right_1577058822 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058786)]);
+      var left_1577058821 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058782)]);
+      var right_1577058822 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058785)]);
       Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058821).concat(table_1577058820,right_1577058822), []);
       break;
     case "bmatrix":
-      var left_1577058823 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [91], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058789)]);
-      var right_1577058824 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [93], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058792)]);
+      var left_1577058823 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [91], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058788)]);
+      var right_1577058824 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [93], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058791)]);
       Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058823).concat(table_1577058820,right_1577058824), []);
       break;
     case "vmatrix":
-      var left_1577058825 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058795)]);
-      var right_1577058826 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058798)]);
+      var left_1577058825 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058794)]);
+      var right_1577058826 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058797)]);
       Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058825).concat(table_1577058820,right_1577058826), []);
       break;
     case "Vmatrix":
-      var left_1577058827 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058801)]);
-      var right_1577058828 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058804)]);
+      var left_1577058827 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058800)]);
+      var right_1577058828 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058803)]);
       Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058827).concat(table_1577058820,right_1577058828), []);
       break;
     case "cases":
-      var left_1577058829 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [123], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058807)]);
+      var left_1577058829 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [123], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058806)]);
       Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058829).concat(table_1577058820), []);
       break;
     case "align":
@@ -8579,10 +8579,10 @@ function generateSIUnit__OOZsrcZyatexmlZmathml95generator_u546(node_p0, options_
             i_1577058909 = i_1207959735;
             comp_1577058910 = nimCopy(comp_1577058910, colontmp__1207959733[chckIndx(i_1207959735, 0, (colontmp__1207959733).length - 1)], NTI1392508939);
             if ((0 < i_1577058909)) {
-            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058853)]));;
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058852)]));;
             }
             
-            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_1577058910), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058856)]));;
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_1577058910), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058855)]));;
             i_1207959735 += 1;
             if (!(((colontmp__1207959733).length == L_1207959736))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -8610,10 +8610,10 @@ function generateSIUnit__OOZsrcZyatexmlZmathml95generator_u546(node_p0, options_
             i_1577058919 = i_1207959740;
             comp_1577058920 = nimCopy(comp_1577058920, colontmp__1207959739[chckIndx(i_1207959740, 0, (colontmp__1207959739).length - 1)], NTI1392508939);
             if ((0 < i_1577058919)) {
-            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058867)]));;
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058866)]));;
             }
             
-            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_1577058920), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058870)]));;
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_1577058920), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058869)]));;
             i_1207959740 += 1;
             if (!(((colontmp__1207959739).length == L_1207959741))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -8642,7 +8642,7 @@ function generateSIValue__OOZsrcZyatexmlZmathml95generator_u617(node_p0, options
     var Temporary2 = node_p0;
     if (ConstSet183[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'siUnit\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
     var unitNode_1577058926 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.siUnit, options_p1);
-    var space_1577058927 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058876)]);
+    var space_1577058927 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058875)]);
     result_1577058924 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (valueNode_1577058925).concat(space_1577058927,unitNode_1577058926), []), NTI33554449);
 
   return result_1577058924;
@@ -8743,7 +8743,7 @@ function generateNode__OOZsrcZyatexmlZmathml95generator_u49(node_p0, options_p1)
 function generateMathML__OOZsrcZyatexmlZmathml95generator_u631(ast_p0, options_p1) {
   var result_1577058938 = [];
 
-    var attrs_1577058943 = [nimCopy(null, {Field0: [120,109,108,110,115], Field1: [104,116,116,112,58,47,47,119,119,119,46,119,51,46,111,114,103,47,49,57,57,56,47,77,97,116,104,47,77,97,116,104,77,76]}, NTI1577058885)];
+    var attrs_1577058943 = [nimCopy(null, {Field0: [120,109,108,110,115], Field1: [104,116,116,112,58,47,47,119,119,119,46,119,51,46,111,114,103,47,49,57,57,56,47,77,97,116,104,47,77,97,116,104,77,76]}, NTI1577058884)];
     if (options_p1.displayStyle) {
     attrs_1577058943.push({Field0: [100,105,115,112,108,97,121], Field1: [98,108,111,99,107]});;
     }
