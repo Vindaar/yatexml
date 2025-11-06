@@ -537,8 +537,9 @@ suite "Spacing Command Tests":
   test "Negative thin space":
     let result = latexToMathML(r"a \! b")
     check result.isOk
-    check "<mspace" in result.value
-    check "-0.1667em" in result.value
+    # TeMML uses <mrow style="margin-left:..."> for negative spacing, not <mspace>
+    check "<mrow" in result.value
+    check "margin-left:-0.1667em" in result.value
 
   test "Multiple spaces in expression":
     let result = latexToMathML(r"x^2 \quad + \quad y^2 \; = \; z^2")

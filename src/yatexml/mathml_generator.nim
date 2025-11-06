@@ -81,9 +81,18 @@ proc generateText(node: AstNode, options: MathMLOptions): string =
   tag("mtext", textContent)
 
 proc generateSpace(node: AstNode, options: MathMLOptions): string =
-  ## Generate <mspace> element for spacing
+  ## Generate spacing element
+  ## Use empty <mrow> with CSS margin for negative spaces (matches TeMML),
+  ## and <mspace> for positive spaces
   if node.spaceWidth.len > 0:
-    tag("mspace", [("width", node.spaceWidth)])
+    # Check if this is a negative space
+    if node.spaceWidth[0] == '-':
+      # TeMML uses empty <mrow> with CSS margin-left for negative spacing
+      # This renders more consistently across browsers than <mspace> with negative width
+      tag("mrow", "", [("style", "margin-left:" & node.spaceWidth & ";")])
+    else:
+      # Positive spacing uses <mspace>
+      tag("mspace", [("width", node.spaceWidth)])
   else:
     tag("mspace")
 
