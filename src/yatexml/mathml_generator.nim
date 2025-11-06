@@ -75,7 +75,10 @@ proc generateOperator(node: AstNode, options: MathMLOptions): string =
 
 proc generateText(node: AstNode, options: MathMLOptions): string =
   ## Generate <mtext> element for text
-  tag("mtext", escapeXml(node.textValue))
+  ## Replace regular spaces with non-breaking spaces (U+00A0) to prevent
+  ## browser from collapsing whitespace in MathML contexts (matches TeMML)
+  let textContent = escapeXml(node.textValue).replace(" ", "\u00A0")
+  tag("mtext", textContent)
 
 proc generateSpace(node: AstNode, options: MathMLOptions): string =
   ## Generate <mspace> element for spacing
