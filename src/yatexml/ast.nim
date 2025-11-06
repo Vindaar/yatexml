@@ -430,6 +430,10 @@ proc newBigOp*(kind: BigOpKind, lower: AstNode = nil, upper: AstNode = nil, base
   ## Create a big operator node
   AstNode(kind: nkBigOp, bigopKind: kind, bigopLower: lower, bigopUpper: upper, bigopBase: base)
 
+proc newUnderOver*(base: AstNode, under: AstNode = nil, over: AstNode = nil): AstNode =
+  ## Create an under/over node (for overbrace/underbrace with scripts)
+  AstNode(kind: nkUnderOver, underoverBase: base, underoverUnder: under, underoverOver: over)
+
 proc newNum*(numStr: string): AstNode =
   ## Create a number formatting node
   AstNode(kind: nkNum, numStr: numStr)

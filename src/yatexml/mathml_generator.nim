@@ -303,6 +303,28 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   else:
     tag("mrow", opNode)
 
+proc generateUnderOver(node: AstNode, options: MathMLOptions): string =
+  ## Generate under/over construction (for overbrace/underbrace with scripts)
+  ## Creates nested mover/munder elements for proper centering
+  let base = generateNode(node.underoverBase, options)
+
+  if node.underoverUnder != nil and node.underoverOver != nil:
+    # Both under and over: use munderover
+    let under = generateNode(node.underoverUnder, options)
+    let over = generateNode(node.underoverOver, options)
+    tag("munderover", base & under & over)
+  elif node.underoverUnder != nil:
+    # Only under: use munder
+    let under = generateNode(node.underoverUnder, options)
+    tag("munder", base & under)
+  elif node.underoverOver != nil:
+    # Only over: use mover
+    let over = generateNode(node.underoverOver, options)
+    tag("mover", base & over)
+  else:
+    # No scripts, just return the base
+    base
+
 proc generateMatrix(node: AstNode, options: MathMLOptions): string =
   ## Generate matrix
   var tableContent = ""
@@ -561,6 +583,8 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateFunction(node, options)
   of nkBigOp:
     generateBigOp(node, options)
+  of nkUnderOver:
+    generateUnderOver(node, options)
   of nkMatrix:
     generateMatrix(node, options)
   of nkNum:

@@ -1602,6 +1602,10 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
           # Check for scripts after the primary
           var node = exprResult.value
           while stream.match(tkSubscript) or stream.match(tkSuperscript):
+            # Check if node is overbrace or underbrace accent
+            let isOverUnderbrace = node.kind == nkAccent and
+                                    (node.accentKind == akOverbrace or node.accentKind == akUnderbrace)
+
             if stream.match(tkSubscript):
               discard stream.advance()
               let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
@@ -1616,9 +1620,16 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
                                 else: parsePrimary(stream)
                 if not supResult.isOk:
                   return err[AstNode](supResult.error)
-                node = newSubSup(node, subResult.value, supResult.value)
+
+                if isOverUnderbrace:
+                  node = newUnderOver(node, subResult.value, supResult.value)
+                else:
+                  node = newSubSup(node, subResult.value, supResult.value)
               else:
-                node = newSub(node, subResult.value)
+                if isOverUnderbrace:
+                  node = newUnderOver(node, subResult.value, nil)
+                else:
+                  node = newSub(node, subResult.value)
 
             elif stream.match(tkSuperscript):
               discard stream.advance()
@@ -1626,7 +1637,11 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
                               else: parsePrimary(stream)
               if not supResult.isOk:
                 return err[AstNode](supResult.error)
-              node = newSup(node, supResult.value)
+
+              if isOverUnderbrace:
+                node = newUnderOver(node, nil, supResult.value)
+              else:
+                node = newSup(node, supResult.value)
 
           # Check for factorial operator
           if stream.match(tkOperator) and stream.peek().value == "!":
@@ -1666,6 +1681,10 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
     # Check for scripts after the primary
     var node = exprResult.value
     while stream.match(tkSubscript) or stream.match(tkSuperscript):
+      # Check if node is overbrace or underbrace accent
+      let isOverUnderbrace = node.kind == nkAccent and
+                              (node.accentKind == akOverbrace or node.accentKind == akUnderbrace)
+
       if stream.match(tkSubscript):
         discard stream.advance()
         let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
@@ -1680,9 +1699,16 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
                           else: parsePrimary(stream)
           if not supResult.isOk:
             return err[AstNode](supResult.error)
-          node = newSubSup(node, subResult.value, supResult.value)
+
+          if isOverUnderbrace:
+            node = newUnderOver(node, subResult.value, supResult.value)
+          else:
+            node = newSubSup(node, subResult.value, supResult.value)
         else:
-          node = newSub(node, subResult.value)
+          if isOverUnderbrace:
+            node = newUnderOver(node, subResult.value, nil)
+          else:
+            node = newSub(node, subResult.value)
 
       elif stream.match(tkSuperscript):
         discard stream.advance()
@@ -1690,7 +1716,11 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
                         else: parsePrimary(stream)
         if not supResult.isOk:
           return err[AstNode](supResult.error)
-        node = newSup(node, supResult.value)
+
+        if isOverUnderbrace:
+          node = newUnderOver(node, nil, supResult.value)
+        else:
+          node = newSup(node, supResult.value)
 
     # Check for factorial operator
     if stream.match(tkOperator) and stream.peek().value == "!":
@@ -1799,6 +1829,10 @@ proc parseRestOfGroup(stream: var TokenStream): Result[AstNode] =
     # Check for scripts
     var node = primResult.value
     while stream.match(tkSubscript) or stream.match(tkSuperscript):
+      # Check if node is overbrace or underbrace accent
+      let isOverUnderbrace = node.kind == nkAccent and
+                              (node.accentKind == akOverbrace or node.accentKind == akUnderbrace)
+
       if stream.match(tkSubscript):
         discard stream.advance()
         let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
@@ -1813,9 +1847,16 @@ proc parseRestOfGroup(stream: var TokenStream): Result[AstNode] =
                           else: parsePrimary(stream)
           if not supResult.isOk:
             return err[AstNode](supResult.error)
-          node = newSubSup(node, subResult.value, supResult.value)
+
+          if isOverUnderbrace:
+            node = newUnderOver(node, subResult.value, supResult.value)
+          else:
+            node = newSubSup(node, subResult.value, supResult.value)
         else:
-          node = newSub(node, subResult.value)
+          if isOverUnderbrace:
+            node = newUnderOver(node, subResult.value, nil)
+          else:
+            node = newSub(node, subResult.value)
 
       elif stream.match(tkSuperscript):
         discard stream.advance()
@@ -1831,9 +1872,16 @@ proc parseRestOfGroup(stream: var TokenStream): Result[AstNode] =
                           else: parsePrimary(stream)
           if not subResult.isOk:
             return err[AstNode](subResult.error)
-          node = newSubSup(node, subResult.value, supResult.value)
+
+          if isOverUnderbrace:
+            node = newUnderOver(node, subResult.value, supResult.value)
+          else:
+            node = newSubSup(node, subResult.value, supResult.value)
         else:
-          node = newSup(node, supResult.value)
+          if isOverUnderbrace:
+            node = newUnderOver(node, nil, supResult.value)
+          else:
+            node = newSup(node, supResult.value)
 
     children.add(node)
 
@@ -1868,6 +1916,10 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
     # Check for scripts
     var node = primResult.value
     while stream.match(tkSubscript) or stream.match(tkSuperscript):
+      # Check if node is overbrace or underbrace accent
+      let isOverUnderbrace = node.kind == nkAccent and
+                              (node.accentKind == akOverbrace or node.accentKind == akUnderbrace)
+
       if stream.match(tkSubscript):
         discard stream.advance()
         let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
@@ -1882,9 +1934,18 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
                           else: parsePrimary(stream)
           if not supResult.isOk:
             return err[AstNode](supResult.error)
-          node = newSubSup(node, subResult.value, supResult.value)
+
+          if isOverUnderbrace:
+            # For overbrace/underbrace, use nkUnderOver for centered positioning
+            node = newUnderOver(node, subResult.value, supResult.value)
+          else:
+            node = newSubSup(node, subResult.value, supResult.value)
         else:
-          node = newSub(node, subResult.value)
+          if isOverUnderbrace:
+            # For underbrace with subscript, use nkUnderOver
+            node = newUnderOver(node, subResult.value, nil)
+          else:
+            node = newSub(node, subResult.value)
 
       elif stream.match(tkSuperscript):
         discard stream.advance()
@@ -1892,7 +1953,12 @@ proc parseExpression(stream: var TokenStream): Result[AstNode] =
                         else: parsePrimary(stream)
         if not supResult.isOk:
           return err[AstNode](supResult.error)
-        node = newSup(node, supResult.value)
+
+        if isOverUnderbrace:
+          # For overbrace with superscript, use nkUnderOver
+          node = newUnderOver(node, nil, supResult.value)
+        else:
+          node = newSup(node, supResult.value)
 
     # Check for factorial operator
     if stream.match(tkOperator) and stream.peek().value == "!":
