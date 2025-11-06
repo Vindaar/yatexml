@@ -924,7 +924,9 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         let denomResult = parseGroup(stream)
         if not denomResult.isOk:
           return err[AstNode](denomResult.error)
-        return ok(newFrac(numResult.value, denomResult.value))
+        # \cfrac is a continued fraction that should maintain display style
+        let isContinued = cmdName == "cfrac"
+        return ok(newFrac(numResult.value, denomResult.value, isContinued))
 
       of ctSqrt:
         # Check for optional argument [n] for nth root

@@ -250,6 +250,7 @@ type
     of nkFrac:
       fracNum*: AstNode           ## Numerator
       fracDenom*: AstNode         ## Denominator
+      fracIsContinued*: bool      ## True for \cfrac (continued fractions)
 
     of nkBinomial:
       binomTop*: AstNode          ## Top value (n)
@@ -382,9 +383,9 @@ proc newPhantom*(): AstNode =
   ## Create a phantom node (mathstrut)
   AstNode(kind: nkPhantom)
 
-proc newFrac*(num: AstNode, denom: AstNode): AstNode =
+proc newFrac*(num: AstNode, denom: AstNode, isContinued: bool = false): AstNode =
   ## Create a fraction node
-  AstNode(kind: nkFrac, fracNum: num, fracDenom: denom)
+  AstNode(kind: nkFrac, fracNum: num, fracDenom: denom, fracIsContinued: isContinued)
 
 proc newBinomial*(top: AstNode, bottom: AstNode): AstNode =
   ## Create a binomial coefficient node

@@ -100,7 +100,14 @@ proc generateFrac(node: AstNode, options: MathMLOptions): string =
   ## Generate <mfrac> element for fractions
   let num = generateNode(node.fracNum, options)
   let denom = generateNode(node.fracDenom, options)
-  tag("mfrac", num & denom)
+  let frac = tag("mfrac", num & denom)
+
+  # Continued fractions (\cfrac) are wrapped in <mstyle> to maintain display style
+  # This prevents nested fractions from progressively shrinking (matches TeMML)
+  if node.fracIsContinued:
+    tag("mstyle", frac, [("displaystyle", "true"), ("scriptlevel", "0")])
+  else:
+    frac
 
 proc generateBinomial(node: AstNode, options: MathMLOptions): string =
   ## Generate binomial coefficient (n choose k) with parentheses
