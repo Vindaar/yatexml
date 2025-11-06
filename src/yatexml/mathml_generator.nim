@@ -289,7 +289,7 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
     tag("mo", opSymbol, [("movablelimits", "false")])
 
   # Handle limits
-  # Wrap each big operator in mrow for proper spacing (matches TeMML behavior)
+  # Wrap operators WITH limits in mrow (matches TeMML), but NOT bare operators
   if node.bigopLower != nil and node.bigopUpper != nil:
     let lower = generateNode(node.bigopLower, options)
     let upper = generateNode(node.bigopUpper, options)
@@ -301,7 +301,8 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
     let upper = generateNode(node.bigopUpper, options)
     tag("mrow", tag("mover", opNode & upper))
   else:
-    tag("mrow", opNode)
+    # Bare operators without limits - no mrow wrapper to avoid extra spacing
+    opNode
 
 proc generateUnderOver(node: AstNode, options: MathMLOptions): string =
   ## Generate under/over construction (for overbrace/underbrace with scripts)
