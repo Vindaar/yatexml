@@ -10,8 +10,8 @@ import tables, strutils
 
 type
   CommandType = enum
-    ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
-    ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor,
+    ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
+    ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor, ctPhantom,
     ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac
 
   CommandInfo = object
@@ -112,6 +112,15 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["mathfrak"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathsf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathtt"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
+
+  # Math display styles
+  result["displaystyle"] = CommandInfo(cmdType: ctMathStyle, numArgs: 1)
+  result["textstyle"] = CommandInfo(cmdType: ctMathStyle, numArgs: 1)
+  result["scriptstyle"] = CommandInfo(cmdType: ctMathStyle, numArgs: 1)
+  result["scriptscriptstyle"] = CommandInfo(cmdType: ctMathStyle, numArgs: 1)
+
+  # Phantom elements
+  result["mathstrut"] = CommandInfo(cmdType: ctPhantom, numArgs: 0)
 
   # Accents
   result["hat"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
@@ -272,6 +281,7 @@ proc parseExpression(stream: var TokenStream): Result[AstNode]
 proc parsePrimary(stream: var TokenStream): Result[AstNode]
 proc parseGroup(stream: var TokenStream): Result[AstNode]
 proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result[AstNode]
+proc parseRestOfGroup(stream: var TokenStream): Result[AstNode]
 
 # Greek letter to Unicode mapping
 
@@ -960,6 +970,24 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         if not argResult.isOk:
           return err[AstNode](argResult.error)
         return ok(newStyle(styleKind, argResult.value))
+
+      of ctMathStyle:
+        let mathStyleKind = case cmdName
+          of "displaystyle": mskDisplaystyle
+          of "textstyle": mskTextstyle
+          of "scriptstyle": mskScriptstyle
+          of "scriptscriptstyle": mskScriptscriptstyle
+          else: mskTextstyle
+
+        # Parse the rest of the current group (declaration-style command)
+        let argResult = parseRestOfGroup(stream)
+        if not argResult.isOk:
+          return err[AstNode](argResult.error)
+        return ok(newMathStyle(mathStyleKind, argResult.value))
+
+      of ctPhantom:
+        # Phantom elements like \mathstrut have no arguments
+        return ok(newPhantom())
 
       of ctAccent:
         let accentKind = case cmdName
@@ -1741,6 +1769,79 @@ proc parseGroup(stream: var TokenStream): Result[AstNode] =
 
   # If only one child, return it directly; otherwise wrap in row
   if children.len == 1:
+    return ok(children[0])
+  else:
+    return ok(newRow(children))
+
+proc parseRestOfGroup(stream: var TokenStream): Result[AstNode] =
+  ## Parse all remaining tokens in the current group (until closing brace or end)
+  ## Used for declaration-style commands like \scriptstyle
+  var children: seq[AstNode] = @[]
+
+  while not stream.isAtEnd() and
+        not stream.match(tkRightBrace) and
+        not stream.match(tkRightParen) and
+        not stream.match(tkRightBracket) and
+        not stream.match(tkLineBreak) and
+        not stream.match(tkAmpersand):
+
+    # Stop if we encounter infix commands, \right, or \end
+    if stream.match(tkCommand):
+      let cmdValue = stream.peek().value
+      if cmdValue == "right" or cmdValue == "end" or
+         cmdValue == "atop" or cmdValue == "over" or cmdValue == "choose":
+        break
+
+    let primResult = parsePrimary(stream)
+    if not primResult.isOk:
+      return err[AstNode](primResult.error)
+
+    # Check for scripts
+    var node = primResult.value
+    while stream.match(tkSubscript) or stream.match(tkSuperscript):
+      if stream.match(tkSubscript):
+        discard stream.advance()
+        let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                        else: parsePrimary(stream)
+        if not subResult.isOk:
+          return err[AstNode](subResult.error)
+
+        # Check if followed by superscript
+        if stream.match(tkSuperscript):
+          discard stream.advance()
+          let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                          else: parsePrimary(stream)
+          if not supResult.isOk:
+            return err[AstNode](supResult.error)
+          node = newSubSup(node, subResult.value, supResult.value)
+        else:
+          node = newSub(node, subResult.value)
+
+      elif stream.match(tkSuperscript):
+        discard stream.advance()
+        let supResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                        else: parsePrimary(stream)
+        if not supResult.isOk:
+          return err[AstNode](supResult.error)
+
+        # Check if followed by subscript
+        if stream.match(tkSubscript):
+          discard stream.advance()
+          let subResult = if stream.match(tkLeftBrace): parseGroup(stream)
+                          else: parsePrimary(stream)
+          if not subResult.isOk:
+            return err[AstNode](subResult.error)
+          node = newSubSup(node, subResult.value, supResult.value)
+        else:
+          node = newSup(node, supResult.value)
+
+    children.add(node)
+
+  # If no children, return empty row
+  if children.len == 0:
+    return ok(newRow(@[]))
+  # If only one child, return it directly; otherwise wrap in row
+  elif children.len == 1:
     return ok(children[0])
   else:
     return ok(newRow(children))

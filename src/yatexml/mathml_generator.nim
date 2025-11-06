@@ -190,6 +190,25 @@ proc generateStyle(node: AstNode, options: MathMLOptions): string =
   # Wrap in mstyle with mathvariant
   tag("mstyle", base, [("mathvariant", variant)])
 
+proc generateMathStyle(node: AstNode, options: MathMLOptions): string =
+  ## Generate math style element with scriptlevel and displaystyle attributes
+  let base = generateNode(node.mathStyleBase, options)
+
+  let (scriptlevel, displaystyle) = case node.mathStyleKind
+    of mskDisplaystyle: ("0", "true")
+    of mskTextstyle: ("0", "false")
+    of mskScriptstyle: ("1", "false")
+    of mskScriptscriptstyle: ("2", "false")
+
+  # Wrap in mstyle with scriptlevel and displaystyle
+  tag("mstyle", base, [("scriptlevel", scriptlevel), ("displaystyle", displaystyle)])
+
+proc generatePhantom(node: AstNode, options: MathMLOptions): string =
+  ## Generate phantom element (mathstrut)
+  ## Creates an invisible vertical strut: <mpadded width="0px"><mphantom>...</mphantom></mpadded>
+  let phantom = tag("mphantom", tag("mo", "(", [("form", "prefix"), ("stretchy", "false"), ("lspace", "0em"), ("rspace", "0em")]))
+  tag("mpadded", phantom, [("width", "0px")])
+
 proc generateColor(node: AstNode, options: MathMLOptions): string =
   ## Generate colored element
   let base = generateNode(node.colorBase, options)
@@ -526,8 +545,12 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateAccent(node, options)
   of nkStyle:
     generateStyle(node, options)
+  of nkMathStyle:
+    generateMathStyle(node, options)
   of nkColor:
     generateColor(node, options)
+  of nkPhantom:
+    generatePhantom(node, options)
   of nkRow:
     generateRow(node, options)
   of nkDelimited:

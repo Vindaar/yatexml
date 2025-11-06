@@ -19,7 +19,9 @@ type
     nkRoot                ## Nth root: \sqrt[n]{x}
     nkAccent              ## Accent: \hat, \bar, \tilde, \vec, etc.
     nkStyle               ## Style: \mathbf, \mathit, etc.
+    nkMathStyle           ## Math style: \displaystyle, \scriptstyle, etc.
     nkColor               ## Color: \color{red}
+    nkPhantom             ## Phantom: \mathstrut
 
     # Binary nodes
     nkFrac                ## Fraction: \frac{a}{b}
@@ -75,6 +77,13 @@ type
     skFraktur             ## \mathfrak - fraktur
     skSansSerif           ## \mathsf - sans serif
     skMonospace           ## \mathtt - monospace/typewriter
+
+  MathStyleKind* = enum
+    ## Different display styles
+    mskDisplaystyle       ## \displaystyle - scriptlevel=0, displaystyle=true
+    mskTextstyle          ## \textstyle - scriptlevel=0, displaystyle=false
+    mskScriptstyle        ## \scriptstyle - scriptlevel=1, displaystyle=false
+    mskScriptscriptstyle  ## \scriptscriptstyle - scriptlevel=2, displaystyle=false
 
   BigOpKind* = enum
     ## Different big operators
@@ -226,9 +235,16 @@ type
       styleKind*: StyleKind       ## Type of style
       styleBase*: AstNode         ## Styled expression
 
+    of nkMathStyle:
+      mathStyleKind*: MathStyleKind  ## Type of display style
+      mathStyleBase*: AstNode        ## Styled expression
+
     of nkColor:
       colorName*: string          ## Color name or value
       colorBase*: AstNode         ## Colored expression
+
+    of nkPhantom:                 ## Phantom has no fields (mathstrut)
+      discard
 
     # Binary nodes
     of nkFrac:
@@ -354,9 +370,17 @@ proc newStyle*(kind: StyleKind, base: AstNode): AstNode =
   ## Create a style node
   AstNode(kind: nkStyle, styleKind: kind, styleBase: base)
 
+proc newMathStyle*(kind: MathStyleKind, base: AstNode): AstNode =
+  ## Create a math style node
+  AstNode(kind: nkMathStyle, mathStyleKind: kind, mathStyleBase: base)
+
 proc newColor*(color: string, base: AstNode): AstNode =
   ## Create a color node
   AstNode(kind: nkColor, colorName: color, colorBase: base)
+
+proc newPhantom*(): AstNode =
+  ## Create a phantom node (mathstrut)
+  AstNode(kind: nkPhantom)
 
 proc newFrac*(num: AstNode, denom: AstNode): AstNode =
   ## Create a fraction node
