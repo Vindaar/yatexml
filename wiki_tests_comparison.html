@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>yatexml Wikipedia Tests Comparison (Dynamic)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #333; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th { background-color: #4CAF50; color: white; padding: 12px; text-align: left; position: sticky; top: 0; }
+    td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    .test-num { width: 40px; text-align: center; font-weight: bold; }
+    .latex-source { font-family: 'Courier New', monospace; font-size: 0.85em; max-width: 300px; word-wrap: break-word; }
+    .mathml-output { text-align: center; font-size: 1.1em; padding: 10px; }
+    .error { color: red; font-weight: bold; font-size: 0.9em; }
+    .success { color: green; }
+    .category-header { background-color: #e8f5e9; font-weight: bold; text-align: center; }
+    .loading { color: #666; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>yatexml Wikipedia Tests Comparison (Dynamic)</h1>
+  <p>Generated from TeMML's wiki-tests.html - 261 test cases from Wikipedia's "Displaying a formula" page</p>
+  <p><strong>Status:</strong> <span id="status" class="loading">Loading...</span></p>
+  <p><em>This page dynamically executes LaTeX to MathML conversion using the compiled yatexml library.</em></p>
+
+  <table id="test-table">
+    <tr>
+      <th>#</th>
+      <th>LaTeX Source</th>
+      <th>yatexml Output</th>
+      <th>Status</th>
+    </tr>
+    <tr data-latex="\alpha">
+      <td class='test-num'>1</td>
+      <td class='latex-source'>\alpha</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="f(x) = x^2">
+      <td class='test-num'>2</td>
+      <td class='latex-source'>f(x) = x^2</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\{1,e,\pi\}">
+      <td class='test-num'>3</td>
+      <td class='latex-source'>\{1,e,\pi\}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="|z + 1| \leq 2">
+      <td class='test-num'>4</td>
+      <td class='latex-source'>|z + 1| \leq 2</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\# \$ \% \wedge \&amp; \_ \{ \} \sim \backslash">
+      <td class='test-num'>5</td>
+      <td class='latex-source'>\# \$ \% \wedge \&amp; \_ \{ \} \sim \backslash</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Accents</td></tr>
+    <tr data-latex="\dot{a}, \ddot{a}, \acute{a}, \grave{a}">
+      <td class='test-num'>6</td>
+      <td class='latex-source'>\dot{a}, \ddot{a}, \acute{a}, \grave{a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\dot{a}, \ddot{a}, \acute{a}, \grave{a}">
+      <td class='test-num'>7</td>
+      <td class='latex-source'>\dot{a}, \ddot{a}, \acute{a}, \grave{a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\check{a}, \breve{a}, \tilde{a}, \bar{a}">
+      <td class='test-num'>8</td>
+      <td class='latex-source'>\check{a}, \breve{a}, \tilde{a}, \bar{a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\hat{a}, \widehat{a}, \vec{a}">
+      <td class='test-num'>9</td>
+      <td class='latex-source'>\hat{a}, \widehat{a}, \vec{a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Functions</td></tr>
+    <tr data-latex="\exp_a b = a^b, \exp b = e^b, 10^m">
+      <td class='test-num'>10</td>
+      <td class='latex-source'>\exp_a b = a^b, \exp b = e^b, 10^m</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\ln c, \lg d = \log e, \log_{10} f">
+      <td class='test-num'>11</td>
+      <td class='latex-source'>\ln c, \lg d = \log e, \log_{10} f</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sin a, \cos b, \tan c, \cot d, \sec e, \csc f">
+      <td class='test-num'>12</td>
+      <td class='latex-source'>\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\arcsin h, \arccos i, \arctan j">
+      <td class='test-num'>13</td>
+      <td class='latex-source'>\arcsin h, \arccos i, \arctan j</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sinh k, \cosh l, \tanh m, \coth n">
+      <td class='test-num'>14</td>
+      <td class='latex-source'>\sinh k, \cosh l, \tanh m, \coth n</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n">
+      <td class='test-num'>15</td>
+      <td class='latex-source'>\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sgn r, \left\vert s \right\vert">
+      <td class='test-num'>16</td>
+      <td class='latex-source'>\sgn r, \left\vert s \right\vert</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\min(x,y), \max(x,y)">
+      <td class='test-num'>17</td>
+      <td class='latex-source'>\min(x,y), \max(x,y)</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Bounds</td></tr>
+    <tr data-latex="\min x, \max y, \inf s, \sup t">
+      <td class='test-num'>18</td>
+      <td class='latex-source'>\min x, \max y, \inf s, \sup t</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lim u, \liminf v, \limsup w">
+      <td class='test-num'>19</td>
+      <td class='latex-source'>\lim u, \liminf v, \limsup w</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\dim p, \deg q, \det m, \ker\phi">
+      <td class='test-num'>20</td>
+      <td class='latex-source'>\dim p, \deg q, \det m, \ker\phi</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Projections</td></tr>
+    <tr data-latex="\Pr j, \hom l, \lVert z \rVert, \arg z">
+      <td class='test-num'>21</td>
+      <td class='latex-source'>\Pr j, \hom l, \lVert z \rVert, \arg z</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Differentials and derivatives</td></tr>
+    <tr data-latex="dt, \mathrm{d}t, \partial t, \nabla\psi">
+      <td class='test-num'>22</td>
+      <td class='latex-source'>dt, \mathrm{d}t, \partial t, \nabla\psi</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x}, \frac{\partial^2} {\partial x_1\partial x_2}y">
+      <td class='test-num'>23</td>
+      <td class='latex-source'>dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x}, \frac{\partial^2} {\partial x_1\partial x_2}y</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\prime, \backprime, f^\prime, f', f'', f^{(3)}, \dot y, \ddot y">
+      <td class='test-num'>24</td>
+      <td class='latex-source'>\prime, \backprime, f^\prime, f', f'', f^{(3)}, \dot y, \ddot y</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Letter-like symbols or constants</td></tr>
+    <tr data-latex="\infty, \aleph, \complement,\backepsilon, \eth, \Finv, \hbar">
+      <td class='test-num'>25</td>
+      <td class='latex-source'>\infty, \aleph, \complement,\backepsilon, \eth, \Finv, \hbar</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Im, \imath, \jmath, \Bbbk, \ell, \mho, \wp, \Re, \circledS, \S, \P, \AA">
+      <td class='test-num'>26</td>
+      <td class='latex-source'>\Im, \imath, \jmath, \Bbbk, \ell, \mho, \wp, \Re, \circledS, \S, \P, \AA</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Modular arithmetic</td></tr>
+    <tr data-latex="s_k \equiv 0 \pmod{m}">
+      <td class='test-num'>27</td>
+      <td class='latex-source'>s_k \equiv 0 \pmod{m}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="a \bmod b">
+      <td class='test-num'>28</td>
+      <td class='latex-source'>a \bmod b</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\gcd(m, n), \operatorname{lcm}(m, n)">
+      <td class='test-num'>29</td>
+      <td class='latex-source'>\gcd(m, n), \operatorname{lcm}(m, n)</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mid, \nmid, \shortmid, \nshortmid">
+      <td class='test-num'>30</td>
+      <td class='latex-source'>\mid, \nmid, \shortmid, \nshortmid</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Radicals</td></tr>
+    <tr data-latex="\surd, \sqrt{2}, \sqrt[n]{2}, \sqrt[3]{\frac{x^3+y^3}{2}}">
+      <td class='test-num'>31</td>
+      <td class='latex-source'>\surd, \sqrt{2}, \sqrt[n]{2}, \sqrt[3]{\frac{x^3+y^3}{2}}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Operators</td></tr>
+    <tr data-latex="+, -, \pm, \mp, \dotplus">
+      <td class='test-num'>32</td>
+      <td class='latex-source'>+, -, \pm, \mp, \dotplus</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\times, \div, \divideontimes,/ , \backslash">
+      <td class='test-num'>33</td>
+      <td class='latex-source'>\times, \div, \divideontimes,/ , \backslash</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\cdot, * \ast, \star, \circ, \bullet">
+      <td class='test-num'>34</td>
+      <td class='latex-source'>\cdot, * \ast, \star, \circ, \bullet</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boxplus, \boxminus, \boxtimes, \boxdot">
+      <td class='test-num'>35</td>
+      <td class='latex-source'>\boxplus, \boxminus, \boxtimes, \boxdot</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\oplus, \ominus, \otimes, \oslash, \odot">
+      <td class='test-num'>36</td>
+      <td class='latex-source'>\oplus, \ominus, \otimes, \oslash, \odot</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\circleddash, \circledcirc, \circledast">
+      <td class='test-num'>37</td>
+      <td class='latex-source'>\circleddash, \circledcirc, \circledast</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\bigoplus, \bigotimes, \bigodot">
+      <td class='test-num'>38</td>
+      <td class='latex-source'>\bigoplus, \bigotimes, \bigodot</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Sets</td></tr>
+    <tr data-latex="\{ \}, \O \empty \emptyset, \varnothing">
+      <td class='test-num'>39</td>
+      <td class='latex-source'>\{ \}, \O \empty \emptyset, \varnothing</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\in, \notin \not\in, \ni, \not\ni">
+      <td class='test-num'>40</td>
+      <td class='latex-source'>\in, \notin \not\in, \ni, \not\ni</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\cap, \Cap, \sqcap, \bigcap">
+      <td class='test-num'>41</td>
+      <td class='latex-source'>\cap, \Cap, \sqcap, \bigcap</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\cup, \Cup, \sqcup, \bigcup, \bigsqcup, \uplus, \biguplus">
+      <td class='test-num'>42</td>
+      <td class='latex-source'>\cup, \Cup, \sqcup, \bigcup, \bigsqcup, \uplus, \biguplus</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\setminus, \smallsetminus, \times">
+      <td class='test-num'>43</td>
+      <td class='latex-source'>\setminus, \smallsetminus, \times</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\subset, \Subset, \sqsubset">
+      <td class='test-num'>44</td>
+      <td class='latex-source'>\subset, \Subset, \sqsubset</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\supset, \Supset, \sqsupset">
+      <td class='test-num'>45</td>
+      <td class='latex-source'>\supset, \Supset, \sqsupset</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\subseteq, \nsubseteq, \subsetneq, \varsubsetneq, \sqsubseteq">
+      <td class='test-num'>46</td>
+      <td class='latex-source'>\subseteq, \nsubseteq, \subsetneq, \varsubsetneq, \sqsubseteq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\supseteq, \nsupseteq, \supsetneq, \varsupsetneq, \sqsupseteq">
+      <td class='test-num'>47</td>
+      <td class='latex-source'>\supseteq, \nsupseteq, \supsetneq, \varsupsetneq, \sqsupseteq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\subseteqq, \nsubseteqq, \subsetneqq, \varsubsetneqq">
+      <td class='test-num'>48</td>
+      <td class='latex-source'>\subseteqq, \nsubseteqq, \subsetneqq, \varsubsetneqq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\supseteqq, \nsupseteqq, \supsetneqq, \varsupsetneqq">
+      <td class='test-num'>49</td>
+      <td class='latex-source'>\supseteqq, \nsupseteqq, \supsetneqq, \varsupsetneqq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Relations</td></tr>
+    <tr data-latex="=, \ne, \neq, \equiv, \not\equiv">
+      <td class='test-num'>50</td>
+      <td class='latex-source'>=, \ne, \neq, \equiv, \not\equiv</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\doteq, \doteqdot, \overset{\underset{\mathrm{def}}{}}{=}, :=">
+      <td class='test-num'>51</td>
+      <td class='latex-source'>\doteq, \doteqdot, \overset{\underset{\mathrm{def}}{}}{=}, :=</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sim, \nsim, \backsim, \thicksim, \simeq, \backsimeq, \eqsim, \cong, \ncong">
+      <td class='test-num'>52</td>
+      <td class='latex-source'>\sim, \nsim, \backsim, \thicksim, \simeq, \backsimeq, \eqsim, \cong, \ncong</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\approx, \thickapprox, \approxeq, \asymp, \propto, \varpropto">
+      <td class='test-num'>53</td>
+      <td class='latex-source'>\approx, \thickapprox, \approxeq, \asymp, \propto, \varpropto</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="&lt;, \nless, \ll, \not\ll, \lll, \not\lll, \lessdot">
+      <td class='test-num'>54</td>
+      <td class='latex-source'>&lt;, \nless, \ll, \not\ll, \lll, \not\lll, \lessdot</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\le, \leq, \lneq, \leqq, \nleq, \nleqq, \lneqq, \lvertneqq">
+      <td class='test-num'>55</td>
+      <td class='latex-source'>\le, \leq, \lneq, \leqq, \nleq, \nleqq, \lneqq, \lvertneqq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\ge, \geq, \gneq, \geqq, \ngeq, \ngeqq, \gneqq, \gvertneqq">
+      <td class='test-num'>56</td>
+      <td class='latex-source'>\ge, \geq, \gneq, \geqq, \ngeq, \ngeqq, \gneqq, \gvertneqq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lessgtr, \lesseqgtr, \lesseqqgtr, \gtrless, \gtreqless, \gtreqqless">
+      <td class='test-num'>57</td>
+      <td class='latex-source'>\lessgtr, \lesseqgtr, \lesseqqgtr, \gtrless, \gtreqless, \gtreqqless</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\leqslant, \nleqslant, \eqslantless">
+      <td class='test-num'>58</td>
+      <td class='latex-source'>\leqslant, \nleqslant, \eqslantless</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\geqslant, \ngeqslant, \eqslantgtr">
+      <td class='test-num'>59</td>
+      <td class='latex-source'>\geqslant, \ngeqslant, \eqslantgtr</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lesssim, \lnsim, \lessapprox, \lnapprox">
+      <td class='test-num'>60</td>
+      <td class='latex-source'>\lesssim, \lnsim, \lessapprox, \lnapprox</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\gtrsim, \gnsim, \gtrapprox, \gnapprox">
+      <td class='test-num'>61</td>
+      <td class='latex-source'>\gtrsim, \gnsim, \gtrapprox, \gnapprox</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\prec, \nprec, \preceq, \npreceq, \precneqq">
+      <td class='test-num'>62</td>
+      <td class='latex-source'>\prec, \nprec, \preceq, \npreceq, \precneqq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\succ, \nsucc, \succeq, \nsucceq, \succneqq">
+      <td class='test-num'>63</td>
+      <td class='latex-source'>\succ, \nsucc, \succeq, \nsucceq, \succneqq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\preccurlyeq, \curlyeqprec">
+      <td class='test-num'>64</td>
+      <td class='latex-source'>\preccurlyeq, \curlyeqprec</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\succcurlyeq, \curlyeqsucc">
+      <td class='test-num'>65</td>
+      <td class='latex-source'>\succcurlyeq, \curlyeqsucc</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\precsim, \precnsim, \precapprox, \precnapprox">
+      <td class='test-num'>66</td>
+      <td class='latex-source'>\precsim, \precnsim, \precapprox, \precnapprox</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\succsim, \succnsim, \succapprox, \succnapprox">
+      <td class='test-num'>67</td>
+      <td class='latex-source'>\succsim, \succnsim, \succapprox, \succnapprox</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Geometric</td></tr>
+    <tr data-latex="\parallel, \nparallel, \shortparallel, \nshortparallel">
+      <td class='test-num'>68</td>
+      <td class='latex-source'>\parallel, \nparallel, \shortparallel, \nshortparallel</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\perp, \angle, \sphericalangle, \measuredangle, 45^\circ">
+      <td class='test-num'>69</td>
+      <td class='latex-source'>\perp, \angle, \sphericalangle, \measuredangle, 45^\circ</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Box, \square, \blacksquare, \diamond, \Diamond, \lozenge, \blacklozenge,\bigstar">
+      <td class='test-num'>70</td>
+      <td class='latex-source'>\Box, \square, \blacksquare, \diamond, \Diamond, \lozenge, \blacklozenge,\bigstar</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\bigcirc, \triangle, \bigtriangleup, \bigtriangledown">
+      <td class='test-num'>71</td>
+      <td class='latex-source'>\bigcirc, \triangle, \bigtriangleup, \bigtriangledown</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\vartriangle, \triangledown">
+      <td class='test-num'>72</td>
+      <td class='latex-source'>\vartriangle, \triangledown</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\blacktriangle, \blacktriangledown, \blacktriangleleft, \blacktriangleright">
+      <td class='test-num'>73</td>
+      <td class='latex-source'>\blacktriangle, \blacktriangledown, \blacktriangleleft, \blacktriangleright</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Logic</td></tr>
+    <tr data-latex="\forall, \exists, \nexists">
+      <td class='test-num'>74</td>
+      <td class='latex-source'>\forall, \exists, \nexists</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\therefore, \because, \And">
+      <td class='test-num'>75</td>
+      <td class='latex-source'>\therefore, \because, \And</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lor \vee, \curlyvee, \bigvee">
+      <td class='test-num'>76</td>
+      <td class='latex-source'>\lor \vee, \curlyvee, \bigvee</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\land \wedge, \curlywedge, \bigwedge">
+      <td class='test-num'>77</td>
+      <td class='latex-source'>\land \wedge, \curlywedge, \bigwedge</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\bar{q}, \bar{abc}, \overline{q}, \overline{abc}, \\ \lnot \neg, \not\operatorname{R},\bot,\top">
+      <td class='test-num'>78</td>
+      <td class='latex-source'>\bar{q}, \bar{abc}, \overline{q}, \overline{abc}, \\ \lnot \neg, \not\operatorname{R},\bot,\top</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\vdash \dashv, \vDash, \Vdash, \models">
+      <td class='test-num'>79</td>
+      <td class='latex-source'>\vdash \dashv, \vDash, \Vdash, \models</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Vvdash \nvdash \nVdash \nvDash \nVDash">
+      <td class='test-num'>80</td>
+      <td class='latex-source'>\Vvdash \nvdash \nVdash \nvDash \nVDash</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\ulcorner \urcorner \llcorner \lrcorner">
+      <td class='test-num'>81</td>
+      <td class='latex-source'>\ulcorner \urcorner \llcorner \lrcorner</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Arrows</td></tr>
+    <tr data-latex="\Rrightarrow, \Lleftarrow">
+      <td class='test-num'>82</td>
+      <td class='latex-source'>\Rrightarrow, \Lleftarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Rightarrow, \nRightarrow, \Longrightarrow, \implies">
+      <td class='test-num'>83</td>
+      <td class='latex-source'>\Rightarrow, \nRightarrow, \Longrightarrow, \implies</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Leftarrow, \nLeftarrow, \Longleftarrow">
+      <td class='test-num'>84</td>
+      <td class='latex-source'>\Leftarrow, \nLeftarrow, \Longleftarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Leftrightarrow, \nLeftrightarrow, \Longleftrightarrow, \iff">
+      <td class='test-num'>85</td>
+      <td class='latex-source'>\Leftrightarrow, \nLeftrightarrow, \Longleftrightarrow, \iff</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Uparrow, \Downarrow, \Updownarrow">
+      <td class='test-num'>86</td>
+      <td class='latex-source'>\Uparrow, \Downarrow, \Updownarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\rightarrow \to, \nrightarrow, \longrightarrow">
+      <td class='test-num'>87</td>
+      <td class='latex-source'>\rightarrow \to, \nrightarrow, \longrightarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\leftarrow \gets, \nleftarrow, \longleftarrow">
+      <td class='test-num'>88</td>
+      <td class='latex-source'>\leftarrow \gets, \nleftarrow, \longleftarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\leftrightarrow, \nleftrightarrow, \longleftrightarrow">
+      <td class='test-num'>89</td>
+      <td class='latex-source'>\leftrightarrow, \nleftrightarrow, \longleftrightarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\uparrow, \downarrow, \updownarrow">
+      <td class='test-num'>90</td>
+      <td class='latex-source'>\uparrow, \downarrow, \updownarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\nearrow, \swarrow, \nwarrow, \searrow">
+      <td class='test-num'>91</td>
+      <td class='latex-source'>\nearrow, \swarrow, \nwarrow, \searrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mapsto, \longmapsto">
+      <td class='test-num'>92</td>
+      <td class='latex-source'>\mapsto, \longmapsto</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\rightharpoonup \rightharpoondown \leftharpoonup \leftharpoondown \upharpoonleft \upharpoonright \downharpoonleft \downharpoonright \rightleftharpoons \leftrightharpoons">
+      <td class='test-num'>93</td>
+      <td class='latex-source'>\rightharpoonup \rightharpoondown \leftharpoonup \leftharpoondown \upharpoonleft \upharpoonright \downharpoonleft \downharpoonright \rightleftharpoons \leftrightharpoons</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\curvearrowleft \circlearrowleft \Lsh \upuparrows \rightrightarrows \rightleftarrows \rightarrowtail \looparrowright">
+      <td class='test-num'>94</td>
+      <td class='latex-source'>\curvearrowleft \circlearrowleft \Lsh \upuparrows \rightrightarrows \rightleftarrows \rightarrowtail \looparrowright</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\curvearrowright \circlearrowright \Rsh \downdownarrows \leftleftarrows \leftrightarrows \leftarrowtail \looparrowleft">
+      <td class='test-num'>95</td>
+      <td class='latex-source'>\curvearrowright \circlearrowright \Rsh \downdownarrows \leftleftarrows \leftrightarrows \leftarrowtail \looparrowleft</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\hookrightarrow \hookleftarrow \multimap \leftrightsquigarrow \rightsquigarrow \twoheadrightarrow \twoheadleftarrow">
+      <td class='test-num'>96</td>
+      <td class='latex-source'>\hookrightarrow \hookleftarrow \multimap \leftrightsquigarrow \rightsquigarrow \twoheadrightarrow \twoheadleftarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Special</td></tr>
+    <tr data-latex="\amalg \P \S \% \dagger\ddagger\ldots\cdots">
+      <td class='test-num'>97</td>
+      <td class='latex-source'>\amalg \P \S \% \dagger\ddagger\ldots\cdots</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\smile \frown \wr \triangleleft \triangleright">
+      <td class='test-num'>98</td>
+      <td class='latex-source'>\smile \frown \wr \triangleleft \triangleright</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\diamondsuit, \heartsuit, \clubsuit, \spadesuit, \Game, \flat, \natural, \sharp">
+      <td class='test-num'>99</td>
+      <td class='latex-source'>\diamondsuit, \heartsuit, \clubsuit, \spadesuit, \Game, \flat, \natural, \sharp</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Unsorted</td></tr>
+    <tr data-latex="\diagup \diagdown \centerdot \ltimes \rtimes \leftthreetimes \rightthreetimes">
+      <td class='test-num'>100</td>
+      <td class='latex-source'>\diagup \diagdown \centerdot \ltimes \rtimes \leftthreetimes \rightthreetimes</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\eqcirc \circeq \triangleq \bumpeq\Bumpeq \doteqdot \risingdotseq \fallingdotseq">
+      <td class='test-num'>101</td>
+      <td class='latex-source'>\eqcirc \circeq \triangleq \bumpeq\Bumpeq \doteqdot \risingdotseq \fallingdotseq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\intercal \barwedge \veebar \doublebarwedge \between \pitchfork">
+      <td class='test-num'>102</td>
+      <td class='latex-source'>\intercal \barwedge \veebar \doublebarwedge \between \pitchfork</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\vartriangleleft \ntriangleleft \vartriangleright \ntriangleright">
+      <td class='test-num'>103</td>
+      <td class='latex-source'>\vartriangleleft \ntriangleleft \vartriangleright \ntriangleright</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\trianglelefteq \ntrianglelefteq \trianglerighteq \ntrianglerighteq">
+      <td class='test-num'>104</td>
+      <td class='latex-source'>\trianglelefteq \ntrianglelefteq \trianglerighteq \ntrianglerighteq</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="a^2, a^{x+3}">
+      <td class='test-num'>105</td>
+      <td class='latex-source'>a^2, a^{x+3}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="a_2">
+      <td class='test-num'>106</td>
+      <td class='latex-source'>a_2</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="10^{30} a^{2+2} \\ a_{i,j} b_{f'}">
+      <td class='test-num'>107</td>
+      <td class='latex-source'>10^{30} a^{2+2} \\ a_{i,j} b_{f'}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="x_2^3 \\ {x_2}^3">
+      <td class='test-num'>108</td>
+      <td class='latex-source'>x_2^3 \\ {x_2}^3</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="10^{10^{8}}">
+      <td class='test-num'>109</td>
+      <td class='latex-source'>10^{10^{8}}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sideset{_12}{_34}\prod_ab  {}_12\!\Omega_3^4">
+      <td class='test-num'>110</td>
+      <td class='latex-source'>\sideset{_12}{_34}\prod_ab  {}_12\!\Omega_3^4</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\overset{\alpha}{\omega} \\ \underset{\alpha}{\omega} \\ \overset{\alpha}{\underset{\gamma}{\omega}}\\ \stackrel{\alpha}{\omega}">
+      <td class='test-num'>111</td>
+      <td class='latex-source'>\overset{\alpha}{\omega} \\ \underset{\alpha}{\omega} \\ \overset{\alpha}{\underset{\gamma}{\omega}}\\ \stackrel{\alpha}{\omega}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="x', y'', f', f'' \\ x^\prime, y^{\prime\prime}">
+      <td class='test-num'>112</td>
+      <td class='latex-source'>x', y'', f', f'' \\ x^\prime, y^{\prime\prime}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\dot{x}, \ddot{x}">
+      <td class='test-num'>113</td>
+      <td class='latex-source'>\dot{x}, \ddot{x}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\hat a \ \bar b \ \vec c \\ \overrightarrow{a b} \ \overleftarrow{c d}\\ \widehat{d e f} \\ \overline{g h i} \ \underline{j k l}">
+      <td class='test-num'>114</td>
+      <td class='latex-source'>\hat a \ \bar b \ \vec c \\ \overrightarrow{a b} \ \overleftarrow{c d}\\ \widehat{d e f} \\ \overline{g h i} \ \underline{j k l}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\overset{\frown} {AB}">
+      <td class='test-num'>115</td>
+      <td class='latex-source'>\overset{\frown} {AB}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="A \xleftarrow{n+\mu-1} B \xrightarrow[T]{n\pm i-1} C">
+      <td class='test-num'>116</td>
+      <td class='latex-source'>A \xleftarrow{n+\mu-1} B \xrightarrow[T]{n\pm i-1} C</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\overbrace{ 1+2+\cdots+100 }^{5050}">
+      <td class='test-num'>117</td>
+      <td class='latex-source'>\overbrace{ 1+2+\cdots+100 }^{5050}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\underbrace{ a+b+\cdots+z }_{26}">
+      <td class='test-num'>118</td>
+      <td class='latex-source'>\underbrace{ a+b+\cdots+z }_{26}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sum_{k=1}N k2">
+      <td class='test-num'>119</td>
+      <td class='latex-source'>\sum_{k=1}N k2</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\textstyle \sum_{k=1}N k2">
+      <td class='test-num'>120</td>
+      <td class='latex-source'>\textstyle \sum_{k=1}N k2</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\frac{\sum_{k=1}N k2}{a}">
+      <td class='test-num'>121</td>
+      <td class='latex-source'>\frac{\sum_{k=1}N k2}{a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\frac{\sum\limits{N}_{k=1} k^2}{a}">
+      <td class='test-num'>122</td>
+      <td class='latex-source'>\frac{\sum\limits{N}_{k=1} k^2}{a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\prod_{i=1}^N x_i">
+      <td class='test-num'>123</td>
+      <td class='latex-source'>\prod_{i=1}^N x_i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\textstyle \prod_{i=1}^N x_i">
+      <td class='test-num'>124</td>
+      <td class='latex-source'>\textstyle \prod_{i=1}^N x_i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\coprod_{i=1}^N x_i">
+      <td class='test-num'>125</td>
+      <td class='latex-source'>\coprod_{i=1}^N x_i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\textstyle \coprod_{i=1}^N x_i">
+      <td class='test-num'>126</td>
+      <td class='latex-source'>\textstyle \coprod_{i=1}^N x_i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lim_{n \to \infty}x_n">
+      <td class='test-num'>127</td>
+      <td class='latex-source'>\lim_{n \to \infty}x_n</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\textstyle \lim_{n \to \infty}x_n">
+      <td class='test-num'>128</td>
+      <td class='latex-source'>\textstyle \lim_{n \to \infty}x_n</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\int\limits_{1}{3}\frac{e3/x}{x^2}\, dx">
+      <td class='test-num'>129</td>
+      <td class='latex-source'>\int\limits_{1}{3}\frac{e3/x}{x^2}\, dx</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\int_{1}{3}\frac{e3/x}{x^2}\, dx">
+      <td class='test-num'>130</td>
+      <td class='latex-source'>\int_{1}{3}\frac{e3/x}{x^2}\, dx</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\textstyle \int\limits_{-N}{N} ex dx">
+      <td class='test-num'>131</td>
+      <td class='latex-source'>\textstyle \int\limits_{-N}{N} ex dx</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\textstyle \int_{-N}{N} ex dx">
+      <td class='test-num'>132</td>
+      <td class='latex-source'>\textstyle \int_{-N}{N} ex dx</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\iint\limits_D dx\,dy">
+      <td class='test-num'>133</td>
+      <td class='latex-source'>\iint\limits_D dx\,dy</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\iiint\limits_E dx\,dy\,dz">
+      <td class='test-num'>134</td>
+      <td class='latex-source'>\iiint\limits_E dx\,dy\,dz</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\iiiint\limits_F dx\,dy\,dz\,dt">
+      <td class='test-num'>135</td>
+      <td class='latex-source'>\iiiint\limits_F dx\,dy\,dz\,dt</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\int_{(x,y)\in C} x3\, dx + 4y2\, dy">
+      <td class='test-num'>136</td>
+      <td class='latex-source'>\int_{(x,y)\in C} x3\, dx + 4y2\, dy</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\oint_{(x,y)\in C} x3\, dx + 4y2\, dy">
+      <td class='test-num'>137</td>
+      <td class='latex-source'>\oint_{(x,y)\in C} x3\, dx + 4y2\, dy</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\bigcap_{i=1}^n E_i">
+      <td class='test-num'>138</td>
+      <td class='latex-source'>\bigcap_{i=1}^n E_i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\bigcup_{i=1}^n E_i">
+      <td class='test-num'>139</td>
+      <td class='latex-source'>\bigcup_{i=1}^n E_i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Fractions, matrices, multiline</td></tr>
+    <tr data-latex="\frac{2}{4}=0.5">
+      <td class='test-num'>140</td>
+      <td class='latex-source'>\frac{2}{4}=0.5</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\tfrac{2}{4} = 0.5">
+      <td class='test-num'>141</td>
+      <td class='latex-source'>\tfrac{2}{4} = 0.5</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a">
+      <td class='test-num'>142</td>
+      <td class='latex-source'>\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\cfrac{2}{c +\cfrac{2}{d +\cfrac{2}{4}}} = a">
+      <td class='test-num'>143</td>
+      <td class='latex-source'>\cfrac{2}{c +\cfrac{2}{d +\cfrac{2}{4}}} = a</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\cfrac{x}{1 + \cfrac{\cancel{y}} {\cancel{y}}} = \cfrac{x}{2}">
+      <td class='test-num'>144</td>
+      <td class='latex-source'>\cfrac{x}{1 + \cfrac{\cancel{y}} {\cancel{y}}} = \cfrac{x}{2}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\binom{n}{k}">
+      <td class='test-num'>145</td>
+      <td class='latex-source'>\binom{n}{k}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\tbinom{n}{k}">
+      <td class='test-num'>146</td>
+      <td class='latex-source'>\tbinom{n}{k}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\dbinom{n}{k}">
+      <td class='test-num'>147</td>
+      <td class='latex-source'>\dbinom{n}{k}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{matrix} x &amp; y \\ z &amp; v \end{matrix}">
+      <td class='test-num'>148</td>
+      <td class='latex-source'>\begin{matrix} x &amp; y \\ z &amp; v \end{matrix}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{vmatrix} x &amp; y \\ z &amp; v \end{vmatrix}">
+      <td class='test-num'>149</td>
+      <td class='latex-source'>\begin{vmatrix} x &amp; y \\ z &amp; v \end{vmatrix}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{Vmatrix} x &amp; y \\ z &amp; v \end{Vmatrix}">
+      <td class='test-num'>150</td>
+      <td class='latex-source'>\begin{Vmatrix} x &amp; y \\ z &amp; v \end{Vmatrix}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{bmatrix} 0 &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; 0 \end{bmatrix}">
+      <td class='test-num'>151</td>
+      <td class='latex-source'>\begin{bmatrix} 0 &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; 0 \end{bmatrix}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{Bmatrix} x &amp; y \\ z &amp; v \end{Bmatrix}">
+      <td class='test-num'>152</td>
+      <td class='latex-source'>\begin{Bmatrix} x &amp; y \\ z &amp; v \end{Bmatrix}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{pmatrix} x &amp; y \\ z &amp; v \end{pmatrix}">
+      <td class='test-num'>153</td>
+      <td class='latex-source'>\begin{pmatrix} x &amp; y \\ z &amp; v \end{pmatrix}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\bigl( \begin{smallmatrix} a&amp;b\\ c&amp;d \end{smallmatrix} \bigr)">
+      <td class='test-num'>154</td>
+      <td class='latex-source'>\bigl( \begin{smallmatrix} a&amp;b\\ c&amp;d \end{smallmatrix} \bigr)</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="f(n) = \begin{cases} n/2, &amp; \text{if }n\text{ is even} \\ 3n+1, &amp; \text{if }n\text{ is odd} \end{cases}">
+      <td class='test-num'>155</td>
+      <td class='latex-source'>f(n) = \begin{cases} n/2, &amp; \text{if }n\text{ is even} \\ 3n+1, &amp; \text{if }n\text{ is odd} \end{cases}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{cases} 3x + 5y + z \\ 7x - 2y + 4z \\ -6x + 3y + 2z \end{cases}">
+      <td class='test-num'>156</td>
+      <td class='latex-source'>\begin{cases} 3x + 5y + z \\ 7x - 2y + 4z \\ -6x + 3y + 2z \end{cases}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{align} f(x) &amp; = (a+b)2 \\ &amp; = a2+2ab+b^2 \\ \end{align}">
+      <td class='test-num'>157</td>
+      <td class='latex-source'>\begin{align} f(x) &amp; = (a+b)2 \\ &amp; = a2+2ab+b^2 \\ \end{align}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{alignat}{2} f(x) &amp; = (a+b)2 \\ &amp; = a2+2ab+b^2 \\ \end{alignat}">
+      <td class='test-num'>158</td>
+      <td class='latex-source'>\begin{alignat}{2} f(x) &amp; = (a+b)2 \\ &amp; = a2+2ab+b^2 \\ \end{alignat}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{align} f(a,b) &amp; = (a+b)2 &amp;&amp; = (a+b)(a+b) \\ &amp; = a2+ab+ba+b2  &amp;&amp; = a2+2ab+b^2 \\ \end{align}">
+      <td class='test-num'>159</td>
+      <td class='latex-source'>\begin{align} f(a,b) &amp; = (a+b)2 &amp;&amp; = (a+b)(a+b) \\ &amp; = a2+ab+ba+b2  &amp;&amp; = a2+2ab+b^2 \\ \end{align}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{alignat}{3} f(a,b) &amp; = (a+b)2 &amp;&amp; = (a+b)(a+b) \\ &amp; = a2+ab+ba+b2  &amp;&amp; = a2+2ab+b^2 \\ \end{alignat}">
+      <td class='test-num'>159</td>
+      <td class='latex-source'>\begin{alignat}{3} f(a,b) &amp; = (a+b)2 &amp;&amp; = (a+b)(a+b) \\ &amp; = a2+ab+ba+b2  &amp;&amp; = a2+2ab+b^2 \\ \end{alignat}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{array}{lcl} z &amp; = &amp; a \\ f(x,y,z) &amp; = &amp; x + y + z \end{array}">
+      <td class='test-num'>160</td>
+      <td class='latex-source'>\begin{array}{lcl} z &amp; = &amp; a \\ f(x,y,z) &amp; = &amp; x + y + z \end{array}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{array}{lcr} z &amp; = &amp; a \\ f(x,y,z) &amp; = &amp; x + y + z \end{array}">
+      <td class='test-num'>161</td>
+      <td class='latex-source'>\begin{array}{lcr} z &amp; = &amp; a \\ f(x,y,z) &amp; = &amp; x + y + z \end{array}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{alignat}{4} F:\; &amp;&amp; C(X) &amp;&amp; \;\to\;  &amp; C(X) \\ &amp;&amp; g    &amp;&amp; \;\mapsto\; &amp; g^2 \end{alignat}">
+      <td class='test-num'>162</td>
+      <td class='latex-source'>\begin{alignat}{4} F:\; &amp;&amp; C(X) &amp;&amp; \;\to\;  &amp; C(X) \\ &amp;&amp; g    &amp;&amp; \;\mapsto\; &amp; g^2 \end{alignat}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{alignat}{4} F:\; &amp;&amp; C(X) &amp;&amp; \;\to\; &amp;&amp; C(X) \\ &amp;&amp; g    &amp;&amp; \;\mapsto\; &amp;&amp; g^2 \end{alignat}">
+      <td class='test-num'>163</td>
+      <td class='latex-source'>\begin{alignat}{4} F:\; &amp;&amp; C(X) &amp;&amp; \;\to\; &amp;&amp; C(X) \\ &amp;&amp; g    &amp;&amp; \;\mapsto\; &amp;&amp; g^2 \end{alignat}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="f(x) \,\!">
+      <td class='test-num'>164</td>
+      <td class='latex-source'>f(x) \,\!</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{array}{|c|c|c|} a &amp; b &amp; S \\ \hline 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ \end{array}">
+      <td class='test-num'>165</td>
+      <td class='latex-source'>\begin{array}{|c|c|c|} a &amp; b &amp; S \\ \hline 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ \end{array}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="( \frac{1}{2} )^n">
+      <td class='test-num'>166</td>
+      <td class='latex-source'>( \frac{1}{2} )^n</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left ( \frac{1}{2} \right )^n">
+      <td class='test-num'>167</td>
+      <td class='latex-source'>\left ( \frac{1}{2} \right )^n</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left ( \frac{a}{b} \right )">
+      <td class='test-num'>168</td>
+      <td class='latex-source'>\left ( \frac{a}{b} \right )</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left [ \frac{a}{b} \right ] \quad \left \lbrack \frac{a}{b} \right \rbrack">
+      <td class='test-num'>169</td>
+      <td class='latex-source'>\left [ \frac{a}{b} \right ] \quad \left \lbrack \frac{a}{b} \right \rbrack</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left \{ \frac{a}{b} \right \} \quad \left \lbrace \frac{a}{b} \right \rbrace">
+      <td class='test-num'>170</td>
+      <td class='latex-source'>\left \{ \frac{a}{b} \right \} \quad \left \lbrace \frac{a}{b} \right \rbrace</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left \langle \frac{a}{b} \right \rangle">
+      <td class='test-num'>171</td>
+      <td class='latex-source'>\left \langle \frac{a}{b} \right \rangle</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left | \frac{a}{b} \right \vert \quad \left \Vert \frac{c}{d} \right \|">
+      <td class='test-num'>172</td>
+      <td class='latex-source'>\left | \frac{a}{b} \right \vert \quad \left \Vert \frac{c}{d} \right \|</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left \lfloor \frac{a}{b} \right \rfloor \quad \left \lceil \frac{c}{d} \right \rceil">
+      <td class='test-num'>173</td>
+      <td class='latex-source'>\left \lfloor \frac{a}{b} \right \rfloor \quad \left \lceil \frac{c}{d} \right \rceil</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left/ \frac{a}{b} \right \backslash">
+      <td class='test-num'>174</td>
+      <td class='latex-source'>\left/ \frac{a}{b} \right \backslash</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left\uparrow\frac{a}{b}\right\downarrow\; \left\Uparrow\frac{a}{b}\right\Downarrow\; \left \updownarrow \frac{a}{b} \right \Updownarrow">
+      <td class='test-num'>175</td>
+      <td class='latex-source'>\left\uparrow\frac{a}{b}\right\downarrow\; \left\Uparrow\frac{a}{b}\right\Downarrow\; \left \updownarrow \frac{a}{b} \right \Updownarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left [ 0,1 \right ) \left \langle \psi \right |">
+      <td class='test-num'>176</td>
+      <td class='latex-source'>\left [ 0,1 \right ) \left \langle \psi \right |</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left . \frac{A}{B} \right \} \to X">
+      <td class='test-num'>177</td>
+      <td class='latex-source'>\left . \frac{A}{B} \right \} \to X</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="( \bigl( \Bigl( \biggl( \Biggl( \dots \Biggr] \biggr] \Bigr] \bigr] ]">
+      <td class='test-num'>178</td>
+      <td class='latex-source'>( \bigl( \Bigl( \biggl( \Biggl( \dots \Biggr] \biggr] \Bigr] \bigr] ]</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\{ \bigl\{ \Bigl\{ \biggl\{ \Biggl\{ \dots \Biggr\rangle \biggr\rangle \Bigr\rangle \bigr\rangle \rangle">
+      <td class='test-num'>179</td>
+      <td class='latex-source'>\{ \bigl\{ \Bigl\{ \biggl\{ \Biggl\{ \dots \Biggr\rangle \biggr\rangle \Bigr\rangle \bigr\rangle \rangle</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\| \big\| \Big\| \bigg\| \Bigg\| \dots \Bigg| \bigg| \Big| \big| |">
+      <td class='test-num'>180</td>
+      <td class='latex-source'>\| \big\| \Big\| \bigg\| \Bigg\| \dots \Bigg| \bigg| \Big| \big| |</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lfloor \bigl\lfloor \Bigl\lfloor \biggl\lfloor \Biggl\lfloor \dots \Biggr\rceil \biggr\rceil \Bigr\rceil \bigr\rceil \rceil">
+      <td class='test-num'>181</td>
+      <td class='latex-source'>\lfloor \bigl\lfloor \Bigl\lfloor \biggl\lfloor \Biggl\lfloor \dots \Biggr\rceil \biggr\rceil \Bigr\rceil \bigr\rceil \rceil</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\uparrow \big\uparrow \Big\uparrow \bigg\uparrow \Bigg\uparrow \dots \Bigg\Downarrow \bigg\Downarrow \Big\Downarrow \big\Downarrow \Downarrow">
+      <td class='test-num'>182</td>
+      <td class='latex-source'>\uparrow \big\uparrow \Big\uparrow \bigg\uparrow \Bigg\uparrow \dots \Bigg\Downarrow \bigg\Downarrow \Big\Downarrow \big\Downarrow \Downarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\updownarrow\big\updownarrow\Big\updownarrow \bigg\updownarrow \Bigg\updownarrow \dots \Bigg\Updownarrow \bigg\Updownarrow \Big \Updownarrow \big\Updownarrow \Updownarrow">
+      <td class='test-num'>183</td>
+      <td class='latex-source'>\updownarrow\big\updownarrow\Big\updownarrow \bigg\updownarrow \Bigg\updownarrow \dots \Bigg\Updownarrow \bigg\Updownarrow \Big \Updownarrow \big\Updownarrow \Updownarrow</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="/ \big/ \Big/ \bigg/ \Bigg/ \dots \Bigg\backslash \bigg\backslash \Big \backslash \big\backslash \backslash">
+      <td class='test-num'>184</td>
+      <td class='latex-source'>/ \big/ \Big/ \bigg/ \Bigg/ \dots \Bigg\backslash \bigg\backslash \Big \backslash \big\backslash \backslash</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Greek Alphabet</td></tr>
+    <tr data-latex="\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta">
+      <td class='test-num'>185</td>
+      <td class='latex-source'>\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi">
+      <td class='test-num'>186</td>
+      <td class='latex-source'>\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega">
+      <td class='test-num'>187</td>
+      <td class='latex-source'>\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\alpha \beta \gamma \delta \epsilon \zeta \eta \theta">
+      <td class='test-num'>188</td>
+      <td class='latex-source'>\alpha \beta \gamma \delta \epsilon \zeta \eta \theta</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\iota \kappa \lambda \mu \nu \xi \omicron \pi">
+      <td class='test-num'>189</td>
+      <td class='latex-source'>\iota \kappa \lambda \mu \nu \xi \omicron \pi</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\rho \sigma \tau \upsilon \phi \chi \psi \omega">
+      <td class='test-num'>190</td>
+      <td class='latex-source'>\rho \sigma \tau \upsilon \phi \chi \psi \omega</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\varGamma \varDelta \varTheta \varLambda \varXi \varPi \varSigma \varPhi \varUpsilon \varOmega">
+      <td class='test-num'>191</td>
+      <td class='latex-source'>\varGamma \varDelta \varTheta \varLambda \varXi \varPi \varSigma \varPhi \varUpsilon \varOmega</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi">
+      <td class='test-num'>192</td>
+      <td class='latex-source'>\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Hebrew symbols</td></tr>
+    <tr data-latex="\aleph \beth \gimel \daleth">
+      <td class='test-num'>193</td>
+      <td class='latex-source'>\aleph \beth \gimel \daleth</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Blackboard bold</td></tr>
+    <tr data-latex="\mathbb{ABCDEFGHI} \\ \mathbb{JKLMNOPQR} \\ \mathbb{STUVWXYZ}">
+      <td class='test-num'>194</td>
+      <td class='latex-source'>\mathbb{ABCDEFGHI} \\ \mathbb{JKLMNOPQR} \\ \mathbb{STUVWXYZ}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Boldface</td></tr>
+    <tr data-latex="\mathbf{ABCDEFGHI} \\ \mathbf{JKLMNOPQR} \\ \mathbf{STUVWXYZ} \\ \mathbf{abcdefghijklm} \\ \mathbf{nopqrstuvwxyz} \\ \mathbf{0123456789}">
+      <td class='test-num'>195</td>
+      <td class='latex-source'>\mathbf{ABCDEFGHI} \\ \mathbf{JKLMNOPQR} \\ \mathbf{STUVWXYZ} \\ \mathbf{abcdefghijklm} \\ \mathbf{nopqrstuvwxyz} \\ \mathbf{0123456789}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Boldface Greek</td></tr>
+    <tr data-latex="\boldsymbol{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta}">
+      <td class='test-num'>196</td>
+      <td class='latex-source'>\boldsymbol{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi}">
+      <td class='test-num'>197</td>
+      <td class='latex-source'>\boldsymbol{\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}">
+      <td class='test-num'>198</td>
+      <td class='latex-source'>\boldsymbol{\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta}">
+      <td class='test-num'>199</td>
+      <td class='latex-source'>\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\iota \kappa \lambda \mu \nu \xi \omicron \pi}">
+      <td class='test-num'>200</td>
+      <td class='latex-source'>\boldsymbol{\iota \kappa \lambda \mu \nu \xi \omicron \pi}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\rho \sigma \tau \upsilon \phi \chi \psi \omega}">
+      <td class='test-num'>201</td>
+      <td class='latex-source'>\boldsymbol{\rho \sigma \tau \upsilon \phi \chi \psi \omega}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\varepsilon\digamma\varkappa \varpi}">
+      <td class='test-num'>202</td>
+      <td class='latex-source'>\boldsymbol{\varepsilon\digamma\varkappa \varpi}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\varrho\varsigma\vartheta\varphi}">
+      <td class='test-num'>203</td>
+      <td class='latex-source'>\boldsymbol{\varrho\varsigma\vartheta\varphi}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Italics</td></tr>
+    <tr data-latex="\mathit{0123456789}">
+      <td class='test-num'>204</td>
+      <td class='latex-source'>\mathit{0123456789}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Greek Italics</td></tr>
+    <tr data-latex="\mathit{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta}">
+      <td class='test-num'>205</td>
+      <td class='latex-source'>\mathit{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mathit{\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi}">
+      <td class='test-num'>206</td>
+      <td class='latex-source'>\mathit{\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mathit{\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}">
+      <td class='test-num'>207</td>
+      <td class='latex-source'>\mathit{\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Greek uppercase boldface italics</td></tr>
+    <tr data-latex="\boldsymbol{\varGamma \varDelta \varTheta \varLambda}">
+      <td class='test-num'>208</td>
+      <td class='latex-source'>\boldsymbol{\varGamma \varDelta \varTheta \varLambda}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\boldsymbol{\varXi \varPi \varSigma \varUpsilon \varOmega}">
+      <td class='test-num'>209</td>
+      <td class='latex-source'>\boldsymbol{\varXi \varPi \varSigma \varUpsilon \varOmega}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Roman typeface</td></tr>
+    <tr data-latex="\mathrm{ABCDEFGHI} \\ \mathrm{JKLMNOPQR} \\ \mathrm{STUVWXYZ} \\ \mathrm{abcdefghijklm} \\ \mathrm{nopqrstuvwxyz} \\ \mathrm{0123456789}">
+      <td class='test-num'>210</td>
+      <td class='latex-source'>\mathrm{ABCDEFGHI} \\ \mathrm{JKLMNOPQR} \\ \mathrm{STUVWXYZ} \\ \mathrm{abcdefghijklm} \\ \mathrm{nopqrstuvwxyz} \\ \mathrm{0123456789}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Sans serif</td></tr>
+    <tr data-latex="\mathsf{ABCDEFGHI} \\ \mathsf{JKLMNOPQR} \\ \mathsf{STUVWXYZ} \\ \mathsf{abcdefghijklm} \\ \mathsf{nopqrstuvwxyz} \\ \mathsf{0123456789}">
+      <td class='test-num'>211</td>
+      <td class='latex-source'>\mathsf{ABCDEFGHI} \\ \mathsf{JKLMNOPQR} \\ \mathsf{STUVWXYZ} \\ \mathsf{abcdefghijklm} \\ \mathsf{nopqrstuvwxyz} \\ \mathsf{0123456789}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Sans serif Greek</td></tr>
+    <tr data-latex="\mathsf{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta}">
+      <td class='test-num'>212</td>
+      <td class='latex-source'>\mathsf{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mathsf{\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi}">
+      <td class='test-num'>213</td>
+      <td class='latex-source'>\mathsf{\Iota \Kappa \Lambda \Mu \Nu \Xi \Omicron \Pi}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mathsf{\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}">
+      <td class='test-num'>214</td>
+      <td class='latex-source'>\mathsf{\Rho \Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Calligraphy</td></tr>
+    <tr data-latex="\mathcal{ABCDEFGHI} \\ \mathcal{JKLMNOPQR} \\ \mathcal{STUVWXYZ} \\ \mathcal{abcdefghi} \\ \mathcal{jklmnopqr} \\ \mathcal{stuvwxyz}">
+      <td class='test-num'>215</td>
+      <td class='latex-source'>\mathcal{ABCDEFGHI} \\ \mathcal{JKLMNOPQR} \\ \mathcal{STUVWXYZ} \\ \mathcal{abcdefghi} \\ \mathcal{jklmnopqr} \\ \mathcal{stuvwxyz}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Fraktur</td></tr>
+    <tr data-latex="\mathfrak{ABCDEFGHI} \\ \mathfrak{JKLMNOPQR} \\ \mathfrak{STUVWXYZ} \\ \mathfrak{abcdefghi} \\ \mathfrak{jklmnopqr} \\ \mathfrak{stuvwxyz}">
+      <td class='test-num'>216</td>
+      <td class='latex-source'>\mathfrak{ABCDEFGHI} \\ \mathfrak{JKLMNOPQR} \\ \mathfrak{STUVWXYZ} \\ \mathfrak{abcdefghi} \\ \mathfrak{jklmnopqr} \\ \mathfrak{stuvwxyz}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Scriptstyle text</td></tr>
+    <tr data-latex="{\scriptstyle\text{abcdefghijklm}}">
+      <td class='test-num'>217</td>
+      <td class='latex-source'>{\scriptstyle\text{abcdefghijklm}}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Mixed text faces</td></tr>
+    <tr data-latex="x y z">
+      <td class='test-num'>218</td>
+      <td class='latex-source'>x y z</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\text{x y z}">
+      <td class='test-num'>219</td>
+      <td class='latex-source'>\text{x y z}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\text{if} n \text{is even}">
+      <td class='test-num'>220</td>
+      <td class='latex-source'>\text{if} n \text{is even}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\text{if }n\text{ is even}">
+      <td class='test-num'>221</td>
+      <td class='latex-source'>\text{if }n\text{ is even}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\text{if}~n\ \text{is even}">
+      <td class='test-num'>222</td>
+      <td class='latex-source'>\text{if}~n\ \text{is even}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Color</td></tr>
+    <tr data-latex="{\color{Blue}x^2}+{\color{Orange}2x}- {\color{LimeGreen}1}">
+      <td class='test-num'>223</td>
+      <td class='latex-source'>{\color{Blue}x^2}+{\color{Orange}2x}- {\color{LimeGreen}1}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="x_{1,2}=\frac{{\color{Blue}-b}\pm \sqrt{\color{Red}b^2-4ac}}{\color{Green}2a }">
+      <td class='test-num'>224</td>
+      <td class='latex-source'>x_{1,2}=\frac{{\color{Blue}-b}\pm \sqrt{\color{Red}b^2-4ac}}{\color{Green}2a }</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="{\color{Blue}x^2}+{\color{Orange}2x}- {\color{LimeGreen}1}">
+      <td class='test-num'>225</td>
+      <td class='latex-source'>{\color{Blue}x^2}+{\color{Orange}2x}- {\color{LimeGreen}1}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\color{Blue}x^2\color{Black}+\color{Orange} 2x\color{Black}-\color{LimeGreen}1">
+      <td class='test-num'>226</td>
+      <td class='latex-source'>\color{Blue}x^2\color{Black}+\color{Orange} 2x\color{Black}-\color{LimeGreen}1</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\color{Blue}{x^2}+\color{Orange}{2x}- \color{LimeGreen}{1}">
+      <td class='test-num'>227</td>
+      <td class='latex-source'>\color{Blue}{x^2}+\color{Orange}{2x}- \color{LimeGreen}{1}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\definecolor{myorange}{rgb}{1,0.65,0.4} \color{myorange}e^{i \pi}\color{Black} + 1= 0">
+      <td class='test-num'>228</td>
+      <td class='latex-source'>\definecolor{myorange}{rgb}{1,0.65,0.4} \color{myorange}e^{i \pi}\color{Black} + 1= 0</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="a \qquad b \\ a \quad b \\ a\ b \\ a \text{ } b \\ a\;b \\ a\,b \\ ab \\ a b \\ \mathit{ab} \\ a\!b">
+      <td class='test-num'>229</td>
+      <td class='latex-source'>a \qquad b \\ a \quad b \\ a\ b \\ a \text{ } b \\ a\;b \\ a\,b \\ ab \\ a b \\ \mathit{ab} \\ a\!b</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="| \uparrow \rangle">
+      <td class='test-num'>230</td>
+      <td class='latex-source'>| \uparrow \rangle</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left| \uparrow \right\rangle">
+      <td class='test-num'>231</td>
+      <td class='latex-source'>\left| \uparrow \right\rangle</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="| {\uparrow} \rangle">
+      <td class='test-num'>232</td>
+      <td class='latex-source'>| {\uparrow} \rangle</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="| \mathord\uparrow \rangle">
+      <td class='test-num'>233</td>
+      <td class='latex-source'>| \mathord\uparrow \rangle</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr><td colspan='4' class='category-header'>Temml replacements for wiki workarounds</td></tr>
+    <tr data-latex="\oiint\limits_D dx\,dy \oiiint\limits_E dx\,dy\,dz">
+      <td class='test-num'>234</td>
+      <td class='latex-source'>\oiint\limits_D dx\,dy \oiiint\limits_E dx\,dy\,dz</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\wideparen{AB}">
+      <td class='test-num'>234</td>
+      <td class='latex-source'>\wideparen{AB}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\dddot{x}">
+      <td class='test-num'>235</td>
+      <td class='latex-source'>\dddot{x}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\operatorname*{median}_{j\,\ne\,i} X_{i,j}">
+      <td class='test-num'>236</td>
+      <td class='latex-source'>\operatorname*{median}_{j\,\ne\,i} X_{i,j}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sout{q}">
+      <td class='test-num'>237</td>
+      <td class='latex-source'>\sout{q}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mathrlap{\,/}{=}">
+      <td class='test-num'>238</td>
+      <td class='latex-source'>\mathrlap{\,/}{=}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\text{\textsf{textual description}}">
+      <td class='test-num'>239</td>
+      <td class='latex-source'>\text{\textsf{textual description}}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="α π">
+      <td class='test-num'>240</td>
+      <td class='latex-source'>α π</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="ax^2 + bx + c = 0">
+      <td class='test-num'>241</td>
+      <td class='latex-source'>ax^2 + bx + c = 0</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
+      <td class='test-num'>242</td>
+      <td class='latex-source'>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\left( \frac{\left(3-x\right) \times 2}{3-x} \right)">
+      <td class='test-num'>243</td>
+      <td class='latex-source'>\left( \frac{\left(3-x\right) \times 2}{3-x} \right)</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="S_{\text{new}} = S_{\text{old}} - \frac{ \left( 5-T \right) ^2} {2}">
+      <td class='test-num'>244</td>
+      <td class='latex-source'>S_{\text{new}} = S_{\text{old}} - \frac{ \left( 5-T \right) ^2} {2}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\int_ax \int_as f(y)\,dy\,ds = \int_a^x f(y)(x-y)\,dy">
+      <td class='test-num'>245</td>
+      <td class='latex-source'>\int_ax \int_as f(y)\,dy\,ds = \int_a^x f(y)(x-y)\,dy</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\int_e{\infty}\frac {1}{t(\ln t)2}dt = \left. \frac{-1}{\ln t}\right\vert_e^\infty= 1">
+      <td class='test-num'>246</td>
+      <td class='latex-source'>\int_e{\infty}\frac {1}{t(\ln t)2}dt = \left. \frac{-1}{\ln t}\right\vert_e^\infty= 1</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\det(\mathsf{A}-\lambda\mathsf{I}) = 0">
+      <td class='test-num'>247</td>
+      <td class='latex-source'>\det(\mathsf{A}-\lambda\mathsf{I}) = 0</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sum_{i=0}^{n-1} i">
+      <td class='test-num'>248</td>
+      <td class='latex-source'>\sum_{i=0}^{n-1} i</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\sum_{m=1}\infty\sum_{n=1}\infty \frac{m2 n}{3m\left(m 3n + n 3m\right)}">
+      <td class='test-num'>249</td>
+      <td class='latex-source'>\sum_{m=1}\infty\sum_{n=1}\infty \frac{m2 n}{3m\left(m 3n + n 3m\right)}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="u'' + p(x)u' + q(x)u=f(x),\quad x&gt;a">
+      <td class='test-num'>250</td>
+      <td class='latex-source'>u'' + p(x)u' + q(x)u=f(x),\quad x&gt;a</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="|\bar{z}| = |z|, |(\bar{z})^n| = |z|^n, \arg(z^n) = n \arg(z)">
+      <td class='test-num'>251</td>
+      <td class='latex-source'>|\bar{z}| = |z|, |(\bar{z})^n| = |z|^n, \arg(z^n) = n \arg(z)</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\lim_{z\to z_0} f(z)=f(z_0)">
+      <td class='test-num'>252</td>
+      <td class='latex-source'>\lim_{z\to z_0} f(z)=f(z_0)</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\phi_n(\kappa) = \frac{1}{4\pi2\kappa2} \int_0\infty \frac{\sin(\kappa R)}{\kappa R} \frac{\partial}{\partial R} \left [ R2\frac{\partial D_n(R)}{\partial R} \right ] \,dR">
+      <td class='test-num'>253</td>
+      <td class='latex-source'>\phi_n(\kappa) = \frac{1}{4\pi2\kappa2} \int_0\infty \frac{\sin(\kappa R)}{\kappa R} \frac{\partial}{\partial R} \left [ R2\frac{\partial D_n(R)}{\partial R} \right ] \,dR</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\phi_n(\kappa) = 0.033C_n^2\kappa^{-11/3}, \quad\frac{1}{L_0}\ll\kappa\ll\frac{1}{l_0}">
+      <td class='test-num'>254</td>
+      <td class='latex-source'>\phi_n(\kappa) = 0.033C_n^2\kappa^{-11/3}, \quad\frac{1}{L_0}\ll\kappa\ll\frac{1}{l_0}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="f(x) = \begin{cases} 1 &amp; -1 \le x &lt; 0 \\ \frac{1}{2} &amp; x = 0 \\ 1 - x^2 &amp; \text{otherwise} \end{cases}">
+      <td class='test-num'>255</td>
+      <td class='latex-source'>f(x) = \begin{cases} 1 &amp; -1 \le x &lt; 0 \\ \frac{1}{2} &amp; x = 0 \\ 1 - x^2 &amp; \text{otherwise} \end{cases}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="{}_pF_q(a_1,\dots,a_p;c_1,\dots,c_q;z) = \sum_{n=0}^\infty \frac{(a_1)_n\cdots(a_p)_n} {(c_1)_n\cdots(c_q)_n}\frac{z^n}{n!}">
+      <td class='test-num'>256</td>
+      <td class='latex-source'>{}_pF_q(a_1,\dots,a_p;c_1,\dots,c_q;z) = \sum_{n=0}^\infty \frac{(a_1)_n\cdots(a_p)_n} {(c_1)_n\cdots(c_q)_n}\frac{z^n}{n!}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\frac{a}{b}\ \tfrac{a}{b}">
+      <td class='test-num'>258</td>
+      <td class='latex-source'>\frac{a}{b}\ \tfrac{a}{b}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="S=dD\sin\alpha">
+      <td class='test-num'>259</td>
+      <td class='latex-source'>S=dD\sin\alpha</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="V = \frac{1}{6} \pi h \left [ 3 \left ( r_1^2 + r_2^2 \right ) + h^2 \right ]">
+      <td class='test-num'>260</td>
+      <td class='latex-source'>V = \frac{1}{6} \pi h \left [ 3 \left ( r_1^2 + r_2^2 \right ) + h^2 \right ]</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\begin{align} u &amp; = \tfrac{1}{\sqrt{2}}(x+y) \qquad &amp; x &amp;= \tfrac{1}{\sqrt{2}}(u+v) \\[0.6ex] v &amp; = \tfrac{1}{\sqrt{2}}(x-y) \qquad &amp; y &amp;= \tfrac{1}{\sqrt{2}}(u-v) \end{align}">
+      <td class='test-num'>261</td>
+      <td class='latex-source'>\begin{align} u &amp; = \tfrac{1}{\sqrt{2}}(x+y) \qquad &amp; x &amp;= \tfrac{1}{\sqrt{2}}(u+v) \\[0.6ex] v &amp; = \tfrac{1}{\sqrt{2}}(x-y) \qquad &amp; y &amp;= \tfrac{1}{\sqrt{2}}(u-v) \end{align}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="A \with B \parr C">
+      <td class='test-num'>262</td>
+      <td class='latex-source'>A \with B \parr C</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="a \coh \oc b \incoh \wn c \scoh d \sincoh e">
+      <td class='test-num'>263</td>
+      <td class='latex-source'>a \coh \oc b \incoh \wn c \scoh d \sincoh e</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="a \Perp \shpos b \multimapinv \shneg c">
+      <td class='test-num'>264</td>
+      <td class='latex-source'>a \Perp \shpos b \multimapinv \shneg c</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\mathrm{f{\large f{\normalsize f{\tiny f}}}}">
+      <td class='test-num'>265</td>
+      <td class='latex-source'>\mathrm{f{\large f{\normalsize f{\tiny f}}}}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="A \rightarrow B \xrightarrow{i} C \rule[0.3em]{1.75em}{0.05em} D">
+      <td class='test-num'>266</td>
+      <td class='latex-source'>A \rightarrow B \xrightarrow{i} C \rule[0.3em]{1.75em}{0.05em} D</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+    <tr data-latex="\widetilde{U_i}">
+      <td class='test-num'>267</td>
+      <td class='latex-source'>\widetilde{U_i}</td>
+      <td class='mathml-output loading'>Converting...</td>
+      <td class='status loading'>⏳</td>
+    </tr>
+  </table>
+
+  <!-- Import the compiled yatexml JavaScript library -->
+  <script src="examples/latexToMathML.js"></script>
+
+  <script>
+    // Wait for the module to load
+    window.addEventListener('load', function() {
+      // Give the WASM/JS module time to initialize
+      setTimeout(function() {
+        const table = document.getElementById('test-table');
+        const rows = table.querySelectorAll('tr[data-latex]');
+        let successCount = 0;
+        let errorCount = 0;
+        let totalCount = rows.length;
+
+        rows.forEach(function(row) {
+          const latex = row.getAttribute('data-latex')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&')
+            .replace(/&quot;/g, '"');
+
+          const outputCell = row.querySelector('.mathml-output');
+          const statusCell = row.querySelector('.status');
+
+          try {
+            // Call the compiled Nim function
+            const mathml = latexToMathML(latex);
+
+            if (mathml && mathml !== 'ERROR' && !mathml.includes('Error:')) {
+              outputCell.innerHTML = mathml;
+              outputCell.className = 'mathml-output';
+              statusCell.innerHTML = '✓';
+              statusCell.className = 'success';
+              successCount++;
+            } else {
+              outputCell.innerHTML = '<span class="error">Conversion error</span>';
+              outputCell.className = 'mathml-output';
+              statusCell.innerHTML = '✗';
+              statusCell.className = 'error';
+              errorCount++;
+            }
+          } catch (e) {
+            outputCell.innerHTML = '<span class="error">Error: ' + e.message + '</span>';
+            outputCell.className = 'mathml-output';
+            statusCell.innerHTML = '✗';
+            statusCell.className = 'error';
+            errorCount++;
+          }
+        });
+
+        // Update status
+        const percentage = Math.round(successCount / totalCount * 100);
+        document.getElementById('status').innerHTML =
+          successCount + '/' + totalCount + ' tests passing (' + percentage + '%), ' +
+          errorCount + ' errors';
+        document.getElementById('status').className = successCount === totalCount ? 'success' : '';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
