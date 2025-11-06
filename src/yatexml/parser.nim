@@ -11,7 +11,7 @@ import tables, strutils
 type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctAccent,
-    ctBigOp, ctFunction, ctDelimiter, ctMatrix, ctText, ctSpace, ctColor,
+    ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor,
     ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac
 
   CommandInfo = object
@@ -163,6 +163,20 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["rceil"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
   result["{"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
   result["}"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
+
+  # Sized delimiters
+  result["big"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["bigl"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["bigr"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["Big"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["Bigl"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["Bigr"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["bigg"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["biggl"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["biggr"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["Bigg"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["Biggl"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
+  result["Biggr"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
 
   # Matrix environments
   result["begin"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
@@ -1105,6 +1119,65 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           return ok(newDelimited(leftDelim, rightDelim, contentResult.value))
         else:
           return err[AstNode](ekInvalidCommand, "\\right must be paired with \\left", token.position)
+
+      of ctSizedDelimiter:
+        # Handle sized delimiters: \big, \Big, \bigg, \Bigg (and l/r variants)
+        # Determine size from command name
+        let size = case cmdName
+          of "big", "bigl", "bigr": dsBig
+          of "Big", "Bigl", "Bigr": dsBig2
+          of "bigg", "biggl", "biggr": dsBigg
+          of "Bigg", "Biggl", "Biggr": dsBigg2
+          else: dsBig  # fallback
+
+        # Parse the delimiter character
+        let delimToken = stream.peek()
+        var delimChar: string
+
+        case delimToken.kind
+        of tkLeftParen:
+          discard stream.advance()
+          delimChar = "("
+        of tkRightParen:
+          discard stream.advance()
+          delimChar = ")"
+        of tkLeftBracket:
+          discard stream.advance()
+          delimChar = "["
+        of tkRightBracket:
+          discard stream.advance()
+          delimChar = "]"
+        of tkLeftVert, tkRightVert:
+          discard stream.advance()
+          delimChar = "|"
+        of tkOperator:
+          if delimToken.value == "{":
+            discard stream.advance()
+            delimChar = "{"
+          elif delimToken.value == "}":
+            discard stream.advance()
+            delimChar = "}"
+          else:
+            return err[AstNode](ekInvalidArgument, "Invalid delimiter after \\" & cmdName & ": " & delimToken.value, delimToken.position)
+        of tkCommand:
+          discard stream.advance()
+          case delimToken.value
+          of "lbrace", "{": delimChar = "{"
+          of "rbrace", "}": delimChar = "}"
+          of "langle": delimChar = "⟨"
+          of "rangle": delimChar = "⟩"
+          of "lfloor": delimChar = "⌊"
+          of "rfloor": delimChar = "⌋"
+          of "lceil": delimChar = "⌈"
+          of "rceil": delimChar = "⌉"
+          of "lvert": delimChar = "|"
+          of "rvert": delimChar = "|"
+          else:
+            return err[AstNode](ekInvalidArgument, "Unknown delimiter after \\" & cmdName & ": \\" & delimToken.value, delimToken.position)
+        else:
+          return err[AstNode](ekInvalidArgument, "Expected delimiter after \\" & cmdName, delimToken.position)
+
+        return ok(newSizedDelimiter(delimChar, size))
 
       of ctMatrix:
         # Handle \begin{matrix_type}

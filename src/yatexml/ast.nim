@@ -32,6 +32,7 @@ type
     # N-ary nodes
     nkRow                 ## Horizontal row of expressions
     nkDelimited           ## Delimited expression: \left( ... \right)
+    nkSizedDelimiter      ## Sized delimiter: \big(, \bigg), etc.
     nkMatrix              ## Matrix: \begin{matrix} ... \end{matrix}
     nkCases               ## Cases: \begin{cases} ... \end{cases}
     nkArray               ## Array environment
@@ -99,6 +100,14 @@ type
     dkDVert               ## || ||
     dkFloor               ## \lfloor \rfloor
     dkCeil                ## \lceil \rceil
+
+  DelimiterSize* = enum
+    ## Delimiter size specifications
+    dsNormal              ## Normal size
+    dsBig                 ## \big - 1.2em
+    dsBig2                ## \Big - 1.8em
+    dsBigg                ## \bigg - 2.4em
+    dsBigg2               ## \Bigg - 3.0em
 
   SIUnitKind* = enum
     ## Base and derived SI units
@@ -256,6 +265,10 @@ type
       delimRight*: string         ## Right delimiter
       delimContent*: AstNode      ## Content between delimiters
 
+    of nkSizedDelimiter:
+      sizedDelimChar*: string     ## Delimiter character
+      sizedDelimSize*: DelimiterSize  ## Size specification
+
     of nkMatrix:
       matrixRows*: seq[seq[AstNode]]  ## Matrix rows and columns
       matrixType*: string         ## "matrix", "pmatrix", "bmatrix", etc.
@@ -376,6 +389,10 @@ proc newRow*(children: seq[AstNode]): AstNode =
 proc newDelimited*(left: string, right: string, content: AstNode): AstNode =
   ## Create a delimited expression node
   AstNode(kind: nkDelimited, delimLeft: left, delimRight: right, delimContent: content)
+
+proc newSizedDelimiter*(char: string, size: DelimiterSize): AstNode =
+  ## Create a sized delimiter node
+  AstNode(kind: nkSizedDelimiter, sizedDelimChar: char, sizedDelimSize: size)
 
 proc newMatrix*(rows: seq[seq[AstNode]], matrixType: string = "matrix"): AstNode =
   ## Create a matrix node

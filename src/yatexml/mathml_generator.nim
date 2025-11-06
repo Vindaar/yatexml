@@ -219,6 +219,25 @@ proc generateDelimited(node: AstNode, options: MathMLOptions): string =
     let rightFence = tag("mo", node.delimRight, [("fence", "true"), ("stretchy", "true")])
     return tag("mrow", leftFence & content & rightFence)
 
+proc generateSizedDelimiter(node: AstNode, options: MathMLOptions): string =
+  ## Generate sized delimiter with explicit size attributes
+  ## Matches TeMML's approach: maxsize/minsize with symmetric="true" and fence="false"
+  let sizeStr = case node.sizedDelimSize
+    of dsBig: "1.2em"
+    of dsBig2: "1.8em"
+    of dsBigg: "2.4em"
+    of dsBigg2: "3.0em"
+    else: "1em"
+
+  let attrs = [
+    ("maxsize", sizeStr),
+    ("minsize", sizeStr),
+    ("symmetric", "true"),
+    ("fence", "false")
+  ]
+
+  tag("mo", node.sizedDelimChar, attrs)
+
 proc generateFunction(node: AstNode, options: MathMLOptions): string =
   ## Generate function application
   let funcName = tag("mi", node.funcName)
@@ -513,6 +532,8 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateRow(node, options)
   of nkDelimited:
     generateDelimited(node, options)
+  of nkSizedDelimiter:
+    generateSizedDelimiter(node, options)
   of nkFunction:
     generateFunction(node, options)
   of nkBigOp:
