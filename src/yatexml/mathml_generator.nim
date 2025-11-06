@@ -68,6 +68,9 @@ proc generateOperator(node: AstNode, options: MathMLOptions): string =
   var attrs: seq[(string, string)] = @[]
   if node.opForm.len > 0 and node.opForm != "infix":
     attrs.add(("form", node.opForm))
+  # Add separator attribute for commas
+  if node.opValue == ",":
+    attrs.add(("separator", "true"))
   tag("mo", node.opValue, attrs)
 
 proc generateText(node: AstNode, options: MathMLOptions): string =
@@ -192,28 +195,26 @@ proc generateColor(node: AstNode, options: MathMLOptions): string =
 proc generateRow(node: AstNode, options: MathMLOptions): string =
   ## Generate <mrow> element for a row of expressions
   var content = ""
-  var i = 0
-  while i < node.rowChildren.len:
-    let child = node.rowChildren[i]
+  for child in node.rowChildren:
     content.add(generateNode(child, options))
-
-    # Insert invisible function application operator between identifier and parentheses
-    # Pattern: identifier followed by delimited expression with left paren
-    if i + 1 < node.rowChildren.len:
-      let nextChild = node.rowChildren[i + 1]
-      if child.kind == nkIdentifier and nextChild.kind == nkDelimited and nextChild.delimLeft == "(":
-        # Insert U+2061 FUNCTION APPLICATION (invisible operator)
-        content.add(tag("mo", "\u2061"))
-
-    inc i
   tag("mrow", content)
 
 proc generateDelimited(node: AstNode, options: MathMLOptions): string =
   ## Generate delimited expression with fences
   let content = generateNode(node.delimContent, options)
-  let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true")])
-  let rightFence = tag("mo", node.delimRight, [("fence", "true"), ("stretchy", "true")])
-  tag("mrow", leftFence & content & rightFence)
+
+  # For parentheses in function calls, use form attributes instead of fence
+  # This matches TeMML's approach and produces better spacing
+  if node.delimLeft == "(" and node.delimRight == ")":
+    let leftFence = tag("mo", "(", [("form", "prefix"), ("stretchy", "false")])
+    let rightFence = tag("mo", ")", [("form", "postfix"), ("stretchy", "false")])
+    # Return flat - no mrow wrapper
+    return leftFence & content & rightFence
+  else:
+    # For other delimiters (brackets, braces, etc), keep current behavior
+    let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true")])
+    let rightFence = tag("mo", node.delimRight, [("fence", "true"), ("stretchy", "true")])
+    return tag("mrow", leftFence & content & rightFence)
 
 proc generateFunction(node: AstNode, options: MathMLOptions): string =
   ## Generate function application
@@ -246,18 +247,19 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
     tag("mo", opSymbol, [("largeop", "true"), ("symmetric", "true")])
 
   # Handle limits
+  # Wrap each big operator in mrow for proper spacing (matches TeMML behavior)
   if node.bigopLower != nil and node.bigopUpper != nil:
     let lower = generateNode(node.bigopLower, options)
     let upper = generateNode(node.bigopUpper, options)
-    tag("munderover", opNode & lower & upper)
+    tag("mrow", tag("munderover", opNode & lower & upper))
   elif node.bigopLower != nil:
     let lower = generateNode(node.bigopLower, options)
-    tag("munder", opNode & lower)
+    tag("mrow", tag("munder", opNode & lower))
   elif node.bigopUpper != nil:
     let upper = generateNode(node.bigopUpper, options)
-    tag("mover", opNode & upper)
+    tag("mrow", tag("mover", opNode & upper))
   else:
-    opNode
+    tag("mrow", opNode)
 
 proc generateMatrix(node: AstNode, options: MathMLOptions): string =
   ## Generate matrix

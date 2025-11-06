@@ -3,41 +3,43 @@ var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
 var NTI1577058307 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058846 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058840 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058837 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058826 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058823 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058778 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058775 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058772 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058769 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058766 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058763 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058760 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058757 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058754 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058672 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058605 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058554 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058526 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058521 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058495 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058876 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058870 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058867 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058856 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058853 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058807 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058804 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058801 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058798 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058795 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058792 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058789 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058786 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058783 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058701 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058634 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058583 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058555 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058550 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058545 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058541 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058504 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058499 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058493 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058490 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058487 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058484 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058481 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058478 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058475 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058472 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058469 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058466 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058463 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058451 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058445 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058442 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058436 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058433 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058430 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058411 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1577058855 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058439 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058420 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1577058885 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1409286312 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1543509265 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1560281161 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
@@ -510,33 +512,24 @@ NTI1543509015.node = NNI1543509015;
 NTI1560281161.base = NTI1409286148;
 NTI1543509265.base = NTI1409286148;
 NTI1409286312.base = NTI1409286148;
-var NNI1577058855 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1577058885 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058855.node = NNI1577058855;
-var NNI1577058411 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058885.node = NNI1577058885;
+var NNI1577058420 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058411.node = NNI1577058411;
-var NNI1577058430 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058420.node = NNI1577058420;
+var NNI1577058439 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058430.node = NNI1577058430;
-var NNI1577058433 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058433.node = NNI1577058433;
-var NNI1577058436 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058436.node = NNI1577058436;
+NTI1577058439.node = NNI1577058439;
 var NNI1577058442 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1577058442.node = NNI1577058442;
-var NNI1577058463 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1577058445 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058463.node = NNI1577058463;
-var NNI1577058466 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058445.node = NNI1577058445;
+var NNI1577058451 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058466.node = NNI1577058466;
-var NNI1577058469 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058469.node = NNI1577058469;
+NTI1577058451.node = NNI1577058451;
 var NNI1577058472 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1577058472.node = NNI1577058472;
@@ -552,69 +545,84 @@ NTI1577058481.node = NNI1577058481;
 var NNI1577058484 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1577058484.node = NNI1577058484;
+var NNI1577058487 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1577058487.node = NNI1577058487;
 var NNI1577058490 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1577058490.node = NNI1577058490;
-var NNI1577058495 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1577058493 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058495.node = NNI1577058495;
-var NNI1577058521 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058493.node = NNI1577058493;
+var NNI1577058499 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058521.node = NNI1577058521;
-var NNI1577058526 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058499.node = NNI1577058499;
+var NNI1577058504 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058526.node = NNI1577058526;
-var NNI1577058554 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058504.node = NNI1577058504;
+var NNI1577058541 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058554.node = NNI1577058554;
-var NNI1577058605 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058541.node = NNI1577058541;
+var NNI1577058545 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058605.node = NNI1577058605;
-var NNI1577058672 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058545.node = NNI1577058545;
+var NNI1577058550 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058672.node = NNI1577058672;
-var NNI1577058754 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058550.node = NNI1577058550;
+var NNI1577058555 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058754.node = NNI1577058754;
-var NNI1577058757 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058555.node = NNI1577058555;
+var NNI1577058583 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058757.node = NNI1577058757;
-var NNI1577058760 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058583.node = NNI1577058583;
+var NNI1577058634 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058760.node = NNI1577058760;
-var NNI1577058763 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058634.node = NNI1577058634;
+var NNI1577058701 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058763.node = NNI1577058763;
-var NNI1577058766 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058701.node = NNI1577058701;
+var NNI1577058783 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058766.node = NNI1577058766;
-var NNI1577058769 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058783.node = NNI1577058783;
+var NNI1577058786 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058769.node = NNI1577058769;
-var NNI1577058772 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058786.node = NNI1577058786;
+var NNI1577058789 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058772.node = NNI1577058772;
-var NNI1577058775 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058789.node = NNI1577058789;
+var NNI1577058792 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058775.node = NNI1577058775;
-var NNI1577058778 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058792.node = NNI1577058792;
+var NNI1577058795 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058778.node = NNI1577058778;
-var NNI1577058823 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058795.node = NNI1577058795;
+var NNI1577058798 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058823.node = NNI1577058823;
-var NNI1577058826 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058798.node = NNI1577058798;
+var NNI1577058801 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058826.node = NNI1577058826;
-var NNI1577058837 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058801.node = NNI1577058801;
+var NNI1577058804 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058837.node = NNI1577058837;
-var NNI1577058840 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058804.node = NNI1577058804;
+var NNI1577058807 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058840.node = NNI1577058840;
-var NNI1577058846 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1577058807.node = NNI1577058807;
+var NNI1577058853 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1577058846.node = NNI1577058846;
+NTI1577058853.node = NNI1577058853;
+var NNI1577058856 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1577058856.node = NNI1577058856;
+var NNI1577058867 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1577058867.node = NNI1577058867;
+var NNI1577058870 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1577058870.node = NNI1577058870;
+var NNI1577058876 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1577058876.node = NNI1577058876;
 var NNI1577058307 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "displayStyle", len: 0, typ: NTI33554466, name: "displayStyle", sons: null}, 
 {kind: 1, offset: "prettyPrint", len: 0, typ: NTI33554466, name: "prettyPrint", sons: null}, 
 {kind: 1, offset: "indentSize", len: 0, typ: NTI33554435, name: "indentSize", sons: null}]};
@@ -1241,44 +1249,44 @@ var ConstSet116 = setConstr(3);
 var ConstSet117 = setConstr(3);
 var ConstSet118 = setConstr(3);
 var ConstSet119 = setConstr(3);
-var ConstSet120 = setConstr(4);
-var ConstSet121 = setConstr(5);
+var ConstSet120 = setConstr(3);
+var ConstSet121 = setConstr(4);
 var ConstSet122 = setConstr(5);
-var ConstSet123 = setConstr(11);
+var ConstSet123 = setConstr(5);
 var ConstSet124 = setConstr(11);
-var ConstSet125 = setConstr(12);
+var ConstSet125 = setConstr(11);
 var ConstSet126 = setConstr(12);
-var ConstSet127 = setConstr(13);
+var ConstSet127 = setConstr(12);
 var ConstSet128 = setConstr(13);
-var ConstSet129 = setConstr(6);
-var ConstSet130 = setConstr(7);
+var ConstSet129 = setConstr(13);
+var ConstSet130 = setConstr(6);
 var ConstSet131 = setConstr(7);
-var ConstSet132 = setConstr(14);
+var ConstSet132 = setConstr(7);
 var ConstSet133 = setConstr(14);
-var ConstSet134 = setConstr(15);
+var ConstSet134 = setConstr(14);
 var ConstSet135 = setConstr(15);
-var ConstSet136 = setConstr(16);
+var ConstSet136 = setConstr(15);
 var ConstSet137 = setConstr(16);
 var ConstSet138 = setConstr(16);
-var ConstSet139 = setConstr(8);
+var ConstSet139 = setConstr(16);
 var ConstSet140 = setConstr(8);
-var ConstSet141 = setConstr(9);
+var ConstSet141 = setConstr(8);
 var ConstSet142 = setConstr(9);
-var ConstSet143 = setConstr(10);
+var ConstSet143 = setConstr(9);
 var ConstSet144 = setConstr(10);
-var ConstSet145 = setConstr(17);
+var ConstSet145 = setConstr(10);
 var ConstSet146 = setConstr(17);
-var ConstSet147 = setConstr(17);
-var ConstSet148 = setConstr(17);
+var ConstSet147 = setConstr(18);
+var ConstSet148 = setConstr(18);
 var ConstSet149 = setConstr(18);
 var ConstSet150 = setConstr(18);
 var ConstSet151 = setConstr(18);
-var ConstSet152 = setConstr(18);
+var ConstSet152 = setConstr(22);
 var ConstSet153 = setConstr(22);
 var ConstSet154 = setConstr(22);
-var ConstSet155 = setConstr(22);
-var ConstSet156 = setConstr(23);
-var ConstSet157 = setConstr(8, 9, 10);
+var ConstSet155 = setConstr(23);
+var ConstSet156 = setConstr(8, 9, 10);
+var ConstSet157 = setConstr(23);
 var ConstSet158 = setConstr(23);
 var ConstSet159 = setConstr(23);
 var ConstSet160 = setConstr(23);
@@ -1287,10 +1295,9 @@ var ConstSet162 = setConstr(23);
 var ConstSet163 = setConstr(23);
 var ConstSet164 = setConstr(23);
 var ConstSet165 = setConstr(23);
-var ConstSet166 = setConstr(23);
+var ConstSet166 = setConstr(19);
 var ConstSet167 = setConstr(19);
 var ConstSet168 = setConstr(19);
-var ConstSet169 = setConstr(19);
 
 function modInt(a_p0, b_p1) {
         if (b_p1 == 0) raiseDivByZero();
@@ -1300,6 +1307,7 @@ function modInt(a_p0, b_p1) {
 
   
 }
+var ConstSet169 = setConstr(19);
 var ConstSet170 = setConstr(19);
 var ConstSet171 = setConstr(19);
 var ConstSet172 = setConstr(19);
@@ -1307,16 +1315,15 @@ var ConstSet173 = setConstr(19);
 var ConstSet174 = setConstr(19);
 var ConstSet175 = setConstr(19);
 var ConstSet176 = setConstr(19);
-var ConstSet177 = setConstr(19);
-var ConstSet178 = setConstr(26);
-var ConstSet179 = setConstr(27);
-var ConstSet180 = setConstr(26);
+var ConstSet177 = setConstr(26);
+var ConstSet178 = setConstr(27);
+var ConstSet179 = setConstr(26);
+var ConstSet180 = setConstr(27);
 var ConstSet181 = setConstr(27);
-var ConstSet182 = setConstr(27);
+var ConstSet182 = setConstr(28);
 var ConstSet183 = setConstr(28);
-var ConstSet184 = setConstr(28);
+var ConstSet184 = setConstr(true);
 var ConstSet185 = setConstr(true);
-var ConstSet186 = setConstr(true);
 var objectID_1459617970 = [0];
 
 function isFatPointer__system_u2892(ti_p0) {
@@ -7542,7 +7549,8 @@ function generateOperator__OOZsrcZyatexmlZmathml95generator_u95(node_p0, options
       var Temporary2;
         var Temporary3;
     var Temporary4;
-    var Temporary5;
+      var Temporary5;
+    var Temporary6;
 
   var result_1577058402 = [];
 
@@ -7557,24 +7565,30 @@ function generateOperator__OOZsrcZyatexmlZmathml95generator_u95(node_p0, options
     attrs_1577058407.push({Field0: [102,111,114,109], Field1: nimCopy(null, Temporary4.opForm, NTI33554449)});;
     }
     
-    var Temporary5 = node_p0;
-    if (ConstSet119[Temporary5.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'opValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary5.kind, NTI1392508931)); }
-    result_1577058402 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], Temporary5.opValue, attrs_1577058407), NTI33554449);
+      var Temporary5 = node_p0;
+      if (ConstSet119[Temporary5.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'opValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary5.kind, NTI1392508931)); }
+    if (eqStrings(Temporary5.opValue, [44])) {
+    attrs_1577058407.push({Field0: [115,101,112,97,114,97,116,111,114], Field1: [116,114,117,101]});;
+    }
+    
+    var Temporary6 = node_p0;
+    if (ConstSet120[Temporary6.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'opValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary6.kind, NTI1392508931)); }
+    result_1577058402 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], Temporary6.opValue, attrs_1577058407), NTI33554449);
 
   return result_1577058402;
 
 }
 
-function generateText__OOZsrcZyatexmlZmathml95generator_u141(node_p0, options_p1) {
+function generateText__OOZsrcZyatexmlZmathml95generator_u145(node_p0, options_p1) {
     var Temporary1;
 
-  var result_1577058448 = [];
+  var result_1577058452 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet120[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'textValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    result_1577058448 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,101,120,116], escapeXml__OOZsrcZyatexmlZmathml95generator_u27(Temporary1.textValue), []), NTI33554449);
+    if (ConstSet121[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'textValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    result_1577058452 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,101,120,116], escapeXml__OOZsrcZyatexmlZmathml95generator_u27(Temporary1.textValue), []), NTI33554449);
 
-  return result_1577058448;
+  return result_1577058452;
 
 }
 
@@ -7605,249 +7619,249 @@ function tag__OOZsrcZyatexmlZmathml95generator_u40(name_p0, attrs_p1) {
 
 }
 
-function generateSpace__OOZsrcZyatexmlZmathml95generator_u145(node_p0, options_p1) {
+function generateSpace__OOZsrcZyatexmlZmathml95generator_u149(node_p0, options_p1) {
     var Temporary1;
       var Temporary2;
     var Temporary3;
 
-  var result_1577058452 = [];
+  var result_1577058456 = [];
 
       var Temporary2 = node_p0;
-      if (ConstSet121[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'spaceWidth\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+      if (ConstSet122[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'spaceWidth\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
     if ((0 < (Temporary2.spaceWidth).length)) {
     var Temporary3 = node_p0;
-    if (ConstSet122[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'spaceWidth\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
-    Temporary1 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: nimCopy(null, Temporary3.spaceWidth, NTI33554449)}, NTI1577058411)]);
+    if (ConstSet123[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'spaceWidth\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
+    Temporary1 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: nimCopy(null, Temporary3.spaceWidth, NTI33554449)}, NTI1577058420)]);
     }
     else {
     Temporary1 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], []);
     }
     
-    result_1577058452 = nimCopy(null, Temporary1, NTI33554449);
+    result_1577058456 = nimCopy(null, Temporary1, NTI33554449);
 
-  return result_1577058452;
+  return result_1577058456;
 
 }
 
-function generateFrac__OOZsrcZyatexmlZmathml95generator_u165(node_p0, options_p1) {
+function generateFrac__OOZsrcZyatexmlZmathml95generator_u169(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058472 = [];
+  var result_1577058476 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet123[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'fracNum\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var num_1577058473 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.fracNum, options_p1);
+    if (ConstSet124[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'fracNum\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var num_1577058477 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.fracNum, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet124[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'fracDenom\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var denom_1577058474 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.fracDenom, options_p1);
-    result_1577058472 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,102,114,97,99], (num_1577058473).concat(denom_1577058474), []), NTI33554449);
+    if (ConstSet125[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'fracDenom\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var denom_1577058478 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.fracDenom, options_p1);
+    result_1577058476 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,102,114,97,99], (num_1577058477).concat(denom_1577058478), []), NTI33554449);
 
-  return result_1577058472;
+  return result_1577058476;
 
 }
 
-function generateBinomial__OOZsrcZyatexmlZmathml95generator_u171(node_p0, options_p1) {
+function generateBinomial__OOZsrcZyatexmlZmathml95generator_u175(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058478 = [];
+  var result_1577058482 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet125[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'binomTop\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var top_1577058479 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.binomTop, options_p1);
+    if (ConstSet126[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'binomTop\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var top_1577058483 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.binomTop, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet126[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'binomBottom\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var bottom_1577058480 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.binomBottom, options_p1);
-    var frac_1577058481 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,102,114,97,99], (top_1577058479).concat(bottom_1577058480), [nimCopy(null, {Field0: [108,105,110,101,116,104,105,99,107,110,101,115,115], Field1: [48,112,120]}, NTI1577058430)]);
-    result_1577058478 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058433)])).concat(frac_1577058481,tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058436)])), []), NTI33554449);
+    if (ConstSet127[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'binomBottom\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var bottom_1577058484 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.binomBottom, options_p1);
+    var frac_1577058485 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,102,114,97,99], (top_1577058483).concat(bottom_1577058484), [nimCopy(null, {Field0: [108,105,110,101,116,104,105,99,107,110,101,115,115], Field1: [48,112,120]}, NTI1577058439)]);
+    result_1577058482 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058442)])).concat(frac_1577058485,tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058445)])), []), NTI33554449);
 
-  return result_1577058478;
+  return result_1577058482;
 
 }
 
-function generateAtop__OOZsrcZyatexmlZmathml95generator_u178(node_p0, options_p1) {
+function generateAtop__OOZsrcZyatexmlZmathml95generator_u182(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058485 = [];
+  var result_1577058489 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet127[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'atopTop\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var top_1577058486 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.atopTop, options_p1);
+    if (ConstSet128[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'atopTop\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var top_1577058490 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.atopTop, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet128[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'atopBottom\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var bottom_1577058487 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.atopBottom, options_p1);
-    result_1577058485 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,102,114,97,99], (top_1577058486).concat(bottom_1577058487), [nimCopy(null, {Field0: [108,105,110,101,116,104,105,99,107,110,101,115,115], Field1: [48,112,120]}, NTI1577058442)]), NTI33554449);
+    if (ConstSet129[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'atopBottom\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var bottom_1577058491 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.atopBottom, options_p1);
+    result_1577058489 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,102,114,97,99], (top_1577058490).concat(bottom_1577058491), [nimCopy(null, {Field0: [108,105,110,101,116,104,105,99,107,110,101,115,115], Field1: [48,112,120]}, NTI1577058451)]), NTI33554449);
 
-  return result_1577058485;
+  return result_1577058489;
 
 }
 
-function generateSqrt__OOZsrcZyatexmlZmathml95generator_u184(node_p0, options_p1) {
+function generateSqrt__OOZsrcZyatexmlZmathml95generator_u188(node_p0, options_p1) {
     var Temporary1;
 
-  var result_1577058491 = [];
+  var result_1577058495 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet129[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'sqrtBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058492 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.sqrtBase, options_p1);
-    result_1577058491 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,113,114,116], base_1577058492, []), NTI33554449);
+    if (ConstSet130[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'sqrtBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058496 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.sqrtBase, options_p1);
+    result_1577058495 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,113,114,116], base_1577058496, []), NTI33554449);
 
-  return result_1577058491;
+  return result_1577058495;
 
 }
 
-function generateRoot__OOZsrcZyatexmlZmathml95generator_u189(node_p0, options_p1) {
-    var Temporary1;
-    var Temporary2;
-
-  var result_1577058496 = [];
-
-    var Temporary1 = node_p0;
-    if (ConstSet130[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rootBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058497 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.rootBase, options_p1);
-    var Temporary2 = node_p0;
-    if (ConstSet131[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rootIndex\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var index_1577058498 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.rootIndex, options_p1);
-    result_1577058496 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,111,116], (base_1577058497).concat(index_1577058498), []), NTI33554449);
-
-  return result_1577058496;
-
-}
-
-function generateSub__OOZsrcZyatexmlZmathml95generator_u195(node_p0, options_p1) {
+function generateRoot__OOZsrcZyatexmlZmathml95generator_u193(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058502 = [];
+  var result_1577058500 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet132[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058503 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.subBase, options_p1);
+    if (ConstSet131[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rootBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058501 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.rootBase, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet133[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subScript\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var script_1577058504 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.subScript, options_p1);
-    result_1577058502 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,117,98], (base_1577058503).concat(script_1577058504), []), NTI33554449);
+    if (ConstSet132[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rootIndex\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var index_1577058502 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.rootIndex, options_p1);
+    result_1577058500 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,111,116], (base_1577058501).concat(index_1577058502), []), NTI33554449);
 
-  return result_1577058502;
+  return result_1577058500;
 
 }
 
-function generateSup__OOZsrcZyatexmlZmathml95generator_u201(node_p0, options_p1) {
+function generateSub__OOZsrcZyatexmlZmathml95generator_u199(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058508 = [];
+  var result_1577058506 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet134[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'supBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058509 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.supBase, options_p1);
+    if (ConstSet133[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058507 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.subBase, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet135[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'supScript\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var script_1577058510 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.supScript, options_p1);
-    result_1577058508 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,117,112], (base_1577058509).concat(script_1577058510), []), NTI33554449);
+    if (ConstSet134[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subScript\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var script_1577058508 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.subScript, options_p1);
+    result_1577058506 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,117,98], (base_1577058507).concat(script_1577058508), []), NTI33554449);
 
-  return result_1577058508;
+  return result_1577058506;
 
 }
 
-function generateSubSup__OOZsrcZyatexmlZmathml95generator_u207(node_p0, options_p1) {
+function generateSup__OOZsrcZyatexmlZmathml95generator_u205(node_p0, options_p1) {
+    var Temporary1;
+    var Temporary2;
+
+  var result_1577058512 = [];
+
+    var Temporary1 = node_p0;
+    if (ConstSet135[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'supBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058513 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.supBase, options_p1);
+    var Temporary2 = node_p0;
+    if (ConstSet136[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'supScript\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var script_1577058514 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.supScript, options_p1);
+    result_1577058512 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,117,112], (base_1577058513).concat(script_1577058514), []), NTI33554449);
+
+  return result_1577058512;
+
+}
+
+function generateSubSup__OOZsrcZyatexmlZmathml95generator_u211(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
     var Temporary3;
 
-  var result_1577058514 = [];
+  var result_1577058518 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet136[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subsupBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058515 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.subsupBase, options_p1);
+    if (ConstSet137[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subsupBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058519 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.subsupBase, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet137[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subsupSub\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var sub_1577058516 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.subsupSub, options_p1);
+    if (ConstSet138[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subsupSub\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var sub_1577058520 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.subsupSub, options_p1);
     var Temporary3 = node_p0;
-    if (ConstSet138[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subsupSup\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
-    var sup_1577058517 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary3.subsupSup, options_p1);
-    result_1577058514 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,117,98,115,117,112], (base_1577058515).concat(sub_1577058516,sup_1577058517), []), NTI33554449);
+    if (ConstSet139[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'subsupSup\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
+    var sup_1577058521 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary3.subsupSup, options_p1);
+    result_1577058518 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,117,98,115,117,112], (base_1577058519).concat(sub_1577058520,sup_1577058521), []), NTI33554449);
 
-  return result_1577058514;
+  return result_1577058518;
 
 }
 
-function generateAccent__OOZsrcZyatexmlZmathml95generator_u214(node_p0, options_p1) {
+function generateAccent__OOZsrcZyatexmlZmathml95generator_u218(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
     var Temporary3;
 
-  var result_1577058521 = [];
+  var result_1577058525 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet139[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058522 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.accentBase, options_p1);
+    if (ConstSet140[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058526 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.accentBase, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet140[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    if (ConstSet141[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
     switch (Temporary2.accentKind) {
     case 0:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [94], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058463)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [94], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058472)]);
       break;
     case 1:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [194,175], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058466)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [194,175], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058475)]);
       break;
     case 2:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [126], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058469)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [126], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058478)]);
       break;
     case 3:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [203,153], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058472)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [203,153], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058481)]);
       break;
     case 4:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [194,168], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058475)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [194,168], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058484)]);
       break;
     case 5:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,134,146], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058478)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,134,146], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058487)]);
       break;
     case 6:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [204,130], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058481)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [204,130], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058490)]);
       break;
     case 7:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [204,131], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058484)]);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [204,131], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1577058493)]);
       break;
     case 8:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [194,175], [])), []);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [194,175], [])), []);
       break;
     case 9:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [95], [])), []);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [95], [])), []);
       break;
     case 10:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,143,158], [])), []);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,143,158], [])), []);
       break;
     case 11:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,143,159], [])), []);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,143,159], [])), []);
       break;
     case 12:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,134,146], [])), []);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,134,146], [])), []);
       break;
     case 13:
-      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058522).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,134,144], [])), []);
+      Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (base_1577058526).concat(tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,134,144], [])), []);
       break;
     }
-    result_1577058521 = nimCopy(null, Temporary3, NTI33554449);
+    result_1577058525 = nimCopy(null, Temporary3, NTI33554449);
 
-  return result_1577058521;
+  return result_1577058525;
 
 }
 
-function generateStyle__OOZsrcZyatexmlZmathml95generator_u219(node_p0, options_p1) {
+function generateStyle__OOZsrcZyatexmlZmathml95generator_u223(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
     var Temporary3;
 
-  var result_1577058526 = [];
+  var result_1577058530 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet141[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'styleBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058527 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.styleBase, options_p1);
+    if (ConstSet142[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'styleBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058531 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.styleBase, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet142[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'styleKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    if (ConstSet143[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'styleKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
     switch (Temporary2.styleKind) {
     case 0:
       Temporary3 = [98,111,108,100];
@@ -7874,128 +7888,134 @@ function generateStyle__OOZsrcZyatexmlZmathml95generator_u219(node_p0, options_p
       Temporary3 = [109,111,110,111,115,112,97,99,101];
       break;
     }
-    var variant_1577058528 = nimCopy(null, Temporary3, NTI33554449);
-    result_1577058526 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1577058527, [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: nimCopy(null, variant_1577058528, NTI33554449)}, NTI1577058490)]), NTI33554449);
+    var variant_1577058532 = nimCopy(null, Temporary3, NTI33554449);
+    result_1577058530 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1577058531, [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: nimCopy(null, variant_1577058532, NTI33554449)}, NTI1577058499)]), NTI33554449);
 
-  return result_1577058526;
+  return result_1577058530;
 
 }
 
-function generateColor__OOZsrcZyatexmlZmathml95generator_u225(node_p0, options_p1) {
+function generateColor__OOZsrcZyatexmlZmathml95generator_u229(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058532 = [];
+  var result_1577058536 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet143[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'colorBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var base_1577058533 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.colorBase, options_p1);
+    if (ConstSet144[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'colorBase\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var base_1577058537 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.colorBase, options_p1);
     var Temporary2 = node_p0;
-    if (ConstSet144[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'colorName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    result_1577058532 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1577058533, [nimCopy(null, {Field0: [109,97,116,104,99,111,108,111,114], Field1: nimCopy(null, Temporary2.colorName, NTI33554449)}, NTI1577058495)]), NTI33554449);
+    if (ConstSet145[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'colorName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    result_1577058536 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1577058537, [nimCopy(null, {Field0: [109,97,116,104,99,111,108,111,114], Field1: nimCopy(null, Temporary2.colorName, NTI33554449)}, NTI1577058504)]), NTI33554449);
 
-  return result_1577058532;
+  return result_1577058536;
 
 }
 
-function generateRow__OOZsrcZyatexmlZmathml95generator_u230(node_p0, options_p1) {
-          var Temporary3;
-          var Temporary4;
-          var Temporary5;
-            var Temporary6;
-          var Temporary7;
-          var Temporary8;
-            var Temporary9;
-              var Temporary10;
+function generateRow__OOZsrcZyatexmlZmathml95generator_u234(node_p0, options_p1) {
+      var Temporary2;
 
-  var result_1577058537 = [];
+  var result_1577058541 = [];
 
-    var content_1577058538 = [];
-    var i_1577058539 = 0;
+    var content_1577058542 = [];
     Label1: {
-        Label2: while (true) {
-          var Temporary3 = node_p0;
-          if (ConstSet145[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
-        if (!(i_1577058539 < (Temporary3.rowChildren).length)) break Label2;
-          var Temporary4 = node_p0;
-          if (ConstSet146[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
-          var child_1577058543 = (Temporary5 = Temporary4.rowChildren, Temporary5)[chckIndx(i_1577058539, 0, (Temporary5).length - 1)];
-          content_1577058538.push.apply(content_1577058538, generateNode__OOZsrcZyatexmlZmathml95generator_u49(child_1577058543, options_p1));;
-            var Temporary6 = node_p0;
-            if (ConstSet147[Temporary6.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary6.kind, NTI1392508931)); }
-          if ((addInt(i_1577058539, 1) < (Temporary6.rowChildren).length)) {
-          var Temporary7 = node_p0;
-          if (ConstSet148[Temporary7.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary7.kind, NTI1392508931)); }
-          var nextChild_1577058547 = (Temporary8 = Temporary7.rowChildren, Temporary8)[chckIndx(addInt(i_1577058539, 1), 0, (Temporary8).length - 1)];
-            if (!((child_1577058543.kind == 1) && (nextChild_1577058547.kind == 18))) Temporary9 = false; else {              var Temporary10 = nextChild_1577058547;
-              if (ConstSet149[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimLeft\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1392508931)); }
-              Temporary9 = eqStrings(Temporary10.delimLeft, [40]);            }          if (Temporary9) {
-          content_1577058538.push.apply(content_1577058538, tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,129,161], []));;
+      var child_1577058564 = null;
+      var colontmp__1207959708 = [];
+      var Temporary2 = node_p0;
+      if (ConstSet146[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+      colontmp__1207959708 = Temporary2.rowChildren;
+      var i_1207959710 = 0;
+      var L_1207959711 = (colontmp__1207959708).length;
+      Label3: {
+          Label4: while (true) {
+          if (!(i_1207959710 < L_1207959711)) break Label4;
+            child_1577058564 = colontmp__1207959708[chckIndx(i_1207959710, 0, (colontmp__1207959708).length - 1)];
+            content_1577058542.push.apply(content_1577058542, generateNode__OOZsrcZyatexmlZmathml95generator_u49(child_1577058564, options_p1));;
+            i_1207959710 += 1;
+            if (!(((colontmp__1207959708).length == L_1207959711))) {
+            failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
+            }
+            
           }
-          
-          }
-          
-          i_1577058539 = addInt(i_1577058539, 1);
-        }
+      };
     };
-    result_1577058537 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], content_1577058538, []), NTI33554449);
+    result_1577058541 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], content_1577058542, []), NTI33554449);
 
-  return result_1577058537;
+  return result_1577058541;
 
 }
 
-function generateDelimited__OOZsrcZyatexmlZmathml95generator_u258(node_p0, options_p1) {
+function generateDelimited__OOZsrcZyatexmlZmathml95generator_u277(node_p0, options_p1) {
     var Temporary1;
-    var Temporary2;
-    var Temporary3;
+      var Temporary2;
+      var Temporary3;
+        var Temporary4;
+      var Temporary5;
+      var Temporary6;
 
-  var result_1577058565 = [];
+  var result_1577058584 = [];
 
+  BeforeRet: {
     var Temporary1 = node_p0;
-    if (ConstSet150[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimContent\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var content_1577058566 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.delimContent, options_p1);
-    var Temporary2 = node_p0;
-    if (ConstSet151[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimLeft\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var leftFence_1577058567 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], Temporary2.delimLeft, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058521), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1577058521)]);
-    var Temporary3 = node_p0;
-    if (ConstSet152[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimRight\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
-    var rightFence_1577058568 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], Temporary3.delimRight, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058526), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1577058526)]);
-    result_1577058565 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (leftFence_1577058567).concat(content_1577058566,rightFence_1577058568), []), NTI33554449);
+    if (ConstSet147[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimContent\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var content_1577058585 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary1.delimContent, options_p1);
+      var Temporary3 = node_p0;
+      if (ConstSet148[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimLeft\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
+      if (!eqStrings(Temporary3.delimLeft, [40])) Temporary2 = false; else {        var Temporary4 = node_p0;
+        if (ConstSet149[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimRight\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
+        Temporary2 = eqStrings(Temporary4.delimRight, [41]);      }    if (Temporary2) {
+    var leftFence_1577058586 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,114,101,102,105,120]}, NTI1577058541), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1577058541)]);
+    var rightFence_1577058587 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,111,115,116,102,105,120]}, NTI1577058545), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1577058545)]);
+    result_1577058584 = nimCopy(null, (leftFence_1577058586).concat(content_1577058585,rightFence_1577058587), NTI33554449);
+    break BeforeRet;
+    }
+    else {
+      var Temporary5 = node_p0;
+      if (ConstSet150[Temporary5.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimLeft\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary5.kind, NTI1392508931)); }
+      var leftFence_1577058588 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], Temporary5.delimLeft, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058550), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1577058550)]);
+      var Temporary6 = node_p0;
+      if (ConstSet151[Temporary6.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimRight\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary6.kind, NTI1392508931)); }
+      var rightFence_1577058589 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], Temporary6.delimRight, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058555), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1577058555)]);
+      result_1577058584 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (leftFence_1577058588).concat(content_1577058585,rightFence_1577058589), []), NTI33554449);
+      break BeforeRet;
+    }
+    
+  };
 
-  return result_1577058565;
+  return result_1577058584;
 
 }
 
-function generateFunction__OOZsrcZyatexmlZmathml95generator_u281(node_p0, options_p1) {
+function generateFunction__OOZsrcZyatexmlZmathml95generator_u302(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
       var Temporary3;
     var Temporary4;
 
-  var result_1577058588 = [];
+  var result_1577058609 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet153[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'funcName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var funcName_1577058589 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], Temporary1.funcName, []);
+    if (ConstSet152[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'funcName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var funcName_1577058610 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], Temporary1.funcName, []);
       var Temporary3 = node_p0;
-      if (ConstSet154[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'funcArg\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
+      if (ConstSet153[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'funcArg\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
     if (!((Temporary3.funcArg == null))) {
     var Temporary4 = node_p0;
-    if (ConstSet155[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'funcArg\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
-    var arg_1577058594 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary4.funcArg, options_p1);
-    Temporary2 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (funcName_1577058589).concat(arg_1577058594), []);
+    if (ConstSet154[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'funcArg\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
+    var arg_1577058615 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary4.funcArg, options_p1);
+    Temporary2 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (funcName_1577058610).concat(arg_1577058615), []);
     }
     else {
-    Temporary2 = funcName_1577058589;
+    Temporary2 = funcName_1577058610;
     }
     
-    result_1577058588 = nimCopy(null, Temporary2, NTI33554449);
+    result_1577058609 = nimCopy(null, Temporary2, NTI33554449);
 
-  return result_1577058588;
+  return result_1577058609;
 
 }
 
-function generateBigOp__OOZsrcZyatexmlZmathml95generator_u291(node_p0, options_p1) {
+function generateBigOp__OOZsrcZyatexmlZmathml95generator_u312(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
     var Temporary3;
@@ -8011,10 +8031,10 @@ function generateBigOp__OOZsrcZyatexmlZmathml95generator_u291(node_p0, options_p
       var Temporary13;
     var Temporary14;
 
-  var result_1577058598 = [];
+  var result_1577058619 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet156[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    if (ConstSet155[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
     switch (Temporary1.bigopKind) {
     case 0:
       Temporary2 = [226,136,145];
@@ -8050,59 +8070,59 @@ function generateBigOp__OOZsrcZyatexmlZmathml95generator_u291(node_p0, options_p
       Temporary2 = [109,105,110];
       break;
     }
-    var opSymbol_1577058599 = nimCopy(null, Temporary2, NTI33554449);
+    var opSymbol_1577058620 = nimCopy(null, Temporary2, NTI33554449);
       var Temporary4 = node_p0;
-      if (ConstSet158[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
-    if ((ConstSet157[Temporary4.bigopKind] != undefined)) {
-    Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058599, []);
+      if (ConstSet157[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
+    if ((ConstSet156[Temporary4.bigopKind] != undefined)) {
+    Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058620, []);
     }
     else {
-    Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058599, [nimCopy(null, {Field0: [108,97,114,103,101,111,112], Field1: [116,114,117,101]}, NTI1577058554), nimCopy(null, {Field0: [115,121,109,109,101,116,114,105,99], Field1: [116,114,117,101]}, NTI1577058554)]);
+    Temporary3 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], opSymbol_1577058620, [nimCopy(null, {Field0: [108,97,114,103,101,111,112], Field1: [116,114,117,101]}, NTI1577058583), nimCopy(null, {Field0: [115,121,109,109,101,116,114,105,99], Field1: [116,114,117,101]}, NTI1577058583)]);
     }
     
-    var opNode_1577058605 = nimCopy(null, Temporary3, NTI33554449);
+    var opNode_1577058626 = nimCopy(null, Temporary3, NTI33554449);
       var Temporary7 = node_p0;
-      if (ConstSet159[Temporary7.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary7.kind, NTI1392508931)); }
+      if (ConstSet158[Temporary7.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary7.kind, NTI1392508931)); }
       if (!!((Temporary7.bigopLower == null))) Temporary6 = false; else {        var Temporary8 = node_p0;
-        if (ConstSet160[Temporary8.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary8.kind, NTI1392508931)); }
+        if (ConstSet159[Temporary8.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary8.kind, NTI1392508931)); }
         Temporary6 = !((Temporary8.bigopUpper == null));      }    if (Temporary6) {
     var Temporary9 = node_p0;
-    if (ConstSet161[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1392508931)); }
-    var lower_1577058614 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary9.bigopLower, options_p1);
+    if (ConstSet160[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1392508931)); }
+    var lower_1577058635 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary9.bigopLower, options_p1);
     var Temporary10 = node_p0;
-    if (ConstSet162[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1392508931)); }
-    var upper_1577058615 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary10.bigopUpper, options_p1);
-    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114,111,118,101,114], (opNode_1577058605).concat(lower_1577058614,upper_1577058615), []);
+    if (ConstSet161[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1392508931)); }
+    var upper_1577058636 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary10.bigopUpper, options_p1);
+    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114,111,118,101,114], (opNode_1577058626).concat(lower_1577058635,upper_1577058636), []), []);
     }
     else {
       var Temporary11 = node_p0;
-      if (ConstSet163[Temporary11.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary11.kind, NTI1392508931)); }
+      if (ConstSet162[Temporary11.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary11.kind, NTI1392508931)); }
     if (!((Temporary11.bigopLower == null))) {
     var Temporary12 = node_p0;
-    if (ConstSet164[Temporary12.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary12.kind, NTI1392508931)); }
-    var lower_1577058620 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary12.bigopLower, options_p1);
-    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114], (opNode_1577058605).concat(lower_1577058620), []);
+    if (ConstSet163[Temporary12.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopLower\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary12.kind, NTI1392508931)); }
+    var lower_1577058641 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary12.bigopLower, options_p1);
+    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], tag__OOZsrcZyatexmlZmathml95generator_u30([109,117,110,100,101,114], (opNode_1577058626).concat(lower_1577058641), []), []);
     }
     else {
       var Temporary13 = node_p0;
-      if (ConstSet165[Temporary13.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary13.kind, NTI1392508931)); }
+      if (ConstSet164[Temporary13.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary13.kind, NTI1392508931)); }
     if (!((Temporary13.bigopUpper == null))) {
     var Temporary14 = node_p0;
-    if (ConstSet166[Temporary14.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary14.kind, NTI1392508931)); }
-    var upper_1577058625 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary14.bigopUpper, options_p1);
-    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (opNode_1577058605).concat(upper_1577058625), []);
+    if (ConstSet165[Temporary14.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'bigopUpper\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary14.kind, NTI1392508931)); }
+    var upper_1577058646 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary14.bigopUpper, options_p1);
+    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], tag__OOZsrcZyatexmlZmathml95generator_u30([109,111,118,101,114], (opNode_1577058626).concat(upper_1577058646), []), []);
     }
     else {
-    Temporary5 = opNode_1577058605;
+    Temporary5 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], opNode_1577058626, []);
     }
     }}
-    result_1577058598 = nimCopy(null, Temporary5, NTI33554449);
+    result_1577058619 = nimCopy(null, Temporary5, NTI33554449);
 
-  return result_1577058598;
+  return result_1577058619;
 
 }
 
-function generateMatrix__OOZsrcZyatexmlZmathml95generator_u322(node_p0, options_p1) {
+function generateMatrix__OOZsrcZyatexmlZmathml95generator_u343(node_p0, options_p1) {
     var Temporary1;
       var Temporary3;
                     var Temporary9;
@@ -8126,246 +8146,246 @@ function generateMatrix__OOZsrcZyatexmlZmathml95generator_u322(node_p0, options_
     var Temporary33;
     var Temporary34;
 
-  var result_1577058629 = [];
+  var result_1577058650 = [];
 
-    var tableContent_1577058630 = [];
+    var tableContent_1577058651 = [];
     var Temporary1 = node_p0;
-    if (ConstSet167[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var isAlignmentEnv_1577058637 = contains__stdZenumutils_u50([[97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], Temporary1.matrixType);
+    if (ConstSet166[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var isAlignmentEnv_1577058658 = contains__stdZenumutils_u50([[97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], Temporary1.matrixType);
     Label2: {
-      var row_1577058660 = [];
-      var colontmp__1207959714 = [];
+      var row_1577058681 = [];
+      var colontmp__1207959719 = [];
       var Temporary3 = node_p0;
-      if (ConstSet168[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
-      colontmp__1207959714 = Temporary3.matrixRows;
-      var i_1207959716 = 0;
-      var L_1207959717 = (colontmp__1207959714).length;
+      if (ConstSet167[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1392508931)); }
+      colontmp__1207959719 = Temporary3.matrixRows;
+      var i_1207959721 = 0;
+      var L_1207959722 = (colontmp__1207959719).length;
       Label4: {
           Label5: while (true) {
-          if (!(i_1207959716 < L_1207959717)) break Label5;
-            row_1577058660 = colontmp__1207959714[chckIndx(i_1207959716, 0, (colontmp__1207959714).length - 1)];
-            var rowContent_1577058661 = [];
-            if (isAlignmentEnv_1577058637) {
-            rowContent_1577058661.push.apply(rowContent_1577058661, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058605)]));;
+          if (!(i_1207959721 < L_1207959722)) break Label5;
+            row_1577058681 = colontmp__1207959719[chckIndx(i_1207959721, 0, (colontmp__1207959719).length - 1)];
+            var rowContent_1577058682 = [];
+            if (isAlignmentEnv_1577058658) {
+            rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058634)]));;
             }
             
             Label6: {
-              var cellIdx_1577058706 = 0;
-              var cell_1577058707 = null;
-              var i_1207959711 = 0;
-              var L_1207959712 = (row_1577058660).length;
+              var cellIdx_1577058727 = 0;
+              var cell_1577058728 = null;
+              var i_1207959716 = 0;
+              var L_1207959717 = (row_1577058681).length;
               Label7: {
                   Label8: while (true) {
-                  if (!(i_1207959711 < L_1207959712)) break Label8;
-                    cellIdx_1577058706 = i_1207959711;
-                    cell_1577058707 = row_1577058660[chckIndx(i_1207959711, 0, (row_1577058660).length - 1)];
-                    var cellContent_1577058708 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(cell_1577058707, options_p1);
-                    var cellAttrs_1577058713 = [];
-                    if (isAlignmentEnv_1577058637) {
+                  if (!(i_1207959716 < L_1207959717)) break Label8;
+                    cellIdx_1577058727 = i_1207959716;
+                    cell_1577058728 = row_1577058681[chckIndx(i_1207959716, 0, (row_1577058681).length - 1)];
+                    var cellContent_1577058729 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(cell_1577058728, options_p1);
+                    var cellAttrs_1577058734 = [];
+                    if (isAlignmentEnv_1577058658) {
                     var Temporary9 = node_p0;
-                    if (ConstSet169[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1392508931)); }
+                    if (ConstSet168[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1392508931)); }
                     switch (toJSStr(Temporary9.matrixType)) {
                     case "align":
                     case "aligned":
-                      if ((modInt(cellIdx_1577058706, 2) == 0)) {
+                      if ((modInt(cellIdx_1577058727, 2) == 0)) {
                       Temporary10 = [116,109,108,45,114,105,103,104,116];
                       }
                       else {
                       Temporary10 = [116,109,108,45,108,101,102,116];
                       }
                       
-                      var alignClass_1577058714 = nimCopy(null, Temporary10, NTI33554449);
-                      cellAttrs_1577058713.push({Field0: [99,108,97,115,115], Field1: nimCopy(null, alignClass_1577058714, NTI33554449)});;
-                      if ((modInt(cellIdx_1577058706, 2) == 0)) {
+                      var alignClass_1577058735 = nimCopy(null, Temporary10, NTI33554449);
+                      cellAttrs_1577058734.push({Field0: [99,108,97,115,115], Field1: nimCopy(null, alignClass_1577058735, NTI33554449)});;
+                      if ((modInt(cellIdx_1577058727, 2) == 0)) {
                       Temporary11 = [112,97,100,100,105,110,103,45,108,101,102,116,58,49,101,109,59,112,97,100,100,105,110,103,45,114,105,103,104,116,58,48,101,109,59];
                       }
                       else {
                       Temporary11 = [112,97,100,100,105,110,103,45,108,101,102,116,58,48,101,109,59,112,97,100,100,105,110,103,45,114,105,103,104,116,58,48,101,109,59];
                       }
                       
-                      var padding_1577058719 = nimCopy(null, Temporary11, NTI33554449);
-                      cellAttrs_1577058713.push({Field0: [115,116,121,108,101], Field1: nimCopy(null, padding_1577058719, NTI33554449)});;
+                      var padding_1577058740 = nimCopy(null, Temporary11, NTI33554449);
+                      cellAttrs_1577058734.push({Field0: [115,116,121,108,101], Field1: nimCopy(null, padding_1577058740, NTI33554449)});;
                       break;
                     case "gather":
                     case "gathered":
-                      cellAttrs_1577058713.push({Field0: [99,108,97,115,115], Field1: [116,109,108,45,99,101,110,116,101,114]});;
-                      cellAttrs_1577058713.push({Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,45,108,101,102,116,58,48,101,109,59,112,97,100,100,105,110,103,45,114,105,103,104,116,58,48,101,109,59]});;
+                      cellAttrs_1577058734.push({Field0: [99,108,97,115,115], Field1: [116,109,108,45,99,101,110,116,101,114]});;
+                      cellAttrs_1577058734.push({Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,45,108,101,102,116,58,48,101,109,59,112,97,100,100,105,110,103,45,114,105,103,104,116,58,48,101,109,59]});;
                       break;
                     default: 
                       break;
                     }
                     }
                     
-                    rowContent_1577058661.push.apply(rowContent_1577058661, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], cellContent_1577058708, cellAttrs_1577058713));;
-                    i_1207959711 += 1;
-                    if (!(((row_1577058660).length == L_1207959712))) {
+                    rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], cellContent_1577058729, cellAttrs_1577058734));;
+                    i_1207959716 += 1;
+                    if (!(((row_1577058681).length == L_1207959717))) {
                     failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
                     }
                     
                   }
               };
             };
-            if (isAlignmentEnv_1577058637) {
-            rowContent_1577058661.push.apply(rowContent_1577058661, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058672)]));;
+            if (isAlignmentEnv_1577058658) {
+            rowContent_1577058682.push.apply(rowContent_1577058682, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1577058701)]));;
             }
             
-            tableContent_1577058630.push.apply(tableContent_1577058630, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,114], rowContent_1577058661, []));;
-            i_1207959716 += 1;
-            if (!(((colontmp__1207959714).length == L_1207959717))) {
+            tableContent_1577058651.push.apply(tableContent_1577058651, tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,114], rowContent_1577058682, []));;
+            i_1207959721 += 1;
+            if (!(((colontmp__1207959719).length == L_1207959722))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
           }
       };
     };
-    var tableAttrs_1577058740 = [];
+    var tableAttrs_1577058761 = [];
     var Temporary12 = node_p0;
-    if (ConstSet170[Temporary12.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary12.kind, NTI1392508931)); }
+    if (ConstSet169[Temporary12.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary12.kind, NTI1392508931)); }
     switch (toJSStr(Temporary12.matrixType)) {
     case "align":
     case "aligned":
         var Temporary14 = node_p0;
-        if (ConstSet171[Temporary14.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary14.kind, NTI1392508931)); }
+        if (ConstSet170[Temporary14.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary14.kind, NTI1392508931)); }
         if (!(0 < (Temporary14.matrixRows).length)) Temporary13 = false; else {          var Temporary15 = node_p0;
-          if (ConstSet172[Temporary15.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary15.kind, NTI1392508931)); }
+          if (ConstSet171[Temporary15.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary15.kind, NTI1392508931)); }
           Temporary13 = (0 < ((Temporary16 = Temporary15.matrixRows, Temporary16)[chckIndx(0, 0, (Temporary16).length - 1)]).length);        }      if (Temporary13) {
-      var colAlign_1577058747 = [114,105,103,104,116];
+      var colAlign_1577058768 = [114,105,103,104,116];
       Label17: {
-        var i_1577058755 = 0;
-        var colontmp__1207959720 = 0;
+        var i_1577058776 = 0;
+        var colontmp__1207959725 = 0;
         var Temporary18 = node_p0;
-        if (ConstSet173[Temporary18.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary18.kind, NTI1392508931)); }
-        colontmp__1207959720 = ((Temporary19 = Temporary18.matrixRows, Temporary19)[chckIndx(0, 0, (Temporary19).length - 1)]).length;
-        var i_1207959721 = 0;
+        if (ConstSet172[Temporary18.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary18.kind, NTI1392508931)); }
+        colontmp__1207959725 = ((Temporary19 = Temporary18.matrixRows, Temporary19)[chckIndx(0, 0, (Temporary19).length - 1)]).length;
+        var i_1207959726 = 0;
         Label20: {
             Label21: while (true) {
-            if (!(i_1207959721 < colontmp__1207959720)) break Label21;
-              i_1577058755 = i_1207959721;
-              colAlign_1577058747.push.apply(colAlign_1577058747, [32]);;
-              if ((modInt(i_1577058755, 2) == 0)) {
+            if (!(i_1207959726 < colontmp__1207959725)) break Label21;
+              i_1577058776 = i_1207959726;
+              colAlign_1577058768.push.apply(colAlign_1577058768, [32]);;
+              if ((modInt(i_1577058776, 2) == 0)) {
               Temporary22 = [114,105,103,104,116];
               }
               else {
               Temporary22 = [108,101,102,116];
               }
               
-              colAlign_1577058747.push.apply(colAlign_1577058747, Temporary22);;
-              i_1207959721 = addInt(i_1207959721, 1);
+              colAlign_1577058768.push.apply(colAlign_1577058768, Temporary22);;
+              i_1207959726 = addInt(i_1207959726, 1);
             }
         };
       };
-      colAlign_1577058747.push.apply(colAlign_1577058747, [32,108,101,102,116]);;
-      tableAttrs_1577058740.push({Field0: [99,111,108,117,109,110,97,108,105,103,110], Field1: nimCopy(null, colAlign_1577058747, NTI33554449)});;
+      colAlign_1577058768.push.apply(colAlign_1577058768, [32,108,101,102,116]);;
+      tableAttrs_1577058761.push({Field0: [99,111,108,117,109,110,97,108,105,103,110], Field1: nimCopy(null, colAlign_1577058768, NTI33554449)});;
       }
       
-      tableAttrs_1577058740.push({Field0: [100,105,115,112,108,97,121,115,116,121,108,101], Field1: [116,114,117,101]});;
-      tableAttrs_1577058740.push({Field0: [115,116,121,108,101], Field1: [119,105,100,116,104,58,49,48,48,37]});;
+      tableAttrs_1577058761.push({Field0: [100,105,115,112,108,97,121,115,116,121,108,101], Field1: [116,114,117,101]});;
+      tableAttrs_1577058761.push({Field0: [115,116,121,108,101], Field1: [119,105,100,116,104,58,49,48,48,37]});;
       break;
     case "gather":
     case "gathered":
         var Temporary24 = node_p0;
-        if (ConstSet174[Temporary24.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary24.kind, NTI1392508931)); }
+        if (ConstSet173[Temporary24.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary24.kind, NTI1392508931)); }
         if (!(0 < (Temporary24.matrixRows).length)) Temporary23 = false; else {          var Temporary25 = node_p0;
-          if (ConstSet175[Temporary25.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary25.kind, NTI1392508931)); }
+          if (ConstSet174[Temporary25.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary25.kind, NTI1392508931)); }
           Temporary23 = (0 < ((Temporary26 = Temporary25.matrixRows, Temporary26)[chckIndx(0, 0, (Temporary26).length - 1)]).length);        }      if (Temporary23) {
-      var colAlign_1577058774 = [99,101,110,116,101,114];
+      var colAlign_1577058795 = [99,101,110,116,101,114];
       Label27: {
-        var i_1577058782 = 0;
-        var colontmp__1207959724 = 0;
+        var i_1577058803 = 0;
+        var colontmp__1207959729 = 0;
         var Temporary28 = node_p0;
-        if (ConstSet176[Temporary28.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary28.kind, NTI1392508931)); }
-        colontmp__1207959724 = ((Temporary29 = Temporary28.matrixRows, Temporary29)[chckIndx(0, 0, (Temporary29).length - 1)]).length;
-        var i_1207959725 = 0;
+        if (ConstSet175[Temporary28.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixRows\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary28.kind, NTI1392508931)); }
+        colontmp__1207959729 = ((Temporary29 = Temporary28.matrixRows, Temporary29)[chckIndx(0, 0, (Temporary29).length - 1)]).length;
+        var i_1207959730 = 0;
         Label30: {
             Label31: while (true) {
-            if (!(i_1207959725 < colontmp__1207959724)) break Label31;
-              i_1577058782 = i_1207959725;
-              colAlign_1577058774.push.apply(colAlign_1577058774, [32,99,101,110,116,101,114]);;
-              i_1207959725 = addInt(i_1207959725, 1);
+            if (!(i_1207959730 < colontmp__1207959729)) break Label31;
+              i_1577058803 = i_1207959730;
+              colAlign_1577058795.push.apply(colAlign_1577058795, [32,99,101,110,116,101,114]);;
+              i_1207959730 = addInt(i_1207959730, 1);
             }
         };
       };
-      colAlign_1577058774.push.apply(colAlign_1577058774, [32,99,101,110,116,101,114]);;
-      tableAttrs_1577058740.push({Field0: [99,111,108,117,109,110,97,108,105,103,110], Field1: nimCopy(null, colAlign_1577058774, NTI33554449)});;
+      colAlign_1577058795.push.apply(colAlign_1577058795, [32,99,101,110,116,101,114]);;
+      tableAttrs_1577058761.push({Field0: [99,111,108,117,109,110,97,108,105,103,110], Field1: nimCopy(null, colAlign_1577058795, NTI33554449)});;
       }
       
-      tableAttrs_1577058740.push({Field0: [100,105,115,112,108,97,121,115,116,121,108,101], Field1: [116,114,117,101]});;
-      tableAttrs_1577058740.push({Field0: [115,116,121,108,101], Field1: [119,105,100,116,104,58,49,48,48,37]});;
+      tableAttrs_1577058761.push({Field0: [100,105,115,112,108,97,121,115,116,121,108,101], Field1: [116,114,117,101]});;
+      tableAttrs_1577058761.push({Field0: [115,116,121,108,101], Field1: [119,105,100,116,104,58,49,48,48,37]});;
       break;
     default: 
       break;
     }
-    if ((0 < (tableAttrs_1577058740).length)) {
-    Temporary32 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,97,98,108,101], tableContent_1577058630, tableAttrs_1577058740);
+    if ((0 < (tableAttrs_1577058761).length)) {
+    Temporary32 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,97,98,108,101], tableContent_1577058651, tableAttrs_1577058761);
     }
     else {
-    Temporary32 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,97,98,108,101], tableContent_1577058630, []);
+    Temporary32 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,97,98,108,101], tableContent_1577058651, []);
     }
     
-    var table_1577058799 = nimCopy(null, Temporary32, NTI33554449);
+    var table_1577058820 = nimCopy(null, Temporary32, NTI33554449);
     var Temporary33 = node_p0;
-    if (ConstSet177[Temporary33.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary33.kind, NTI1392508931)); }
+    if (ConstSet176[Temporary33.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary33.kind, NTI1392508931)); }
     switch (toJSStr(Temporary33.matrixType)) {
     case "pmatrix":
-      var left_1577058800 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058754)]);
-      var right_1577058801 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058757)]);
-      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058800).concat(table_1577058799,right_1577058801), []);
+      var left_1577058821 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058783)]);
+      var right_1577058822 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058786)]);
+      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058821).concat(table_1577058820,right_1577058822), []);
       break;
     case "bmatrix":
-      var left_1577058802 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [91], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058760)]);
-      var right_1577058803 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [93], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058763)]);
-      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058802).concat(table_1577058799,right_1577058803), []);
+      var left_1577058823 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [91], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058789)]);
+      var right_1577058824 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [93], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058792)]);
+      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058823).concat(table_1577058820,right_1577058824), []);
       break;
     case "vmatrix":
-      var left_1577058804 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058766)]);
-      var right_1577058805 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058769)]);
-      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058804).concat(table_1577058799,right_1577058805), []);
+      var left_1577058825 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058795)]);
+      var right_1577058826 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058798)]);
+      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058825).concat(table_1577058820,right_1577058826), []);
       break;
     case "Vmatrix":
-      var left_1577058806 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058772)]);
-      var right_1577058807 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058775)]);
-      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058806).concat(table_1577058799,right_1577058807), []);
+      var left_1577058827 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058801)]);
+      var right_1577058828 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058804)]);
+      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058827).concat(table_1577058820,right_1577058828), []);
       break;
     case "cases":
-      var left_1577058808 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [123], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058778)]);
-      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058808).concat(table_1577058799), []);
+      var left_1577058829 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [123], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1577058807)]);
+      Temporary34 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (left_1577058829).concat(table_1577058820), []);
       break;
     case "align":
     case "aligned":
     case "gather":
     case "gathered":
-      Temporary34 = table_1577058799;
+      Temporary34 = table_1577058820;
       break;
     default: 
-      Temporary34 = table_1577058799;
+      Temporary34 = table_1577058820;
       break;
     }
-    result_1577058629 = nimCopy(null, Temporary34, NTI33554449);
+    result_1577058650 = nimCopy(null, Temporary34, NTI33554449);
 
-  return result_1577058629;
+  return result_1577058650;
 
 }
 
-function generateNum__OOZsrcZyatexmlZmathml95generator_u521(node_p0, options_p1) {
+function generateNum__OOZsrcZyatexmlZmathml95generator_u542(node_p0, options_p1) {
     var Temporary1;
 
-  var result_1577058828 = [];
+  var result_1577058849 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet178[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'numStr\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    result_1577058828 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,110], escapeXml__OOZsrcZyatexmlZmathml95generator_u27(Temporary1.numStr), []), NTI33554449);
+    if (ConstSet177[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'numStr\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    result_1577058849 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,110], escapeXml__OOZsrcZyatexmlZmathml95generator_u27(Temporary1.numStr), []), NTI33554449);
 
-  return result_1577058828;
+  return result_1577058849;
 
 }
 
-function unitToString__OOZsrcZyatexmlZmathml95generator_u529(comp_p0) {
+function unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_p0) {
     var Temporary1;
       var Temporary2;
     var Temporary3;
     var Temporary4;
 
-  var result_1577058835 = [];
+  var result_1577058856 = [];
 
     switch (comp_p0.unit) {
     case 0:
@@ -8448,11 +8468,11 @@ function unitToString__OOZsrcZyatexmlZmathml95generator_u529(comp_p0) {
       break;
     case 26:
       var Temporary2 = comp_p0;
-      if (ConstSet180[Temporary2.unit]===undefined) { raiseFieldError2(makeNimstrLit("field \'customUnit\' is not accessible for type \'SIUnitComponent\' using \'unit = "), reprDiscriminant(Temporary2.unit, NTI1392508936)); }
+      if (ConstSet179[Temporary2.unit]===undefined) { raiseFieldError2(makeNimstrLit("field \'customUnit\' is not accessible for type \'SIUnitComponent\' using \'unit = "), reprDiscriminant(Temporary2.unit, NTI1392508936)); }
       Temporary1 = Temporary2.customUnit;
       break;
     }
-    var unitStr_1577058836 = nimCopy(null, Temporary1, NTI33554449);
+    var unitStr_1577058857 = nimCopy(null, Temporary1, NTI33554449);
     switch (comp_p0.prefix) {
     case 0:
       Temporary3 = [];
@@ -8518,8 +8538,8 @@ function unitToString__OOZsrcZyatexmlZmathml95generator_u529(comp_p0) {
       Temporary3 = [89];
       break;
     }
-    var prefixStr_1577058837 = nimCopy(null, Temporary3, NTI33554449);
-    result_1577058835 = nimCopy(null, (prefixStr_1577058837).concat(unitStr_1577058836), NTI33554449);
+    var prefixStr_1577058858 = nimCopy(null, Temporary3, NTI33554449);
+    result_1577058856 = nimCopy(null, (prefixStr_1577058858).concat(unitStr_1577058857), NTI33554449);
     if (!((comp_p0.power == 1))) {
     if (    comp_p0.power == 2    ){      Temporary4 = [194,178];
       }
@@ -8528,43 +8548,43 @@ function unitToString__OOZsrcZyatexmlZmathml95generator_u529(comp_p0) {
     else{
       Temporary4 = ([94]).concat(HEX24__systemZdollars_u14(comp_p0.power));
       }
-    result_1577058835.push.apply(result_1577058835, Temporary4);;
+    result_1577058856.push.apply(result_1577058856, Temporary4);;
     }
     
 
-  return result_1577058835;
+  return result_1577058856;
 
 }
 
-function generateSIUnit__OOZsrcZyatexmlZmathml95generator_u525(node_p0, options_p1) {
+function generateSIUnit__OOZsrcZyatexmlZmathml95generator_u546(node_p0, options_p1) {
       var Temporary2;
       var Temporary5;
       var Temporary7;
 
-  var result_1577058832 = [];
+  var result_1577058853 = [];
 
-    var content_1577058838 = [];
+    var content_1577058859 = [];
     Label1: {
-      var i_1577058888 = 0;
-      var comp_1577058889 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
-      var colontmp__1207959728 = [];
+      var i_1577058909 = 0;
+      var comp_1577058910 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
+      var colontmp__1207959733 = [];
       var Temporary2 = node_p0;
-      if (ConstSet179[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'unitNumerator\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-      colontmp__1207959728 = Temporary2.unitNumerator;
-      var i_1207959730 = 0;
-      var L_1207959731 = (colontmp__1207959728).length;
+      if (ConstSet178[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'unitNumerator\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+      colontmp__1207959733 = Temporary2.unitNumerator;
+      var i_1207959735 = 0;
+      var L_1207959736 = (colontmp__1207959733).length;
       Label3: {
           Label4: while (true) {
-          if (!(i_1207959730 < L_1207959731)) break Label4;
-            i_1577058888 = i_1207959730;
-            comp_1577058889 = nimCopy(comp_1577058889, colontmp__1207959728[chckIndx(i_1207959730, 0, (colontmp__1207959728).length - 1)], NTI1392508939);
-            if ((0 < i_1577058888)) {
-            content_1577058838.push.apply(content_1577058838, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058823)]));;
+          if (!(i_1207959735 < L_1207959736)) break Label4;
+            i_1577058909 = i_1207959735;
+            comp_1577058910 = nimCopy(comp_1577058910, colontmp__1207959733[chckIndx(i_1207959735, 0, (colontmp__1207959733).length - 1)], NTI1392508939);
+            if ((0 < i_1577058909)) {
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058853)]));;
             }
             
-            content_1577058838.push.apply(content_1577058838, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u529(comp_1577058889), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058826)]));;
-            i_1207959730 += 1;
-            if (!(((colontmp__1207959728).length == L_1207959731))) {
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_1577058910), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058856)]));;
+            i_1207959735 += 1;
+            if (!(((colontmp__1207959733).length == L_1207959736))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -8572,30 +8592,30 @@ function generateSIUnit__OOZsrcZyatexmlZmathml95generator_u525(node_p0, options_
       };
     };
       var Temporary5 = node_p0;
-      if (ConstSet181[Temporary5.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'unitDenominator\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary5.kind, NTI1392508931)); }
+      if (ConstSet180[Temporary5.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'unitDenominator\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary5.kind, NTI1392508931)); }
     if ((0 < (Temporary5.unitDenominator).length)) {
-    content_1577058838.push.apply(content_1577058838, tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [47], []));;
+    content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,111], [47], []));;
     Label6: {
-      var i_1577058898 = 0;
-      var comp_1577058899 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
-      var colontmp__1207959734 = [];
+      var i_1577058919 = 0;
+      var comp_1577058920 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
+      var colontmp__1207959739 = [];
       var Temporary7 = node_p0;
-      if (ConstSet182[Temporary7.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'unitDenominator\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary7.kind, NTI1392508931)); }
-      colontmp__1207959734 = Temporary7.unitDenominator;
-      var i_1207959735 = 0;
-      var L_1207959736 = (colontmp__1207959734).length;
+      if (ConstSet181[Temporary7.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'unitDenominator\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary7.kind, NTI1392508931)); }
+      colontmp__1207959739 = Temporary7.unitDenominator;
+      var i_1207959740 = 0;
+      var L_1207959741 = (colontmp__1207959739).length;
       Label8: {
           Label9: while (true) {
-          if (!(i_1207959735 < L_1207959736)) break Label9;
-            i_1577058898 = i_1207959735;
-            comp_1577058899 = nimCopy(comp_1577058899, colontmp__1207959734[chckIndx(i_1207959735, 0, (colontmp__1207959734).length - 1)], NTI1392508939);
-            if ((0 < i_1577058898)) {
-            content_1577058838.push.apply(content_1577058838, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058837)]));;
+          if (!(i_1207959740 < L_1207959741)) break Label9;
+            i_1577058919 = i_1207959740;
+            comp_1577058920 = nimCopy(comp_1577058920, colontmp__1207959739[chckIndx(i_1207959740, 0, (colontmp__1207959739).length - 1)], NTI1392508939);
+            if ((0 < i_1577058919)) {
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058867)]));;
             }
             
-            content_1577058838.push.apply(content_1577058838, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u529(comp_1577058899), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058840)]));;
-            i_1207959735 += 1;
-            if (!(((colontmp__1207959734).length == L_1207959736))) {
+            content_1577058859.push.apply(content_1577058859, tag__OOZsrcZyatexmlZmathml95generator_u30([109,105], unitToString__OOZsrcZyatexmlZmathml95generator_u550(comp_1577058920), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1577058870)]));;
+            i_1207959740 += 1;
+            if (!(((colontmp__1207959739).length == L_1207959741))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -8604,35 +8624,35 @@ function generateSIUnit__OOZsrcZyatexmlZmathml95generator_u525(node_p0, options_
     };
     }
     
-    result_1577058832 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], content_1577058838, []), NTI33554449);
+    result_1577058853 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], content_1577058859, []), NTI33554449);
 
-  return result_1577058832;
+  return result_1577058853;
 
 }
 
-function generateSIValue__OOZsrcZyatexmlZmathml95generator_u596(node_p0, options_p1) {
+function generateSIValue__OOZsrcZyatexmlZmathml95generator_u617(node_p0, options_p1) {
     var Temporary1;
     var Temporary2;
 
-  var result_1577058903 = [];
+  var result_1577058924 = [];
 
     var Temporary1 = node_p0;
-    if (ConstSet183[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'siValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-    var valueNode_1577058904 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,110], escapeXml__OOZsrcZyatexmlZmathml95generator_u27(Temporary1.siValue), []);
+    if (ConstSet182[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'siValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
+    var valueNode_1577058925 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,110], escapeXml__OOZsrcZyatexmlZmathml95generator_u27(Temporary1.siValue), []);
     var Temporary2 = node_p0;
-    if (ConstSet184[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'siUnit\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-    var unitNode_1577058905 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.siUnit, options_p1);
-    var space_1577058906 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058846)]);
-    result_1577058903 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (valueNode_1577058904).concat(space_1577058906,unitNode_1577058905), []), NTI33554449);
+    if (ConstSet183[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'siUnit\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
+    var unitNode_1577058926 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(Temporary2.siUnit, options_p1);
+    var space_1577058927 = tag__OOZsrcZyatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1577058876)]);
+    result_1577058924 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,114,111,119], (valueNode_1577058925).concat(space_1577058927,unitNode_1577058926), []), NTI33554449);
 
-  return result_1577058903;
+  return result_1577058924;
 
 }
 
 function generateNode__OOZsrcZyatexmlZmathml95generator_u49(node_p0, options_p1) {
     var Temporary1;
 
-  var result_1577058910 = [];
+  var result_1577058931 = [];
 
     switch (node_p0.kind) {
     case 0:
@@ -8648,90 +8668,90 @@ function generateNode__OOZsrcZyatexmlZmathml95generator_u49(node_p0, options_p1)
       Temporary1 = generateOperator__OOZsrcZyatexmlZmathml95generator_u95(node_p0, options_p1);
       break;
     case 4:
-      Temporary1 = generateText__OOZsrcZyatexmlZmathml95generator_u141(node_p0, options_p1);
+      Temporary1 = generateText__OOZsrcZyatexmlZmathml95generator_u145(node_p0, options_p1);
       break;
     case 5:
-      Temporary1 = generateSpace__OOZsrcZyatexmlZmathml95generator_u145(node_p0, options_p1);
+      Temporary1 = generateSpace__OOZsrcZyatexmlZmathml95generator_u149(node_p0, options_p1);
       break;
     case 11:
-      Temporary1 = generateFrac__OOZsrcZyatexmlZmathml95generator_u165(node_p0, options_p1);
+      Temporary1 = generateFrac__OOZsrcZyatexmlZmathml95generator_u169(node_p0, options_p1);
       break;
     case 12:
-      Temporary1 = generateBinomial__OOZsrcZyatexmlZmathml95generator_u171(node_p0, options_p1);
+      Temporary1 = generateBinomial__OOZsrcZyatexmlZmathml95generator_u175(node_p0, options_p1);
       break;
     case 13:
-      Temporary1 = generateAtop__OOZsrcZyatexmlZmathml95generator_u178(node_p0, options_p1);
+      Temporary1 = generateAtop__OOZsrcZyatexmlZmathml95generator_u182(node_p0, options_p1);
       break;
     case 6:
-      Temporary1 = generateSqrt__OOZsrcZyatexmlZmathml95generator_u184(node_p0, options_p1);
+      Temporary1 = generateSqrt__OOZsrcZyatexmlZmathml95generator_u188(node_p0, options_p1);
       break;
     case 7:
-      Temporary1 = generateRoot__OOZsrcZyatexmlZmathml95generator_u189(node_p0, options_p1);
+      Temporary1 = generateRoot__OOZsrcZyatexmlZmathml95generator_u193(node_p0, options_p1);
       break;
     case 14:
-      Temporary1 = generateSub__OOZsrcZyatexmlZmathml95generator_u195(node_p0, options_p1);
+      Temporary1 = generateSub__OOZsrcZyatexmlZmathml95generator_u199(node_p0, options_p1);
       break;
     case 15:
-      Temporary1 = generateSup__OOZsrcZyatexmlZmathml95generator_u201(node_p0, options_p1);
+      Temporary1 = generateSup__OOZsrcZyatexmlZmathml95generator_u205(node_p0, options_p1);
       break;
     case 16:
-      Temporary1 = generateSubSup__OOZsrcZyatexmlZmathml95generator_u207(node_p0, options_p1);
+      Temporary1 = generateSubSup__OOZsrcZyatexmlZmathml95generator_u211(node_p0, options_p1);
       break;
     case 8:
-      Temporary1 = generateAccent__OOZsrcZyatexmlZmathml95generator_u214(node_p0, options_p1);
+      Temporary1 = generateAccent__OOZsrcZyatexmlZmathml95generator_u218(node_p0, options_p1);
       break;
     case 9:
-      Temporary1 = generateStyle__OOZsrcZyatexmlZmathml95generator_u219(node_p0, options_p1);
+      Temporary1 = generateStyle__OOZsrcZyatexmlZmathml95generator_u223(node_p0, options_p1);
       break;
     case 10:
-      Temporary1 = generateColor__OOZsrcZyatexmlZmathml95generator_u225(node_p0, options_p1);
+      Temporary1 = generateColor__OOZsrcZyatexmlZmathml95generator_u229(node_p0, options_p1);
       break;
     case 17:
-      Temporary1 = generateRow__OOZsrcZyatexmlZmathml95generator_u230(node_p0, options_p1);
+      Temporary1 = generateRow__OOZsrcZyatexmlZmathml95generator_u234(node_p0, options_p1);
       break;
     case 18:
-      Temporary1 = generateDelimited__OOZsrcZyatexmlZmathml95generator_u258(node_p0, options_p1);
+      Temporary1 = generateDelimited__OOZsrcZyatexmlZmathml95generator_u277(node_p0, options_p1);
       break;
     case 22:
-      Temporary1 = generateFunction__OOZsrcZyatexmlZmathml95generator_u281(node_p0, options_p1);
+      Temporary1 = generateFunction__OOZsrcZyatexmlZmathml95generator_u302(node_p0, options_p1);
       break;
     case 23:
-      Temporary1 = generateBigOp__OOZsrcZyatexmlZmathml95generator_u291(node_p0, options_p1);
+      Temporary1 = generateBigOp__OOZsrcZyatexmlZmathml95generator_u312(node_p0, options_p1);
       break;
     case 19:
-      Temporary1 = generateMatrix__OOZsrcZyatexmlZmathml95generator_u322(node_p0, options_p1);
+      Temporary1 = generateMatrix__OOZsrcZyatexmlZmathml95generator_u343(node_p0, options_p1);
       break;
     case 26:
-      Temporary1 = generateNum__OOZsrcZyatexmlZmathml95generator_u521(node_p0, options_p1);
+      Temporary1 = generateNum__OOZsrcZyatexmlZmathml95generator_u542(node_p0, options_p1);
       break;
     case 27:
-      Temporary1 = generateSIUnit__OOZsrcZyatexmlZmathml95generator_u525(node_p0, options_p1);
+      Temporary1 = generateSIUnit__OOZsrcZyatexmlZmathml95generator_u546(node_p0, options_p1);
       break;
     case 28:
-      Temporary1 = generateSIValue__OOZsrcZyatexmlZmathml95generator_u596(node_p0, options_p1);
+      Temporary1 = generateSIValue__OOZsrcZyatexmlZmathml95generator_u617(node_p0, options_p1);
       break;
     default: 
       Temporary1 = tag__OOZsrcZyatexmlZmathml95generator_u30([109,116,101,120,116], ([91]).concat(reprEnum(node_p0.kind, NTI1392508931),[93]), []);
       break;
     }
-    result_1577058910 = nimCopy(null, Temporary1, NTI33554449);
+    result_1577058931 = nimCopy(null, Temporary1, NTI33554449);
 
-  return result_1577058910;
+  return result_1577058931;
 
 }
 
-function generateMathML__OOZsrcZyatexmlZmathml95generator_u610(ast_p0, options_p1) {
-  var result_1577058917 = [];
+function generateMathML__OOZsrcZyatexmlZmathml95generator_u631(ast_p0, options_p1) {
+  var result_1577058938 = [];
 
-    var attrs_1577058922 = [nimCopy(null, {Field0: [120,109,108,110,115], Field1: [104,116,116,112,58,47,47,119,119,119,46,119,51,46,111,114,103,47,49,57,57,56,47,77,97,116,104,47,77,97,116,104,77,76]}, NTI1577058855)];
+    var attrs_1577058943 = [nimCopy(null, {Field0: [120,109,108,110,115], Field1: [104,116,116,112,58,47,47,119,119,119,46,119,51,46,111,114,103,47,49,57,57,56,47,77,97,116,104,47,77,97,116,104,77,76]}, NTI1577058885)];
     if (options_p1.displayStyle) {
-    attrs_1577058922.push({Field0: [100,105,115,112,108,97,121], Field1: [98,108,111,99,107]});;
+    attrs_1577058943.push({Field0: [100,105,115,112,108,97,121], Field1: [98,108,111,99,107]});;
     }
     
-    var content_1577058927 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(ast_p0, options_p1);
-    result_1577058917 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,97,116,104], content_1577058927, attrs_1577058922), NTI33554449);
+    var content_1577058948 = generateNode__OOZsrcZyatexmlZmathml95generator_u49(ast_p0, options_p1);
+    result_1577058938 = nimCopy(null, tag__OOZsrcZyatexmlZmathml95generator_u30([109,97,116,104], content_1577058948, attrs_1577058943), NTI33554449);
 
-  return result_1577058917;
+  return result_1577058938;
 
 }
 
@@ -8772,8 +8792,8 @@ function latexToMathML__OOZsrcZyatexml_u6(latex_p0, options_p1) {
     }
     
     var Temporary4 = parseResult_1342177347;
-    if (ConstSet185[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-    var mathml_1342177366 = generateMathML__OOZsrcZyatexmlZmathml95generator_u610(Temporary4.value, options_p1);
+    if (ConstSet184[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
+    var mathml_1342177366 = generateMathML__OOZsrcZyatexmlZmathml95generator_u631(Temporary4.value, options_p1);
     result_1342177293 = nimCopy(result_1342177293, ok__OOZsrcZyatexml_u87(mathml_1342177366), NTI1342177289);
     break BeforeRet;
   };
@@ -8810,7 +8830,7 @@ function latexToMathML(latex_p0) {
     if (isOk__latex84o77ath7776_u9(res_1207959557)) {
     rawEcho([111,107]);
     var Temporary1 = res_1207959557;
-    if (ConstSet186[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
+    if (ConstSet185[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
     result_1207959556 = toJSStr(Temporary1.value);
     }
     else {
