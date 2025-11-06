@@ -192,15 +192,26 @@ proc generateColor(node: AstNode, options: MathMLOptions): string =
 proc generateRow(node: AstNode, options: MathMLOptions): string =
   ## Generate <mrow> element for a row of expressions
   var content = ""
-  for child in node.rowChildren:
+  var i = 0
+  while i < node.rowChildren.len:
+    let child = node.rowChildren[i]
     content.add(generateNode(child, options))
+
+    # Insert invisible function application operator between identifier and parentheses
+    # Pattern: identifier followed by delimited expression with left paren
+    if i + 1 < node.rowChildren.len:
+      let nextChild = node.rowChildren[i + 1]
+      if child.kind == nkIdentifier and nextChild.kind == nkDelimited and nextChild.delimLeft == "(":
+        # Insert U+2061 FUNCTION APPLICATION (invisible operator)
+        content.add(tag("mo", "\u2061"))
+
+    inc i
   tag("mrow", content)
 
 proc generateDelimited(node: AstNode, options: MathMLOptions): string =
   ## Generate delimited expression with fences
   let content = generateNode(node.delimContent, options)
-  # Use lspace="0" on left fence to prevent extra space before parentheses (e.g., in f(x))
-  let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true"), ("lspace", "0")])
+  let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true")])
   let rightFence = tag("mo", node.delimRight, [("fence", "true"), ("stretchy", "true")])
   tag("mrow", leftFence & content & rightFence)
 
@@ -231,8 +242,8 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   let opNode = if node.bigopKind in {boLim, boMax, boMin}:
     tag("mo", opSymbol)
   else:
-    # Add symmetric="true" and controlled spacing for large operators
-    tag("mo", opSymbol, [("largeop", "true"), ("symmetric", "true"), ("lspace", "thinmathspace"), ("rspace", "thinmathspace")])
+    # Just use largeop and symmetric, let browser handle spacing
+    tag("mo", opSymbol, [("largeop", "true"), ("symmetric", "true")])
 
   # Handle limits
   if node.bigopLower != nil and node.bigopUpper != nil:
