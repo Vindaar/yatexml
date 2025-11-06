@@ -298,17 +298,29 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
     tag("mo", opSymbol, [("movablelimits", "false")])
 
   # Handle limits
-  # Wrap operators WITH limits in mrow (matches TeMML), but NOT bare operators
+  # Integrals use msub/msup (limits to the side) because they're tall operators
+  # Other operators (sum, prod, etc.) use munder/mover (limits above/below)
+  let isIntegral = node.bigopKind in {boInt, boIInt, boIIInt, boOint}
+
   if node.bigopLower != nil and node.bigopUpper != nil:
     let lower = generateNode(node.bigopLower, options)
     let upper = generateNode(node.bigopUpper, options)
-    tag("mrow", tag("munderover", opNode & lower & upper))
+    if isIntegral:
+      tag("msubsup", opNode & lower & upper)
+    else:
+      tag("mrow", tag("munderover", opNode & lower & upper))
   elif node.bigopLower != nil:
     let lower = generateNode(node.bigopLower, options)
-    tag("mrow", tag("munder", opNode & lower))
+    if isIntegral:
+      tag("msub", opNode & lower)
+    else:
+      tag("mrow", tag("munder", opNode & lower))
   elif node.bigopUpper != nil:
     let upper = generateNode(node.bigopUpper, options)
-    tag("mrow", tag("mover", opNode & upper))
+    if isIntegral:
+      tag("msup", opNode & upper)
+    else:
+      tag("mrow", tag("mover", opNode & upper))
   else:
     # Bare operators without limits - no mrow wrapper to avoid extra spacing
     opNode
