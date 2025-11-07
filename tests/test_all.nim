@@ -1415,6 +1415,120 @@ suite "Additional Inequality Tests":
     check result.isOk
     check "⋘" in result.value
 
+suite "Set Theory Relation Tests":
+  test "Square subset and superset":
+    let result = latexToMathML(r"A \sqsubset B \sqsupset C")
+    check result.isOk
+    check "⊏" in result.value
+    check "⊐" in result.value
+
+  test "Square subset/superset or equal":
+    let result = latexToMathML(r"A \sqsubseteq B \sqsupseteq C")
+    check result.isOk
+    check "⊑" in result.value
+    check "⊒" in result.value
+
+  test "Square cap and cup":
+    let result = latexToMathML(r"A \sqcap B \sqcup C")
+    check result.isOk
+    check "⊓" in result.value
+    check "⊔" in result.value
+
+  test "Double subset and superset":
+    let result = latexToMathML(r"A \Subset B \Supset C")
+    check result.isOk
+    check "⋐" in result.value
+    check "⋑" in result.value
+
+  test "Subset/superset double equal":
+    let result = latexToMathML(r"A \subseteqq B \supseteqq C")
+    check result.isOk
+    check "⫅" in result.value
+    check "⫆" in result.value
+
+  test "Subset/superset not equal":
+    let result = latexToMathML(r"A \subsetneq B \supsetneq C \subsetneqq D \supsetneqq E")
+    check result.isOk
+    check "⊊" in result.value
+    check "⊋" in result.value
+    check "⫋" in result.value
+    check "⫌" in result.value
+
+suite "Binary Operator Tests - Circle":
+  test "Circle operators: odot and oslash":
+    let result = latexToMathML(r"a \odot b \oslash c")
+    check result.isOk
+    check "⊙" in result.value
+    check "⊘" in result.value
+
+  test "Circle operators: circled variants":
+    let result = latexToMathML(r"\circledast \circledcirc \circleddash \circledS")
+    check result.isOk
+    check "⊛" in result.value
+    check "⊚" in result.value
+    check "⊝" in result.value
+    check "Ⓢ" in result.value
+
+  test "Circle operators: bigcirc":
+    let result = latexToMathML(r"a \bigcirc b")
+    check result.isOk
+    check "◯" in result.value
+
+suite "Binary Operator Tests - Triangle":
+  test "Triangle operators: basic triangles":
+    let result = latexToMathML(r"\bigtriangleup \bigtriangledown \triangleleft \triangleright")
+    check result.isOk
+    check "△" in result.value
+    check "▽" in result.value
+    check "◃" in result.value
+    check "▹" in result.value
+
+  test "Triangle operators: with equality":
+    let result = latexToMathML(r"a \trianglelefteq b \trianglerighteq c")
+    check result.isOk
+    check "⊴" in result.value
+    check "⊵" in result.value
+
+  test "Triangle operators: filled triangles":
+    let result = latexToMathML(r"\blacktriangle \blacktriangledown \blacktriangleleft \blacktriangleright")
+    check result.isOk
+    check "▴" in result.value
+    check "▾" in result.value
+    check "◂" in result.value
+    check "▸" in result.value
+
+suite "Binary Operator Tests - Other":
+  test "Wedge variants":
+    let result = latexToMathML(r"a \barwedge b \doublebarwedge c \curlywedge d")
+    check result.isOk
+    check "⊼" in result.value
+    check "⩞" in result.value
+    check "⋏" in result.value
+
+  test "Vee variants":
+    let result = latexToMathML(r"a \curlyvee b \veebar c")
+    check result.isOk
+    check "⋎" in result.value
+    check "⊻" in result.value
+
+  test "Other binary operators":
+    let result = latexToMathML(r"a \divideontimes b \dotplus c \intercal d")
+    check result.isOk
+    check "⋇" in result.value
+    check "∔" in result.value
+    check "⊺" in result.value
+
+  test "Set operators: setminus variants":
+    let result = latexToMathML(r"A \setminus B \smallsetminus C")
+    check result.isOk
+    check "∖" in result.value
+
+  test "Star operators":
+    let result = latexToMathML(r"\bigstar \centerdot")
+    check result.isOk
+    check "★" in result.value
+    check "·" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

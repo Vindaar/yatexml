@@ -313,6 +313,57 @@ proc initCommandTable(): Table[string, CommandInfo] =
   # Additional inequality
   result["lll"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
+  # Set theory relations
+  result["sqsubset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["sqsupset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["sqsubseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["sqsupseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["sqcap"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["sqcup"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Subset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Supset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["subseteqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["supseteqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["subsetneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["supsetneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["subsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["supsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Binary operators - circle operators
+  result["odot"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["oslash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["bigcirc"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circledast"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circledcirc"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circleddash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circledS"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Binary operators - triangle operators
+  result["bigtriangleup"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["bigtriangledown"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["triangleleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["triangleright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["trianglelefteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["trianglerighteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["blacktriangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["blacktriangledown"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["blacktriangleleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["blacktriangleright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Binary operators - other
+  result["barwedge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["doublebarwedge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["curlyvee"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["curlywedge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["veebar"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["divideontimes"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["centerdot"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["dotplus"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["intercal"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["smallsetminus"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["setminus"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["bigstar"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathit"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -855,6 +906,53 @@ proc operatorToUnicode(name: string): string =
   of "rtimes": "\u22CA"
   # Additional inequality
   of "lll": "\u22D8"
+  # Set theory relations
+  of "sqsubset": "\u228F"
+  of "sqsupset": "\u2290"
+  of "sqsubseteq": "\u2291"
+  of "sqsupseteq": "\u2292"
+  of "sqcap": "\u2293"
+  of "sqcup": "\u2294"
+  of "Subset": "\u22D0"
+  of "Supset": "\u22D1"
+  of "subseteqq": "\u2AC5"
+  of "supseteqq": "\u2AC6"
+  of "subsetneq": "\u228A"
+  of "supsetneq": "\u228B"
+  of "subsetneqq": "\u2ACB"
+  of "supsetneqq": "\u2ACC"
+  # Binary operators - circle operators
+  of "odot": "\u2299"
+  of "oslash": "\u2298"
+  of "bigcirc": "\u25EF"
+  of "circledast": "\u229B"
+  of "circledcirc": "\u229A"
+  of "circleddash": "\u229D"
+  of "circledS": "\u24C8"
+  # Binary operators - triangle operators
+  of "bigtriangleup": "\u25B3"
+  of "bigtriangledown": "\u25BD"
+  of "triangleleft": "\u25C3"
+  of "triangleright": "\u25B9"
+  of "trianglelefteq": "\u22B4"
+  of "trianglerighteq": "\u22B5"
+  of "blacktriangle": "\u25B4"
+  of "blacktriangledown": "\u25BE"
+  of "blacktriangleleft": "\u25C2"
+  of "blacktriangleright": "\u25B8"
+  # Binary operators - other
+  of "barwedge": "\u22BC"
+  of "doublebarwedge": "\u2A5E"
+  of "curlyvee": "\u22CE"
+  of "curlywedge": "\u22CF"
+  of "veebar": "\u22BB"
+  of "divideontimes": "\u22C7"
+  of "centerdot": "\u00B7"
+  of "dotplus": "\u2214"
+  of "intercal": "\u22BA"
+  of "smallsetminus": "\u2216"
+  of "setminus": "\u2216"
+  of "bigstar": "\u2605"
   else: name
 
 # Parser implementation

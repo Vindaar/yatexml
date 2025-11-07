@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 171**
+**Total Unimplemented Commands: 135**
 
 **Last Updated:** 2025-11-07
 
@@ -89,16 +89,11 @@ All 35 similarity/equality variants (e.g., `\asymp`, `\approxeq`, `\risingdotseq
 
 ---
 
-## 11. Relations - Set Theory - 12 commands
+## 11. Relations - Set Theory - 0 commands (Completed)
 
-```latex
-\sqsubset       \sqsupset       \sqsubseteq     \sqsupseteq
-\sqcap          \sqcup
-\Subset         \Supset         \subseteqq      \supseteqq
-\subsetneq      \supsetneq      \subsetneqq     \supsetneqq
-```
+All 14 set theory relation commands have been implemented: `\sqsubset`, `\sqsupset`, `\sqsubseteq`, `\sqsupseteq`, `\sqcap`, `\sqcup`, `\Subset`, `\Supset`, `\subseteqq`, `\supseteqq`, `\subsetneq`, `\supsetneq`, `\subsetneqq`, `\supsetneqq`.
 
-**Priority:** MEDIUM - Common in set theory and lattice theory.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -121,32 +116,16 @@ All 35 similarity/equality variants (e.g., `\asymp`, `\approxeq`, `\risingdotseq
 
 ---
 
-## 13. Binary Operators - 25 commands
+## 13. Binary Operators - 0 commands (Completed)
 
-### Circle Operators
-```latex
-\odot           \oslash         \bigodot        \bigoplus
-\bigotimes      \bigcirc        \circledast     \circledcirc
-\circleddash    \circledS
-```
+All 23 binary operator commands have been implemented:
+- Circle operators: `\odot`, `\oslash`, `\bigcirc`, `\circledast`, `\circledcirc`, `\circleddash`, `\circledS`
+- Triangle operators: `\bigtriangleup`, `\bigtriangledown`, `\triangleleft`, `\triangleright`, `\trianglelefteq`, `\trianglerighteq`, `\blacktriangle`, `\blacktriangledown`, `\blacktriangleleft`, `\blacktriangleright`
+- Other: `\barwedge`, `\doublebarwedge`, `\curlyvee`, `\curlywedge`, `\veebar`, `\divideontimes`, `\centerdot`, `\dotplus`, `\intercal`, `\smallsetminus`, `\setminus`, `\bigstar`
 
-### Triangle Operators
-```latex
-\bigtriangleup  \bigtriangledown \triangleleft   \triangleright
-\trianglelefteq \trianglerighteq \blacktriangle  \blacktriangledown
-\blacktriangleleft \blacktriangleright
-```
+Note: `\ltimes` and `\rtimes` were already completed in section 8. Large operators like `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee`, `\bigwedge` are tracked in section 15.
 
-### Other Binary Operators
-```latex
-\barwedge       \doublebarwedge \curlyvee       \curlywedge
-\veebar         \divideontimes  \ltimes         \rtimes
-\centerdot      \dotplus        \intercal       \smallsetminus
-\setminus       \bigstar        \bigsqcup       \biguplus
-\bigvee         \bigwedge
-```
-
-**Priority:** MEDIUM - Used in algebra and logic.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -304,16 +283,16 @@ These are variants of cap, cup, and shifts.
 - Positioning: `\overset`, `\underset` (2)
 - Styling: `\boldsymbol`, `\not` (2+, package-dependent)
 
-### MEDIUM Priority (Moderately Common) - ~130 commands
+### MEDIUM Priority (Moderately Common) - ~58 commands remaining
 - Arrows (39) - Most already implemented
 - Harpoons (0) ✓ Completed
 - Advanced relations (35) - Most already implemented
 - Other relations (0) ✓ Completed
 - Three-times symbols (0) ✓ Completed
 - Additional inequalities (0) ✓ Completed
-- Set theory relations (12)
+- Set theory relations (0) ✓ Completed
+- Binary operators (0) ✓ Completed
 - Negated relations (44)
-- Binary operators (25)
 - Large operators (8)
 - Accents (6)
 
