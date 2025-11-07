@@ -107,6 +107,18 @@ suite "Parser Tests":
     check result.value.kind == nkOperator
     check result.value.opValue == "\u22B2"
 
+  test "Parse advanced similarity relation":
+    let result = parse(r"\asymp")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u224D"
+
+  test "Parse advanced inequality relation":
+    let result = parse(r"\leqq")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u2266"
+
   test "Parse nested fraction":
     let result = parse(r"\frac{a}{\frac{b}{c}}")
     check result.isOk
@@ -191,6 +203,13 @@ suite "Integration Tests":
     check result.isOk
     check "\u2ACB\uFE00" in result.value  # ⫋︀
     check "\u22B3" in result.value        # ⊳
+
+  test "Full pipeline: advanced equality/inequality relations":
+    let result = latexToMathML(r"a \asymp b \leqq c \lvertneqq d")
+    check result.isOk
+    check "\u224D" in result.value      # ≍
+    check "\u2266" in result.value      # ≦
+    check "\u2268\uFE00" in result.value  # ⟨ with vertical not-equal
 
   test "Full pipeline: big operator":
     let result = latexToMathML(r"\sum_{i=0}^n i")

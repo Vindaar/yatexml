@@ -104,6 +104,23 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["equiv"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["sim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["approx"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["asymp"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["simeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["approxeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["cong"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["backsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["backsimeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["thicksim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["thickapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["bumpeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Bumpeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["doteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["doteqdot"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["risingdotseq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["fallingdotseq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["eqcirc"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["eqsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["to"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["rightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -133,6 +150,33 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["supset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["subseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["supseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["geqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leqslant"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["geqslant"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["eqslantless"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["eqslantgtr"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lesssim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gtrsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lessapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gtrapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lessdot"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lnapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gnapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lnsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gnsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lessgtr"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gtrless"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lesseqgtr"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gtreqless"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lesseqqgtr"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gtreqqless"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lvertneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gvertneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Additional symbols
   result["partial"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -507,6 +551,23 @@ proc operatorToUnicode(name: string): string =
   of "equiv": "\u2261"
   of "sim": "\u223C"
   of "approx": "\u2248"
+  of "asymp": "\u224D"
+  of "simeq": "\u2243"
+  of "approxeq": "\u224A"
+  of "cong": "\u2245"
+  of "backsim": "\u223D"
+  of "backsimeq": "\u22CD"
+  of "thicksim": "\u223C"
+  of "thickapprox": "\u2248"
+  of "bumpeq": "\u224F"
+  of "Bumpeq": "\u224E"
+  of "doteq": "\u2250"
+  of "doteqdot": "\u2251"
+  of "risingdotseq": "\u2253"
+  of "fallingdotseq": "\u2252"
+  of "circeq": "\u2257"
+  of "eqcirc": "\u2256"
+  of "eqsim": "\u2242"
   of "to", "rightarrow": "\u2192"
   of "leftarrow": "\u2190"
   of "leftrightarrow": "\u2194"
@@ -540,6 +601,33 @@ proc operatorToUnicode(name: string): string =
   of "supset": "\u2283"
   of "subseteq": "\u2286"
   of "supseteq": "\u2287"
+  of "leqq": "\u2266"
+  of "geqq": "\u2267"
+  of "leqslant": "\u2A7D"
+  of "geqslant": "\u2A7E"
+  of "eqslantless": "\u2A96"
+  of "eqslantgtr": "\u2A97"
+  of "lesssim": "\u2272"
+  of "gtrsim": "\u2273"
+  of "lessapprox": "\u2A85"
+  of "gtrapprox": "\u2A86"
+  of "lessdot": "\u22D6"
+  of "lneq": "\u2A87"
+  of "gneq": "\u2A88"
+  of "lneqq": "\u2268"
+  of "gneqq": "\u2269"
+  of "lnapprox": "\u2A89"
+  of "gnapprox": "\u2A8A"
+  of "lnsim": "\u22E6"
+  of "gnsim": "\u22E7"
+  of "lessgtr": "\u2276"
+  of "gtrless": "\u2277"
+  of "lesseqgtr": "\u22DA"
+  of "gtreqless": "\u22DB"
+  of "lesseqqgtr": "\u2A8B"
+  of "gtreqqless": "\u2A8C"
+  of "lvertneqq": "\u2268\uFE00"
+  of "gvertneqq": "\u2269\uFE00"
   of "varsubsetneq": "\u228A\uFE00"
   of "varsubsetneqq": "\u2ACB\uFE00"
   of "varsupsetneq": "\u228B"

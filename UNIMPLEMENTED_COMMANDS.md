@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 314**
+**Total Unimplemented Commands: 279**
 
 **Last Updated:** 2025-11-07
 
@@ -107,30 +107,11 @@ The unicode-math variants (`\varGamma`, `\varDelta`, …, `\varsupsetneqq`) now 
 
 ---
 
-## 9. Relations - Advanced Equality/Similarity - 35 commands
+## 9. Relations - Advanced Equality/Similarity - 0 commands (Completed)
 
-### Similarity Relations
-```latex
-\asymp          \simeq          \approxeq       \cong
-\backsim        \backsimeq      \thicksim       \thickapprox
-\bumpeq         \Bumpeq         \doteq          \doteqdot
-\risingdotseq   \fallingdotseq  \circeq         \eqcirc
-\eqsim
-```
+All 35 similarity/equality variants (e.g., `\asymp`, `\approxeq`, `\risingdotseq`, `\lesseqqgtr`) now map to their MathML glyphs with correct Unicode variation selectors where needed, matching TeX’s spacing semantics.
 
-### Inequality Variants
-```latex
-\leqq           \geqq           \leqslant       \geqslant
-\eqslantless    \eqslantgtr     \lesssim        \gtrsim
-\lessapprox     \gtrapprox      \lessdot
-\lneq           \gneq           \lneqq          \gneqq
-\lnapprox       \gnapprox       \lnsim          \gnsim
-\lessgtr        \gtrless        \lesseqgtr      \gtreqless
-\lesseqqgtr     \gtreqqless
-\lvertneqq      \gvertneqq
-```
-
-**Priority:** MEDIUM - Used in advanced mathematics.
+**Priority:** n/a – section complete.
 
 ---
 
