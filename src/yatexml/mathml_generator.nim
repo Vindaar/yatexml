@@ -71,6 +71,10 @@ proc generateOperator(node: AstNode, options: MathMLOptions): string =
   # Add separator attribute for commas
   if node.opValue == ",":
     attrs.add(("separator", "true"))
+  # Add spacing for mod operator (from \bmod command)
+  if node.opValue == "mod" and node.opForm == "infix":
+    attrs.add(("lspace", "0.2222em"))
+    attrs.add(("rspace", "0.2222em"))
   tag("mo", node.opValue, attrs)
 
 proc generateText(node: AstNode, options: MathMLOptions): string =

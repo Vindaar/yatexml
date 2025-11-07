@@ -12,7 +12,8 @@ type
   CommandType = enum
     ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor, ctPhantom,
-    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac
+    ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac,
+    ctOperatorName, ctBmod, ctPmod
 
   CommandInfo = object
     cmdType: CommandType
@@ -151,13 +152,45 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["bigcup"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["bigcap"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
 
-  # Functions
+  # Functions - trigonometric
   result["sin"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["cos"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["tan"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["cot"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["sec"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["csc"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+
+  # Functions - inverse trigonometric
+  result["arcsin"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["arccos"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["arctan"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+
+  # Functions - hyperbolic
+  result["sinh"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["cosh"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["tanh"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["coth"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+
+  # Functions - logarithmic
   result["log"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["ln"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["lg"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["exp"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+
+  # Functions - other
+  result["arg"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["deg"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["det"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["dim"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["gcd"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["hom"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["inf"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["ker"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["liminf"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["limsup"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["sup"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["Pr"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["sgn"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
 
   # Delimiters
   result["left"] = CommandInfo(cmdType: ctDelimiter, numArgs: 0)
@@ -201,6 +234,14 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result[":"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
   result[";"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
   result["!"] = CommandInfo(cmdType: ctSpace, numArgs: 0)
+
+  # Custom operators
+  result["operatorname"] = CommandInfo(cmdType: ctOperatorName, numArgs: 1)
+
+  # Modular arithmetic
+  result["bmod"] = CommandInfo(cmdType: ctBmod, numArgs: 0)
+  result["pmod"] = CommandInfo(cmdType: ctPmod, numArgs: 1)
+  result["mod"] = CommandInfo(cmdType: ctBmod, numArgs: 0)  # Same as bmod
 
   # Color commands
   result["textcolor"] = CommandInfo(cmdType: ctColor, numArgs: 2)
@@ -1314,6 +1355,51 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           else: "0.5em"         # default
 
         return ok(newSpace(width))
+
+      of ctOperatorName:
+        # \operatorname{name} - creates a custom operator name
+        let nameResult = parseGroup(stream)
+        if not nameResult.isOk:
+          return err[AstNode](nameResult.error)
+
+        # Extract text content from the group
+        # For simplicity, convert the AST back to text
+        # In practice, nameResult.value should be a text/identifier sequence
+        var opName = ""
+        proc extractText(node: AstNode): string =
+          case node.kind
+          of nkIdentifier: return node.identName
+          of nkText: return node.textValue
+          of nkRow:
+            result = ""
+            for child in node.rowChildren:
+              result.add(extractText(child))
+          else: return ""
+
+        opName = extractText(nameResult.value)
+        return ok(newFunction(opName, nil))
+
+      of ctBmod:
+        # \bmod or \mod - binary modulo operator with spacing
+        # Creates: <mo lspace="0.2222em" rspace="0.2222em">mod</mo>
+        return ok(newOperator("mod", "mod", "infix"))
+
+      of ctPmod:
+        # \pmod{m} - parenthesized modulo
+        # Creates: (mod m) with appropriate spacing
+        let argResult = parseGroup(stream)
+        if not argResult.isOk:
+          return err[AstNode](argResult.error)
+
+        # Create a row with: space, (, "mod", space, arg, )
+        var children: seq[AstNode] = @[]
+        children.add(newSpace("0.4444em"))  # \;
+        children.add(newOperator("(", "(", "prefix"))
+        children.add(newIdentifier("mod"))
+        children.add(newSpace("0.3333em"))  # \:
+        children.add(argResult.value)
+        children.add(newOperator(")", ")", "postfix"))
+        return ok(newRow(children))
 
       of ctColor:
         # Parse color commands: \textcolor{color}{content} or \color{color}
