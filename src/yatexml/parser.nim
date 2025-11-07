@@ -71,6 +71,16 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["cap"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["wedge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["vee"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["amalg"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["wr"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["dagger"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ddagger"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Logic operators (synonyms for wedge/vee)
+  result["land"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lor"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lnot"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["neg"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Relations
   result["ne"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -103,6 +113,31 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["dots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["lvert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["rvert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nabla"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["aleph"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["infty"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["forall"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["exists"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["emptyset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["varnothing"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["top"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["bot"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["angle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["triangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["square"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["diamond"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["flat"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["natural"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["sharp"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["clubsuit"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["diamondsuit"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["heartsuit"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["spadesuit"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["surd"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vdash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["models"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["checkmark"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ddots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -419,7 +454,39 @@ proc operatorToUnicode(name: string): string =
   of "vdots": "\u22EE"
   of "cdots": "\u22EF"
   of "ldots", "dots": "\u2026"
+  of "ddots": "\u22F1"
   of "lvert", "rvert": "|"
+  of "amalg": "\u2A3F"
+  of "wr": "\u2240"
+  of "dagger": "\u2020"
+  of "ddagger": "\u2021"
+  of "land": "\u2227"  # Same as wedge
+  of "lor": "\u2228"   # Same as vee
+  of "lnot", "neg": "\u00AC"
+  of "nabla": "\u2207"
+  of "aleph": "\u2135"
+  of "infty": "\u221E"
+  of "forall": "\u2200"
+  of "exists": "\u2203"
+  of "emptyset": "\u2205"
+  of "varnothing": "\u2300"
+  of "top": "\u22A4"
+  of "bot": "\u22A5"
+  of "angle": "\u2220"
+  of "triangle": "\u25B3"
+  of "square": "\u25A1"
+  of "diamond": "\u22C4"
+  of "flat": "\u266D"
+  of "natural": "\u266E"
+  of "sharp": "\u266F"
+  of "clubsuit": "\u2663"
+  of "diamondsuit": "\u2666"
+  of "heartsuit": "\u2665"
+  of "spadesuit": "\u2660"
+  of "surd": "\u221A"
+  of "vdash": "\u22A2"
+  of "models": "\u22A8"
+  of "checkmark": "\u2713"
   else: name
 
 # Parser implementation
