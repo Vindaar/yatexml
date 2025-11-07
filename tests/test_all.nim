@@ -482,7 +482,8 @@ suite "Text Mode Tests":
     let result = latexToMathML(r"\text{hello world}")
     check result.isOk
     check "<mtext>" in result.value
-    check "hello world" in result.value
+    # Text mode converts spaces to NBSP (U+00A0) to prevent whitespace collapsing
+    check "hello\u00A0world" in result.value
 
   test "Text in expression":
     let result = latexToMathML(r"x + \text{if} y > 0")
