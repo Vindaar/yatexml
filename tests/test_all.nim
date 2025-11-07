@@ -119,6 +119,24 @@ suite "Parser Tests":
     check result.value.kind == nkOperator
     check result.value.opValue == "\u2266"
 
+  test "Parse hook arrow":
+    let result = parse(r"\hookleftarrow")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u21A9"
+
+  test "Parse long triple arrow":
+    let result = parse(r"\Longleftrightarrow")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u27FA"
+
+  test "Parse squiggle arrow":
+    let result = parse(r"\rightsquigarrow")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u21DD"
+
   test "Parse nested fraction":
     let result = parse(r"\frac{a}{\frac{b}{c}}")
     check result.isOk
@@ -210,6 +228,13 @@ suite "Integration Tests":
     check "\u224D" in result.value      # ≍
     check "\u2266" in result.value      # ≦
     check "\u2268\uFE00" in result.value  # ⟨ with vertical not-equal
+
+  test "Full pipeline: advanced arrows":
+    let result = latexToMathML(r"\hookleftarrow \Longleftrightarrow \rightsquigarrow")
+    check result.isOk
+    check "\u21A9" in result.value   # ↩
+    check "\u27FA" in result.value   # ⟺
+    check "\u21DD" in result.value   # ↝
 
   test "Full pipeline: big operator":
     let result = latexToMathML(r"\sum_{i=0}^n i")

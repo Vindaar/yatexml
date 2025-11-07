@@ -125,15 +125,36 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["rightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gets"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["hookleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["hookrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leftarrowtail"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightarrowtail"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["looparrowleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["looparrowright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["curvearrowleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["curvearrowright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circlearrowleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["circlearrowright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["twoheadleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["twoheadrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["Rightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["Leftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["Leftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Longleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Longrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Longleftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["longleftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["implies"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["iff"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["mapsto"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["longmapsto"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["longrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["longleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Lleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Rrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightsquigarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leftrightsquigarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["uparrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["downarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["updownarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -551,6 +572,7 @@ proc operatorToUnicode(name: string): string =
   of "equiv": "\u2261"
   of "sim": "\u223C"
   of "approx": "\u2248"
+  of "gets": "\u2190"
   of "asymp": "\u224D"
   of "simeq": "\u2243"
   of "approxeq": "\u224A"
@@ -571,13 +593,33 @@ proc operatorToUnicode(name: string): string =
   of "to", "rightarrow": "\u2192"
   of "leftarrow": "\u2190"
   of "leftrightarrow": "\u2194"
+  of "hookleftarrow": "\u21A9"
+  of "hookrightarrow": "\u21AA"
+  of "leftarrowtail": "\u21A2"
+  of "rightarrowtail": "\u21A3"
+  of "looparrowleft": "\u21AB"
+  of "looparrowright": "\u21AC"
+  of "curvearrowleft": "\u21B6"
+  of "curvearrowright": "\u21B7"
+  of "circlearrowleft": "\u21BA"
+  of "circlearrowright": "\u21BB"
+  of "twoheadleftarrow": "\u219E"
+  of "twoheadrightarrow": "\u21A0"
   of "Rightarrow", "implies": "\u21D2"
   of "Leftarrow": "\u21D0"
   of "Leftrightarrow", "iff": "\u21D4"
+  of "Longleftarrow": "\u27F8"
+  of "Longrightarrow": "\u27F9"
+  of "Longleftrightarrow": "\u27FA"
+  of "longleftrightarrow": "\u27F7"
   of "mapsto": "\u21A6"
   of "longmapsto": "\u27FC"
   of "longrightarrow": "\u27F6"
   of "longleftarrow": "\u27F5"
+  of "Lleftarrow": "\u21DA"
+  of "Rrightarrow": "\u21DB"
+  of "rightsquigarrow": "\u21DD"
+  of "leftrightsquigarrow": "\u21AD"
   of "uparrow": "\u2191"
   of "downarrow": "\u2193"
   of "updownarrow": "\u2195"

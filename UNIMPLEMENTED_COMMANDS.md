@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 279**
+**Total Unimplemented Commands: 250**
 
 **Last Updated:** 2025-11-07
 
@@ -44,34 +44,11 @@ The unicode-math variants (`\varGamma`, `\varDelta`, …, `\varsupsetneqq`) now 
 
 ---
 
-## 5. Arrows (Single) - 29 commands
+## 5. Arrows (Single) - 0 commands (Completed)
 
-### Basic Arrows
-```latex
-\gets                   \hookleftarrow          \hookrightarrow
-\leftarrowtail          \rightarrowtail         \looparrowleft
-\looparrowright         \curvearrowleft         \curvearrowright
-\circlearrowleft        \circlearrowright
-\twoheadleftarrow       \twoheadrightarrow
-```
+All 29 single/long/triple arrow variants (hooked tails, loops, circle arrows, squiggles, and the `\Long...` forms) are now parsed as operators with the correct Unicode glyphs, matching TeX spacing semantics.
 
-### Long Arrows
-```latex
-\Longleftarrow          \Longrightarrow         \Longleftrightarrow
-\longleftrightarrow
-```
-
-### Triple Arrows
-```latex
-\Lleftarrow             \Rrightarrow
-```
-
-### Other Arrow Variants
-```latex
-\rightsquigarrow        \leftrightsquigarrow
-```
-
-**Priority:** MEDIUM - Used in logic, category theory, and mappings.
+**Priority:** n/a – section complete.
 
 ---
 
