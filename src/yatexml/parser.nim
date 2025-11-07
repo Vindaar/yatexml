@@ -274,6 +274,15 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["Biggl"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
   result["Biggr"] = CommandInfo(cmdType: ctSizedDelimiter, numArgs: 0)
 
+  # Override delimiter registrations to allow standalone usage
+  # These can be used both with \left \right and as standalone symbols
+  result["langle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lfloor"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rfloor"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lceil"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rceil"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
   # Matrix environments
   result["begin"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
   result["end"] = CommandInfo(cmdType: ctMatrix, numArgs: 0)
@@ -523,6 +532,12 @@ proc operatorToUnicode(name: string): string =
   of "vdash": "\u22A2"
   of "models": "\u22A8"
   of "checkmark": "\u2713"
+  of "langle": "\u27E8"
+  of "rangle": "\u27E9"
+  of "lfloor": "\u230A"
+  of "rfloor": "\u230B"
+  of "lceil": "\u2308"
+  of "rceil": "\u2309"
   else: name
 
 # Parser implementation
