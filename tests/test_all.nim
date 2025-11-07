@@ -1267,6 +1267,91 @@ suite "Mathematical Function Tests":
     check result.isOk
     check "limsup" in result.value
 
+suite "Delimiter and Norm Tests":
+  test "Delimiters: lVert and rVert":
+    let result = latexToMathML(r"\lVert x \rVert")
+    check result.isOk
+    check "‖" in result.value
+
+  test "Delimiters: mid":
+    let result = latexToMathML(r"\{x \mid x > 0\}")
+    check result.isOk
+    check "∣" in result.value
+
+  test "Relations: parallel":
+    let result = latexToMathML(r"a \parallel b")
+    check result.isOk
+    check "∥" in result.value
+
+suite "Special Symbol Tests":
+  test "Mathematical symbols: ell":
+    let result = latexToMathML(r"\ell")
+    check result.isOk
+    check "ℓ" in result.value
+
+  test "Mathematical symbols: hbar":
+    let result = latexToMathML(r"\hbar")
+    check result.isOk
+    check "ℏ" in result.value
+
+  test "Mathematical symbols: imath and jmath":
+    let result = latexToMathML(r"\imath + \jmath")
+    check result.isOk
+    check "ı" in result.value
+    check "ȷ" in result.value
+
+  test "Mathematical symbols: wp":
+    let result = latexToMathML(r"\wp(z)")
+    check result.isOk
+    check "℘" in result.value
+
+  test "Hebrew letters: aleph, beth, gimel, daleth":
+    let result = latexToMathML(r"\aleph_0, \beth_1, \gimel_2, \daleth_3")
+    check result.isOk
+    check "ℵ" in result.value
+    check "ℶ" in result.value
+    check "ℷ" in result.value
+    check "ℸ" in result.value
+
+  test "Set theory: complement":
+    let result = latexToMathML(r"\complement A")
+    check result.isOk
+    check "∁" in result.value
+
+  test "Set theory: empty":
+    let result = latexToMathML(r"\empty")
+    check result.isOk
+    check "∅" in result.value
+
+  test "Logic: nexists":
+    let result = latexToMathML(r"\nexists x")
+    check result.isOk
+    check "∄" in result.value
+
+  test "Geometric: angles":
+    let result = latexToMathML(r"\measuredangle ABC")
+    check result.isOk
+    check "∡" in result.value
+
+  test "Geometric: sphericalangle":
+    let result = latexToMathML(r"\sphericalangle")
+    check result.isOk
+    check "∢" in result.value
+
+  test "Logic: therefore and because":
+    let result = latexToMathML(r"a = b \therefore c = d \because e = f")
+    check result.isOk
+    check "∴" in result.value
+    check "∵" in result.value
+
+  test "Corner symbols: all corners":
+    let result = latexToMathML(r"\ulcorner \urcorner \llcorner \lrcorner")
+    check result.isOk
+    check "⌜" in result.value
+    check "⌝" in result.value
+    check "⌞" in result.value
+    check "⌟" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

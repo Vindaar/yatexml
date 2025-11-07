@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 217**
+**Total Unimplemented Commands: 190**
 
 **Last Updated:** 2025-11-07
 
@@ -155,32 +155,18 @@ All 35 similarity/equality variants (e.g., `\asymp`, `\approxeq`, `\risingdotseq
 
 ---
 
-## 14. Special Symbols - 23 commands
+## 14. Special Symbols - 2 commands remaining
 
-### Mathematical Symbols
+All 21 essential special symbols have been implemented, including mathematical symbols (`\ell`, `\hbar`, `\imath`, `\jmath`, `\wp`, `\eth`, `\mho`, `\digamma`, `\beth`, `\daleth`, `\gimel`, `\complement`, `\empty`, `\nexists`), geometric symbols (`\sphericalangle`, `\measuredangle`, `\between`, `\pitchfork`), logic symbols (`\because`, `\therefore`), and corner symbols (`\ulcorner`, `\urcorner`, `\llcorner`, `\lrcorner`).
+
+### Remaining commands:
 ```latex
-\ell            \hbar           \imath          \jmath
-\wp             \eth            \mho            \digamma
-\beth           \daleth         \gimel
-\complement     \emptyset       \empty          \nexists
+\And            \Or
 ```
 
-### Geometric Symbols
-```latex
-\sphericalangle \measuredangle  \between        \pitchfork
-```
+**Note:** `\And` and `\Or` are package-specific variants; their exact meaning depends on context.
 
-### Logic Symbols
-```latex
-\because        \therefore      \And            \Or
-```
-
-### Corners
-```latex
-\ulcorner       \urcorner       \llcorner       \lrcorner
-```
-
-**Priority:** MEDIUM to HIGH - Depends on field (`\ell`, `\hbar` are very common in physics).
+**Priority:** n/a – most symbols complete.
 
 ---
 
@@ -232,15 +218,11 @@ All 35 similarity/equality variants (e.g., `\asymp`, `\approxeq`, `\risingdotseq
 
 ---
 
-## 19. Delimiters and Norms - 4 commands
+## 19. Delimiters and Norms - 0 commands (Completed)
 
-```latex
-\lVert          \rVert          \mid            \parallel
-```
+All 4 delimiter and norm commands have been implemented: `\lVert` (‖), `\rVert` (‖), `\mid` (∣), and `\parallel` (∥).
 
-**Priority:** HIGH - `\lVert` and `\rVert` are used for norms, very common in analysis.
-
-**Note:** `\mid` is used for "such that" in set notation: {x | x > 0}
+**Priority:** n/a – section complete.
 
 ---
 
@@ -323,14 +305,14 @@ These are variants of cap, cup, and shifts.
 
 ## Summary by Priority
 
-### HIGH Priority (Very Common) - ~23 commands
+### HIGH Priority (Very Common) - ~7 commands remaining
 - Trigonometric functions (0) ✓ Completed
 - Mathematical functions (0) ✓ Completed
+- Delimiters and norms (0) ✓ Completed
+- Common special symbols (0) ✓ Completed
 - Fractions: `\dfrac`, `\tfrac`, `\binom` (5)
-- Delimiters: `\lVert`, `\rVert`, `\mid` (4)
-- Common symbols: `\ell`, `\hbar`, `\imath`, `\jmath` (4+)
 - Positioning: `\overset`, `\underset` (2)
-- Styling: `\boldsymbol`, `\not` (2+)
+- Styling: `\boldsymbol`, `\not` (2+, package-dependent)
 
 ### MEDIUM Priority (Moderately Common) - ~150 commands
 - Arrows (39)
@@ -387,8 +369,8 @@ All trigonometric and mathematical functions have been implemented (27 commands:
 ### Phase 2: Fraction Variants (HIGH Impact, Medium Difficulty)
 Implement `\dfrac`, `\tfrac`, `\binom` and variants.
 
-### Phase 3: Essential Symbols (HIGH Impact, Easy)
-Add `\ell`, `\hbar`, `\imath`, `\jmath`, `\lVert`, `\rVert`, `\mid`.
+### Phase 3: Essential Symbols (HIGH Impact, Easy) ✓ COMPLETED
+All essential symbols implemented (25 commands): delimiters/norms (`\lVert`, `\rVert`, `\mid`, `\parallel`) and special mathematical symbols (`\ell`, `\hbar`, `\imath`, `\jmath`, `\wp`, Hebrew letters, geometric symbols, logic symbols, corners).
 
 ### Phase 4: Positioning (HIGH Impact, Medium Difficulty)
 Implement `\overset`, `\underset` for stacking.

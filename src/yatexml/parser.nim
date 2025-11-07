@@ -248,6 +248,44 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["varsupsetneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["varsupsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
+  # Delimiters and norms
+  result["lVert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rVert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["mid"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["parallel"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Special mathematical symbols
+  result["ell"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["hbar"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["imath"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["jmath"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["wp"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["eth"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["mho"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["digamma"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["beth"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["daleth"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["gimel"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["complement"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["empty"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nexists"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Geometric symbols
+  result["sphericalangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["measuredangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["between"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["pitchfork"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Logic symbols
+  result["because"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["therefore"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Corner symbols
+  result["ulcorner"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["urcorner"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["llcorner"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lrcorner"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathit"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -734,6 +772,39 @@ proc operatorToUnicode(name: string): string =
   of "rfloor": "\u230B"
   of "lceil": "\u2308"
   of "rceil": "\u2309"
+  # Delimiters and norms
+  of "lVert": "\u2016"
+  of "rVert": "\u2016"
+  of "mid": "\u2223"
+  of "parallel": "\u2225"
+  # Special mathematical symbols
+  of "ell": "\u2113"
+  of "hbar": "\u210F"
+  of "imath": "\u0131"
+  of "jmath": "\u0237"
+  of "wp": "\u2118"
+  of "eth": "\u00F0"
+  of "mho": "\u2127"
+  of "digamma": "\u03DD"
+  of "beth": "\u2136"
+  of "daleth": "\u2138"
+  of "gimel": "\u2137"
+  of "complement": "\u2201"
+  of "empty": "\u2205"
+  of "nexists": "\u2204"
+  # Geometric symbols
+  of "sphericalangle": "\u2222"
+  of "measuredangle": "\u2221"
+  of "between": "\u226C"
+  of "pitchfork": "\u22D4"
+  # Logic symbols
+  of "because": "\u2235"
+  of "therefore": "\u2234"
+  # Corner symbols
+  of "ulcorner": "\u231C"
+  of "urcorner": "\u231D"
+  of "llcorner": "\u231E"
+  of "lrcorner": "\u231F"
   else: name
 
 # Parser implementation

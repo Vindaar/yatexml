@@ -47,22 +47,22 @@ var NTI1577058443 = {size: 0, kind: 18, base: null, node: null, finalizer: null}
 var NTI1577058439 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1577058962 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1409286312 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1543513392 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1543514008 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1560281161 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1543513142 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1543513758 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1392509086 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392509085 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1543512630 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1543512632 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1543512631 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1543513246 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1543513248 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1543513247 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI687865926 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI788529232 = {size: 0,kind: 31,base: null,node: null,finalizer: null};
 var NTI788529239 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI637534589 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1543514070 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1543514686 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392509060 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392509059 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1543514461 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1543515077 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392509037 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392508962 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392508939 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
@@ -84,7 +84,7 @@ var NTI1392508932 = {size: 0, kind: 14, base: null, node: null, finalizer: null}
 var NTI1392508931 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
 var NTI1392508953 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1392508942 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
-var NTI1543512598 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1543513214 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1409286565 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1409286564 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1409286567 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
@@ -518,14 +518,14 @@ var NNI1392508953 = {kind: 3, offset: "kind", len: 32, typ: NTI1392508931, name:
 {kind: 1, offset: "siUnit", len: 0, typ: NTI1392508942, name: "siUnit", sons: null}]}]]};
 NTI1392508953.node = NNI1392508953;
 NTI1392508942.base = NTI1392508953;
-var NNI1543512598 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI1392508942, name: "value", sons: null}], 
+var NNI1543513214 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI1392508942, name: "value", sons: null}], 
 [setConstr(0), {kind: 1, offset: "error", len: 0, typ: NTI1358954500, name: "error", sons: null}]]};
-NTI1543512598.node = NNI1543512598;
+NTI1543513214.node = NNI1543513214;
 NTI1392509037.base = NTI1392508942;
-NTI1543514461.base = NTI1392508942;
+NTI1543515077.base = NTI1392508942;
 NTI1392509060.base = NTI1392508942;
 NTI1392509059.base = NTI1392509060;
-NTI1543514070.base = NTI1392508942;
+NTI1543514686.base = NTI1392508942;
 NTI637534589.base = NTI33554449;
 var NNI788529239 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "a", len: 0, typ: NTI788529232, name: "a", sons: null}, 
 {kind: 1, offset: "b", len: 0, typ: NTI33554435, name: "b", sons: null}]};
@@ -533,18 +533,18 @@ NTI788529239.node = NNI788529239;
 var NNI687865926 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "a", len: 0, typ: NTI33554435, name: "a", sons: null}, 
 {kind: 1, offset: "b", len: 0, typ: NTI33554435, name: "b", sons: null}]};
 NTI687865926.node = NNI687865926;
-NTI1543512631.base = NTI1392508941;
-NTI1543512632.base = NTI1392508941;
-var NNI1543512630 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI1543512631, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI1543512632, name: "Field1", sons: null}]};
-NTI1543512630.node = NNI1543512630;
+NTI1543513247.base = NTI1392508941;
+NTI1543513248.base = NTI1392508941;
+var NNI1543513246 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI1543513247, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI1543513248, name: "Field1", sons: null}]};
+NTI1543513246.node = NNI1543513246;
 NTI1392509085.base = NTI1392508941;
 NTI1392509086.base = NTI1392508941;
-var NNI1543513142 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI33554466, name: "value", sons: null}], 
+var NNI1543513758 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI33554466, name: "value", sons: null}], 
 [setConstr(0), {kind: 1, offset: "error", len: 0, typ: NTI1358954500, name: "error", sons: null}]]};
-NTI1543513142.node = NNI1543513142;
+NTI1543513758.node = NNI1543513758;
 NTI1560281161.base = NTI1409286148;
-NTI1543513392.base = NTI1409286148;
+NTI1543514008.base = NTI1409286148;
 NTI1409286312.base = NTI1409286148;
 var NNI1577058962 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
@@ -2364,18 +2364,18 @@ function rawInsert__OOZsrcZyatexmlZparser_u947(t_p0, data_p1, data_p1_Idx, key_p
 
 function enlarge__OOZsrcZyatexmlZparser_u673(t_p0) {
     var n_1543504551 = [];
-    n_1543504551 = new Array(chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647) ; ++i) { n_1543504551[i] = {Field0: 0, Field1: [], Field2: ({cmdType: 0, numArgs: 0})}; }    var HEX3Atmp_1543524694 = nimCopy(null, t_p0.data, NTI1543503889);
+    n_1543504551 = new Array(chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647) ; ++i) { n_1543504551[i] = {Field0: 0, Field1: [], Field2: ({cmdType: 0, numArgs: 0})}; }    var HEX3Atmp_1543525870 = nimCopy(null, t_p0.data, NTI1543503889);
     t_p0.data = n_1543504551;
-    n_1543504551 = HEX3Atmp_1543524694;
+    n_1543504551 = HEX3Atmp_1543525870;
     Label1: {
       var i_1543504611 = 0;
-      var colontmp__1543524691 = 0;
-      colontmp__1543524691 = (n_1543504551).length - 1;
-      var res_1543524692 = 0;
+      var colontmp__1543525867 = 0;
+      colontmp__1543525867 = (n_1543504551).length - 1;
+      var res_1543525868 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(res_1543524692 <= colontmp__1543524691)) break Label3;
-            i_1543504611 = res_1543524692;
+          if (!(res_1543525868 <= colontmp__1543525867)) break Label3;
+            i_1543504611 = res_1543525868;
             var eh_1543504661 = n_1543504551[chckIndx(i_1543504611, 0, (n_1543504551).length - 1)].Field0;
             if (isFilled__pureZcollectionsZtables_u31(eh_1543504661)) {
             var j_1543504665 = (eh_1543504661 & (t_p0.data).length - 1);
@@ -2388,7 +2388,7 @@ function enlarge__OOZsrcZyatexmlZparser_u673(t_p0) {
             rawInsert__OOZsrcZyatexmlZparser_u947(t_p0, t_p0, "data", n_1543504551[chckIndx(i_1543504611, 0, (n_1543504551).length - 1)].Field1, n_1543504551[chckIndx(i_1543504611, 0, (n_1543504551).length - 1)].Field2, eh_1543504661, j_1543504665);
             }
             
-            res_1543524692 = addInt(res_1543524692, 1);
+            res_1543525868 = addInt(res_1543525868, 1);
           }
       };
     };
@@ -2473,81 +2473,81 @@ function initCommandTable__OOZsrcZyatexmlZparser_u40() {
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [115,113,114,116], {cmdType: 1, numArgs: 1});
     Label1: {
       var letter_1543505487 = [];
-      var i_1543524671 = 0;
+      var i_1543525847 = 0;
       Label2: {
           Label3: while (true) {
           if (!true) break Label3;
-            letter_1543505487 = (Temporary4 = [[97,108,112,104,97], [98,101,116,97], [103,97,109,109,97], [100,101,108,116,97], [101,112,115,105,108,111,110], [122,101,116,97], [101,116,97], [116,104,101,116,97], [105,111,116,97], [107,97,112,112,97], [108,97,109,98,100,97], [109,117], [110,117], [120,105], [111,109,105,99,114,111,110], [112,105], [114,104,111], [115,105,103,109,97], [116,97,117], [117,112,115,105,108,111,110], [112,104,105], [99,104,105], [112,115,105], [111,109,101,103,97]], Temporary4)[chckIndx(i_1543524671, 0, (Temporary4).length - 1)];
+            letter_1543505487 = (Temporary4 = [[97,108,112,104,97], [98,101,116,97], [103,97,109,109,97], [100,101,108,116,97], [101,112,115,105,108,111,110], [122,101,116,97], [101,116,97], [116,104,101,116,97], [105,111,116,97], [107,97,112,112,97], [108,97,109,98,100,97], [109,117], [110,117], [120,105], [111,109,105,99,114,111,110], [112,105], [114,104,111], [115,105,103,109,97], [116,97,117], [117,112,115,105,108,111,110], [112,104,105], [99,104,105], [112,115,105], [111,109,101,103,97]], Temporary4)[chckIndx(i_1543525847, 0, (Temporary4).length - 1)];
             HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], letter_1543505487, {cmdType: 2, numArgs: 0});
-            if ((23 <= i_1543524671)) {
+            if ((23 <= i_1543525847)) {
             break Label2;
             }
             
-            i_1543524671 += 1;
+            i_1543525847 += 1;
           }
       };
     };
     Label5: {
       var letter_1543505608 = [];
-      var i_1543524675 = 0;
+      var i_1543525851 = 0;
       Label6: {
           Label7: while (true) {
           if (!true) break Label7;
-            letter_1543505608 = (Temporary8 = [[71,97,109,109,97], [68,101,108,116,97], [84,104,101,116,97], [76,97,109,98,100,97], [88,105], [80,105], [83,105,103,109,97], [85,112,115,105,108,111,110], [80,104,105], [80,115,105], [79,109,101,103,97]], Temporary8)[chckIndx(i_1543524675, 0, (Temporary8).length - 1)];
+            letter_1543505608 = (Temporary8 = [[71,97,109,109,97], [68,101,108,116,97], [84,104,101,116,97], [76,97,109,98,100,97], [88,105], [80,105], [83,105,103,109,97], [85,112,115,105,108,111,110], [80,104,105], [80,115,105], [79,109,101,103,97]], Temporary8)[chckIndx(i_1543525851, 0, (Temporary8).length - 1)];
             HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], letter_1543505608, {cmdType: 2, numArgs: 0});
-            if ((10 <= i_1543524675)) {
+            if ((10 <= i_1543525851)) {
             break Label6;
             }
             
-            i_1543524675 += 1;
+            i_1543525851 += 1;
           }
       };
     };
     Label9: {
       var letter_1543505713 = [];
-      var i_1543524679 = 0;
+      var i_1543525855 = 0;
       Label10: {
           Label11: while (true) {
           if (!true) break Label11;
-            letter_1543505713 = (Temporary12 = [[65,108,112,104,97], [66,101,116,97], [67,104,105], [69,112,115,105,108,111,110], [69,116,97], [73,111,116,97], [75,97,112,112,97], [77,117], [78,117], [79,109,105,99,114,111,110], [82,104,111], [84,97,117], [90,101,116,97]], Temporary12)[chckIndx(i_1543524679, 0, (Temporary12).length - 1)];
+            letter_1543505713 = (Temporary12 = [[65,108,112,104,97], [66,101,116,97], [67,104,105], [69,112,115,105,108,111,110], [69,116,97], [73,111,116,97], [75,97,112,112,97], [77,117], [78,117], [79,109,105,99,114,111,110], [82,104,111], [84,97,117], [90,101,116,97]], Temporary12)[chckIndx(i_1543525855, 0, (Temporary12).length - 1)];
             HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], letter_1543505713, {cmdType: 2, numArgs: 0});
-            if ((12 <= i_1543524679)) {
+            if ((12 <= i_1543525855)) {
             break Label10;
             }
             
-            i_1543524679 += 1;
+            i_1543525855 += 1;
           }
       };
     };
     Label13: {
       var letter_1543505818 = [];
-      var i_1543524683 = 0;
+      var i_1543525859 = 0;
       Label14: {
           Label15: while (true) {
           if (!true) break Label15;
-            letter_1543505818 = (Temporary16 = [[118,97,114,101,112,115,105,108,111,110], [118,97,114,116,104,101,116,97], [118,97,114,112,105], [118,97,114,114,104,111], [118,97,114,115,105,103,109,97], [118,97,114,112,104,105], [118,97,114,107,97,112,112,97]], Temporary16)[chckIndx(i_1543524683, 0, (Temporary16).length - 1)];
+            letter_1543505818 = (Temporary16 = [[118,97,114,101,112,115,105,108,111,110], [118,97,114,116,104,101,116,97], [118,97,114,112,105], [118,97,114,114,104,111], [118,97,114,115,105,103,109,97], [118,97,114,112,104,105], [118,97,114,107,97,112,112,97]], Temporary16)[chckIndx(i_1543525859, 0, (Temporary16).length - 1)];
             HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], letter_1543505818, {cmdType: 2, numArgs: 0});
-            if ((6 <= i_1543524683)) {
+            if ((6 <= i_1543525859)) {
             break Label14;
             }
             
-            i_1543524683 += 1;
+            i_1543525859 += 1;
           }
       };
     };
     Label17: {
       var letter_1543505865 = [];
-      var i_1543524686 = 0;
+      var i_1543525862 = 0;
       Label18: {
           Label19: while (true) {
           if (!true) break Label19;
-            letter_1543505865 = (Temporary20 = [[118,97,114,71,97,109,109,97], [118,97,114,68,101,108,116,97], [118,97,114,84,104,101,116,97], [118,97,114,76,97,109,98,100,97], [118,97,114,88,105], [118,97,114,80,105], [118,97,114,83,105,103,109,97], [118,97,114,85,112,115,105,108,111,110], [118,97,114,80,104,105], [118,97,114,80,115,105], [118,97,114,79,109,101,103,97]], Temporary20)[chckIndx(i_1543524686, 0, (Temporary20).length - 1)];
+            letter_1543505865 = (Temporary20 = [[118,97,114,71,97,109,109,97], [118,97,114,68,101,108,116,97], [118,97,114,84,104,101,116,97], [118,97,114,76,97,109,98,100,97], [118,97,114,88,105], [118,97,114,80,105], [118,97,114,83,105,103,109,97], [118,97,114,85,112,115,105,108,111,110], [118,97,114,80,104,105], [118,97,114,80,115,105], [118,97,114,79,109,101,103,97]], Temporary20)[chckIndx(i_1543525862, 0, (Temporary20).length - 1)];
             HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], letter_1543505865, {cmdType: 2, numArgs: 0});
-            if ((10 <= i_1543524686)) {
+            if ((10 <= i_1543525862)) {
             break Label18;
             }
             
-            i_1543524686 += 1;
+            i_1543525862 += 1;
           }
       };
     };
@@ -2727,6 +2727,34 @@ function initCommandTable__OOZsrcZyatexmlZparser_u40() {
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [118,97,114,115,117,98,115,101,116,110,101,113,113], {cmdType: 3, numArgs: 0});
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [118,97,114,115,117,112,115,101,116,110,101,113], {cmdType: 3, numArgs: 0});
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [118,97,114,115,117,112,115,101,116,110,101,113,113], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [108,86,101,114,116], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [114,86,101,114,116], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [109,105,100], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [112,97,114,97,108,108,101,108], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [101,108,108], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [104,98,97,114], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [105,109,97,116,104], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [106,109,97,116,104], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [119,112], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [101,116,104], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [109,104,111], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [100,105,103,97,109,109,97], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [98,101,116,104], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [100,97,108,101,116,104], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [103,105,109,101,108], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [99,111,109,112,108,101,109,101,110,116], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [101,109,112,116,121], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [110,101,120,105,115,116,115], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [115,112,104,101,114,105,99,97,108,97,110,103,108,101], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [109,101,97,115,117,114,101,100,97,110,103,108,101], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [98,101,116,119,101,101,110], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [112,105,116,99,104,102,111,114,107], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [98,101,99,97,117,115,101], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [116,104,101,114,101,102,111,114,101], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [117,108,99,111,114,110,101,114], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [117,114,99,111,114,110,101,114], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [108,108,99,111,114,110,101,114], {cmdType: 3, numArgs: 0});
+    HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [108,114,99,111,114,110,101,114], {cmdType: 3, numArgs: 0});
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [109,97,116,104,98,102], {cmdType: 4, numArgs: 1});
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [109,97,116,104,105,116], {cmdType: 4, numArgs: 1});
     HEX5BHEX5DHEX3D__OOZsrcZyatexmlZparser_u148(result_1543503920[0], [109,97,116,104,114,109], {cmdType: 4, numArgs: 1});
@@ -2901,7 +2929,7 @@ function initCommandTable__OOZsrcZyatexmlZparser_u40() {
 
 }
 var globalMacroRegistry_1543503911 = [newMacroRegistry__OOZsrcZyatexmlZmacros_u19()];
-var commandTable_1543520462 = initCommandTable__OOZsrcZyatexmlZparser_u40();
+var commandTable_1543521638 = initCommandTable__OOZsrcZyatexmlZparser_u40();
 
 function peek__OOZsrcZyatexmlZlexer_u58(lex_p0, offset_p1) {
     var Temporary1;
@@ -3536,12 +3564,12 @@ function advance__OOZsrcZyatexmlZlexer_u600(stream_p0) {
 
 }
 
-function ok__OOZsrcZyatexmlZparser_u17363(value_p0) {
-  var result_1543521238 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function ok__OOZsrcZyatexmlZparser_u18539(value_p0) {
+  var result_1543522414 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1543521238 = nimCopy(result_1543521238, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1543512598);
+    result_1543522414 = nimCopy(result_1543522414, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1543513214);
 
-  return result_1543521238;
+  return result_1543522414;
 
 }
 
@@ -3563,10 +3591,10 @@ function newIdentifier__OOZsrcZyatexmlZast_u484(name_p0) {
 
 }
 
-function operatorToUnicode__OOZsrcZyatexmlZparser_u16613(name_p0) {
+function operatorToUnicode__OOZsrcZyatexmlZparser_u17789(name_p0) {
     var Temporary1;
 
-  var result_1543520487 = [];
+  var result_1543521663 = [];
 
     switch (toJSStr(name_p0)) {
     case "+":
@@ -4116,13 +4144,97 @@ function operatorToUnicode__OOZsrcZyatexmlZparser_u16613(name_p0) {
     case "rceil":
       Temporary1 = [226,140,137];
       break;
+    case "lVert":
+      Temporary1 = [226,128,150];
+      break;
+    case "rVert":
+      Temporary1 = [226,128,150];
+      break;
+    case "mid":
+      Temporary1 = [226,136,163];
+      break;
+    case "parallel":
+      Temporary1 = [226,136,165];
+      break;
+    case "ell":
+      Temporary1 = [226,132,147];
+      break;
+    case "hbar":
+      Temporary1 = [226,132,143];
+      break;
+    case "imath":
+      Temporary1 = [196,177];
+      break;
+    case "jmath":
+      Temporary1 = [200,183];
+      break;
+    case "wp":
+      Temporary1 = [226,132,152];
+      break;
+    case "eth":
+      Temporary1 = [195,176];
+      break;
+    case "mho":
+      Temporary1 = [226,132,167];
+      break;
+    case "digamma":
+      Temporary1 = [207,157];
+      break;
+    case "beth":
+      Temporary1 = [226,132,182];
+      break;
+    case "daleth":
+      Temporary1 = [226,132,184];
+      break;
+    case "gimel":
+      Temporary1 = [226,132,183];
+      break;
+    case "complement":
+      Temporary1 = [226,136,129];
+      break;
+    case "empty":
+      Temporary1 = [226,136,133];
+      break;
+    case "nexists":
+      Temporary1 = [226,136,132];
+      break;
+    case "sphericalangle":
+      Temporary1 = [226,136,162];
+      break;
+    case "measuredangle":
+      Temporary1 = [226,136,161];
+      break;
+    case "between":
+      Temporary1 = [226,137,172];
+      break;
+    case "pitchfork":
+      Temporary1 = [226,139,148];
+      break;
+    case "because":
+      Temporary1 = [226,136,181];
+      break;
+    case "therefore":
+      Temporary1 = [226,136,180];
+      break;
+    case "ulcorner":
+      Temporary1 = [226,140,156];
+      break;
+    case "urcorner":
+      Temporary1 = [226,140,157];
+      break;
+    case "llcorner":
+      Temporary1 = [226,140,158];
+      break;
+    case "lrcorner":
+      Temporary1 = [226,140,159];
+      break;
     default: 
       Temporary1 = name_p0;
       break;
     }
-    result_1543520487 = nimCopy(null, Temporary1, NTI33554449);
+    result_1543521663 = nimCopy(null, Temporary1, NTI33554449);
 
-  return result_1543520487;
+  return result_1543521663;
 
 }
 
@@ -4165,12 +4277,12 @@ function expect__OOZsrcZyatexmlZlexer_u622(stream_p0, kind_p1) {
 
 }
 
-function err__OOZsrcZyatexmlZparser_u17865(error_p0) {
-  var result_1543521740 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function err__OOZsrcZyatexmlZparser_u19041(error_p0) {
+  var result_1543522916 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1543521740 = nimCopy(result_1543521740, {isOk: false, error: nimCopy(null, error_p0, NTI1358954500), value: null}, NTI1543512598);
+    result_1543522916 = nimCopy(result_1543522916, {isOk: false, error: nimCopy(null, error_p0, NTI1358954500), value: null}, NTI1543513214);
 
-  return result_1543521740;
+  return result_1543522916;
 
 }
 
@@ -4219,42 +4331,42 @@ function newRow__OOZsrcZyatexmlZast_u601(children_p0) {
 
 }
 
-function hasKey__OOZsrcZyatexmlZparser_u17007(t_p0, key_p1) {
-  var result_1543520884 = false;
+function hasKey__OOZsrcZyatexmlZparser_u18183(t_p0, key_p1) {
+  var result_1543522060 = false;
 
-    var hc_1543520885 = [0];
-    result_1543520884 = (0 <= rawGet__OOZsrcZyatexmlZparser_u209(t_p0, key_p1, hc_1543520885, 0));
+    var hc_1543522061 = [0];
+    result_1543522060 = (0 <= rawGet__OOZsrcZyatexmlZparser_u209(t_p0, key_p1, hc_1543522061, 0));
 
-  return result_1543520884;
+  return result_1543522060;
 
 }
 
-function contains__OOZsrcZyatexmlZparser_u17931(t_p0, key_p1) {
-  var result_1543521808 = false;
+function contains__OOZsrcZyatexmlZparser_u19107(t_p0, key_p1) {
+  var result_1543522984 = false;
 
   BeforeRet: {
-    result_1543521808 = hasKey__OOZsrcZyatexmlZparser_u17007(t_p0, key_p1);
+    result_1543522984 = hasKey__OOZsrcZyatexmlZparser_u18183(t_p0, key_p1);
     break BeforeRet;
   };
 
-  return result_1543521808;
+  return result_1543522984;
 
 }
 
-function HEX5BHEX5D__OOZsrcZyatexmlZparser_u17069(t_p0, key_p1) {
-  var result_1543520946 = ({cmdType: 0, numArgs: 0});
+function HEX5BHEX5D__OOZsrcZyatexmlZparser_u18245(t_p0, key_p1) {
+  var result_1543522122 = ({cmdType: 0, numArgs: 0});
 
-    var hcHEX60gensym20_1543520947 = [0];
-    var indexHEX60gensym20_1543520954 = rawGet__OOZsrcZyatexmlZparser_u209(t_p0, key_p1, hcHEX60gensym20_1543520947, 0);
-    if ((0 <= indexHEX60gensym20_1543520954)) {
-    result_1543520946 = t_p0.data[chckIndx(indexHEX60gensym20_1543520954, 0, (t_p0.data).length - 1)].Field2;
+    var hcHEX60gensym20_1543522123 = [0];
+    var indexHEX60gensym20_1543522130 = rawGet__OOZsrcZyatexmlZparser_u209(t_p0, key_p1, hcHEX60gensym20_1543522123, 0);
+    if ((0 <= indexHEX60gensym20_1543522130)) {
+    result_1543522122 = t_p0.data[chckIndx(indexHEX60gensym20_1543522130, 0, (t_p0.data).length - 1)].Field2;
     }
     else {
     raiseKeyError__OOZsrcZyatexmlZunicode95mappings_u8161(key_p1);
     }
     
 
-  return result_1543520946;
+  return result_1543522122;
 
 }
 
@@ -4285,7 +4397,7 @@ function newAtop__OOZsrcZyatexmlZast_u584(top_p0, bottom_p1) {
 
 }
 
-function parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0) {
+function parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0) {
     var Temporary1;
           var Temporary4;
           var Temporary5;
@@ -4325,100 +4437,100 @@ function parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0) {
           var Temporary45;
     var Temporary46;
 
-  var result_1543523850 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543525026 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var openResult_1543523851 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-    if (!(openResult_1543523851.isOk)) {
-    var Temporary1 = openResult_1543523851;
+    var openResult_1543525027 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+    if (!(openResult_1543525027.isOk)) {
+    var Temporary1 = openResult_1543525027;
     if (ConstSet18[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
-    result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary1.error), NTI1543512598);
+    result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary1.error), NTI1543513214);
     break BeforeRet;
     }
     
-    var children_1543523874 = [];
+    var children_1543525050 = [];
     Label2: {
         Label3: while (true) {
         if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label3;
-          var exprResult_1543523875 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
-          if (!(exprResult_1543523875.isOk)) {
-          var Temporary4 = exprResult_1543523875;
+          var exprResult_1543525051 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
+          if (!(exprResult_1543525051.isOk)) {
+          var Temporary4 = exprResult_1543525051;
           if (ConstSet19[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-          result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary4.error), NTI1543512598);
+          result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary4.error), NTI1543513214);
           break BeforeRet;
           }
           
-          var Temporary5 = exprResult_1543523875;
+          var Temporary5 = exprResult_1543525051;
           if (ConstSet20[Temporary5.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary5.isOk, NTI33554466)); }
-          var node_1543523894 = Temporary5.value;
+          var node_1543525070 = Temporary5.value;
           Label6: {
               Label7: while (true) {
               if (!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9) || match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10))) break Label7;
-                if (!(node_1543523894.kind == 8)) Temporary8 = false; else {                  var Temporary10 = node_1543523894;
+                if (!(node_1543525070.kind == 8)) Temporary8 = false; else {                  var Temporary10 = node_1543525070;
                   if (ConstSet21[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1392508931)); }
-                  if ((Temporary10.accentKind == 10)) Temporary9 = true; else {                    var Temporary11 = node_1543523894;
+                  if ((Temporary10.accentKind == 10)) Temporary9 = true; else {                    var Temporary11 = node_1543525070;
                     if (ConstSet22[Temporary11.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary11.kind, NTI1392508931)); }
-                    Temporary9 = (Temporary11.accentKind == 11);                  }                  Temporary8 = Temporary9;                }                var isOverUnderbrace_1543523907 = Temporary8;
+                    Temporary9 = (Temporary11.accentKind == 11);                  }                  Temporary8 = Temporary9;                }                var isOverUnderbrace_1543525083 = Temporary8;
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary12 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary12 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary12 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary12 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var subResult_1543523908 = nimCopy(null, Temporary12, NTI1543512598);
-                if (!(subResult_1543523908.isOk)) {
-                var Temporary13 = subResult_1543523908;
+                var subResult_1543525084 = nimCopy(null, Temporary12, NTI1543513214);
+                if (!(subResult_1543525084.isOk)) {
+                var Temporary13 = subResult_1543525084;
                 if (ConstSet23[Temporary13.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary13.isOk, NTI33554466)); }
-                result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary13.error), NTI1543512598);
+                result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary13.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary14 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary14 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary14 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary14 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var supResult_1543523927 = nimCopy(null, Temporary14, NTI1543512598);
-                if (!(supResult_1543523927.isOk)) {
-                var Temporary15 = supResult_1543523927;
+                var supResult_1543525103 = nimCopy(null, Temporary14, NTI1543513214);
+                if (!(supResult_1543525103.isOk)) {
+                var Temporary15 = supResult_1543525103;
                 if (ConstSet24[Temporary15.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary15.isOk, NTI33554466)); }
-                result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary15.error), NTI1543512598);
+                result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary15.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1543523907) {
-                var Temporary16 = subResult_1543523908;
+                if (isOverUnderbrace_1543525083) {
+                var Temporary16 = subResult_1543525084;
                 if (ConstSet25[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-                var Temporary17 = supResult_1543523927;
+                var Temporary17 = supResult_1543525103;
                 if (ConstSet26[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-                node_1543523894 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543523894, Temporary16.value, Temporary17.value);
+                node_1543525070 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525070, Temporary16.value, Temporary17.value);
                 }
                 else {
-                  var Temporary18 = subResult_1543523908;
+                  var Temporary18 = subResult_1543525084;
                   if (ConstSet27[Temporary18.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary18.isOk, NTI33554466)); }
-                  var Temporary19 = supResult_1543523927;
+                  var Temporary19 = supResult_1543525103;
                   if (ConstSet28[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-                  node_1543523894 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543523894, Temporary18.value, Temporary19.value);
+                  node_1543525070 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543525070, Temporary18.value, Temporary19.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1543523907) {
-                  var Temporary20 = subResult_1543523908;
+                  if (isOverUnderbrace_1543525083) {
+                  var Temporary20 = subResult_1543525084;
                   if (ConstSet29[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-                  node_1543523894 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543523894, Temporary20.value, null);
+                  node_1543525070 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525070, Temporary20.value, null);
                   }
                   else {
-                    var Temporary21 = subResult_1543523908;
+                    var Temporary21 = subResult_1543525084;
                     if (ConstSet30[Temporary21.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary21.isOk, NTI33554466)); }
-                    node_1543523894 = newSub__OOZsrcZyatexmlZast_u588(node_1543523894, Temporary21.value);
+                    node_1543525070 = newSub__OOZsrcZyatexmlZast_u588(node_1543525070, Temporary21.value);
                   }
                   
                 }
@@ -4428,29 +4540,29 @@ function parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0) {
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary22 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary22 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary22 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary22 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var supResult_1543523946 = nimCopy(null, Temporary22, NTI1543512598);
-                if (!(supResult_1543523946.isOk)) {
-                var Temporary23 = supResult_1543523946;
+                var supResult_1543525122 = nimCopy(null, Temporary22, NTI1543513214);
+                if (!(supResult_1543525122.isOk)) {
+                var Temporary23 = supResult_1543525122;
                 if (ConstSet31[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-                result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary23.error), NTI1543512598);
+                result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary23.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1543523907) {
-                var Temporary24 = supResult_1543523946;
+                if (isOverUnderbrace_1543525083) {
+                var Temporary24 = supResult_1543525122;
                 if (ConstSet32[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                node_1543523894 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543523894, null, Temporary24.value);
+                node_1543525070 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525070, null, Temporary24.value);
                 }
                 else {
-                  var Temporary25 = supResult_1543523946;
+                  var Temporary25 = supResult_1543525122;
                   if (ConstSet33[Temporary25.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary25.isOk, NTI33554466)); }
-                  node_1543523894 = newSup__OOZsrcZyatexmlZast_u592(node_1543523894, Temporary25.value);
+                  node_1543525070 = newSup__OOZsrcZyatexmlZast_u592(node_1543525070, Temporary25.value);
                 }
                 
                 }
@@ -4459,84 +4571,84 @@ function parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0) {
           };
           if ((match__OOZsrcZyatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          node_1543523894 = newRow__OOZsrcZyatexmlZast_u601([node_1543523894, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+          node_1543525070 = newRow__OOZsrcZyatexmlZast_u601([node_1543525070, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
           }
           
-          children_1543523874.push(node_1543523894);;
+          children_1543525050.push(node_1543525070);;
           if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 0)) {
-          var cmdName_1543523973 = nimCopy(null, peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
-          if ((contains__OOZsrcZyatexmlZparser_u17931(commandTable_1543520462, cmdName_1543523973) && (HEX5BHEX5D__OOZsrcZyatexmlZparser_u17069(commandTable_1543520462, cmdName_1543523973).cmdType == 21))) {
+          var cmdName_1543525149 = nimCopy(null, peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
+          if ((contains__OOZsrcZyatexmlZparser_u19107(commandTable_1543521638, cmdName_1543525149) && (HEX5BHEX5D__OOZsrcZyatexmlZparser_u18245(commandTable_1543521638, cmdName_1543525149).cmdType == 21))) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          if (((children_1543523874).length == 1)) {
-          Temporary26 = children_1543523874[chckIndx(0, 0, (children_1543523874).length - 1)];
+          if (((children_1543525050).length == 1)) {
+          Temporary26 = children_1543525050[chckIndx(0, 0, (children_1543525050).length - 1)];
           }
           else {
-          Temporary26 = newRow__OOZsrcZyatexmlZast_u601(children_1543523874);
+          Temporary26 = newRow__OOZsrcZyatexmlZast_u601(children_1543525050);
           }
           
-          var leftNode_1543524079 = Temporary26;
-          var rightChildren_1543524084 = [];
+          var leftNode_1543525255 = Temporary26;
+          var rightChildren_1543525260 = [];
           Label27: {
               Label28: while (true) {
               if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label28;
-                var primResult_1543524085 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
-                if (!(primResult_1543524085.isOk)) {
-                var Temporary29 = primResult_1543524085;
+                var primResult_1543525261 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
+                if (!(primResult_1543525261.isOk)) {
+                var Temporary29 = primResult_1543525261;
                 if (ConstSet34[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-                result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary29.error), NTI1543512598);
+                result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary29.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                var Temporary30 = primResult_1543524085;
+                var Temporary30 = primResult_1543525261;
                 if (ConstSet35[Temporary30.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary30.isOk, NTI33554466)); }
-                var rightNode_1543524104 = Temporary30.value;
+                var rightNode_1543525280 = Temporary30.value;
                 Label31: {
                     Label32: while (true) {
                     if (!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9) || match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10))) break Label32;
                       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
                       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                      Temporary33 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                      Temporary33 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                       }
                       else {
-                      Temporary33 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                      Temporary33 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                       }
                       
-                      var subResult_1543524105 = nimCopy(null, Temporary33, NTI1543512598);
-                      if (!(subResult_1543524105.isOk)) {
-                      var Temporary34 = subResult_1543524105;
+                      var subResult_1543525281 = nimCopy(null, Temporary33, NTI1543513214);
+                      if (!(subResult_1543525281.isOk)) {
+                      var Temporary34 = subResult_1543525281;
                       if (ConstSet36[Temporary34.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary34.isOk, NTI33554466)); }
-                      result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary34.error), NTI1543512598);
+                      result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary34.error), NTI1543513214);
                       break BeforeRet;
                       }
                       
                       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                      Temporary35 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                      Temporary35 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                       }
                       else {
-                      Temporary35 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                      Temporary35 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                       }
                       
-                      var supResult_1543524124 = nimCopy(null, Temporary35, NTI1543512598);
-                      if (!(supResult_1543524124.isOk)) {
-                      var Temporary36 = supResult_1543524124;
+                      var supResult_1543525300 = nimCopy(null, Temporary35, NTI1543513214);
+                      if (!(supResult_1543525300.isOk)) {
+                      var Temporary36 = supResult_1543525300;
                       if (ConstSet37[Temporary36.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary36.isOk, NTI33554466)); }
-                      result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary36.error), NTI1543512598);
+                      result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary36.error), NTI1543513214);
                       break BeforeRet;
                       }
                       
-                      var Temporary37 = subResult_1543524105;
+                      var Temporary37 = subResult_1543525281;
                       if (ConstSet38[Temporary37.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary37.isOk, NTI33554466)); }
-                      var Temporary38 = supResult_1543524124;
+                      var Temporary38 = supResult_1543525300;
                       if (ConstSet39[Temporary38.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary38.isOk, NTI33554466)); }
-                      rightNode_1543524104 = newSubSup__OOZsrcZyatexmlZast_u596(rightNode_1543524104, Temporary37.value, Temporary38.value);
+                      rightNode_1543525280 = newSubSup__OOZsrcZyatexmlZast_u596(rightNode_1543525280, Temporary37.value, Temporary38.value);
                       }
                       else {
-                        var Temporary39 = subResult_1543524105;
+                        var Temporary39 = subResult_1543525281;
                         if (ConstSet40[Temporary39.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary39.isOk, NTI33554466)); }
-                        rightNode_1543524104 = newSub__OOZsrcZyatexmlZast_u588(rightNode_1543524104, Temporary39.value);
+                        rightNode_1543525280 = newSub__OOZsrcZyatexmlZast_u588(rightNode_1543525280, Temporary39.value);
                       }
                       
                       }
@@ -4544,67 +4656,67 @@ function parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0) {
                       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                      Temporary40 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                      Temporary40 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                       }
                       else {
-                      Temporary40 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                      Temporary40 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                       }
                       
-                      var supResult_1543524143 = nimCopy(null, Temporary40, NTI1543512598);
-                      if (!(supResult_1543524143.isOk)) {
-                      var Temporary41 = supResult_1543524143;
+                      var supResult_1543525319 = nimCopy(null, Temporary40, NTI1543513214);
+                      if (!(supResult_1543525319.isOk)) {
+                      var Temporary41 = supResult_1543525319;
                       if (ConstSet41[Temporary41.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary41.isOk, NTI33554466)); }
-                      result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary41.error), NTI1543512598);
+                      result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary41.error), NTI1543513214);
                       break BeforeRet;
                       }
                       
-                      var Temporary42 = supResult_1543524143;
+                      var Temporary42 = supResult_1543525319;
                       if (ConstSet42[Temporary42.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary42.isOk, NTI33554466)); }
-                      rightNode_1543524104 = newSup__OOZsrcZyatexmlZast_u592(rightNode_1543524104, Temporary42.value);
+                      rightNode_1543525280 = newSup__OOZsrcZyatexmlZast_u592(rightNode_1543525280, Temporary42.value);
                       }
                       }
                     }
                 };
                 if ((match__OOZsrcZyatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-                rightNode_1543524104 = newRow__OOZsrcZyatexmlZast_u601([rightNode_1543524104, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+                rightNode_1543525280 = newRow__OOZsrcZyatexmlZast_u601([rightNode_1543525280, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
                 }
                 
-                rightChildren_1543524084.push(rightNode_1543524104);;
+                rightChildren_1543525260.push(rightNode_1543525280);;
               }
           };
-          if (((rightChildren_1543524084).length == 1)) {
-          Temporary43 = rightChildren_1543524084[chckIndx(0, 0, (rightChildren_1543524084).length - 1)];
+          if (((rightChildren_1543525260).length == 1)) {
+          Temporary43 = rightChildren_1543525260[chckIndx(0, 0, (rightChildren_1543525260).length - 1)];
           }
           else {
-          Temporary43 = newRow__OOZsrcZyatexmlZast_u601(rightChildren_1543524084);
+          Temporary43 = newRow__OOZsrcZyatexmlZast_u601(rightChildren_1543525260);
           }
           
-          var rightNode_1543524173 = Temporary43;
-          switch (toJSStr(cmdName_1543523973)) {
+          var rightNode_1543525349 = Temporary43;
+          switch (toJSStr(cmdName_1543525149)) {
           case "over":
-            Temporary44 = newFrac__OOZsrcZyatexmlZast_u575(leftNode_1543524079, rightNode_1543524173, false);
+            Temporary44 = newFrac__OOZsrcZyatexmlZast_u575(leftNode_1543525255, rightNode_1543525349, false);
             break;
           case "choose":
-            Temporary44 = newBinomial__OOZsrcZyatexmlZast_u580(leftNode_1543524079, rightNode_1543524173);
+            Temporary44 = newBinomial__OOZsrcZyatexmlZast_u580(leftNode_1543525255, rightNode_1543525349);
             break;
           case "atop":
-            Temporary44 = newAtop__OOZsrcZyatexmlZast_u584(leftNode_1543524079, rightNode_1543524173);
+            Temporary44 = newAtop__OOZsrcZyatexmlZast_u584(leftNode_1543525255, rightNode_1543525349);
             break;
           default: 
-            Temporary44 = leftNode_1543524079;
+            Temporary44 = leftNode_1543525255;
             break;
           }
-          var resultNode_1543524174 = Temporary44;
-          var closeResult_1543524175 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-          if (!(closeResult_1543524175.isOk)) {
-          var Temporary45 = closeResult_1543524175;
+          var resultNode_1543525350 = Temporary44;
+          var closeResult_1543525351 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+          if (!(closeResult_1543525351.isOk)) {
+          var Temporary45 = closeResult_1543525351;
           if (ConstSet43[Temporary45.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary45.isOk, NTI33554466)); }
-          result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary45.error), NTI1543512598);
+          result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary45.error), NTI1543513214);
           break BeforeRet;
           }
           
-          result_1543523850 = nimCopy(result_1543523850, ok__OOZsrcZyatexmlZparser_u17363(resultNode_1543524174), NTI1543512598);
+          result_1543525026 = nimCopy(result_1543525026, ok__OOZsrcZyatexmlZparser_u18539(resultNode_1543525350), NTI1543513214);
           break BeforeRet;
           }
           
@@ -4612,26 +4724,26 @@ function parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0) {
           
         }
     };
-    var closeResult_1543524197 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-    if (!(closeResult_1543524197.isOk)) {
-    var Temporary46 = closeResult_1543524197;
+    var closeResult_1543525373 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+    if (!(closeResult_1543525373.isOk)) {
+    var Temporary46 = closeResult_1543525373;
     if (ConstSet44[Temporary46.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary46.isOk, NTI33554466)); }
-    result_1543523850 = nimCopy(result_1543523850, err__OOZsrcZyatexmlZparser_u17865(Temporary46.error), NTI1543512598);
+    result_1543525026 = nimCopy(result_1543525026, err__OOZsrcZyatexmlZparser_u19041(Temporary46.error), NTI1543513214);
     break BeforeRet;
     }
     
-    if (((children_1543523874).length == 1)) {
-    result_1543523850 = nimCopy(result_1543523850, ok__OOZsrcZyatexmlZparser_u17363(children_1543523874[chckIndx(0, 0, (children_1543523874).length - 1)]), NTI1543512598);
+    if (((children_1543525050).length == 1)) {
+    result_1543525026 = nimCopy(result_1543525026, ok__OOZsrcZyatexmlZparser_u18539(children_1543525050[chckIndx(0, 0, (children_1543525050).length - 1)]), NTI1543513214);
     break BeforeRet;
     }
     else {
-      result_1543523850 = nimCopy(result_1543523850, ok__OOZsrcZyatexmlZparser_u17363(newRow__OOZsrcZyatexmlZast_u601(children_1543523874)), NTI1543512598);
+      result_1543525026 = nimCopy(result_1543525026, ok__OOZsrcZyatexmlZparser_u18539(newRow__OOZsrcZyatexmlZast_u601(children_1543525050)), NTI1543513214);
       break BeforeRet;
     }
     
   };
 
-  return result_1543523850;
+  return result_1543525026;
 
 }
 
@@ -4662,10 +4774,10 @@ function newSqrt__OOZsrcZyatexmlZast_u502(base_p0) {
 
 }
 
-function greekToUnicode__OOZsrcZyatexmlZparser_u16610(name_p0) {
+function greekToUnicode__OOZsrcZyatexmlZparser_u17786(name_p0) {
     var Temporary1;
 
-  var result_1543520484 = [];
+  var result_1543521660 = [];
 
     switch (toJSStr(name_p0)) {
     case "alpha":
@@ -4870,9 +4982,9 @@ function greekToUnicode__OOZsrcZyatexmlZparser_u16610(name_p0) {
       Temporary1 = [63];
       break;
     }
-    result_1543520484 = nimCopy(null, Temporary1, NTI33554449);
+    result_1543521660 = nimCopy(null, Temporary1, NTI33554449);
 
-  return result_1543520484;
+  return result_1543521660;
 
 }
 
@@ -4894,7 +5006,7 @@ function newStyle__OOZsrcZyatexmlZast_u529(kind_p0, base_p1) {
 
 }
 
-function parseRestOfGroup__OOZsrcZyatexmlZparser_u16607(stream_p0) {
+function parseRestOfGroup__OOZsrcZyatexmlZparser_u17783(stream_p0) {
           var Temporary3;
           var Temporary4;
                 var Temporary7;
@@ -4922,100 +5034,100 @@ function parseRestOfGroup__OOZsrcZyatexmlZparser_u16607(stream_p0) {
                   var Temporary29;
                     var Temporary30;
 
-  var result_1543524228 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543525404 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var children_1543524233 = [];
+    var children_1543525409 = [];
     Label1: {
         Label2: while (true) {
         if (!(((((!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 4))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 6))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 12))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 11)))) break Label2;
           if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 0)) {
-          var cmdValue_1543524234 = nimCopy(null, peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
-          if (((((eqStrings(cmdValue_1543524234, [114,105,103,104,116]) || eqStrings(cmdValue_1543524234, [101,110,100])) || eqStrings(cmdValue_1543524234, [97,116,111,112])) || eqStrings(cmdValue_1543524234, [111,118,101,114])) || eqStrings(cmdValue_1543524234, [99,104,111,111,115,101]))) {
+          var cmdValue_1543525410 = nimCopy(null, peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
+          if (((((eqStrings(cmdValue_1543525410, [114,105,103,104,116]) || eqStrings(cmdValue_1543525410, [101,110,100])) || eqStrings(cmdValue_1543525410, [97,116,111,112])) || eqStrings(cmdValue_1543525410, [111,118,101,114])) || eqStrings(cmdValue_1543525410, [99,104,111,111,115,101]))) {
           break Label1;
           }
           
           }
           
-          var primResult_1543524235 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
-          if (!(primResult_1543524235.isOk)) {
-          var Temporary3 = primResult_1543524235;
+          var primResult_1543525411 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
+          if (!(primResult_1543525411.isOk)) {
+          var Temporary3 = primResult_1543525411;
           if (ConstSet61[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
-          result_1543524228 = nimCopy(result_1543524228, err__OOZsrcZyatexmlZparser_u17865(Temporary3.error), NTI1543512598);
+          result_1543525404 = nimCopy(result_1543525404, err__OOZsrcZyatexmlZparser_u19041(Temporary3.error), NTI1543513214);
           break BeforeRet;
           }
           
-          var Temporary4 = primResult_1543524235;
+          var Temporary4 = primResult_1543525411;
           if (ConstSet62[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-          var node_1543524254 = Temporary4.value;
+          var node_1543525430 = Temporary4.value;
           Label5: {
               Label6: while (true) {
               if (!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9) || match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10))) break Label6;
-                if (!(node_1543524254.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1543524254;
+                if (!(node_1543525430.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1543525430;
                   if (ConstSet63[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1392508931)); }
-                  if ((Temporary9.accentKind == 10)) Temporary8 = true; else {                    var Temporary10 = node_1543524254;
+                  if ((Temporary9.accentKind == 10)) Temporary8 = true; else {                    var Temporary10 = node_1543525430;
                     if (ConstSet64[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1392508931)); }
-                    Temporary8 = (Temporary10.accentKind == 11);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1543524267 = Temporary7;
+                    Temporary8 = (Temporary10.accentKind == 11);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1543525443 = Temporary7;
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary11 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary11 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary11 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary11 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var subResult_1543524268 = nimCopy(null, Temporary11, NTI1543512598);
-                if (!(subResult_1543524268.isOk)) {
-                var Temporary12 = subResult_1543524268;
+                var subResult_1543525444 = nimCopy(null, Temporary11, NTI1543513214);
+                if (!(subResult_1543525444.isOk)) {
+                var Temporary12 = subResult_1543525444;
                 if (ConstSet65[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-                result_1543524228 = nimCopy(result_1543524228, err__OOZsrcZyatexmlZparser_u17865(Temporary12.error), NTI1543512598);
+                result_1543525404 = nimCopy(result_1543525404, err__OOZsrcZyatexmlZparser_u19041(Temporary12.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary13 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary13 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary13 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary13 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var supResult_1543524287 = nimCopy(null, Temporary13, NTI1543512598);
-                if (!(supResult_1543524287.isOk)) {
-                var Temporary14 = supResult_1543524287;
+                var supResult_1543525463 = nimCopy(null, Temporary13, NTI1543513214);
+                if (!(supResult_1543525463.isOk)) {
+                var Temporary14 = supResult_1543525463;
                 if (ConstSet66[Temporary14.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary14.isOk, NTI33554466)); }
-                result_1543524228 = nimCopy(result_1543524228, err__OOZsrcZyatexmlZparser_u17865(Temporary14.error), NTI1543512598);
+                result_1543525404 = nimCopy(result_1543525404, err__OOZsrcZyatexmlZparser_u19041(Temporary14.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1543524267) {
-                var Temporary15 = subResult_1543524268;
+                if (isOverUnderbrace_1543525443) {
+                var Temporary15 = subResult_1543525444;
                 if (ConstSet67[Temporary15.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary15.isOk, NTI33554466)); }
-                var Temporary16 = supResult_1543524287;
+                var Temporary16 = supResult_1543525463;
                 if (ConstSet68[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-                node_1543524254 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524254, Temporary15.value, Temporary16.value);
+                node_1543525430 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525430, Temporary15.value, Temporary16.value);
                 }
                 else {
-                  var Temporary17 = subResult_1543524268;
+                  var Temporary17 = subResult_1543525444;
                   if (ConstSet69[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-                  var Temporary18 = supResult_1543524287;
+                  var Temporary18 = supResult_1543525463;
                   if (ConstSet70[Temporary18.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary18.isOk, NTI33554466)); }
-                  node_1543524254 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543524254, Temporary17.value, Temporary18.value);
+                  node_1543525430 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543525430, Temporary17.value, Temporary18.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1543524267) {
-                  var Temporary19 = subResult_1543524268;
+                  if (isOverUnderbrace_1543525443) {
+                  var Temporary19 = subResult_1543525444;
                   if (ConstSet71[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-                  node_1543524254 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524254, Temporary19.value, null);
+                  node_1543525430 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525430, Temporary19.value, null);
                   }
                   else {
-                    var Temporary20 = subResult_1543524268;
+                    var Temporary20 = subResult_1543525444;
                     if (ConstSet72[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-                    node_1543524254 = newSub__OOZsrcZyatexmlZast_u588(node_1543524254, Temporary20.value);
+                    node_1543525430 = newSub__OOZsrcZyatexmlZast_u588(node_1543525430, Temporary20.value);
                   }
                   
                 }
@@ -5025,63 +5137,63 @@ function parseRestOfGroup__OOZsrcZyatexmlZparser_u16607(stream_p0) {
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary21 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary21 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary21 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary21 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var supResult_1543524306 = nimCopy(null, Temporary21, NTI1543512598);
-                if (!(supResult_1543524306.isOk)) {
-                var Temporary22 = supResult_1543524306;
+                var supResult_1543525482 = nimCopy(null, Temporary21, NTI1543513214);
+                if (!(supResult_1543525482.isOk)) {
+                var Temporary22 = supResult_1543525482;
                 if (ConstSet73[Temporary22.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary22.isOk, NTI33554466)); }
-                result_1543524228 = nimCopy(result_1543524228, err__OOZsrcZyatexmlZparser_u17865(Temporary22.error), NTI1543512598);
+                result_1543525404 = nimCopy(result_1543525404, err__OOZsrcZyatexmlZparser_u19041(Temporary22.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary23 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary23 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary23 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary23 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var subResult_1543524325 = nimCopy(null, Temporary23, NTI1543512598);
-                if (!(subResult_1543524325.isOk)) {
-                var Temporary24 = subResult_1543524325;
+                var subResult_1543525501 = nimCopy(null, Temporary23, NTI1543513214);
+                if (!(subResult_1543525501.isOk)) {
+                var Temporary24 = subResult_1543525501;
                 if (ConstSet74[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                result_1543524228 = nimCopy(result_1543524228, err__OOZsrcZyatexmlZparser_u17865(Temporary24.error), NTI1543512598);
+                result_1543525404 = nimCopy(result_1543525404, err__OOZsrcZyatexmlZparser_u19041(Temporary24.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1543524267) {
-                var Temporary25 = subResult_1543524325;
+                if (isOverUnderbrace_1543525443) {
+                var Temporary25 = subResult_1543525501;
                 if (ConstSet75[Temporary25.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary25.isOk, NTI33554466)); }
-                var Temporary26 = supResult_1543524306;
+                var Temporary26 = supResult_1543525482;
                 if (ConstSet76[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-                node_1543524254 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524254, Temporary25.value, Temporary26.value);
+                node_1543525430 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525430, Temporary25.value, Temporary26.value);
                 }
                 else {
-                  var Temporary27 = subResult_1543524325;
+                  var Temporary27 = subResult_1543525501;
                   if (ConstSet77[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-                  var Temporary28 = supResult_1543524306;
+                  var Temporary28 = supResult_1543525482;
                   if (ConstSet78[Temporary28.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary28.isOk, NTI33554466)); }
-                  node_1543524254 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543524254, Temporary27.value, Temporary28.value);
+                  node_1543525430 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543525430, Temporary27.value, Temporary28.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1543524267) {
-                  var Temporary29 = supResult_1543524306;
+                  if (isOverUnderbrace_1543525443) {
+                  var Temporary29 = supResult_1543525482;
                   if (ConstSet79[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-                  node_1543524254 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524254, null, Temporary29.value);
+                  node_1543525430 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525430, null, Temporary29.value);
                   }
                   else {
-                    var Temporary30 = supResult_1543524306;
+                    var Temporary30 = supResult_1543525482;
                     if (ConstSet80[Temporary30.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary30.isOk, NTI33554466)); }
-                    node_1543524254 = newSup__OOZsrcZyatexmlZast_u592(node_1543524254, Temporary30.value);
+                    node_1543525430 = newSup__OOZsrcZyatexmlZast_u592(node_1543525430, Temporary30.value);
                   }
                   
                 }
@@ -5090,26 +5202,26 @@ function parseRestOfGroup__OOZsrcZyatexmlZparser_u16607(stream_p0) {
                 }
               }
           };
-          children_1543524233.push(node_1543524254);;
+          children_1543525409.push(node_1543525430);;
         }
     };
-    if (((children_1543524233).length == 0)) {
-    result_1543524228 = nimCopy(result_1543524228, ok__OOZsrcZyatexmlZparser_u17363(newRow__OOZsrcZyatexmlZast_u601([])), NTI1543512598);
+    if (((children_1543525409).length == 0)) {
+    result_1543525404 = nimCopy(result_1543525404, ok__OOZsrcZyatexmlZparser_u18539(newRow__OOZsrcZyatexmlZast_u601([])), NTI1543513214);
     break BeforeRet;
     }
     else {
-    if (((children_1543524233).length == 1)) {
-    result_1543524228 = nimCopy(result_1543524228, ok__OOZsrcZyatexmlZparser_u17363(children_1543524233[chckIndx(0, 0, (children_1543524233).length - 1)]), NTI1543512598);
+    if (((children_1543525409).length == 1)) {
+    result_1543525404 = nimCopy(result_1543525404, ok__OOZsrcZyatexmlZparser_u18539(children_1543525409[chckIndx(0, 0, (children_1543525409).length - 1)]), NTI1543513214);
     break BeforeRet;
     }
     else {
-      result_1543524228 = nimCopy(result_1543524228, ok__OOZsrcZyatexmlZparser_u17363(newRow__OOZsrcZyatexmlZast_u601(children_1543524233)), NTI1543512598);
+      result_1543525404 = nimCopy(result_1543525404, ok__OOZsrcZyatexmlZparser_u18539(newRow__OOZsrcZyatexmlZast_u601(children_1543525409)), NTI1543513214);
       break BeforeRet;
     }
     }
   };
 
-  return result_1543524228;
+  return result_1543525404;
 
 }
 
@@ -5158,12 +5270,12 @@ function newFunction__OOZsrcZyatexmlZast_u665(name_p0, arg_p1) {
 
 }
 
-function err__OOZsrcZyatexmlZparser_u17227(kind_p0, message_p1, position_p2, context_p3) {
-  var result_1543521105 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function err__OOZsrcZyatexmlZparser_u18403(kind_p0, message_p1, position_p2, context_p3) {
+  var result_1543522281 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1543521105 = nimCopy(result_1543521105, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: null}, NTI1543512598);
+    result_1543522281 = nimCopy(result_1543522281, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: null}, NTI1543513214);
 
-  return result_1543521105;
+  return result_1543522281;
 
 }
 
@@ -5225,47 +5337,47 @@ function newMatrix__OOZsrcZyatexmlZast_u645(rows_p0, matrixType_p1) {
 
 }
 
-function find__OOZsrcZyatexmlZparser_u19704(a_p0, item_p1) {
-  var result_1543523581 = 0;
+function find__OOZsrcZyatexmlZparser_u20880(a_p0, item_p1) {
+  var result_1543524757 = 0;
 
   BeforeRet: {
-    result_1543523581 = 0;
+    result_1543524757 = 0;
     Label1: {
-      var i_1543523595 = 0;
+      var i_1543524771 = 0;
       var i_1207959611 = 0;
       Label2: {
           Label3: while (true) {
           if (!(i_1207959611 < (a_p0).length)) break Label3;
-            i_1543523595 = a_p0[chckIndx(i_1207959611, 0, (a_p0).length - 1)];
-            if ((i_1543523595 == item_p1)) {
+            i_1543524771 = a_p0[chckIndx(i_1207959611, 0, (a_p0).length - 1)];
+            if ((i_1543524771 == item_p1)) {
             break BeforeRet;
             }
             
-            result_1543523581 = addInt(result_1543523581, 1);
+            result_1543524757 = addInt(result_1543524757, 1);
             i_1207959611 += 1;
           }
       };
     };
-    result_1543523581 = (-1);
+    result_1543524757 = (-1);
   };
 
-  return result_1543523581;
+  return result_1543524757;
 
 }
 
-function contains__OOZsrcZyatexmlZparser_u19699(a_p0, item_p1) {
-  var result_1543523575 = false;
+function contains__OOZsrcZyatexmlZparser_u20875(a_p0, item_p1) {
+  var result_1543524751 = false;
 
   BeforeRet: {
-    result_1543523575 = (0 <= find__OOZsrcZyatexmlZparser_u19704(a_p0, item_p1));
+    result_1543524751 = (0 <= find__OOZsrcZyatexmlZparser_u20880(a_p0, item_p1));
     break BeforeRet;
   };
 
-  return result_1543523575;
+  return result_1543524751;
 
 }
 
-function parseMatrixEnvironment__OOZsrcZyatexmlZparser_u16603(stream_p0, matrixType_p1) {
+function parseMatrixEnvironment__OOZsrcZyatexmlZparser_u17779(stream_p0, matrixType_p1) {
             var Temporary7;
             var Temporary8;
             var Temporary9;
@@ -5290,191 +5402,191 @@ function parseMatrixEnvironment__OOZsrcZyatexmlZparser_u16603(stream_p0, matrixT
                         var Temporary32;
                           var Temporary33;
 
-  var result_1543523306 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543524482 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var rows_1543523311 = [];
-    var currentRow_1543523316 = [];
-    var isAlignmentEnv_1543523359 = contains__stdZenumutils_u50([[97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], matrixType_p1);
-    var startOfCell_1543523360 = true;
+    var rows_1543524487 = [];
+    var currentRow_1543524492 = [];
+    var isAlignmentEnv_1543524535 = contains__stdZenumutils_u50([[97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], matrixType_p1);
+    var startOfCell_1543524536 = true;
     Label1: {
         Label2: while (true) {
         if (!!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0))) break Label2;
-          var token_1543523361 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-          if (((token_1543523361.kind == 0) && eqStrings(token_1543523361.value, [101,110,100]))) {
+          var token_1543524537 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+          if (((token_1543524537.kind == 0) && eqStrings(token_1543524537.value, [101,110,100]))) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          var braceResult_1543523366 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-          if (!(braceResult_1543523366.isOk)) {
-          result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,101,110,100], token_1543523361.position, []), NTI1543512598);
+          var braceResult_1543524542 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+          if (!(braceResult_1543524542.isOk)) {
+          result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,101,110,100], token_1543524537.position, []), NTI1543513214);
           break BeforeRet;
           }
           
-          var nameToken_1543523388 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-          var endEnvName_1543523389 = [];
-          if ((nameToken_1543523388.kind == 13)) {
+          var nameToken_1543524564 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+          var endEnvName_1543524565 = [];
+          if ((nameToken_1543524564.kind == 13)) {
           Label3: {
               Label4: while (true) {
               if (!((peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).kind == 13) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)))) break Label4;
-                endEnvName_1543523389.push.apply(endEnvName_1543523389, advance__OOZsrcZyatexmlZlexer_u600(stream_p0).value);;
+                endEnvName_1543524565.push.apply(endEnvName_1543524565, advance__OOZsrcZyatexmlZlexer_u600(stream_p0).value);;
               }
           };
           }
           else {
-            result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17227(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,101,110,100,123], nameToken_1543523388.position, []), NTI1543512598);
+            result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u18403(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,101,110,100,123], nameToken_1543524564.position, []), NTI1543513214);
             break BeforeRet;
           }
           
-          var closeResult_1543523419 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-          if (!(closeResult_1543523419.isOk)) {
-          result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1543523388.position, []), NTI1543512598);
+          var closeResult_1543524595 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+          if (!(closeResult_1543524595.isOk)) {
+          result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1543524564.position, []), NTI1543513214);
           break BeforeRet;
           }
           
-          if (!(eqStrings(endEnvName_1543523389, matrixType_p1))) {
-          result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17227(4, ([69,110,118,105,114,111,110,109,101,110,116,32,109,105,115,109,97,116,99,104,58,32,92,98,101,103,105,110,123]).concat(matrixType_p1,[125,32,101,110,100,101,100,32,119,105,116,104,32,92,101,110,100,123],endEnvName_1543523389,[125]), token_1543523361.position, []), NTI1543512598);
+          if (!(eqStrings(endEnvName_1543524565, matrixType_p1))) {
+          result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u18403(4, ([69,110,118,105,114,111,110,109,101,110,116,32,109,105,115,109,97,116,99,104,58,32,92,98,101,103,105,110,123]).concat(matrixType_p1,[125,32,101,110,100,101,100,32,119,105,116,104,32,92,101,110,100,123],endEnvName_1543524565,[125]), token_1543524537.position, []), NTI1543513214);
           break BeforeRet;
           }
           
-          if ((0 < (currentRow_1543523316).length)) {
-          var Temporary5 = nimCopy(null, currentRow_1543523316, NTI1543514461);
-          rows_1543523311.push(Temporary5);;
+          if ((0 < (currentRow_1543524492).length)) {
+          var Temporary5 = nimCopy(null, currentRow_1543524492, NTI1543515077);
+          rows_1543524487.push(Temporary5);;
           }
           
-          result_1543523306 = nimCopy(result_1543523306, ok__OOZsrcZyatexmlZparser_u17363(newMatrix__OOZsrcZyatexmlZast_u645(rows_1543523311, matrixType_p1)), NTI1543512598);
+          result_1543524482 = nimCopy(result_1543524482, ok__OOZsrcZyatexmlZparser_u18539(newMatrix__OOZsrcZyatexmlZast_u645(rows_1543524487, matrixType_p1)), NTI1543513214);
           break BeforeRet;
           }
           else {
-          if ((token_1543523361.kind == 12)) {
+          if ((token_1543524537.kind == 12)) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          if ((0 < (currentRow_1543523316).length)) {
-          var Temporary6 = nimCopy(null, currentRow_1543523316, NTI1543514461);
-          rows_1543523311.push(Temporary6);;
-          currentRow_1543523316 = nimCopy(null, [], NTI1543514070);
+          if ((0 < (currentRow_1543524492).length)) {
+          var Temporary6 = nimCopy(null, currentRow_1543524492, NTI1543515077);
+          rows_1543524487.push(Temporary6);;
+          currentRow_1543524492 = nimCopy(null, [], NTI1543514686);
           }
           
-          startOfCell_1543523360 = true;
+          startOfCell_1543524536 = true;
           }
           else {
-          if ((token_1543523361.kind == 11)) {
+          if ((token_1543524537.kind == 11)) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          startOfCell_1543523360 = true;
+          startOfCell_1543524536 = true;
           }
           else {
-          if (startOfCell_1543523360) {
-          if (isAlignmentEnv_1543523359) {
-          var cellResult_1543523491 = parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0);
-          if (!(cellResult_1543523491.isOk)) {
-            var Temporary7 = cellResult_1543523491;
+          if (startOfCell_1543524536) {
+          if (isAlignmentEnv_1543524535) {
+          var cellResult_1543524667 = parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0);
+          if (!(cellResult_1543524667.isOk)) {
+            var Temporary7 = cellResult_1543524667;
             if (ConstSet91[Temporary7.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary7.isOk, NTI33554466)); }
           if ((Temporary7.error.kind == 1)) {
-          currentRow_1543523316.push(newRow__OOZsrcZyatexmlZast_u601([]));;
-          startOfCell_1543523360 = false;
+          currentRow_1543524492.push(newRow__OOZsrcZyatexmlZast_u601([]));;
+          startOfCell_1543524536 = false;
           }
           else {
-            var Temporary8 = cellResult_1543523491;
+            var Temporary8 = cellResult_1543524667;
             if (ConstSet92[Temporary8.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary8.isOk, NTI33554466)); }
-            result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17865(Temporary8.error), NTI1543512598);
+            result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u19041(Temporary8.error), NTI1543513214);
             break BeforeRet;
           }
           
           }
           else {
-            var Temporary9 = cellResult_1543523491;
+            var Temporary9 = cellResult_1543524667;
             if (ConstSet93[Temporary9.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary9.isOk, NTI33554466)); }
-            currentRow_1543523316.push(Temporary9.value);;
-            startOfCell_1543523360 = false;
+            currentRow_1543524492.push(Temporary9.value);;
+            startOfCell_1543524536 = false;
           }
           
           }
           else {
-            var cellExpressions_1543523531 = [];
+            var cellExpressions_1543524707 = [];
             Label10: {
                 Label11: while (true) {
                 if (!!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0))) break Label11;
-                  var t_1543523532 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-                  if ((contains__OOZsrcZyatexmlZparser_u19699(new Uint8Array([11, 12]), t_1543523532.kind) || ((t_1543523532.kind == 0) && eqStrings(t_1543523532.value, [101,110,100])))) {
+                  var t_1543524708 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+                  if ((contains__OOZsrcZyatexmlZparser_u20875(new Uint8Array([11, 12]), t_1543524708.kind) || ((t_1543524708.kind == 0) && eqStrings(t_1543524708.value, [101,110,100])))) {
                   break Label10;
                   }
                   
-                  var exprResult_1543523625 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
-                  if (!(exprResult_1543523625.isOk)) {
-                  var Temporary12 = exprResult_1543523625;
+                  var exprResult_1543524801 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
+                  if (!(exprResult_1543524801.isOk)) {
+                  var Temporary12 = exprResult_1543524801;
                   if (ConstSet94[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-                  result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17865(Temporary12.error), NTI1543512598);
+                  result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u19041(Temporary12.error), NTI1543513214);
                   break BeforeRet;
                   }
                   
-                  var Temporary13 = exprResult_1543523625;
+                  var Temporary13 = exprResult_1543524801;
                   if (ConstSet95[Temporary13.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary13.isOk, NTI33554466)); }
-                  var node_1543523644 = Temporary13.value;
+                  var node_1543524820 = Temporary13.value;
                   Label14: {
                       Label15: while (true) {
                       if (!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9) || match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10))) break Label15;
-                        if (!(node_1543523644.kind == 8)) Temporary16 = false; else {                          var Temporary18 = node_1543523644;
+                        if (!(node_1543524820.kind == 8)) Temporary16 = false; else {                          var Temporary18 = node_1543524820;
                           if (ConstSet96[Temporary18.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary18.kind, NTI1392508931)); }
-                          if ((Temporary18.accentKind == 10)) Temporary17 = true; else {                            var Temporary19 = node_1543523644;
+                          if ((Temporary18.accentKind == 10)) Temporary17 = true; else {                            var Temporary19 = node_1543524820;
                             if (ConstSet97[Temporary19.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary19.kind, NTI1392508931)); }
-                            Temporary17 = (Temporary19.accentKind == 11);                          }                          Temporary16 = Temporary17;                        }                        var isOverUnderbrace_1543523659 = Temporary16;
+                            Temporary17 = (Temporary19.accentKind == 11);                          }                          Temporary16 = Temporary17;                        }                        var isOverUnderbrace_1543524835 = Temporary16;
                         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
                         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                        Temporary20 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                        Temporary20 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                         }
                         else {
-                        Temporary20 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                        Temporary20 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                         }
                         
-                        var subResult_1543523660 = nimCopy(null, Temporary20, NTI1543512598);
-                        if (!(subResult_1543523660.isOk)) {
-                        var Temporary21 = subResult_1543523660;
+                        var subResult_1543524836 = nimCopy(null, Temporary20, NTI1543513214);
+                        if (!(subResult_1543524836.isOk)) {
+                        var Temporary21 = subResult_1543524836;
                         if (ConstSet98[Temporary21.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary21.isOk, NTI33554466)); }
-                        result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17865(Temporary21.error), NTI1543512598);
+                        result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u19041(Temporary21.error), NTI1543513214);
                         break BeforeRet;
                         }
                         
                         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                        Temporary22 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                        Temporary22 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                         }
                         else {
-                        Temporary22 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                        Temporary22 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                         }
                         
-                        var supResult_1543523679 = nimCopy(null, Temporary22, NTI1543512598);
-                        if (!(supResult_1543523679.isOk)) {
-                        var Temporary23 = supResult_1543523679;
+                        var supResult_1543524855 = nimCopy(null, Temporary22, NTI1543513214);
+                        if (!(supResult_1543524855.isOk)) {
+                        var Temporary23 = supResult_1543524855;
                         if (ConstSet99[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-                        result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17865(Temporary23.error), NTI1543512598);
+                        result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u19041(Temporary23.error), NTI1543513214);
                         break BeforeRet;
                         }
                         
-                        if (isOverUnderbrace_1543523659) {
-                        var Temporary24 = subResult_1543523660;
+                        if (isOverUnderbrace_1543524835) {
+                        var Temporary24 = subResult_1543524836;
                         if (ConstSet100[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                        var Temporary25 = supResult_1543523679;
+                        var Temporary25 = supResult_1543524855;
                         if (ConstSet101[Temporary25.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary25.isOk, NTI33554466)); }
-                        node_1543523644 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543523644, Temporary24.value, Temporary25.value);
+                        node_1543524820 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524820, Temporary24.value, Temporary25.value);
                         }
                         else {
-                          var Temporary26 = subResult_1543523660;
+                          var Temporary26 = subResult_1543524836;
                           if (ConstSet102[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-                          var Temporary27 = supResult_1543523679;
+                          var Temporary27 = supResult_1543524855;
                           if (ConstSet103[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-                          node_1543523644 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543523644, Temporary26.value, Temporary27.value);
+                          node_1543524820 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543524820, Temporary26.value, Temporary27.value);
                         }
                         
                         }
                         else {
-                          if (isOverUnderbrace_1543523659) {
-                          var Temporary28 = subResult_1543523660;
+                          if (isOverUnderbrace_1543524835) {
+                          var Temporary28 = subResult_1543524836;
                           if (ConstSet104[Temporary28.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary28.isOk, NTI33554466)); }
-                          node_1543523644 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543523644, Temporary28.value, null);
+                          node_1543524820 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524820, Temporary28.value, null);
                           }
                           else {
-                            var Temporary29 = subResult_1543523660;
+                            var Temporary29 = subResult_1543524836;
                             if (ConstSet105[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-                            node_1543523644 = newSub__OOZsrcZyatexmlZast_u588(node_1543523644, Temporary29.value);
+                            node_1543524820 = newSub__OOZsrcZyatexmlZast_u588(node_1543524820, Temporary29.value);
                           }
                           
                         }
@@ -5484,29 +5596,29 @@ function parseMatrixEnvironment__OOZsrcZyatexmlZparser_u16603(stream_p0, matrixT
                         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                        Temporary30 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                        Temporary30 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                         }
                         else {
-                        Temporary30 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                        Temporary30 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                         }
                         
-                        var supResult_1543523698 = nimCopy(null, Temporary30, NTI1543512598);
-                        if (!(supResult_1543523698.isOk)) {
-                        var Temporary31 = supResult_1543523698;
+                        var supResult_1543524874 = nimCopy(null, Temporary30, NTI1543513214);
+                        if (!(supResult_1543524874.isOk)) {
+                        var Temporary31 = supResult_1543524874;
                         if (ConstSet106[Temporary31.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary31.isOk, NTI33554466)); }
-                        result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17865(Temporary31.error), NTI1543512598);
+                        result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u19041(Temporary31.error), NTI1543513214);
                         break BeforeRet;
                         }
                         
-                        if (isOverUnderbrace_1543523659) {
-                        var Temporary32 = supResult_1543523698;
+                        if (isOverUnderbrace_1543524835) {
+                        var Temporary32 = supResult_1543524874;
                         if (ConstSet107[Temporary32.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary32.isOk, NTI33554466)); }
-                        node_1543523644 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543523644, null, Temporary32.value);
+                        node_1543524820 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524820, null, Temporary32.value);
                         }
                         else {
-                          var Temporary33 = supResult_1543523698;
+                          var Temporary33 = supResult_1543524874;
                           if (ConstSet108[Temporary33.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary33.isOk, NTI33554466)); }
-                          node_1543523644 = newSup__OOZsrcZyatexmlZast_u592(node_1543523644, Temporary33.value);
+                          node_1543524820 = newSup__OOZsrcZyatexmlZast_u592(node_1543524820, Temporary33.value);
                         }
                         
                         }
@@ -5515,24 +5627,24 @@ function parseMatrixEnvironment__OOZsrcZyatexmlZparser_u16603(stream_p0, matrixT
                   };
                   if ((match__OOZsrcZyatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
                   (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-                  node_1543523644 = newRow__OOZsrcZyatexmlZast_u601([node_1543523644, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+                  node_1543524820 = newRow__OOZsrcZyatexmlZast_u601([node_1543524820, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
                   }
                   
-                  cellExpressions_1543523531.push(node_1543523644);;
+                  cellExpressions_1543524707.push(node_1543524820);;
                 }
             };
-            if (((cellExpressions_1543523531).length == 0)) {
-            currentRow_1543523316.push(newRow__OOZsrcZyatexmlZast_u601([]));;
+            if (((cellExpressions_1543524707).length == 0)) {
+            currentRow_1543524492.push(newRow__OOZsrcZyatexmlZast_u601([]));;
             }
             else {
-            if (((cellExpressions_1543523531).length == 1)) {
-            currentRow_1543523316.push(cellExpressions_1543523531[chckIndx(0, 0, (cellExpressions_1543523531).length - 1)]);;
+            if (((cellExpressions_1543524707).length == 1)) {
+            currentRow_1543524492.push(cellExpressions_1543524707[chckIndx(0, 0, (cellExpressions_1543524707).length - 1)]);;
             }
             else {
-            currentRow_1543523316.push(newRow__OOZsrcZyatexmlZast_u601(cellExpressions_1543523531));;
+            currentRow_1543524492.push(newRow__OOZsrcZyatexmlZast_u601(cellExpressions_1543524707));;
             }
             }
-            startOfCell_1543523360 = false;
+            startOfCell_1543524536 = false;
           }
           
           }
@@ -5542,11 +5654,11 @@ function parseMatrixEnvironment__OOZsrcZyatexmlZparser_u16603(stream_p0, matrixT
           }}}
         }
     };
-    result_1543523306 = nimCopy(result_1543523306, err__OOZsrcZyatexmlZparser_u17227(1, ([77,97,116,114,105,120,32,101,110,118,105,114,111,110,109,101,110,116,32,110,111,116,32,99,108,111,115,101,100,32,119,105,116,104,32,92,101,110,100,123]).concat(matrixType_p1,[125]), 0, []), NTI1543512598);
+    result_1543524482 = nimCopy(result_1543524482, err__OOZsrcZyatexmlZparser_u18403(1, ([77,97,116,114,105,120,32,101,110,118,105,114,111,110,109,101,110,116,32,110,111,116,32,99,108,111,115,101,100,32,119,105,116,104,32,92,101,110,100,123]).concat(matrixType_p1,[125]), 0, []), NTI1543513214);
     break BeforeRet;
   };
 
-  return result_1543523306;
+  return result_1543524482;
 
 }
 
@@ -5591,31 +5703,31 @@ function newSpace__OOZsrcZyatexmlZast_u499(width_p0) {
 
 }
 
-function extractText__OOZsrcZyatexmlZparser_u18767(node_p0) {
+function extractText__OOZsrcZyatexmlZparser_u19943(node_p0) {
       var Temporary1;
       var Temporary2;
         var Temporary4;
 
-  var result_1543522641 = [];
+  var result_1543523817 = [];
 
   BeforeRet: {
     switch (node_p0.kind) {
     case 1:
       var Temporary1 = node_p0;
       if (ConstSet111[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'identName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1392508931)); }
-      result_1543522641 = nimCopy(null, Temporary1.identName, NTI33554449);
+      result_1543523817 = nimCopy(null, Temporary1.identName, NTI33554449);
       break BeforeRet;
       break;
     case 4:
       var Temporary2 = node_p0;
       if (ConstSet112[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'textValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1392508931)); }
-      result_1543522641 = nimCopy(null, Temporary2.textValue, NTI33554449);
+      result_1543523817 = nimCopy(null, Temporary2.textValue, NTI33554449);
       break BeforeRet;
       break;
     case 19:
-      result_1543522641 = nimCopy(null, [], NTI33554449);
+      result_1543523817 = nimCopy(null, [], NTI33554449);
       Label3: {
-        var child_1543522663 = null;
+        var child_1543523839 = null;
         var colontmp__1207959584 = [];
         var Temporary4 = node_p0;
         if (ConstSet113[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1392508931)); }
@@ -5625,8 +5737,8 @@ function extractText__OOZsrcZyatexmlZparser_u18767(node_p0) {
         Label5: {
             Label6: while (true) {
             if (!(i_1207959586 < L_1207959587)) break Label6;
-              child_1543522663 = colontmp__1207959584[chckIndx(i_1207959586, 0, (colontmp__1207959584).length - 1)];
-              result_1543522641.push.apply(result_1543522641, extractText__OOZsrcZyatexmlZparser_u18767(child_1543522663));;
+              child_1543523839 = colontmp__1207959584[chckIndx(i_1207959586, 0, (colontmp__1207959584).length - 1)];
+              result_1543523817.push.apply(result_1543523817, extractText__OOZsrcZyatexmlZparser_u19943(child_1543523839));;
               i_1207959586 += 1;
               if (!(((colontmp__1207959584).length == L_1207959587))) {
               failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -5637,13 +5749,13 @@ function extractText__OOZsrcZyatexmlZparser_u18767(node_p0) {
       };
       break;
     default: 
-      result_1543522641 = nimCopy(null, [], NTI33554449);
+      result_1543523817 = nimCopy(null, [], NTI33554449);
       break BeforeRet;
       break;
     }
   };
 
-  return result_1543522641;
+  return result_1543523817;
 
 }
 
@@ -5665,10 +5777,10 @@ function newNum__OOZsrcZyatexmlZast_u696(numStr_p0) {
 
 }
 
-function cmdNameToSIPrefix__OOZsrcZyatexmlZparser_u16619(name_p0) {
+function cmdNameToSIPrefix__OOZsrcZyatexmlZparser_u17795(name_p0) {
     var Temporary1;
 
-  var result_1543520493 = 0;
+  var result_1543521669 = 0;
 
     switch (toJSStr(name_p0)) {
     case "yocto":
@@ -5735,16 +5847,16 @@ function cmdNameToSIPrefix__OOZsrcZyatexmlZparser_u16619(name_p0) {
       Temporary1 = 0;
       break;
     }
-    result_1543520493 = Temporary1;
+    result_1543521669 = Temporary1;
 
-  return result_1543520493;
+  return result_1543521669;
 
 }
 
-function cmdNameToSIUnit__OOZsrcZyatexmlZparser_u16616(name_p0) {
+function cmdNameToSIUnit__OOZsrcZyatexmlZparser_u17792(name_p0) {
     var Temporary1;
 
-  var result_1543520490 = 0;
+  var result_1543521666 = 0;
 
     switch (toJSStr(name_p0)) {
     case "meter":
@@ -5829,9 +5941,9 @@ function cmdNameToSIUnit__OOZsrcZyatexmlZparser_u16616(name_p0) {
       Temporary1 = 0;
       break;
     }
-    result_1543520490 = Temporary1;
+    result_1543521666 = Temporary1;
 
-  return result_1543520490;
+  return result_1543521666;
 
 }
 
@@ -5844,12 +5956,12 @@ function newSIUnitComponent__OOZsrcZyatexmlZast_u727(prefix_p0, unit_p1, power_p
 
 }
 
-function HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(s_p0, i_p1) {
-  var result_1543521041 = null;
+function HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(s_p0, i_p1) {
+  var result_1543522217 = null;
 
-    result_1543521041 = s_p0[chckIndx(subInt((s_p0).length, i_p1), 0, (s_p0).length - 1)];
+    result_1543522217 = s_p0[chckIndx(subInt((s_p0).length, i_p1), 0, (s_p0).length - 1)];
 
-  return result_1543521041;
+  return result_1543522217;
 
 }
 
@@ -6201,10 +6313,10 @@ function nsuEndsWith(s_p0, suffix_p1) {
 
 }
 
-function shorthandToUnit__OOZsrcZyatexmlZparser_u16622(s_p0) {
+function shorthandToUnit__OOZsrcZyatexmlZparser_u17798(s_p0) {
     var Temporary1;
 
-  var result_1543520496 = 0;
+  var result_1543521672 = 0;
 
     switch (toJSStr(s_p0)) {
     case "m":
@@ -6290,9 +6402,9 @@ function shorthandToUnit__OOZsrcZyatexmlZparser_u16622(s_p0) {
       Temporary1 = 26;
       break;
     }
-    result_1543520496 = Temporary1;
+    result_1543521672 = Temporary1;
 
-  return result_1543520496;
+  return result_1543521672;
 
 }
 
@@ -6418,10 +6530,10 @@ function contains__pureZstrutils_u1879(s_p0, sub_p1) {
 
 }
 
-function shorthandToPrefix__OOZsrcZyatexmlZparser_u16625(c_p0) {
+function shorthandToPrefix__OOZsrcZyatexmlZparser_u17801(c_p0) {
     var Temporary1;
 
-  var result_1543520499 = 0;
+  var result_1543521675 = 0;
 
     switch (c_p0) {
     case 121:
@@ -6482,33 +6594,33 @@ function shorthandToPrefix__OOZsrcZyatexmlZparser_u16625(c_p0) {
       Temporary1 = 0;
       break;
     }
-    result_1543520499 = Temporary1;
+    result_1543521675 = Temporary1;
 
-  return result_1543520499;
+  return result_1543521675;
 
 }
 
-function shorthandStrToPrefix__OOZsrcZyatexmlZparser_u16628(s_p0) {
-  var result_1543520502 = 0;
+function shorthandStrToPrefix__OOZsrcZyatexmlZparser_u17804(s_p0) {
+  var result_1543521678 = 0;
 
   BeforeRet: {
     if (((s_p0).length == 1)) {
-    result_1543520502 = shorthandToPrefix__OOZsrcZyatexmlZparser_u16625(s_p0[chckIndx(0, 0, (s_p0).length - 1)]);
+    result_1543521678 = shorthandToPrefix__OOZsrcZyatexmlZparser_u17801(s_p0[chckIndx(0, 0, (s_p0).length - 1)]);
     break BeforeRet;
     }
     else {
     if (eqStrings(s_p0, [206,188])) {
-    result_1543520502 = 7;
+    result_1543521678 = 7;
     break BeforeRet;
     }
     else {
-      result_1543520502 = 0;
+      result_1543521678 = 0;
       break BeforeRet;
     }
     }
   };
 
-  return result_1543520502;
+  return result_1543521678;
 
 }
 
@@ -6521,184 +6633,184 @@ function newCustomUnitComponent__OOZsrcZyatexmlZast_u789(customUnit_p0, prefix_p
 
 }
 
-function parseShorthandUnits__OOZsrcZyatexmlZparser_u16631(s_p0) {
+function parseShorthandUnits__OOZsrcZyatexmlZparser_u17807(s_p0) {
               var Temporary6;
 
-  var result_1543520507 = {Field0: [], Field1: []};
+  var result_1543521683 = {Field0: [], Field1: []};
 
-    var numerator_1543520512 = [];
-    var denominator_1543520517 = [];
-    var segments_1543520518 = nsuSplitChar(s_p0, 46, (-1));
+    var numerator_1543521688 = [];
+    var denominator_1543521693 = [];
+    var segments_1543521694 = nsuSplitChar(s_p0, 46, (-1));
     Label1: {
-      var segment_1543520540 = [];
+      var segment_1543521716 = [];
       var i_1207959625 = 0;
-      var L_1207959626 = (segments_1543520518).length;
+      var L_1207959626 = (segments_1543521694).length;
       Label2: {
           Label3: while (true) {
           if (!(i_1207959625 < L_1207959626)) break Label3;
-            segment_1543520540 = segments_1543520518[chckIndx(i_1207959625, 0, (segments_1543520518).length - 1)];
+            segment_1543521716 = segments_1543521694[chckIndx(i_1207959625, 0, (segments_1543521694).length - 1)];
             Label4: {
-              if (((segment_1543520540).length == 0)) {
+              if (((segment_1543521716).length == 0)) {
               break Label4;
               }
               
-              var unitStr_1543520541 = nimCopy(null, segment_1543520540, NTI33554449);
-              var power_1543520542 = 1;
-              var caretPos_1543520543 = nsuFindChar(unitStr_1543520541, 94, 0, (-1));
-              if ((0 <= caretPos_1543520543)) {
-              var powerStr_1543520562 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543520541, HEX2EHEX2E__stdZenumutils_u105(addInt(caretPos_1543520543, 1), 1));
-              unitStr_1543520541 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1280(unitStr_1543520541, HEX2EHEX2E__stdZstrbasics_u48(0, subInt(caretPos_1543520543, 1))), NTI33554449);
-              if ((nsuStartsWith(powerStr_1543520562, [123]) && nsuEndsWith(powerStr_1543520562, [125]))) {
-              powerStr_1543520562 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(powerStr_1543520562, HEX2EHEX2E__stdZenumutils_u105(1, 2)), NTI33554449);
+              var unitStr_1543521717 = nimCopy(null, segment_1543521716, NTI33554449);
+              var power_1543521718 = 1;
+              var caretPos_1543521719 = nsuFindChar(unitStr_1543521717, 94, 0, (-1));
+              if ((0 <= caretPos_1543521719)) {
+              var powerStr_1543521738 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543521717, HEX2EHEX2E__stdZenumutils_u105(addInt(caretPos_1543521719, 1), 1));
+              unitStr_1543521717 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1280(unitStr_1543521717, HEX2EHEX2E__stdZstrbasics_u48(0, subInt(caretPos_1543521719, 1))), NTI33554449);
+              if ((nsuStartsWith(powerStr_1543521738, [123]) && nsuEndsWith(powerStr_1543521738, [125]))) {
+              powerStr_1543521738 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(powerStr_1543521738, HEX2EHEX2E__stdZenumutils_u105(1, 2)), NTI33554449);
               }
               
 ++excHandler;
               try {
-              power_1543520542 = nsuParseInt(powerStr_1543520562);
+              power_1543521718 = nsuParseInt(powerStr_1543521738);
 --excHandler;
 } catch (EXCEPTION) {
  var prevJSError = lastJSError;
  lastJSError = EXCEPTION;
  --excHandler;
               raiseDefect();
-              power_1543520542 = 1;
+              power_1543521718 = 1;
               lastJSError = prevJSError;
               } finally {
               }
               }
               
-              var prefix_1543520605 = 0;
-              var unit_1543520606 = 0;
-              var customUnitStr_1543520607 = [];
-              var matched_1543520608 = false;
-              if (contains__stdZenumutils_u50([[107,103], [72,122], [109,111,108], [99,100], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118]], unitStr_1543520541)) {
-              unit_1543520606 = shorthandToUnit__OOZsrcZyatexmlZparser_u16622(unitStr_1543520541);
-              matched_1543520608 = true;
+              var prefix_1543521781 = 0;
+              var unit_1543521782 = 0;
+              var customUnitStr_1543521783 = [];
+              var matched_1543521784 = false;
+              if (contains__stdZenumutils_u50([[107,103], [72,122], [109,111,108], [99,100], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118]], unitStr_1543521717)) {
+              unit_1543521782 = shorthandToUnit__OOZsrcZyatexmlZparser_u17798(unitStr_1543521717);
+              matched_1543521784 = true;
               }
               else {
-              if ((contains__pureZstrutils_u1879(unitStr_1543520541, [206,169]) || eqStrings(unitStr_1543520541, [111,104,109]))) {
-              if (((2 < (unitStr_1543520541).length) && nsuEndsWith(unitStr_1543520541, [206,169]))) {
-              var prefixPart_1543520669 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543520541, HEX2EHEX2E__stdZenumutils_u105(0, 3));
-              prefix_1543520605 = shorthandStrToPrefix__OOZsrcZyatexmlZparser_u16628(prefixPart_1543520669);
-              unit_1543520606 = 16;
+              if ((contains__pureZstrutils_u1879(unitStr_1543521717, [206,169]) || eqStrings(unitStr_1543521717, [111,104,109]))) {
+              if (((2 < (unitStr_1543521717).length) && nsuEndsWith(unitStr_1543521717, [206,169]))) {
+              var prefixPart_1543521845 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543521717, HEX2EHEX2E__stdZenumutils_u105(0, 3));
+              prefix_1543521781 = shorthandStrToPrefix__OOZsrcZyatexmlZparser_u17804(prefixPart_1543521845);
+              unit_1543521782 = 16;
               }
               else {
-              if (eqStrings(unitStr_1543520541, [206,169])) {
-              unit_1543520606 = 16;
+              if (eqStrings(unitStr_1543521717, [206,169])) {
+              unit_1543521782 = 16;
               }
               else {
-                unit_1543520606 = 16;
+                unit_1543521782 = 16;
               }
               }
-              matched_1543520608 = true;
+              matched_1543521784 = true;
               }
               else {
-              if (((unitStr_1543520541).length == 1)) {
-              unit_1543520606 = shorthandToUnit__OOZsrcZyatexmlZparser_u16622(unitStr_1543520541);
-              if ((unit_1543520606 == 26)) {
-              customUnitStr_1543520607 = nimCopy(null, unitStr_1543520541, NTI33554449);
+              if (((unitStr_1543521717).length == 1)) {
+              unit_1543521782 = shorthandToUnit__OOZsrcZyatexmlZparser_u17798(unitStr_1543521717);
+              if ((unit_1543521782 == 26)) {
+              customUnitStr_1543521783 = nimCopy(null, unitStr_1543521717, NTI33554449);
               }
               
-              matched_1543520608 = true;
+              matched_1543521784 = true;
               }
               else {
-              if ((2 <= (unitStr_1543520541).length)) {
-              var prefixStr_1543520675 = [];
-              var unitPart_1543520676 = [];
-              if (nsuStartsWith(unitStr_1543520541, [206,188])) {
-              prefixStr_1543520675 = nimCopy(null, [206,188], NTI33554449);
-              unitPart_1543520676 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543520541, HEX2EHEX2E__stdZenumutils_u105(2, 1)), NTI33554449);
+              if ((2 <= (unitStr_1543521717).length)) {
+              var prefixStr_1543521851 = [];
+              var unitPart_1543521852 = [];
+              if (nsuStartsWith(unitStr_1543521717, [206,188])) {
+              prefixStr_1543521851 = nimCopy(null, [206,188], NTI33554449);
+              unitPart_1543521852 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543521717, HEX2EHEX2E__stdZenumutils_u105(2, 1)), NTI33554449);
               }
               else {
-              if (((unitStr_1543520541).length == 2)) {
-              prefixStr_1543520675 = nimCopy(null, nimCharToStr(unitStr_1543520541[chckIndx(0, 0, (unitStr_1543520541).length - 1)]), NTI33554449);
-              unitPart_1543520676 = nimCopy(null, nimCharToStr(unitStr_1543520541[chckIndx(1, 0, (unitStr_1543520541).length - 1)]), NTI33554449);
+              if (((unitStr_1543521717).length == 2)) {
+              prefixStr_1543521851 = nimCopy(null, nimCharToStr(unitStr_1543521717[chckIndx(0, 0, (unitStr_1543521717).length - 1)]), NTI33554449);
+              unitPart_1543521852 = nimCopy(null, nimCharToStr(unitStr_1543521717[chckIndx(1, 0, (unitStr_1543521717).length - 1)]), NTI33554449);
               }
               else {
-              if ((2 < (unitStr_1543520541).length)) {
-              var possibleUnit_1543520713 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543520541, HEX2EHEX2E__stdZenumutils_u105(1, 1));
-              if (contains__stdZenumutils_u50([[72,122], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118], [109,111,108], [99,100]], possibleUnit_1543520713)) {
-              prefixStr_1543520675 = nimCopy(null, nimCharToStr(unitStr_1543520541[chckIndx(0, 0, (unitStr_1543520541).length - 1)]), NTI33554449);
-              unitPart_1543520676 = nimCopy(null, possibleUnit_1543520713, NTI33554449);
+              if ((2 < (unitStr_1543521717).length)) {
+              var possibleUnit_1543521889 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1543521717, HEX2EHEX2E__stdZenumutils_u105(1, 1));
+              if (contains__stdZenumutils_u50([[72,122], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118], [109,111,108], [99,100]], possibleUnit_1543521889)) {
+              prefixStr_1543521851 = nimCopy(null, nimCharToStr(unitStr_1543521717[chckIndx(0, 0, (unitStr_1543521717).length - 1)]), NTI33554449);
+              unitPart_1543521852 = nimCopy(null, possibleUnit_1543521889, NTI33554449);
               }
               else {
-                prefixStr_1543520675 = nimCopy(null, nimCharToStr(unitStr_1543520541[chckIndx(0, 0, (unitStr_1543520541).length - 1)]), NTI33554449);
-                unitPart_1543520676 = nimCopy(null, nimCharToStr(unitStr_1543520541[chckIndx(1, 0, (unitStr_1543520541).length - 1)]), NTI33554449);
+                prefixStr_1543521851 = nimCopy(null, nimCharToStr(unitStr_1543521717[chckIndx(0, 0, (unitStr_1543521717).length - 1)]), NTI33554449);
+                unitPart_1543521852 = nimCopy(null, nimCharToStr(unitStr_1543521717[chckIndx(1, 0, (unitStr_1543521717).length - 1)]), NTI33554449);
               }
               
               }
               }}
-              if ((0 < (unitPart_1543520676).length)) {
-              prefix_1543520605 = shorthandStrToPrefix__OOZsrcZyatexmlZparser_u16628(prefixStr_1543520675);
-              unit_1543520606 = shorthandToUnit__OOZsrcZyatexmlZparser_u16622(unitPart_1543520676);
-              if ((unit_1543520606 == 26)) {
-              customUnitStr_1543520607 = nimCopy(null, unitStr_1543520541, NTI33554449);
-              prefix_1543520605 = 0;
+              if ((0 < (unitPart_1543521852).length)) {
+              prefix_1543521781 = shorthandStrToPrefix__OOZsrcZyatexmlZparser_u17804(prefixStr_1543521851);
+              unit_1543521782 = shorthandToUnit__OOZsrcZyatexmlZparser_u17798(unitPart_1543521852);
+              if ((unit_1543521782 == 26)) {
+              customUnitStr_1543521783 = nimCopy(null, unitStr_1543521717, NTI33554449);
+              prefix_1543521781 = 0;
               }
               
-              matched_1543520608 = true;
+              matched_1543521784 = true;
               }
               
               }
               }}}
-              if (!(matched_1543520608)) {
-              customUnitStr_1543520607 = nimCopy(null, unitStr_1543520541, NTI33554449);
-              matched_1543520608 = true;
+              if (!(matched_1543521784)) {
+              customUnitStr_1543521783 = nimCopy(null, unitStr_1543521717, NTI33554449);
+              matched_1543521784 = true;
               }
               
-              if (matched_1543520608) {
-              if ((0 < (customUnitStr_1543520607).length)) {
-              Temporary6 = newCustomUnitComponent__OOZsrcZyatexmlZast_u789(customUnitStr_1543520607, 0, absInt(power_1543520542));
+              if (matched_1543521784) {
+              if ((0 < (customUnitStr_1543521783).length)) {
+              Temporary6 = newCustomUnitComponent__OOZsrcZyatexmlZast_u789(customUnitStr_1543521783, 0, absInt(power_1543521718));
               }
               else {
-              Temporary6 = newSIUnitComponent__OOZsrcZyatexmlZast_u727(prefix_1543520605, unit_1543520606, absInt(power_1543520542));
+              Temporary6 = newSIUnitComponent__OOZsrcZyatexmlZast_u727(prefix_1543521781, unit_1543521782, absInt(power_1543521718));
               }
               
-              var component_1543520760 = nimCopy(null, Temporary6, NTI1392508941);
-              if ((power_1543520542 < 0)) {
-              var Temporary7 = nimCopy(null, component_1543520760, NTI1392508941);
-              denominator_1543520517.push(Temporary7);;
+              var component_1543521936 = nimCopy(null, Temporary6, NTI1392508941);
+              if ((power_1543521718 < 0)) {
+              var Temporary7 = nimCopy(null, component_1543521936, NTI1392508941);
+              denominator_1543521693.push(Temporary7);;
               }
               else {
-                var Temporary8 = nimCopy(null, component_1543520760, NTI1392508941);
-              numerator_1543520512.push(Temporary8);;
+                var Temporary8 = nimCopy(null, component_1543521936, NTI1392508941);
+              numerator_1543521688.push(Temporary8);;
               }
               
               }
               
             };
             i_1207959625 += 1;
-            if (!(((segments_1543520518).length == L_1207959626))) {
+            if (!(((segments_1543521694).length == L_1207959626))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
           }
       };
     };
-    var colontmp__1207959628 = nimCopy(null, numerator_1543520512, NTI1543512631);
-    var colontmp__1207959629 = nimCopy(null, denominator_1543520517, NTI1543512632);
-    result_1543520507 = nimCopy(result_1543520507, {Field0: nimCopy(null, colontmp__1207959628, NTI1543512631), Field1: nimCopy(null, colontmp__1207959629, NTI1543512632)}, NTI1543512630);
+    var colontmp__1207959628 = nimCopy(null, numerator_1543521688, NTI1543513247);
+    var colontmp__1207959629 = nimCopy(null, denominator_1543521693, NTI1543513248);
+    result_1543521683 = nimCopy(result_1543521683, {Field0: nimCopy(null, colontmp__1207959628, NTI1543513247), Field1: nimCopy(null, colontmp__1207959629, NTI1543513248)}, NTI1543513246);
 
-  return result_1543520507;
+  return result_1543521683;
 
 }
 
-function add__OOZsrcZyatexmlZparser_u17336(x_p0, x_p0_Idx, y_p1) {
+function add__OOZsrcZyatexmlZparser_u18512(x_p0, x_p0_Idx, y_p1) {
     var Temporary1;
 
-    var xl_1543521215 = (x_p0[x_p0_Idx]).length;
-    if (x_p0[x_p0_Idx].length < (Temporary1 = chckRange(addInt(xl_1543521215, (y_p1).length), 0, 2147483647), Temporary1)) { for (var i = x_p0[x_p0_Idx].length ; i < Temporary1 ; ++i) x_p0[x_p0_Idx].push(({unit: 0, customUnit: [], prefix: 0, power: 0})); }
+    var xl_1543522391 = (x_p0[x_p0_Idx]).length;
+    if (x_p0[x_p0_Idx].length < (Temporary1 = chckRange(addInt(xl_1543522391, (y_p1).length), 0, 2147483647), Temporary1)) { for (var i = x_p0[x_p0_Idx].length ; i < Temporary1 ; ++i) x_p0[x_p0_Idx].push(({unit: 0, customUnit: [], prefix: 0, power: 0})); }
                else { x_p0[x_p0_Idx].length = Temporary1; };
     Label2: {
-      var i_1543521230 = 0;
+      var i_1543522406 = 0;
       var colontmp__1207959668 = 0;
       colontmp__1207959668 = (y_p1).length - 1;
       var res_1207959669 = 0;
       Label3: {
           Label4: while (true) {
           if (!(res_1207959669 <= colontmp__1207959668)) break Label4;
-            i_1543521230 = res_1207959669;
-            x_p0[x_p0_Idx][chckIndx(addInt(xl_1543521215, i_1543521230), 0, (x_p0[x_p0_Idx]).length - 1)] = nimCopy(x_p0[x_p0_Idx][chckIndx(addInt(xl_1543521215, i_1543521230), 0, (x_p0[x_p0_Idx]).length - 1)], y_p1[chckIndx(i_1543521230, 0, (y_p1).length - 1)], NTI1392508941);
+            i_1543522406 = res_1207959669;
+            x_p0[x_p0_Idx][chckIndx(addInt(xl_1543522391, i_1543522406), 0, (x_p0[x_p0_Idx]).length - 1)] = nimCopy(x_p0[x_p0_Idx][chckIndx(addInt(xl_1543522391, i_1543522406), 0, (x_p0[x_p0_Idx]).length - 1)], y_p1[chckIndx(i_1543522406, 0, (y_p1).length - 1)], NTI1392508941);
             res_1207959669 = addInt(res_1207959669, 1);
           }
       };
@@ -6716,100 +6828,100 @@ function newSIUnit__OOZsrcZyatexmlZast_u699(numerator_p0, denominator_p1) {
 
 }
 
-function parseSIUnitExpr__OOZsrcZyatexmlZparser_u16948(stream_p0) {
-  var result_1543520823 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function parseSIUnitExpr__OOZsrcZyatexmlZparser_u18124(stream_p0) {
+  var result_1543521999 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var numerator_1543520828 = [[]];
-    var denominator_1543520833 = [[]];
-    var inDenominator_1543520834 = false;
-    var currentPrefix_1543520835 = 0;
-    var currentPower_1543520836 = 1;
+    var numerator_1543522004 = [[]];
+    var denominator_1543522009 = [[]];
+    var inDenominator_1543522010 = false;
+    var currentPrefix_1543522011 = 0;
+    var currentPower_1543522012 = 1;
     Label1: {
         Label2: while (true) {
         if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label2;
-          var token_1543520837 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-          if ((token_1543520837.kind == 0)) {
-          var cmdName_1543520842 = nimCopy(null, token_1543520837.value, NTI33554449);
-          if (hasKey__OOZsrcZyatexmlZparser_u17007(commandTable_1543520462, cmdName_1543520842)) {
-          var cmdInfo_1543521023 = nimCopy(null, HEX5BHEX5D__OOZsrcZyatexmlZparser_u17069(commandTable_1543520462, cmdName_1543520842), NTI1543503876);
-          switch (cmdInfo_1543521023.cmdType) {
+          var token_1543522013 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+          if ((token_1543522013.kind == 0)) {
+          var cmdName_1543522018 = nimCopy(null, token_1543522013.value, NTI33554449);
+          if (hasKey__OOZsrcZyatexmlZparser_u18183(commandTable_1543521638, cmdName_1543522018)) {
+          var cmdInfo_1543522199 = nimCopy(null, HEX5BHEX5D__OOZsrcZyatexmlZparser_u18245(commandTable_1543521638, cmdName_1543522018), NTI1543503876);
+          switch (cmdInfo_1543522199.cmdType) {
           case 18:
             (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-            currentPrefix_1543520835 = cmdNameToSIPrefix__OOZsrcZyatexmlZparser_u16619(cmdName_1543520842);
+            currentPrefix_1543522011 = cmdNameToSIPrefix__OOZsrcZyatexmlZparser_u17795(cmdName_1543522018);
             break;
           case 17:
             (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-            var unitKind_1543521024 = cmdNameToSIUnit__OOZsrcZyatexmlZparser_u16616(cmdName_1543520842);
-            var component_1543521025 = newSIUnitComponent__OOZsrcZyatexmlZast_u727(currentPrefix_1543520835, unitKind_1543521024, currentPower_1543520836);
-            if (inDenominator_1543520834) {
-            var Temporary3 = nimCopy(null, component_1543521025, NTI1392508941);
-            denominator_1543520833[0].push(Temporary3);;
+            var unitKind_1543522200 = cmdNameToSIUnit__OOZsrcZyatexmlZparser_u17792(cmdName_1543522018);
+            var component_1543522201 = newSIUnitComponent__OOZsrcZyatexmlZast_u727(currentPrefix_1543522011, unitKind_1543522200, currentPower_1543522012);
+            if (inDenominator_1543522010) {
+            var Temporary3 = nimCopy(null, component_1543522201, NTI1392508941);
+            denominator_1543522009[0].push(Temporary3);;
             }
             else {
-              var Temporary4 = nimCopy(null, component_1543521025, NTI1392508941);
-            numerator_1543520828[0].push(Temporary4);;
+              var Temporary4 = nimCopy(null, component_1543522201, NTI1392508941);
+            numerator_1543522004[0].push(Temporary4);;
             }
             
-            currentPrefix_1543520835 = 0;
-            currentPower_1543520836 = 1;
+            currentPrefix_1543522011 = 0;
+            currentPower_1543522012 = 1;
             break;
           case 19:
             (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-            switch (toJSStr(cmdName_1543520842)) {
+            switch (toJSStr(cmdName_1543522018)) {
             case "per":
-              inDenominator_1543520834 = true;
+              inDenominator_1543522010 = true;
               break;
             case "squared":
-              if ((inDenominator_1543520834 && (0 < (denominator_1543520833[0]).length))) {
-              HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(denominator_1543520833[0], 1).power = 2;
+              if ((inDenominator_1543522010 && (0 < (denominator_1543522009[0]).length))) {
+              HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(denominator_1543522009[0], 1).power = 2;
               }
               else {
-              if ((0 < (numerator_1543520828[0]).length)) {
-              HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(numerator_1543520828[0], 1).power = 2;
+              if ((0 < (numerator_1543522004[0]).length)) {
+              HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(numerator_1543522004[0], 1).power = 2;
               }
               }
               break;
             case "cubed":
-              if ((inDenominator_1543520834 && (0 < (denominator_1543520833[0]).length))) {
-              HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(denominator_1543520833[0], 1).power = 3;
+              if ((inDenominator_1543522010 && (0 < (denominator_1543522009[0]).length))) {
+              HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(denominator_1543522009[0], 1).power = 3;
               }
               else {
-              if ((0 < (numerator_1543520828[0]).length)) {
-              HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(numerator_1543520828[0], 1).power = 3;
+              if ((0 < (numerator_1543522004[0]).length)) {
+              HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(numerator_1543522004[0], 1).power = 3;
               }
               }
               break;
             case "tothe":
-              var braceResult_1543521083 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-              if (!(braceResult_1543521083.isOk)) {
-              result_1543520823 = nimCopy(result_1543520823, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,111,116,104,101], token_1543520837.position, []), NTI1543512598);
+              var braceResult_1543522259 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+              if (!(braceResult_1543522259.isOk)) {
+              result_1543521999 = nimCopy(result_1543521999, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,111,116,104,101], token_1543522013.position, []), NTI1543513214);
               break BeforeRet;
               }
               
-              var powerStr_1543521139 = [];
+              var powerStr_1543522315 = [];
               Label5: {
                   Label6: while (true) {
                   if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label6;
-                    var powerToken_1543521140 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
-                    powerStr_1543521139.push.apply(powerStr_1543521139, powerToken_1543521140.value);;
+                    var powerToken_1543522316 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
+                    powerStr_1543522315.push.apply(powerStr_1543522315, powerToken_1543522316.value);;
                   }
               };
-              var closeResult_1543521141 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-              if (!(closeResult_1543521141.isOk)) {
-              result_1543520823 = nimCopy(result_1543520823, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,112,111,119,101,114], token_1543520837.position, []), NTI1543512598);
+              var closeResult_1543522317 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+              if (!(closeResult_1543522317.isOk)) {
+              result_1543521999 = nimCopy(result_1543521999, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,112,111,119,101,114], token_1543522013.position, []), NTI1543513214);
               break BeforeRet;
               }
               
 ++excHandler;
               try {
-              var power_1543521163 = nsuParseInt(powerStr_1543521139);
-              if ((inDenominator_1543520834 && (0 < (denominator_1543520833[0]).length))) {
-              HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(denominator_1543520833[0], 1).power = power_1543521163;
+              var power_1543522339 = nsuParseInt(powerStr_1543522315);
+              if ((inDenominator_1543522010 && (0 < (denominator_1543522009[0]).length))) {
+              HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(denominator_1543522009[0], 1).power = power_1543522339;
               }
               else {
-              if ((0 < (numerator_1543520828[0]).length)) {
-              HEX5BHEX5D__OOZsrcZyatexmlZparser_u17165(numerator_1543520828[0], 1).power = power_1543521163;
+              if ((0 < (numerator_1543522004[0]).length)) {
+              HEX5BHEX5D__OOZsrcZyatexmlZparser_u18341(numerator_1543522004[0], 1).power = power_1543522339;
               }
               }
 --excHandler;
@@ -6837,38 +6949,38 @@ function parseSIUnitExpr__OOZsrcZyatexmlZparser_u16948(stream_p0) {
           
           }
           else {
-            var shorthandStr_1543521178 = [];
-            var braceDepth_1543521179 = 0;
+            var shorthandStr_1543522354 = [];
+            var braceDepth_1543522355 = 0;
             Label8: {
                 Label9: while (true) {
                 if (!!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0))) break Label9;
-                  var t_1543521180 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-                  if (((t_1543521180.kind == 2) && (braceDepth_1543521179 == 0))) {
+                  var t_1543522356 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+                  if (((t_1543522356.kind == 2) && (braceDepth_1543522355 == 0))) {
                   break Label8;
                   }
                   
-                  if (((t_1543521180.kind == 0) && (braceDepth_1543521179 == 0))) {
+                  if (((t_1543522356.kind == 0) && (braceDepth_1543522355 == 0))) {
                   break Label8;
                   }
                   
-                  if ((t_1543521180.kind == 1)) {
-                  braceDepth_1543521179 = addInt(braceDepth_1543521179, 1);
+                  if ((t_1543522356.kind == 1)) {
+                  braceDepth_1543522355 = addInt(braceDepth_1543522355, 1);
                   }
                   else {
-                  if ((t_1543521180.kind == 2)) {
-                  braceDepth_1543521179 = subInt(braceDepth_1543521179, 1);
+                  if ((t_1543522356.kind == 2)) {
+                  braceDepth_1543522355 = subInt(braceDepth_1543522355, 1);
                   }
                   }
-                  shorthandStr_1543521178.push.apply(shorthandStr_1543521178, t_1543521180.value);;
+                  shorthandStr_1543522354.push.apply(shorthandStr_1543522354, t_1543522356.value);;
                   (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 }
             };
-            if ((0 < (shorthandStr_1543521178).length)) {
-            var tmpTuple_1543521205 = parseShorthandUnits__OOZsrcZyatexmlZparser_u16631(shorthandStr_1543521178);
-            var shortNum_1543521206 = nimCopy(null, tmpTuple_1543521205["Field0"], NTI1543512631);
-            var shortDenom_1543521207 = nimCopy(null, tmpTuple_1543521205["Field1"], NTI1543512632);
-            add__OOZsrcZyatexmlZparser_u17336(numerator_1543520828, 0, shortNum_1543521206);
-            add__OOZsrcZyatexmlZparser_u17336(denominator_1543520833, 0, shortDenom_1543521207);
+            if ((0 < (shorthandStr_1543522354).length)) {
+            var tmpTuple_1543522381 = parseShorthandUnits__OOZsrcZyatexmlZparser_u17807(shorthandStr_1543522354);
+            var shortNum_1543522382 = nimCopy(null, tmpTuple_1543522381["Field0"], NTI1543513247);
+            var shortDenom_1543522383 = nimCopy(null, tmpTuple_1543522381["Field1"], NTI1543513248);
+            add__OOZsrcZyatexmlZparser_u18512(numerator_1543522004, 0, shortNum_1543522382);
+            add__OOZsrcZyatexmlZparser_u18512(denominator_1543522009, 0, shortDenom_1543522383);
             break Label1;
             }
             
@@ -6876,11 +6988,11 @@ function parseSIUnitExpr__OOZsrcZyatexmlZparser_u16948(stream_p0) {
           
         }
     };
-    result_1543520823 = nimCopy(result_1543520823, ok__OOZsrcZyatexmlZparser_u17363(newSIUnit__OOZsrcZyatexmlZast_u699(numerator_1543520828[0], denominator_1543520833[0])), NTI1543512598);
+    result_1543521999 = nimCopy(result_1543521999, ok__OOZsrcZyatexmlZparser_u18539(newSIUnit__OOZsrcZyatexmlZast_u699(numerator_1543522004[0], denominator_1543522009[0])), NTI1543513214);
     break BeforeRet;
   };
 
-  return result_1543520823;
+  return result_1543521999;
 
 }
 
@@ -6893,21 +7005,21 @@ function newSIValue__OOZsrcZyatexmlZast_u723(value_p0, unit_p1) {
 
 }
 
-function err__OOZsrcZyatexmlZparser_u17412(kind_p0, message_p1, position_p2, context_p3) {
-  var result_1543521290 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+function err__OOZsrcZyatexmlZparser_u18588(kind_p0, message_p1, position_p2, context_p3) {
+  var result_1543522466 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1543521290 = nimCopy(result_1543521290, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: false}, NTI1543513142);
+    result_1543522466 = nimCopy(result_1543522466, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: false}, NTI1543513758);
 
-  return result_1543521290;
+  return result_1543522466;
 
 }
 
-function err__OOZsrcZyatexmlZparser_u17469(error_p0) {
-  var result_1543521344 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+function err__OOZsrcZyatexmlZparser_u18645(error_p0) {
+  var result_1543522520 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1543521344 = nimCopy(result_1543521344, {isOk: false, error: nimCopy(null, error_p0, NTI1358954500), value: false}, NTI1543513142);
+    result_1543522520 = nimCopy(result_1543522520, {isOk: false, error: nimCopy(null, error_p0, NTI1358954500), value: false}, NTI1543513758);
 
-  return result_1543521344;
+  return result_1543522520;
 
 }
 
@@ -7064,186 +7176,186 @@ function defineMacro__OOZsrcZyatexmlZmacros_u102(registry_p0, name_p1, numArgs_p
   
 }
 
-function ok__OOZsrcZyatexmlZparser_u17509(value_p0) {
-  var result_1543521384 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+function ok__OOZsrcZyatexmlZparser_u18685(value_p0) {
+  var result_1543522560 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1543521384 = nimCopy(result_1543521384, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1543513142);
+    result_1543522560 = nimCopy(result_1543522560, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1543513758);
 
-  return result_1543521384;
+  return result_1543522560;
 
 }
 
-function parseMacroDef__OOZsrcZyatexmlZparser_u17383(stream_p0, cmdName_p1, position_p2) {
+function parseMacroDef__OOZsrcZyatexmlZparser_u18559(stream_p0, cmdName_p1, position_p2) {
     var Temporary1;
     var Temporary7;
     var Temporary8;
     var Temporary10;
     var Temporary11;
 
-  var result_1543521263 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543522439 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
     if (eqStrings(cmdName_p1, [100,101,102])) {
-    var macroToken_1543521264 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-    if (!((macroToken_1543521264.kind == 0))) {
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17412(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,97,102,116,101,114,32,92,100,101,102], position_p2, []), NTI1543513142);
+    var macroToken_1543522440 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+    if (!((macroToken_1543522440.kind == 0))) {
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18588(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,97,102,116,101,114,32,92,100,101,102], position_p2, []), NTI1543513758);
     break BeforeRet;
     }
     
-    var macroName_1543521324 = nimCopy(null, macroToken_1543521264.value, NTI33554449);
+    var macroName_1543522500 = nimCopy(null, macroToken_1543522440.value, NTI33554449);
     (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-    var bodyResult_1543521325 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-    if (!(bodyResult_1543521325.isOk)) {
-    var Temporary1 = bodyResult_1543521325;
+    var bodyResult_1543522501 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+    if (!(bodyResult_1543522501.isOk)) {
+    var Temporary1 = bodyResult_1543522501;
     if (ConstSet127[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17469(Temporary1.error), NTI1543513142);
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18645(Temporary1.error), NTI1543513758);
     break BeforeRet;
     }
     
-    var body_1543521350 = [];
-    var braceDepth_1543521351 = 1;
+    var body_1543522526 = [];
+    var braceDepth_1543522527 = 1;
     Label2: {
         Label3: while (true) {
-        if (!(!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1543521351))) break Label3;
-          var t_1543521352 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-          if ((t_1543521352.kind == 1)) {
-          braceDepth_1543521351 = addInt(braceDepth_1543521351, 1);
-          var Temporary4 = nimCopy(null, t_1543521352, NTI1409286148);
-          body_1543521350.push(Temporary4);;
+        if (!(!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1543522527))) break Label3;
+          var t_1543522528 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+          if ((t_1543522528.kind == 1)) {
+          braceDepth_1543522527 = addInt(braceDepth_1543522527, 1);
+          var Temporary4 = nimCopy(null, t_1543522528, NTI1409286148);
+          body_1543522526.push(Temporary4);;
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
           }
           else {
-          if ((t_1543521352.kind == 2)) {
-          braceDepth_1543521351 = subInt(braceDepth_1543521351, 1);
-          if ((0 < braceDepth_1543521351)) {
-          var Temporary5 = nimCopy(null, t_1543521352, NTI1409286148);
-          body_1543521350.push(Temporary5);;
+          if ((t_1543522528.kind == 2)) {
+          braceDepth_1543522527 = subInt(braceDepth_1543522527, 1);
+          if ((0 < braceDepth_1543522527)) {
+          var Temporary5 = nimCopy(null, t_1543522528, NTI1409286148);
+          body_1543522526.push(Temporary5);;
           }
           
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
           }
           else {
-            var Temporary6 = nimCopy(null, t_1543521352, NTI1409286148);
-            body_1543521350.push(Temporary6);;
+            var Temporary6 = nimCopy(null, t_1543522528, NTI1409286148);
+            body_1543522526.push(Temporary6);;
             (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
           }
           }
         }
     };
-    defineMacro__OOZsrcZyatexmlZmacros_u102(globalMacroRegistry_1543503911[0], macroName_1543521324, 0, body_1543521350);
-    result_1543521263 = nimCopy(result_1543521263, ok__OOZsrcZyatexmlZparser_u17509(true), NTI1543513142);
+    defineMacro__OOZsrcZyatexmlZmacros_u102(globalMacroRegistry_1543503911[0], macroName_1543522500, 0, body_1543522526);
+    result_1543522439 = nimCopy(result_1543522439, ok__OOZsrcZyatexmlZparser_u18685(true), NTI1543513758);
     break BeforeRet;
     }
     else {
     if (eqStrings(cmdName_p1, [110,101,119,99,111,109,109,97,110,100])) {
-    var braceResult_1543521386 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-    if (!(braceResult_1543521386.isOk)) {
-    var Temporary7 = braceResult_1543521386;
+    var braceResult_1543522562 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+    if (!(braceResult_1543522562.isOk)) {
+    var Temporary7 = braceResult_1543522562;
     if (ConstSet128[Temporary7.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary7.isOk, NTI33554466)); }
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17469(Temporary7.error), NTI1543513142);
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18645(Temporary7.error), NTI1543513758);
     break BeforeRet;
     }
     
-    var macroToken_1543521405 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-    if (!((macroToken_1543521405.kind == 0))) {
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17412(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], position_p2, []), NTI1543513142);
+    var macroToken_1543522581 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+    if (!((macroToken_1543522581.kind == 0))) {
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18588(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], position_p2, []), NTI1543513758);
     break BeforeRet;
     }
     
-    var macroName_1543521431 = nimCopy(null, macroToken_1543521405.value, NTI33554449);
+    var macroName_1543522607 = nimCopy(null, macroToken_1543522581.value, NTI33554449);
     (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-    var closeResult_1543521432 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-    if (!(closeResult_1543521432.isOk)) {
-    var Temporary8 = closeResult_1543521432;
+    var closeResult_1543522608 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+    if (!(closeResult_1543522608.isOk)) {
+    var Temporary8 = closeResult_1543522608;
     if (ConstSet129[Temporary8.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary8.isOk, NTI33554466)); }
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17469(Temporary8.error), NTI1543513142);
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18645(Temporary8.error), NTI1543513758);
     break BeforeRet;
     }
     
-    var numArgs_1543521451 = 0;
+    var numArgs_1543522627 = 0;
     if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 5)) {
     (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-    var argToken_1543521452 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-    if (!((argToken_1543521452.kind == 14))) {
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17412(4, [69,120,112,101,99,116,101,100,32,110,117,109,98,101,114,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116], argToken_1543521452.position, []), NTI1543513142);
+    var argToken_1543522628 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+    if (!((argToken_1543522628.kind == 14))) {
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18588(4, [69,120,112,101,99,116,101,100,32,110,117,109,98,101,114,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116], argToken_1543522628.position, []), NTI1543513758);
     break BeforeRet;
     }
     
 ++excHandler;
     try {
-    numArgs_1543521451 = nsuParseInt(argToken_1543521452.value);
+    numArgs_1543522627 = nsuParseInt(argToken_1543522628.value);
 --excHandler;
 } catch (EXCEPTION) {
  var prevJSError = lastJSError;
  lastJSError = EXCEPTION;
  --excHandler;
     raiseDefect();
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17412(4, [73,110,118,97,108,105,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], argToken_1543521452.position, []), NTI1543513142);
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18588(4, [73,110,118,97,108,105,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], argToken_1543522628.position, []), NTI1543513758);
     break BeforeRet;
     lastJSError = prevJSError;
     } finally {
     }
     (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-    var closeBracketResult_1543521499 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 6);
-    if (!(closeBracketResult_1543521499.isOk)) {
-    var Temporary10 = closeBracketResult_1543521499;
+    var closeBracketResult_1543522675 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 6);
+    if (!(closeBracketResult_1543522675.isOk)) {
+    var Temporary10 = closeBracketResult_1543522675;
     if (ConstSet130[Temporary10.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary10.isOk, NTI33554466)); }
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17469(Temporary10.error), NTI1543513142);
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18645(Temporary10.error), NTI1543513758);
     break BeforeRet;
     }
     
     }
     
-    var bodyBraceResult_1543521518 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-    if (!(bodyBraceResult_1543521518.isOk)) {
-    var Temporary11 = bodyBraceResult_1543521518;
+    var bodyBraceResult_1543522694 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+    if (!(bodyBraceResult_1543522694.isOk)) {
+    var Temporary11 = bodyBraceResult_1543522694;
     if (ConstSet131[Temporary11.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary11.isOk, NTI33554466)); }
-    result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17469(Temporary11.error), NTI1543513142);
+    result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18645(Temporary11.error), NTI1543513758);
     break BeforeRet;
     }
     
-    var body_1543521541 = [];
-    var braceDepth_1543521542 = 1;
+    var body_1543522717 = [];
+    var braceDepth_1543522718 = 1;
     Label12: {
         Label13: while (true) {
-        if (!(!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1543521542))) break Label13;
-          var t_1543521543 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-          if ((t_1543521543.kind == 1)) {
-          braceDepth_1543521542 = addInt(braceDepth_1543521542, 1);
-          var Temporary14 = nimCopy(null, t_1543521543, NTI1409286148);
-          body_1543521541.push(Temporary14);;
+        if (!(!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1543522718))) break Label13;
+          var t_1543522719 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+          if ((t_1543522719.kind == 1)) {
+          braceDepth_1543522718 = addInt(braceDepth_1543522718, 1);
+          var Temporary14 = nimCopy(null, t_1543522719, NTI1409286148);
+          body_1543522717.push(Temporary14);;
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
           }
           else {
-          if ((t_1543521543.kind == 2)) {
-          braceDepth_1543521542 = subInt(braceDepth_1543521542, 1);
-          if ((0 < braceDepth_1543521542)) {
-          var Temporary15 = nimCopy(null, t_1543521543, NTI1409286148);
-          body_1543521541.push(Temporary15);;
+          if ((t_1543522719.kind == 2)) {
+          braceDepth_1543522718 = subInt(braceDepth_1543522718, 1);
+          if ((0 < braceDepth_1543522718)) {
+          var Temporary15 = nimCopy(null, t_1543522719, NTI1409286148);
+          body_1543522717.push(Temporary15);;
           }
           
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
           }
           else {
-            var Temporary16 = nimCopy(null, t_1543521543, NTI1409286148);
-            body_1543521541.push(Temporary16);;
+            var Temporary16 = nimCopy(null, t_1543522719, NTI1409286148);
+            body_1543522717.push(Temporary16);;
             (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
           }
           }
         }
     };
-    defineMacro__OOZsrcZyatexmlZmacros_u102(globalMacroRegistry_1543503911[0], macroName_1543521431, numArgs_1543521451, body_1543521541);
-    result_1543521263 = nimCopy(result_1543521263, ok__OOZsrcZyatexmlZparser_u17509(true), NTI1543513142);
+    defineMacro__OOZsrcZyatexmlZmacros_u102(globalMacroRegistry_1543503911[0], macroName_1543522607, numArgs_1543522627, body_1543522717);
+    result_1543522439 = nimCopy(result_1543522439, ok__OOZsrcZyatexmlZparser_u18685(true), NTI1543513758);
     break BeforeRet;
     }
     else {
-      result_1543521263 = nimCopy(result_1543521263, err__OOZsrcZyatexmlZparser_u17412(2, ([85,110,107,110,111,119,110,32,109,97,99,114,111,32,100,101,102,105,110,105,116,105,111,110,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_p1), position_p2, []), NTI1543513142);
+      result_1543522439 = nimCopy(result_1543522439, err__OOZsrcZyatexmlZparser_u18588(2, ([85,110,107,110,111,119,110,32,109,97,99,114,111,32,100,101,102,105,110,105,116,105,111,110,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_p1), position_p2, []), NTI1543513758);
       break BeforeRet;
     }
     }
   };
 
-  return result_1543521263;
+  return result_1543522439;
 
 }
 
@@ -7371,74 +7483,74 @@ function expandMacro__OOZsrcZyatexmlZmacros_u1550(registry_p0, macroDef_p1, args
 
 }
 
-function expandMacroInStream__OOZsrcZyatexmlZparser_u17724(stream_p0, macroName_p1, macroDef_p2) {
+function expandMacroInStream__OOZsrcZyatexmlZparser_u18900(stream_p0, macroName_p1, macroDef_p2) {
             var Temporary4;
 
-  var result_1543521601 = ({isOk: false, value: [], error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543522777 = ({isOk: false, value: [], error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var args_1543521606 = [];
+    var args_1543522782 = [];
     Label1: {
-      var i_1543521611 = 0;
+      var i_1543522787 = 0;
       var i_1207959683 = 0;
       Label2: {
           Label3: while (true) {
           if (!(i_1207959683 < macroDef_p2.numArgs)) break Label3;
-            i_1543521611 = i_1207959683;
-            var braceResult_1543521612 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-            if (!(braceResult_1543521612.isOk)) {
-            var Temporary4 = braceResult_1543521612;
+            i_1543522787 = i_1207959683;
+            var braceResult_1543522788 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+            if (!(braceResult_1543522788.isOk)) {
+            var Temporary4 = braceResult_1543522788;
             if (ConstSet133[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-            result_1543521601 = nimCopy(result_1543521601, err__OOZsrcZyatexmlZlexer_u407(Temporary4.error), NTI1409286277);
+            result_1543522777 = nimCopy(result_1543522777, err__OOZsrcZyatexmlZlexer_u407(Temporary4.error), NTI1409286277);
             break BeforeRet;
             }
             
-            var argTokens_1543521635 = [];
-            var braceDepth_1543521636 = 1;
+            var argTokens_1543522811 = [];
+            var braceDepth_1543522812 = 1;
             Label5: {
                 Label6: while (true) {
-                if (!(!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1543521636))) break Label6;
-                  var t_1543521637 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-                  if ((t_1543521637.kind == 1)) {
-                  braceDepth_1543521636 = addInt(braceDepth_1543521636, 1);
-                  var Temporary7 = nimCopy(null, t_1543521637, NTI1409286148);
-                  argTokens_1543521635.push(Temporary7);;
+                if (!(!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1543522812))) break Label6;
+                  var t_1543522813 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+                  if ((t_1543522813.kind == 1)) {
+                  braceDepth_1543522812 = addInt(braceDepth_1543522812, 1);
+                  var Temporary7 = nimCopy(null, t_1543522813, NTI1409286148);
+                  argTokens_1543522811.push(Temporary7);;
                   (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                   }
                   else {
-                  if ((t_1543521637.kind == 2)) {
-                  braceDepth_1543521636 = subInt(braceDepth_1543521636, 1);
-                  if ((0 < braceDepth_1543521636)) {
-                  var Temporary8 = nimCopy(null, t_1543521637, NTI1409286148);
-                  argTokens_1543521635.push(Temporary8);;
+                  if ((t_1543522813.kind == 2)) {
+                  braceDepth_1543522812 = subInt(braceDepth_1543522812, 1);
+                  if ((0 < braceDepth_1543522812)) {
+                  var Temporary8 = nimCopy(null, t_1543522813, NTI1409286148);
+                  argTokens_1543522811.push(Temporary8);;
                   }
                   
                   (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                   }
                   else {
-                    var Temporary9 = nimCopy(null, t_1543521637, NTI1409286148);
-                    argTokens_1543521635.push(Temporary9);;
+                    var Temporary9 = nimCopy(null, t_1543522813, NTI1409286148);
+                    argTokens_1543522811.push(Temporary9);;
                     (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                   }
                   }
                 }
             };
-            var Temporary10 = nimCopy(null, argTokens_1543521635, NTI1543513392);
-            args_1543521606.push(Temporary10);;
+            var Temporary10 = nimCopy(null, argTokens_1543522811, NTI1543514008);
+            args_1543522782.push(Temporary10);;
             i_1207959683 = addInt(i_1207959683, 1);
           }
       };
     };
-    var expandedTokens_1543521670 = expandMacro__OOZsrcZyatexmlZmacros_u1550(globalMacroRegistry_1543503911[0], macroDef_p2, args_1543521606);
-    result_1543521601 = nimCopy(result_1543521601, ok__OOZsrcZyatexmlZlexer_u343(expandedTokens_1543521670), NTI1409286277);
+    var expandedTokens_1543522846 = expandMacro__OOZsrcZyatexmlZmacros_u1550(globalMacroRegistry_1543503911[0], macroDef_p2, args_1543522782);
+    result_1543522777 = nimCopy(result_1543522777, ok__OOZsrcZyatexmlZlexer_u343(expandedTokens_1543522846), NTI1409286277);
     break BeforeRet;
   };
 
-  return result_1543521601;
+  return result_1543522777;
 
 }
 
-function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
+function parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0) {
       var Temporary1;
       var Temporary2;
       var Temporary3;
@@ -7494,147 +7606,147 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
       var Temporary65;
         var Temporary66;
 
-  var result_1543521709 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543522885 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var token_1543521710 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-    switch (token_1543521710.kind) {
+    var token_1543522886 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+    switch (token_1543522886.kind) {
     case 14:
       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-      result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newNumber__OOZsrcZyatexmlZast_u246(token_1543521710.value)), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newNumber__OOZsrcZyatexmlZast_u246(token_1543522886.value)), NTI1543513214);
       break BeforeRet;
       break;
     case 13:
       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-      result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newIdentifier__OOZsrcZyatexmlZast_u484(token_1543521710.value)), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newIdentifier__OOZsrcZyatexmlZast_u484(token_1543522886.value)), NTI1543513214);
       break BeforeRet;
       break;
     case 15:
       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-      var unicode_1543521717 = operatorToUnicode__OOZsrcZyatexmlZparser_u16613(token_1543521710.value);
-      result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newOperator__OOZsrcZyatexmlZast_u491(token_1543521710.value, unicode_1543521717, [105,110,102,105,120])), NTI1543512598);
+      var unicode_1543522893 = operatorToUnicode__OOZsrcZyatexmlZparser_u17789(token_1543522886.value);
+      result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newOperator__OOZsrcZyatexmlZast_u491(token_1543522886.value, unicode_1543522893, [105,110,102,105,120])), NTI1543513214);
       break BeforeRet;
       break;
     case 1:
-      result_1543521709 = nimCopy(result_1543521709, parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0), NTI1543513214);
       break BeforeRet;
       break;
     case 3:
       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-      var exprResult_1543521721 = parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0);
-      if (!(exprResult_1543521721.isOk)) {
-      var Temporary1 = exprResult_1543521721;
+      var exprResult_1543522897 = parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0);
+      if (!(exprResult_1543522897.isOk)) {
+      var Temporary1 = exprResult_1543522897;
       if (ConstSet45[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
-      result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary1.error), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary1.error), NTI1543513214);
       break BeforeRet;
       }
       
-      var closeResult_1543521742 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 4);
-      if (!(closeResult_1543521742.isOk)) {
-      var Temporary2 = closeResult_1543521742;
+      var closeResult_1543522918 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 4);
+      if (!(closeResult_1543522918.isOk)) {
+      var Temporary2 = closeResult_1543522918;
       if (ConstSet46[Temporary2.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary2.isOk, NTI33554466)); }
-      result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary2.error), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary2.error), NTI1543513214);
       break BeforeRet;
       }
       
-      var Temporary3 = exprResult_1543521721;
+      var Temporary3 = exprResult_1543522897;
       if (ConstSet47[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
-      result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newDelimited__OOZsrcZyatexmlZast_u620([40], [41], Temporary3.value)), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newDelimited__OOZsrcZyatexmlZast_u620([40], [41], Temporary3.value)), NTI1543513214);
       break BeforeRet;
       break;
     case 0:
       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-      var cmdName_1543521764 = nimCopy(null, token_1543521710.value, NTI33554449);
-      if (contains__OOZsrcZyatexmlZparser_u17931(commandTable_1543520462, cmdName_1543521764)) {
-      var cmdInfo_1543521883 = nimCopy(null, HEX5BHEX5D__OOZsrcZyatexmlZparser_u17069(commandTable_1543520462, cmdName_1543521764), NTI1543503876);
-      switch (cmdInfo_1543521883.cmdType) {
+      var cmdName_1543522940 = nimCopy(null, token_1543522886.value, NTI33554449);
+      if (contains__OOZsrcZyatexmlZparser_u19107(commandTable_1543521638, cmdName_1543522940)) {
+      var cmdInfo_1543523059 = nimCopy(null, HEX5BHEX5D__OOZsrcZyatexmlZparser_u18245(commandTable_1543521638, cmdName_1543522940), NTI1543503876);
+      switch (cmdInfo_1543523059.cmdType) {
       case 0:
-        var numResult_1543521884 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(numResult_1543521884.isOk)) {
-        var Temporary4 = numResult_1543521884;
+        var numResult_1543523060 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(numResult_1543523060.isOk)) {
+        var Temporary4 = numResult_1543523060;
         if (ConstSet48[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary4.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary4.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var denomResult_1543521903 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(denomResult_1543521903.isOk)) {
-        var Temporary5 = denomResult_1543521903;
+        var denomResult_1543523079 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(denomResult_1543523079.isOk)) {
+        var Temporary5 = denomResult_1543523079;
         if (ConstSet49[Temporary5.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary5.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary5.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary5.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var isContinued_1543521922 = eqStrings(cmdName_1543521764, [99,102,114,97,99]);
-        var Temporary6 = numResult_1543521884;
+        var isContinued_1543523098 = eqStrings(cmdName_1543522940, [99,102,114,97,99]);
+        var Temporary6 = numResult_1543523060;
         if (ConstSet50[Temporary6.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary6.isOk, NTI33554466)); }
-        var Temporary7 = denomResult_1543521903;
+        var Temporary7 = denomResult_1543523079;
         if (ConstSet51[Temporary7.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary7.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newFrac__OOZsrcZyatexmlZast_u575(Temporary6.value, Temporary7.value, isContinued_1543521922)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newFrac__OOZsrcZyatexmlZast_u575(Temporary6.value, Temporary7.value, isContinued_1543523098)), NTI1543513214);
         break BeforeRet;
         break;
       case 1:
         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 5)) {
         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-        var indexResult_1543521926 = parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0);
-        if (!(indexResult_1543521926.isOk)) {
-        var Temporary8 = indexResult_1543521926;
+        var indexResult_1543523102 = parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0);
+        if (!(indexResult_1543523102.isOk)) {
+        var Temporary8 = indexResult_1543523102;
         if (ConstSet52[Temporary8.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary8.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary8.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary8.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var closeResult_1543521945 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 6);
-        if (!(closeResult_1543521945.isOk)) {
-        var Temporary9 = closeResult_1543521945;
+        var closeResult_1543523121 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 6);
+        if (!(closeResult_1543523121.isOk)) {
+        var Temporary9 = closeResult_1543523121;
         if (ConstSet53[Temporary9.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary9.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary9.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary9.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var baseResult_1543521964 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(baseResult_1543521964.isOk)) {
-        var Temporary10 = baseResult_1543521964;
+        var baseResult_1543523140 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(baseResult_1543523140.isOk)) {
+        var Temporary10 = baseResult_1543523140;
         if (ConstSet54[Temporary10.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary10.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary10.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary10.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary11 = baseResult_1543521964;
+        var Temporary11 = baseResult_1543523140;
         if (ConstSet55[Temporary11.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary11.isOk, NTI33554466)); }
-        var Temporary12 = indexResult_1543521926;
+        var Temporary12 = indexResult_1543523102;
         if (ConstSet56[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newRoot__OOZsrcZyatexmlZast_u505(Temporary11.value, Temporary12.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newRoot__OOZsrcZyatexmlZast_u505(Temporary11.value, Temporary12.value)), NTI1543513214);
         break BeforeRet;
         }
         else {
-          var baseResult_1543521986 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-          if (!(baseResult_1543521986.isOk)) {
-          var Temporary13 = baseResult_1543521986;
+          var baseResult_1543523162 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+          if (!(baseResult_1543523162.isOk)) {
+          var Temporary13 = baseResult_1543523162;
           if (ConstSet57[Temporary13.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary13.isOk, NTI33554466)); }
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary13.error), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary13.error), NTI1543513214);
           break BeforeRet;
           }
           
-          var Temporary14 = baseResult_1543521986;
+          var Temporary14 = baseResult_1543523162;
           if (ConstSet58[Temporary14.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary14.isOk, NTI33554466)); }
-          result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSqrt__OOZsrcZyatexmlZast_u502(Temporary14.value)), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSqrt__OOZsrcZyatexmlZast_u502(Temporary14.value)), NTI1543513214);
           break BeforeRet;
         }
         
         break;
       case 2:
-        var unicode_1543522008 = greekToUnicode__OOZsrcZyatexmlZparser_u16610(cmdName_1543521764);
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSymbol__OOZsrcZyatexmlZast_u487(cmdName_1543521764, unicode_1543522008)), NTI1543512598);
+        var unicode_1543523184 = greekToUnicode__OOZsrcZyatexmlZparser_u17786(cmdName_1543522940);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSymbol__OOZsrcZyatexmlZast_u487(cmdName_1543522940, unicode_1543523184)), NTI1543513214);
         break BeforeRet;
         break;
       case 3:
-        var unicode_1543522012 = operatorToUnicode__OOZsrcZyatexmlZparser_u16613(cmdName_1543521764);
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newOperator__OOZsrcZyatexmlZast_u491(cmdName_1543521764, unicode_1543522012, [105,110,102,105,120])), NTI1543512598);
+        var unicode_1543523188 = operatorToUnicode__OOZsrcZyatexmlZparser_u17789(cmdName_1543522940);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newOperator__OOZsrcZyatexmlZast_u491(cmdName_1543522940, unicode_1543523188, [105,110,102,105,120])), NTI1543513214);
         break BeforeRet;
         break;
       case 4:
-        switch (toJSStr(cmdName_1543521764)) {
+        switch (toJSStr(cmdName_1543522940)) {
         case "mathbf":
           Temporary15 = 0;
           break;
@@ -7663,22 +7775,22 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
           Temporary15 = 2;
           break;
         }
-        var styleKind_1543522016 = Temporary15;
-        var argResult_1543522017 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(argResult_1543522017.isOk)) {
-        var Temporary16 = argResult_1543522017;
+        var styleKind_1543523192 = Temporary15;
+        var argResult_1543523193 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(argResult_1543523193.isOk)) {
+        var Temporary16 = argResult_1543523193;
         if (ConstSet59[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary16.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary16.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary17 = argResult_1543522017;
+        var Temporary17 = argResult_1543523193;
         if (ConstSet60[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newStyle__OOZsrcZyatexmlZast_u529(styleKind_1543522016, Temporary17.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newStyle__OOZsrcZyatexmlZast_u529(styleKind_1543523192, Temporary17.value)), NTI1543513214);
         break BeforeRet;
         break;
       case 5:
-        switch (toJSStr(cmdName_1543521764)) {
+        switch (toJSStr(cmdName_1543522940)) {
         case "displaystyle":
           Temporary18 = 0;
           break;
@@ -7695,26 +7807,26 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
           Temporary18 = 1;
           break;
         }
-        var mathStyleKind_1543522039 = Temporary18;
-        var argResult_1543522040 = parseRestOfGroup__OOZsrcZyatexmlZparser_u16607(stream_p0);
-        if (!(argResult_1543522040.isOk)) {
-        var Temporary19 = argResult_1543522040;
+        var mathStyleKind_1543523215 = Temporary18;
+        var argResult_1543523216 = parseRestOfGroup__OOZsrcZyatexmlZparser_u17783(stream_p0);
+        if (!(argResult_1543523216.isOk)) {
+        var Temporary19 = argResult_1543523216;
         if (ConstSet81[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary19.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary19.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary20 = argResult_1543522040;
+        var Temporary20 = argResult_1543523216;
         if (ConstSet82[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newMathStyle__OOZsrcZyatexmlZast_u549(mathStyleKind_1543522039, Temporary20.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newMathStyle__OOZsrcZyatexmlZast_u549(mathStyleKind_1543523215, Temporary20.value)), NTI1543513214);
         break BeforeRet;
         break;
       case 15:
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newPhantom__OOZsrcZyatexmlZast_u573()), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newPhantom__OOZsrcZyatexmlZast_u573()), NTI1543513214);
         break BeforeRet;
         break;
       case 6:
-        switch (toJSStr(cmdName_1543521764)) {
+        switch (toJSStr(cmdName_1543522940)) {
         case "hat":
           Temporary21 = 0;
           break;
@@ -7761,22 +7873,22 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
           Temporary21 = 0;
           break;
         }
-        var accentKind_1543522065 = Temporary21;
-        var argResult_1543522066 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(argResult_1543522066.isOk)) {
-        var Temporary22 = argResult_1543522066;
+        var accentKind_1543523241 = Temporary21;
+        var argResult_1543523242 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(argResult_1543523242.isOk)) {
+        var Temporary22 = argResult_1543523242;
         if (ConstSet83[Temporary22.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary22.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary22.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary22.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary23 = argResult_1543522066;
+        var Temporary23 = argResult_1543523242;
         if (ConstSet84[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newAccent__OOZsrcZyatexmlZast_u509(accentKind_1543522065, Temporary23.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newAccent__OOZsrcZyatexmlZast_u509(accentKind_1543523241, Temporary23.value)), NTI1543513214);
         break BeforeRet;
         break;
       case 7:
-        switch (toJSStr(cmdName_1543521764)) {
+        switch (toJSStr(cmdName_1543522940)) {
         case "sum":
           Temporary24 = 0;
           break;
@@ -7814,233 +7926,233 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
           Temporary24 = 0;
           break;
         }
-        var bigopKind_1543522088 = Temporary24;
-        var lower_1543522089 = null;
-        var upper_1543522090 = null;
+        var bigopKind_1543523264 = Temporary24;
+        var lower_1543523265 = null;
+        var upper_1543523266 = null;
         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-        Temporary25 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+        Temporary25 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
         }
         else {
-        Temporary25 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+        Temporary25 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
         }
         
-        var lowerResult_1543522091 = nimCopy(null, Temporary25, NTI1543512598);
-        if (!(lowerResult_1543522091.isOk)) {
-        var Temporary26 = lowerResult_1543522091;
+        var lowerResult_1543523267 = nimCopy(null, Temporary25, NTI1543513214);
+        if (!(lowerResult_1543523267.isOk)) {
+        var Temporary26 = lowerResult_1543523267;
         if (ConstSet85[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary26.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary26.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary27 = lowerResult_1543522091;
+        var Temporary27 = lowerResult_1543523267;
         if (ConstSet86[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-        lower_1543522089 = Temporary27.value;
+        lower_1543523265 = Temporary27.value;
         }
         
         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-        Temporary28 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+        Temporary28 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
         }
         else {
-        Temporary28 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+        Temporary28 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
         }
         
-        var upperResult_1543522110 = nimCopy(null, Temporary28, NTI1543512598);
-        if (!(upperResult_1543522110.isOk)) {
-        var Temporary29 = upperResult_1543522110;
+        var upperResult_1543523286 = nimCopy(null, Temporary28, NTI1543513214);
+        if (!(upperResult_1543523286.isOk)) {
+        var Temporary29 = upperResult_1543523286;
         if (ConstSet87[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary29.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary29.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary30 = upperResult_1543522110;
+        var Temporary30 = upperResult_1543523286;
         if (ConstSet88[Temporary30.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary30.isOk, NTI33554466)); }
-        upper_1543522090 = Temporary30.value;
+        upper_1543523266 = Temporary30.value;
         }
         
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newBigOp__OOZsrcZyatexmlZast_u669(bigopKind_1543522088, lower_1543522089, upper_1543522090, null)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newBigOp__OOZsrcZyatexmlZast_u669(bigopKind_1543523264, lower_1543523265, upper_1543523266, null)), NTI1543513214);
         break BeforeRet;
         break;
       case 8:
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newFunction__OOZsrcZyatexmlZast_u665(cmdName_1543521764, null)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newFunction__OOZsrcZyatexmlZast_u665(cmdName_1543522940, null)), NTI1543513214);
         break BeforeRet;
         break;
       case 9:
-        if (eqStrings(cmdName_1543521764, [108,101,102,116])) {
-        var delimToken_1543522135 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-        var leftDelim_1543522136 = [];
-        switch (delimToken_1543522135.kind) {
+        if (eqStrings(cmdName_1543522940, [108,101,102,116])) {
+        var delimToken_1543523311 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+        var leftDelim_1543523312 = [];
+        switch (delimToken_1543523311.kind) {
         case 3:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          leftDelim_1543522136 = nimCopy(null, [40], NTI33554449);
+          leftDelim_1543523312 = nimCopy(null, [40], NTI33554449);
           break;
         case 5:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          leftDelim_1543522136 = nimCopy(null, [91], NTI33554449);
+          leftDelim_1543523312 = nimCopy(null, [91], NTI33554449);
           break;
         case 7:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          leftDelim_1543522136 = nimCopy(null, [124], NTI33554449);
+          leftDelim_1543523312 = nimCopy(null, [124], NTI33554449);
           break;
         case 15:
-          if (eqStrings(delimToken_1543522135.value, [123])) {
+          if (eqStrings(delimToken_1543523311.value, [123])) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          leftDelim_1543522136 = nimCopy(null, [123], NTI33554449);
+          leftDelim_1543523312 = nimCopy(null, [123], NTI33554449);
           }
           else {
-          if (eqStrings(delimToken_1543522135.value, [125])) {
+          if (eqStrings(delimToken_1543523311.value, [125])) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          leftDelim_1543522136 = nimCopy(null, [125], NTI33554449);
+          leftDelim_1543523312 = nimCopy(null, [125], NTI33554449);
           }
           else {
-            result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([73,110,118,97,108,105,100,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(delimToken_1543522135.value), delimToken_1543522135.position, []), NTI1543512598);
+            result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([73,110,118,97,108,105,100,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(delimToken_1543523311.value), delimToken_1543523311.position, []), NTI1543513214);
             break BeforeRet;
           }
           }
           break;
         case 0:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          switch (toJSStr(delimToken_1543522135.value)) {
+          switch (toJSStr(delimToken_1543523311.value)) {
           case "lbrace":
           case "{":
-            leftDelim_1543522136 = nimCopy(null, [123], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [123], NTI33554449);
             break;
           case "rbrace":
           case "}":
-            leftDelim_1543522136 = nimCopy(null, [125], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [125], NTI33554449);
             break;
           case "langle":
-            leftDelim_1543522136 = nimCopy(null, [226,159,168], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [226,159,168], NTI33554449);
             break;
           case "rangle":
-            leftDelim_1543522136 = nimCopy(null, [226,159,169], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [226,159,169], NTI33554449);
             break;
           case "lfloor":
-            leftDelim_1543522136 = nimCopy(null, [226,140,138], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [226,140,138], NTI33554449);
             break;
           case "rfloor":
-            leftDelim_1543522136 = nimCopy(null, [226,140,139], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [226,140,139], NTI33554449);
             break;
           case "lceil":
-            leftDelim_1543522136 = nimCopy(null, [226,140,136], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [226,140,136], NTI33554449);
             break;
           case "rceil":
-            leftDelim_1543522136 = nimCopy(null, [226,140,137], NTI33554449);
+            leftDelim_1543523312 = nimCopy(null, [226,140,137], NTI33554449);
             break;
           default: 
-            result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([85,110,107,110,111,119,110,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(delimToken_1543522135.value), delimToken_1543522135.position, []), NTI1543512598);
+            result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([85,110,107,110,111,119,110,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(delimToken_1543523311.value), delimToken_1543523311.position, []), NTI1543513214);
             break BeforeRet;
             break;
           }
           break;
         default: 
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,108,101,102,116], delimToken_1543522135.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,108,101,102,116], delimToken_1543523311.position, []), NTI1543513214);
           break BeforeRet;
           break;
         }
-        var contentResult_1543522200 = parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0);
-        if (!(contentResult_1543522200.isOk)) {
-        var Temporary31 = contentResult_1543522200;
+        var contentResult_1543523376 = parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0);
+        if (!(contentResult_1543523376.isOk)) {
+        var Temporary31 = contentResult_1543523376;
         if (ConstSet89[Temporary31.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary31.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary31.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary31.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var rightCmdToken_1543522219 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-        if ((!((rightCmdToken_1543522219.kind == 0)) || !(eqStrings(rightCmdToken_1543522219.value, [114,105,103,104,116])))) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,92,114,105,103,104,116,32,97,102,116,101,114,32,92,108,101,102,116], rightCmdToken_1543522219.position, []), NTI1543512598);
+        var rightCmdToken_1543523395 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+        if ((!((rightCmdToken_1543523395.kind == 0)) || !(eqStrings(rightCmdToken_1543523395.value, [114,105,103,104,116])))) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,92,114,105,103,104,116,32,97,102,116,101,114,32,92,108,101,102,116], rightCmdToken_1543523395.position, []), NTI1543513214);
         break BeforeRet;
         }
         
         (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-        var rightDelimToken_1543522245 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-        var rightDelim_1543522246 = [];
-        switch (rightDelimToken_1543522245.kind) {
+        var rightDelimToken_1543523421 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+        var rightDelim_1543523422 = [];
+        switch (rightDelimToken_1543523421.kind) {
         case 4:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          rightDelim_1543522246 = nimCopy(null, [41], NTI33554449);
+          rightDelim_1543523422 = nimCopy(null, [41], NTI33554449);
           break;
         case 6:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          rightDelim_1543522246 = nimCopy(null, [93], NTI33554449);
+          rightDelim_1543523422 = nimCopy(null, [93], NTI33554449);
           break;
         case 7:
         case 8:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          rightDelim_1543522246 = nimCopy(null, [124], NTI33554449);
+          rightDelim_1543523422 = nimCopy(null, [124], NTI33554449);
           break;
         case 15:
-          if (eqStrings(rightDelimToken_1543522245.value, [123])) {
+          if (eqStrings(rightDelimToken_1543523421.value, [123])) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          rightDelim_1543522246 = nimCopy(null, [123], NTI33554449);
+          rightDelim_1543523422 = nimCopy(null, [123], NTI33554449);
           }
           else {
-          if (eqStrings(rightDelimToken_1543522245.value, [125])) {
+          if (eqStrings(rightDelimToken_1543523421.value, [125])) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          rightDelim_1543522246 = nimCopy(null, [125], NTI33554449);
+          rightDelim_1543523422 = nimCopy(null, [125], NTI33554449);
           }
           else {
-            result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([73,110,118,97,108,105,100,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(rightDelimToken_1543522245.value), rightDelimToken_1543522245.position, []), NTI1543512598);
+            result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([73,110,118,97,108,105,100,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(rightDelimToken_1543523421.value), rightDelimToken_1543523421.position, []), NTI1543513214);
             break BeforeRet;
           }
           }
           break;
         case 0:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          switch (toJSStr(rightDelimToken_1543522245.value)) {
+          switch (toJSStr(rightDelimToken_1543523421.value)) {
           case "rbrace":
           case "}":
-            rightDelim_1543522246 = nimCopy(null, [125], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [125], NTI33554449);
             break;
           case "lbrace":
           case "{":
-            rightDelim_1543522246 = nimCopy(null, [123], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [123], NTI33554449);
             break;
           case "rangle":
-            rightDelim_1543522246 = nimCopy(null, [226,159,169], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [226,159,169], NTI33554449);
             break;
           case "langle":
-            rightDelim_1543522246 = nimCopy(null, [226,159,168], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [226,159,168], NTI33554449);
             break;
           case "rfloor":
-            rightDelim_1543522246 = nimCopy(null, [226,140,139], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [226,140,139], NTI33554449);
             break;
           case "lfloor":
-            rightDelim_1543522246 = nimCopy(null, [226,140,138], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [226,140,138], NTI33554449);
             break;
           case "rceil":
-            rightDelim_1543522246 = nimCopy(null, [226,140,137], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [226,140,137], NTI33554449);
             break;
           case "lceil":
-            rightDelim_1543522246 = nimCopy(null, [226,140,136], NTI33554449);
+            rightDelim_1543523422 = nimCopy(null, [226,140,136], NTI33554449);
             break;
           default: 
-            result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([85,110,107,110,111,119,110,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(rightDelimToken_1543522245.value), rightDelimToken_1543522245.position, []), NTI1543512598);
+            result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([85,110,107,110,111,119,110,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(rightDelimToken_1543523421.value), rightDelimToken_1543523421.position, []), NTI1543513214);
             break BeforeRet;
             break;
           }
           break;
         default: 
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,114,105,103,104,116], rightDelimToken_1543522245.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,114,105,103,104,116], rightDelimToken_1543523421.position, []), NTI1543513214);
           break BeforeRet;
           break;
         }
-        var Temporary32 = contentResult_1543522200;
+        var Temporary32 = contentResult_1543523376;
         if (ConstSet90[Temporary32.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary32.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newDelimited__OOZsrcZyatexmlZast_u620(leftDelim_1543522136, rightDelim_1543522246, Temporary32.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newDelimited__OOZsrcZyatexmlZast_u620(leftDelim_1543523312, rightDelim_1543523422, Temporary32.value)), NTI1543513214);
         break BeforeRet;
         }
         else {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(2, [92,114,105,103,104,116,32,109,117,115,116,32,98,101,32,112,97,105,114,101,100,32,119,105,116,104,32,92,108,101,102,116], token_1543521710.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(2, [92,114,105,103,104,116,32,109,117,115,116,32,98,101,32,112,97,105,114,101,100,32,119,105,116,104,32,92,108,101,102,116], token_1543522886.position, []), NTI1543513214);
           break BeforeRet;
         }
         
         break;
       case 10:
-        switch (toJSStr(cmdName_1543521764)) {
+        switch (toJSStr(cmdName_1543522940)) {
         case "big":
         case "bigl":
         case "bigr":
@@ -8065,220 +8177,220 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
           Temporary33 = 1;
           break;
         }
-        var size_1543522334 = Temporary33;
-        var delimToken_1543522335 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-        var delimChar_1543522336 = [];
-        switch (delimToken_1543522335.kind) {
+        var size_1543523510 = Temporary33;
+        var delimToken_1543523511 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+        var delimChar_1543523512 = [];
+        switch (delimToken_1543523511.kind) {
         case 3:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [40], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [40], NTI33554449);
           break;
         case 4:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [41], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [41], NTI33554449);
           break;
         case 5:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [91], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [91], NTI33554449);
           break;
         case 6:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [93], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [93], NTI33554449);
           break;
         case 7:
         case 8:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [124], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [124], NTI33554449);
           break;
         case 15:
-          if (eqStrings(delimToken_1543522335.value, [123])) {
+          if (eqStrings(delimToken_1543523511.value, [123])) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [123], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [123], NTI33554449);
           }
           else {
-          if (eqStrings(delimToken_1543522335.value, [125])) {
+          if (eqStrings(delimToken_1543523511.value, [125])) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          delimChar_1543522336 = nimCopy(null, [125], NTI33554449);
+          delimChar_1543523512 = nimCopy(null, [125], NTI33554449);
           }
           else {
-            result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([73,110,118,97,108,105,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1543521764,[58,32],delimToken_1543522335.value), delimToken_1543522335.position, []), NTI1543512598);
+            result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([73,110,118,97,108,105,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1543522940,[58,32],delimToken_1543523511.value), delimToken_1543523511.position, []), NTI1543513214);
             break BeforeRet;
           }
           }
           break;
         case 0:
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          switch (toJSStr(delimToken_1543522335.value)) {
+          switch (toJSStr(delimToken_1543523511.value)) {
           case "lbrace":
           case "{":
-            delimChar_1543522336 = nimCopy(null, [123], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [123], NTI33554449);
             break;
           case "rbrace":
           case "}":
-            delimChar_1543522336 = nimCopy(null, [125], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [125], NTI33554449);
             break;
           case "langle":
-            delimChar_1543522336 = nimCopy(null, [226,159,168], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [226,159,168], NTI33554449);
             break;
           case "rangle":
-            delimChar_1543522336 = nimCopy(null, [226,159,169], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [226,159,169], NTI33554449);
             break;
           case "lfloor":
-            delimChar_1543522336 = nimCopy(null, [226,140,138], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [226,140,138], NTI33554449);
             break;
           case "rfloor":
-            delimChar_1543522336 = nimCopy(null, [226,140,139], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [226,140,139], NTI33554449);
             break;
           case "lceil":
-            delimChar_1543522336 = nimCopy(null, [226,140,136], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [226,140,136], NTI33554449);
             break;
           case "rceil":
-            delimChar_1543522336 = nimCopy(null, [226,140,137], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [226,140,137], NTI33554449);
             break;
           case "lvert":
-            delimChar_1543522336 = nimCopy(null, [124], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [124], NTI33554449);
             break;
           case "rvert":
-            delimChar_1543522336 = nimCopy(null, [124], NTI33554449);
+            delimChar_1543523512 = nimCopy(null, [124], NTI33554449);
             break;
           default: 
-            result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([85,110,107,110,111,119,110,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1543521764,[58,32,92],delimToken_1543522335.value), delimToken_1543522335.position, []), NTI1543512598);
+            result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([85,110,107,110,111,119,110,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1543522940,[58,32,92],delimToken_1543523511.value), delimToken_1543523511.position, []), NTI1543513214);
             break BeforeRet;
             break;
           }
           break;
         default: 
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, ([69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1543521764), delimToken_1543522335.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, ([69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1543522940), delimToken_1543523511.position, []), NTI1543513214);
           break BeforeRet;
           break;
         }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSizedDelimiter__OOZsrcZyatexmlZast_u625(delimChar_1543522336, size_1543522334)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSizedDelimiter__OOZsrcZyatexmlZast_u625(delimChar_1543523512, size_1543523510)), NTI1543513214);
         break BeforeRet;
         break;
       case 11:
-        if (eqStrings(cmdName_1543521764, [98,101,103,105,110])) {
-        var braceResult_1543522403 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1543522403.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,98,101,103,105,110], token_1543521710.position, []), NTI1543512598);
+        if (eqStrings(cmdName_1543522940, [98,101,103,105,110])) {
+        var braceResult_1543523579 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1543523579.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,98,101,103,105,110], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var envName_1543522425 = [];
-        var nameToken_1543522426 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-        if ((nameToken_1543522426.kind == 13)) {
+        var envName_1543523601 = [];
+        var nameToken_1543523602 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+        if ((nameToken_1543523602.kind == 13)) {
         Label34: {
             Label35: while (true) {
             if (!((peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).kind == 13) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)))) break Label35;
-              envName_1543522425.push.apply(envName_1543522425, advance__OOZsrcZyatexmlZlexer_u600(stream_p0).value);;
+              envName_1543523601.push.apply(envName_1543523601, advance__OOZsrcZyatexmlZlexer_u600(stream_p0).value);;
             }
         };
         }
         else {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,98,101,103,105,110,123], nameToken_1543522426.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,98,101,103,105,110,123], nameToken_1543523602.position, []), NTI1543513214);
           break BeforeRet;
         }
         
-        var closeResult_1543522456 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1543522456.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1543522426.position, []), NTI1543512598);
+        var closeResult_1543523632 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1543523632.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1543523602.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        if (contains__stdZenumutils_u50([[109,97,116,114,105,120], [112,109,97,116,114,105,120], [98,109,97,116,114,105,120], [118,109,97,116,114,105,120], [86,109,97,116,114,105,120], [99,97,115,101,115], [97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], envName_1543522425)) {
-        result_1543521709 = nimCopy(result_1543521709, parseMatrixEnvironment__OOZsrcZyatexmlZparser_u16603(stream_p0, envName_1543522425), NTI1543512598);
+        if (contains__stdZenumutils_u50([[109,97,116,114,105,120], [112,109,97,116,114,105,120], [98,109,97,116,114,105,120], [118,109,97,116,114,105,120], [86,109,97,116,114,105,120], [99,97,115,101,115], [97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], envName_1543523601)) {
+        result_1543522885 = nimCopy(result_1543522885, parseMatrixEnvironment__OOZsrcZyatexmlZparser_u17779(stream_p0, envName_1543523601), NTI1543513214);
         break BeforeRet;
         }
         else {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(2, ([85,110,107,110,111,119,110,32,101,110,118,105,114,111,110,109,101,110,116,58,32]).concat(envName_1543522425), token_1543521710.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(2, ([85,110,107,110,111,119,110,32,101,110,118,105,114,111,110,109,101,110,116,58,32]).concat(envName_1543523601), token_1543522886.position, []), NTI1543513214);
           break BeforeRet;
         }
         
         }
         else {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(2, [85,110,101,120,112,101,99,116,101,100,32,92,101,110,100,32,99,111,109,109,97,110,100], token_1543521710.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(2, [85,110,101,120,112,101,99,116,101,100,32,92,101,110,100,32,99,111,109,109,97,110,100], token_1543522886.position, []), NTI1543513214);
           break BeforeRet;
         }
         
         break;
       case 12:
-        var braceResult_1543522562 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1543522562.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116], token_1543521710.position, []), NTI1543512598);
+        var braceResult_1543523738 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1543523738.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var textContent_1543522584 = [];
-        var Temporary36 = braceResult_1543522562;
+        var textContent_1543523760 = [];
+        var Temporary36 = braceResult_1543523738;
         if (ConstSet109[Temporary36.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary36.isOk, NTI33554466)); }
-        var lastPos_1543522585 = addInt(Temporary36.value.position, 1);
+        var lastPos_1543523761 = addInt(Temporary36.value.position, 1);
         Label37: {
             Label38: while (true) {
             if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label38;
-              var textToken_1543522586 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-              var gap_1543522587 = subInt(textToken_1543522586.position, lastPos_1543522585);
-              if ((0 < gap_1543522587)) {
-              textContent_1543522584.push.apply(textContent_1543522584, nsuRepeatStr([32], chckRange(gap_1543522587, 0, 2147483647)));;
+              var textToken_1543523762 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+              var gap_1543523763 = subInt(textToken_1543523762.position, lastPos_1543523761);
+              if ((0 < gap_1543523763)) {
+              textContent_1543523760.push.apply(textContent_1543523760, nsuRepeatStr([32], chckRange(gap_1543523763, 0, 2147483647)));;
               }
               
               (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-              switch (textToken_1543522586.kind) {
+              switch (textToken_1543523762.kind) {
               case 13:
               case 14:
-                textContent_1543522584.push.apply(textContent_1543522584, textToken_1543522586.value);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, (textToken_1543522586.value).length);
+                textContent_1543523760.push.apply(textContent_1543523760, textToken_1543523762.value);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, (textToken_1543523762.value).length);
                 break;
               case 15:
-                textContent_1543522584.push.apply(textContent_1543522584, textToken_1543522586.value);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, (textToken_1543522586.value).length);
+                textContent_1543523760.push.apply(textContent_1543523760, textToken_1543523762.value);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, (textToken_1543523762.value).length);
                 break;
               case 3:
-                textContent_1543522584.push.apply(textContent_1543522584, [40]);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, 1);
+                textContent_1543523760.push.apply(textContent_1543523760, [40]);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, 1);
                 break;
               case 4:
-                textContent_1543522584.push.apply(textContent_1543522584, [41]);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, 1);
+                textContent_1543523760.push.apply(textContent_1543523760, [41]);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, 1);
                 break;
               case 5:
-                textContent_1543522584.push.apply(textContent_1543522584, [91]);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, 1);
+                textContent_1543523760.push.apply(textContent_1543523760, [91]);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, 1);
                 break;
               case 6:
-                textContent_1543522584.push.apply(textContent_1543522584, [93]);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, 1);
+                textContent_1543523760.push.apply(textContent_1543523760, [93]);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, 1);
                 break;
               case 0:
-                textContent_1543522584.push.apply(textContent_1543522584, [92]);;
-                textContent_1543522584.push.apply(textContent_1543522584, textToken_1543522586.value);;
-                lastPos_1543522585 = addInt(addInt(textToken_1543522586.position, 1), (textToken_1543522586.value).length);
+                textContent_1543523760.push.apply(textContent_1543523760, [92]);;
+                textContent_1543523760.push.apply(textContent_1543523760, textToken_1543523762.value);;
+                lastPos_1543523761 = addInt(addInt(textToken_1543523762.position, 1), (textToken_1543523762.value).length);
                 break;
               default: 
-                textContent_1543522584.push.apply(textContent_1543522584, textToken_1543522586.value);;
-                lastPos_1543522585 = addInt(textToken_1543522586.position, (textToken_1543522586.value).length);
+                textContent_1543523760.push.apply(textContent_1543523760, textToken_1543523762.value);;
+                lastPos_1543523761 = addInt(textToken_1543523762.position, (textToken_1543523762.value).length);
                 break;
               }
             }
         };
         if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) {
-        var closeBrace_1543522588 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
-        var trailingGap_1543522589 = subInt(closeBrace_1543522588.position, lastPos_1543522585);
-        if ((0 < trailingGap_1543522589)) {
-        textContent_1543522584.push.apply(textContent_1543522584, nsuRepeatStr([32], chckRange(trailingGap_1543522589, 0, 2147483647)));;
+        var closeBrace_1543523764 = peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0);
+        var trailingGap_1543523765 = subInt(closeBrace_1543523764.position, lastPos_1543523761);
+        if ((0 < trailingGap_1543523765)) {
+        textContent_1543523760.push.apply(textContent_1543523760, nsuRepeatStr([32], chckRange(trailingGap_1543523765, 0, 2147483647)));;
         }
         
         }
         
-        var closeResult_1543522590 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1543522590.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,116,101,120,116,32,99,111,110,116,101,110,116], token_1543521710.position, []), NTI1543512598);
+        var closeResult_1543523766 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1543523766.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,116,101,120,116,32,99,111,110,116,101,110,116], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newText__OOZsrcZyatexmlZast_u496(textContent_1543522584)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newText__OOZsrcZyatexmlZast_u496(textContent_1543523760)), NTI1543513214);
         break BeforeRet;
         break;
       case 13:
-        switch (toJSStr(cmdName_1543521764)) {
+        switch (toJSStr(cmdName_1543522940)) {
         case "quad":
           Temporary39 = [49,101,109];
           break;
@@ -8301,271 +8413,271 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
           Temporary39 = [48,46,53,101,109];
           break;
         }
-        var width_1543522615 = nimCopy(null, Temporary39, NTI33554449);
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSpace__OOZsrcZyatexmlZast_u499(width_1543522615)), NTI1543512598);
+        var width_1543523791 = nimCopy(null, Temporary39, NTI33554449);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSpace__OOZsrcZyatexmlZast_u499(width_1543523791)), NTI1543513214);
         break BeforeRet;
         break;
       case 22:
-        var nameResult_1543522619 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(nameResult_1543522619.isOk)) {
-        var Temporary40 = nameResult_1543522619;
+        var nameResult_1543523795 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(nameResult_1543523795.isOk)) {
+        var Temporary40 = nameResult_1543523795;
         if (ConstSet110[Temporary40.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary40.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary40.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary40.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var opName_1543522638 = [];
-        var Temporary41 = nameResult_1543522619;
+        var opName_1543523814 = [];
+        var Temporary41 = nameResult_1543523795;
         if (ConstSet114[Temporary41.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary41.isOk, NTI33554466)); }
-        opName_1543522638 = nimCopy(null, extractText__OOZsrcZyatexmlZparser_u18767(Temporary41.value), NTI33554449);
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newFunction__OOZsrcZyatexmlZast_u665(opName_1543522638, null)), NTI1543512598);
+        opName_1543523814 = nimCopy(null, extractText__OOZsrcZyatexmlZparser_u19943(Temporary41.value), NTI33554449);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newFunction__OOZsrcZyatexmlZast_u665(opName_1543523814, null)), NTI1543513214);
         break BeforeRet;
         break;
       case 23:
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newOperator__OOZsrcZyatexmlZast_u491([109,111,100], [109,111,100], [105,110,102,105,120])), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newOperator__OOZsrcZyatexmlZast_u491([109,111,100], [109,111,100], [105,110,102,105,120])), NTI1543513214);
         break BeforeRet;
         break;
       case 24:
-        var argResult_1543522686 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(argResult_1543522686.isOk)) {
-        var Temporary42 = argResult_1543522686;
+        var argResult_1543523862 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(argResult_1543523862.isOk)) {
+        var Temporary42 = argResult_1543523862;
         if (ConstSet115[Temporary42.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary42.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary42.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary42.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var children_1543522709 = [];
-        children_1543522709.push(newSpace__OOZsrcZyatexmlZast_u499([48,46,52,52,52,52,101,109]));;
-        children_1543522709.push(newOperator__OOZsrcZyatexmlZast_u491([40], [40], [112,114,101,102,105,120]));;
-        children_1543522709.push(newIdentifier__OOZsrcZyatexmlZast_u484([109,111,100]));;
-        children_1543522709.push(newSpace__OOZsrcZyatexmlZast_u499([48,46,51,51,51,51,101,109]));;
-        var Temporary43 = argResult_1543522686;
+        var children_1543523885 = [];
+        children_1543523885.push(newSpace__OOZsrcZyatexmlZast_u499([48,46,52,52,52,52,101,109]));;
+        children_1543523885.push(newOperator__OOZsrcZyatexmlZast_u491([40], [40], [112,114,101,102,105,120]));;
+        children_1543523885.push(newIdentifier__OOZsrcZyatexmlZast_u484([109,111,100]));;
+        children_1543523885.push(newSpace__OOZsrcZyatexmlZast_u499([48,46,51,51,51,51,101,109]));;
+        var Temporary43 = argResult_1543523862;
         if (ConstSet116[Temporary43.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary43.isOk, NTI33554466)); }
-        children_1543522709.push(Temporary43.value);;
-        children_1543522709.push(newOperator__OOZsrcZyatexmlZast_u491([41], [41], [112,111,115,116,102,105,120]));;
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newRow__OOZsrcZyatexmlZast_u601(children_1543522709)), NTI1543512598);
+        children_1543523885.push(Temporary43.value);;
+        children_1543523885.push(newOperator__OOZsrcZyatexmlZast_u491([41], [41], [112,111,115,116,102,105,120]));;
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newRow__OOZsrcZyatexmlZast_u601(children_1543523885)), NTI1543513214);
         break BeforeRet;
         break;
       case 14:
-        if (eqStrings(cmdName_1543521764, [116,101,120,116,99,111,108,111,114])) {
-        var colorBraceResult_1543522737 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(colorBraceResult_1543522737.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116,99,111,108,111,114], token_1543521710.position, []), NTI1543512598);
+        if (eqStrings(cmdName_1543522940, [116,101,120,116,99,111,108,111,114])) {
+        var colorBraceResult_1543523913 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(colorBraceResult_1543523913.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116,99,111,108,111,114], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var colorName_1543522759 = [];
+        var colorName_1543523935 = [];
         Label44: {
             Label45: while (true) {
             if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label45;
-              var colorToken_1543522760 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
-              colorName_1543522759.push.apply(colorName_1543522759, colorToken_1543522760.value);;
+              var colorToken_1543523936 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
+              colorName_1543523935.push.apply(colorName_1543523935, colorToken_1543523936.value);;
             }
         };
-        var colorCloseResult_1543522761 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(colorCloseResult_1543522761.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1543521710.position, []), NTI1543512598);
+        var colorCloseResult_1543523937 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(colorCloseResult_1543523937.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var contentResult_1543522783 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
-        if (!(contentResult_1543522783.isOk)) {
-        var Temporary46 = contentResult_1543522783;
+        var contentResult_1543523959 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
+        if (!(contentResult_1543523959.isOk)) {
+        var Temporary46 = contentResult_1543523959;
         if (ConstSet117[Temporary46.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary46.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary46.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary46.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary47 = contentResult_1543522783;
+        var Temporary47 = contentResult_1543523959;
         if (ConstSet118[Temporary47.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary47.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newColor__OOZsrcZyatexmlZast_u569(colorName_1543522759, Temporary47.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newColor__OOZsrcZyatexmlZast_u569(colorName_1543523935, Temporary47.value)), NTI1543513214);
         break BeforeRet;
         }
         else {
-          var colorBraceResult_1543522805 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-          if (!(colorBraceResult_1543522805.isOk)) {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,99,111,108,111,114], token_1543521710.position, []), NTI1543512598);
+          var colorBraceResult_1543523981 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+          if (!(colorBraceResult_1543523981.isOk)) {
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,99,111,108,111,114], token_1543522886.position, []), NTI1543513214);
           break BeforeRet;
           }
           
-          var colorName_1543522827 = [];
+          var colorName_1543524003 = [];
           Label48: {
               Label49: while (true) {
               if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label49;
-                var colorToken_1543522828 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
-                colorName_1543522827.push.apply(colorName_1543522827, colorToken_1543522828.value);;
+                var colorToken_1543524004 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
+                colorName_1543524003.push.apply(colorName_1543524003, colorToken_1543524004.value);;
               }
           };
-          var colorCloseResult_1543522829 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-          if (!(colorCloseResult_1543522829.isOk)) {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1543521710.position, []), NTI1543512598);
+          var colorCloseResult_1543524005 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+          if (!(colorCloseResult_1543524005.isOk)) {
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1543522886.position, []), NTI1543513214);
           break BeforeRet;
           }
           
-          var contentResult_1543522851 = parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0);
-          if (!(contentResult_1543522851.isOk)) {
-          var Temporary50 = contentResult_1543522851;
+          var contentResult_1543524027 = parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0);
+          if (!(contentResult_1543524027.isOk)) {
+          var Temporary50 = contentResult_1543524027;
           if (ConstSet119[Temporary50.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary50.isOk, NTI33554466)); }
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary50.error), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary50.error), NTI1543513214);
           break BeforeRet;
           }
           
-          var Temporary51 = contentResult_1543522851;
+          var Temporary51 = contentResult_1543524027;
           if (ConstSet120[Temporary51.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary51.isOk, NTI33554466)); }
-          result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newColor__OOZsrcZyatexmlZast_u569(colorName_1543522827, Temporary51.value)), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newColor__OOZsrcZyatexmlZast_u569(colorName_1543524003, Temporary51.value)), NTI1543513214);
           break BeforeRet;
         }
         
         break;
       case 16:
-        if (eqStrings(cmdName_1543521764, [110,117,109])) {
-        var braceResult_1543522873 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1543522873.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,110,117,109], token_1543521710.position, []), NTI1543512598);
+        if (eqStrings(cmdName_1543522940, [110,117,109])) {
+        var braceResult_1543524049 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1543524049.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,110,117,109], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var numberStr_1543522895 = [];
+        var numberStr_1543524071 = [];
         Label52: {
             Label53: while (true) {
             if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label53;
-              var numToken_1543522896 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
-              numberStr_1543522895.push.apply(numberStr_1543522895, numToken_1543522896.value);;
+              var numToken_1543524072 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
+              numberStr_1543524071.push.apply(numberStr_1543524071, numToken_1543524072.value);;
             }
         };
-        var closeResult_1543522897 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1543522897.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,110,117,109,98,101,114], token_1543521710.position, []), NTI1543512598);
+        var closeResult_1543524073 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1543524073.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,110,117,109,98,101,114], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newNum__OOZsrcZyatexmlZast_u696(numberStr_1543522895)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newNum__OOZsrcZyatexmlZast_u696(numberStr_1543524071)), NTI1543513214);
         break BeforeRet;
         }
         else {
-        if (eqStrings(cmdName_1543521764, [115,105])) {
-        var braceResult_1543522922 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1543522922.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,115,105], token_1543521710.position, []), NTI1543512598);
+        if (eqStrings(cmdName_1543522940, [115,105])) {
+        var braceResult_1543524098 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1543524098.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,115,105], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var unitResult_1543522944 = parseSIUnitExpr__OOZsrcZyatexmlZparser_u16948(stream_p0);
-        if (!(unitResult_1543522944.isOk)) {
-        var Temporary54 = unitResult_1543522944;
+        var unitResult_1543524120 = parseSIUnitExpr__OOZsrcZyatexmlZparser_u18124(stream_p0);
+        if (!(unitResult_1543524120.isOk)) {
+        var Temporary54 = unitResult_1543524120;
         if (ConstSet123[Temporary54.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary54.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary54.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary54.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var closeResult_1543522963 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1543522963.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1543521710.position, []), NTI1543512598);
+        var closeResult_1543524139 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1543524139.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary55 = unitResult_1543522944;
+        var Temporary55 = unitResult_1543524120;
         if (ConstSet124[Temporary55.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary55.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(Temporary55.value), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(Temporary55.value), NTI1543513214);
         break BeforeRet;
         }
         else {
-        if (eqStrings(cmdName_1543521764, [83,73])) {
-        var valueBraceResult_1543522988 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(valueBraceResult_1543522988.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,83,73], token_1543521710.position, []), NTI1543512598);
+        if (eqStrings(cmdName_1543522940, [83,73])) {
+        var valueBraceResult_1543524164 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(valueBraceResult_1543524164.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,83,73], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var valueStr_1543523010 = [];
+        var valueStr_1543524186 = [];
         Label56: {
             Label57: while (true) {
             if (!(!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)))) break Label57;
-              var valueToken_1543523011 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
-              valueStr_1543523010.push.apply(valueStr_1543523010, valueToken_1543523011.value);;
+              var valueToken_1543524187 = advance__OOZsrcZyatexmlZlexer_u600(stream_p0);
+              valueStr_1543524186.push.apply(valueStr_1543524186, valueToken_1543524187.value);;
             }
         };
-        var valueCloseResult_1543523012 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(valueCloseResult_1543523012.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,118,97,108,117,101], token_1543521710.position, []), NTI1543512598);
+        var valueCloseResult_1543524188 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(valueCloseResult_1543524188.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,118,97,108,117,101], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var unitBraceResult_1543523034 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
-        if (!(unitBraceResult_1543523034.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,123,32,102,111,114,32,117,110,105,116], token_1543521710.position, []), NTI1543512598);
+        var unitBraceResult_1543524210 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 1);
+        if (!(unitBraceResult_1543524210.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,123,32,102,111,114,32,117,110,105,116], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var unitResult_1543523056 = parseSIUnitExpr__OOZsrcZyatexmlZparser_u16948(stream_p0);
-        if (!(unitResult_1543523056.isOk)) {
-        var Temporary58 = unitResult_1543523056;
+        var unitResult_1543524232 = parseSIUnitExpr__OOZsrcZyatexmlZparser_u18124(stream_p0);
+        if (!(unitResult_1543524232.isOk)) {
+        var Temporary58 = unitResult_1543524232;
         if (ConstSet125[Temporary58.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary58.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary58.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary58.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var unitCloseResult_1543523075 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
-        if (!(unitCloseResult_1543523075.isOk)) {
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1543521710.position, []), NTI1543512598);
+        var unitCloseResult_1543524251 = expect__OOZsrcZyatexmlZlexer_u622(stream_p0, 2);
+        if (!(unitCloseResult_1543524251.isOk)) {
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary59 = unitResult_1543523056;
+        var Temporary59 = unitResult_1543524232;
         if (ConstSet126[Temporary59.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary59.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSIValue__OOZsrcZyatexmlZast_u723(valueStr_1543523010, Temporary59.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSIValue__OOZsrcZyatexmlZast_u723(valueStr_1543524186, Temporary59.value)), NTI1543513214);
         break BeforeRet;
         }
         else {
-          result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(2, ([85,110,107,110,111,119,110,32,115,105,117,110,105,116,120,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_1543521764), token_1543521710.position, []), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(2, ([85,110,107,110,111,119,110,32,115,105,117,110,105,116,120,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_1543522940), token_1543522886.position, []), NTI1543513214);
           break BeforeRet;
         }
         }}
         break;
       case 20:
-        var defResult_1543523121 = parseMacroDef__OOZsrcZyatexmlZparser_u17383(stream_p0, cmdName_1543521764, token_1543521710.position);
-        if (!(defResult_1543523121.isOk)) {
-        var Temporary60 = defResult_1543523121;
+        var defResult_1543524297 = parseMacroDef__OOZsrcZyatexmlZparser_u18559(stream_p0, cmdName_1543522940, token_1543522886.position);
+        if (!(defResult_1543524297.isOk)) {
+        var Temporary60 = defResult_1543524297;
         if (ConstSet132[Temporary60.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary60.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary60.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary60.error), NTI1543513214);
         break BeforeRet;
         }
         
-        result_1543521709 = nimCopy(result_1543521709, parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0), NTI1543513214);
         break BeforeRet;
         break;
       case 21:
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(2, ([73,110,102,105,120,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1543521764,[32,114,101,113,117,105,114,101,115,32,97,32,108,101,102,116,32,111,112,101,114,97,110,100]), token_1543521710.position, []), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(2, ([73,110,102,105,120,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1543522940,[32,114,101,113,117,105,114,101,115,32,97,32,108,101,102,116,32,111,112,101,114,97,110,100]), token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         break;
       case 17:
       case 18:
       case 19:
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(2, ([85,110,105,116,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1543521764,[32,99,97,110,32,111,110,108,121,32,98,101,32,117,115,101,100,32,119,105,116,104,105,110,32,92,115,105,32,111,114,32,92,83,73]), token_1543521710.position, []), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(2, ([85,110,105,116,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1543522940,[32,99,97,110,32,111,110,108,121,32,98,101,32,117,115,101,100,32,119,105,116,104,105,110,32,92,115,105,32,111,114,32,92,83,73]), token_1543522886.position, []), NTI1543513214);
         break BeforeRet;
         break;
       }
       }
       else {
-        if (hasMacro__OOZsrcZyatexmlZmacros_u1339(globalMacroRegistry_1543503911[0], cmdName_1543521764)) {
-        var macroDef_1543523182 = getMacro__OOZsrcZyatexmlZmacros_u1415(globalMacroRegistry_1543503911[0], cmdName_1543521764);
-        var expandResult_1543523183 = expandMacroInStream__OOZsrcZyatexmlZparser_u17724(stream_p0, cmdName_1543521764, macroDef_1543523182);
-        if (!(expandResult_1543523183.isOk)) {
-        var Temporary61 = expandResult_1543523183;
+        if (hasMacro__OOZsrcZyatexmlZmacros_u1339(globalMacroRegistry_1543503911[0], cmdName_1543522940)) {
+        var macroDef_1543524358 = getMacro__OOZsrcZyatexmlZmacros_u1415(globalMacroRegistry_1543503911[0], cmdName_1543522940);
+        var expandResult_1543524359 = expandMacroInStream__OOZsrcZyatexmlZparser_u18900(stream_p0, cmdName_1543522940, macroDef_1543524358);
+        if (!(expandResult_1543524359.isOk)) {
+        var Temporary61 = expandResult_1543524359;
         if (ConstSet134[Temporary61.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary61.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary61.error), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary61.error), NTI1543513214);
         break BeforeRet;
         }
         
-        var Temporary62 = expandResult_1543523183;
+        var Temporary62 = expandResult_1543524359;
         if (ConstSet135[Temporary62.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary62.isOk, NTI33554466)); }
-        var expandedTokens_1543523202 = nimCopy(null, Temporary62.value, NTI1409286272);
-        var expandedStream_1543523203 = [newTokenStream__OOZsrcZyatexmlZlexer_u572(expandedTokens_1543523202)];
-        result_1543521709 = nimCopy(result_1543521709, parseExpression__OOZsrcZyatexmlZparser_u16591(expandedStream_1543523203[0]), NTI1543512598);
+        var expandedTokens_1543524378 = nimCopy(null, Temporary62.value, NTI1409286272);
+        var expandedStream_1543524379 = [newTokenStream__OOZsrcZyatexmlZlexer_u572(expandedTokens_1543524378)];
+        result_1543522885 = nimCopy(result_1543522885, parseExpression__OOZsrcZyatexmlZparser_u17767(expandedStream_1543524379[0]), NTI1543513214);
         break BeforeRet;
         }
         else {
-          result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newIdentifier__OOZsrcZyatexmlZast_u484(cmdName_1543521764)), NTI1543512598);
+          result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newIdentifier__OOZsrcZyatexmlZast_u484(cmdName_1543522940)), NTI1543513214);
           break BeforeRet;
         }
         
@@ -8576,51 +8688,51 @@ function parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0) {
     case 10:
       (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
       if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-      Temporary63 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+      Temporary63 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
       }
       else {
-      Temporary63 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+      Temporary63 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
       }
       
-      var scriptResult_1543523207 = nimCopy(null, Temporary63, NTI1543512598);
-      if (!(scriptResult_1543523207.isOk)) {
-      var Temporary64 = scriptResult_1543523207;
+      var scriptResult_1543524383 = nimCopy(null, Temporary63, NTI1543513214);
+      if (!(scriptResult_1543524383.isOk)) {
+      var Temporary64 = scriptResult_1543524383;
       if (ConstSet136[Temporary64.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary64.isOk, NTI33554466)); }
-      result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17865(Temporary64.error), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u19041(Temporary64.error), NTI1543513214);
       break BeforeRet;
       }
       
-      var emptyBase_1543523230 = newRow__OOZsrcZyatexmlZast_u601([]);
-      if ((token_1543521710.kind == 9)) {
-      var Temporary65 = scriptResult_1543523207;
+      var emptyBase_1543524406 = newRow__OOZsrcZyatexmlZast_u601([]);
+      if ((token_1543522886.kind == 9)) {
+      var Temporary65 = scriptResult_1543524383;
       if (ConstSet137[Temporary65.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary65.isOk, NTI33554466)); }
-      result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSub__OOZsrcZyatexmlZast_u588(emptyBase_1543523230, Temporary65.value)), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSub__OOZsrcZyatexmlZast_u588(emptyBase_1543524406, Temporary65.value)), NTI1543513214);
       break BeforeRet;
       }
       else {
-        var Temporary66 = scriptResult_1543523207;
+        var Temporary66 = scriptResult_1543524383;
         if (ConstSet138[Temporary66.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary66.isOk, NTI33554466)); }
-        result_1543521709 = nimCopy(result_1543521709, ok__OOZsrcZyatexmlZparser_u17363(newSup__OOZsrcZyatexmlZast_u592(emptyBase_1543523230, Temporary66.value)), NTI1543512598);
+        result_1543522885 = nimCopy(result_1543522885, ok__OOZsrcZyatexmlZparser_u18539(newSup__OOZsrcZyatexmlZast_u592(emptyBase_1543524406, Temporary66.value)), NTI1543513214);
         break BeforeRet;
       }
       
       break;
     case 17:
-      result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(1, [85,110,101,120,112,101,99,116,101,100,32,101,110,100,32,111,102,32,105,110,112,117,116], token_1543521710.position, []), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(1, [85,110,101,120,112,101,99,116,101,100,32,101,110,100,32,111,102,32,105,110,112,117,116], token_1543522886.position, []), NTI1543513214);
       break BeforeRet;
       break;
     default: 
-      result_1543521709 = nimCopy(result_1543521709, err__OOZsrcZyatexmlZparser_u17227(0, ([85,110,101,120,112,101,99,116,101,100,32,116,111,107,101,110,58,32]).concat(reprEnum(token_1543521710.kind, NTI1409286147)), token_1543521710.position, []), NTI1543512598);
+      result_1543522885 = nimCopy(result_1543522885, err__OOZsrcZyatexmlZparser_u18403(0, ([85,110,101,120,112,101,99,116,101,100,32,116,111,107,101,110,58,32]).concat(reprEnum(token_1543522886.kind, NTI1409286147)), token_1543522886.position, []), NTI1543513214);
       break BeforeRet;
       break;
     }
   };
 
-  return result_1543521709;
+  return result_1543522885;
 
 }
 
-function parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0) {
+function parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0) {
           var Temporary3;
           var Temporary4;
                 var Temporary7;
@@ -8647,10 +8759,10 @@ function parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0) {
             var Temporary28;
             var Temporary29;
 
-  var result_1543524370 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1543525546 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var children_1543524375 = [];
+    var children_1543525551 = [];
     Label1: {
         Label2: while (true) {
         if (!(((((!(isAtEnd__OOZsrcZyatexmlZlexer_u611(stream_p0)) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 2))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 4))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 6))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 12))) && !(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 11)))) break Label2;
@@ -8658,85 +8770,85 @@ function parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0) {
           break Label1;
           }
           
-          var primResult_1543524376 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
-          if (!(primResult_1543524376.isOk)) {
-          var Temporary3 = primResult_1543524376;
+          var primResult_1543525552 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
+          if (!(primResult_1543525552.isOk)) {
+          var Temporary3 = primResult_1543525552;
           if (ConstSet139[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
-          result_1543524370 = nimCopy(result_1543524370, err__OOZsrcZyatexmlZparser_u17865(Temporary3.error), NTI1543512598);
+          result_1543525546 = nimCopy(result_1543525546, err__OOZsrcZyatexmlZparser_u19041(Temporary3.error), NTI1543513214);
           break BeforeRet;
           }
           
-          var Temporary4 = primResult_1543524376;
+          var Temporary4 = primResult_1543525552;
           if (ConstSet140[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-          var node_1543524395 = Temporary4.value;
+          var node_1543525571 = Temporary4.value;
           Label5: {
               Label6: while (true) {
               if (!(match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9) || match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10))) break Label6;
-                if (!(node_1543524395.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1543524395;
+                if (!(node_1543525571.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1543525571;
                   if (ConstSet141[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1392508931)); }
-                  if ((Temporary9.accentKind == 10)) Temporary8 = true; else {                    var Temporary10 = node_1543524395;
+                  if ((Temporary9.accentKind == 10)) Temporary8 = true; else {                    var Temporary10 = node_1543525571;
                     if (ConstSet142[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1392508931)); }
-                    Temporary8 = (Temporary10.accentKind == 11);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1543524408 = Temporary7;
+                    Temporary8 = (Temporary10.accentKind == 11);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1543525584 = Temporary7;
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary11 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary11 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary11 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary11 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var subResult_1543524409 = nimCopy(null, Temporary11, NTI1543512598);
-                if (!(subResult_1543524409.isOk)) {
-                var Temporary12 = subResult_1543524409;
+                var subResult_1543525585 = nimCopy(null, Temporary11, NTI1543513214);
+                if (!(subResult_1543525585.isOk)) {
+                var Temporary12 = subResult_1543525585;
                 if (ConstSet143[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-                result_1543524370 = nimCopy(result_1543524370, err__OOZsrcZyatexmlZparser_u17865(Temporary12.error), NTI1543512598);
+                result_1543525546 = nimCopy(result_1543525546, err__OOZsrcZyatexmlZparser_u19041(Temporary12.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary13 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary13 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary13 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary13 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var supResult_1543524428 = nimCopy(null, Temporary13, NTI1543512598);
-                if (!(supResult_1543524428.isOk)) {
-                var Temporary14 = supResult_1543524428;
+                var supResult_1543525604 = nimCopy(null, Temporary13, NTI1543513214);
+                if (!(supResult_1543525604.isOk)) {
+                var Temporary14 = supResult_1543525604;
                 if (ConstSet144[Temporary14.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary14.isOk, NTI33554466)); }
-                result_1543524370 = nimCopy(result_1543524370, err__OOZsrcZyatexmlZparser_u17865(Temporary14.error), NTI1543512598);
+                result_1543525546 = nimCopy(result_1543525546, err__OOZsrcZyatexmlZparser_u19041(Temporary14.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1543524408) {
-                var Temporary15 = subResult_1543524409;
+                if (isOverUnderbrace_1543525584) {
+                var Temporary15 = subResult_1543525585;
                 if (ConstSet145[Temporary15.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary15.isOk, NTI33554466)); }
-                var Temporary16 = supResult_1543524428;
+                var Temporary16 = supResult_1543525604;
                 if (ConstSet146[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-                node_1543524395 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524395, Temporary15.value, Temporary16.value);
+                node_1543525571 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525571, Temporary15.value, Temporary16.value);
                 }
                 else {
-                  var Temporary17 = subResult_1543524409;
+                  var Temporary17 = subResult_1543525585;
                   if (ConstSet147[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-                  var Temporary18 = supResult_1543524428;
+                  var Temporary18 = supResult_1543525604;
                   if (ConstSet148[Temporary18.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary18.isOk, NTI33554466)); }
-                  node_1543524395 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543524395, Temporary17.value, Temporary18.value);
+                  node_1543525571 = newSubSup__OOZsrcZyatexmlZast_u596(node_1543525571, Temporary17.value, Temporary18.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1543524408) {
-                  var Temporary19 = subResult_1543524409;
+                  if (isOverUnderbrace_1543525584) {
+                  var Temporary19 = subResult_1543525585;
                   if (ConstSet149[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-                  node_1543524395 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524395, Temporary19.value, null);
+                  node_1543525571 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525571, Temporary19.value, null);
                   }
                   else {
-                    var Temporary20 = subResult_1543524409;
+                    var Temporary20 = subResult_1543525585;
                     if (ConstSet150[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-                    node_1543524395 = newSub__OOZsrcZyatexmlZast_u588(node_1543524395, Temporary20.value);
+                    node_1543525571 = newSub__OOZsrcZyatexmlZast_u588(node_1543525571, Temporary20.value);
                   }
                   
                 }
@@ -8746,29 +8858,29 @@ function parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0) {
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
                 if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary21 = parseGroup__OOZsrcZyatexmlZparser_u16600(stream_p0);
+                Temporary21 = parseGroup__OOZsrcZyatexmlZparser_u17776(stream_p0);
                 }
                 else {
-                Temporary21 = parsePrimary__OOZsrcZyatexmlZparser_u16597(stream_p0);
+                Temporary21 = parsePrimary__OOZsrcZyatexmlZparser_u17773(stream_p0);
                 }
                 
-                var supResult_1543524447 = nimCopy(null, Temporary21, NTI1543512598);
-                if (!(supResult_1543524447.isOk)) {
-                var Temporary22 = supResult_1543524447;
+                var supResult_1543525623 = nimCopy(null, Temporary21, NTI1543513214);
+                if (!(supResult_1543525623.isOk)) {
+                var Temporary22 = supResult_1543525623;
                 if (ConstSet151[Temporary22.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary22.isOk, NTI33554466)); }
-                result_1543524370 = nimCopy(result_1543524370, err__OOZsrcZyatexmlZparser_u17865(Temporary22.error), NTI1543512598);
+                result_1543525546 = nimCopy(result_1543525546, err__OOZsrcZyatexmlZparser_u19041(Temporary22.error), NTI1543513214);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1543524408) {
-                var Temporary23 = supResult_1543524447;
+                if (isOverUnderbrace_1543525584) {
+                var Temporary23 = supResult_1543525623;
                 if (ConstSet152[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-                node_1543524395 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543524395, null, Temporary23.value);
+                node_1543525571 = newUnderOver__OOZsrcZyatexmlZast_u691(node_1543525571, null, Temporary23.value);
                 }
                 else {
-                  var Temporary24 = supResult_1543524447;
+                  var Temporary24 = supResult_1543525623;
                   if (ConstSet153[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                  node_1543524395 = newSup__OOZsrcZyatexmlZast_u592(node_1543524395, Temporary24.value);
+                  node_1543525571 = newSup__OOZsrcZyatexmlZast_u592(node_1543525571, Temporary24.value);
                 }
                 
                 }
@@ -8777,47 +8889,47 @@ function parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0) {
           };
           if ((match__OOZsrcZyatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          node_1543524395 = newRow__OOZsrcZyatexmlZast_u601([node_1543524395, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+          node_1543525571 = newRow__OOZsrcZyatexmlZast_u601([node_1543525571, newOperator__OOZsrcZyatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
           }
           
-          children_1543524375.push(node_1543524395);;
+          children_1543525551.push(node_1543525571);;
           if (match__OOZsrcZyatexmlZlexer_u664(stream_p0, 0)) {
-          var cmdName_1543524474 = nimCopy(null, peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
-          if ((contains__OOZsrcZyatexmlZparser_u17931(commandTable_1543520462, cmdName_1543524474) && (HEX5BHEX5D__OOZsrcZyatexmlZparser_u17069(commandTable_1543520462, cmdName_1543524474).cmdType == 21))) {
+          var cmdName_1543525650 = nimCopy(null, peek__OOZsrcZyatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
+          if ((contains__OOZsrcZyatexmlZparser_u19107(commandTable_1543521638, cmdName_1543525650) && (HEX5BHEX5D__OOZsrcZyatexmlZparser_u18245(commandTable_1543521638, cmdName_1543525650).cmdType == 21))) {
           (advance__OOZsrcZyatexmlZlexer_u600(stream_p0));
-          if (((children_1543524375).length == 1)) {
-          Temporary25 = children_1543524375[chckIndx(0, 0, (children_1543524375).length - 1)];
+          if (((children_1543525551).length == 1)) {
+          Temporary25 = children_1543525551[chckIndx(0, 0, (children_1543525551).length - 1)];
           }
           else {
-          Temporary25 = newRow__OOZsrcZyatexmlZast_u601(children_1543524375);
+          Temporary25 = newRow__OOZsrcZyatexmlZast_u601(children_1543525551);
           }
           
-          var leftNode_1543524579 = Temporary25;
-          var rightResult_1543524580 = parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0);
-          if (!(rightResult_1543524580.isOk)) {
-          var Temporary26 = rightResult_1543524580;
+          var leftNode_1543525755 = Temporary25;
+          var rightResult_1543525756 = parseExpression__OOZsrcZyatexmlZparser_u17767(stream_p0);
+          if (!(rightResult_1543525756.isOk)) {
+          var Temporary26 = rightResult_1543525756;
           if (ConstSet154[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-          result_1543524370 = nimCopy(result_1543524370, err__OOZsrcZyatexmlZparser_u17865(Temporary26.error), NTI1543512598);
+          result_1543525546 = nimCopy(result_1543525546, err__OOZsrcZyatexmlZparser_u19041(Temporary26.error), NTI1543513214);
           break BeforeRet;
           }
           
-          switch (toJSStr(cmdName_1543524474)) {
+          switch (toJSStr(cmdName_1543525650)) {
           case "over":
-            var Temporary27 = rightResult_1543524580;
+            var Temporary27 = rightResult_1543525756;
             if (ConstSet155[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-            result_1543524370 = nimCopy(result_1543524370, ok__OOZsrcZyatexmlZparser_u17363(newFrac__OOZsrcZyatexmlZast_u575(leftNode_1543524579, Temporary27.value, false)), NTI1543512598);
+            result_1543525546 = nimCopy(result_1543525546, ok__OOZsrcZyatexmlZparser_u18539(newFrac__OOZsrcZyatexmlZast_u575(leftNode_1543525755, Temporary27.value, false)), NTI1543513214);
             break BeforeRet;
             break;
           case "choose":
-            var Temporary28 = rightResult_1543524580;
+            var Temporary28 = rightResult_1543525756;
             if (ConstSet156[Temporary28.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary28.isOk, NTI33554466)); }
-            result_1543524370 = nimCopy(result_1543524370, ok__OOZsrcZyatexmlZparser_u17363(newBinomial__OOZsrcZyatexmlZast_u580(leftNode_1543524579, Temporary28.value)), NTI1543512598);
+            result_1543525546 = nimCopy(result_1543525546, ok__OOZsrcZyatexmlZparser_u18539(newBinomial__OOZsrcZyatexmlZast_u580(leftNode_1543525755, Temporary28.value)), NTI1543513214);
             break BeforeRet;
             break;
           case "atop":
-            var Temporary29 = rightResult_1543524580;
+            var Temporary29 = rightResult_1543525756;
             if (ConstSet157[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-            result_1543524370 = nimCopy(result_1543524370, ok__OOZsrcZyatexmlZparser_u17363(newAtop__OOZsrcZyatexmlZast_u584(leftNode_1543524579, Temporary29.value)), NTI1543512598);
+            result_1543525546 = nimCopy(result_1543525546, ok__OOZsrcZyatexmlZparser_u18539(newAtop__OOZsrcZyatexmlZast_u584(leftNode_1543525755, Temporary29.value)), NTI1543513214);
             break BeforeRet;
             break;
           default: 
@@ -8829,36 +8941,36 @@ function parseExpression__OOZsrcZyatexmlZparser_u16591(stream_p0) {
           
         }
     };
-    if (((children_1543524375).length == 0)) {
-    result_1543524370 = nimCopy(result_1543524370, err__OOZsrcZyatexmlZparser_u17227(1, [69,109,112,116,121,32,101,120,112,114,101,115,115,105,111,110], 0, []), NTI1543512598);
+    if (((children_1543525551).length == 0)) {
+    result_1543525546 = nimCopy(result_1543525546, err__OOZsrcZyatexmlZparser_u18403(1, [69,109,112,116,121,32,101,120,112,114,101,115,115,105,111,110], 0, []), NTI1543513214);
     break BeforeRet;
     }
     else {
-    if (((children_1543524375).length == 1)) {
-    result_1543524370 = nimCopy(result_1543524370, ok__OOZsrcZyatexmlZparser_u17363(children_1543524375[chckIndx(0, 0, (children_1543524375).length - 1)]), NTI1543512598);
+    if (((children_1543525551).length == 1)) {
+    result_1543525546 = nimCopy(result_1543525546, ok__OOZsrcZyatexmlZparser_u18539(children_1543525551[chckIndx(0, 0, (children_1543525551).length - 1)]), NTI1543513214);
     break BeforeRet;
     }
     else {
-      result_1543524370 = nimCopy(result_1543524370, ok__OOZsrcZyatexmlZparser_u17363(newRow__OOZsrcZyatexmlZast_u601(children_1543524375)), NTI1543512598);
+      result_1543525546 = nimCopy(result_1543525546, ok__OOZsrcZyatexmlZparser_u18539(newRow__OOZsrcZyatexmlZast_u601(children_1543525551)), NTI1543513214);
       break BeforeRet;
     }
     }
   };
 
-  return result_1543524370;
+  return result_1543525546;
 
 }
 
-function parse__OOZsrcZyatexmlZparser_u20769(tokens_p0) {
-  var result_1543524644 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function parse__OOZsrcZyatexmlZparser_u21945(tokens_p0) {
+  var result_1543525820 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var stream_1543524645 = [newTokenStream__OOZsrcZyatexmlZlexer_u572(tokens_p0)];
-    result_1543524644 = nimCopy(result_1543524644, parseExpression__OOZsrcZyatexmlZparser_u16591(stream_1543524645[0]), NTI1543512598);
+    var stream_1543525821 = [newTokenStream__OOZsrcZyatexmlZlexer_u572(tokens_p0)];
+    result_1543525820 = nimCopy(result_1543525820, parseExpression__OOZsrcZyatexmlZparser_u17767(stream_1543525821[0]), NTI1543513214);
     break BeforeRet;
   };
 
-  return result_1543524644;
+  return result_1543525820;
 
 }
 
@@ -10463,7 +10575,7 @@ function latexToMathML__OOZsrcZyatexml_u6(latex_p0, options_p1) {
     
     var Temporary2 = lexResult_1342177294;
     if (ConstSet158[Temporary2.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary2.isOk, NTI33554466)); }
-    var parseResult_1342177347 = parse__OOZsrcZyatexmlZparser_u20769(Temporary2.value);
+    var parseResult_1342177347 = parse__OOZsrcZyatexmlZparser_u21945(Temporary2.value);
     if (!(parseResult_1342177347.isOk)) {
     var Temporary3 = parseResult_1342177347;
     if (ConstSet159[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
