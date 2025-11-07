@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 250**
+**Total Unimplemented Commands: 244**
 
 **Last Updated:** 2025-11-07
 
@@ -52,14 +52,11 @@ All 29 single/long/triple arrow variants (hooked tails, loops, circle arrows, sq
 
 ---
 
-## 6. Arrows (Double/Multiple) - 10 commands
+## 6. Arrows (Double/Multiple) - 0 commands (Completed)
 
-```latex
-\leftleftarrows         \rightrightarrows       \leftrightarrows
-\rightleftarrows        \upuparrows             \downdownarrows
-```
+The paired arrow macros (`\leftleftarrows`, `\rightrightarrows`, `\leftrightarrows`, `\rightleftarrows`, `\upuparrows`, `\downdownarrows`) now map directly to their multi-arrow glyphs in MathML.
 
-**Priority:** LOW - Less commonly used.
+**Priority:** n/a – section complete.
 
 ---
 

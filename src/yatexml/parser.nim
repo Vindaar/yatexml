@@ -155,6 +155,12 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["Rrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["rightsquigarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftrightsquigarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leftleftarrows"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightrightarrows"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leftrightarrows"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightleftarrows"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["upuparrows"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["downdownarrows"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["uparrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["downarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["updownarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -620,6 +626,12 @@ proc operatorToUnicode(name: string): string =
   of "Rrightarrow": "\u21DB"
   of "rightsquigarrow": "\u21DD"
   of "leftrightsquigarrow": "\u21AD"
+  of "leftleftarrows": "\u21C7"
+  of "rightrightarrows": "\u21C9"
+  of "leftrightarrows": "\u21C6"
+  of "rightleftarrows": "\u21C4"
+  of "upuparrows": "\u21C8"
+  of "downdownarrows": "\u21CA"
   of "uparrow": "\u2191"
   of "downarrow": "\u2193"
   of "updownarrow": "\u2195"

@@ -137,6 +137,18 @@ suite "Parser Tests":
     check result.value.kind == nkOperator
     check result.value.opValue == "\u21DD"
 
+  test "Parse double directional arrows":
+    let result = parse(r"\leftleftarrows")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u21C7"
+
+  test "Parse stacked vertical arrows":
+    let result = parse(r"\upuparrows")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u21C8"
+
   test "Parse nested fraction":
     let result = parse(r"\frac{a}{\frac{b}{c}}")
     check result.isOk
@@ -235,6 +247,13 @@ suite "Integration Tests":
     check "\u21A9" in result.value   # ↩
     check "\u27FA" in result.value   # ⟺
     check "\u21DD" in result.value   # ↝
+
+  test "Full pipeline: double arrows":
+    let result = latexToMathML(r"\leftleftarrows \upuparrows \rightleftarrows")
+    check result.isOk
+    check "\u21C7" in result.value   # ⇇
+    check "\u21C8" in result.value   # ⇈
+    check "\u21C4" in result.value   # ⇄
 
   test "Full pipeline: big operator":
     let result = latexToMathML(r"\sum_{i=0}^n i")
