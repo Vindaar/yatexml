@@ -98,6 +98,25 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["rightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["leftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Rightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Leftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Leftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["implies"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["iff"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["mapsto"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["longmapsto"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["longrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["longleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["uparrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["downarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["updownarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Uparrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Downarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Updownarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nearrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["searrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["swarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nwarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["in"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["notin"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["subset"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -437,6 +456,23 @@ proc operatorToUnicode(name: string): string =
   of "to", "rightarrow": "\u2192"
   of "leftarrow": "\u2190"
   of "leftrightarrow": "\u2194"
+  of "Rightarrow", "implies": "\u21D2"
+  of "Leftarrow": "\u21D0"
+  of "Leftrightarrow", "iff": "\u21D4"
+  of "mapsto": "\u21A6"
+  of "longmapsto": "\u27FC"
+  of "longrightarrow": "\u27F6"
+  of "longleftarrow": "\u27F5"
+  of "uparrow": "\u2191"
+  of "downarrow": "\u2193"
+  of "updownarrow": "\u2195"
+  of "Uparrow": "\u21D1"
+  of "Downarrow": "\u21D3"
+  of "Updownarrow": "\u21D5"
+  of "nearrow": "\u2197"
+  of "searrow": "\u2198"
+  of "swarrow": "\u2199"
+  of "nwarrow": "\u2196"
   of "oplus": "\u2295"
   of "otimes": "\u2297"
   of "ominus": "\u2296"
