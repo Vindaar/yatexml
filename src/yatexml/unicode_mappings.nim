@@ -65,17 +65,43 @@ proc initUnicodeMappings*() =
   unicodeToLatex["ϖ"] = UnicodeMapping(latex: "varpi", category: mcGreekLetter)
 
   # Greek uppercase letters
+  unicodeToLatex["Α"] = UnicodeMapping(latex: "Alpha", category: mcGreekLetter)
+  unicodeToLatex["Β"] = UnicodeMapping(latex: "Beta", category: mcGreekLetter)
   unicodeToLatex["Γ"] = UnicodeMapping(latex: "Gamma", category: mcGreekLetter)
   unicodeToLatex["Δ"] = UnicodeMapping(latex: "Delta", category: mcGreekLetter)
+  unicodeToLatex["Ε"] = UnicodeMapping(latex: "Epsilon", category: mcGreekLetter)
+  unicodeToLatex["Ζ"] = UnicodeMapping(latex: "Zeta", category: mcGreekLetter)
+  unicodeToLatex["Η"] = UnicodeMapping(latex: "Eta", category: mcGreekLetter)
   unicodeToLatex["Θ"] = UnicodeMapping(latex: "Theta", category: mcGreekLetter)
+  unicodeToLatex["Ι"] = UnicodeMapping(latex: "Iota", category: mcGreekLetter)
+  unicodeToLatex["Κ"] = UnicodeMapping(latex: "Kappa", category: mcGreekLetter)
   unicodeToLatex["Λ"] = UnicodeMapping(latex: "Lambda", category: mcGreekLetter)
+  unicodeToLatex["Μ"] = UnicodeMapping(latex: "Mu", category: mcGreekLetter)
+  unicodeToLatex["Ν"] = UnicodeMapping(latex: "Nu", category: mcGreekLetter)
   unicodeToLatex["Ξ"] = UnicodeMapping(latex: "Xi", category: mcGreekLetter)
+  unicodeToLatex["Ο"] = UnicodeMapping(latex: "Omicron", category: mcGreekLetter)
   unicodeToLatex["Π"] = UnicodeMapping(latex: "Pi", category: mcGreekLetter)
+  unicodeToLatex["Ρ"] = UnicodeMapping(latex: "Rho", category: mcGreekLetter)
   unicodeToLatex["Σ"] = UnicodeMapping(latex: "Sigma", category: mcGreekLetter)
+  unicodeToLatex["Τ"] = UnicodeMapping(latex: "Tau", category: mcGreekLetter)
   unicodeToLatex["Υ"] = UnicodeMapping(latex: "Upsilon", category: mcGreekLetter)
   unicodeToLatex["Φ"] = UnicodeMapping(latex: "Phi", category: mcGreekLetter)
+  unicodeToLatex["Χ"] = UnicodeMapping(latex: "Chi", category: mcGreekLetter)
   unicodeToLatex["Ψ"] = UnicodeMapping(latex: "Psi", category: mcGreekLetter)
   unicodeToLatex["Ω"] = UnicodeMapping(latex: "Omega", category: mcGreekLetter)
+
+  # Greek uppercase variants
+  unicodeToLatex["𝛤"] = UnicodeMapping(latex: "varGamma", category: mcGreekLetter)
+  unicodeToLatex["𝛥"] = UnicodeMapping(latex: "varDelta", category: mcGreekLetter)
+  unicodeToLatex["𝛩"] = UnicodeMapping(latex: "varTheta", category: mcGreekLetter)
+  unicodeToLatex["𝛬"] = UnicodeMapping(latex: "varLambda", category: mcGreekLetter)
+  unicodeToLatex["𝛯"] = UnicodeMapping(latex: "varXi", category: mcGreekLetter)
+  unicodeToLatex["𝛱"] = UnicodeMapping(latex: "varPi", category: mcGreekLetter)
+  unicodeToLatex["𝛴"] = UnicodeMapping(latex: "varSigma", category: mcGreekLetter)
+  unicodeToLatex["𝛶"] = UnicodeMapping(latex: "varUpsilon", category: mcGreekLetter)
+  unicodeToLatex["𝛷"] = UnicodeMapping(latex: "varPhi", category: mcGreekLetter)
+  unicodeToLatex["𝛹"] = UnicodeMapping(latex: "varPsi", category: mcGreekLetter)
+  unicodeToLatex["𝛺"] = UnicodeMapping(latex: "varOmega", category: mcGreekLetter)
 
   # Binary operators
   unicodeToLatex["×"] = UnicodeMapping(latex: "×", category: mcOperator)  # Already Unicode in MathML

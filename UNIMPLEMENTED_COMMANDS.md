@@ -2,37 +2,21 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 342**
+**Total Unimplemented Commands: 314**
 
 **Last Updated:** 2025-11-07
 
 ---
 
-## 1. Greek Letters (Capital Variants) - 11 commands
+## 1. Greek Letters (Capital Variants) - 0 commands (Completed)
 
-These are capital Greek letters that don't have special mathematical meanings in standard LaTeX.
-
-```latex
-\Alpha      \Beta       \Chi        \Epsilon    \Eta
-\Iota       \Kappa      \Omicron    \Rho        \Tau
-\Zeta
-```
-
-**Note:** Standard LaTeX uses `A`, `B`, `E`, `Z`, `H`, `I`, `K`, `O`, `P`, `T` for these. The backslash versions are from packages like `unicode-math`.
+All wikipedia-observed capital Greek aliases (`\Alpha`, `\Beta`, …, `\Zeta`) are now implemented directly in the parser and Unicode helpers. Keeping this section for history; no outstanding work remains here.
 
 ---
 
-## 2. Greek Letter Variants - 17 commands
+## 2. Greek Letter Variants - 0 commands (Completed)
 
-Variant forms of Greek letters with different glyphs.
-
-```latex
-\varDelta       \varGamma       \varLambda      \varOmega
-\varPhi         \varPi          \varSigma       \varTheta
-\varUpsilon     \varXi          \varkappa       \varpropto
-\vartriangle    \vartriangleleft \vartriangleright
-\varsubsetneq   \varsubsetneqq  \varsupsetneq   \varsupsetneqq
-```
+The unicode-math variants (`\varGamma`, `\varDelta`, …, `\varsupsetneqq`) now emit the appropriate glyphs and relations, so this category is complete as of 2025-11-07.
 
 ---
 

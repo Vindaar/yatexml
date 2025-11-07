@@ -50,8 +50,18 @@ proc initCommandTable(): Table[string, CommandInfo] =
                  "Upsilon", "Phi", "Psi", "Omega"]:
     result[letter] = CommandInfo(cmdType: ctGreek, numArgs: 0)
 
-  # Greek variants
-  for letter in ["varepsilon", "vartheta", "varpi", "varrho", "varsigma", "varphi"]:
+  # Greek letters (capital variants from unicode-math)
+  for letter in ["Alpha", "Beta", "Chi", "Epsilon", "Eta", "Iota",
+                 "Kappa", "Mu", "Nu", "Omicron", "Rho", "Tau", "Zeta"]:
+    result[letter] = CommandInfo(cmdType: ctGreek, numArgs: 0)
+
+  # Greek variants (lowercase)
+  for letter in ["varepsilon", "vartheta", "varpi", "varrho", "varsigma", "varphi", "varkappa"]:
+    result[letter] = CommandInfo(cmdType: ctGreek, numArgs: 0)
+
+  # Greek variants (uppercase)
+  for letter in ["varGamma", "varDelta", "varTheta", "varLambda", "varXi",
+                 "varPi", "varSigma", "varUpsilon", "varPhi", "varPsi", "varOmega"]:
     result[letter] = CommandInfo(cmdType: ctGreek, numArgs: 0)
 
   # Operators
@@ -145,6 +155,11 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["triangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["square"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["diamond"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vartriangle"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vartriangleleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vartriangleright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["varpropto"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["propto"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["flat"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["natural"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["sharp"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -157,6 +172,10 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["models"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["checkmark"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["ddots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["varsubsetneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["varsubsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["varsupsetneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["varsupsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -416,24 +435,50 @@ proc greekToUnicode(name: string): string =
   of "psi": "\u03C8"
   of "omega": "\u03C9"
   # Uppercase
+  of "Alpha": "\u0391"
+  of "Beta": "\u0392"
   of "Gamma": "\u0393"
   of "Delta": "\u0394"
+  of "Epsilon": "\u0395"
+  of "Zeta": "\u0396"
+  of "Eta": "\u0397"
   of "Theta": "\u0398"
+  of "Iota": "\u0399"
+  of "Kappa": "\u039A"
   of "Lambda": "\u039B"
+  of "Mu": "\u039C"
+  of "Nu": "\u039D"
+  of "Chi": "\u03A7"
+  of "Omicron": "\u039F"
   of "Xi": "\u039E"
   of "Pi": "\u03A0"
+  of "Rho": "\u03A1"
   of "Sigma": "\u03A3"
   of "Upsilon": "\u03A5"
   of "Phi": "\u03A6"
   of "Psi": "\u03A8"
+  of "Tau": "\u03A4"
   of "Omega": "\u03A9"
-  # Variants
+  # Variants - lowercase
   of "varepsilon": "\u03F5"
   of "vartheta": "\u03D1"
   of "varpi": "\u03D6"
   of "varrho": "\u03F1"
   of "varsigma": "\u03C2"
   of "varphi": "\u03D5"
+  of "varkappa": "\u03F0"
+  # Variants - uppercase
+  of "varGamma": "\U0001D6E4"
+  of "varDelta": "\U0001D6E5"
+  of "varTheta": "\U0001D6E9"
+  of "varLambda": "\U0001D6EC"
+  of "varXi": "\U0001D6EF"
+  of "varPi": "\U0001D6F1"
+  of "varSigma": "\U0001D6F4"
+  of "varUpsilon": "\U0001D6F6"
+  of "varPhi": "\U0001D6F7"
+  of "varPsi": "\U0001D6F9"
+  of "varOmega": "\U0001D6FA"
   else: "?"
 
 proc operatorToUnicode(name: string): string =
@@ -495,6 +540,10 @@ proc operatorToUnicode(name: string): string =
   of "supset": "\u2283"
   of "subseteq": "\u2286"
   of "supseteq": "\u2287"
+  of "varsubsetneq": "\u228A\uFE00"
+  of "varsubsetneqq": "\u2ACB\uFE00"
+  of "varsupsetneq": "\u228B"
+  of "varsupsetneqq": "\u2ACC\uFE00"
   of "partial": "\u2202"
   of "vdots": "\u22EE"
   of "cdots": "\u22EF"
@@ -519,8 +568,12 @@ proc operatorToUnicode(name: string): string =
   of "bot": "\u22A5"
   of "angle": "\u2220"
   of "triangle": "\u25B3"
+  of "vartriangle": "\u25B3"
+  of "vartriangleleft": "\u22B2"
+  of "vartriangleright": "\u22B3"
   of "square": "\u25A1"
   of "diamond": "\u22C4"
+  of "propto", "varpropto": "\u221D"
   of "flat": "\u266D"
   of "natural": "\u266E"
   of "sharp": "\u266F"

@@ -89,6 +89,24 @@ suite "Parser Tests":
     check result.value.kind == nkSymbol
     check result.value.symbolName == "alpha"
 
+  test "Parse capital Greek letter command":
+    let result = parse(r"\Alpha")
+    check result.isOk
+    check result.value.kind == nkSymbol
+    check result.value.symbolValue == "\u0391"
+
+  test "Parse variant uppercase Greek letter":
+    let result = parse(r"\varGamma")
+    check result.isOk
+    check result.value.kind == nkSymbol
+    check result.value.symbolValue == "\U0001D6E4"
+
+  test "Parse variant triangle relation":
+    let result = parse(r"\vartriangleleft")
+    check result.isOk
+    check result.value.kind == nkOperator
+    check result.value.opValue == "\u22B2"
+
   test "Parse nested fraction":
     let result = parse(r"\frac{a}{\frac{b}{c}}")
     check result.isOk
@@ -161,6 +179,18 @@ suite "Integration Tests":
     check result.isOk
     check "\u03B1" in result.value  # α
     check "\u03B2" in result.value  # β
+
+  test "Full pipeline: capital Greek letters":
+    let result = latexToMathML(r"\Alpha + \Chi")
+    check result.isOk
+    check "\u0391" in result.value  # Α
+    check "\u03A7" in result.value  # Χ
+
+  test "Full pipeline: variant relations":
+    let result = latexToMathML(r"\varsubsetneqq \vartriangleright")
+    check result.isOk
+    check "\u2ACB\uFE00" in result.value  # ⫋︀
+    check "\u22B3" in result.value        # ⊳
 
   test "Full pipeline: big operator":
     let result = latexToMathML(r"\sum_{i=0}^n i")
