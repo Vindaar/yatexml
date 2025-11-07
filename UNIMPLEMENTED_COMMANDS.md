@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 135**
+**Total Unimplemented Commands: 118**
 
 **Last Updated:** 2025-11-07
 
@@ -144,15 +144,11 @@ All 21 essential special symbols have been implemented, including mathematical s
 
 ---
 
-## 15. Large Operators - 8 commands
+## 15. Large Operators - 0 commands (Completed)
 
-```latex
-\coprod         \bigoplus       \bigotimes      \bigodot
-\biguplus       \bigsqcup       \bigvee         \bigwedge
-\iiiint         \oiint          \oiiint
-```
+All 11 large operator commands have been implemented: `\coprod`, `\bigoplus`, `\bigotimes`, `\bigodot`, `\biguplus`, `\bigsqcup`, `\bigvee`, `\bigwedge`, `\iiiint`, `\oiint`, `\oiiint`.
 
-**Priority:** MEDIUM - Used for multiple integrals and algebraic operations.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -168,14 +164,11 @@ All 21 essential special symbols have been implemented, including mathematical s
 
 ---
 
-## 17. Accents - 6 commands
+## 17. Accents - 0 commands (Completed)
 
-```latex
-\acute          \grave          \breve          \check
-\dddot          \wideparen
-```
+All 6 accent commands have been implemented: `\acute`, `\grave`, `\breve`, `\check`, `\dddot`, `\wideparen`.
 
-**Priority:** MEDIUM - `\acute` and `\grave` are common in analysis; others less so.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -283,7 +276,7 @@ These are variants of cap, cup, and shifts.
 - Positioning: `\overset`, `\underset` (2)
 - Styling: `\boldsymbol`, `\not` (2+, package-dependent)
 
-### MEDIUM Priority (Moderately Common) - ~58 commands remaining
+### MEDIUM Priority (Moderately Common) - ~44 commands remaining
 - Arrows (39) - Most already implemented
 - Harpoons (0) ✓ Completed
 - Advanced relations (35) - Most already implemented
@@ -292,9 +285,9 @@ These are variants of cap, cup, and shifts.
 - Additional inequalities (0) ✓ Completed
 - Set theory relations (0) ✓ Completed
 - Binary operators (0) ✓ Completed
+- Large operators (0) ✓ Completed
+- Accents (0) ✓ Completed
 - Negated relations (44)
-- Large operators (8)
-- Accents (6)
 
 ### LOW Priority (Specialized) - ~142 commands
 - Ordering relations (16)

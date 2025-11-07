@@ -174,8 +174,20 @@ proc generateAccent(node: AstNode, options: MathMLOptions): string =
     tag("mover", base & tag("mo", "\u02D9"), [("accent", "true")])
   of akDdot:
     tag("mover", base & tag("mo", "\u00A8"), [("accent", "true")])
+  of akDddot:
+    tag("mover", base & tag("mo", "\u20DB"), [("accent", "true")])
   of akVec:
     tag("mover", base & tag("mo", "\u2192"), [("accent", "true")])
+  of akAcute:
+    tag("mover", base & tag("mo", "\u00B4"), [("accent", "true")])
+  of akGrave:
+    tag("mover", base & tag("mo", "\u0060"), [("accent", "true")])
+  of akBreve:
+    tag("mover", base & tag("mo", "\u02D8"), [("accent", "true")])
+  of akCheck:
+    tag("mover", base & tag("mo", "\u02C7"), [("accent", "true")])
+  of akWideparen:
+    tag("mover", base & tag("mo", "\u23DC"), [("accent", "true")])
   of akWidehat:
     tag("mover", base & tag("mo", "\u0302"), [("accent", "true")])
   of akWidetilde:
@@ -294,9 +306,20 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
     of boInt: "\u222B"
     of boIInt: "\u222C"
     of boIIInt: "\u222D"
+    of boIIIInt: "\u2A0C"
     of boOint: "\u222E"
+    of boOIInt: "\u222F"
+    of boOIIInt: "\u2230"
     of boUnion: "\u22C3"
     of boIntersect: "\u22C2"
+    of boCoProd: "\u2210"
+    of boOPlus: "\u2A01"
+    of boOTimes: "\u2A02"
+    of boODot: "\u2A00"
+    of boUPlus: "\u2A04"
+    of boSqCup: "\u2A06"
+    of boVee: "\u22C1"
+    of boWedge: "\u22C0"
     of boLim: "lim"
     of boMax: "max"
     of boMin: "min"
@@ -311,7 +334,7 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   # Handle limits
   # Integrals use msub/msup (limits to the side) because they're tall operators
   # Other operators (sum, prod, etc.) use munder/mover (limits above/below)
-  let isIntegral = node.bigopKind in {boInt, boIInt, boIIInt, boOint}
+  let isIntegral = node.bigopKind in {boInt, boIInt, boIIInt, boIIIInt, boOint, boOIInt, boOIIInt}
 
   if node.bigopLower != nil and node.bigopUpper != nil:
     let lower = generateNode(node.bigopLower, options)

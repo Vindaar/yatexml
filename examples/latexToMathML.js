@@ -3,34 +3,40 @@ var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
 var NTI1560281091 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281737 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281731 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281728 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281717 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281714 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281755 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281749 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281746 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281735 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281732 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281687 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281684 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281681 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281678 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281675 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281672 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281669 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281666 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281663 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281660 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281657 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281654 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281651 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281648 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281645 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281563 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281496 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281416 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281394 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281388 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281383 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281378 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281581 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281514 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281434 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281412 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281406 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281401 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281396 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281392 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281360 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281354 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281374 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281342 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281336 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281356 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281331 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281325 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281349 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281343 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281338 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281332 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281329 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281326 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281323 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281320 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281317 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281314 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281311 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281308 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
@@ -46,24 +52,24 @@ var NTI1560281260 = {size: 0, kind: 18, base: null, node: null, finalizer: null}
 var NTI1560281244 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281227 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1560281223 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1560281746 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1560281764 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1392509096 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1526738156 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1526738530 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1543503945 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1526737906 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1526738280 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1375731870 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1375731869 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1526737394 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1526737396 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1526737395 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1526737768 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1526737770 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1526737769 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI687865926 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI788529232 = {size: 0,kind: 31,base: null,node: null,finalizer: null};
 var NTI788529239 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI637534589 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1526738834 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1526739208 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1375731844 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1375731843 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1526739225 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1526739599 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1375731821 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1375731746 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1375731723 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
@@ -85,7 +91,7 @@ var NTI1375731716 = {size: 0, kind: 14, base: null, node: null, finalizer: null}
 var NTI1375731715 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
 var NTI1375731737 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1375731726 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
-var NTI1526737362 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1526737736 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1392509349 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI1392509348 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI1392509351 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
@@ -342,20 +348,26 @@ var NNI1375731715 = {kind: 2, offset: 0, typ: null, name: null, len: 32, sons: {
 "30": {kind: 1, offset: 30, typ: NTI1375731715, name: "nkSIUnit", len: 0, sons: null}, 
 "31": {kind: 1, offset: 31, typ: NTI1375731715, name: "nkSIValue", len: 0, sons: null}}};
 NTI1375731715.node = NNI1375731715;
-var NNI1375731716 = {kind: 2, offset: 0, typ: null, name: null, len: 14, sons: {"0": {kind: 1, offset: 0, typ: NTI1375731716, name: "akHat", len: 0, sons: null}, 
+var NNI1375731716 = {kind: 2, offset: 0, typ: null, name: null, len: 20, sons: {"0": {kind: 1, offset: 0, typ: NTI1375731716, name: "akHat", len: 0, sons: null}, 
 "1": {kind: 1, offset: 1, typ: NTI1375731716, name: "akBar", len: 0, sons: null}, 
 "2": {kind: 1, offset: 2, typ: NTI1375731716, name: "akTilde", len: 0, sons: null}, 
 "3": {kind: 1, offset: 3, typ: NTI1375731716, name: "akDot", len: 0, sons: null}, 
 "4": {kind: 1, offset: 4, typ: NTI1375731716, name: "akDdot", len: 0, sons: null}, 
-"5": {kind: 1, offset: 5, typ: NTI1375731716, name: "akVec", len: 0, sons: null}, 
-"6": {kind: 1, offset: 6, typ: NTI1375731716, name: "akWidehat", len: 0, sons: null}, 
-"7": {kind: 1, offset: 7, typ: NTI1375731716, name: "akWidetilde", len: 0, sons: null}, 
-"8": {kind: 1, offset: 8, typ: NTI1375731716, name: "akOverline", len: 0, sons: null}, 
-"9": {kind: 1, offset: 9, typ: NTI1375731716, name: "akUnderline", len: 0, sons: null}, 
-"10": {kind: 1, offset: 10, typ: NTI1375731716, name: "akOverbrace", len: 0, sons: null}, 
-"11": {kind: 1, offset: 11, typ: NTI1375731716, name: "akUnderbrace", len: 0, sons: null}, 
-"12": {kind: 1, offset: 12, typ: NTI1375731716, name: "akOverrightarrow", len: 0, sons: null}, 
-"13": {kind: 1, offset: 13, typ: NTI1375731716, name: "akOverleftarrow", len: 0, sons: null}}};
+"5": {kind: 1, offset: 5, typ: NTI1375731716, name: "akDddot", len: 0, sons: null}, 
+"6": {kind: 1, offset: 6, typ: NTI1375731716, name: "akVec", len: 0, sons: null}, 
+"7": {kind: 1, offset: 7, typ: NTI1375731716, name: "akAcute", len: 0, sons: null}, 
+"8": {kind: 1, offset: 8, typ: NTI1375731716, name: "akGrave", len: 0, sons: null}, 
+"9": {kind: 1, offset: 9, typ: NTI1375731716, name: "akBreve", len: 0, sons: null}, 
+"10": {kind: 1, offset: 10, typ: NTI1375731716, name: "akCheck", len: 0, sons: null}, 
+"11": {kind: 1, offset: 11, typ: NTI1375731716, name: "akWideparen", len: 0, sons: null}, 
+"12": {kind: 1, offset: 12, typ: NTI1375731716, name: "akWidehat", len: 0, sons: null}, 
+"13": {kind: 1, offset: 13, typ: NTI1375731716, name: "akWidetilde", len: 0, sons: null}, 
+"14": {kind: 1, offset: 14, typ: NTI1375731716, name: "akOverline", len: 0, sons: null}, 
+"15": {kind: 1, offset: 15, typ: NTI1375731716, name: "akUnderline", len: 0, sons: null}, 
+"16": {kind: 1, offset: 16, typ: NTI1375731716, name: "akOverbrace", len: 0, sons: null}, 
+"17": {kind: 1, offset: 17, typ: NTI1375731716, name: "akUnderbrace", len: 0, sons: null}, 
+"18": {kind: 1, offset: 18, typ: NTI1375731716, name: "akOverrightarrow", len: 0, sons: null}, 
+"19": {kind: 1, offset: 19, typ: NTI1375731716, name: "akOverleftarrow", len: 0, sons: null}}};
 NTI1375731716.node = NNI1375731716;
 var NNI1375731717 = {kind: 2, offset: 0, typ: null, name: null, len: 8, sons: {"0": {kind: 1, offset: 0, typ: NTI1375731717, name: "skBold", len: 0, sons: null}, 
 "1": {kind: 1, offset: 1, typ: NTI1375731717, name: "skItalic", len: 0, sons: null}, 
@@ -386,17 +398,28 @@ NTI1375731742.node = NNI1375731742;
 NTI1375731741.base = NTI1375731742;
 NTI1375731744.base = NTI1375731726;
 NTI1375731743.base = NTI1375731744;
-var NNI1375731719 = {kind: 2, offset: 0, typ: null, name: null, len: 11, sons: {"0": {kind: 1, offset: 0, typ: NTI1375731719, name: "boSum", len: 0, sons: null}, 
+var NNI1375731719 = {kind: 2, offset: 0, typ: null, name: null, len: 22, sons: {"0": {kind: 1, offset: 0, typ: NTI1375731719, name: "boSum", len: 0, sons: null}, 
 "1": {kind: 1, offset: 1, typ: NTI1375731719, name: "boProd", len: 0, sons: null}, 
 "2": {kind: 1, offset: 2, typ: NTI1375731719, name: "boInt", len: 0, sons: null}, 
 "3": {kind: 1, offset: 3, typ: NTI1375731719, name: "boIInt", len: 0, sons: null}, 
 "4": {kind: 1, offset: 4, typ: NTI1375731719, name: "boIIInt", len: 0, sons: null}, 
-"5": {kind: 1, offset: 5, typ: NTI1375731719, name: "boOint", len: 0, sons: null}, 
-"6": {kind: 1, offset: 6, typ: NTI1375731719, name: "boUnion", len: 0, sons: null}, 
-"7": {kind: 1, offset: 7, typ: NTI1375731719, name: "boIntersect", len: 0, sons: null}, 
-"8": {kind: 1, offset: 8, typ: NTI1375731719, name: "boLim", len: 0, sons: null}, 
-"9": {kind: 1, offset: 9, typ: NTI1375731719, name: "boMax", len: 0, sons: null}, 
-"10": {kind: 1, offset: 10, typ: NTI1375731719, name: "boMin", len: 0, sons: null}}};
+"5": {kind: 1, offset: 5, typ: NTI1375731719, name: "boIIIInt", len: 0, sons: null}, 
+"6": {kind: 1, offset: 6, typ: NTI1375731719, name: "boOint", len: 0, sons: null}, 
+"7": {kind: 1, offset: 7, typ: NTI1375731719, name: "boOIInt", len: 0, sons: null}, 
+"8": {kind: 1, offset: 8, typ: NTI1375731719, name: "boOIIInt", len: 0, sons: null}, 
+"9": {kind: 1, offset: 9, typ: NTI1375731719, name: "boUnion", len: 0, sons: null}, 
+"10": {kind: 1, offset: 10, typ: NTI1375731719, name: "boIntersect", len: 0, sons: null}, 
+"11": {kind: 1, offset: 11, typ: NTI1375731719, name: "boCoProd", len: 0, sons: null}, 
+"12": {kind: 1, offset: 12, typ: NTI1375731719, name: "boOPlus", len: 0, sons: null}, 
+"13": {kind: 1, offset: 13, typ: NTI1375731719, name: "boOTimes", len: 0, sons: null}, 
+"14": {kind: 1, offset: 14, typ: NTI1375731719, name: "boODot", len: 0, sons: null}, 
+"15": {kind: 1, offset: 15, typ: NTI1375731719, name: "boUPlus", len: 0, sons: null}, 
+"16": {kind: 1, offset: 16, typ: NTI1375731719, name: "boSqCup", len: 0, sons: null}, 
+"17": {kind: 1, offset: 17, typ: NTI1375731719, name: "boVee", len: 0, sons: null}, 
+"18": {kind: 1, offset: 18, typ: NTI1375731719, name: "boWedge", len: 0, sons: null}, 
+"19": {kind: 1, offset: 19, typ: NTI1375731719, name: "boLim", len: 0, sons: null}, 
+"20": {kind: 1, offset: 20, typ: NTI1375731719, name: "boMax", len: 0, sons: null}, 
+"21": {kind: 1, offset: 21, typ: NTI1375731719, name: "boMin", len: 0, sons: null}}};
 NTI1375731719.node = NNI1375731719;
 var NNI1375731722 = {kind: 2, offset: 0, typ: null, name: null, len: 27, sons: {"0": {kind: 1, offset: 0, typ: NTI1375731722, name: "ukMeter", len: 0, sons: null}, 
 "1": {kind: 1, offset: 1, typ: NTI1375731722, name: "ukSecond", len: 0, sons: null}, 
@@ -519,14 +542,14 @@ var NNI1375731737 = {kind: 3, offset: "kind", len: 32, typ: NTI1375731715, name:
 {kind: 1, offset: "siUnit", len: 0, typ: NTI1375731726, name: "siUnit", sons: null}]}]]};
 NTI1375731737.node = NNI1375731737;
 NTI1375731726.base = NTI1375731737;
-var NNI1526737362 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI1375731726, name: "value", sons: null}], 
+var NNI1526737736 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI1375731726, name: "value", sons: null}], 
 [setConstr(0), {kind: 1, offset: "error", len: 0, typ: NTI1342177284, name: "error", sons: null}]]};
-NTI1526737362.node = NNI1526737362;
+NTI1526737736.node = NNI1526737736;
 NTI1375731821.base = NTI1375731726;
-NTI1526739225.base = NTI1375731726;
+NTI1526739599.base = NTI1375731726;
 NTI1375731844.base = NTI1375731726;
 NTI1375731843.base = NTI1375731844;
-NTI1526738834.base = NTI1375731726;
+NTI1526739208.base = NTI1375731726;
 NTI637534589.base = NTI33554449;
 var NNI788529239 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "a", len: 0, typ: NTI788529232, name: "a", sons: null}, 
 {kind: 1, offset: "b", len: 0, typ: NTI33554435, name: "b", sons: null}]};
@@ -534,22 +557,22 @@ NTI788529239.node = NNI788529239;
 var NNI687865926 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "a", len: 0, typ: NTI33554435, name: "a", sons: null}, 
 {kind: 1, offset: "b", len: 0, typ: NTI33554435, name: "b", sons: null}]};
 NTI687865926.node = NNI687865926;
-NTI1526737395.base = NTI1375731725;
-NTI1526737396.base = NTI1375731725;
-var NNI1526737394 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI1526737395, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI1526737396, name: "Field1", sons: null}]};
-NTI1526737394.node = NNI1526737394;
+NTI1526737769.base = NTI1375731725;
+NTI1526737770.base = NTI1375731725;
+var NNI1526737768 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI1526737769, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI1526737770, name: "Field1", sons: null}]};
+NTI1526737768.node = NNI1526737768;
 NTI1375731869.base = NTI1375731725;
 NTI1375731870.base = NTI1375731725;
-var NNI1526737906 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI33554466, name: "value", sons: null}], 
+var NNI1526738280 = {kind: 3, offset: "isOk", len: 2, typ: NTI33554466, name: "isOk", sons: [[setConstr(1), {kind: 1, offset: "value", len: 0, typ: NTI33554466, name: "value", sons: null}], 
 [setConstr(0), {kind: 1, offset: "error", len: 0, typ: NTI1342177284, name: "error", sons: null}]]};
-NTI1526737906.node = NNI1526737906;
+NTI1526738280.node = NNI1526738280;
 NTI1543503945.base = NTI1392508932;
-NTI1526738156.base = NTI1392508932;
+NTI1526738530.base = NTI1392508932;
 NTI1392509096.base = NTI1392508932;
-var NNI1560281746 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1560281764 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281746.node = NNI1560281746;
+NTI1560281764.node = NNI1560281764;
 var NNI1560281223 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1560281223.node = NNI1560281223;
@@ -595,66 +618,66 @@ NTI1560281311.node = NNI1560281311;
 var NNI1560281314 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1560281314.node = NNI1560281314;
+var NNI1560281317 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281317.node = NNI1560281317;
 var NNI1560281320 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1560281320.node = NNI1560281320;
-var NNI1560281325 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1560281323 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281325.node = NNI1560281325;
-var NNI1560281331 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281323.node = NNI1560281323;
+var NNI1560281326 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281331.node = NNI1560281331;
-var NNI1560281356 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281326.node = NNI1560281326;
+var NNI1560281329 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281356.node = NNI1560281356;
-var NNI1560281336 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281329.node = NNI1560281329;
+var NNI1560281332 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281336.node = NNI1560281336;
-var NNI1560281342 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281332.node = NNI1560281332;
+var NNI1560281338 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281342.node = NNI1560281342;
+NTI1560281338.node = NNI1560281338;
+var NNI1560281343 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281343.node = NNI1560281343;
+var NNI1560281349 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281349.node = NNI1560281349;
 var NNI1560281374 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1560281374.node = NNI1560281374;
-var NNI1560281378 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1560281354 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281378.node = NNI1560281378;
-var NNI1560281383 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281354.node = NNI1560281354;
+var NNI1560281360 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281383.node = NNI1560281383;
-var NNI1560281388 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281360.node = NNI1560281360;
+var NNI1560281392 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281388.node = NNI1560281388;
-var NNI1560281394 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281392.node = NNI1560281392;
+var NNI1560281396 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281394.node = NNI1560281394;
-var NNI1560281416 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281396.node = NNI1560281396;
+var NNI1560281401 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281416.node = NNI1560281416;
-var NNI1560281496 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281401.node = NNI1560281401;
+var NNI1560281406 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281496.node = NNI1560281496;
-var NNI1560281563 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281406.node = NNI1560281406;
+var NNI1560281412 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281563.node = NNI1560281563;
-var NNI1560281645 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281412.node = NNI1560281412;
+var NNI1560281434 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281645.node = NNI1560281645;
-var NNI1560281648 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281434.node = NNI1560281434;
+var NNI1560281514 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281648.node = NNI1560281648;
-var NNI1560281651 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281514.node = NNI1560281514;
+var NNI1560281581 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281651.node = NNI1560281651;
-var NNI1560281654 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281654.node = NNI1560281654;
-var NNI1560281657 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281657.node = NNI1560281657;
-var NNI1560281660 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
-{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281660.node = NNI1560281660;
+NTI1560281581.node = NNI1560281581;
 var NNI1560281663 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1560281663.node = NNI1560281663;
@@ -664,21 +687,39 @@ NTI1560281666.node = NNI1560281666;
 var NNI1560281669 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
 NTI1560281669.node = NNI1560281669;
-var NNI1560281714 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+var NNI1560281672 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281714.node = NNI1560281714;
-var NNI1560281717 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281672.node = NNI1560281672;
+var NNI1560281675 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281717.node = NNI1560281717;
-var NNI1560281728 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281675.node = NNI1560281675;
+var NNI1560281678 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281728.node = NNI1560281728;
-var NNI1560281731 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281678.node = NNI1560281678;
+var NNI1560281681 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281731.node = NNI1560281731;
-var NNI1560281737 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+NTI1560281681.node = NNI1560281681;
+var NNI1560281684 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
-NTI1560281737.node = NNI1560281737;
+NTI1560281684.node = NNI1560281684;
+var NNI1560281687 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281687.node = NNI1560281687;
+var NNI1560281732 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281732.node = NNI1560281732;
+var NNI1560281735 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281735.node = NNI1560281735;
+var NNI1560281746 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281746.node = NNI1560281746;
+var NNI1560281749 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281749.node = NNI1560281749;
+var NNI1560281755 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554449, name: "Field0", sons: null}, 
+{kind: 1, offset: "Field1", len: 0, typ: NTI33554449, name: "Field1", sons: null}]};
+NTI1560281755.node = NNI1560281755;
 var NNI1560281091 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "displayStyle", len: 0, typ: NTI33554466, name: "displayStyle", sons: null}, 
 {kind: 1, offset: "prettyPrint", len: 0, typ: NTI33554466, name: "prettyPrint", sons: null}, 
 {kind: 1, offset: "indentSize", len: 0, typ: NTI33554435, name: "indentSize", sons: null}]};
@@ -1358,9 +1399,9 @@ var ConstSet208 = setConstr(25);
 var ConstSet209 = setConstr(25);
 var ConstSet210 = setConstr(25);
 var ConstSet211 = setConstr(26);
-var ConstSet212 = setConstr(8, 9, 10);
+var ConstSet212 = setConstr(19, 20, 21);
 var ConstSet213 = setConstr(26);
-var ConstSet214 = setConstr(2, 3, 4, 5);
+var ConstSet214 = setConstr(2, 3, 4, 5, 6, 7, 8);
 var ConstSet215 = setConstr(26);
 var ConstSet216 = setConstr(26);
 var ConstSet217 = setConstr(26);
@@ -2342,18 +2383,18 @@ function rawInsert__yatexmlZparser_u947(t_p0, data_p1, data_p1_Idx, key_p2, val_
 
 function enlarge__yatexmlZparser_u673(t_p0) {
     var n_1526727335 = [];
-    n_1526727335 = new Array(chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647) ; ++i) { n_1526727335[i] = {Field0: 0, Field1: [], Field2: ({cmdType: 0, numArgs: 0})}; }    var HEX3Atmp_1526751258 = nimCopy(null, t_p0.data, NTI1526726673);
+    n_1526727335 = new Array(chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647)); for (var i = 0 ; i < chckRange(mulInt((t_p0.data).length, 2), 0, 2147483647) ; ++i) { n_1526727335[i] = {Field0: 0, Field1: [], Field2: ({cmdType: 0, numArgs: 0})}; }    var HEX3Atmp_1526751972 = nimCopy(null, t_p0.data, NTI1526726673);
     t_p0.data = n_1526727335;
-    n_1526727335 = HEX3Atmp_1526751258;
+    n_1526727335 = HEX3Atmp_1526751972;
     Label1: {
       var i_1526727395 = 0;
-      var colontmp__1526751255 = 0;
-      colontmp__1526751255 = (n_1526727335).length - 1;
-      var res_1526751256 = 0;
+      var colontmp__1526751969 = 0;
+      colontmp__1526751969 = (n_1526727335).length - 1;
+      var res_1526751970 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(res_1526751256 <= colontmp__1526751255)) break Label3;
-            i_1526727395 = res_1526751256;
+          if (!(res_1526751970 <= colontmp__1526751969)) break Label3;
+            i_1526727395 = res_1526751970;
             var eh_1526727445 = n_1526727335[chckIndx(i_1526727395, 0, (n_1526727335).length - 1)].Field0;
             if (isFilled__pureZcollectionsZtables_u31(eh_1526727445)) {
             var j_1526727449 = (eh_1526727445 & (t_p0.data).length - 1);
@@ -2366,7 +2407,7 @@ function enlarge__yatexmlZparser_u673(t_p0) {
             rawInsert__yatexmlZparser_u947(t_p0, t_p0, "data", n_1526727335[chckIndx(i_1526727395, 0, (n_1526727335).length - 1)].Field1, n_1526727335[chckIndx(i_1526727395, 0, (n_1526727335).length - 1)].Field2, eh_1526727445, j_1526727449);
             }
             
-            res_1526751256 = addInt(res_1526751256, 1);
+            res_1526751970 = addInt(res_1526751970, 1);
           }
       };
     };
@@ -2451,81 +2492,81 @@ function initCommandTable__yatexmlZparser_u40() {
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [115,113,114,116], {cmdType: 1, numArgs: 1});
     Label1: {
       var letter_1526728271 = [];
-      var i_1526751235 = 0;
+      var i_1526751949 = 0;
       Label2: {
           Label3: while (true) {
           if (!true) break Label3;
-            letter_1526728271 = (Temporary4 = [[97,108,112,104,97], [98,101,116,97], [103,97,109,109,97], [100,101,108,116,97], [101,112,115,105,108,111,110], [122,101,116,97], [101,116,97], [116,104,101,116,97], [105,111,116,97], [107,97,112,112,97], [108,97,109,98,100,97], [109,117], [110,117], [120,105], [111,109,105,99,114,111,110], [112,105], [114,104,111], [115,105,103,109,97], [116,97,117], [117,112,115,105,108,111,110], [112,104,105], [99,104,105], [112,115,105], [111,109,101,103,97]], Temporary4)[chckIndx(i_1526751235, 0, (Temporary4).length - 1)];
+            letter_1526728271 = (Temporary4 = [[97,108,112,104,97], [98,101,116,97], [103,97,109,109,97], [100,101,108,116,97], [101,112,115,105,108,111,110], [122,101,116,97], [101,116,97], [116,104,101,116,97], [105,111,116,97], [107,97,112,112,97], [108,97,109,98,100,97], [109,117], [110,117], [120,105], [111,109,105,99,114,111,110], [112,105], [114,104,111], [115,105,103,109,97], [116,97,117], [117,112,115,105,108,111,110], [112,104,105], [99,104,105], [112,115,105], [111,109,101,103,97]], Temporary4)[chckIndx(i_1526751949, 0, (Temporary4).length - 1)];
             HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], letter_1526728271, {cmdType: 2, numArgs: 0});
-            if ((23 <= i_1526751235)) {
+            if ((23 <= i_1526751949)) {
             break Label2;
             }
             
-            i_1526751235 += 1;
+            i_1526751949 += 1;
           }
       };
     };
     Label5: {
       var letter_1526728392 = [];
-      var i_1526751239 = 0;
+      var i_1526751953 = 0;
       Label6: {
           Label7: while (true) {
           if (!true) break Label7;
-            letter_1526728392 = (Temporary8 = [[71,97,109,109,97], [68,101,108,116,97], [84,104,101,116,97], [76,97,109,98,100,97], [88,105], [80,105], [83,105,103,109,97], [85,112,115,105,108,111,110], [80,104,105], [80,115,105], [79,109,101,103,97]], Temporary8)[chckIndx(i_1526751239, 0, (Temporary8).length - 1)];
+            letter_1526728392 = (Temporary8 = [[71,97,109,109,97], [68,101,108,116,97], [84,104,101,116,97], [76,97,109,98,100,97], [88,105], [80,105], [83,105,103,109,97], [85,112,115,105,108,111,110], [80,104,105], [80,115,105], [79,109,101,103,97]], Temporary8)[chckIndx(i_1526751953, 0, (Temporary8).length - 1)];
             HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], letter_1526728392, {cmdType: 2, numArgs: 0});
-            if ((10 <= i_1526751239)) {
+            if ((10 <= i_1526751953)) {
             break Label6;
             }
             
-            i_1526751239 += 1;
+            i_1526751953 += 1;
           }
       };
     };
     Label9: {
       var letter_1526728497 = [];
-      var i_1526751243 = 0;
+      var i_1526751957 = 0;
       Label10: {
           Label11: while (true) {
           if (!true) break Label11;
-            letter_1526728497 = (Temporary12 = [[65,108,112,104,97], [66,101,116,97], [67,104,105], [69,112,115,105,108,111,110], [69,116,97], [73,111,116,97], [75,97,112,112,97], [77,117], [78,117], [79,109,105,99,114,111,110], [82,104,111], [84,97,117], [90,101,116,97]], Temporary12)[chckIndx(i_1526751243, 0, (Temporary12).length - 1)];
+            letter_1526728497 = (Temporary12 = [[65,108,112,104,97], [66,101,116,97], [67,104,105], [69,112,115,105,108,111,110], [69,116,97], [73,111,116,97], [75,97,112,112,97], [77,117], [78,117], [79,109,105,99,114,111,110], [82,104,111], [84,97,117], [90,101,116,97]], Temporary12)[chckIndx(i_1526751957, 0, (Temporary12).length - 1)];
             HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], letter_1526728497, {cmdType: 2, numArgs: 0});
-            if ((12 <= i_1526751243)) {
+            if ((12 <= i_1526751957)) {
             break Label10;
             }
             
-            i_1526751243 += 1;
+            i_1526751957 += 1;
           }
       };
     };
     Label13: {
       var letter_1526728602 = [];
-      var i_1526751247 = 0;
+      var i_1526751961 = 0;
       Label14: {
           Label15: while (true) {
           if (!true) break Label15;
-            letter_1526728602 = (Temporary16 = [[118,97,114,101,112,115,105,108,111,110], [118,97,114,116,104,101,116,97], [118,97,114,112,105], [118,97,114,114,104,111], [118,97,114,115,105,103,109,97], [118,97,114,112,104,105], [118,97,114,107,97,112,112,97]], Temporary16)[chckIndx(i_1526751247, 0, (Temporary16).length - 1)];
+            letter_1526728602 = (Temporary16 = [[118,97,114,101,112,115,105,108,111,110], [118,97,114,116,104,101,116,97], [118,97,114,112,105], [118,97,114,114,104,111], [118,97,114,115,105,103,109,97], [118,97,114,112,104,105], [118,97,114,107,97,112,112,97]], Temporary16)[chckIndx(i_1526751961, 0, (Temporary16).length - 1)];
             HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], letter_1526728602, {cmdType: 2, numArgs: 0});
-            if ((6 <= i_1526751247)) {
+            if ((6 <= i_1526751961)) {
             break Label14;
             }
             
-            i_1526751247 += 1;
+            i_1526751961 += 1;
           }
       };
     };
     Label17: {
       var letter_1526728649 = [];
-      var i_1526751250 = 0;
+      var i_1526751964 = 0;
       Label18: {
           Label19: while (true) {
           if (!true) break Label19;
-            letter_1526728649 = (Temporary20 = [[118,97,114,71,97,109,109,97], [118,97,114,68,101,108,116,97], [118,97,114,84,104,101,116,97], [118,97,114,76,97,109,98,100,97], [118,97,114,88,105], [118,97,114,80,105], [118,97,114,83,105,103,109,97], [118,97,114,85,112,115,105,108,111,110], [118,97,114,80,104,105], [118,97,114,80,115,105], [118,97,114,79,109,101,103,97]], Temporary20)[chckIndx(i_1526751250, 0, (Temporary20).length - 1)];
+            letter_1526728649 = (Temporary20 = [[118,97,114,71,97,109,109,97], [118,97,114,68,101,108,116,97], [118,97,114,84,104,101,116,97], [118,97,114,76,97,109,98,100,97], [118,97,114,88,105], [118,97,114,80,105], [118,97,114,83,105,103,109,97], [118,97,114,85,112,115,105,108,111,110], [118,97,114,80,104,105], [118,97,114,80,115,105], [118,97,114,79,109,101,103,97]], Temporary20)[chckIndx(i_1526751964, 0, (Temporary20).length - 1)];
             HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], letter_1526728649, {cmdType: 2, numArgs: 0});
-            if ((10 <= i_1526751250)) {
+            if ((10 <= i_1526751964)) {
             break Label18;
             }
             
-            i_1526751250 += 1;
+            i_1526751964 += 1;
           }
       };
     };
@@ -2814,6 +2855,12 @@ function initCommandTable__yatexmlZparser_u40() {
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [100,111,116], {cmdType: 6, numArgs: 1});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [100,100,111,116], {cmdType: 6, numArgs: 1});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [118,101,99], {cmdType: 6, numArgs: 1});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [97,99,117,116,101], {cmdType: 6, numArgs: 1});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [103,114,97,118,101], {cmdType: 6, numArgs: 1});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,114,101,118,101], {cmdType: 6, numArgs: 1});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [99,104,101,99,107], {cmdType: 6, numArgs: 1});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [100,100,100,111,116], {cmdType: 6, numArgs: 1});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [119,105,100,101,112,97,114,101,110], {cmdType: 6, numArgs: 1});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [119,105,100,101,104,97,116], {cmdType: 6, numArgs: 1});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [119,105,100,101,116,105,108,100,101], {cmdType: 6, numArgs: 1});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [111,118,101,114,108,105,110,101], {cmdType: 6, numArgs: 1});
@@ -2833,6 +2880,17 @@ function initCommandTable__yatexmlZparser_u40() {
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [109,105,110], {cmdType: 7, numArgs: 0});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,99,117,112], {cmdType: 7, numArgs: 0});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,99,97,112], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [105,105,105,105,110,116], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [111,105,105,110,116], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [111,105,105,105,110,116], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [99,111,112,114,111,100], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,111,112,108,117,115], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,111,116,105,109,101,115], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,111,100,111,116], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,117,112,108,117,115], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,115,113,99,117,112], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,118,101,101], {cmdType: 7, numArgs: 0});
+    HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [98,105,103,119,101,100,103,101], {cmdType: 7, numArgs: 0});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [115,105,110], {cmdType: 8, numArgs: 0});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [99,111,115], {cmdType: 8, numArgs: 0});
     HEX5BHEX5DHEX3D__yatexmlZparser_u148(result_1526726704[0], [116,97,110], {cmdType: 8, numArgs: 0});
@@ -2969,7 +3027,7 @@ function initCommandTable__yatexmlZparser_u40() {
 
 }
 var globalMacroRegistry_1526726695 = [newMacroRegistry__yatexmlZmacros_u19()];
-var commandTable_1526747026 = initCommandTable__yatexmlZparser_u40();
+var commandTable_1526747740 = initCommandTable__yatexmlZparser_u40();
 
 function peek__yatexmlZlexer_u58(lex_p0, offset_p1) {
     var Temporary1;
@@ -3604,37 +3662,37 @@ function advance__yatexmlZlexer_u600(stream_p0) {
 
 }
 
-function ok__yatexmlZparser_u21143(value_p0) {
-  var result_1526747802 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function ok__yatexmlZparser_u21857(value_p0) {
+  var result_1526748516 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1526747802 = nimCopy(result_1526747802, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1526737362);
+    result_1526748516 = nimCopy(result_1526748516, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1526737736);
 
-  return result_1526747802;
-
-}
-
-function newNumber__yatexmlZast_u246(value_p0) {
-  var result_1375731960 = null;
-
-    result_1375731960 = {kind: 0, numValue: nimCopy(null, value_p0, NTI33554449), identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375731960;
+  return result_1526748516;
 
 }
 
-function newIdentifier__yatexmlZast_u484(name_p0) {
-  var result_1375732198 = null;
+function newNumber__yatexmlZast_u263(value_p0) {
+  var result_1375731977 = null;
 
-    result_1375732198 = {kind: 1, identName: nimCopy(null, name_p0, NTI33554449), numValue: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375731977 = {kind: 0, numValue: nimCopy(null, value_p0, NTI33554449), identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732198;
+  return result_1375731977;
 
 }
 
-function operatorToUnicode__yatexmlZparser_u20393(name_p0) {
+function newIdentifier__yatexmlZast_u501(name_p0) {
+  var result_1375732215 = null;
+
+    result_1375732215 = {kind: 1, identName: nimCopy(null, name_p0, NTI33554449), numValue: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732215;
+
+}
+
+function operatorToUnicode__yatexmlZparser_u21107(name_p0) {
     var Temporary1;
 
-  var result_1526747051 = [];
+  var result_1526747765 = [];
 
     switch (toJSStr(name_p0)) {
     case "+":
@@ -4458,18 +4516,18 @@ function operatorToUnicode__yatexmlZparser_u20393(name_p0) {
       Temporary1 = name_p0;
       break;
     }
-    result_1526747051 = nimCopy(null, Temporary1, NTI33554449);
+    result_1526747765 = nimCopy(null, Temporary1, NTI33554449);
 
-  return result_1526747051;
+  return result_1526747765;
 
 }
 
-function newOperator__yatexmlZast_u491(name_p0, value_p1, form_p2) {
-  var result_1375732207 = null;
+function newOperator__yatexmlZast_u508(name_p0, value_p1, form_p2) {
+  var result_1375732224 = null;
 
-    result_1375732207 = {kind: 3, opName: nimCopy(null, name_p0, NTI33554449), opValue: nimCopy(null, value_p1, NTI33554449), opForm: nimCopy(null, form_p2, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732224 = {kind: 3, opName: nimCopy(null, name_p0, NTI33554449), opValue: nimCopy(null, value_p1, NTI33554449), opForm: nimCopy(null, form_p2, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732207;
+  return result_1375732224;
 
 }
 
@@ -4503,127 +4561,127 @@ function expect__yatexmlZlexer_u622(stream_p0, kind_p1) {
 
 }
 
-function err__yatexmlZparser_u21645(error_p0) {
-  var result_1526748304 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function err__yatexmlZparser_u22359(error_p0) {
+  var result_1526749018 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1526748304 = nimCopy(result_1526748304, {isOk: false, error: nimCopy(null, error_p0, NTI1342177284), value: null}, NTI1526737362);
+    result_1526749018 = nimCopy(result_1526749018, {isOk: false, error: nimCopy(null, error_p0, NTI1342177284), value: null}, NTI1526737736);
 
-  return result_1526748304;
-
-}
-
-function newUnderOver__yatexmlZast_u691(base_p0, under_p1, over_p2) {
-  var result_1375732407 = null;
-
-    result_1375732407 = {kind: 27, underoverBase: base_p0, underoverUnder: under_p1, underoverOver: over_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732407;
+  return result_1526749018;
 
 }
 
-function newSubSup__yatexmlZast_u596(base_p0, sub_p1, sup_p2) {
-  var result_1375732312 = null;
+function newUnderOver__yatexmlZast_u708(base_p0, under_p1, over_p2) {
+  var result_1375732424 = null;
 
-    result_1375732312 = {kind: 18, subsupBase: base_p0, subsupSub: sub_p1, subsupSup: sup_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732424 = {kind: 27, underoverBase: base_p0, underoverUnder: under_p1, underoverOver: over_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732312;
-
-}
-
-function newSub__yatexmlZast_u588(base_p0, script_p1) {
-  var result_1375732303 = null;
-
-    result_1375732303 = {kind: 16, subBase: base_p0, subScript: script_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732303;
+  return result_1375732424;
 
 }
 
-function newSup__yatexmlZast_u592(base_p0, script_p1) {
-  var result_1375732307 = null;
+function newSubSup__yatexmlZast_u613(base_p0, sub_p1, sup_p2) {
+  var result_1375732329 = null;
 
-    result_1375732307 = {kind: 17, supBase: base_p0, supScript: script_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732329 = {kind: 18, subsupBase: base_p0, subsupSub: sub_p1, subsupSup: sup_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732307;
-
-}
-
-function newRow__yatexmlZast_u601(children_p0) {
-  var result_1375732315 = null;
-
-    result_1375732315 = {kind: 19, rowChildren: nimCopy(null, children_p0, NTI1375731821), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732315;
+  return result_1375732329;
 
 }
 
-function hasKey__yatexmlZparser_u20787(t_p0, key_p1) {
-  var result_1526747448 = false;
+function newSub__yatexmlZast_u605(base_p0, script_p1) {
+  var result_1375732320 = null;
 
-    var hc_1526747449 = [0];
-    result_1526747448 = (0 <= rawGet__yatexmlZparser_u209(t_p0, key_p1, hc_1526747449, 0));
+    result_1375732320 = {kind: 16, subBase: base_p0, subScript: script_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1526747448;
+  return result_1375732320;
 
 }
 
-function contains__yatexmlZparser_u21711(t_p0, key_p1) {
-  var result_1526748372 = false;
+function newSup__yatexmlZast_u609(base_p0, script_p1) {
+  var result_1375732324 = null;
+
+    result_1375732324 = {kind: 17, supBase: base_p0, supScript: script_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732324;
+
+}
+
+function newRow__yatexmlZast_u618(children_p0) {
+  var result_1375732332 = null;
+
+    result_1375732332 = {kind: 19, rowChildren: nimCopy(null, children_p0, NTI1375731821), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732332;
+
+}
+
+function hasKey__yatexmlZparser_u21501(t_p0, key_p1) {
+  var result_1526748162 = false;
+
+    var hc_1526748163 = [0];
+    result_1526748162 = (0 <= rawGet__yatexmlZparser_u209(t_p0, key_p1, hc_1526748163, 0));
+
+  return result_1526748162;
+
+}
+
+function contains__yatexmlZparser_u22425(t_p0, key_p1) {
+  var result_1526749086 = false;
 
   BeforeRet: {
-    result_1526748372 = hasKey__yatexmlZparser_u20787(t_p0, key_p1);
+    result_1526749086 = hasKey__yatexmlZparser_u21501(t_p0, key_p1);
     break BeforeRet;
   };
 
-  return result_1526748372;
+  return result_1526749086;
 
 }
 
-function HEX5BHEX5D__yatexmlZparser_u20849(t_p0, key_p1) {
-  var result_1526747510 = ({cmdType: 0, numArgs: 0});
+function HEX5BHEX5D__yatexmlZparser_u21563(t_p0, key_p1) {
+  var result_1526748224 = ({cmdType: 0, numArgs: 0});
 
-    var hcHEX60gensym20_1526747511 = [0];
-    var indexHEX60gensym20_1526747518 = rawGet__yatexmlZparser_u209(t_p0, key_p1, hcHEX60gensym20_1526747511, 0);
-    if ((0 <= indexHEX60gensym20_1526747518)) {
-    result_1526747510 = t_p0.data[chckIndx(indexHEX60gensym20_1526747518, 0, (t_p0.data).length - 1)].Field2;
+    var hcHEX60gensym20_1526748225 = [0];
+    var indexHEX60gensym20_1526748232 = rawGet__yatexmlZparser_u209(t_p0, key_p1, hcHEX60gensym20_1526748225, 0);
+    if ((0 <= indexHEX60gensym20_1526748232)) {
+    result_1526748224 = t_p0.data[chckIndx(indexHEX60gensym20_1526748232, 0, (t_p0.data).length - 1)].Field2;
     }
     else {
     raiseKeyError__yatexmlZunicode95mappings_u8161(key_p1);
     }
     
 
-  return result_1526747510;
+  return result_1526748224;
 
 }
 
-function newFrac__yatexmlZast_u575(num_p0, denom_p1, isContinued_p2) {
-  var result_1375732291 = null;
+function newFrac__yatexmlZast_u592(num_p0, denom_p1, isContinued_p2) {
+  var result_1375732308 = null;
 
-    result_1375732291 = {kind: 13, fracNum: num_p0, fracDenom: denom_p1, fracIsContinued: isContinued_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732308 = {kind: 13, fracNum: num_p0, fracDenom: denom_p1, fracIsContinued: isContinued_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732291;
-
-}
-
-function newBinomial__yatexmlZast_u580(top_p0, bottom_p1) {
-  var result_1375732295 = null;
-
-    result_1375732295 = {kind: 14, binomTop: top_p0, binomBottom: bottom_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732295;
+  return result_1375732308;
 
 }
 
-function newAtop__yatexmlZast_u584(top_p0, bottom_p1) {
-  var result_1375732299 = null;
+function newBinomial__yatexmlZast_u597(top_p0, bottom_p1) {
+  var result_1375732312 = null;
 
-    result_1375732299 = {kind: 15, atopTop: top_p0, atopBottom: bottom_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732312 = {kind: 14, binomTop: top_p0, binomBottom: bottom_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732299;
+  return result_1375732312;
 
 }
 
-function parseGroup__yatexmlZparser_u20380(stream_p0) {
+function newAtop__yatexmlZast_u601(top_p0, bottom_p1) {
+  var result_1375732316 = null;
+
+    result_1375732316 = {kind: 15, atopTop: top_p0, atopBottom: bottom_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732316;
+
+}
+
+function parseGroup__yatexmlZparser_u21094(stream_p0) {
     var Temporary1;
           var Temporary4;
           var Temporary5;
@@ -4663,100 +4721,100 @@ function parseGroup__yatexmlZparser_u20380(stream_p0) {
           var Temporary45;
     var Temporary46;
 
-  var result_1526750414 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526751128 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var openResult_1526750415 = expect__yatexmlZlexer_u622(stream_p0, 1);
-    if (!(openResult_1526750415.isOk)) {
-    var Temporary1 = openResult_1526750415;
+    var openResult_1526751129 = expect__yatexmlZlexer_u622(stream_p0, 1);
+    if (!(openResult_1526751129.isOk)) {
+    var Temporary1 = openResult_1526751129;
     if (ConstSet18[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
-    result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary1.error), NTI1526737362);
+    result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary1.error), NTI1526737736);
     break BeforeRet;
     }
     
-    var children_1526750438 = [];
+    var children_1526751152 = [];
     Label2: {
         Label3: while (true) {
         if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label3;
-          var exprResult_1526750439 = parsePrimary__yatexmlZparser_u20377(stream_p0);
-          if (!(exprResult_1526750439.isOk)) {
-          var Temporary4 = exprResult_1526750439;
+          var exprResult_1526751153 = parsePrimary__yatexmlZparser_u21091(stream_p0);
+          if (!(exprResult_1526751153.isOk)) {
+          var Temporary4 = exprResult_1526751153;
           if (ConstSet19[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-          result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary4.error), NTI1526737362);
+          result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary4.error), NTI1526737736);
           break BeforeRet;
           }
           
-          var Temporary5 = exprResult_1526750439;
+          var Temporary5 = exprResult_1526751153;
           if (ConstSet20[Temporary5.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary5.isOk, NTI33554466)); }
-          var node_1526750458 = Temporary5.value;
+          var node_1526751172 = Temporary5.value;
           Label6: {
               Label7: while (true) {
               if (!(match__yatexmlZlexer_u664(stream_p0, 9) || match__yatexmlZlexer_u664(stream_p0, 10))) break Label7;
-                if (!(node_1526750458.kind == 8)) Temporary8 = false; else {                  var Temporary10 = node_1526750458;
+                if (!(node_1526751172.kind == 8)) Temporary8 = false; else {                  var Temporary10 = node_1526751172;
                   if (ConstSet21[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1375731715)); }
-                  if ((Temporary10.accentKind == 10)) Temporary9 = true; else {                    var Temporary11 = node_1526750458;
+                  if ((Temporary10.accentKind == 16)) Temporary9 = true; else {                    var Temporary11 = node_1526751172;
                     if (ConstSet22[Temporary11.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary11.kind, NTI1375731715)); }
-                    Temporary9 = (Temporary11.accentKind == 11);                  }                  Temporary8 = Temporary9;                }                var isOverUnderbrace_1526750471 = Temporary8;
+                    Temporary9 = (Temporary11.accentKind == 17);                  }                  Temporary8 = Temporary9;                }                var isOverUnderbrace_1526751185 = Temporary8;
                 if (match__yatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary12 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary12 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary12 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary12 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var subResult_1526750472 = nimCopy(null, Temporary12, NTI1526737362);
-                if (!(subResult_1526750472.isOk)) {
-                var Temporary13 = subResult_1526750472;
+                var subResult_1526751186 = nimCopy(null, Temporary12, NTI1526737736);
+                if (!(subResult_1526751186.isOk)) {
+                var Temporary13 = subResult_1526751186;
                 if (ConstSet23[Temporary13.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary13.isOk, NTI33554466)); }
-                result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary13.error), NTI1526737362);
+                result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary13.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
                 if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary14 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary14 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary14 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary14 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var supResult_1526750491 = nimCopy(null, Temporary14, NTI1526737362);
-                if (!(supResult_1526750491.isOk)) {
-                var Temporary15 = supResult_1526750491;
+                var supResult_1526751205 = nimCopy(null, Temporary14, NTI1526737736);
+                if (!(supResult_1526751205.isOk)) {
+                var Temporary15 = supResult_1526751205;
                 if (ConstSet24[Temporary15.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary15.isOk, NTI33554466)); }
-                result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary15.error), NTI1526737362);
+                result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary15.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1526750471) {
-                var Temporary16 = subResult_1526750472;
+                if (isOverUnderbrace_1526751185) {
+                var Temporary16 = subResult_1526751186;
                 if (ConstSet25[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-                var Temporary17 = supResult_1526750491;
+                var Temporary17 = supResult_1526751205;
                 if (ConstSet26[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-                node_1526750458 = newUnderOver__yatexmlZast_u691(node_1526750458, Temporary16.value, Temporary17.value);
+                node_1526751172 = newUnderOver__yatexmlZast_u708(node_1526751172, Temporary16.value, Temporary17.value);
                 }
                 else {
-                  var Temporary18 = subResult_1526750472;
+                  var Temporary18 = subResult_1526751186;
                   if (ConstSet27[Temporary18.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary18.isOk, NTI33554466)); }
-                  var Temporary19 = supResult_1526750491;
+                  var Temporary19 = supResult_1526751205;
                   if (ConstSet28[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-                  node_1526750458 = newSubSup__yatexmlZast_u596(node_1526750458, Temporary18.value, Temporary19.value);
+                  node_1526751172 = newSubSup__yatexmlZast_u613(node_1526751172, Temporary18.value, Temporary19.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1526750471) {
-                  var Temporary20 = subResult_1526750472;
+                  if (isOverUnderbrace_1526751185) {
+                  var Temporary20 = subResult_1526751186;
                   if (ConstSet29[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-                  node_1526750458 = newUnderOver__yatexmlZast_u691(node_1526750458, Temporary20.value, null);
+                  node_1526751172 = newUnderOver__yatexmlZast_u708(node_1526751172, Temporary20.value, null);
                   }
                   else {
-                    var Temporary21 = subResult_1526750472;
+                    var Temporary21 = subResult_1526751186;
                     if (ConstSet30[Temporary21.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary21.isOk, NTI33554466)); }
-                    node_1526750458 = newSub__yatexmlZast_u588(node_1526750458, Temporary21.value);
+                    node_1526751172 = newSub__yatexmlZast_u605(node_1526751172, Temporary21.value);
                   }
                   
                 }
@@ -4766,29 +4824,29 @@ function parseGroup__yatexmlZparser_u20380(stream_p0) {
                 if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary22 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary22 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary22 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary22 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var supResult_1526750510 = nimCopy(null, Temporary22, NTI1526737362);
-                if (!(supResult_1526750510.isOk)) {
-                var Temporary23 = supResult_1526750510;
+                var supResult_1526751224 = nimCopy(null, Temporary22, NTI1526737736);
+                if (!(supResult_1526751224.isOk)) {
+                var Temporary23 = supResult_1526751224;
                 if (ConstSet31[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-                result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary23.error), NTI1526737362);
+                result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary23.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1526750471) {
-                var Temporary24 = supResult_1526750510;
+                if (isOverUnderbrace_1526751185) {
+                var Temporary24 = supResult_1526751224;
                 if (ConstSet32[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                node_1526750458 = newUnderOver__yatexmlZast_u691(node_1526750458, null, Temporary24.value);
+                node_1526751172 = newUnderOver__yatexmlZast_u708(node_1526751172, null, Temporary24.value);
                 }
                 else {
-                  var Temporary25 = supResult_1526750510;
+                  var Temporary25 = supResult_1526751224;
                   if (ConstSet33[Temporary25.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary25.isOk, NTI33554466)); }
-                  node_1526750458 = newSup__yatexmlZast_u592(node_1526750458, Temporary25.value);
+                  node_1526751172 = newSup__yatexmlZast_u609(node_1526751172, Temporary25.value);
                 }
                 
                 }
@@ -4797,84 +4855,84 @@ function parseGroup__yatexmlZparser_u20380(stream_p0) {
           };
           if ((match__yatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__yatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          node_1526750458 = newRow__yatexmlZast_u601([node_1526750458, newOperator__yatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+          node_1526751172 = newRow__yatexmlZast_u618([node_1526751172, newOperator__yatexmlZast_u508([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
           }
           
-          children_1526750438.push(node_1526750458);;
+          children_1526751152.push(node_1526751172);;
           if (match__yatexmlZlexer_u664(stream_p0, 0)) {
-          var cmdName_1526750537 = nimCopy(null, peek__yatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
-          if ((contains__yatexmlZparser_u21711(commandTable_1526747026, cmdName_1526750537) && (HEX5BHEX5D__yatexmlZparser_u20849(commandTable_1526747026, cmdName_1526750537).cmdType == 21))) {
+          var cmdName_1526751251 = nimCopy(null, peek__yatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
+          if ((contains__yatexmlZparser_u22425(commandTable_1526747740, cmdName_1526751251) && (HEX5BHEX5D__yatexmlZparser_u21563(commandTable_1526747740, cmdName_1526751251).cmdType == 21))) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          if (((children_1526750438).length == 1)) {
-          Temporary26 = children_1526750438[chckIndx(0, 0, (children_1526750438).length - 1)];
+          if (((children_1526751152).length == 1)) {
+          Temporary26 = children_1526751152[chckIndx(0, 0, (children_1526751152).length - 1)];
           }
           else {
-          Temporary26 = newRow__yatexmlZast_u601(children_1526750438);
+          Temporary26 = newRow__yatexmlZast_u618(children_1526751152);
           }
           
-          var leftNode_1526750643 = Temporary26;
-          var rightChildren_1526750648 = [];
+          var leftNode_1526751357 = Temporary26;
+          var rightChildren_1526751362 = [];
           Label27: {
               Label28: while (true) {
               if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label28;
-                var primResult_1526750649 = parsePrimary__yatexmlZparser_u20377(stream_p0);
-                if (!(primResult_1526750649.isOk)) {
-                var Temporary29 = primResult_1526750649;
+                var primResult_1526751363 = parsePrimary__yatexmlZparser_u21091(stream_p0);
+                if (!(primResult_1526751363.isOk)) {
+                var Temporary29 = primResult_1526751363;
                 if (ConstSet34[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-                result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary29.error), NTI1526737362);
+                result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary29.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                var Temporary30 = primResult_1526750649;
+                var Temporary30 = primResult_1526751363;
                 if (ConstSet35[Temporary30.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary30.isOk, NTI33554466)); }
-                var rightNode_1526750668 = Temporary30.value;
+                var rightNode_1526751382 = Temporary30.value;
                 Label31: {
                     Label32: while (true) {
                     if (!(match__yatexmlZlexer_u664(stream_p0, 9) || match__yatexmlZlexer_u664(stream_p0, 10))) break Label32;
                       if (match__yatexmlZlexer_u664(stream_p0, 9)) {
                       (advance__yatexmlZlexer_u600(stream_p0));
                       if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                      Temporary33 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                      Temporary33 = parseGroup__yatexmlZparser_u21094(stream_p0);
                       }
                       else {
-                      Temporary33 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                      Temporary33 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                       }
                       
-                      var subResult_1526750669 = nimCopy(null, Temporary33, NTI1526737362);
-                      if (!(subResult_1526750669.isOk)) {
-                      var Temporary34 = subResult_1526750669;
+                      var subResult_1526751383 = nimCopy(null, Temporary33, NTI1526737736);
+                      if (!(subResult_1526751383.isOk)) {
+                      var Temporary34 = subResult_1526751383;
                       if (ConstSet36[Temporary34.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary34.isOk, NTI33554466)); }
-                      result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary34.error), NTI1526737362);
+                      result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary34.error), NTI1526737736);
                       break BeforeRet;
                       }
                       
                       if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                       (advance__yatexmlZlexer_u600(stream_p0));
                       if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                      Temporary35 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                      Temporary35 = parseGroup__yatexmlZparser_u21094(stream_p0);
                       }
                       else {
-                      Temporary35 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                      Temporary35 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                       }
                       
-                      var supResult_1526750688 = nimCopy(null, Temporary35, NTI1526737362);
-                      if (!(supResult_1526750688.isOk)) {
-                      var Temporary36 = supResult_1526750688;
+                      var supResult_1526751402 = nimCopy(null, Temporary35, NTI1526737736);
+                      if (!(supResult_1526751402.isOk)) {
+                      var Temporary36 = supResult_1526751402;
                       if (ConstSet37[Temporary36.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary36.isOk, NTI33554466)); }
-                      result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary36.error), NTI1526737362);
+                      result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary36.error), NTI1526737736);
                       break BeforeRet;
                       }
                       
-                      var Temporary37 = subResult_1526750669;
+                      var Temporary37 = subResult_1526751383;
                       if (ConstSet38[Temporary37.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary37.isOk, NTI33554466)); }
-                      var Temporary38 = supResult_1526750688;
+                      var Temporary38 = supResult_1526751402;
                       if (ConstSet39[Temporary38.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary38.isOk, NTI33554466)); }
-                      rightNode_1526750668 = newSubSup__yatexmlZast_u596(rightNode_1526750668, Temporary37.value, Temporary38.value);
+                      rightNode_1526751382 = newSubSup__yatexmlZast_u613(rightNode_1526751382, Temporary37.value, Temporary38.value);
                       }
                       else {
-                        var Temporary39 = subResult_1526750669;
+                        var Temporary39 = subResult_1526751383;
                         if (ConstSet40[Temporary39.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary39.isOk, NTI33554466)); }
-                        rightNode_1526750668 = newSub__yatexmlZast_u588(rightNode_1526750668, Temporary39.value);
+                        rightNode_1526751382 = newSub__yatexmlZast_u605(rightNode_1526751382, Temporary39.value);
                       }
                       
                       }
@@ -4882,67 +4940,67 @@ function parseGroup__yatexmlZparser_u20380(stream_p0) {
                       if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                       (advance__yatexmlZlexer_u600(stream_p0));
                       if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                      Temporary40 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                      Temporary40 = parseGroup__yatexmlZparser_u21094(stream_p0);
                       }
                       else {
-                      Temporary40 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                      Temporary40 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                       }
                       
-                      var supResult_1526750707 = nimCopy(null, Temporary40, NTI1526737362);
-                      if (!(supResult_1526750707.isOk)) {
-                      var Temporary41 = supResult_1526750707;
+                      var supResult_1526751421 = nimCopy(null, Temporary40, NTI1526737736);
+                      if (!(supResult_1526751421.isOk)) {
+                      var Temporary41 = supResult_1526751421;
                       if (ConstSet41[Temporary41.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary41.isOk, NTI33554466)); }
-                      result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary41.error), NTI1526737362);
+                      result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary41.error), NTI1526737736);
                       break BeforeRet;
                       }
                       
-                      var Temporary42 = supResult_1526750707;
+                      var Temporary42 = supResult_1526751421;
                       if (ConstSet42[Temporary42.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary42.isOk, NTI33554466)); }
-                      rightNode_1526750668 = newSup__yatexmlZast_u592(rightNode_1526750668, Temporary42.value);
+                      rightNode_1526751382 = newSup__yatexmlZast_u609(rightNode_1526751382, Temporary42.value);
                       }
                       }
                     }
                 };
                 if ((match__yatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__yatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
                 (advance__yatexmlZlexer_u600(stream_p0));
-                rightNode_1526750668 = newRow__yatexmlZast_u601([rightNode_1526750668, newOperator__yatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+                rightNode_1526751382 = newRow__yatexmlZast_u618([rightNode_1526751382, newOperator__yatexmlZast_u508([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
                 }
                 
-                rightChildren_1526750648.push(rightNode_1526750668);;
+                rightChildren_1526751362.push(rightNode_1526751382);;
               }
           };
-          if (((rightChildren_1526750648).length == 1)) {
-          Temporary43 = rightChildren_1526750648[chckIndx(0, 0, (rightChildren_1526750648).length - 1)];
+          if (((rightChildren_1526751362).length == 1)) {
+          Temporary43 = rightChildren_1526751362[chckIndx(0, 0, (rightChildren_1526751362).length - 1)];
           }
           else {
-          Temporary43 = newRow__yatexmlZast_u601(rightChildren_1526750648);
+          Temporary43 = newRow__yatexmlZast_u618(rightChildren_1526751362);
           }
           
-          var rightNode_1526750737 = Temporary43;
-          switch (toJSStr(cmdName_1526750537)) {
+          var rightNode_1526751451 = Temporary43;
+          switch (toJSStr(cmdName_1526751251)) {
           case "over":
-            Temporary44 = newFrac__yatexmlZast_u575(leftNode_1526750643, rightNode_1526750737, false);
+            Temporary44 = newFrac__yatexmlZast_u592(leftNode_1526751357, rightNode_1526751451, false);
             break;
           case "choose":
-            Temporary44 = newBinomial__yatexmlZast_u580(leftNode_1526750643, rightNode_1526750737);
+            Temporary44 = newBinomial__yatexmlZast_u597(leftNode_1526751357, rightNode_1526751451);
             break;
           case "atop":
-            Temporary44 = newAtop__yatexmlZast_u584(leftNode_1526750643, rightNode_1526750737);
+            Temporary44 = newAtop__yatexmlZast_u601(leftNode_1526751357, rightNode_1526751451);
             break;
           default: 
-            Temporary44 = leftNode_1526750643;
+            Temporary44 = leftNode_1526751357;
             break;
           }
-          var resultNode_1526750738 = Temporary44;
-          var closeResult_1526750739 = expect__yatexmlZlexer_u622(stream_p0, 2);
-          if (!(closeResult_1526750739.isOk)) {
-          var Temporary45 = closeResult_1526750739;
+          var resultNode_1526751452 = Temporary44;
+          var closeResult_1526751453 = expect__yatexmlZlexer_u622(stream_p0, 2);
+          if (!(closeResult_1526751453.isOk)) {
+          var Temporary45 = closeResult_1526751453;
           if (ConstSet43[Temporary45.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary45.isOk, NTI33554466)); }
-          result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary45.error), NTI1526737362);
+          result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary45.error), NTI1526737736);
           break BeforeRet;
           }
           
-          result_1526750414 = nimCopy(result_1526750414, ok__yatexmlZparser_u21143(resultNode_1526750738), NTI1526737362);
+          result_1526751128 = nimCopy(result_1526751128, ok__yatexmlZparser_u21857(resultNode_1526751452), NTI1526737736);
           break BeforeRet;
           }
           
@@ -4950,60 +5008,60 @@ function parseGroup__yatexmlZparser_u20380(stream_p0) {
           
         }
     };
-    var closeResult_1526750761 = expect__yatexmlZlexer_u622(stream_p0, 2);
-    if (!(closeResult_1526750761.isOk)) {
-    var Temporary46 = closeResult_1526750761;
+    var closeResult_1526751475 = expect__yatexmlZlexer_u622(stream_p0, 2);
+    if (!(closeResult_1526751475.isOk)) {
+    var Temporary46 = closeResult_1526751475;
     if (ConstSet44[Temporary46.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary46.isOk, NTI33554466)); }
-    result_1526750414 = nimCopy(result_1526750414, err__yatexmlZparser_u21645(Temporary46.error), NTI1526737362);
+    result_1526751128 = nimCopy(result_1526751128, err__yatexmlZparser_u22359(Temporary46.error), NTI1526737736);
     break BeforeRet;
     }
     
-    if (((children_1526750438).length == 1)) {
-    result_1526750414 = nimCopy(result_1526750414, ok__yatexmlZparser_u21143(children_1526750438[chckIndx(0, 0, (children_1526750438).length - 1)]), NTI1526737362);
+    if (((children_1526751152).length == 1)) {
+    result_1526751128 = nimCopy(result_1526751128, ok__yatexmlZparser_u21857(children_1526751152[chckIndx(0, 0, (children_1526751152).length - 1)]), NTI1526737736);
     break BeforeRet;
     }
     else {
-      result_1526750414 = nimCopy(result_1526750414, ok__yatexmlZparser_u21143(newRow__yatexmlZast_u601(children_1526750438)), NTI1526737362);
+      result_1526751128 = nimCopy(result_1526751128, ok__yatexmlZparser_u21857(newRow__yatexmlZast_u618(children_1526751152)), NTI1526737736);
       break BeforeRet;
     }
     
   };
 
-  return result_1526750414;
+  return result_1526751128;
 
 }
 
-function newDelimited__yatexmlZast_u620(left_p0, right_p1, content_p2) {
-  var result_1375732336 = null;
+function newDelimited__yatexmlZast_u637(left_p0, right_p1, content_p2) {
+  var result_1375732353 = null;
 
-    result_1375732336 = {kind: 20, delimLeft: nimCopy(null, left_p0, NTI33554449), delimRight: nimCopy(null, right_p1, NTI33554449), delimContent: content_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732353 = {kind: 20, delimLeft: nimCopy(null, left_p0, NTI33554449), delimRight: nimCopy(null, right_p1, NTI33554449), delimContent: content_p2, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732336;
-
-}
-
-function newRoot__yatexmlZast_u505(base_p0, index_p1) {
-  var result_1375732220 = null;
-
-    result_1375732220 = {kind: 7, rootBase: base_p0, rootIndex: index_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732220;
+  return result_1375732353;
 
 }
 
-function newSqrt__yatexmlZast_u502(base_p0) {
-  var result_1375732216 = null;
+function newRoot__yatexmlZast_u522(base_p0, index_p1) {
+  var result_1375732237 = null;
 
-    result_1375732216 = {kind: 6, sqrtBase: base_p0, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732237 = {kind: 7, rootBase: base_p0, rootIndex: index_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732216;
+  return result_1375732237;
 
 }
 
-function greekToUnicode__yatexmlZparser_u20390(name_p0) {
+function newSqrt__yatexmlZast_u519(base_p0) {
+  var result_1375732233 = null;
+
+    result_1375732233 = {kind: 6, sqrtBase: base_p0, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732233;
+
+}
+
+function greekToUnicode__yatexmlZparser_u21104(name_p0) {
     var Temporary1;
 
-  var result_1526747048 = [];
+  var result_1526747762 = [];
 
     switch (toJSStr(name_p0)) {
     case "alpha":
@@ -5208,31 +5266,31 @@ function greekToUnicode__yatexmlZparser_u20390(name_p0) {
       Temporary1 = [63];
       break;
     }
-    result_1526747048 = nimCopy(null, Temporary1, NTI33554449);
+    result_1526747762 = nimCopy(null, Temporary1, NTI33554449);
 
-  return result_1526747048;
-
-}
-
-function newSymbol__yatexmlZast_u487(name_p0, value_p1) {
-  var result_1375732202 = null;
-
-    result_1375732202 = {kind: 2, symbolName: nimCopy(null, name_p0, NTI33554449), symbolValue: nimCopy(null, value_p1, NTI33554449), numValue: [], identName: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732202;
+  return result_1526747762;
 
 }
 
-function newStyle__yatexmlZast_u529(kind_p0, base_p1) {
-  var result_1375732244 = null;
+function newSymbol__yatexmlZast_u504(name_p0, value_p1) {
+  var result_1375732219 = null;
 
-    result_1375732244 = {kind: 9, styleKind: kind_p0, styleBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732219 = {kind: 2, symbolName: nimCopy(null, name_p0, NTI33554449), symbolValue: nimCopy(null, value_p1, NTI33554449), numValue: [], identName: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732244;
+  return result_1375732219;
 
 }
 
-function parseRestOfGroup__yatexmlZparser_u20387(stream_p0) {
+function newStyle__yatexmlZast_u546(kind_p0, base_p1) {
+  var result_1375732261 = null;
+
+    result_1375732261 = {kind: 9, styleKind: kind_p0, styleBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732261;
+
+}
+
+function parseRestOfGroup__yatexmlZparser_u21101(stream_p0) {
           var Temporary3;
           var Temporary4;
                 var Temporary7;
@@ -5260,100 +5318,100 @@ function parseRestOfGroup__yatexmlZparser_u20387(stream_p0) {
                   var Temporary29;
                     var Temporary30;
 
-  var result_1526750792 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526751506 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var children_1526750797 = [];
+    var children_1526751511 = [];
     Label1: {
         Label2: while (true) {
         if (!(((((!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && !(match__yatexmlZlexer_u664(stream_p0, 2))) && !(match__yatexmlZlexer_u664(stream_p0, 4))) && !(match__yatexmlZlexer_u664(stream_p0, 6))) && !(match__yatexmlZlexer_u664(stream_p0, 12))) && !(match__yatexmlZlexer_u664(stream_p0, 11)))) break Label2;
           if (match__yatexmlZlexer_u664(stream_p0, 0)) {
-          var cmdValue_1526750798 = nimCopy(null, peek__yatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
-          if (((((eqStrings(cmdValue_1526750798, [114,105,103,104,116]) || eqStrings(cmdValue_1526750798, [101,110,100])) || eqStrings(cmdValue_1526750798, [97,116,111,112])) || eqStrings(cmdValue_1526750798, [111,118,101,114])) || eqStrings(cmdValue_1526750798, [99,104,111,111,115,101]))) {
+          var cmdValue_1526751512 = nimCopy(null, peek__yatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
+          if (((((eqStrings(cmdValue_1526751512, [114,105,103,104,116]) || eqStrings(cmdValue_1526751512, [101,110,100])) || eqStrings(cmdValue_1526751512, [97,116,111,112])) || eqStrings(cmdValue_1526751512, [111,118,101,114])) || eqStrings(cmdValue_1526751512, [99,104,111,111,115,101]))) {
           break Label1;
           }
           
           }
           
-          var primResult_1526750799 = parsePrimary__yatexmlZparser_u20377(stream_p0);
-          if (!(primResult_1526750799.isOk)) {
-          var Temporary3 = primResult_1526750799;
+          var primResult_1526751513 = parsePrimary__yatexmlZparser_u21091(stream_p0);
+          if (!(primResult_1526751513.isOk)) {
+          var Temporary3 = primResult_1526751513;
           if (ConstSet61[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
-          result_1526750792 = nimCopy(result_1526750792, err__yatexmlZparser_u21645(Temporary3.error), NTI1526737362);
+          result_1526751506 = nimCopy(result_1526751506, err__yatexmlZparser_u22359(Temporary3.error), NTI1526737736);
           break BeforeRet;
           }
           
-          var Temporary4 = primResult_1526750799;
+          var Temporary4 = primResult_1526751513;
           if (ConstSet62[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-          var node_1526750818 = Temporary4.value;
+          var node_1526751532 = Temporary4.value;
           Label5: {
               Label6: while (true) {
               if (!(match__yatexmlZlexer_u664(stream_p0, 9) || match__yatexmlZlexer_u664(stream_p0, 10))) break Label6;
-                if (!(node_1526750818.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1526750818;
+                if (!(node_1526751532.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1526751532;
                   if (ConstSet63[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1375731715)); }
-                  if ((Temporary9.accentKind == 10)) Temporary8 = true; else {                    var Temporary10 = node_1526750818;
+                  if ((Temporary9.accentKind == 16)) Temporary8 = true; else {                    var Temporary10 = node_1526751532;
                     if (ConstSet64[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1375731715)); }
-                    Temporary8 = (Temporary10.accentKind == 11);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1526750831 = Temporary7;
+                    Temporary8 = (Temporary10.accentKind == 17);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1526751545 = Temporary7;
                 if (match__yatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary11 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary11 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary11 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary11 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var subResult_1526750832 = nimCopy(null, Temporary11, NTI1526737362);
-                if (!(subResult_1526750832.isOk)) {
-                var Temporary12 = subResult_1526750832;
+                var subResult_1526751546 = nimCopy(null, Temporary11, NTI1526737736);
+                if (!(subResult_1526751546.isOk)) {
+                var Temporary12 = subResult_1526751546;
                 if (ConstSet65[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-                result_1526750792 = nimCopy(result_1526750792, err__yatexmlZparser_u21645(Temporary12.error), NTI1526737362);
+                result_1526751506 = nimCopy(result_1526751506, err__yatexmlZparser_u22359(Temporary12.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
                 if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary13 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary13 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary13 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary13 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var supResult_1526750851 = nimCopy(null, Temporary13, NTI1526737362);
-                if (!(supResult_1526750851.isOk)) {
-                var Temporary14 = supResult_1526750851;
+                var supResult_1526751565 = nimCopy(null, Temporary13, NTI1526737736);
+                if (!(supResult_1526751565.isOk)) {
+                var Temporary14 = supResult_1526751565;
                 if (ConstSet66[Temporary14.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary14.isOk, NTI33554466)); }
-                result_1526750792 = nimCopy(result_1526750792, err__yatexmlZparser_u21645(Temporary14.error), NTI1526737362);
+                result_1526751506 = nimCopy(result_1526751506, err__yatexmlZparser_u22359(Temporary14.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1526750831) {
-                var Temporary15 = subResult_1526750832;
+                if (isOverUnderbrace_1526751545) {
+                var Temporary15 = subResult_1526751546;
                 if (ConstSet67[Temporary15.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary15.isOk, NTI33554466)); }
-                var Temporary16 = supResult_1526750851;
+                var Temporary16 = supResult_1526751565;
                 if (ConstSet68[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-                node_1526750818 = newUnderOver__yatexmlZast_u691(node_1526750818, Temporary15.value, Temporary16.value);
+                node_1526751532 = newUnderOver__yatexmlZast_u708(node_1526751532, Temporary15.value, Temporary16.value);
                 }
                 else {
-                  var Temporary17 = subResult_1526750832;
+                  var Temporary17 = subResult_1526751546;
                   if (ConstSet69[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-                  var Temporary18 = supResult_1526750851;
+                  var Temporary18 = supResult_1526751565;
                   if (ConstSet70[Temporary18.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary18.isOk, NTI33554466)); }
-                  node_1526750818 = newSubSup__yatexmlZast_u596(node_1526750818, Temporary17.value, Temporary18.value);
+                  node_1526751532 = newSubSup__yatexmlZast_u613(node_1526751532, Temporary17.value, Temporary18.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1526750831) {
-                  var Temporary19 = subResult_1526750832;
+                  if (isOverUnderbrace_1526751545) {
+                  var Temporary19 = subResult_1526751546;
                   if (ConstSet71[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-                  node_1526750818 = newUnderOver__yatexmlZast_u691(node_1526750818, Temporary19.value, null);
+                  node_1526751532 = newUnderOver__yatexmlZast_u708(node_1526751532, Temporary19.value, null);
                   }
                   else {
-                    var Temporary20 = subResult_1526750832;
+                    var Temporary20 = subResult_1526751546;
                     if (ConstSet72[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-                    node_1526750818 = newSub__yatexmlZast_u588(node_1526750818, Temporary20.value);
+                    node_1526751532 = newSub__yatexmlZast_u605(node_1526751532, Temporary20.value);
                   }
                   
                 }
@@ -5363,63 +5421,63 @@ function parseRestOfGroup__yatexmlZparser_u20387(stream_p0) {
                 if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary21 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary21 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary21 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary21 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var supResult_1526750870 = nimCopy(null, Temporary21, NTI1526737362);
-                if (!(supResult_1526750870.isOk)) {
-                var Temporary22 = supResult_1526750870;
+                var supResult_1526751584 = nimCopy(null, Temporary21, NTI1526737736);
+                if (!(supResult_1526751584.isOk)) {
+                var Temporary22 = supResult_1526751584;
                 if (ConstSet73[Temporary22.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary22.isOk, NTI33554466)); }
-                result_1526750792 = nimCopy(result_1526750792, err__yatexmlZparser_u21645(Temporary22.error), NTI1526737362);
+                result_1526751506 = nimCopy(result_1526751506, err__yatexmlZparser_u22359(Temporary22.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
                 if (match__yatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary23 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary23 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary23 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary23 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var subResult_1526750889 = nimCopy(null, Temporary23, NTI1526737362);
-                if (!(subResult_1526750889.isOk)) {
-                var Temporary24 = subResult_1526750889;
+                var subResult_1526751603 = nimCopy(null, Temporary23, NTI1526737736);
+                if (!(subResult_1526751603.isOk)) {
+                var Temporary24 = subResult_1526751603;
                 if (ConstSet74[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                result_1526750792 = nimCopy(result_1526750792, err__yatexmlZparser_u21645(Temporary24.error), NTI1526737362);
+                result_1526751506 = nimCopy(result_1526751506, err__yatexmlZparser_u22359(Temporary24.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1526750831) {
-                var Temporary25 = subResult_1526750889;
+                if (isOverUnderbrace_1526751545) {
+                var Temporary25 = subResult_1526751603;
                 if (ConstSet75[Temporary25.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary25.isOk, NTI33554466)); }
-                var Temporary26 = supResult_1526750870;
+                var Temporary26 = supResult_1526751584;
                 if (ConstSet76[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-                node_1526750818 = newUnderOver__yatexmlZast_u691(node_1526750818, Temporary25.value, Temporary26.value);
+                node_1526751532 = newUnderOver__yatexmlZast_u708(node_1526751532, Temporary25.value, Temporary26.value);
                 }
                 else {
-                  var Temporary27 = subResult_1526750889;
+                  var Temporary27 = subResult_1526751603;
                   if (ConstSet77[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-                  var Temporary28 = supResult_1526750870;
+                  var Temporary28 = supResult_1526751584;
                   if (ConstSet78[Temporary28.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary28.isOk, NTI33554466)); }
-                  node_1526750818 = newSubSup__yatexmlZast_u596(node_1526750818, Temporary27.value, Temporary28.value);
+                  node_1526751532 = newSubSup__yatexmlZast_u613(node_1526751532, Temporary27.value, Temporary28.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1526750831) {
-                  var Temporary29 = supResult_1526750870;
+                  if (isOverUnderbrace_1526751545) {
+                  var Temporary29 = supResult_1526751584;
                   if (ConstSet79[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-                  node_1526750818 = newUnderOver__yatexmlZast_u691(node_1526750818, null, Temporary29.value);
+                  node_1526751532 = newUnderOver__yatexmlZast_u708(node_1526751532, null, Temporary29.value);
                   }
                   else {
-                    var Temporary30 = supResult_1526750870;
+                    var Temporary30 = supResult_1526751584;
                     if (ConstSet80[Temporary30.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary30.isOk, NTI33554466)); }
-                    node_1526750818 = newSup__yatexmlZast_u592(node_1526750818, Temporary30.value);
+                    node_1526751532 = newSup__yatexmlZast_u609(node_1526751532, Temporary30.value);
                   }
                   
                 }
@@ -5428,89 +5486,89 @@ function parseRestOfGroup__yatexmlZparser_u20387(stream_p0) {
                 }
               }
           };
-          children_1526750797.push(node_1526750818);;
+          children_1526751511.push(node_1526751532);;
         }
     };
-    if (((children_1526750797).length == 0)) {
-    result_1526750792 = nimCopy(result_1526750792, ok__yatexmlZparser_u21143(newRow__yatexmlZast_u601([])), NTI1526737362);
+    if (((children_1526751511).length == 0)) {
+    result_1526751506 = nimCopy(result_1526751506, ok__yatexmlZparser_u21857(newRow__yatexmlZast_u618([])), NTI1526737736);
     break BeforeRet;
     }
     else {
-    if (((children_1526750797).length == 1)) {
-    result_1526750792 = nimCopy(result_1526750792, ok__yatexmlZparser_u21143(children_1526750797[chckIndx(0, 0, (children_1526750797).length - 1)]), NTI1526737362);
+    if (((children_1526751511).length == 1)) {
+    result_1526751506 = nimCopy(result_1526751506, ok__yatexmlZparser_u21857(children_1526751511[chckIndx(0, 0, (children_1526751511).length - 1)]), NTI1526737736);
     break BeforeRet;
     }
     else {
-      result_1526750792 = nimCopy(result_1526750792, ok__yatexmlZparser_u21143(newRow__yatexmlZast_u601(children_1526750797)), NTI1526737362);
+      result_1526751506 = nimCopy(result_1526751506, ok__yatexmlZparser_u21857(newRow__yatexmlZast_u618(children_1526751511)), NTI1526737736);
       break BeforeRet;
     }
     }
   };
 
-  return result_1526750792;
+  return result_1526751506;
 
 }
 
-function newMathStyle__yatexmlZast_u549(kind_p0, base_p1) {
-  var result_1375732264 = null;
+function newMathStyle__yatexmlZast_u566(kind_p0, base_p1) {
+  var result_1375732281 = null;
 
-    result_1375732264 = {kind: 10, mathStyleKind: kind_p0, mathStyleBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732281 = {kind: 10, mathStyleKind: kind_p0, mathStyleBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732264;
-
-}
-
-function newPhantom__yatexmlZast_u573() {
-  var result_1375732286 = null;
-
-    result_1375732286 = {kind: 12, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732286;
+  return result_1375732281;
 
 }
 
-function newAccent__yatexmlZast_u509(kind_p0, base_p1) {
-  var result_1375732224 = null;
+function newPhantom__yatexmlZast_u590() {
+  var result_1375732303 = null;
 
-    result_1375732224 = {kind: 8, accentKind: kind_p0, accentBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732303 = {kind: 12, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732224;
-
-}
-
-function newBigOp__yatexmlZast_u669(kind_p0, lower_p1, upper_p2, base_p3) {
-  var result_1375732386 = null;
-
-    result_1375732386 = {kind: 26, bigopKind: kind_p0, bigopLower: lower_p1, bigopUpper: upper_p2, bigopBase: base_p3, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732386;
+  return result_1375732303;
 
 }
 
-function newFunction__yatexmlZast_u665(name_p0, arg_p1) {
-  var result_1375732380 = null;
+function newAccent__yatexmlZast_u526(kind_p0, base_p1) {
+  var result_1375732241 = null;
 
-    result_1375732380 = {kind: 25, funcName: nimCopy(null, name_p0, NTI33554449), funcArg: arg_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732241 = {kind: 8, accentKind: kind_p0, accentBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732380;
-
-}
-
-function err__yatexmlZparser_u21007(kind_p0, message_p1, position_p2, context_p3) {
-  var result_1526747669 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
-
-    result_1526747669 = nimCopy(result_1526747669, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: null}, NTI1526737362);
-
-  return result_1526747669;
+  return result_1375732241;
 
 }
 
-function newSizedDelimiter__yatexmlZast_u625(char_p0, size_p1) {
-  var result_1375732340 = null;
+function newBigOp__yatexmlZast_u686(kind_p0, lower_p1, upper_p2, base_p3) {
+  var result_1375732403 = null;
 
-    result_1375732340 = {kind: 21, sizedDelimChar: nimCopy(null, char_p0, NTI33554449), sizedDelimSize: size_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732403 = {kind: 26, bigopKind: kind_p0, bigopLower: lower_p1, bigopUpper: upper_p2, bigopBase: base_p3, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732340;
+  return result_1375732403;
+
+}
+
+function newFunction__yatexmlZast_u682(name_p0, arg_p1) {
+  var result_1375732397 = null;
+
+    result_1375732397 = {kind: 25, funcName: nimCopy(null, name_p0, NTI33554449), funcArg: arg_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732397;
+
+}
+
+function err__yatexmlZparser_u21721(kind_p0, message_p1, position_p2, context_p3) {
+  var result_1526748383 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+
+    result_1526748383 = nimCopy(result_1526748383, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: null}, NTI1526737736);
+
+  return result_1526748383;
+
+}
+
+function newSizedDelimiter__yatexmlZast_u642(char_p0, size_p1) {
+  var result_1375732357 = null;
+
+    result_1375732357 = {kind: 21, sizedDelimChar: nimCopy(null, char_p0, NTI33554449), sizedDelimSize: size_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732357;
 
 }
 
@@ -5554,56 +5612,56 @@ function contains__stdZenumutils_u50(a_p0, item_p1) {
 
 }
 
-function newMatrix__yatexmlZast_u645(rows_p0, matrixType_p1) {
-  var result_1375732360 = null;
+function newMatrix__yatexmlZast_u662(rows_p0, matrixType_p1) {
+  var result_1375732377 = null;
 
-    result_1375732360 = {kind: 22, matrixRows: nimCopy(null, rows_p0, NTI1375731843), matrixType: nimCopy(null, matrixType_p1, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732377 = {kind: 22, matrixRows: nimCopy(null, rows_p0, NTI1375731843), matrixType: nimCopy(null, matrixType_p1, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732360;
+  return result_1375732377;
 
 }
 
-function find__yatexmlZparser_u23484(a_p0, item_p1) {
-  var result_1526750145 = 0;
+function find__yatexmlZparser_u24198(a_p0, item_p1) {
+  var result_1526750859 = 0;
 
   BeforeRet: {
-    result_1526750145 = 0;
+    result_1526750859 = 0;
     Label1: {
-      var i_1526750159 = 0;
+      var i_1526750873 = 0;
       var i_1207959749 = 0;
       Label2: {
           Label3: while (true) {
           if (!(i_1207959749 < (a_p0).length)) break Label3;
-            i_1526750159 = a_p0[chckIndx(i_1207959749, 0, (a_p0).length - 1)];
-            if ((i_1526750159 == item_p1)) {
+            i_1526750873 = a_p0[chckIndx(i_1207959749, 0, (a_p0).length - 1)];
+            if ((i_1526750873 == item_p1)) {
             break BeforeRet;
             }
             
-            result_1526750145 = addInt(result_1526750145, 1);
+            result_1526750859 = addInt(result_1526750859, 1);
             i_1207959749 += 1;
           }
       };
     };
-    result_1526750145 = (-1);
+    result_1526750859 = (-1);
   };
 
-  return result_1526750145;
+  return result_1526750859;
 
 }
 
-function contains__yatexmlZparser_u23479(a_p0, item_p1) {
-  var result_1526750139 = false;
+function contains__yatexmlZparser_u24193(a_p0, item_p1) {
+  var result_1526750853 = false;
 
   BeforeRet: {
-    result_1526750139 = (0 <= find__yatexmlZparser_u23484(a_p0, item_p1));
+    result_1526750853 = (0 <= find__yatexmlZparser_u24198(a_p0, item_p1));
     break BeforeRet;
   };
 
-  return result_1526750139;
+  return result_1526750853;
 
 }
 
-function parseMatrixEnvironment__yatexmlZparser_u20383(stream_p0, matrixType_p1) {
+function parseMatrixEnvironment__yatexmlZparser_u21097(stream_p0, matrixType_p1) {
             var Temporary7;
             var Temporary8;
             var Temporary9;
@@ -5628,191 +5686,191 @@ function parseMatrixEnvironment__yatexmlZparser_u20383(stream_p0, matrixType_p1)
                         var Temporary32;
                           var Temporary33;
 
-  var result_1526749870 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526750584 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var rows_1526749875 = [];
-    var currentRow_1526749880 = [];
-    var isAlignmentEnv_1526749923 = contains__stdZenumutils_u50([[97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], matrixType_p1);
-    var startOfCell_1526749924 = true;
+    var rows_1526750589 = [];
+    var currentRow_1526750594 = [];
+    var isAlignmentEnv_1526750637 = contains__stdZenumutils_u50([[97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], matrixType_p1);
+    var startOfCell_1526750638 = true;
     Label1: {
         Label2: while (true) {
         if (!!(isAtEnd__yatexmlZlexer_u611(stream_p0))) break Label2;
-          var token_1526749925 = peek__yatexmlZlexer_u592(stream_p0, 0);
-          if (((token_1526749925.kind == 0) && eqStrings(token_1526749925.value, [101,110,100]))) {
+          var token_1526750639 = peek__yatexmlZlexer_u592(stream_p0, 0);
+          if (((token_1526750639.kind == 0) && eqStrings(token_1526750639.value, [101,110,100]))) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          var braceResult_1526749930 = expect__yatexmlZlexer_u622(stream_p0, 1);
-          if (!(braceResult_1526749930.isOk)) {
-          result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,101,110,100], token_1526749925.position, []), NTI1526737362);
+          var braceResult_1526750644 = expect__yatexmlZlexer_u622(stream_p0, 1);
+          if (!(braceResult_1526750644.isOk)) {
+          result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,101,110,100], token_1526750639.position, []), NTI1526737736);
           break BeforeRet;
           }
           
-          var nameToken_1526749952 = peek__yatexmlZlexer_u592(stream_p0, 0);
-          var endEnvName_1526749953 = [];
-          if ((nameToken_1526749952.kind == 13)) {
+          var nameToken_1526750666 = peek__yatexmlZlexer_u592(stream_p0, 0);
+          var endEnvName_1526750667 = [];
+          if ((nameToken_1526750666.kind == 13)) {
           Label3: {
               Label4: while (true) {
               if (!((peek__yatexmlZlexer_u592(stream_p0, 0).kind == 13) && !(match__yatexmlZlexer_u664(stream_p0, 2)))) break Label4;
-                endEnvName_1526749953.push.apply(endEnvName_1526749953, advance__yatexmlZlexer_u600(stream_p0).value);;
+                endEnvName_1526750667.push.apply(endEnvName_1526750667, advance__yatexmlZlexer_u600(stream_p0).value);;
               }
           };
           }
           else {
-            result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21007(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,101,110,100,123], nameToken_1526749952.position, []), NTI1526737362);
+            result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u21721(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,101,110,100,123], nameToken_1526750666.position, []), NTI1526737736);
             break BeforeRet;
           }
           
-          var closeResult_1526749983 = expect__yatexmlZlexer_u622(stream_p0, 2);
-          if (!(closeResult_1526749983.isOk)) {
-          result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1526749952.position, []), NTI1526737362);
+          var closeResult_1526750697 = expect__yatexmlZlexer_u622(stream_p0, 2);
+          if (!(closeResult_1526750697.isOk)) {
+          result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1526750666.position, []), NTI1526737736);
           break BeforeRet;
           }
           
-          if (!(eqStrings(endEnvName_1526749953, matrixType_p1))) {
-          result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21007(4, ([69,110,118,105,114,111,110,109,101,110,116,32,109,105,115,109,97,116,99,104,58,32,92,98,101,103,105,110,123]).concat(matrixType_p1,[125,32,101,110,100,101,100,32,119,105,116,104,32,92,101,110,100,123],endEnvName_1526749953,[125]), token_1526749925.position, []), NTI1526737362);
+          if (!(eqStrings(endEnvName_1526750667, matrixType_p1))) {
+          result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u21721(4, ([69,110,118,105,114,111,110,109,101,110,116,32,109,105,115,109,97,116,99,104,58,32,92,98,101,103,105,110,123]).concat(matrixType_p1,[125,32,101,110,100,101,100,32,119,105,116,104,32,92,101,110,100,123],endEnvName_1526750667,[125]), token_1526750639.position, []), NTI1526737736);
           break BeforeRet;
           }
           
-          if ((0 < (currentRow_1526749880).length)) {
-          var Temporary5 = nimCopy(null, currentRow_1526749880, NTI1526739225);
-          rows_1526749875.push(Temporary5);;
+          if ((0 < (currentRow_1526750594).length)) {
+          var Temporary5 = nimCopy(null, currentRow_1526750594, NTI1526739599);
+          rows_1526750589.push(Temporary5);;
           }
           
-          result_1526749870 = nimCopy(result_1526749870, ok__yatexmlZparser_u21143(newMatrix__yatexmlZast_u645(rows_1526749875, matrixType_p1)), NTI1526737362);
+          result_1526750584 = nimCopy(result_1526750584, ok__yatexmlZparser_u21857(newMatrix__yatexmlZast_u662(rows_1526750589, matrixType_p1)), NTI1526737736);
           break BeforeRet;
           }
           else {
-          if ((token_1526749925.kind == 12)) {
+          if ((token_1526750639.kind == 12)) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          if ((0 < (currentRow_1526749880).length)) {
-          var Temporary6 = nimCopy(null, currentRow_1526749880, NTI1526739225);
-          rows_1526749875.push(Temporary6);;
-          currentRow_1526749880 = nimCopy(null, [], NTI1526738834);
+          if ((0 < (currentRow_1526750594).length)) {
+          var Temporary6 = nimCopy(null, currentRow_1526750594, NTI1526739599);
+          rows_1526750589.push(Temporary6);;
+          currentRow_1526750594 = nimCopy(null, [], NTI1526739208);
           }
           
-          startOfCell_1526749924 = true;
+          startOfCell_1526750638 = true;
           }
           else {
-          if ((token_1526749925.kind == 11)) {
+          if ((token_1526750639.kind == 11)) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          startOfCell_1526749924 = true;
+          startOfCell_1526750638 = true;
           }
           else {
-          if (startOfCell_1526749924) {
-          if (isAlignmentEnv_1526749923) {
-          var cellResult_1526750055 = parseExpression__yatexmlZparser_u20371(stream_p0);
-          if (!(cellResult_1526750055.isOk)) {
-            var Temporary7 = cellResult_1526750055;
+          if (startOfCell_1526750638) {
+          if (isAlignmentEnv_1526750637) {
+          var cellResult_1526750769 = parseExpression__yatexmlZparser_u21085(stream_p0);
+          if (!(cellResult_1526750769.isOk)) {
+            var Temporary7 = cellResult_1526750769;
             if (ConstSet91[Temporary7.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary7.isOk, NTI33554466)); }
           if ((Temporary7.error.kind == 1)) {
-          currentRow_1526749880.push(newRow__yatexmlZast_u601([]));;
-          startOfCell_1526749924 = false;
+          currentRow_1526750594.push(newRow__yatexmlZast_u618([]));;
+          startOfCell_1526750638 = false;
           }
           else {
-            var Temporary8 = cellResult_1526750055;
+            var Temporary8 = cellResult_1526750769;
             if (ConstSet92[Temporary8.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary8.isOk, NTI33554466)); }
-            result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21645(Temporary8.error), NTI1526737362);
+            result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u22359(Temporary8.error), NTI1526737736);
             break BeforeRet;
           }
           
           }
           else {
-            var Temporary9 = cellResult_1526750055;
+            var Temporary9 = cellResult_1526750769;
             if (ConstSet93[Temporary9.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary9.isOk, NTI33554466)); }
-            currentRow_1526749880.push(Temporary9.value);;
-            startOfCell_1526749924 = false;
+            currentRow_1526750594.push(Temporary9.value);;
+            startOfCell_1526750638 = false;
           }
           
           }
           else {
-            var cellExpressions_1526750095 = [];
+            var cellExpressions_1526750809 = [];
             Label10: {
                 Label11: while (true) {
                 if (!!(isAtEnd__yatexmlZlexer_u611(stream_p0))) break Label11;
-                  var t_1526750096 = peek__yatexmlZlexer_u592(stream_p0, 0);
-                  if ((contains__yatexmlZparser_u23479(new Uint8Array([11, 12]), t_1526750096.kind) || ((t_1526750096.kind == 0) && eqStrings(t_1526750096.value, [101,110,100])))) {
+                  var t_1526750810 = peek__yatexmlZlexer_u592(stream_p0, 0);
+                  if ((contains__yatexmlZparser_u24193(new Uint8Array([11, 12]), t_1526750810.kind) || ((t_1526750810.kind == 0) && eqStrings(t_1526750810.value, [101,110,100])))) {
                   break Label10;
                   }
                   
-                  var exprResult_1526750189 = parsePrimary__yatexmlZparser_u20377(stream_p0);
-                  if (!(exprResult_1526750189.isOk)) {
-                  var Temporary12 = exprResult_1526750189;
+                  var exprResult_1526750903 = parsePrimary__yatexmlZparser_u21091(stream_p0);
+                  if (!(exprResult_1526750903.isOk)) {
+                  var Temporary12 = exprResult_1526750903;
                   if (ConstSet94[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-                  result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21645(Temporary12.error), NTI1526737362);
+                  result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u22359(Temporary12.error), NTI1526737736);
                   break BeforeRet;
                   }
                   
-                  var Temporary13 = exprResult_1526750189;
+                  var Temporary13 = exprResult_1526750903;
                   if (ConstSet95[Temporary13.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary13.isOk, NTI33554466)); }
-                  var node_1526750208 = Temporary13.value;
+                  var node_1526750922 = Temporary13.value;
                   Label14: {
                       Label15: while (true) {
                       if (!(match__yatexmlZlexer_u664(stream_p0, 9) || match__yatexmlZlexer_u664(stream_p0, 10))) break Label15;
-                        if (!(node_1526750208.kind == 8)) Temporary16 = false; else {                          var Temporary18 = node_1526750208;
+                        if (!(node_1526750922.kind == 8)) Temporary16 = false; else {                          var Temporary18 = node_1526750922;
                           if (ConstSet96[Temporary18.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary18.kind, NTI1375731715)); }
-                          if ((Temporary18.accentKind == 10)) Temporary17 = true; else {                            var Temporary19 = node_1526750208;
+                          if ((Temporary18.accentKind == 16)) Temporary17 = true; else {                            var Temporary19 = node_1526750922;
                             if (ConstSet97[Temporary19.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary19.kind, NTI1375731715)); }
-                            Temporary17 = (Temporary19.accentKind == 11);                          }                          Temporary16 = Temporary17;                        }                        var isOverUnderbrace_1526750223 = Temporary16;
+                            Temporary17 = (Temporary19.accentKind == 17);                          }                          Temporary16 = Temporary17;                        }                        var isOverUnderbrace_1526750937 = Temporary16;
                         if (match__yatexmlZlexer_u664(stream_p0, 9)) {
                         (advance__yatexmlZlexer_u600(stream_p0));
                         if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                        Temporary20 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                        Temporary20 = parseGroup__yatexmlZparser_u21094(stream_p0);
                         }
                         else {
-                        Temporary20 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                        Temporary20 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                         }
                         
-                        var subResult_1526750224 = nimCopy(null, Temporary20, NTI1526737362);
-                        if (!(subResult_1526750224.isOk)) {
-                        var Temporary21 = subResult_1526750224;
+                        var subResult_1526750938 = nimCopy(null, Temporary20, NTI1526737736);
+                        if (!(subResult_1526750938.isOk)) {
+                        var Temporary21 = subResult_1526750938;
                         if (ConstSet98[Temporary21.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary21.isOk, NTI33554466)); }
-                        result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21645(Temporary21.error), NTI1526737362);
+                        result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u22359(Temporary21.error), NTI1526737736);
                         break BeforeRet;
                         }
                         
                         if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                         (advance__yatexmlZlexer_u600(stream_p0));
                         if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                        Temporary22 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                        Temporary22 = parseGroup__yatexmlZparser_u21094(stream_p0);
                         }
                         else {
-                        Temporary22 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                        Temporary22 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                         }
                         
-                        var supResult_1526750243 = nimCopy(null, Temporary22, NTI1526737362);
-                        if (!(supResult_1526750243.isOk)) {
-                        var Temporary23 = supResult_1526750243;
+                        var supResult_1526750957 = nimCopy(null, Temporary22, NTI1526737736);
+                        if (!(supResult_1526750957.isOk)) {
+                        var Temporary23 = supResult_1526750957;
                         if (ConstSet99[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-                        result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21645(Temporary23.error), NTI1526737362);
+                        result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u22359(Temporary23.error), NTI1526737736);
                         break BeforeRet;
                         }
                         
-                        if (isOverUnderbrace_1526750223) {
-                        var Temporary24 = subResult_1526750224;
+                        if (isOverUnderbrace_1526750937) {
+                        var Temporary24 = subResult_1526750938;
                         if (ConstSet100[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                        var Temporary25 = supResult_1526750243;
+                        var Temporary25 = supResult_1526750957;
                         if (ConstSet101[Temporary25.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary25.isOk, NTI33554466)); }
-                        node_1526750208 = newUnderOver__yatexmlZast_u691(node_1526750208, Temporary24.value, Temporary25.value);
+                        node_1526750922 = newUnderOver__yatexmlZast_u708(node_1526750922, Temporary24.value, Temporary25.value);
                         }
                         else {
-                          var Temporary26 = subResult_1526750224;
+                          var Temporary26 = subResult_1526750938;
                           if (ConstSet102[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-                          var Temporary27 = supResult_1526750243;
+                          var Temporary27 = supResult_1526750957;
                           if (ConstSet103[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-                          node_1526750208 = newSubSup__yatexmlZast_u596(node_1526750208, Temporary26.value, Temporary27.value);
+                          node_1526750922 = newSubSup__yatexmlZast_u613(node_1526750922, Temporary26.value, Temporary27.value);
                         }
                         
                         }
                         else {
-                          if (isOverUnderbrace_1526750223) {
-                          var Temporary28 = subResult_1526750224;
+                          if (isOverUnderbrace_1526750937) {
+                          var Temporary28 = subResult_1526750938;
                           if (ConstSet104[Temporary28.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary28.isOk, NTI33554466)); }
-                          node_1526750208 = newUnderOver__yatexmlZast_u691(node_1526750208, Temporary28.value, null);
+                          node_1526750922 = newUnderOver__yatexmlZast_u708(node_1526750922, Temporary28.value, null);
                           }
                           else {
-                            var Temporary29 = subResult_1526750224;
+                            var Temporary29 = subResult_1526750938;
                             if (ConstSet105[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-                            node_1526750208 = newSub__yatexmlZast_u588(node_1526750208, Temporary29.value);
+                            node_1526750922 = newSub__yatexmlZast_u605(node_1526750922, Temporary29.value);
                           }
                           
                         }
@@ -5822,29 +5880,29 @@ function parseMatrixEnvironment__yatexmlZparser_u20383(stream_p0, matrixType_p1)
                         if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                         (advance__yatexmlZlexer_u600(stream_p0));
                         if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                        Temporary30 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                        Temporary30 = parseGroup__yatexmlZparser_u21094(stream_p0);
                         }
                         else {
-                        Temporary30 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                        Temporary30 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                         }
                         
-                        var supResult_1526750262 = nimCopy(null, Temporary30, NTI1526737362);
-                        if (!(supResult_1526750262.isOk)) {
-                        var Temporary31 = supResult_1526750262;
+                        var supResult_1526750976 = nimCopy(null, Temporary30, NTI1526737736);
+                        if (!(supResult_1526750976.isOk)) {
+                        var Temporary31 = supResult_1526750976;
                         if (ConstSet106[Temporary31.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary31.isOk, NTI33554466)); }
-                        result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21645(Temporary31.error), NTI1526737362);
+                        result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u22359(Temporary31.error), NTI1526737736);
                         break BeforeRet;
                         }
                         
-                        if (isOverUnderbrace_1526750223) {
-                        var Temporary32 = supResult_1526750262;
+                        if (isOverUnderbrace_1526750937) {
+                        var Temporary32 = supResult_1526750976;
                         if (ConstSet107[Temporary32.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary32.isOk, NTI33554466)); }
-                        node_1526750208 = newUnderOver__yatexmlZast_u691(node_1526750208, null, Temporary32.value);
+                        node_1526750922 = newUnderOver__yatexmlZast_u708(node_1526750922, null, Temporary32.value);
                         }
                         else {
-                          var Temporary33 = supResult_1526750262;
+                          var Temporary33 = supResult_1526750976;
                           if (ConstSet108[Temporary33.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary33.isOk, NTI33554466)); }
-                          node_1526750208 = newSup__yatexmlZast_u592(node_1526750208, Temporary33.value);
+                          node_1526750922 = newSup__yatexmlZast_u609(node_1526750922, Temporary33.value);
                         }
                         
                         }
@@ -5853,24 +5911,24 @@ function parseMatrixEnvironment__yatexmlZparser_u20383(stream_p0, matrixType_p1)
                   };
                   if ((match__yatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__yatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
                   (advance__yatexmlZlexer_u600(stream_p0));
-                  node_1526750208 = newRow__yatexmlZast_u601([node_1526750208, newOperator__yatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+                  node_1526750922 = newRow__yatexmlZast_u618([node_1526750922, newOperator__yatexmlZast_u508([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
                   }
                   
-                  cellExpressions_1526750095.push(node_1526750208);;
+                  cellExpressions_1526750809.push(node_1526750922);;
                 }
             };
-            if (((cellExpressions_1526750095).length == 0)) {
-            currentRow_1526749880.push(newRow__yatexmlZast_u601([]));;
+            if (((cellExpressions_1526750809).length == 0)) {
+            currentRow_1526750594.push(newRow__yatexmlZast_u618([]));;
             }
             else {
-            if (((cellExpressions_1526750095).length == 1)) {
-            currentRow_1526749880.push(cellExpressions_1526750095[chckIndx(0, 0, (cellExpressions_1526750095).length - 1)]);;
+            if (((cellExpressions_1526750809).length == 1)) {
+            currentRow_1526750594.push(cellExpressions_1526750809[chckIndx(0, 0, (cellExpressions_1526750809).length - 1)]);;
             }
             else {
-            currentRow_1526749880.push(newRow__yatexmlZast_u601(cellExpressions_1526750095));;
+            currentRow_1526750594.push(newRow__yatexmlZast_u618(cellExpressions_1526750809));;
             }
             }
-            startOfCell_1526749924 = false;
+            startOfCell_1526750638 = false;
           }
           
           }
@@ -5880,11 +5938,11 @@ function parseMatrixEnvironment__yatexmlZparser_u20383(stream_p0, matrixType_p1)
           }}}
         }
     };
-    result_1526749870 = nimCopy(result_1526749870, err__yatexmlZparser_u21007(1, ([77,97,116,114,105,120,32,101,110,118,105,114,111,110,109,101,110,116,32,110,111,116,32,99,108,111,115,101,100,32,119,105,116,104,32,92,101,110,100,123]).concat(matrixType_p1,[125]), 0, []), NTI1526737362);
+    result_1526750584 = nimCopy(result_1526750584, err__yatexmlZparser_u21721(1, ([77,97,116,114,105,120,32,101,110,118,105,114,111,110,109,101,110,116,32,110,111,116,32,99,108,111,115,101,100,32,119,105,116,104,32,92,101,110,100,123]).concat(matrixType_p1,[125]), 0, []), NTI1526737736);
     break BeforeRet;
   };
 
-  return result_1526749870;
+  return result_1526750584;
 
 }
 
@@ -5911,49 +5969,49 @@ function nsuRepeatStr(s_p0, n_p1) {
 
 }
 
-function newText__yatexmlZast_u496(value_p0) {
-  var result_1375732210 = null;
+function newText__yatexmlZast_u513(value_p0) {
+  var result_1375732227 = null;
 
-    result_1375732210 = {kind: 4, textValue: nimCopy(null, value_p0, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732227 = {kind: 4, textValue: nimCopy(null, value_p0, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732210;
-
-}
-
-function newSpace__yatexmlZast_u499(width_p0) {
-  var result_1375732213 = null;
-
-    result_1375732213 = {kind: 5, spaceWidth: nimCopy(null, width_p0, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732213;
+  return result_1375732227;
 
 }
 
-function extractText__yatexmlZparser_u22547(node_p0) {
+function newSpace__yatexmlZast_u516(width_p0) {
+  var result_1375732230 = null;
+
+    result_1375732230 = {kind: 5, spaceWidth: nimCopy(null, width_p0, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732230;
+
+}
+
+function extractText__yatexmlZparser_u23261(node_p0) {
       var Temporary1;
       var Temporary2;
         var Temporary4;
 
-  var result_1526749205 = [];
+  var result_1526749919 = [];
 
   BeforeRet: {
     switch (node_p0.kind) {
     case 1:
       var Temporary1 = node_p0;
       if (ConstSet111[Temporary1.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'identName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary1.kind, NTI1375731715)); }
-      result_1526749205 = nimCopy(null, Temporary1.identName, NTI33554449);
+      result_1526749919 = nimCopy(null, Temporary1.identName, NTI33554449);
       break BeforeRet;
       break;
     case 4:
       var Temporary2 = node_p0;
       if (ConstSet112[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'textValue\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1375731715)); }
-      result_1526749205 = nimCopy(null, Temporary2.textValue, NTI33554449);
+      result_1526749919 = nimCopy(null, Temporary2.textValue, NTI33554449);
       break BeforeRet;
       break;
     case 19:
-      result_1526749205 = nimCopy(null, [], NTI33554449);
+      result_1526749919 = nimCopy(null, [], NTI33554449);
       Label3: {
-        var child_1526749227 = null;
+        var child_1526749941 = null;
         var colontmp__1207959722 = [];
         var Temporary4 = node_p0;
         if (ConstSet113[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'rowChildren\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1375731715)); }
@@ -5963,8 +6021,8 @@ function extractText__yatexmlZparser_u22547(node_p0) {
         Label5: {
             Label6: while (true) {
             if (!(i_1207959724 < L_1207959725)) break Label6;
-              child_1526749227 = colontmp__1207959722[chckIndx(i_1207959724, 0, (colontmp__1207959722).length - 1)];
-              result_1526749205.push.apply(result_1526749205, extractText__yatexmlZparser_u22547(child_1526749227));;
+              child_1526749941 = colontmp__1207959722[chckIndx(i_1207959724, 0, (colontmp__1207959722).length - 1)];
+              result_1526749919.push.apply(result_1526749919, extractText__yatexmlZparser_u23261(child_1526749941));;
               i_1207959724 += 1;
               if (!(((colontmp__1207959722).length == L_1207959725))) {
               failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -5975,38 +6033,38 @@ function extractText__yatexmlZparser_u22547(node_p0) {
       };
       break;
     default: 
-      result_1526749205 = nimCopy(null, [], NTI33554449);
+      result_1526749919 = nimCopy(null, [], NTI33554449);
       break BeforeRet;
       break;
     }
   };
 
-  return result_1526749205;
+  return result_1526749919;
 
 }
 
-function newColor__yatexmlZast_u569(color_p0, base_p1) {
-  var result_1375732284 = null;
+function newColor__yatexmlZast_u586(color_p0, base_p1) {
+  var result_1375732301 = null;
 
-    result_1375732284 = {kind: 11, colorName: nimCopy(null, color_p0, NTI33554449), colorBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+    result_1375732301 = {kind: 11, colorName: nimCopy(null, color_p0, NTI33554449), colorBase: base_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
 
-  return result_1375732284;
-
-}
-
-function newNum__yatexmlZast_u696(numStr_p0) {
-  var result_1375732410 = null;
-
-    result_1375732410 = {kind: 29, numStr: nimCopy(null, numStr_p0, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
-
-  return result_1375732410;
+  return result_1375732301;
 
 }
 
-function cmdNameToSIPrefix__yatexmlZparser_u20399(name_p0) {
+function newNum__yatexmlZast_u713(numStr_p0) {
+  var result_1375732427 = null;
+
+    result_1375732427 = {kind: 29, numStr: nimCopy(null, numStr_p0, NTI33554449), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, unitNumerator: [], unitDenominator: [], siValue: [], siUnit: null};
+
+  return result_1375732427;
+
+}
+
+function cmdNameToSIPrefix__yatexmlZparser_u21113(name_p0) {
     var Temporary1;
 
-  var result_1526747057 = 0;
+  var result_1526747771 = 0;
 
     switch (toJSStr(name_p0)) {
     case "yocto":
@@ -6073,16 +6131,16 @@ function cmdNameToSIPrefix__yatexmlZparser_u20399(name_p0) {
       Temporary1 = 0;
       break;
     }
-    result_1526747057 = Temporary1;
+    result_1526747771 = Temporary1;
 
-  return result_1526747057;
+  return result_1526747771;
 
 }
 
-function cmdNameToSIUnit__yatexmlZparser_u20396(name_p0) {
+function cmdNameToSIUnit__yatexmlZparser_u21110(name_p0) {
     var Temporary1;
 
-  var result_1526747054 = 0;
+  var result_1526747768 = 0;
 
     switch (toJSStr(name_p0)) {
     case "meter":
@@ -6167,27 +6225,27 @@ function cmdNameToSIUnit__yatexmlZparser_u20396(name_p0) {
       Temporary1 = 0;
       break;
     }
-    result_1526747054 = Temporary1;
+    result_1526747768 = Temporary1;
 
-  return result_1526747054;
-
-}
-
-function newSIUnitComponent__yatexmlZast_u727(prefix_p0, unit_p1, power_p2) {
-  var result_1375732443 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
-
-    result_1375732443 = nimCopy(result_1375732443, {unit: unit_p1, prefix: prefix_p0, power: power_p2, customUnit: []}, NTI1375731725);
-
-  return result_1375732443;
+  return result_1526747768;
 
 }
 
-function HEX5BHEX5D__yatexmlZparser_u20945(s_p0, i_p1) {
-  var result_1526747605 = null;
+function newSIUnitComponent__yatexmlZast_u744(prefix_p0, unit_p1, power_p2) {
+  var result_1375732460 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
 
-    result_1526747605 = s_p0[chckIndx(subInt((s_p0).length, i_p1), 0, (s_p0).length - 1)];
+    result_1375732460 = nimCopy(result_1375732460, {unit: unit_p1, prefix: prefix_p0, power: power_p2, customUnit: []}, NTI1375731725);
 
-  return result_1526747605;
+  return result_1375732460;
+
+}
+
+function HEX5BHEX5D__yatexmlZparser_u21659(s_p0, i_p1) {
+  var result_1526748319 = null;
+
+    result_1526748319 = s_p0[chckIndx(subInt((s_p0).length, i_p1), 0, (s_p0).length - 1)];
+
+  return result_1526748319;
 
 }
 
@@ -6539,10 +6597,10 @@ function nsuEndsWith(s_p0, suffix_p1) {
 
 }
 
-function shorthandToUnit__yatexmlZparser_u20402(s_p0) {
+function shorthandToUnit__yatexmlZparser_u21116(s_p0) {
     var Temporary1;
 
-  var result_1526747060 = 0;
+  var result_1526747774 = 0;
 
     switch (toJSStr(s_p0)) {
     case "m":
@@ -6628,9 +6686,9 @@ function shorthandToUnit__yatexmlZparser_u20402(s_p0) {
       Temporary1 = 26;
       break;
     }
-    result_1526747060 = Temporary1;
+    result_1526747774 = Temporary1;
 
-  return result_1526747060;
+  return result_1526747774;
 
 }
 
@@ -6756,10 +6814,10 @@ function contains__pureZstrutils_u1879(s_p0, sub_p1) {
 
 }
 
-function shorthandToPrefix__yatexmlZparser_u20405(c_p0) {
+function shorthandToPrefix__yatexmlZparser_u21119(c_p0) {
     var Temporary1;
 
-  var result_1526747063 = 0;
+  var result_1526747777 = 0;
 
     switch (c_p0) {
     case 121:
@@ -6820,223 +6878,223 @@ function shorthandToPrefix__yatexmlZparser_u20405(c_p0) {
       Temporary1 = 0;
       break;
     }
-    result_1526747063 = Temporary1;
+    result_1526747777 = Temporary1;
 
-  return result_1526747063;
+  return result_1526747777;
 
 }
 
-function shorthandStrToPrefix__yatexmlZparser_u20408(s_p0) {
-  var result_1526747066 = 0;
+function shorthandStrToPrefix__yatexmlZparser_u21122(s_p0) {
+  var result_1526747780 = 0;
 
   BeforeRet: {
     if (((s_p0).length == 1)) {
-    result_1526747066 = shorthandToPrefix__yatexmlZparser_u20405(s_p0[chckIndx(0, 0, (s_p0).length - 1)]);
+    result_1526747780 = shorthandToPrefix__yatexmlZparser_u21119(s_p0[chckIndx(0, 0, (s_p0).length - 1)]);
     break BeforeRet;
     }
     else {
     if (eqStrings(s_p0, [206,188])) {
-    result_1526747066 = 7;
+    result_1526747780 = 7;
     break BeforeRet;
     }
     else {
-      result_1526747066 = 0;
+      result_1526747780 = 0;
       break BeforeRet;
     }
     }
   };
 
-  return result_1526747066;
+  return result_1526747780;
 
 }
 
-function newCustomUnitComponent__yatexmlZast_u789(customUnit_p0, prefix_p1, power_p2) {
-  var result_1375732505 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
+function newCustomUnitComponent__yatexmlZast_u806(customUnit_p0, prefix_p1, power_p2) {
+  var result_1375732522 = ({unit: 0, customUnit: [], prefix: 0, power: 0});
 
-    result_1375732505 = nimCopy(result_1375732505, {unit: 26, customUnit: nimCopy(null, customUnit_p0, NTI33554449), prefix: prefix_p1, power: power_p2}, NTI1375731725);
+    result_1375732522 = nimCopy(result_1375732522, {unit: 26, customUnit: nimCopy(null, customUnit_p0, NTI33554449), prefix: prefix_p1, power: power_p2}, NTI1375731725);
 
-  return result_1375732505;
+  return result_1375732522;
 
 }
 
-function parseShorthandUnits__yatexmlZparser_u20411(s_p0) {
+function parseShorthandUnits__yatexmlZparser_u21125(s_p0) {
               var Temporary6;
 
-  var result_1526747071 = {Field0: [], Field1: []};
+  var result_1526747785 = {Field0: [], Field1: []};
 
-    var numerator_1526747076 = [];
-    var denominator_1526747081 = [];
-    var segments_1526747082 = nsuSplitChar(s_p0, 46, (-1));
+    var numerator_1526747790 = [];
+    var denominator_1526747795 = [];
+    var segments_1526747796 = nsuSplitChar(s_p0, 46, (-1));
     Label1: {
-      var segment_1526747104 = [];
+      var segment_1526747818 = [];
       var i_1207959763 = 0;
-      var L_1207959764 = (segments_1526747082).length;
+      var L_1207959764 = (segments_1526747796).length;
       Label2: {
           Label3: while (true) {
           if (!(i_1207959763 < L_1207959764)) break Label3;
-            segment_1526747104 = segments_1526747082[chckIndx(i_1207959763, 0, (segments_1526747082).length - 1)];
+            segment_1526747818 = segments_1526747796[chckIndx(i_1207959763, 0, (segments_1526747796).length - 1)];
             Label4: {
-              if (((segment_1526747104).length == 0)) {
+              if (((segment_1526747818).length == 0)) {
               break Label4;
               }
               
-              var unitStr_1526747105 = nimCopy(null, segment_1526747104, NTI33554449);
-              var power_1526747106 = 1;
-              var caretPos_1526747107 = nsuFindChar(unitStr_1526747105, 94, 0, (-1));
-              if ((0 <= caretPos_1526747107)) {
-              var powerStr_1526747126 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747105, HEX2EHEX2E__stdZenumutils_u105(addInt(caretPos_1526747107, 1), 1));
-              unitStr_1526747105 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1280(unitStr_1526747105, HEX2EHEX2E__stdZstrbasics_u48(0, subInt(caretPos_1526747107, 1))), NTI33554449);
-              if ((nsuStartsWith(powerStr_1526747126, [123]) && nsuEndsWith(powerStr_1526747126, [125]))) {
-              powerStr_1526747126 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(powerStr_1526747126, HEX2EHEX2E__stdZenumutils_u105(1, 2)), NTI33554449);
+              var unitStr_1526747819 = nimCopy(null, segment_1526747818, NTI33554449);
+              var power_1526747820 = 1;
+              var caretPos_1526747821 = nsuFindChar(unitStr_1526747819, 94, 0, (-1));
+              if ((0 <= caretPos_1526747821)) {
+              var powerStr_1526747840 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747819, HEX2EHEX2E__stdZenumutils_u105(addInt(caretPos_1526747821, 1), 1));
+              unitStr_1526747819 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1280(unitStr_1526747819, HEX2EHEX2E__stdZstrbasics_u48(0, subInt(caretPos_1526747821, 1))), NTI33554449);
+              if ((nsuStartsWith(powerStr_1526747840, [123]) && nsuEndsWith(powerStr_1526747840, [125]))) {
+              powerStr_1526747840 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(powerStr_1526747840, HEX2EHEX2E__stdZenumutils_u105(1, 2)), NTI33554449);
               }
               
 ++excHandler;
               try {
-              power_1526747106 = nsuParseInt(powerStr_1526747126);
+              power_1526747820 = nsuParseInt(powerStr_1526747840);
 --excHandler;
 } catch (EXCEPTION) {
  var prevJSError = lastJSError;
  lastJSError = EXCEPTION;
  --excHandler;
               raiseDefect();
-              power_1526747106 = 1;
+              power_1526747820 = 1;
               lastJSError = prevJSError;
               } finally {
               }
               }
               
-              var prefix_1526747169 = 0;
-              var unit_1526747170 = 0;
-              var customUnitStr_1526747171 = [];
-              var matched_1526747172 = false;
-              if (contains__stdZenumutils_u50([[107,103], [72,122], [109,111,108], [99,100], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118]], unitStr_1526747105)) {
-              unit_1526747170 = shorthandToUnit__yatexmlZparser_u20402(unitStr_1526747105);
-              matched_1526747172 = true;
+              var prefix_1526747883 = 0;
+              var unit_1526747884 = 0;
+              var customUnitStr_1526747885 = [];
+              var matched_1526747886 = false;
+              if (contains__stdZenumutils_u50([[107,103], [72,122], [109,111,108], [99,100], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118]], unitStr_1526747819)) {
+              unit_1526747884 = shorthandToUnit__yatexmlZparser_u21116(unitStr_1526747819);
+              matched_1526747886 = true;
               }
               else {
-              if ((contains__pureZstrutils_u1879(unitStr_1526747105, [206,169]) || eqStrings(unitStr_1526747105, [111,104,109]))) {
-              if (((2 < (unitStr_1526747105).length) && nsuEndsWith(unitStr_1526747105, [206,169]))) {
-              var prefixPart_1526747233 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747105, HEX2EHEX2E__stdZenumutils_u105(0, 3));
-              prefix_1526747169 = shorthandStrToPrefix__yatexmlZparser_u20408(prefixPart_1526747233);
-              unit_1526747170 = 16;
+              if ((contains__pureZstrutils_u1879(unitStr_1526747819, [206,169]) || eqStrings(unitStr_1526747819, [111,104,109]))) {
+              if (((2 < (unitStr_1526747819).length) && nsuEndsWith(unitStr_1526747819, [206,169]))) {
+              var prefixPart_1526747947 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747819, HEX2EHEX2E__stdZenumutils_u105(0, 3));
+              prefix_1526747883 = shorthandStrToPrefix__yatexmlZparser_u21122(prefixPart_1526747947);
+              unit_1526747884 = 16;
               }
               else {
-              if (eqStrings(unitStr_1526747105, [206,169])) {
-              unit_1526747170 = 16;
+              if (eqStrings(unitStr_1526747819, [206,169])) {
+              unit_1526747884 = 16;
               }
               else {
-                unit_1526747170 = 16;
+                unit_1526747884 = 16;
               }
               }
-              matched_1526747172 = true;
+              matched_1526747886 = true;
               }
               else {
-              if (((unitStr_1526747105).length == 1)) {
-              unit_1526747170 = shorthandToUnit__yatexmlZparser_u20402(unitStr_1526747105);
-              if ((unit_1526747170 == 26)) {
-              customUnitStr_1526747171 = nimCopy(null, unitStr_1526747105, NTI33554449);
+              if (((unitStr_1526747819).length == 1)) {
+              unit_1526747884 = shorthandToUnit__yatexmlZparser_u21116(unitStr_1526747819);
+              if ((unit_1526747884 == 26)) {
+              customUnitStr_1526747885 = nimCopy(null, unitStr_1526747819, NTI33554449);
               }
               
-              matched_1526747172 = true;
+              matched_1526747886 = true;
               }
               else {
-              if ((2 <= (unitStr_1526747105).length)) {
-              var prefixStr_1526747239 = [];
-              var unitPart_1526747240 = [];
-              if (nsuStartsWith(unitStr_1526747105, [206,188])) {
-              prefixStr_1526747239 = nimCopy(null, [206,188], NTI33554449);
-              unitPart_1526747240 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747105, HEX2EHEX2E__stdZenumutils_u105(2, 1)), NTI33554449);
+              if ((2 <= (unitStr_1526747819).length)) {
+              var prefixStr_1526747953 = [];
+              var unitPart_1526747954 = [];
+              if (nsuStartsWith(unitStr_1526747819, [206,188])) {
+              prefixStr_1526747953 = nimCopy(null, [206,188], NTI33554449);
+              unitPart_1526747954 = nimCopy(null, HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747819, HEX2EHEX2E__stdZenumutils_u105(2, 1)), NTI33554449);
               }
               else {
-              if (((unitStr_1526747105).length == 2)) {
-              prefixStr_1526747239 = nimCopy(null, nimCharToStr(unitStr_1526747105[chckIndx(0, 0, (unitStr_1526747105).length - 1)]), NTI33554449);
-              unitPart_1526747240 = nimCopy(null, nimCharToStr(unitStr_1526747105[chckIndx(1, 0, (unitStr_1526747105).length - 1)]), NTI33554449);
+              if (((unitStr_1526747819).length == 2)) {
+              prefixStr_1526747953 = nimCopy(null, nimCharToStr(unitStr_1526747819[chckIndx(0, 0, (unitStr_1526747819).length - 1)]), NTI33554449);
+              unitPart_1526747954 = nimCopy(null, nimCharToStr(unitStr_1526747819[chckIndx(1, 0, (unitStr_1526747819).length - 1)]), NTI33554449);
               }
               else {
-              if ((2 < (unitStr_1526747105).length)) {
-              var possibleUnit_1526747277 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747105, HEX2EHEX2E__stdZenumutils_u105(1, 1));
-              if (contains__stdZenumutils_u50([[72,122], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118], [109,111,108], [99,100]], possibleUnit_1526747277)) {
-              prefixStr_1526747239 = nimCopy(null, nimCharToStr(unitStr_1526747105[chckIndx(0, 0, (unitStr_1526747105).length - 1)]), NTI33554449);
-              unitPart_1526747240 = nimCopy(null, possibleUnit_1526747277, NTI33554449);
+              if ((2 < (unitStr_1526747819).length)) {
+              var possibleUnit_1526747991 = HEX5BHEX5D__pureZstrutils_u1308(unitStr_1526747819, HEX2EHEX2E__stdZenumutils_u105(1, 1));
+              if (contains__stdZenumutils_u50([[72,122], [80,97], [87,98], [108,109], [108,120], [66,113], [71,121], [83,118], [109,111,108], [99,100]], possibleUnit_1526747991)) {
+              prefixStr_1526747953 = nimCopy(null, nimCharToStr(unitStr_1526747819[chckIndx(0, 0, (unitStr_1526747819).length - 1)]), NTI33554449);
+              unitPart_1526747954 = nimCopy(null, possibleUnit_1526747991, NTI33554449);
               }
               else {
-                prefixStr_1526747239 = nimCopy(null, nimCharToStr(unitStr_1526747105[chckIndx(0, 0, (unitStr_1526747105).length - 1)]), NTI33554449);
-                unitPart_1526747240 = nimCopy(null, nimCharToStr(unitStr_1526747105[chckIndx(1, 0, (unitStr_1526747105).length - 1)]), NTI33554449);
+                prefixStr_1526747953 = nimCopy(null, nimCharToStr(unitStr_1526747819[chckIndx(0, 0, (unitStr_1526747819).length - 1)]), NTI33554449);
+                unitPart_1526747954 = nimCopy(null, nimCharToStr(unitStr_1526747819[chckIndx(1, 0, (unitStr_1526747819).length - 1)]), NTI33554449);
               }
               
               }
               }}
-              if ((0 < (unitPart_1526747240).length)) {
-              prefix_1526747169 = shorthandStrToPrefix__yatexmlZparser_u20408(prefixStr_1526747239);
-              unit_1526747170 = shorthandToUnit__yatexmlZparser_u20402(unitPart_1526747240);
-              if ((unit_1526747170 == 26)) {
-              customUnitStr_1526747171 = nimCopy(null, unitStr_1526747105, NTI33554449);
-              prefix_1526747169 = 0;
+              if ((0 < (unitPart_1526747954).length)) {
+              prefix_1526747883 = shorthandStrToPrefix__yatexmlZparser_u21122(prefixStr_1526747953);
+              unit_1526747884 = shorthandToUnit__yatexmlZparser_u21116(unitPart_1526747954);
+              if ((unit_1526747884 == 26)) {
+              customUnitStr_1526747885 = nimCopy(null, unitStr_1526747819, NTI33554449);
+              prefix_1526747883 = 0;
               }
               
-              matched_1526747172 = true;
+              matched_1526747886 = true;
               }
               
               }
               }}}
-              if (!(matched_1526747172)) {
-              customUnitStr_1526747171 = nimCopy(null, unitStr_1526747105, NTI33554449);
-              matched_1526747172 = true;
+              if (!(matched_1526747886)) {
+              customUnitStr_1526747885 = nimCopy(null, unitStr_1526747819, NTI33554449);
+              matched_1526747886 = true;
               }
               
-              if (matched_1526747172) {
-              if ((0 < (customUnitStr_1526747171).length)) {
-              Temporary6 = newCustomUnitComponent__yatexmlZast_u789(customUnitStr_1526747171, 0, absInt(power_1526747106));
+              if (matched_1526747886) {
+              if ((0 < (customUnitStr_1526747885).length)) {
+              Temporary6 = newCustomUnitComponent__yatexmlZast_u806(customUnitStr_1526747885, 0, absInt(power_1526747820));
               }
               else {
-              Temporary6 = newSIUnitComponent__yatexmlZast_u727(prefix_1526747169, unit_1526747170, absInt(power_1526747106));
+              Temporary6 = newSIUnitComponent__yatexmlZast_u744(prefix_1526747883, unit_1526747884, absInt(power_1526747820));
               }
               
-              var component_1526747324 = nimCopy(null, Temporary6, NTI1375731725);
-              if ((power_1526747106 < 0)) {
-              var Temporary7 = nimCopy(null, component_1526747324, NTI1375731725);
-              denominator_1526747081.push(Temporary7);;
+              var component_1526748038 = nimCopy(null, Temporary6, NTI1375731725);
+              if ((power_1526747820 < 0)) {
+              var Temporary7 = nimCopy(null, component_1526748038, NTI1375731725);
+              denominator_1526747795.push(Temporary7);;
               }
               else {
-                var Temporary8 = nimCopy(null, component_1526747324, NTI1375731725);
-              numerator_1526747076.push(Temporary8);;
+                var Temporary8 = nimCopy(null, component_1526748038, NTI1375731725);
+              numerator_1526747790.push(Temporary8);;
               }
               
               }
               
             };
             i_1207959763 += 1;
-            if (!(((segments_1526747082).length == L_1207959764))) {
+            if (!(((segments_1526747796).length == L_1207959764))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
           }
       };
     };
-    var colontmp__1207959766 = nimCopy(null, numerator_1526747076, NTI1526737395);
-    var colontmp__1207959767 = nimCopy(null, denominator_1526747081, NTI1526737396);
-    result_1526747071 = nimCopy(result_1526747071, {Field0: nimCopy(null, colontmp__1207959766, NTI1526737395), Field1: nimCopy(null, colontmp__1207959767, NTI1526737396)}, NTI1526737394);
+    var colontmp__1207959766 = nimCopy(null, numerator_1526747790, NTI1526737769);
+    var colontmp__1207959767 = nimCopy(null, denominator_1526747795, NTI1526737770);
+    result_1526747785 = nimCopy(result_1526747785, {Field0: nimCopy(null, colontmp__1207959766, NTI1526737769), Field1: nimCopy(null, colontmp__1207959767, NTI1526737770)}, NTI1526737768);
 
-  return result_1526747071;
+  return result_1526747785;
 
 }
 
-function add__yatexmlZparser_u21116(x_p0, x_p0_Idx, y_p1) {
+function add__yatexmlZparser_u21830(x_p0, x_p0_Idx, y_p1) {
     var Temporary1;
 
-    var xl_1526747779 = (x_p0[x_p0_Idx]).length;
-    if (x_p0[x_p0_Idx].length < (Temporary1 = chckRange(addInt(xl_1526747779, (y_p1).length), 0, 2147483647), Temporary1)) { for (var i = x_p0[x_p0_Idx].length ; i < Temporary1 ; ++i) x_p0[x_p0_Idx].push(({unit: 0, customUnit: [], prefix: 0, power: 0})); }
+    var xl_1526748493 = (x_p0[x_p0_Idx]).length;
+    if (x_p0[x_p0_Idx].length < (Temporary1 = chckRange(addInt(xl_1526748493, (y_p1).length), 0, 2147483647), Temporary1)) { for (var i = x_p0[x_p0_Idx].length ; i < Temporary1 ; ++i) x_p0[x_p0_Idx].push(({unit: 0, customUnit: [], prefix: 0, power: 0})); }
                else { x_p0[x_p0_Idx].length = Temporary1; };
     Label2: {
-      var i_1526747794 = 0;
+      var i_1526748508 = 0;
       var colontmp__1207959806 = 0;
       colontmp__1207959806 = (y_p1).length - 1;
       var res_1207959807 = 0;
       Label3: {
           Label4: while (true) {
           if (!(res_1207959807 <= colontmp__1207959806)) break Label4;
-            i_1526747794 = res_1207959807;
-            x_p0[x_p0_Idx][chckIndx(addInt(xl_1526747779, i_1526747794), 0, (x_p0[x_p0_Idx]).length - 1)] = nimCopy(x_p0[x_p0_Idx][chckIndx(addInt(xl_1526747779, i_1526747794), 0, (x_p0[x_p0_Idx]).length - 1)], y_p1[chckIndx(i_1526747794, 0, (y_p1).length - 1)], NTI1375731725);
+            i_1526748508 = res_1207959807;
+            x_p0[x_p0_Idx][chckIndx(addInt(xl_1526748493, i_1526748508), 0, (x_p0[x_p0_Idx]).length - 1)] = nimCopy(x_p0[x_p0_Idx][chckIndx(addInt(xl_1526748493, i_1526748508), 0, (x_p0[x_p0_Idx]).length - 1)], y_p1[chckIndx(i_1526748508, 0, (y_p1).length - 1)], NTI1375731725);
             res_1207959807 = addInt(res_1207959807, 1);
           }
       };
@@ -7045,109 +7103,109 @@ function add__yatexmlZparser_u21116(x_p0, x_p0_Idx, y_p1) {
   
 }
 
-function newSIUnit__yatexmlZast_u699(numerator_p0, denominator_p1) {
-  var result_1375732418 = null;
+function newSIUnit__yatexmlZast_u716(numerator_p0, denominator_p1) {
+  var result_1375732435 = null;
 
-    result_1375732418 = {kind: 30, unitNumerator: nimCopy(null, numerator_p0, NTI1375731869), unitDenominator: nimCopy(null, denominator_p1, NTI1375731870), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], siValue: [], siUnit: null};
+    result_1375732435 = {kind: 30, unitNumerator: nimCopy(null, numerator_p0, NTI1375731869), unitDenominator: nimCopy(null, denominator_p1, NTI1375731870), numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], siValue: [], siUnit: null};
 
-  return result_1375732418;
+  return result_1375732435;
 
 }
 
-function parseSIUnitExpr__yatexmlZparser_u20728(stream_p0) {
-  var result_1526747387 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function parseSIUnitExpr__yatexmlZparser_u21442(stream_p0) {
+  var result_1526748101 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var numerator_1526747392 = [[]];
-    var denominator_1526747397 = [[]];
-    var inDenominator_1526747398 = false;
-    var currentPrefix_1526747399 = 0;
-    var currentPower_1526747400 = 1;
+    var numerator_1526748106 = [[]];
+    var denominator_1526748111 = [[]];
+    var inDenominator_1526748112 = false;
+    var currentPrefix_1526748113 = 0;
+    var currentPower_1526748114 = 1;
     Label1: {
         Label2: while (true) {
         if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label2;
-          var token_1526747401 = peek__yatexmlZlexer_u592(stream_p0, 0);
-          if ((token_1526747401.kind == 0)) {
-          var cmdName_1526747406 = nimCopy(null, token_1526747401.value, NTI33554449);
-          if (hasKey__yatexmlZparser_u20787(commandTable_1526747026, cmdName_1526747406)) {
-          var cmdInfo_1526747587 = nimCopy(null, HEX5BHEX5D__yatexmlZparser_u20849(commandTable_1526747026, cmdName_1526747406), NTI1526726660);
-          switch (cmdInfo_1526747587.cmdType) {
+          var token_1526748115 = peek__yatexmlZlexer_u592(stream_p0, 0);
+          if ((token_1526748115.kind == 0)) {
+          var cmdName_1526748120 = nimCopy(null, token_1526748115.value, NTI33554449);
+          if (hasKey__yatexmlZparser_u21501(commandTable_1526747740, cmdName_1526748120)) {
+          var cmdInfo_1526748301 = nimCopy(null, HEX5BHEX5D__yatexmlZparser_u21563(commandTable_1526747740, cmdName_1526748120), NTI1526726660);
+          switch (cmdInfo_1526748301.cmdType) {
           case 18:
             (advance__yatexmlZlexer_u600(stream_p0));
-            currentPrefix_1526747399 = cmdNameToSIPrefix__yatexmlZparser_u20399(cmdName_1526747406);
+            currentPrefix_1526748113 = cmdNameToSIPrefix__yatexmlZparser_u21113(cmdName_1526748120);
             break;
           case 17:
             (advance__yatexmlZlexer_u600(stream_p0));
-            var unitKind_1526747588 = cmdNameToSIUnit__yatexmlZparser_u20396(cmdName_1526747406);
-            var component_1526747589 = newSIUnitComponent__yatexmlZast_u727(currentPrefix_1526747399, unitKind_1526747588, currentPower_1526747400);
-            if (inDenominator_1526747398) {
-            var Temporary3 = nimCopy(null, component_1526747589, NTI1375731725);
-            denominator_1526747397[0].push(Temporary3);;
+            var unitKind_1526748302 = cmdNameToSIUnit__yatexmlZparser_u21110(cmdName_1526748120);
+            var component_1526748303 = newSIUnitComponent__yatexmlZast_u744(currentPrefix_1526748113, unitKind_1526748302, currentPower_1526748114);
+            if (inDenominator_1526748112) {
+            var Temporary3 = nimCopy(null, component_1526748303, NTI1375731725);
+            denominator_1526748111[0].push(Temporary3);;
             }
             else {
-              var Temporary4 = nimCopy(null, component_1526747589, NTI1375731725);
-            numerator_1526747392[0].push(Temporary4);;
+              var Temporary4 = nimCopy(null, component_1526748303, NTI1375731725);
+            numerator_1526748106[0].push(Temporary4);;
             }
             
-            currentPrefix_1526747399 = 0;
-            currentPower_1526747400 = 1;
+            currentPrefix_1526748113 = 0;
+            currentPower_1526748114 = 1;
             break;
           case 19:
             (advance__yatexmlZlexer_u600(stream_p0));
-            switch (toJSStr(cmdName_1526747406)) {
+            switch (toJSStr(cmdName_1526748120)) {
             case "per":
-              inDenominator_1526747398 = true;
+              inDenominator_1526748112 = true;
               break;
             case "squared":
-              if ((inDenominator_1526747398 && (0 < (denominator_1526747397[0]).length))) {
-              HEX5BHEX5D__yatexmlZparser_u20945(denominator_1526747397[0], 1).power = 2;
+              if ((inDenominator_1526748112 && (0 < (denominator_1526748111[0]).length))) {
+              HEX5BHEX5D__yatexmlZparser_u21659(denominator_1526748111[0], 1).power = 2;
               }
               else {
-              if ((0 < (numerator_1526747392[0]).length)) {
-              HEX5BHEX5D__yatexmlZparser_u20945(numerator_1526747392[0], 1).power = 2;
+              if ((0 < (numerator_1526748106[0]).length)) {
+              HEX5BHEX5D__yatexmlZparser_u21659(numerator_1526748106[0], 1).power = 2;
               }
               }
               break;
             case "cubed":
-              if ((inDenominator_1526747398 && (0 < (denominator_1526747397[0]).length))) {
-              HEX5BHEX5D__yatexmlZparser_u20945(denominator_1526747397[0], 1).power = 3;
+              if ((inDenominator_1526748112 && (0 < (denominator_1526748111[0]).length))) {
+              HEX5BHEX5D__yatexmlZparser_u21659(denominator_1526748111[0], 1).power = 3;
               }
               else {
-              if ((0 < (numerator_1526747392[0]).length)) {
-              HEX5BHEX5D__yatexmlZparser_u20945(numerator_1526747392[0], 1).power = 3;
+              if ((0 < (numerator_1526748106[0]).length)) {
+              HEX5BHEX5D__yatexmlZparser_u21659(numerator_1526748106[0], 1).power = 3;
               }
               }
               break;
             case "tothe":
-              var braceResult_1526747647 = expect__yatexmlZlexer_u622(stream_p0, 1);
-              if (!(braceResult_1526747647.isOk)) {
-              result_1526747387 = nimCopy(result_1526747387, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,111,116,104,101], token_1526747401.position, []), NTI1526737362);
+              var braceResult_1526748361 = expect__yatexmlZlexer_u622(stream_p0, 1);
+              if (!(braceResult_1526748361.isOk)) {
+              result_1526748101 = nimCopy(result_1526748101, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,111,116,104,101], token_1526748115.position, []), NTI1526737736);
               break BeforeRet;
               }
               
-              var powerStr_1526747703 = [];
+              var powerStr_1526748417 = [];
               Label5: {
                   Label6: while (true) {
                   if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label6;
-                    var powerToken_1526747704 = advance__yatexmlZlexer_u600(stream_p0);
-                    powerStr_1526747703.push.apply(powerStr_1526747703, powerToken_1526747704.value);;
+                    var powerToken_1526748418 = advance__yatexmlZlexer_u600(stream_p0);
+                    powerStr_1526748417.push.apply(powerStr_1526748417, powerToken_1526748418.value);;
                   }
               };
-              var closeResult_1526747705 = expect__yatexmlZlexer_u622(stream_p0, 2);
-              if (!(closeResult_1526747705.isOk)) {
-              result_1526747387 = nimCopy(result_1526747387, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,112,111,119,101,114], token_1526747401.position, []), NTI1526737362);
+              var closeResult_1526748419 = expect__yatexmlZlexer_u622(stream_p0, 2);
+              if (!(closeResult_1526748419.isOk)) {
+              result_1526748101 = nimCopy(result_1526748101, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,112,111,119,101,114], token_1526748115.position, []), NTI1526737736);
               break BeforeRet;
               }
               
 ++excHandler;
               try {
-              var power_1526747727 = nsuParseInt(powerStr_1526747703);
-              if ((inDenominator_1526747398 && (0 < (denominator_1526747397[0]).length))) {
-              HEX5BHEX5D__yatexmlZparser_u20945(denominator_1526747397[0], 1).power = power_1526747727;
+              var power_1526748441 = nsuParseInt(powerStr_1526748417);
+              if ((inDenominator_1526748112 && (0 < (denominator_1526748111[0]).length))) {
+              HEX5BHEX5D__yatexmlZparser_u21659(denominator_1526748111[0], 1).power = power_1526748441;
               }
               else {
-              if ((0 < (numerator_1526747392[0]).length)) {
-              HEX5BHEX5D__yatexmlZparser_u20945(numerator_1526747392[0], 1).power = power_1526747727;
+              if ((0 < (numerator_1526748106[0]).length)) {
+              HEX5BHEX5D__yatexmlZparser_u21659(numerator_1526748106[0], 1).power = power_1526748441;
               }
               }
 --excHandler;
@@ -7175,38 +7233,38 @@ function parseSIUnitExpr__yatexmlZparser_u20728(stream_p0) {
           
           }
           else {
-            var shorthandStr_1526747742 = [];
-            var braceDepth_1526747743 = 0;
+            var shorthandStr_1526748456 = [];
+            var braceDepth_1526748457 = 0;
             Label8: {
                 Label9: while (true) {
                 if (!!(isAtEnd__yatexmlZlexer_u611(stream_p0))) break Label9;
-                  var t_1526747744 = peek__yatexmlZlexer_u592(stream_p0, 0);
-                  if (((t_1526747744.kind == 2) && (braceDepth_1526747743 == 0))) {
+                  var t_1526748458 = peek__yatexmlZlexer_u592(stream_p0, 0);
+                  if (((t_1526748458.kind == 2) && (braceDepth_1526748457 == 0))) {
                   break Label8;
                   }
                   
-                  if (((t_1526747744.kind == 0) && (braceDepth_1526747743 == 0))) {
+                  if (((t_1526748458.kind == 0) && (braceDepth_1526748457 == 0))) {
                   break Label8;
                   }
                   
-                  if ((t_1526747744.kind == 1)) {
-                  braceDepth_1526747743 = addInt(braceDepth_1526747743, 1);
+                  if ((t_1526748458.kind == 1)) {
+                  braceDepth_1526748457 = addInt(braceDepth_1526748457, 1);
                   }
                   else {
-                  if ((t_1526747744.kind == 2)) {
-                  braceDepth_1526747743 = subInt(braceDepth_1526747743, 1);
+                  if ((t_1526748458.kind == 2)) {
+                  braceDepth_1526748457 = subInt(braceDepth_1526748457, 1);
                   }
                   }
-                  shorthandStr_1526747742.push.apply(shorthandStr_1526747742, t_1526747744.value);;
+                  shorthandStr_1526748456.push.apply(shorthandStr_1526748456, t_1526748458.value);;
                   (advance__yatexmlZlexer_u600(stream_p0));
                 }
             };
-            if ((0 < (shorthandStr_1526747742).length)) {
-            var tmpTuple_1526747769 = parseShorthandUnits__yatexmlZparser_u20411(shorthandStr_1526747742);
-            var shortNum_1526747770 = nimCopy(null, tmpTuple_1526747769["Field0"], NTI1526737395);
-            var shortDenom_1526747771 = nimCopy(null, tmpTuple_1526747769["Field1"], NTI1526737396);
-            add__yatexmlZparser_u21116(numerator_1526747392, 0, shortNum_1526747770);
-            add__yatexmlZparser_u21116(denominator_1526747397, 0, shortDenom_1526747771);
+            if ((0 < (shorthandStr_1526748456).length)) {
+            var tmpTuple_1526748483 = parseShorthandUnits__yatexmlZparser_u21125(shorthandStr_1526748456);
+            var shortNum_1526748484 = nimCopy(null, tmpTuple_1526748483["Field0"], NTI1526737769);
+            var shortDenom_1526748485 = nimCopy(null, tmpTuple_1526748483["Field1"], NTI1526737770);
+            add__yatexmlZparser_u21830(numerator_1526748106, 0, shortNum_1526748484);
+            add__yatexmlZparser_u21830(denominator_1526748111, 0, shortDenom_1526748485);
             break Label1;
             }
             
@@ -7214,38 +7272,38 @@ function parseSIUnitExpr__yatexmlZparser_u20728(stream_p0) {
           
         }
     };
-    result_1526747387 = nimCopy(result_1526747387, ok__yatexmlZparser_u21143(newSIUnit__yatexmlZast_u699(numerator_1526747392[0], denominator_1526747397[0])), NTI1526737362);
+    result_1526748101 = nimCopy(result_1526748101, ok__yatexmlZparser_u21857(newSIUnit__yatexmlZast_u716(numerator_1526748106[0], denominator_1526748111[0])), NTI1526737736);
     break BeforeRet;
   };
 
-  return result_1526747387;
+  return result_1526748101;
 
 }
 
-function newSIValue__yatexmlZast_u723(value_p0, unit_p1) {
-  var result_1375732438 = null;
+function newSIValue__yatexmlZast_u740(value_p0, unit_p1) {
+  var result_1375732455 = null;
 
-    result_1375732438 = {kind: 31, siValue: nimCopy(null, value_p0, NTI33554449), siUnit: unit_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: []};
+    result_1375732455 = {kind: 31, siValue: nimCopy(null, value_p0, NTI33554449), siUnit: unit_p1, numValue: [], identName: [], symbolName: [], symbolValue: [], opName: [], opValue: [], opForm: [], textValue: [], spaceWidth: [], sqrtBase: null, rootBase: null, rootIndex: null, accentKind: 0, accentBase: null, styleKind: 0, styleBase: null, mathStyleKind: 0, mathStyleBase: null, colorName: [], colorBase: null, fracNum: null, fracDenom: null, fracIsContinued: false, binomTop: null, binomBottom: null, atopTop: null, atopBottom: null, subBase: null, subScript: null, supBase: null, supScript: null, subsupBase: null, subsupSub: null, subsupSup: null, rowChildren: [], delimLeft: [], delimRight: [], delimContent: null, sizedDelimChar: [], sizedDelimSize: 0, matrixRows: [], matrixType: [], casesRows: [], arrayRows: [], arrayAlignment: [], funcName: [], funcArg: null, bigopKind: 0, bigopLower: null, bigopUpper: null, bigopBase: null, underoverBase: null, underoverUnder: null, underoverOver: null, stackrelAbove: null, stackrelBase: null, numStr: [], unitNumerator: [], unitDenominator: []};
 
-  return result_1375732438;
-
-}
-
-function err__yatexmlZparser_u21192(kind_p0, message_p1, position_p2, context_p3) {
-  var result_1526747854 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
-
-    result_1526747854 = nimCopy(result_1526747854, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: false}, NTI1526737906);
-
-  return result_1526747854;
+  return result_1375732455;
 
 }
 
-function err__yatexmlZparser_u21249(error_p0) {
-  var result_1526747908 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+function err__yatexmlZparser_u21906(kind_p0, message_p1, position_p2, context_p3) {
+  var result_1526748568 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1526747908 = nimCopy(result_1526747908, {isOk: false, error: nimCopy(null, error_p0, NTI1342177284), value: false}, NTI1526737906);
+    result_1526748568 = nimCopy(result_1526748568, {isOk: false, error: {kind: kind_p0, message: nimCopy(null, message_p1, NTI33554449), position: position_p2, context: nimCopy(null, context_p3, NTI33554449)}, value: false}, NTI1526738280);
 
-  return result_1526747908;
+  return result_1526748568;
+
+}
+
+function err__yatexmlZparser_u21963(error_p0) {
+  var result_1526748622 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+
+    result_1526748622 = nimCopy(result_1526748622, {isOk: false, error: nimCopy(null, error_p0, NTI1342177284), value: false}, NTI1526738280);
+
+  return result_1526748622;
 
 }
 
@@ -7402,186 +7460,186 @@ function defineMacro__yatexmlZmacros_u102(registry_p0, name_p1, numArgs_p2, body
   
 }
 
-function ok__yatexmlZparser_u21289(value_p0) {
-  var result_1526747948 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+function ok__yatexmlZparser_u22003(value_p0) {
+  var result_1526748662 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
-    result_1526747948 = nimCopy(result_1526747948, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1526737906);
+    result_1526748662 = nimCopy(result_1526748662, {isOk: true, value: value_p0, error: ({kind: 0, message: [], position: 0, context: []})}, NTI1526738280);
 
-  return result_1526747948;
+  return result_1526748662;
 
 }
 
-function parseMacroDef__yatexmlZparser_u21163(stream_p0, cmdName_p1, position_p2) {
+function parseMacroDef__yatexmlZparser_u21877(stream_p0, cmdName_p1, position_p2) {
     var Temporary1;
     var Temporary7;
     var Temporary8;
     var Temporary10;
     var Temporary11;
 
-  var result_1526747827 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526748541 = ({isOk: false, value: false, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
     if (eqStrings(cmdName_p1, [100,101,102])) {
-    var macroToken_1526747828 = peek__yatexmlZlexer_u592(stream_p0, 0);
-    if (!((macroToken_1526747828.kind == 0))) {
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21192(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,97,102,116,101,114,32,92,100,101,102], position_p2, []), NTI1526737906);
+    var macroToken_1526748542 = peek__yatexmlZlexer_u592(stream_p0, 0);
+    if (!((macroToken_1526748542.kind == 0))) {
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21906(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,97,102,116,101,114,32,92,100,101,102], position_p2, []), NTI1526738280);
     break BeforeRet;
     }
     
-    var macroName_1526747888 = nimCopy(null, macroToken_1526747828.value, NTI33554449);
+    var macroName_1526748602 = nimCopy(null, macroToken_1526748542.value, NTI33554449);
     (advance__yatexmlZlexer_u600(stream_p0));
-    var bodyResult_1526747889 = expect__yatexmlZlexer_u622(stream_p0, 1);
-    if (!(bodyResult_1526747889.isOk)) {
-    var Temporary1 = bodyResult_1526747889;
+    var bodyResult_1526748603 = expect__yatexmlZlexer_u622(stream_p0, 1);
+    if (!(bodyResult_1526748603.isOk)) {
+    var Temporary1 = bodyResult_1526748603;
     if (ConstSet127[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21249(Temporary1.error), NTI1526737906);
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21963(Temporary1.error), NTI1526738280);
     break BeforeRet;
     }
     
-    var body_1526747914 = [];
-    var braceDepth_1526747915 = 1;
+    var body_1526748628 = [];
+    var braceDepth_1526748629 = 1;
     Label2: {
         Label3: while (true) {
-        if (!(!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1526747915))) break Label3;
-          var t_1526747916 = peek__yatexmlZlexer_u592(stream_p0, 0);
-          if ((t_1526747916.kind == 1)) {
-          braceDepth_1526747915 = addInt(braceDepth_1526747915, 1);
-          var Temporary4 = nimCopy(null, t_1526747916, NTI1392508932);
-          body_1526747914.push(Temporary4);;
+        if (!(!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1526748629))) break Label3;
+          var t_1526748630 = peek__yatexmlZlexer_u592(stream_p0, 0);
+          if ((t_1526748630.kind == 1)) {
+          braceDepth_1526748629 = addInt(braceDepth_1526748629, 1);
+          var Temporary4 = nimCopy(null, t_1526748630, NTI1392508932);
+          body_1526748628.push(Temporary4);;
           (advance__yatexmlZlexer_u600(stream_p0));
           }
           else {
-          if ((t_1526747916.kind == 2)) {
-          braceDepth_1526747915 = subInt(braceDepth_1526747915, 1);
-          if ((0 < braceDepth_1526747915)) {
-          var Temporary5 = nimCopy(null, t_1526747916, NTI1392508932);
-          body_1526747914.push(Temporary5);;
+          if ((t_1526748630.kind == 2)) {
+          braceDepth_1526748629 = subInt(braceDepth_1526748629, 1);
+          if ((0 < braceDepth_1526748629)) {
+          var Temporary5 = nimCopy(null, t_1526748630, NTI1392508932);
+          body_1526748628.push(Temporary5);;
           }
           
           (advance__yatexmlZlexer_u600(stream_p0));
           }
           else {
-            var Temporary6 = nimCopy(null, t_1526747916, NTI1392508932);
-            body_1526747914.push(Temporary6);;
+            var Temporary6 = nimCopy(null, t_1526748630, NTI1392508932);
+            body_1526748628.push(Temporary6);;
             (advance__yatexmlZlexer_u600(stream_p0));
           }
           }
         }
     };
-    defineMacro__yatexmlZmacros_u102(globalMacroRegistry_1526726695[0], macroName_1526747888, 0, body_1526747914);
-    result_1526747827 = nimCopy(result_1526747827, ok__yatexmlZparser_u21289(true), NTI1526737906);
+    defineMacro__yatexmlZmacros_u102(globalMacroRegistry_1526726695[0], macroName_1526748602, 0, body_1526748628);
+    result_1526748541 = nimCopy(result_1526748541, ok__yatexmlZparser_u22003(true), NTI1526738280);
     break BeforeRet;
     }
     else {
     if (eqStrings(cmdName_p1, [110,101,119,99,111,109,109,97,110,100])) {
-    var braceResult_1526747950 = expect__yatexmlZlexer_u622(stream_p0, 1);
-    if (!(braceResult_1526747950.isOk)) {
-    var Temporary7 = braceResult_1526747950;
+    var braceResult_1526748664 = expect__yatexmlZlexer_u622(stream_p0, 1);
+    if (!(braceResult_1526748664.isOk)) {
+    var Temporary7 = braceResult_1526748664;
     if (ConstSet128[Temporary7.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary7.isOk, NTI33554466)); }
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21249(Temporary7.error), NTI1526737906);
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21963(Temporary7.error), NTI1526738280);
     break BeforeRet;
     }
     
-    var macroToken_1526747969 = peek__yatexmlZlexer_u592(stream_p0, 0);
-    if (!((macroToken_1526747969.kind == 0))) {
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21192(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], position_p2, []), NTI1526737906);
+    var macroToken_1526748683 = peek__yatexmlZlexer_u592(stream_p0, 0);
+    if (!((macroToken_1526748683.kind == 0))) {
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21906(4, [69,120,112,101,99,116,101,100,32,99,111,109,109,97,110,100,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], position_p2, []), NTI1526738280);
     break BeforeRet;
     }
     
-    var macroName_1526747995 = nimCopy(null, macroToken_1526747969.value, NTI33554449);
+    var macroName_1526748709 = nimCopy(null, macroToken_1526748683.value, NTI33554449);
     (advance__yatexmlZlexer_u600(stream_p0));
-    var closeResult_1526747996 = expect__yatexmlZlexer_u622(stream_p0, 2);
-    if (!(closeResult_1526747996.isOk)) {
-    var Temporary8 = closeResult_1526747996;
+    var closeResult_1526748710 = expect__yatexmlZlexer_u622(stream_p0, 2);
+    if (!(closeResult_1526748710.isOk)) {
+    var Temporary8 = closeResult_1526748710;
     if (ConstSet129[Temporary8.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary8.isOk, NTI33554466)); }
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21249(Temporary8.error), NTI1526737906);
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21963(Temporary8.error), NTI1526738280);
     break BeforeRet;
     }
     
-    var numArgs_1526748015 = 0;
+    var numArgs_1526748729 = 0;
     if (match__yatexmlZlexer_u664(stream_p0, 5)) {
     (advance__yatexmlZlexer_u600(stream_p0));
-    var argToken_1526748016 = peek__yatexmlZlexer_u592(stream_p0, 0);
-    if (!((argToken_1526748016.kind == 14))) {
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21192(4, [69,120,112,101,99,116,101,100,32,110,117,109,98,101,114,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116], argToken_1526748016.position, []), NTI1526737906);
+    var argToken_1526748730 = peek__yatexmlZlexer_u592(stream_p0, 0);
+    if (!((argToken_1526748730.kind == 14))) {
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21906(4, [69,120,112,101,99,116,101,100,32,110,117,109,98,101,114,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116], argToken_1526748730.position, []), NTI1526738280);
     break BeforeRet;
     }
     
 ++excHandler;
     try {
-    numArgs_1526748015 = nsuParseInt(argToken_1526748016.value);
+    numArgs_1526748729 = nsuParseInt(argToken_1526748730.value);
 --excHandler;
 } catch (EXCEPTION) {
  var prevJSError = lastJSError;
  lastJSError = EXCEPTION;
  --excHandler;
     raiseDefect();
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21192(4, [73,110,118,97,108,105,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], argToken_1526748016.position, []), NTI1526737906);
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21906(4, [73,110,118,97,108,105,100,32,97,114,103,117,109,101,110,116,32,99,111,117,110,116,32,105,110,32,92,110,101,119,99,111,109,109,97,110,100], argToken_1526748730.position, []), NTI1526738280);
     break BeforeRet;
     lastJSError = prevJSError;
     } finally {
     }
     (advance__yatexmlZlexer_u600(stream_p0));
-    var closeBracketResult_1526748063 = expect__yatexmlZlexer_u622(stream_p0, 6);
-    if (!(closeBracketResult_1526748063.isOk)) {
-    var Temporary10 = closeBracketResult_1526748063;
+    var closeBracketResult_1526748777 = expect__yatexmlZlexer_u622(stream_p0, 6);
+    if (!(closeBracketResult_1526748777.isOk)) {
+    var Temporary10 = closeBracketResult_1526748777;
     if (ConstSet130[Temporary10.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary10.isOk, NTI33554466)); }
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21249(Temporary10.error), NTI1526737906);
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21963(Temporary10.error), NTI1526738280);
     break BeforeRet;
     }
     
     }
     
-    var bodyBraceResult_1526748082 = expect__yatexmlZlexer_u622(stream_p0, 1);
-    if (!(bodyBraceResult_1526748082.isOk)) {
-    var Temporary11 = bodyBraceResult_1526748082;
+    var bodyBraceResult_1526748796 = expect__yatexmlZlexer_u622(stream_p0, 1);
+    if (!(bodyBraceResult_1526748796.isOk)) {
+    var Temporary11 = bodyBraceResult_1526748796;
     if (ConstSet131[Temporary11.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary11.isOk, NTI33554466)); }
-    result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21249(Temporary11.error), NTI1526737906);
+    result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21963(Temporary11.error), NTI1526738280);
     break BeforeRet;
     }
     
-    var body_1526748105 = [];
-    var braceDepth_1526748106 = 1;
+    var body_1526748819 = [];
+    var braceDepth_1526748820 = 1;
     Label12: {
         Label13: while (true) {
-        if (!(!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1526748106))) break Label13;
-          var t_1526748107 = peek__yatexmlZlexer_u592(stream_p0, 0);
-          if ((t_1526748107.kind == 1)) {
-          braceDepth_1526748106 = addInt(braceDepth_1526748106, 1);
-          var Temporary14 = nimCopy(null, t_1526748107, NTI1392508932);
-          body_1526748105.push(Temporary14);;
+        if (!(!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1526748820))) break Label13;
+          var t_1526748821 = peek__yatexmlZlexer_u592(stream_p0, 0);
+          if ((t_1526748821.kind == 1)) {
+          braceDepth_1526748820 = addInt(braceDepth_1526748820, 1);
+          var Temporary14 = nimCopy(null, t_1526748821, NTI1392508932);
+          body_1526748819.push(Temporary14);;
           (advance__yatexmlZlexer_u600(stream_p0));
           }
           else {
-          if ((t_1526748107.kind == 2)) {
-          braceDepth_1526748106 = subInt(braceDepth_1526748106, 1);
-          if ((0 < braceDepth_1526748106)) {
-          var Temporary15 = nimCopy(null, t_1526748107, NTI1392508932);
-          body_1526748105.push(Temporary15);;
+          if ((t_1526748821.kind == 2)) {
+          braceDepth_1526748820 = subInt(braceDepth_1526748820, 1);
+          if ((0 < braceDepth_1526748820)) {
+          var Temporary15 = nimCopy(null, t_1526748821, NTI1392508932);
+          body_1526748819.push(Temporary15);;
           }
           
           (advance__yatexmlZlexer_u600(stream_p0));
           }
           else {
-            var Temporary16 = nimCopy(null, t_1526748107, NTI1392508932);
-            body_1526748105.push(Temporary16);;
+            var Temporary16 = nimCopy(null, t_1526748821, NTI1392508932);
+            body_1526748819.push(Temporary16);;
             (advance__yatexmlZlexer_u600(stream_p0));
           }
           }
         }
     };
-    defineMacro__yatexmlZmacros_u102(globalMacroRegistry_1526726695[0], macroName_1526747995, numArgs_1526748015, body_1526748105);
-    result_1526747827 = nimCopy(result_1526747827, ok__yatexmlZparser_u21289(true), NTI1526737906);
+    defineMacro__yatexmlZmacros_u102(globalMacroRegistry_1526726695[0], macroName_1526748709, numArgs_1526748729, body_1526748819);
+    result_1526748541 = nimCopy(result_1526748541, ok__yatexmlZparser_u22003(true), NTI1526738280);
     break BeforeRet;
     }
     else {
-      result_1526747827 = nimCopy(result_1526747827, err__yatexmlZparser_u21192(2, ([85,110,107,110,111,119,110,32,109,97,99,114,111,32,100,101,102,105,110,105,116,105,111,110,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_p1), position_p2, []), NTI1526737906);
+      result_1526748541 = nimCopy(result_1526748541, err__yatexmlZparser_u21906(2, ([85,110,107,110,111,119,110,32,109,97,99,114,111,32,100,101,102,105,110,105,116,105,111,110,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_p1), position_p2, []), NTI1526738280);
       break BeforeRet;
     }
     }
   };
 
-  return result_1526747827;
+  return result_1526748541;
 
 }
 
@@ -7709,74 +7767,74 @@ function expandMacro__yatexmlZmacros_u1550(registry_p0, macroDef_p1, args_p2) {
 
 }
 
-function expandMacroInStream__yatexmlZparser_u21504(stream_p0, macroName_p1, macroDef_p2) {
+function expandMacroInStream__yatexmlZparser_u22218(stream_p0, macroName_p1, macroDef_p2) {
             var Temporary4;
 
-  var result_1526748165 = ({isOk: false, value: [], error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526748879 = ({isOk: false, value: [], error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var args_1526748170 = [];
+    var args_1526748884 = [];
     Label1: {
-      var i_1526748175 = 0;
+      var i_1526748889 = 0;
       var i_1207959821 = 0;
       Label2: {
           Label3: while (true) {
           if (!(i_1207959821 < macroDef_p2.numArgs)) break Label3;
-            i_1526748175 = i_1207959821;
-            var braceResult_1526748176 = expect__yatexmlZlexer_u622(stream_p0, 1);
-            if (!(braceResult_1526748176.isOk)) {
-            var Temporary4 = braceResult_1526748176;
+            i_1526748889 = i_1207959821;
+            var braceResult_1526748890 = expect__yatexmlZlexer_u622(stream_p0, 1);
+            if (!(braceResult_1526748890.isOk)) {
+            var Temporary4 = braceResult_1526748890;
             if (ConstSet133[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-            result_1526748165 = nimCopy(result_1526748165, err__yatexmlZlexer_u407(Temporary4.error), NTI1392509061);
+            result_1526748879 = nimCopy(result_1526748879, err__yatexmlZlexer_u407(Temporary4.error), NTI1392509061);
             break BeforeRet;
             }
             
-            var argTokens_1526748199 = [];
-            var braceDepth_1526748200 = 1;
+            var argTokens_1526748913 = [];
+            var braceDepth_1526748914 = 1;
             Label5: {
                 Label6: while (true) {
-                if (!(!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1526748200))) break Label6;
-                  var t_1526748201 = peek__yatexmlZlexer_u592(stream_p0, 0);
-                  if ((t_1526748201.kind == 1)) {
-                  braceDepth_1526748200 = addInt(braceDepth_1526748200, 1);
-                  var Temporary7 = nimCopy(null, t_1526748201, NTI1392508932);
-                  argTokens_1526748199.push(Temporary7);;
+                if (!(!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && (0 < braceDepth_1526748914))) break Label6;
+                  var t_1526748915 = peek__yatexmlZlexer_u592(stream_p0, 0);
+                  if ((t_1526748915.kind == 1)) {
+                  braceDepth_1526748914 = addInt(braceDepth_1526748914, 1);
+                  var Temporary7 = nimCopy(null, t_1526748915, NTI1392508932);
+                  argTokens_1526748913.push(Temporary7);;
                   (advance__yatexmlZlexer_u600(stream_p0));
                   }
                   else {
-                  if ((t_1526748201.kind == 2)) {
-                  braceDepth_1526748200 = subInt(braceDepth_1526748200, 1);
-                  if ((0 < braceDepth_1526748200)) {
-                  var Temporary8 = nimCopy(null, t_1526748201, NTI1392508932);
-                  argTokens_1526748199.push(Temporary8);;
+                  if ((t_1526748915.kind == 2)) {
+                  braceDepth_1526748914 = subInt(braceDepth_1526748914, 1);
+                  if ((0 < braceDepth_1526748914)) {
+                  var Temporary8 = nimCopy(null, t_1526748915, NTI1392508932);
+                  argTokens_1526748913.push(Temporary8);;
                   }
                   
                   (advance__yatexmlZlexer_u600(stream_p0));
                   }
                   else {
-                    var Temporary9 = nimCopy(null, t_1526748201, NTI1392508932);
-                    argTokens_1526748199.push(Temporary9);;
+                    var Temporary9 = nimCopy(null, t_1526748915, NTI1392508932);
+                    argTokens_1526748913.push(Temporary9);;
                     (advance__yatexmlZlexer_u600(stream_p0));
                   }
                   }
                 }
             };
-            var Temporary10 = nimCopy(null, argTokens_1526748199, NTI1526738156);
-            args_1526748170.push(Temporary10);;
+            var Temporary10 = nimCopy(null, argTokens_1526748913, NTI1526738530);
+            args_1526748884.push(Temporary10);;
             i_1207959821 = addInt(i_1207959821, 1);
           }
       };
     };
-    var expandedTokens_1526748234 = expandMacro__yatexmlZmacros_u1550(globalMacroRegistry_1526726695[0], macroDef_p2, args_1526748170);
-    result_1526748165 = nimCopy(result_1526748165, ok__yatexmlZlexer_u343(expandedTokens_1526748234), NTI1392509061);
+    var expandedTokens_1526748948 = expandMacro__yatexmlZmacros_u1550(globalMacroRegistry_1526726695[0], macroDef_p2, args_1526748884);
+    result_1526748879 = nimCopy(result_1526748879, ok__yatexmlZlexer_u343(expandedTokens_1526748948), NTI1392509061);
     break BeforeRet;
   };
 
-  return result_1526748165;
+  return result_1526748879;
 
 }
 
-function parsePrimary__yatexmlZparser_u20377(stream_p0) {
+function parsePrimary__yatexmlZparser_u21091(stream_p0) {
       var Temporary1;
       var Temporary2;
       var Temporary3;
@@ -7832,147 +7890,147 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
       var Temporary65;
         var Temporary66;
 
-  var result_1526748273 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526748987 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var token_1526748274 = peek__yatexmlZlexer_u592(stream_p0, 0);
-    switch (token_1526748274.kind) {
+    var token_1526748988 = peek__yatexmlZlexer_u592(stream_p0, 0);
+    switch (token_1526748988.kind) {
     case 14:
       (advance__yatexmlZlexer_u600(stream_p0));
-      result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newNumber__yatexmlZast_u246(token_1526748274.value)), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newNumber__yatexmlZast_u263(token_1526748988.value)), NTI1526737736);
       break BeforeRet;
       break;
     case 13:
       (advance__yatexmlZlexer_u600(stream_p0));
-      result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newIdentifier__yatexmlZast_u484(token_1526748274.value)), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newIdentifier__yatexmlZast_u501(token_1526748988.value)), NTI1526737736);
       break BeforeRet;
       break;
     case 15:
       (advance__yatexmlZlexer_u600(stream_p0));
-      var unicode_1526748281 = operatorToUnicode__yatexmlZparser_u20393(token_1526748274.value);
-      result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newOperator__yatexmlZast_u491(token_1526748274.value, unicode_1526748281, [105,110,102,105,120])), NTI1526737362);
+      var unicode_1526748995 = operatorToUnicode__yatexmlZparser_u21107(token_1526748988.value);
+      result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newOperator__yatexmlZast_u508(token_1526748988.value, unicode_1526748995, [105,110,102,105,120])), NTI1526737736);
       break BeforeRet;
       break;
     case 1:
-      result_1526748273 = nimCopy(result_1526748273, parseGroup__yatexmlZparser_u20380(stream_p0), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, parseGroup__yatexmlZparser_u21094(stream_p0), NTI1526737736);
       break BeforeRet;
       break;
     case 3:
       (advance__yatexmlZlexer_u600(stream_p0));
-      var exprResult_1526748285 = parseExpression__yatexmlZparser_u20371(stream_p0);
-      if (!(exprResult_1526748285.isOk)) {
-      var Temporary1 = exprResult_1526748285;
+      var exprResult_1526748999 = parseExpression__yatexmlZparser_u21085(stream_p0);
+      if (!(exprResult_1526748999.isOk)) {
+      var Temporary1 = exprResult_1526748999;
       if (ConstSet45[Temporary1.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary1.isOk, NTI33554466)); }
-      result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary1.error), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary1.error), NTI1526737736);
       break BeforeRet;
       }
       
-      var closeResult_1526748306 = expect__yatexmlZlexer_u622(stream_p0, 4);
-      if (!(closeResult_1526748306.isOk)) {
-      var Temporary2 = closeResult_1526748306;
+      var closeResult_1526749020 = expect__yatexmlZlexer_u622(stream_p0, 4);
+      if (!(closeResult_1526749020.isOk)) {
+      var Temporary2 = closeResult_1526749020;
       if (ConstSet46[Temporary2.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary2.isOk, NTI33554466)); }
-      result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary2.error), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary2.error), NTI1526737736);
       break BeforeRet;
       }
       
-      var Temporary3 = exprResult_1526748285;
+      var Temporary3 = exprResult_1526748999;
       if (ConstSet47[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
-      result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newDelimited__yatexmlZast_u620([40], [41], Temporary3.value)), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newDelimited__yatexmlZast_u637([40], [41], Temporary3.value)), NTI1526737736);
       break BeforeRet;
       break;
     case 0:
       (advance__yatexmlZlexer_u600(stream_p0));
-      var cmdName_1526748328 = nimCopy(null, token_1526748274.value, NTI33554449);
-      if (contains__yatexmlZparser_u21711(commandTable_1526747026, cmdName_1526748328)) {
-      var cmdInfo_1526748447 = nimCopy(null, HEX5BHEX5D__yatexmlZparser_u20849(commandTable_1526747026, cmdName_1526748328), NTI1526726660);
-      switch (cmdInfo_1526748447.cmdType) {
+      var cmdName_1526749042 = nimCopy(null, token_1526748988.value, NTI33554449);
+      if (contains__yatexmlZparser_u22425(commandTable_1526747740, cmdName_1526749042)) {
+      var cmdInfo_1526749161 = nimCopy(null, HEX5BHEX5D__yatexmlZparser_u21563(commandTable_1526747740, cmdName_1526749042), NTI1526726660);
+      switch (cmdInfo_1526749161.cmdType) {
       case 0:
-        var numResult_1526748448 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(numResult_1526748448.isOk)) {
-        var Temporary4 = numResult_1526748448;
+        var numResult_1526749162 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(numResult_1526749162.isOk)) {
+        var Temporary4 = numResult_1526749162;
         if (ConstSet48[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary4.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary4.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var denomResult_1526748467 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(denomResult_1526748467.isOk)) {
-        var Temporary5 = denomResult_1526748467;
+        var denomResult_1526749181 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(denomResult_1526749181.isOk)) {
+        var Temporary5 = denomResult_1526749181;
         if (ConstSet49[Temporary5.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary5.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary5.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary5.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var isContinued_1526748486 = eqStrings(cmdName_1526748328, [99,102,114,97,99]);
-        var Temporary6 = numResult_1526748448;
+        var isContinued_1526749200 = eqStrings(cmdName_1526749042, [99,102,114,97,99]);
+        var Temporary6 = numResult_1526749162;
         if (ConstSet50[Temporary6.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary6.isOk, NTI33554466)); }
-        var Temporary7 = denomResult_1526748467;
+        var Temporary7 = denomResult_1526749181;
         if (ConstSet51[Temporary7.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary7.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newFrac__yatexmlZast_u575(Temporary6.value, Temporary7.value, isContinued_1526748486)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newFrac__yatexmlZast_u592(Temporary6.value, Temporary7.value, isContinued_1526749200)), NTI1526737736);
         break BeforeRet;
         break;
       case 1:
         if (match__yatexmlZlexer_u664(stream_p0, 5)) {
         (advance__yatexmlZlexer_u600(stream_p0));
-        var indexResult_1526748490 = parseExpression__yatexmlZparser_u20371(stream_p0);
-        if (!(indexResult_1526748490.isOk)) {
-        var Temporary8 = indexResult_1526748490;
+        var indexResult_1526749204 = parseExpression__yatexmlZparser_u21085(stream_p0);
+        if (!(indexResult_1526749204.isOk)) {
+        var Temporary8 = indexResult_1526749204;
         if (ConstSet52[Temporary8.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary8.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary8.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary8.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var closeResult_1526748509 = expect__yatexmlZlexer_u622(stream_p0, 6);
-        if (!(closeResult_1526748509.isOk)) {
-        var Temporary9 = closeResult_1526748509;
+        var closeResult_1526749223 = expect__yatexmlZlexer_u622(stream_p0, 6);
+        if (!(closeResult_1526749223.isOk)) {
+        var Temporary9 = closeResult_1526749223;
         if (ConstSet53[Temporary9.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary9.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary9.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary9.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var baseResult_1526748528 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(baseResult_1526748528.isOk)) {
-        var Temporary10 = baseResult_1526748528;
+        var baseResult_1526749242 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(baseResult_1526749242.isOk)) {
+        var Temporary10 = baseResult_1526749242;
         if (ConstSet54[Temporary10.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary10.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary10.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary10.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary11 = baseResult_1526748528;
+        var Temporary11 = baseResult_1526749242;
         if (ConstSet55[Temporary11.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary11.isOk, NTI33554466)); }
-        var Temporary12 = indexResult_1526748490;
+        var Temporary12 = indexResult_1526749204;
         if (ConstSet56[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newRoot__yatexmlZast_u505(Temporary11.value, Temporary12.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newRoot__yatexmlZast_u522(Temporary11.value, Temporary12.value)), NTI1526737736);
         break BeforeRet;
         }
         else {
-          var baseResult_1526748550 = parseGroup__yatexmlZparser_u20380(stream_p0);
-          if (!(baseResult_1526748550.isOk)) {
-          var Temporary13 = baseResult_1526748550;
+          var baseResult_1526749264 = parseGroup__yatexmlZparser_u21094(stream_p0);
+          if (!(baseResult_1526749264.isOk)) {
+          var Temporary13 = baseResult_1526749264;
           if (ConstSet57[Temporary13.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary13.isOk, NTI33554466)); }
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary13.error), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary13.error), NTI1526737736);
           break BeforeRet;
           }
           
-          var Temporary14 = baseResult_1526748550;
+          var Temporary14 = baseResult_1526749264;
           if (ConstSet58[Temporary14.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary14.isOk, NTI33554466)); }
-          result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSqrt__yatexmlZast_u502(Temporary14.value)), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSqrt__yatexmlZast_u519(Temporary14.value)), NTI1526737736);
           break BeforeRet;
         }
         
         break;
       case 2:
-        var unicode_1526748572 = greekToUnicode__yatexmlZparser_u20390(cmdName_1526748328);
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSymbol__yatexmlZast_u487(cmdName_1526748328, unicode_1526748572)), NTI1526737362);
+        var unicode_1526749286 = greekToUnicode__yatexmlZparser_u21104(cmdName_1526749042);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSymbol__yatexmlZast_u504(cmdName_1526749042, unicode_1526749286)), NTI1526737736);
         break BeforeRet;
         break;
       case 3:
-        var unicode_1526748576 = operatorToUnicode__yatexmlZparser_u20393(cmdName_1526748328);
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newOperator__yatexmlZast_u491(cmdName_1526748328, unicode_1526748576, [105,110,102,105,120])), NTI1526737362);
+        var unicode_1526749290 = operatorToUnicode__yatexmlZparser_u21107(cmdName_1526749042);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newOperator__yatexmlZast_u508(cmdName_1526749042, unicode_1526749290, [105,110,102,105,120])), NTI1526737736);
         break BeforeRet;
         break;
       case 4:
-        switch (toJSStr(cmdName_1526748328)) {
+        switch (toJSStr(cmdName_1526749042)) {
         case "mathbf":
           Temporary15 = 0;
           break;
@@ -8001,22 +8059,22 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
           Temporary15 = 2;
           break;
         }
-        var styleKind_1526748580 = Temporary15;
-        var argResult_1526748581 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(argResult_1526748581.isOk)) {
-        var Temporary16 = argResult_1526748581;
+        var styleKind_1526749294 = Temporary15;
+        var argResult_1526749295 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(argResult_1526749295.isOk)) {
+        var Temporary16 = argResult_1526749295;
         if (ConstSet59[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary16.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary16.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary17 = argResult_1526748581;
+        var Temporary17 = argResult_1526749295;
         if (ConstSet60[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newStyle__yatexmlZast_u529(styleKind_1526748580, Temporary17.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newStyle__yatexmlZast_u546(styleKind_1526749294, Temporary17.value)), NTI1526737736);
         break BeforeRet;
         break;
       case 5:
-        switch (toJSStr(cmdName_1526748328)) {
+        switch (toJSStr(cmdName_1526749042)) {
         case "displaystyle":
           Temporary18 = 0;
           break;
@@ -8033,26 +8091,26 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
           Temporary18 = 1;
           break;
         }
-        var mathStyleKind_1526748603 = Temporary18;
-        var argResult_1526748604 = parseRestOfGroup__yatexmlZparser_u20387(stream_p0);
-        if (!(argResult_1526748604.isOk)) {
-        var Temporary19 = argResult_1526748604;
+        var mathStyleKind_1526749317 = Temporary18;
+        var argResult_1526749318 = parseRestOfGroup__yatexmlZparser_u21101(stream_p0);
+        if (!(argResult_1526749318.isOk)) {
+        var Temporary19 = argResult_1526749318;
         if (ConstSet81[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary19.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary19.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary20 = argResult_1526748604;
+        var Temporary20 = argResult_1526749318;
         if (ConstSet82[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newMathStyle__yatexmlZast_u549(mathStyleKind_1526748603, Temporary20.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newMathStyle__yatexmlZast_u566(mathStyleKind_1526749317, Temporary20.value)), NTI1526737736);
         break BeforeRet;
         break;
       case 15:
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newPhantom__yatexmlZast_u573()), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newPhantom__yatexmlZast_u590()), NTI1526737736);
         break BeforeRet;
         break;
       case 6:
-        switch (toJSStr(cmdName_1526748328)) {
+        switch (toJSStr(cmdName_1526749042)) {
         case "hat":
           Temporary21 = 0;
           break;
@@ -8068,53 +8126,71 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
         case "ddot":
           Temporary21 = 4;
           break;
-        case "vec":
+        case "dddot":
           Temporary21 = 5;
           break;
-        case "widehat":
+        case "vec":
           Temporary21 = 6;
           break;
-        case "widetilde":
+        case "acute":
           Temporary21 = 7;
           break;
-        case "overline":
+        case "grave":
           Temporary21 = 8;
           break;
-        case "underline":
+        case "breve":
           Temporary21 = 9;
           break;
-        case "overbrace":
+        case "check":
           Temporary21 = 10;
           break;
-        case "underbrace":
+        case "wideparen":
           Temporary21 = 11;
           break;
-        case "overrightarrow":
+        case "widehat":
           Temporary21 = 12;
           break;
-        case "overleftarrow":
+        case "widetilde":
           Temporary21 = 13;
+          break;
+        case "overline":
+          Temporary21 = 14;
+          break;
+        case "underline":
+          Temporary21 = 15;
+          break;
+        case "overbrace":
+          Temporary21 = 16;
+          break;
+        case "underbrace":
+          Temporary21 = 17;
+          break;
+        case "overrightarrow":
+          Temporary21 = 18;
+          break;
+        case "overleftarrow":
+          Temporary21 = 19;
           break;
         default: 
           Temporary21 = 0;
           break;
         }
-        var accentKind_1526748629 = Temporary21;
-        var argResult_1526748630 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(argResult_1526748630.isOk)) {
-        var Temporary22 = argResult_1526748630;
+        var accentKind_1526749343 = Temporary21;
+        var argResult_1526749344 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(argResult_1526749344.isOk)) {
+        var Temporary22 = argResult_1526749344;
         if (ConstSet83[Temporary22.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary22.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary22.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary22.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary23 = argResult_1526748630;
+        var Temporary23 = argResult_1526749344;
         if (ConstSet84[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newAccent__yatexmlZast_u509(accentKind_1526748629, Temporary23.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newAccent__yatexmlZast_u526(accentKind_1526749343, Temporary23.value)), NTI1526737736);
         break BeforeRet;
         break;
       case 7:
-        switch (toJSStr(cmdName_1526748328)) {
+        switch (toJSStr(cmdName_1526749042)) {
         case "sum":
           Temporary24 = 0;
           break;
@@ -8130,255 +8206,288 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
         case "iiint":
           Temporary24 = 4;
           break;
-        case "oint":
+        case "iiiint":
           Temporary24 = 5;
           break;
-        case "bigcup":
+        case "oint":
           Temporary24 = 6;
           break;
-        case "bigcap":
+        case "oiint":
           Temporary24 = 7;
           break;
-        case "lim":
+        case "oiiint":
           Temporary24 = 8;
           break;
-        case "max":
+        case "bigcup":
           Temporary24 = 9;
           break;
-        case "min":
+        case "bigcap":
           Temporary24 = 10;
+          break;
+        case "coprod":
+          Temporary24 = 11;
+          break;
+        case "bigoplus":
+          Temporary24 = 12;
+          break;
+        case "bigotimes":
+          Temporary24 = 13;
+          break;
+        case "bigodot":
+          Temporary24 = 14;
+          break;
+        case "biguplus":
+          Temporary24 = 15;
+          break;
+        case "bigsqcup":
+          Temporary24 = 16;
+          break;
+        case "bigvee":
+          Temporary24 = 17;
+          break;
+        case "bigwedge":
+          Temporary24 = 18;
+          break;
+        case "lim":
+          Temporary24 = 19;
+          break;
+        case "max":
+          Temporary24 = 20;
+          break;
+        case "min":
+          Temporary24 = 21;
           break;
         default: 
           Temporary24 = 0;
           break;
         }
-        var bigopKind_1526748652 = Temporary24;
-        var lower_1526748653 = null;
-        var upper_1526748654 = null;
+        var bigopKind_1526749366 = Temporary24;
+        var lower_1526749367 = null;
+        var upper_1526749368 = null;
         if (match__yatexmlZlexer_u664(stream_p0, 9)) {
         (advance__yatexmlZlexer_u600(stream_p0));
         if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-        Temporary25 = parseGroup__yatexmlZparser_u20380(stream_p0);
+        Temporary25 = parseGroup__yatexmlZparser_u21094(stream_p0);
         }
         else {
-        Temporary25 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+        Temporary25 = parsePrimary__yatexmlZparser_u21091(stream_p0);
         }
         
-        var lowerResult_1526748655 = nimCopy(null, Temporary25, NTI1526737362);
-        if (!(lowerResult_1526748655.isOk)) {
-        var Temporary26 = lowerResult_1526748655;
+        var lowerResult_1526749369 = nimCopy(null, Temporary25, NTI1526737736);
+        if (!(lowerResult_1526749369.isOk)) {
+        var Temporary26 = lowerResult_1526749369;
         if (ConstSet85[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary26.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary26.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary27 = lowerResult_1526748655;
+        var Temporary27 = lowerResult_1526749369;
         if (ConstSet86[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-        lower_1526748653 = Temporary27.value;
+        lower_1526749367 = Temporary27.value;
         }
         
         if (match__yatexmlZlexer_u664(stream_p0, 10)) {
         (advance__yatexmlZlexer_u600(stream_p0));
         if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-        Temporary28 = parseGroup__yatexmlZparser_u20380(stream_p0);
+        Temporary28 = parseGroup__yatexmlZparser_u21094(stream_p0);
         }
         else {
-        Temporary28 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+        Temporary28 = parsePrimary__yatexmlZparser_u21091(stream_p0);
         }
         
-        var upperResult_1526748674 = nimCopy(null, Temporary28, NTI1526737362);
-        if (!(upperResult_1526748674.isOk)) {
-        var Temporary29 = upperResult_1526748674;
+        var upperResult_1526749388 = nimCopy(null, Temporary28, NTI1526737736);
+        if (!(upperResult_1526749388.isOk)) {
+        var Temporary29 = upperResult_1526749388;
         if (ConstSet87[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary29.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary29.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary30 = upperResult_1526748674;
+        var Temporary30 = upperResult_1526749388;
         if (ConstSet88[Temporary30.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary30.isOk, NTI33554466)); }
-        upper_1526748654 = Temporary30.value;
+        upper_1526749368 = Temporary30.value;
         }
         
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newBigOp__yatexmlZast_u669(bigopKind_1526748652, lower_1526748653, upper_1526748654, null)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newBigOp__yatexmlZast_u686(bigopKind_1526749366, lower_1526749367, upper_1526749368, null)), NTI1526737736);
         break BeforeRet;
         break;
       case 8:
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newFunction__yatexmlZast_u665(cmdName_1526748328, null)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newFunction__yatexmlZast_u682(cmdName_1526749042, null)), NTI1526737736);
         break BeforeRet;
         break;
       case 9:
-        if (eqStrings(cmdName_1526748328, [108,101,102,116])) {
-        var delimToken_1526748699 = peek__yatexmlZlexer_u592(stream_p0, 0);
-        var leftDelim_1526748700 = [];
-        switch (delimToken_1526748699.kind) {
+        if (eqStrings(cmdName_1526749042, [108,101,102,116])) {
+        var delimToken_1526749413 = peek__yatexmlZlexer_u592(stream_p0, 0);
+        var leftDelim_1526749414 = [];
+        switch (delimToken_1526749413.kind) {
         case 3:
           (advance__yatexmlZlexer_u600(stream_p0));
-          leftDelim_1526748700 = nimCopy(null, [40], NTI33554449);
+          leftDelim_1526749414 = nimCopy(null, [40], NTI33554449);
           break;
         case 5:
           (advance__yatexmlZlexer_u600(stream_p0));
-          leftDelim_1526748700 = nimCopy(null, [91], NTI33554449);
+          leftDelim_1526749414 = nimCopy(null, [91], NTI33554449);
           break;
         case 7:
           (advance__yatexmlZlexer_u600(stream_p0));
-          leftDelim_1526748700 = nimCopy(null, [124], NTI33554449);
+          leftDelim_1526749414 = nimCopy(null, [124], NTI33554449);
           break;
         case 15:
-          if (eqStrings(delimToken_1526748699.value, [123])) {
+          if (eqStrings(delimToken_1526749413.value, [123])) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          leftDelim_1526748700 = nimCopy(null, [123], NTI33554449);
+          leftDelim_1526749414 = nimCopy(null, [123], NTI33554449);
           }
           else {
-          if (eqStrings(delimToken_1526748699.value, [125])) {
+          if (eqStrings(delimToken_1526749413.value, [125])) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          leftDelim_1526748700 = nimCopy(null, [125], NTI33554449);
+          leftDelim_1526749414 = nimCopy(null, [125], NTI33554449);
           }
           else {
-            result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([73,110,118,97,108,105,100,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(delimToken_1526748699.value), delimToken_1526748699.position, []), NTI1526737362);
+            result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([73,110,118,97,108,105,100,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(delimToken_1526749413.value), delimToken_1526749413.position, []), NTI1526737736);
             break BeforeRet;
           }
           }
           break;
         case 0:
           (advance__yatexmlZlexer_u600(stream_p0));
-          switch (toJSStr(delimToken_1526748699.value)) {
+          switch (toJSStr(delimToken_1526749413.value)) {
           case "lbrace":
           case "{":
-            leftDelim_1526748700 = nimCopy(null, [123], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [123], NTI33554449);
             break;
           case "rbrace":
           case "}":
-            leftDelim_1526748700 = nimCopy(null, [125], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [125], NTI33554449);
             break;
           case "langle":
-            leftDelim_1526748700 = nimCopy(null, [226,159,168], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [226,159,168], NTI33554449);
             break;
           case "rangle":
-            leftDelim_1526748700 = nimCopy(null, [226,159,169], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [226,159,169], NTI33554449);
             break;
           case "lfloor":
-            leftDelim_1526748700 = nimCopy(null, [226,140,138], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [226,140,138], NTI33554449);
             break;
           case "rfloor":
-            leftDelim_1526748700 = nimCopy(null, [226,140,139], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [226,140,139], NTI33554449);
             break;
           case "lceil":
-            leftDelim_1526748700 = nimCopy(null, [226,140,136], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [226,140,136], NTI33554449);
             break;
           case "rceil":
-            leftDelim_1526748700 = nimCopy(null, [226,140,137], NTI33554449);
+            leftDelim_1526749414 = nimCopy(null, [226,140,137], NTI33554449);
             break;
           default: 
-            result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([85,110,107,110,111,119,110,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(delimToken_1526748699.value), delimToken_1526748699.position, []), NTI1526737362);
+            result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([85,110,107,110,111,119,110,32,108,101,102,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(delimToken_1526749413.value), delimToken_1526749413.position, []), NTI1526737736);
             break BeforeRet;
             break;
           }
           break;
         default: 
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,108,101,102,116], delimToken_1526748699.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,108,101,102,116], delimToken_1526749413.position, []), NTI1526737736);
           break BeforeRet;
           break;
         }
-        var contentResult_1526748764 = parseExpression__yatexmlZparser_u20371(stream_p0);
-        if (!(contentResult_1526748764.isOk)) {
-        var Temporary31 = contentResult_1526748764;
+        var contentResult_1526749478 = parseExpression__yatexmlZparser_u21085(stream_p0);
+        if (!(contentResult_1526749478.isOk)) {
+        var Temporary31 = contentResult_1526749478;
         if (ConstSet89[Temporary31.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary31.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary31.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary31.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var rightCmdToken_1526748783 = peek__yatexmlZlexer_u592(stream_p0, 0);
-        if ((!((rightCmdToken_1526748783.kind == 0)) || !(eqStrings(rightCmdToken_1526748783.value, [114,105,103,104,116])))) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,92,114,105,103,104,116,32,97,102,116,101,114,32,92,108,101,102,116], rightCmdToken_1526748783.position, []), NTI1526737362);
+        var rightCmdToken_1526749497 = peek__yatexmlZlexer_u592(stream_p0, 0);
+        if ((!((rightCmdToken_1526749497.kind == 0)) || !(eqStrings(rightCmdToken_1526749497.value, [114,105,103,104,116])))) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,92,114,105,103,104,116,32,97,102,116,101,114,32,92,108,101,102,116], rightCmdToken_1526749497.position, []), NTI1526737736);
         break BeforeRet;
         }
         
         (advance__yatexmlZlexer_u600(stream_p0));
-        var rightDelimToken_1526748809 = peek__yatexmlZlexer_u592(stream_p0, 0);
-        var rightDelim_1526748810 = [];
-        switch (rightDelimToken_1526748809.kind) {
+        var rightDelimToken_1526749523 = peek__yatexmlZlexer_u592(stream_p0, 0);
+        var rightDelim_1526749524 = [];
+        switch (rightDelimToken_1526749523.kind) {
         case 4:
           (advance__yatexmlZlexer_u600(stream_p0));
-          rightDelim_1526748810 = nimCopy(null, [41], NTI33554449);
+          rightDelim_1526749524 = nimCopy(null, [41], NTI33554449);
           break;
         case 6:
           (advance__yatexmlZlexer_u600(stream_p0));
-          rightDelim_1526748810 = nimCopy(null, [93], NTI33554449);
+          rightDelim_1526749524 = nimCopy(null, [93], NTI33554449);
           break;
         case 7:
         case 8:
           (advance__yatexmlZlexer_u600(stream_p0));
-          rightDelim_1526748810 = nimCopy(null, [124], NTI33554449);
+          rightDelim_1526749524 = nimCopy(null, [124], NTI33554449);
           break;
         case 15:
-          if (eqStrings(rightDelimToken_1526748809.value, [123])) {
+          if (eqStrings(rightDelimToken_1526749523.value, [123])) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          rightDelim_1526748810 = nimCopy(null, [123], NTI33554449);
+          rightDelim_1526749524 = nimCopy(null, [123], NTI33554449);
           }
           else {
-          if (eqStrings(rightDelimToken_1526748809.value, [125])) {
+          if (eqStrings(rightDelimToken_1526749523.value, [125])) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          rightDelim_1526748810 = nimCopy(null, [125], NTI33554449);
+          rightDelim_1526749524 = nimCopy(null, [125], NTI33554449);
           }
           else {
-            result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([73,110,118,97,108,105,100,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(rightDelimToken_1526748809.value), rightDelimToken_1526748809.position, []), NTI1526737362);
+            result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([73,110,118,97,108,105,100,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32]).concat(rightDelimToken_1526749523.value), rightDelimToken_1526749523.position, []), NTI1526737736);
             break BeforeRet;
           }
           }
           break;
         case 0:
           (advance__yatexmlZlexer_u600(stream_p0));
-          switch (toJSStr(rightDelimToken_1526748809.value)) {
+          switch (toJSStr(rightDelimToken_1526749523.value)) {
           case "rbrace":
           case "}":
-            rightDelim_1526748810 = nimCopy(null, [125], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [125], NTI33554449);
             break;
           case "lbrace":
           case "{":
-            rightDelim_1526748810 = nimCopy(null, [123], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [123], NTI33554449);
             break;
           case "rangle":
-            rightDelim_1526748810 = nimCopy(null, [226,159,169], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [226,159,169], NTI33554449);
             break;
           case "langle":
-            rightDelim_1526748810 = nimCopy(null, [226,159,168], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [226,159,168], NTI33554449);
             break;
           case "rfloor":
-            rightDelim_1526748810 = nimCopy(null, [226,140,139], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [226,140,139], NTI33554449);
             break;
           case "lfloor":
-            rightDelim_1526748810 = nimCopy(null, [226,140,138], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [226,140,138], NTI33554449);
             break;
           case "rceil":
-            rightDelim_1526748810 = nimCopy(null, [226,140,137], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [226,140,137], NTI33554449);
             break;
           case "lceil":
-            rightDelim_1526748810 = nimCopy(null, [226,140,136], NTI33554449);
+            rightDelim_1526749524 = nimCopy(null, [226,140,136], NTI33554449);
             break;
           default: 
-            result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([85,110,107,110,111,119,110,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(rightDelimToken_1526748809.value), rightDelimToken_1526748809.position, []), NTI1526737362);
+            result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([85,110,107,110,111,119,110,32,114,105,103,104,116,32,100,101,108,105,109,105,116,101,114,58,32,92]).concat(rightDelimToken_1526749523.value), rightDelimToken_1526749523.position, []), NTI1526737736);
             break BeforeRet;
             break;
           }
           break;
         default: 
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,114,105,103,104,116], rightDelimToken_1526748809.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, [69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92,114,105,103,104,116], rightDelimToken_1526749523.position, []), NTI1526737736);
           break BeforeRet;
           break;
         }
-        var Temporary32 = contentResult_1526748764;
+        var Temporary32 = contentResult_1526749478;
         if (ConstSet90[Temporary32.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary32.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newDelimited__yatexmlZast_u620(leftDelim_1526748700, rightDelim_1526748810, Temporary32.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newDelimited__yatexmlZast_u637(leftDelim_1526749414, rightDelim_1526749524, Temporary32.value)), NTI1526737736);
         break BeforeRet;
         }
         else {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(2, [92,114,105,103,104,116,32,109,117,115,116,32,98,101,32,112,97,105,114,101,100,32,119,105,116,104,32,92,108,101,102,116], token_1526748274.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(2, [92,114,105,103,104,116,32,109,117,115,116,32,98,101,32,112,97,105,114,101,100,32,119,105,116,104,32,92,108,101,102,116], token_1526748988.position, []), NTI1526737736);
           break BeforeRet;
         }
         
         break;
       case 10:
-        switch (toJSStr(cmdName_1526748328)) {
+        switch (toJSStr(cmdName_1526749042)) {
         case "big":
         case "bigl":
         case "bigr":
@@ -8403,220 +8512,220 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
           Temporary33 = 1;
           break;
         }
-        var size_1526748898 = Temporary33;
-        var delimToken_1526748899 = peek__yatexmlZlexer_u592(stream_p0, 0);
-        var delimChar_1526748900 = [];
-        switch (delimToken_1526748899.kind) {
+        var size_1526749612 = Temporary33;
+        var delimToken_1526749613 = peek__yatexmlZlexer_u592(stream_p0, 0);
+        var delimChar_1526749614 = [];
+        switch (delimToken_1526749613.kind) {
         case 3:
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [40], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [40], NTI33554449);
           break;
         case 4:
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [41], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [41], NTI33554449);
           break;
         case 5:
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [91], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [91], NTI33554449);
           break;
         case 6:
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [93], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [93], NTI33554449);
           break;
         case 7:
         case 8:
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [124], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [124], NTI33554449);
           break;
         case 15:
-          if (eqStrings(delimToken_1526748899.value, [123])) {
+          if (eqStrings(delimToken_1526749613.value, [123])) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [123], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [123], NTI33554449);
           }
           else {
-          if (eqStrings(delimToken_1526748899.value, [125])) {
+          if (eqStrings(delimToken_1526749613.value, [125])) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          delimChar_1526748900 = nimCopy(null, [125], NTI33554449);
+          delimChar_1526749614 = nimCopy(null, [125], NTI33554449);
           }
           else {
-            result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([73,110,118,97,108,105,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1526748328,[58,32],delimToken_1526748899.value), delimToken_1526748899.position, []), NTI1526737362);
+            result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([73,110,118,97,108,105,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1526749042,[58,32],delimToken_1526749613.value), delimToken_1526749613.position, []), NTI1526737736);
             break BeforeRet;
           }
           }
           break;
         case 0:
           (advance__yatexmlZlexer_u600(stream_p0));
-          switch (toJSStr(delimToken_1526748899.value)) {
+          switch (toJSStr(delimToken_1526749613.value)) {
           case "lbrace":
           case "{":
-            delimChar_1526748900 = nimCopy(null, [123], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [123], NTI33554449);
             break;
           case "rbrace":
           case "}":
-            delimChar_1526748900 = nimCopy(null, [125], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [125], NTI33554449);
             break;
           case "langle":
-            delimChar_1526748900 = nimCopy(null, [226,159,168], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [226,159,168], NTI33554449);
             break;
           case "rangle":
-            delimChar_1526748900 = nimCopy(null, [226,159,169], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [226,159,169], NTI33554449);
             break;
           case "lfloor":
-            delimChar_1526748900 = nimCopy(null, [226,140,138], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [226,140,138], NTI33554449);
             break;
           case "rfloor":
-            delimChar_1526748900 = nimCopy(null, [226,140,139], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [226,140,139], NTI33554449);
             break;
           case "lceil":
-            delimChar_1526748900 = nimCopy(null, [226,140,136], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [226,140,136], NTI33554449);
             break;
           case "rceil":
-            delimChar_1526748900 = nimCopy(null, [226,140,137], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [226,140,137], NTI33554449);
             break;
           case "lvert":
-            delimChar_1526748900 = nimCopy(null, [124], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [124], NTI33554449);
             break;
           case "rvert":
-            delimChar_1526748900 = nimCopy(null, [124], NTI33554449);
+            delimChar_1526749614 = nimCopy(null, [124], NTI33554449);
             break;
           default: 
-            result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([85,110,107,110,111,119,110,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1526748328,[58,32,92],delimToken_1526748899.value), delimToken_1526748899.position, []), NTI1526737362);
+            result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([85,110,107,110,111,119,110,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1526749042,[58,32,92],delimToken_1526749613.value), delimToken_1526749613.position, []), NTI1526737736);
             break BeforeRet;
             break;
           }
           break;
         default: 
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, ([69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1526748328), delimToken_1526748899.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, ([69,120,112,101,99,116,101,100,32,100,101,108,105,109,105,116,101,114,32,97,102,116,101,114,32,92]).concat(cmdName_1526749042), delimToken_1526749613.position, []), NTI1526737736);
           break BeforeRet;
           break;
         }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSizedDelimiter__yatexmlZast_u625(delimChar_1526748900, size_1526748898)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSizedDelimiter__yatexmlZast_u642(delimChar_1526749614, size_1526749612)), NTI1526737736);
         break BeforeRet;
         break;
       case 11:
-        if (eqStrings(cmdName_1526748328, [98,101,103,105,110])) {
-        var braceResult_1526748967 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1526748967.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,98,101,103,105,110], token_1526748274.position, []), NTI1526737362);
+        if (eqStrings(cmdName_1526749042, [98,101,103,105,110])) {
+        var braceResult_1526749681 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1526749681.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,98,101,103,105,110], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var envName_1526748989 = [];
-        var nameToken_1526748990 = peek__yatexmlZlexer_u592(stream_p0, 0);
-        if ((nameToken_1526748990.kind == 13)) {
+        var envName_1526749703 = [];
+        var nameToken_1526749704 = peek__yatexmlZlexer_u592(stream_p0, 0);
+        if ((nameToken_1526749704.kind == 13)) {
         Label34: {
             Label35: while (true) {
             if (!((peek__yatexmlZlexer_u592(stream_p0, 0).kind == 13) && !(match__yatexmlZlexer_u664(stream_p0, 2)))) break Label35;
-              envName_1526748989.push.apply(envName_1526748989, advance__yatexmlZlexer_u600(stream_p0).value);;
+              envName_1526749703.push.apply(envName_1526749703, advance__yatexmlZlexer_u600(stream_p0).value);;
             }
         };
         }
         else {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,98,101,103,105,110,123], nameToken_1526748990.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(4, [69,120,112,101,99,116,101,100,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101,32,97,102,116,101,114,32,92,98,101,103,105,110,123], nameToken_1526749704.position, []), NTI1526737736);
           break BeforeRet;
         }
         
-        var closeResult_1526749020 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1526749020.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1526748990.position, []), NTI1526737362);
+        var closeResult_1526749734 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1526749734.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,101,110,118,105,114,111,110,109,101,110,116,32,110,97,109,101], nameToken_1526749704.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        if (contains__stdZenumutils_u50([[109,97,116,114,105,120], [112,109,97,116,114,105,120], [98,109,97,116,114,105,120], [118,109,97,116,114,105,120], [86,109,97,116,114,105,120], [99,97,115,101,115], [97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], envName_1526748989)) {
-        result_1526748273 = nimCopy(result_1526748273, parseMatrixEnvironment__yatexmlZparser_u20383(stream_p0, envName_1526748989), NTI1526737362);
+        if (contains__stdZenumutils_u50([[109,97,116,114,105,120], [112,109,97,116,114,105,120], [98,109,97,116,114,105,120], [118,109,97,116,114,105,120], [86,109,97,116,114,105,120], [99,97,115,101,115], [97,108,105,103,110], [97,108,105,103,110,101,100], [103,97,116,104,101,114], [103,97,116,104,101,114,101,100]], envName_1526749703)) {
+        result_1526748987 = nimCopy(result_1526748987, parseMatrixEnvironment__yatexmlZparser_u21097(stream_p0, envName_1526749703), NTI1526737736);
         break BeforeRet;
         }
         else {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(2, ([85,110,107,110,111,119,110,32,101,110,118,105,114,111,110,109,101,110,116,58,32]).concat(envName_1526748989), token_1526748274.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(2, ([85,110,107,110,111,119,110,32,101,110,118,105,114,111,110,109,101,110,116,58,32]).concat(envName_1526749703), token_1526748988.position, []), NTI1526737736);
           break BeforeRet;
         }
         
         }
         else {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(2, [85,110,101,120,112,101,99,116,101,100,32,92,101,110,100,32,99,111,109,109,97,110,100], token_1526748274.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(2, [85,110,101,120,112,101,99,116,101,100,32,92,101,110,100,32,99,111,109,109,97,110,100], token_1526748988.position, []), NTI1526737736);
           break BeforeRet;
         }
         
         break;
       case 12:
-        var braceResult_1526749126 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1526749126.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116], token_1526748274.position, []), NTI1526737362);
+        var braceResult_1526749840 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1526749840.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var textContent_1526749148 = [];
-        var Temporary36 = braceResult_1526749126;
+        var textContent_1526749862 = [];
+        var Temporary36 = braceResult_1526749840;
         if (ConstSet109[Temporary36.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary36.isOk, NTI33554466)); }
-        var lastPos_1526749149 = addInt(Temporary36.value.position, 1);
+        var lastPos_1526749863 = addInt(Temporary36.value.position, 1);
         Label37: {
             Label38: while (true) {
             if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label38;
-              var textToken_1526749150 = peek__yatexmlZlexer_u592(stream_p0, 0);
-              var gap_1526749151 = subInt(textToken_1526749150.position, lastPos_1526749149);
-              if ((0 < gap_1526749151)) {
-              textContent_1526749148.push.apply(textContent_1526749148, nsuRepeatStr([32], chckRange(gap_1526749151, 0, 2147483647)));;
+              var textToken_1526749864 = peek__yatexmlZlexer_u592(stream_p0, 0);
+              var gap_1526749865 = subInt(textToken_1526749864.position, lastPos_1526749863);
+              if ((0 < gap_1526749865)) {
+              textContent_1526749862.push.apply(textContent_1526749862, nsuRepeatStr([32], chckRange(gap_1526749865, 0, 2147483647)));;
               }
               
               (advance__yatexmlZlexer_u600(stream_p0));
-              switch (textToken_1526749150.kind) {
+              switch (textToken_1526749864.kind) {
               case 13:
               case 14:
-                textContent_1526749148.push.apply(textContent_1526749148, textToken_1526749150.value);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, (textToken_1526749150.value).length);
+                textContent_1526749862.push.apply(textContent_1526749862, textToken_1526749864.value);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, (textToken_1526749864.value).length);
                 break;
               case 15:
-                textContent_1526749148.push.apply(textContent_1526749148, textToken_1526749150.value);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, (textToken_1526749150.value).length);
+                textContent_1526749862.push.apply(textContent_1526749862, textToken_1526749864.value);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, (textToken_1526749864.value).length);
                 break;
               case 3:
-                textContent_1526749148.push.apply(textContent_1526749148, [40]);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, 1);
+                textContent_1526749862.push.apply(textContent_1526749862, [40]);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, 1);
                 break;
               case 4:
-                textContent_1526749148.push.apply(textContent_1526749148, [41]);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, 1);
+                textContent_1526749862.push.apply(textContent_1526749862, [41]);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, 1);
                 break;
               case 5:
-                textContent_1526749148.push.apply(textContent_1526749148, [91]);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, 1);
+                textContent_1526749862.push.apply(textContent_1526749862, [91]);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, 1);
                 break;
               case 6:
-                textContent_1526749148.push.apply(textContent_1526749148, [93]);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, 1);
+                textContent_1526749862.push.apply(textContent_1526749862, [93]);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, 1);
                 break;
               case 0:
-                textContent_1526749148.push.apply(textContent_1526749148, [92]);;
-                textContent_1526749148.push.apply(textContent_1526749148, textToken_1526749150.value);;
-                lastPos_1526749149 = addInt(addInt(textToken_1526749150.position, 1), (textToken_1526749150.value).length);
+                textContent_1526749862.push.apply(textContent_1526749862, [92]);;
+                textContent_1526749862.push.apply(textContent_1526749862, textToken_1526749864.value);;
+                lastPos_1526749863 = addInt(addInt(textToken_1526749864.position, 1), (textToken_1526749864.value).length);
                 break;
               default: 
-                textContent_1526749148.push.apply(textContent_1526749148, textToken_1526749150.value);;
-                lastPos_1526749149 = addInt(textToken_1526749150.position, (textToken_1526749150.value).length);
+                textContent_1526749862.push.apply(textContent_1526749862, textToken_1526749864.value);;
+                lastPos_1526749863 = addInt(textToken_1526749864.position, (textToken_1526749864.value).length);
                 break;
               }
             }
         };
         if (match__yatexmlZlexer_u664(stream_p0, 2)) {
-        var closeBrace_1526749152 = peek__yatexmlZlexer_u592(stream_p0, 0);
-        var trailingGap_1526749153 = subInt(closeBrace_1526749152.position, lastPos_1526749149);
-        if ((0 < trailingGap_1526749153)) {
-        textContent_1526749148.push.apply(textContent_1526749148, nsuRepeatStr([32], chckRange(trailingGap_1526749153, 0, 2147483647)));;
+        var closeBrace_1526749866 = peek__yatexmlZlexer_u592(stream_p0, 0);
+        var trailingGap_1526749867 = subInt(closeBrace_1526749866.position, lastPos_1526749863);
+        if ((0 < trailingGap_1526749867)) {
+        textContent_1526749862.push.apply(textContent_1526749862, nsuRepeatStr([32], chckRange(trailingGap_1526749867, 0, 2147483647)));;
         }
         
         }
         
-        var closeResult_1526749154 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1526749154.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,116,101,120,116,32,99,111,110,116,101,110,116], token_1526748274.position, []), NTI1526737362);
+        var closeResult_1526749868 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1526749868.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,116,101,120,116,32,99,111,110,116,101,110,116], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newText__yatexmlZast_u496(textContent_1526749148)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newText__yatexmlZast_u513(textContent_1526749862)), NTI1526737736);
         break BeforeRet;
         break;
       case 13:
-        switch (toJSStr(cmdName_1526748328)) {
+        switch (toJSStr(cmdName_1526749042)) {
         case "quad":
           Temporary39 = [49,101,109];
           break;
@@ -8639,271 +8748,271 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
           Temporary39 = [48,46,53,101,109];
           break;
         }
-        var width_1526749179 = nimCopy(null, Temporary39, NTI33554449);
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSpace__yatexmlZast_u499(width_1526749179)), NTI1526737362);
+        var width_1526749893 = nimCopy(null, Temporary39, NTI33554449);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSpace__yatexmlZast_u516(width_1526749893)), NTI1526737736);
         break BeforeRet;
         break;
       case 22:
-        var nameResult_1526749183 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(nameResult_1526749183.isOk)) {
-        var Temporary40 = nameResult_1526749183;
+        var nameResult_1526749897 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(nameResult_1526749897.isOk)) {
+        var Temporary40 = nameResult_1526749897;
         if (ConstSet110[Temporary40.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary40.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary40.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary40.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var opName_1526749202 = [];
-        var Temporary41 = nameResult_1526749183;
+        var opName_1526749916 = [];
+        var Temporary41 = nameResult_1526749897;
         if (ConstSet114[Temporary41.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary41.isOk, NTI33554466)); }
-        opName_1526749202 = nimCopy(null, extractText__yatexmlZparser_u22547(Temporary41.value), NTI33554449);
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newFunction__yatexmlZast_u665(opName_1526749202, null)), NTI1526737362);
+        opName_1526749916 = nimCopy(null, extractText__yatexmlZparser_u23261(Temporary41.value), NTI33554449);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newFunction__yatexmlZast_u682(opName_1526749916, null)), NTI1526737736);
         break BeforeRet;
         break;
       case 23:
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newOperator__yatexmlZast_u491([109,111,100], [109,111,100], [105,110,102,105,120])), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newOperator__yatexmlZast_u508([109,111,100], [109,111,100], [105,110,102,105,120])), NTI1526737736);
         break BeforeRet;
         break;
       case 24:
-        var argResult_1526749250 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(argResult_1526749250.isOk)) {
-        var Temporary42 = argResult_1526749250;
+        var argResult_1526749964 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(argResult_1526749964.isOk)) {
+        var Temporary42 = argResult_1526749964;
         if (ConstSet115[Temporary42.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary42.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary42.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary42.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var children_1526749273 = [];
-        children_1526749273.push(newSpace__yatexmlZast_u499([48,46,52,52,52,52,101,109]));;
-        children_1526749273.push(newOperator__yatexmlZast_u491([40], [40], [112,114,101,102,105,120]));;
-        children_1526749273.push(newIdentifier__yatexmlZast_u484([109,111,100]));;
-        children_1526749273.push(newSpace__yatexmlZast_u499([48,46,51,51,51,51,101,109]));;
-        var Temporary43 = argResult_1526749250;
+        var children_1526749987 = [];
+        children_1526749987.push(newSpace__yatexmlZast_u516([48,46,52,52,52,52,101,109]));;
+        children_1526749987.push(newOperator__yatexmlZast_u508([40], [40], [112,114,101,102,105,120]));;
+        children_1526749987.push(newIdentifier__yatexmlZast_u501([109,111,100]));;
+        children_1526749987.push(newSpace__yatexmlZast_u516([48,46,51,51,51,51,101,109]));;
+        var Temporary43 = argResult_1526749964;
         if (ConstSet116[Temporary43.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary43.isOk, NTI33554466)); }
-        children_1526749273.push(Temporary43.value);;
-        children_1526749273.push(newOperator__yatexmlZast_u491([41], [41], [112,111,115,116,102,105,120]));;
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newRow__yatexmlZast_u601(children_1526749273)), NTI1526737362);
+        children_1526749987.push(Temporary43.value);;
+        children_1526749987.push(newOperator__yatexmlZast_u508([41], [41], [112,111,115,116,102,105,120]));;
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newRow__yatexmlZast_u618(children_1526749987)), NTI1526737736);
         break BeforeRet;
         break;
       case 14:
-        if (eqStrings(cmdName_1526748328, [116,101,120,116,99,111,108,111,114])) {
-        var colorBraceResult_1526749301 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(colorBraceResult_1526749301.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116,99,111,108,111,114], token_1526748274.position, []), NTI1526737362);
+        if (eqStrings(cmdName_1526749042, [116,101,120,116,99,111,108,111,114])) {
+        var colorBraceResult_1526750015 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(colorBraceResult_1526750015.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,116,101,120,116,99,111,108,111,114], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var colorName_1526749323 = [];
+        var colorName_1526750037 = [];
         Label44: {
             Label45: while (true) {
             if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label45;
-              var colorToken_1526749324 = advance__yatexmlZlexer_u600(stream_p0);
-              colorName_1526749323.push.apply(colorName_1526749323, colorToken_1526749324.value);;
+              var colorToken_1526750038 = advance__yatexmlZlexer_u600(stream_p0);
+              colorName_1526750037.push.apply(colorName_1526750037, colorToken_1526750038.value);;
             }
         };
-        var colorCloseResult_1526749325 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(colorCloseResult_1526749325.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1526748274.position, []), NTI1526737362);
+        var colorCloseResult_1526750039 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(colorCloseResult_1526750039.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var contentResult_1526749347 = parseGroup__yatexmlZparser_u20380(stream_p0);
-        if (!(contentResult_1526749347.isOk)) {
-        var Temporary46 = contentResult_1526749347;
+        var contentResult_1526750061 = parseGroup__yatexmlZparser_u21094(stream_p0);
+        if (!(contentResult_1526750061.isOk)) {
+        var Temporary46 = contentResult_1526750061;
         if (ConstSet117[Temporary46.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary46.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary46.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary46.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary47 = contentResult_1526749347;
+        var Temporary47 = contentResult_1526750061;
         if (ConstSet118[Temporary47.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary47.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newColor__yatexmlZast_u569(colorName_1526749323, Temporary47.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newColor__yatexmlZast_u586(colorName_1526750037, Temporary47.value)), NTI1526737736);
         break BeforeRet;
         }
         else {
-          var colorBraceResult_1526749369 = expect__yatexmlZlexer_u622(stream_p0, 1);
-          if (!(colorBraceResult_1526749369.isOk)) {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,99,111,108,111,114], token_1526748274.position, []), NTI1526737362);
+          var colorBraceResult_1526750083 = expect__yatexmlZlexer_u622(stream_p0, 1);
+          if (!(colorBraceResult_1526750083.isOk)) {
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,99,111,108,111,114], token_1526748988.position, []), NTI1526737736);
           break BeforeRet;
           }
           
-          var colorName_1526749391 = [];
+          var colorName_1526750105 = [];
           Label48: {
               Label49: while (true) {
               if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label49;
-                var colorToken_1526749392 = advance__yatexmlZlexer_u600(stream_p0);
-                colorName_1526749391.push.apply(colorName_1526749391, colorToken_1526749392.value);;
+                var colorToken_1526750106 = advance__yatexmlZlexer_u600(stream_p0);
+                colorName_1526750105.push.apply(colorName_1526750105, colorToken_1526750106.value);;
               }
           };
-          var colorCloseResult_1526749393 = expect__yatexmlZlexer_u622(stream_p0, 2);
-          if (!(colorCloseResult_1526749393.isOk)) {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1526748274.position, []), NTI1526737362);
+          var colorCloseResult_1526750107 = expect__yatexmlZlexer_u622(stream_p0, 2);
+          if (!(colorCloseResult_1526750107.isOk)) {
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,99,111,108,111,114,32,110,97,109,101], token_1526748988.position, []), NTI1526737736);
           break BeforeRet;
           }
           
-          var contentResult_1526749415 = parseExpression__yatexmlZparser_u20371(stream_p0);
-          if (!(contentResult_1526749415.isOk)) {
-          var Temporary50 = contentResult_1526749415;
+          var contentResult_1526750129 = parseExpression__yatexmlZparser_u21085(stream_p0);
+          if (!(contentResult_1526750129.isOk)) {
+          var Temporary50 = contentResult_1526750129;
           if (ConstSet119[Temporary50.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary50.isOk, NTI33554466)); }
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary50.error), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary50.error), NTI1526737736);
           break BeforeRet;
           }
           
-          var Temporary51 = contentResult_1526749415;
+          var Temporary51 = contentResult_1526750129;
           if (ConstSet120[Temporary51.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary51.isOk, NTI33554466)); }
-          result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newColor__yatexmlZast_u569(colorName_1526749391, Temporary51.value)), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newColor__yatexmlZast_u586(colorName_1526750105, Temporary51.value)), NTI1526737736);
           break BeforeRet;
         }
         
         break;
       case 16:
-        if (eqStrings(cmdName_1526748328, [110,117,109])) {
-        var braceResult_1526749437 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1526749437.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,110,117,109], token_1526748274.position, []), NTI1526737362);
+        if (eqStrings(cmdName_1526749042, [110,117,109])) {
+        var braceResult_1526750151 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1526750151.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,110,117,109], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var numberStr_1526749459 = [];
+        var numberStr_1526750173 = [];
         Label52: {
             Label53: while (true) {
             if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label53;
-              var numToken_1526749460 = advance__yatexmlZlexer_u600(stream_p0);
-              numberStr_1526749459.push.apply(numberStr_1526749459, numToken_1526749460.value);;
+              var numToken_1526750174 = advance__yatexmlZlexer_u600(stream_p0);
+              numberStr_1526750173.push.apply(numberStr_1526750173, numToken_1526750174.value);;
             }
         };
-        var closeResult_1526749461 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1526749461.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,110,117,109,98,101,114], token_1526748274.position, []), NTI1526737362);
+        var closeResult_1526750175 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1526750175.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,110,117,109,98,101,114], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newNum__yatexmlZast_u696(numberStr_1526749459)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newNum__yatexmlZast_u713(numberStr_1526750173)), NTI1526737736);
         break BeforeRet;
         }
         else {
-        if (eqStrings(cmdName_1526748328, [115,105])) {
-        var braceResult_1526749486 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(braceResult_1526749486.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,115,105], token_1526748274.position, []), NTI1526737362);
+        if (eqStrings(cmdName_1526749042, [115,105])) {
+        var braceResult_1526750200 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(braceResult_1526750200.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,115,105], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var unitResult_1526749508 = parseSIUnitExpr__yatexmlZparser_u20728(stream_p0);
-        if (!(unitResult_1526749508.isOk)) {
-        var Temporary54 = unitResult_1526749508;
+        var unitResult_1526750222 = parseSIUnitExpr__yatexmlZparser_u21442(stream_p0);
+        if (!(unitResult_1526750222.isOk)) {
+        var Temporary54 = unitResult_1526750222;
         if (ConstSet123[Temporary54.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary54.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary54.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary54.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var closeResult_1526749527 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(closeResult_1526749527.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1526748274.position, []), NTI1526737362);
+        var closeResult_1526750241 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(closeResult_1526750241.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary55 = unitResult_1526749508;
+        var Temporary55 = unitResult_1526750222;
         if (ConstSet124[Temporary55.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary55.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(Temporary55.value), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(Temporary55.value), NTI1526737736);
         break BeforeRet;
         }
         else {
-        if (eqStrings(cmdName_1526748328, [83,73])) {
-        var valueBraceResult_1526749552 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(valueBraceResult_1526749552.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,83,73], token_1526748274.position, []), NTI1526737362);
+        if (eqStrings(cmdName_1526749042, [83,73])) {
+        var valueBraceResult_1526750266 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(valueBraceResult_1526750266.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,97,102,116,101,114,32,92,83,73], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var valueStr_1526749574 = [];
+        var valueStr_1526750288 = [];
         Label56: {
             Label57: while (true) {
             if (!(!(match__yatexmlZlexer_u664(stream_p0, 2)) && !(isAtEnd__yatexmlZlexer_u611(stream_p0)))) break Label57;
-              var valueToken_1526749575 = advance__yatexmlZlexer_u600(stream_p0);
-              valueStr_1526749574.push.apply(valueStr_1526749574, valueToken_1526749575.value);;
+              var valueToken_1526750289 = advance__yatexmlZlexer_u600(stream_p0);
+              valueStr_1526750288.push.apply(valueStr_1526750288, valueToken_1526750289.value);;
             }
         };
-        var valueCloseResult_1526749576 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(valueCloseResult_1526749576.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,118,97,108,117,101], token_1526748274.position, []), NTI1526737362);
+        var valueCloseResult_1526750290 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(valueCloseResult_1526750290.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,118,97,108,117,101], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var unitBraceResult_1526749598 = expect__yatexmlZlexer_u622(stream_p0, 1);
-        if (!(unitBraceResult_1526749598.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,123,32,102,111,114,32,117,110,105,116], token_1526748274.position, []), NTI1526737362);
+        var unitBraceResult_1526750312 = expect__yatexmlZlexer_u622(stream_p0, 1);
+        if (!(unitBraceResult_1526750312.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,123,32,102,111,114,32,117,110,105,116], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var unitResult_1526749620 = parseSIUnitExpr__yatexmlZparser_u20728(stream_p0);
-        if (!(unitResult_1526749620.isOk)) {
-        var Temporary58 = unitResult_1526749620;
+        var unitResult_1526750334 = parseSIUnitExpr__yatexmlZparser_u21442(stream_p0);
+        if (!(unitResult_1526750334.isOk)) {
+        var Temporary58 = unitResult_1526750334;
         if (ConstSet125[Temporary58.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary58.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary58.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary58.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var unitCloseResult_1526749639 = expect__yatexmlZlexer_u622(stream_p0, 2);
-        if (!(unitCloseResult_1526749639.isOk)) {
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1526748274.position, []), NTI1526737362);
+        var unitCloseResult_1526750353 = expect__yatexmlZlexer_u622(stream_p0, 2);
+        if (!(unitCloseResult_1526750353.isOk)) {
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(3, [69,120,112,101,99,116,101,100,32,125,32,97,102,116,101,114,32,117,110,105,116], token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary59 = unitResult_1526749620;
+        var Temporary59 = unitResult_1526750334;
         if (ConstSet126[Temporary59.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary59.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSIValue__yatexmlZast_u723(valueStr_1526749574, Temporary59.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSIValue__yatexmlZast_u740(valueStr_1526750288, Temporary59.value)), NTI1526737736);
         break BeforeRet;
         }
         else {
-          result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(2, ([85,110,107,110,111,119,110,32,115,105,117,110,105,116,120,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_1526748328), token_1526748274.position, []), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(2, ([85,110,107,110,111,119,110,32,115,105,117,110,105,116,120,32,99,111,109,109,97,110,100,58,32,92]).concat(cmdName_1526749042), token_1526748988.position, []), NTI1526737736);
           break BeforeRet;
         }
         }}
         break;
       case 20:
-        var defResult_1526749685 = parseMacroDef__yatexmlZparser_u21163(stream_p0, cmdName_1526748328, token_1526748274.position);
-        if (!(defResult_1526749685.isOk)) {
-        var Temporary60 = defResult_1526749685;
+        var defResult_1526750399 = parseMacroDef__yatexmlZparser_u21877(stream_p0, cmdName_1526749042, token_1526748988.position);
+        if (!(defResult_1526750399.isOk)) {
+        var Temporary60 = defResult_1526750399;
         if (ConstSet132[Temporary60.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary60.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary60.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary60.error), NTI1526737736);
         break BeforeRet;
         }
         
-        result_1526748273 = nimCopy(result_1526748273, parsePrimary__yatexmlZparser_u20377(stream_p0), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, parsePrimary__yatexmlZparser_u21091(stream_p0), NTI1526737736);
         break BeforeRet;
         break;
       case 21:
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(2, ([73,110,102,105,120,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1526748328,[32,114,101,113,117,105,114,101,115,32,97,32,108,101,102,116,32,111,112,101,114,97,110,100]), token_1526748274.position, []), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(2, ([73,110,102,105,120,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1526749042,[32,114,101,113,117,105,114,101,115,32,97,32,108,101,102,116,32,111,112,101,114,97,110,100]), token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         break;
       case 17:
       case 18:
       case 19:
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(2, ([85,110,105,116,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1526748328,[32,99,97,110,32,111,110,108,121,32,98,101,32,117,115,101,100,32,119,105,116,104,105,110,32,92,115,105,32,111,114,32,92,83,73]), token_1526748274.position, []), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(2, ([85,110,105,116,32,99,111,109,109,97,110,100,32,92]).concat(cmdName_1526749042,[32,99,97,110,32,111,110,108,121,32,98,101,32,117,115,101,100,32,119,105,116,104,105,110,32,92,115,105,32,111,114,32,92,83,73]), token_1526748988.position, []), NTI1526737736);
         break BeforeRet;
         break;
       }
       }
       else {
-        if (hasMacro__yatexmlZmacros_u1339(globalMacroRegistry_1526726695[0], cmdName_1526748328)) {
-        var macroDef_1526749746 = getMacro__yatexmlZmacros_u1415(globalMacroRegistry_1526726695[0], cmdName_1526748328);
-        var expandResult_1526749747 = expandMacroInStream__yatexmlZparser_u21504(stream_p0, cmdName_1526748328, macroDef_1526749746);
-        if (!(expandResult_1526749747.isOk)) {
-        var Temporary61 = expandResult_1526749747;
+        if (hasMacro__yatexmlZmacros_u1339(globalMacroRegistry_1526726695[0], cmdName_1526749042)) {
+        var macroDef_1526750460 = getMacro__yatexmlZmacros_u1415(globalMacroRegistry_1526726695[0], cmdName_1526749042);
+        var expandResult_1526750461 = expandMacroInStream__yatexmlZparser_u22218(stream_p0, cmdName_1526749042, macroDef_1526750460);
+        if (!(expandResult_1526750461.isOk)) {
+        var Temporary61 = expandResult_1526750461;
         if (ConstSet134[Temporary61.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary61.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary61.error), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary61.error), NTI1526737736);
         break BeforeRet;
         }
         
-        var Temporary62 = expandResult_1526749747;
+        var Temporary62 = expandResult_1526750461;
         if (ConstSet135[Temporary62.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary62.isOk, NTI33554466)); }
-        var expandedTokens_1526749766 = nimCopy(null, Temporary62.value, NTI1392509056);
-        var expandedStream_1526749767 = [newTokenStream__yatexmlZlexer_u572(expandedTokens_1526749766)];
-        result_1526748273 = nimCopy(result_1526748273, parseExpression__yatexmlZparser_u20371(expandedStream_1526749767[0]), NTI1526737362);
+        var expandedTokens_1526750480 = nimCopy(null, Temporary62.value, NTI1392509056);
+        var expandedStream_1526750481 = [newTokenStream__yatexmlZlexer_u572(expandedTokens_1526750480)];
+        result_1526748987 = nimCopy(result_1526748987, parseExpression__yatexmlZparser_u21085(expandedStream_1526750481[0]), NTI1526737736);
         break BeforeRet;
         }
         else {
-          result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newIdentifier__yatexmlZast_u484(cmdName_1526748328)), NTI1526737362);
+          result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newIdentifier__yatexmlZast_u501(cmdName_1526749042)), NTI1526737736);
           break BeforeRet;
         }
         
@@ -8914,51 +9023,51 @@ function parsePrimary__yatexmlZparser_u20377(stream_p0) {
     case 10:
       (advance__yatexmlZlexer_u600(stream_p0));
       if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-      Temporary63 = parseGroup__yatexmlZparser_u20380(stream_p0);
+      Temporary63 = parseGroup__yatexmlZparser_u21094(stream_p0);
       }
       else {
-      Temporary63 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+      Temporary63 = parsePrimary__yatexmlZparser_u21091(stream_p0);
       }
       
-      var scriptResult_1526749771 = nimCopy(null, Temporary63, NTI1526737362);
-      if (!(scriptResult_1526749771.isOk)) {
-      var Temporary64 = scriptResult_1526749771;
+      var scriptResult_1526750485 = nimCopy(null, Temporary63, NTI1526737736);
+      if (!(scriptResult_1526750485.isOk)) {
+      var Temporary64 = scriptResult_1526750485;
       if (ConstSet136[Temporary64.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary64.isOk, NTI33554466)); }
-      result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21645(Temporary64.error), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u22359(Temporary64.error), NTI1526737736);
       break BeforeRet;
       }
       
-      var emptyBase_1526749794 = newRow__yatexmlZast_u601([]);
-      if ((token_1526748274.kind == 9)) {
-      var Temporary65 = scriptResult_1526749771;
+      var emptyBase_1526750508 = newRow__yatexmlZast_u618([]);
+      if ((token_1526748988.kind == 9)) {
+      var Temporary65 = scriptResult_1526750485;
       if (ConstSet137[Temporary65.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary65.isOk, NTI33554466)); }
-      result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSub__yatexmlZast_u588(emptyBase_1526749794, Temporary65.value)), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSub__yatexmlZast_u605(emptyBase_1526750508, Temporary65.value)), NTI1526737736);
       break BeforeRet;
       }
       else {
-        var Temporary66 = scriptResult_1526749771;
+        var Temporary66 = scriptResult_1526750485;
         if (ConstSet138[Temporary66.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary66.isOk, NTI33554466)); }
-        result_1526748273 = nimCopy(result_1526748273, ok__yatexmlZparser_u21143(newSup__yatexmlZast_u592(emptyBase_1526749794, Temporary66.value)), NTI1526737362);
+        result_1526748987 = nimCopy(result_1526748987, ok__yatexmlZparser_u21857(newSup__yatexmlZast_u609(emptyBase_1526750508, Temporary66.value)), NTI1526737736);
         break BeforeRet;
       }
       
       break;
     case 17:
-      result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(1, [85,110,101,120,112,101,99,116,101,100,32,101,110,100,32,111,102,32,105,110,112,117,116], token_1526748274.position, []), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(1, [85,110,101,120,112,101,99,116,101,100,32,101,110,100,32,111,102,32,105,110,112,117,116], token_1526748988.position, []), NTI1526737736);
       break BeforeRet;
       break;
     default: 
-      result_1526748273 = nimCopy(result_1526748273, err__yatexmlZparser_u21007(0, ([85,110,101,120,112,101,99,116,101,100,32,116,111,107,101,110,58,32]).concat(reprEnum(token_1526748274.kind, NTI1392508931)), token_1526748274.position, []), NTI1526737362);
+      result_1526748987 = nimCopy(result_1526748987, err__yatexmlZparser_u21721(0, ([85,110,101,120,112,101,99,116,101,100,32,116,111,107,101,110,58,32]).concat(reprEnum(token_1526748988.kind, NTI1392508931)), token_1526748988.position, []), NTI1526737736);
       break BeforeRet;
       break;
     }
   };
 
-  return result_1526748273;
+  return result_1526748987;
 
 }
 
-function parseExpression__yatexmlZparser_u20371(stream_p0) {
+function parseExpression__yatexmlZparser_u21085(stream_p0) {
           var Temporary3;
           var Temporary4;
                 var Temporary7;
@@ -8985,10 +9094,10 @@ function parseExpression__yatexmlZparser_u20371(stream_p0) {
             var Temporary28;
             var Temporary29;
 
-  var result_1526750934 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+  var result_1526751648 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var children_1526750939 = [];
+    var children_1526751653 = [];
     Label1: {
         Label2: while (true) {
         if (!(((((!(isAtEnd__yatexmlZlexer_u611(stream_p0)) && !(match__yatexmlZlexer_u664(stream_p0, 2))) && !(match__yatexmlZlexer_u664(stream_p0, 4))) && !(match__yatexmlZlexer_u664(stream_p0, 6))) && !(match__yatexmlZlexer_u664(stream_p0, 12))) && !(match__yatexmlZlexer_u664(stream_p0, 11)))) break Label2;
@@ -8996,85 +9105,85 @@ function parseExpression__yatexmlZparser_u20371(stream_p0) {
           break Label1;
           }
           
-          var primResult_1526750940 = parsePrimary__yatexmlZparser_u20377(stream_p0);
-          if (!(primResult_1526750940.isOk)) {
-          var Temporary3 = primResult_1526750940;
+          var primResult_1526751654 = parsePrimary__yatexmlZparser_u21091(stream_p0);
+          if (!(primResult_1526751654.isOk)) {
+          var Temporary3 = primResult_1526751654;
           if (ConstSet139[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }
-          result_1526750934 = nimCopy(result_1526750934, err__yatexmlZparser_u21645(Temporary3.error), NTI1526737362);
+          result_1526751648 = nimCopy(result_1526751648, err__yatexmlZparser_u22359(Temporary3.error), NTI1526737736);
           break BeforeRet;
           }
           
-          var Temporary4 = primResult_1526750940;
+          var Temporary4 = primResult_1526751654;
           if (ConstSet140[Temporary4.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary4.isOk, NTI33554466)); }
-          var node_1526750959 = Temporary4.value;
+          var node_1526751673 = Temporary4.value;
           Label5: {
               Label6: while (true) {
               if (!(match__yatexmlZlexer_u664(stream_p0, 9) || match__yatexmlZlexer_u664(stream_p0, 10))) break Label6;
-                if (!(node_1526750959.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1526750959;
+                if (!(node_1526751673.kind == 8)) Temporary7 = false; else {                  var Temporary9 = node_1526751673;
                   if (ConstSet141[Temporary9.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary9.kind, NTI1375731715)); }
-                  if ((Temporary9.accentKind == 10)) Temporary8 = true; else {                    var Temporary10 = node_1526750959;
+                  if ((Temporary9.accentKind == 16)) Temporary8 = true; else {                    var Temporary10 = node_1526751673;
                     if (ConstSet142[Temporary10.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'accentKind\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary10.kind, NTI1375731715)); }
-                    Temporary8 = (Temporary10.accentKind == 11);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1526750972 = Temporary7;
+                    Temporary8 = (Temporary10.accentKind == 17);                  }                  Temporary7 = Temporary8;                }                var isOverUnderbrace_1526751686 = Temporary7;
                 if (match__yatexmlZlexer_u664(stream_p0, 9)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary11 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary11 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary11 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary11 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var subResult_1526750973 = nimCopy(null, Temporary11, NTI1526737362);
-                if (!(subResult_1526750973.isOk)) {
-                var Temporary12 = subResult_1526750973;
+                var subResult_1526751687 = nimCopy(null, Temporary11, NTI1526737736);
+                if (!(subResult_1526751687.isOk)) {
+                var Temporary12 = subResult_1526751687;
                 if (ConstSet143[Temporary12.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary12.isOk, NTI33554466)); }
-                result_1526750934 = nimCopy(result_1526750934, err__yatexmlZparser_u21645(Temporary12.error), NTI1526737362);
+                result_1526751648 = nimCopy(result_1526751648, err__yatexmlZparser_u22359(Temporary12.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
                 if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary13 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary13 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary13 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary13 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var supResult_1526750992 = nimCopy(null, Temporary13, NTI1526737362);
-                if (!(supResult_1526750992.isOk)) {
-                var Temporary14 = supResult_1526750992;
+                var supResult_1526751706 = nimCopy(null, Temporary13, NTI1526737736);
+                if (!(supResult_1526751706.isOk)) {
+                var Temporary14 = supResult_1526751706;
                 if (ConstSet144[Temporary14.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary14.isOk, NTI33554466)); }
-                result_1526750934 = nimCopy(result_1526750934, err__yatexmlZparser_u21645(Temporary14.error), NTI1526737362);
+                result_1526751648 = nimCopy(result_1526751648, err__yatexmlZparser_u22359(Temporary14.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1526750972) {
-                var Temporary15 = subResult_1526750973;
+                if (isOverUnderbrace_1526751686) {
+                var Temporary15 = subResult_1526751687;
                 if (ConstSet145[Temporary15.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary15.isOk, NTI33554466)); }
-                var Temporary16 = supResult_1526750992;
+                var Temporary16 = supResult_1526751706;
                 if (ConstSet146[Temporary16.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary16.isOk, NTI33554466)); }
-                node_1526750959 = newUnderOver__yatexmlZast_u691(node_1526750959, Temporary15.value, Temporary16.value);
+                node_1526751673 = newUnderOver__yatexmlZast_u708(node_1526751673, Temporary15.value, Temporary16.value);
                 }
                 else {
-                  var Temporary17 = subResult_1526750973;
+                  var Temporary17 = subResult_1526751687;
                   if (ConstSet147[Temporary17.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary17.isOk, NTI33554466)); }
-                  var Temporary18 = supResult_1526750992;
+                  var Temporary18 = supResult_1526751706;
                   if (ConstSet148[Temporary18.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary18.isOk, NTI33554466)); }
-                  node_1526750959 = newSubSup__yatexmlZast_u596(node_1526750959, Temporary17.value, Temporary18.value);
+                  node_1526751673 = newSubSup__yatexmlZast_u613(node_1526751673, Temporary17.value, Temporary18.value);
                 }
                 
                 }
                 else {
-                  if (isOverUnderbrace_1526750972) {
-                  var Temporary19 = subResult_1526750973;
+                  if (isOverUnderbrace_1526751686) {
+                  var Temporary19 = subResult_1526751687;
                   if (ConstSet149[Temporary19.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary19.isOk, NTI33554466)); }
-                  node_1526750959 = newUnderOver__yatexmlZast_u691(node_1526750959, Temporary19.value, null);
+                  node_1526751673 = newUnderOver__yatexmlZast_u708(node_1526751673, Temporary19.value, null);
                   }
                   else {
-                    var Temporary20 = subResult_1526750973;
+                    var Temporary20 = subResult_1526751687;
                     if (ConstSet150[Temporary20.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary20.isOk, NTI33554466)); }
-                    node_1526750959 = newSub__yatexmlZast_u588(node_1526750959, Temporary20.value);
+                    node_1526751673 = newSub__yatexmlZast_u605(node_1526751673, Temporary20.value);
                   }
                   
                 }
@@ -9084,29 +9193,29 @@ function parseExpression__yatexmlZparser_u20371(stream_p0) {
                 if (match__yatexmlZlexer_u664(stream_p0, 10)) {
                 (advance__yatexmlZlexer_u600(stream_p0));
                 if (match__yatexmlZlexer_u664(stream_p0, 1)) {
-                Temporary21 = parseGroup__yatexmlZparser_u20380(stream_p0);
+                Temporary21 = parseGroup__yatexmlZparser_u21094(stream_p0);
                 }
                 else {
-                Temporary21 = parsePrimary__yatexmlZparser_u20377(stream_p0);
+                Temporary21 = parsePrimary__yatexmlZparser_u21091(stream_p0);
                 }
                 
-                var supResult_1526751011 = nimCopy(null, Temporary21, NTI1526737362);
-                if (!(supResult_1526751011.isOk)) {
-                var Temporary22 = supResult_1526751011;
+                var supResult_1526751725 = nimCopy(null, Temporary21, NTI1526737736);
+                if (!(supResult_1526751725.isOk)) {
+                var Temporary22 = supResult_1526751725;
                 if (ConstSet151[Temporary22.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary22.isOk, NTI33554466)); }
-                result_1526750934 = nimCopy(result_1526750934, err__yatexmlZparser_u21645(Temporary22.error), NTI1526737362);
+                result_1526751648 = nimCopy(result_1526751648, err__yatexmlZparser_u22359(Temporary22.error), NTI1526737736);
                 break BeforeRet;
                 }
                 
-                if (isOverUnderbrace_1526750972) {
-                var Temporary23 = supResult_1526751011;
+                if (isOverUnderbrace_1526751686) {
+                var Temporary23 = supResult_1526751725;
                 if (ConstSet152[Temporary23.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary23.isOk, NTI33554466)); }
-                node_1526750959 = newUnderOver__yatexmlZast_u691(node_1526750959, null, Temporary23.value);
+                node_1526751673 = newUnderOver__yatexmlZast_u708(node_1526751673, null, Temporary23.value);
                 }
                 else {
-                  var Temporary24 = supResult_1526751011;
+                  var Temporary24 = supResult_1526751725;
                   if (ConstSet153[Temporary24.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary24.isOk, NTI33554466)); }
-                  node_1526750959 = newSup__yatexmlZast_u592(node_1526750959, Temporary24.value);
+                  node_1526751673 = newSup__yatexmlZast_u609(node_1526751673, Temporary24.value);
                 }
                 
                 }
@@ -9115,47 +9224,47 @@ function parseExpression__yatexmlZparser_u20371(stream_p0) {
           };
           if ((match__yatexmlZlexer_u664(stream_p0, 15) && eqStrings(peek__yatexmlZlexer_u592(stream_p0, 0).value, [33]))) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          node_1526750959 = newRow__yatexmlZast_u601([node_1526750959, newOperator__yatexmlZast_u491([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
+          node_1526751673 = newRow__yatexmlZast_u618([node_1526751673, newOperator__yatexmlZast_u508([102,97,99,116,111,114,105,97,108], [33], [112,111,115,116,102,105,120])]);
           }
           
-          children_1526750939.push(node_1526750959);;
+          children_1526751653.push(node_1526751673);;
           if (match__yatexmlZlexer_u664(stream_p0, 0)) {
-          var cmdName_1526751038 = nimCopy(null, peek__yatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
-          if ((contains__yatexmlZparser_u21711(commandTable_1526747026, cmdName_1526751038) && (HEX5BHEX5D__yatexmlZparser_u20849(commandTable_1526747026, cmdName_1526751038).cmdType == 21))) {
+          var cmdName_1526751752 = nimCopy(null, peek__yatexmlZlexer_u592(stream_p0, 0).value, NTI33554449);
+          if ((contains__yatexmlZparser_u22425(commandTable_1526747740, cmdName_1526751752) && (HEX5BHEX5D__yatexmlZparser_u21563(commandTable_1526747740, cmdName_1526751752).cmdType == 21))) {
           (advance__yatexmlZlexer_u600(stream_p0));
-          if (((children_1526750939).length == 1)) {
-          Temporary25 = children_1526750939[chckIndx(0, 0, (children_1526750939).length - 1)];
+          if (((children_1526751653).length == 1)) {
+          Temporary25 = children_1526751653[chckIndx(0, 0, (children_1526751653).length - 1)];
           }
           else {
-          Temporary25 = newRow__yatexmlZast_u601(children_1526750939);
+          Temporary25 = newRow__yatexmlZast_u618(children_1526751653);
           }
           
-          var leftNode_1526751143 = Temporary25;
-          var rightResult_1526751144 = parseExpression__yatexmlZparser_u20371(stream_p0);
-          if (!(rightResult_1526751144.isOk)) {
-          var Temporary26 = rightResult_1526751144;
+          var leftNode_1526751857 = Temporary25;
+          var rightResult_1526751858 = parseExpression__yatexmlZparser_u21085(stream_p0);
+          if (!(rightResult_1526751858.isOk)) {
+          var Temporary26 = rightResult_1526751858;
           if (ConstSet154[Temporary26.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary26.isOk, NTI33554466)); }
-          result_1526750934 = nimCopy(result_1526750934, err__yatexmlZparser_u21645(Temporary26.error), NTI1526737362);
+          result_1526751648 = nimCopy(result_1526751648, err__yatexmlZparser_u22359(Temporary26.error), NTI1526737736);
           break BeforeRet;
           }
           
-          switch (toJSStr(cmdName_1526751038)) {
+          switch (toJSStr(cmdName_1526751752)) {
           case "over":
-            var Temporary27 = rightResult_1526751144;
+            var Temporary27 = rightResult_1526751858;
             if (ConstSet155[Temporary27.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary27.isOk, NTI33554466)); }
-            result_1526750934 = nimCopy(result_1526750934, ok__yatexmlZparser_u21143(newFrac__yatexmlZast_u575(leftNode_1526751143, Temporary27.value, false)), NTI1526737362);
+            result_1526751648 = nimCopy(result_1526751648, ok__yatexmlZparser_u21857(newFrac__yatexmlZast_u592(leftNode_1526751857, Temporary27.value, false)), NTI1526737736);
             break BeforeRet;
             break;
           case "choose":
-            var Temporary28 = rightResult_1526751144;
+            var Temporary28 = rightResult_1526751858;
             if (ConstSet156[Temporary28.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary28.isOk, NTI33554466)); }
-            result_1526750934 = nimCopy(result_1526750934, ok__yatexmlZparser_u21143(newBinomial__yatexmlZast_u580(leftNode_1526751143, Temporary28.value)), NTI1526737362);
+            result_1526751648 = nimCopy(result_1526751648, ok__yatexmlZparser_u21857(newBinomial__yatexmlZast_u597(leftNode_1526751857, Temporary28.value)), NTI1526737736);
             break BeforeRet;
             break;
           case "atop":
-            var Temporary29 = rightResult_1526751144;
+            var Temporary29 = rightResult_1526751858;
             if (ConstSet157[Temporary29.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary29.isOk, NTI33554466)); }
-            result_1526750934 = nimCopy(result_1526750934, ok__yatexmlZparser_u21143(newAtop__yatexmlZast_u584(leftNode_1526751143, Temporary29.value)), NTI1526737362);
+            result_1526751648 = nimCopy(result_1526751648, ok__yatexmlZparser_u21857(newAtop__yatexmlZast_u601(leftNode_1526751857, Temporary29.value)), NTI1526737736);
             break BeforeRet;
             break;
           default: 
@@ -9167,36 +9276,36 @@ function parseExpression__yatexmlZparser_u20371(stream_p0) {
           
         }
     };
-    if (((children_1526750939).length == 0)) {
-    result_1526750934 = nimCopy(result_1526750934, err__yatexmlZparser_u21007(1, [69,109,112,116,121,32,101,120,112,114,101,115,115,105,111,110], 0, []), NTI1526737362);
+    if (((children_1526751653).length == 0)) {
+    result_1526751648 = nimCopy(result_1526751648, err__yatexmlZparser_u21721(1, [69,109,112,116,121,32,101,120,112,114,101,115,115,105,111,110], 0, []), NTI1526737736);
     break BeforeRet;
     }
     else {
-    if (((children_1526750939).length == 1)) {
-    result_1526750934 = nimCopy(result_1526750934, ok__yatexmlZparser_u21143(children_1526750939[chckIndx(0, 0, (children_1526750939).length - 1)]), NTI1526737362);
+    if (((children_1526751653).length == 1)) {
+    result_1526751648 = nimCopy(result_1526751648, ok__yatexmlZparser_u21857(children_1526751653[chckIndx(0, 0, (children_1526751653).length - 1)]), NTI1526737736);
     break BeforeRet;
     }
     else {
-      result_1526750934 = nimCopy(result_1526750934, ok__yatexmlZparser_u21143(newRow__yatexmlZast_u601(children_1526750939)), NTI1526737362);
+      result_1526751648 = nimCopy(result_1526751648, ok__yatexmlZparser_u21857(newRow__yatexmlZast_u618(children_1526751653)), NTI1526737736);
       break BeforeRet;
     }
     }
   };
 
-  return result_1526750934;
+  return result_1526751648;
 
 }
 
-function parse__yatexmlZparser_u24549(tokens_p0) {
-  var result_1526751208 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
+function parse__yatexmlZparser_u25263(tokens_p0) {
+  var result_1526751922 = ({isOk: false, value: null, error: ({kind: 0, message: [], position: 0, context: []})});
 
   BeforeRet: {
-    var stream_1526751209 = [newTokenStream__yatexmlZlexer_u572(tokens_p0)];
-    result_1526751208 = nimCopy(result_1526751208, parseExpression__yatexmlZparser_u20371(stream_1526751209[0]), NTI1526737362);
+    var stream_1526751923 = [newTokenStream__yatexmlZlexer_u572(tokens_p0)];
+    result_1526751922 = nimCopy(result_1526751922, parseExpression__yatexmlZparser_u21085(stream_1526751923[0]), NTI1526737736);
     break BeforeRet;
   };
 
-  return result_1526751208;
+  return result_1526751922;
 
 }
 
@@ -9655,30 +9764,48 @@ function generateAccent__yatexmlZmathml95generator_u244(node_p0, options_p1) {
       Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [194,168], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281305)]);
       break;
     case 5:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,134,146], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281308)]);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,131,155], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281308)]);
       break;
     case 6:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [204,130], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281311)]);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,134,146], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281311)]);
       break;
     case 7:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [204,131], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281314)]);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [194,180], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281314)]);
       break;
     case 8:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [194,175], [])), []);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [96], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281317)]);
       break;
     case 9:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [95], [])), []);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [203,152], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281320)]);
       break;
     case 10:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,143,158], [])), []);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [203,135], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281323)]);
       break;
     case 11:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,143,159], [])), []);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,143,156], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281326)]);
       break;
     case 12:
-      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,134,146], [])), []);
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [204,130], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281329)]);
       break;
     case 13:
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [204,131], [])), [nimCopy(null, {Field0: [97,99,99,101,110,116], Field1: [116,114,117,101]}, NTI1560281332)]);
+      break;
+    case 14:
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [194,175], [])), []);
+      break;
+    case 15:
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [95], [])), []);
+      break;
+    case 16:
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,143,158], [])), []);
+      break;
+    case 17:
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,117,110,100,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,143,159], [])), []);
+      break;
+    case 18:
+      Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,134,146], [])), []);
+      break;
+    case 19:
       Temporary3 = tag__yatexmlZmathml95generator_u30([109,111,118,101,114], (base_1560281336).concat(tag__yatexmlZmathml95generator_u30([109,111], [226,134,144], [])), []);
       break;
     }
@@ -9727,7 +9854,7 @@ function generateStyle__yatexmlZmathml95generator_u249(node_p0, options_p1) {
       break;
     }
     var variant_1560281342 = nimCopy(null, Temporary3, NTI33554449);
-    result_1560281340 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1560281341, [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: nimCopy(null, variant_1560281342, NTI33554449)}, NTI1560281320)]), NTI33554449);
+    result_1560281340 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1560281341, [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: nimCopy(null, variant_1560281342, NTI33554449)}, NTI1560281338)]), NTI33554449);
 
   return result_1560281340;
 
@@ -9759,10 +9886,10 @@ function generateMathStyle__yatexmlZmathml95generator_u255(node_p0, options_p1) 
       Temporary3 = {Field0: [50], Field1: [102,97,108,115,101]};
       break;
     }
-    var tmpTuple_1560281348 = nimCopy(null, Temporary3, NTI1560281325);
+    var tmpTuple_1560281348 = nimCopy(null, Temporary3, NTI1560281343);
     var scriptlevel_1560281349 = nimCopy(null, tmpTuple_1560281348["Field0"], NTI33554449);
     var displaystyle_1560281350 = nimCopy(null, tmpTuple_1560281348["Field1"], NTI33554449);
-    result_1560281346 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1560281347, [nimCopy(null, {Field0: [115,99,114,105,112,116,108,101,118,101,108], Field1: nimCopy(null, scriptlevel_1560281349, NTI33554449)}, NTI1560281331), nimCopy(null, {Field0: [100,105,115,112,108,97,121,115,116,121,108,101], Field1: nimCopy(null, displaystyle_1560281350, NTI33554449)}, NTI1560281331)]), NTI33554449);
+    result_1560281346 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1560281347, [nimCopy(null, {Field0: [115,99,114,105,112,116,108,101,118,101,108], Field1: nimCopy(null, scriptlevel_1560281349, NTI33554449)}, NTI1560281349), nimCopy(null, {Field0: [100,105,115,112,108,97,121,115,116,121,108,101], Field1: nimCopy(null, displaystyle_1560281350, NTI33554449)}, NTI1560281349)]), NTI33554449);
 
   return result_1560281346;
 
@@ -9779,7 +9906,7 @@ function generateColor__yatexmlZmathml95generator_u284(node_p0, options_p1) {
     var base_1560281376 = generateNode__yatexmlZmathml95generator_u49(Temporary1.colorBase, options_p1);
     var Temporary2 = node_p0;
     if (ConstSet199[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'colorName\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1375731715)); }
-    result_1560281375 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1560281376, [nimCopy(null, {Field0: [109,97,116,104,99,111,108,111,114], Field1: nimCopy(null, Temporary2.colorName, NTI33554449)}, NTI1560281356)]), NTI33554449);
+    result_1560281375 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,115,116,121,108,101], base_1560281376, [nimCopy(null, {Field0: [109,97,116,104,99,111,108,111,114], Field1: nimCopy(null, Temporary2.colorName, NTI33554449)}, NTI1560281374)]), NTI33554449);
 
   return result_1560281375;
 
@@ -9788,8 +9915,8 @@ function generateColor__yatexmlZmathml95generator_u284(node_p0, options_p1) {
 function generatePhantom__yatexmlZmathml95generator_u263(node_p0, options_p1) {
   var result_1560281354 = [];
 
-    var phantom_1560281355 = tag__yatexmlZmathml95generator_u30([109,112,104,97,110,116,111,109], tag__yatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,114,101,102,105,120]}, NTI1560281336), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1560281336), nimCopy(null, {Field0: [108,115,112,97,99,101], Field1: [48,101,109]}, NTI1560281336), nimCopy(null, {Field0: [114,115,112,97,99,101], Field1: [48,101,109]}, NTI1560281336)]), []);
-    result_1560281354 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,112,97,100,100,101,100], phantom_1560281355, [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,112,120]}, NTI1560281342)]), NTI33554449);
+    var phantom_1560281355 = tag__yatexmlZmathml95generator_u30([109,112,104,97,110,116,111,109], tag__yatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,114,101,102,105,120]}, NTI1560281354), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1560281354), nimCopy(null, {Field0: [108,115,112,97,99,101], Field1: [48,101,109]}, NTI1560281354), nimCopy(null, {Field0: [114,115,112,97,99,101], Field1: [48,101,109]}, NTI1560281354)]), []);
+    result_1560281354 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,112,97,100,100,101,100], phantom_1560281355, [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,112,120]}, NTI1560281360)]), NTI33554449);
 
   return result_1560281354;
 
@@ -9847,18 +9974,18 @@ function generateDelimited__yatexmlZmathml95generator_u298(node_p0, options_p1) 
       if (!eqStrings(Temporary3.delimLeft, [40])) Temporary2 = false; else {        var Temporary4 = node_p0;
         if (ConstSet203[Temporary4.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimRight\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary4.kind, NTI1375731715)); }
         Temporary2 = eqStrings(Temporary4.delimRight, [41]);      }    if (Temporary2) {
-    var leftFence_1560281391 = tag__yatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,114,101,102,105,120]}, NTI1560281374), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1560281374)]);
-    var rightFence_1560281392 = tag__yatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,111,115,116,102,105,120]}, NTI1560281378), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1560281378)]);
+    var leftFence_1560281391 = tag__yatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,114,101,102,105,120]}, NTI1560281392), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1560281392)]);
+    var rightFence_1560281392 = tag__yatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,111,114,109], Field1: [112,111,115,116,102,105,120]}, NTI1560281396), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [102,97,108,115,101]}, NTI1560281396)]);
     result_1560281389 = nimCopy(null, (leftFence_1560281391).concat(content_1560281390,rightFence_1560281392), NTI33554449);
     break BeforeRet;
     }
     else {
       var Temporary5 = node_p0;
       if (ConstSet204[Temporary5.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimLeft\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary5.kind, NTI1375731715)); }
-      var leftFence_1560281393 = tag__yatexmlZmathml95generator_u30([109,111], Temporary5.delimLeft, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281383), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1560281383)]);
+      var leftFence_1560281393 = tag__yatexmlZmathml95generator_u30([109,111], Temporary5.delimLeft, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281401), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1560281401)]);
       var Temporary6 = node_p0;
       if (ConstSet205[Temporary6.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'delimRight\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary6.kind, NTI1375731715)); }
-      var rightFence_1560281394 = tag__yatexmlZmathml95generator_u30([109,111], Temporary6.delimRight, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281388), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1560281388)]);
+      var rightFence_1560281394 = tag__yatexmlZmathml95generator_u30([109,111], Temporary6.delimRight, [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281406), nimCopy(null, {Field0: [115,116,114,101,116,99,104,121], Field1: [116,114,117,101]}, NTI1560281406)]);
       result_1560281389 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,114,111,119], (leftFence_1560281393).concat(content_1560281390,rightFence_1560281394), []), NTI33554449);
       break BeforeRet;
     }
@@ -9896,7 +10023,7 @@ function generateSizedDelimiter__yatexmlZmathml95generator_u307(node_p0, options
       break;
     }
     var sizeStr_1560281399 = nimCopy(null, Temporary2, NTI33554449);
-    var attrs_1560281400 = [nimCopy(null, {Field0: [109,97,120,115,105,122,101], Field1: nimCopy(null, sizeStr_1560281399, NTI33554449)}, NTI1560281394), nimCopy(null, {Field0: [109,105,110,115,105,122,101], Field1: nimCopy(null, sizeStr_1560281399, NTI33554449)}, NTI1560281394), nimCopy(null, {Field0: [115,121,109,109,101,116,114,105,99], Field1: [116,114,117,101]}, NTI1560281394), nimCopy(null, {Field0: [102,101,110,99,101], Field1: [102,97,108,115,101]}, NTI1560281394)];
+    var attrs_1560281400 = [nimCopy(null, {Field0: [109,97,120,115,105,122,101], Field1: nimCopy(null, sizeStr_1560281399, NTI33554449)}, NTI1560281412), nimCopy(null, {Field0: [109,105,110,115,105,122,101], Field1: nimCopy(null, sizeStr_1560281399, NTI33554449)}, NTI1560281412), nimCopy(null, {Field0: [115,121,109,109,101,116,114,105,99], Field1: [116,114,117,101]}, NTI1560281412), nimCopy(null, {Field0: [102,101,110,99,101], Field1: [102,97,108,115,101]}, NTI1560281412)];
     var Temporary3 = node_p0;
     if (ConstSet207[Temporary3.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'sizedDelimChar\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary3.kind, NTI1375731715)); }
     result_1560281398 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,111], Temporary3.sizedDelimChar, attrs_1560281400), NTI33554449);
@@ -9975,21 +10102,54 @@ function generateBigOp__yatexmlZmathml95generator_u323(node_p0, options_p1) {
       Temporary2 = [226,136,173];
       break;
     case 5:
-      Temporary2 = [226,136,174];
+      Temporary2 = [226,168,140];
       break;
     case 6:
-      Temporary2 = [226,139,131];
+      Temporary2 = [226,136,174];
       break;
     case 7:
-      Temporary2 = [226,139,130];
+      Temporary2 = [226,136,175];
       break;
     case 8:
-      Temporary2 = [108,105,109];
+      Temporary2 = [226,136,176];
       break;
     case 9:
-      Temporary2 = [109,97,120];
+      Temporary2 = [226,139,131];
       break;
     case 10:
+      Temporary2 = [226,139,130];
+      break;
+    case 11:
+      Temporary2 = [226,136,144];
+      break;
+    case 12:
+      Temporary2 = [226,168,129];
+      break;
+    case 13:
+      Temporary2 = [226,168,130];
+      break;
+    case 14:
+      Temporary2 = [226,168,128];
+      break;
+    case 15:
+      Temporary2 = [226,168,132];
+      break;
+    case 16:
+      Temporary2 = [226,168,134];
+      break;
+    case 17:
+      Temporary2 = [226,139,129];
+      break;
+    case 18:
+      Temporary2 = [226,139,128];
+      break;
+    case 19:
+      Temporary2 = [108,105,109];
+      break;
+    case 20:
+      Temporary2 = [109,97,120];
+      break;
+    case 21:
       Temporary2 = [109,105,110];
       break;
     }
@@ -10000,7 +10160,7 @@ function generateBigOp__yatexmlZmathml95generator_u323(node_p0, options_p1) {
     Temporary3 = tag__yatexmlZmathml95generator_u30([109,111], opSymbol_1560281415, []);
     }
     else {
-    Temporary3 = tag__yatexmlZmathml95generator_u30([109,111], opSymbol_1560281415, [nimCopy(null, {Field0: [109,111,118,97,98,108,101,108,105,109,105,116,115], Field1: [102,97,108,115,101]}, NTI1560281416)]);
+    Temporary3 = tag__yatexmlZmathml95generator_u30([109,111], opSymbol_1560281415, [nimCopy(null, {Field0: [109,111,118,97,98,108,101,108,105,109,105,116,115], Field1: [102,97,108,115,101]}, NTI1560281434)]);
     }
     
     var opNode_1560281421 = nimCopy(null, Temporary3, NTI33554449);
@@ -10172,7 +10332,7 @@ function generateMatrix__yatexmlZmathml95generator_u384(node_p0, options_p1) {
             row_1560281506 = colontmp__1207959849[chckIndx(i_1207959851, 0, (colontmp__1207959849).length - 1)];
             var rowContent_1560281507 = [];
             if (isAlignmentEnv_1560281483) {
-            rowContent_1560281507.push.apply(rowContent_1560281507, tag__yatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1560281496)]));;
+            rowContent_1560281507.push.apply(rowContent_1560281507, tag__yatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1560281514)]));;
             }
             
             Label6: {
@@ -10232,7 +10392,7 @@ function generateMatrix__yatexmlZmathml95generator_u384(node_p0, options_p1) {
               };
             };
             if (isAlignmentEnv_1560281483) {
-            rowContent_1560281507.push.apply(rowContent_1560281507, tag__yatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1560281563)]));;
+            rowContent_1560281507.push.apply(rowContent_1560281507, tag__yatexmlZmathml95generator_u30([109,116,100], [], [nimCopy(null, {Field0: [115,116,121,108,101], Field1: [112,97,100,100,105,110,103,58,48,59,119,105,100,116,104,58,53,48,37]}, NTI1560281581)]));;
             }
             
             tableContent_1560281476.push.apply(tableContent_1560281476, tag__yatexmlZmathml95generator_u30([109,116,114], rowContent_1560281507, []));;
@@ -10333,27 +10493,27 @@ function generateMatrix__yatexmlZmathml95generator_u384(node_p0, options_p1) {
     if (ConstSet243[Temporary33.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'matrixType\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary33.kind, NTI1375731715)); }
     switch (toJSStr(Temporary33.matrixType)) {
     case "pmatrix":
-      var left_1560281646 = tag__yatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281645)]);
-      var right_1560281647 = tag__yatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281648)]);
+      var left_1560281646 = tag__yatexmlZmathml95generator_u30([109,111], [40], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281663)]);
+      var right_1560281647 = tag__yatexmlZmathml95generator_u30([109,111], [41], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281666)]);
       Temporary34 = tag__yatexmlZmathml95generator_u30([109,114,111,119], (left_1560281646).concat(table_1560281645,right_1560281647), []);
       break;
     case "bmatrix":
-      var left_1560281648 = tag__yatexmlZmathml95generator_u30([109,111], [91], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281651)]);
-      var right_1560281649 = tag__yatexmlZmathml95generator_u30([109,111], [93], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281654)]);
+      var left_1560281648 = tag__yatexmlZmathml95generator_u30([109,111], [91], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281669)]);
+      var right_1560281649 = tag__yatexmlZmathml95generator_u30([109,111], [93], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281672)]);
       Temporary34 = tag__yatexmlZmathml95generator_u30([109,114,111,119], (left_1560281648).concat(table_1560281645,right_1560281649), []);
       break;
     case "vmatrix":
-      var left_1560281650 = tag__yatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281657)]);
-      var right_1560281651 = tag__yatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281660)]);
+      var left_1560281650 = tag__yatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281675)]);
+      var right_1560281651 = tag__yatexmlZmathml95generator_u30([109,111], [124], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281678)]);
       Temporary34 = tag__yatexmlZmathml95generator_u30([109,114,111,119], (left_1560281650).concat(table_1560281645,right_1560281651), []);
       break;
     case "Vmatrix":
-      var left_1560281652 = tag__yatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281663)]);
-      var right_1560281653 = tag__yatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281666)]);
+      var left_1560281652 = tag__yatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281681)]);
+      var right_1560281653 = tag__yatexmlZmathml95generator_u30([109,111], [226,128,150], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281684)]);
       Temporary34 = tag__yatexmlZmathml95generator_u30([109,114,111,119], (left_1560281652).concat(table_1560281645,right_1560281653), []);
       break;
     case "cases":
-      var left_1560281654 = tag__yatexmlZmathml95generator_u30([109,111], [123], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281669)]);
+      var left_1560281654 = tag__yatexmlZmathml95generator_u30([109,111], [123], [nimCopy(null, {Field0: [102,101,110,99,101], Field1: [116,114,117,101]}, NTI1560281687)]);
       Temporary34 = tag__yatexmlZmathml95generator_u30([109,114,111,119], (left_1560281654).concat(table_1560281645), []);
       break;
     case "align":
@@ -10585,10 +10745,10 @@ function generateSIUnit__yatexmlZmathml95generator_u587(node_p0, options_p1) {
             i_1560281734 = i_1207959865;
             comp_1560281735 = nimCopy(comp_1560281735, colontmp__1207959863[chckIndx(i_1207959865, 0, (colontmp__1207959863).length - 1)], NTI1375731725);
             if ((0 < i_1560281734)) {
-            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1560281714)]));;
+            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1560281732)]));;
             }
             
-            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u30([109,105], unitToString__yatexmlZmathml95generator_u591(comp_1560281735), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1560281717)]));;
+            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u30([109,105], unitToString__yatexmlZmathml95generator_u591(comp_1560281735), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1560281735)]));;
             i_1207959865 += 1;
             if (!(((colontmp__1207959863).length == L_1207959866))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -10616,10 +10776,10 @@ function generateSIUnit__yatexmlZmathml95generator_u587(node_p0, options_p1) {
             i_1560281744 = i_1207959870;
             comp_1560281745 = nimCopy(comp_1560281745, colontmp__1207959869[chckIndx(i_1207959870, 0, (colontmp__1207959869).length - 1)], NTI1375731725);
             if ((0 < i_1560281744)) {
-            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1560281728)]));;
+            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1560281746)]));;
             }
             
-            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u30([109,105], unitToString__yatexmlZmathml95generator_u591(comp_1560281745), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1560281731)]));;
+            content_1560281684.push.apply(content_1560281684, tag__yatexmlZmathml95generator_u30([109,105], unitToString__yatexmlZmathml95generator_u591(comp_1560281745), [nimCopy(null, {Field0: [109,97,116,104,118,97,114,105,97,110,116], Field1: [110,111,114,109,97,108]}, NTI1560281749)]));;
             i_1207959870 += 1;
             if (!(((colontmp__1207959869).length == L_1207959871))) {
             failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -10648,7 +10808,7 @@ function generateSIValue__yatexmlZmathml95generator_u658(node_p0, options_p1) {
     var Temporary2 = node_p0;
     if (ConstSet250[Temporary2.kind]===undefined) { raiseFieldError2(makeNimstrLit("field \'siUnit\' is not accessible for type \'AstNode\' using \'kind = "), reprDiscriminant(Temporary2.kind, NTI1375731715)); }
     var unitNode_1560281751 = generateNode__yatexmlZmathml95generator_u49(Temporary2.siUnit, options_p1);
-    var space_1560281752 = tag__yatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1560281737)]);
+    var space_1560281752 = tag__yatexmlZmathml95generator_u40([109,115,112,97,99,101], [nimCopy(null, {Field0: [119,105,100,116,104], Field1: [48,46,49,54,55,101,109]}, NTI1560281755)]);
     result_1560281749 = nimCopy(null, tag__yatexmlZmathml95generator_u30([109,114,111,119], (valueNode_1560281750).concat(space_1560281752,unitNode_1560281751), []), NTI33554449);
 
   return result_1560281749;
@@ -10761,7 +10921,7 @@ function generateNode__yatexmlZmathml95generator_u49(node_p0, options_p1) {
 function generateMathML__yatexmlZmathml95generator_u672(ast_p0, options_p1) {
   var result_1560281763 = [];
 
-    var attrs_1560281768 = [nimCopy(null, {Field0: [120,109,108,110,115], Field1: [104,116,116,112,58,47,47,119,119,119,46,119,51,46,111,114,103,47,49,57,57,56,47,77,97,116,104,47,77,97,116,104,77,76]}, NTI1560281746)];
+    var attrs_1560281768 = [nimCopy(null, {Field0: [120,109,108,110,115], Field1: [104,116,116,112,58,47,47,119,119,119,46,119,51,46,111,114,103,47,49,57,57,56,47,77,97,116,104,47,77,97,116,104,77,76]}, NTI1560281764)];
     if (options_p1.displayStyle) {
     attrs_1560281768.push({Field0: [100,105,115,112,108,97,121], Field1: [98,108,111,99,107]});;
     }
@@ -10801,7 +10961,7 @@ function latexToMathML__yatexml_u6(latex_p0, options_p1) {
     
     var Temporary2 = lexResult_1207959566;
     if (ConstSet158[Temporary2.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'value\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary2.isOk, NTI33554466)); }
-    var parseResult_1207959619 = parse__yatexmlZparser_u24549(Temporary2.value);
+    var parseResult_1207959619 = parse__yatexmlZparser_u25263(Temporary2.value);
     if (!(parseResult_1207959619.isOk)) {
     var Temporary3 = parseResult_1207959619;
     if (ConstSet159[Temporary3.isOk]===undefined) { raiseFieldError2(makeNimstrLit("field \'error\' is not accessible for type \'Result\' using \'isOk = "), reprDiscriminant(Temporary3.isOk, NTI33554466)); }

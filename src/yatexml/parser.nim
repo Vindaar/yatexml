@@ -390,6 +390,12 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["dot"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["ddot"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["vec"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["acute"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["grave"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["breve"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["check"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["dddot"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
+  result["wideparen"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["widehat"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["widetilde"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
   result["overline"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
@@ -411,6 +417,17 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["min"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["bigcup"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
   result["bigcap"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["iiiint"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["oiint"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["oiiint"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["coprod"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigoplus"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigotimes"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigodot"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["biguplus"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigsqcup"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigvee"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
+  result["bigwedge"] = CommandInfo(cmdType: ctBigOp, numArgs: 0)
 
   # Functions - trigonometric
   result["sin"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
@@ -1572,7 +1589,13 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           of "tilde": akTilde
           of "dot": akDot
           of "ddot": akDdot
+          of "dddot": akDddot
           of "vec": akVec
+          of "acute": akAcute
+          of "grave": akGrave
+          of "breve": akBreve
+          of "check": akCheck
+          of "wideparen": akWideparen
           of "widehat": akWidehat
           of "widetilde": akWidetilde
           of "overline": akOverline
@@ -1595,9 +1618,20 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           of "int": boInt
           of "iint": boIInt
           of "iiint": boIIInt
+          of "iiiint": boIIIInt
           of "oint": boOint
+          of "oiint": boOIInt
+          of "oiiint": boOIIInt
           of "bigcup": boUnion
           of "bigcap": boIntersect
+          of "coprod": boCoProd
+          of "bigoplus": boOPlus
+          of "bigotimes": boOTimes
+          of "bigodot": boODot
+          of "biguplus": boUPlus
+          of "bigsqcup": boSqCup
+          of "bigvee": boVee
+          of "bigwedge": boWedge
           of "lim": boLim
           of "max": boMax
           of "min": boMin

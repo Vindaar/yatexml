@@ -57,7 +57,13 @@ type
     akTilde               ## \tilde
     akDot                 ## \dot
     akDdot                ## \ddot
+    akDddot               ## \dddot
     akVec                 ## \vec
+    akAcute               ## \acute
+    akGrave               ## \grave
+    akBreve               ## \breve
+    akCheck               ## \check
+    akWideparen           ## \wideparen
     akWidehat             ## \widehat
     akWidetilde           ## \widetilde
     akOverline            ## \overline
@@ -92,9 +98,20 @@ type
     boInt                 ## \int
     boIInt                ## \iint
     boIIInt               ## \iiint
+    boIIIInt              ## \iiiint
     boOint                ## \oint
+    boOIInt               ## \oiint
+    boOIIInt              ## \oiiint
     boUnion               ## \bigcup
     boIntersect           ## \bigcap
+    boCoProd              ## \coprod
+    boOPlus               ## \bigoplus
+    boOTimes              ## \bigotimes
+    boODot                ## \bigodot
+    boUPlus               ## \biguplus
+    boSqCup               ## \bigsqcup
+    boVee                 ## \bigvee
+    boWedge               ## \bigwedge
     boLim                 ## \lim
     boMax                 ## \max
     boMin                 ## \min

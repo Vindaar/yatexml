@@ -1529,6 +1529,83 @@ suite "Binary Operator Tests - Other":
     check "★" in result.value
     check "·" in result.value
 
+suite "Large Operator Tests":
+  test "Coproduct":
+    let result = latexToMathML(r"\coprod_{i=1}^n A_i")
+    check result.isOk
+    check "∐" in result.value
+
+  test "Large circle operators":
+    let result = latexToMathML(r"\bigoplus \bigotimes \bigodot")
+    check result.isOk
+    check "⨁" in result.value
+    check "⨂" in result.value
+    check "⨀" in result.value
+
+  test "Large set operators":
+    let result = latexToMathML(r"\biguplus \bigsqcup")
+    check result.isOk
+    check "⨄" in result.value
+    check "⨆" in result.value
+
+  test "Large logic operators":
+    let result = latexToMathML(r"\bigvee \bigwedge")
+    check result.isOk
+    check "⋁" in result.value
+    check "⋀" in result.value
+
+  test "Quadruple integral":
+    let result = latexToMathML(r"\iiiint_V f\,dV")
+    check result.isOk
+    check "⨌" in result.value
+
+  test "Surface integrals":
+    let result = latexToMathML(r"\oiint_S \vec{F} \cdot d\vec{S}")
+    check result.isOk
+    check "∯" in result.value
+
+  test "Volume integral":
+    let result = latexToMathML(r"\oiiint_V f\,dV")
+    check result.isOk
+    check "∰" in result.value
+
+suite "Accent Tests":
+  test "Acute accent":
+    let result = latexToMathML(r"\acute{x}")
+    check result.isOk
+    check "<mover" in result.value
+    check "´" in result.value
+
+  test "Grave accent":
+    let result = latexToMathML(r"\grave{x}")
+    check result.isOk
+    check "<mover" in result.value
+    check "`" in result.value
+
+  test "Breve accent":
+    let result = latexToMathML(r"\breve{x}")
+    check result.isOk
+    check "<mover" in result.value
+    check "˘" in result.value
+
+  test "Check accent (caron)":
+    let result = latexToMathML(r"\check{x}")
+    check result.isOk
+    check "<mover" in result.value
+    check "ˇ" in result.value
+
+  test "Triple dot accent":
+    let result = latexToMathML(r"\dddot{x}")
+    check result.isOk
+    check "<mover" in result.value
+    check "⃛" in result.value
+
+  test "Wide parenthesis":
+    let result = latexToMathML(r"\wideparen{xyz}")
+    check result.isOk
+    check "<mover" in result.value
+    check "⏜" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)
