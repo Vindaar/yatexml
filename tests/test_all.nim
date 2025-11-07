@@ -1606,6 +1606,76 @@ suite "Accent Tests":
     check "<mover" in result.value
     check "⏜" in result.value
 
+suite "Fraction Variants":
+  test "Display style fraction (\\dfrac)":
+    let result = latexToMathML(r"\dfrac{a}{b}")
+    check result.isOk
+    check "<mfrac>" in result.value
+    check "<mstyle" in result.value
+    check "displaystyle=\"true\"" in result.value
+    check "<mi>a</mi>" in result.value
+    check "<mi>b</mi>" in result.value
+
+  test "Text style fraction (\\tfrac)":
+    let result = latexToMathML(r"\tfrac{a}{b}")
+    check result.isOk
+    check "<mfrac>" in result.value
+    check "<mstyle" in result.value
+    check "displaystyle=\"false\"" in result.value
+    check "<mi>a</mi>" in result.value
+    check "<mi>b</mi>" in result.value
+
+  test "Nested display and text fractions":
+    let result = latexToMathML(r"\dfrac{x}{\tfrac{a}{b}}")
+    check result.isOk
+    check "<mfrac>" in result.value
+    check "displaystyle=\"true\"" in result.value
+    check "displaystyle=\"false\"" in result.value
+
+  test "Complex expression with \\dfrac":
+    let result = latexToMathML(r"\dfrac{x^2 + 1}{y - 2}")
+    check result.isOk
+    check "<mfrac>" in result.value
+    check "<msup>" in result.value
+    check "displaystyle=\"true\"" in result.value
+
+suite "Binomial Coefficients":
+  test "Binomial coefficient (\\binom)":
+    let result = latexToMathML(r"\binom{n}{k}")
+    check result.isOk
+    check "linethickness=\"0px\"" in result.value
+    check "fence=\"true\"" in result.value
+    check "<mi>n</mi>" in result.value
+    check "<mi>k</mi>" in result.value
+
+  test "Display style binomial (\\dbinom)":
+    let result = latexToMathML(r"\dbinom{n}{k}")
+    check result.isOk
+    check "linethickness=\"0px\"" in result.value
+    check "<mstyle" in result.value
+    check "displaystyle=\"true\"" in result.value
+
+  test "Text style binomial (\\tbinom)":
+    let result = latexToMathML(r"\tbinom{n}{k}")
+    check result.isOk
+    check "linethickness=\"0px\"" in result.value
+    check "<mstyle" in result.value
+    check "displaystyle=\"false\"" in result.value
+
+  test "Binomial with expressions":
+    let result = latexToMathML(r"\binom{n+1}{k-1}")
+    check result.isOk
+    check "linethickness=\"0px\"" in result.value
+    check "+" in result.value
+    # Minus is rendered as Unicode U+2212 (−) not ASCII hyphen
+    check "−" in result.value or "-" in result.value
+
+  test "Nested binomials":
+    let result = latexToMathML(r"\dbinom{\binom{n}{k}}{m}")
+    check result.isOk
+    check "linethickness=\"0px\"" in result.value
+    check "displaystyle=\"true\"" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

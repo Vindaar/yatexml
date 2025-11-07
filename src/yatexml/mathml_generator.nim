@@ -110,6 +110,12 @@ proc generateFrac(node: AstNode, options: MathMLOptions): string =
   # This prevents nested fractions from progressively shrinking (matches TeMML)
   if node.fracIsContinued:
     tag("mstyle", frac, [("displaystyle", "true"), ("scriptlevel", "0")])
+  elif node.fracStyle == fsDisplay:
+    # \dfrac: force display style
+    tag("mstyle", frac, [("displaystyle", "true")])
+  elif node.fracStyle == fsText:
+    # \tfrac: force text style
+    tag("mstyle", frac, [("displaystyle", "false")])
   else:
     frac
 
@@ -119,7 +125,17 @@ proc generateBinomial(node: AstNode, options: MathMLOptions): string =
   let bottom = generateNode(node.binomBottom, options)
   # Use mfrac with linethickness="0px" for no line, wrapped in parentheses
   let frac = tag("mfrac", top & bottom, [("linethickness", "0px")])
-  tag("mrow", tag("mo", "(", [("fence", "true")]) & frac & tag("mo", ")", [("fence", "true")]))
+  let binom = tag("mrow", tag("mo", "(", [("fence", "true")]) & frac & tag("mo", ")", [("fence", "true")]))
+
+  # Apply display style if specified
+  if node.binomStyle == fsDisplay:
+    # \dbinom: force display style
+    tag("mstyle", binom, [("displaystyle", "true")])
+  elif node.binomStyle == fsText:
+    # \tbinom: force text style
+    tag("mstyle", binom, [("displaystyle", "false")])
+  else:
+    binom
 
 proc generateAtop(node: AstNode, options: MathMLOptions): string =
   ## Generate stacked expression without line

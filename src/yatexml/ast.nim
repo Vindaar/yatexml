@@ -91,6 +91,12 @@ type
     mskScriptstyle        ## \scriptstyle - scriptlevel=1, displaystyle=false
     mskScriptscriptstyle  ## \scriptscriptstyle - scriptlevel=2, displaystyle=false
 
+  FracStyle* = enum
+    ## Display style for fractions and binomials
+    fsNormal              ## Normal (inherit context style)
+    fsDisplay             ## \dfrac, \dbinom - force display style
+    fsText                ## \tfrac, \tbinom - force text style
+
   BigOpKind* = enum
     ## Different big operators
     boSum                 ## \sum
@@ -268,10 +274,12 @@ type
       fracNum*: AstNode           ## Numerator
       fracDenom*: AstNode         ## Denominator
       fracIsContinued*: bool      ## True for \cfrac (continued fractions)
+      fracStyle*: FracStyle       ## Display style (normal, display, text)
 
     of nkBinomial:
       binomTop*: AstNode          ## Top value (n)
       binomBottom*: AstNode       ## Bottom value (k)
+      binomStyle*: FracStyle      ## Display style (normal, display, text)
 
     of nkAtop:
       atopTop*: AstNode           ## Top expression
@@ -400,13 +408,13 @@ proc newPhantom*(): AstNode =
   ## Create a phantom node (mathstrut)
   AstNode(kind: nkPhantom)
 
-proc newFrac*(num: AstNode, denom: AstNode, isContinued: bool = false): AstNode =
+proc newFrac*(num: AstNode, denom: AstNode, isContinued: bool = false, style: FracStyle = fsNormal): AstNode =
   ## Create a fraction node
-  AstNode(kind: nkFrac, fracNum: num, fracDenom: denom, fracIsContinued: isContinued)
+  AstNode(kind: nkFrac, fracNum: num, fracDenom: denom, fracIsContinued: isContinued, fracStyle: style)
 
-proc newBinomial*(top: AstNode, bottom: AstNode): AstNode =
+proc newBinomial*(top: AstNode, bottom: AstNode, style: FracStyle = fsNormal): AstNode =
   ## Create a binomial coefficient node
-  AstNode(kind: nkBinomial, binomTop: top, binomBottom: bottom)
+  AstNode(kind: nkBinomial, binomTop: top, binomBottom: bottom, binomStyle: style)
 
 proc newAtop*(top: AstNode, bottom: AstNode): AstNode =
   ## Create an atop node (stacked without line)

@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 118**
+**Total Unimplemented Commands: 113**
 
 **Last Updated:** 2025-11-07
 
@@ -152,15 +152,13 @@ All 11 large operator commands have been implemented: `\coprod`, `\bigoplus`, `\
 
 ---
 
-## 16. Fractions and Binomials - 5 commands
+## 16. Fractions and Binomials - 0 commands (Completed)
 
-```latex
-\dfrac          \tfrac          \binom          \dbinom         \tbinom
-```
+All 5 fraction and binomial coefficient commands have been implemented: `\dfrac` (display-style fraction), `\tfrac` (text-style fraction), `\binom` (binomial coefficient), `\dbinom` (display-style binomial), `\tbinom` (text-style binomial).
 
-**Priority:** HIGH - `\dfrac` and `\tfrac` are very common (display/text-style fractions).
+These commands control the display style using MathML `<mstyle>` elements with `displaystyle="true"` or `displaystyle="false"` attributes.
 
-**Note:** `\binom` is the binomial coefficient, commonly used in combinatorics.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -267,12 +265,12 @@ These are variants of cap, cup, and shifts.
 
 ## Summary by Priority
 
-### HIGH Priority (Very Common) - ~7 commands remaining
+### HIGH Priority (Very Common) - ~2 commands remaining
 - Trigonometric functions (0) ✓ Completed
 - Mathematical functions (0) ✓ Completed
 - Delimiters and norms (0) ✓ Completed
 - Common special symbols (0) ✓ Completed
-- Fractions: `\dfrac`, `\tfrac`, `\binom` (5)
+- Fractions and binomials (0) ✓ Completed
 - Positioning: `\overset`, `\underset` (2)
 - Styling: `\boldsymbol`, `\not` (2+, package-dependent)
 
@@ -330,8 +328,8 @@ These require special handling:
 ### Phase 1: Functions (HIGH Impact, Easy) ✓ COMPLETED
 All trigonometric and mathematical functions have been implemented (27 commands: 13 trig + 14 math).
 
-### Phase 2: Fraction Variants (HIGH Impact, Medium Difficulty)
-Implement `\dfrac`, `\tfrac`, `\binom` and variants.
+### Phase 2: Fraction Variants (HIGH Impact, Medium Difficulty) ✓ COMPLETED
+Implemented `\dfrac`, `\tfrac`, `\binom`, `\dbinom`, and `\tbinom` (5 commands). These control display style using MathML `<mstyle>` elements.
 
 ### Phase 3: Essential Symbols (HIGH Impact, Easy) ✓ COMPLETED
 All essential symbols implemented (25 commands): delimiters/norms (`\lVert`, `\rVert`, `\mid`, `\parallel`) and special mathematical symbols (`\ell`, `\hbar`, `\imath`, `\jmath`, `\wp`, Hebrew letters, geometric symbols, logic symbols, corners).

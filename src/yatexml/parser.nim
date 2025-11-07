@@ -10,7 +10,7 @@ import tables, strutils
 
 type
   CommandType = enum
-    ctFrac, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
+    ctFrac, ctBinomial, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor, ctPhantom,
     ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac,
     ctOperatorName, ctBmod, ctPmod
@@ -30,6 +30,13 @@ proc initCommandTable(): Table[string, CommandInfo] =
   # Fractions
   result["frac"] = CommandInfo(cmdType: ctFrac, numArgs: 2)
   result["cfrac"] = CommandInfo(cmdType: ctFrac, numArgs: 2)  # Continued fractions (same as frac for now)
+  result["dfrac"] = CommandInfo(cmdType: ctFrac, numArgs: 2)  # Display style fraction
+  result["tfrac"] = CommandInfo(cmdType: ctFrac, numArgs: 2)  # Text style fraction
+
+  # Binomial coefficients
+  result["binom"] = CommandInfo(cmdType: ctBinomial, numArgs: 2)    # Binomial coefficient
+  result["dbinom"] = CommandInfo(cmdType: ctBinomial, numArgs: 2)   # Display style binomial
+  result["tbinom"] = CommandInfo(cmdType: ctBinomial, numArgs: 2)   # Text style binomial
 
   # Infix fraction-like commands
   result["over"] = CommandInfo(cmdType: ctInfixFrac, numArgs: 0)
@@ -1517,7 +1524,25 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           return err[AstNode](denomResult.error)
         # \cfrac is a continued fraction that should maintain display style
         let isContinued = cmdName == "cfrac"
-        return ok(newFrac(numResult.value, denomResult.value, isContinued))
+        # Determine display style
+        let style = if cmdName == "dfrac": fsDisplay
+                    elif cmdName == "tfrac": fsText
+                    else: fsNormal
+        return ok(newFrac(numResult.value, denomResult.value, isContinued, style))
+
+      of ctBinomial:
+        # Parse top and bottom of binomial coefficient
+        let topResult = parseGroup(stream)
+        if not topResult.isOk:
+          return err[AstNode](topResult.error)
+        let bottomResult = parseGroup(stream)
+        if not bottomResult.isOk:
+          return err[AstNode](bottomResult.error)
+        # Determine display style
+        let style = if cmdName == "dbinom": fsDisplay
+                    elif cmdName == "tbinom": fsText
+                    else: fsNormal
+        return ok(newBinomial(topResult.value, bottomResult.value, style))
 
       of ctSqrt:
         # Check for optional argument [n] for nth root
