@@ -1178,6 +1178,95 @@ suite "Macro System Tests":
     check "⊂" in result.value
     check "mathvariant" in result.value
 
+suite "Trigonometric Function Tests":
+  test "Basic trig functions: sin":
+    let result = latexToMathML(r"\sin x")
+    check result.isOk
+    check "sin" in result.value
+    check "<mi>x</mi>" in result.value
+
+  test "Basic trig functions: cos":
+    let result = latexToMathML(r"\cos \theta")
+    check result.isOk
+    check "cos" in result.value
+    check "θ" in result.value
+
+  test "Basic trig functions: tan":
+    let result = latexToMathML(r"\tan(x)")
+    check result.isOk
+    check "tan" in result.value
+
+  test "Hyperbolic functions: sinh":
+    let result = latexToMathML(r"\sinh x")
+    check result.isOk
+    check "sinh" in result.value
+
+  test "Hyperbolic functions: cosh":
+    let result = latexToMathML(r"\cosh x")
+    check result.isOk
+    check "cosh" in result.value
+
+  test "Inverse trig functions: arcsin":
+    let result = latexToMathML(r"\arcsin x")
+    check result.isOk
+    check "arcsin" in result.value
+
+  test "Inverse trig functions: arccos":
+    let result = latexToMathML(r"\arccos x")
+    check result.isOk
+    check "arccos" in result.value
+
+suite "Mathematical Function Tests":
+  test "Logarithmic functions: log":
+    let result = latexToMathML(r"\log n")
+    check result.isOk
+    check "log" in result.value
+
+  test "Exponential function: exp":
+    let result = latexToMathML(r"\exp(x)")
+    check result.isOk
+    check "exp" in result.value
+
+  test "Linear algebra: det":
+    let result = latexToMathML(r"\det A")
+    check result.isOk
+    check "det" in result.value
+
+  test "Linear algebra: dim":
+    let result = latexToMathML(r"\dim V")
+    check result.isOk
+    check "dim" in result.value
+
+  test "Number theory: gcd":
+    let result = latexToMathML(r"\gcd(a,b)")
+    check result.isOk
+    check "gcd" in result.value
+
+  test "Number theory: lcm":
+    let result = latexToMathML(r"\lcm(m,n)")
+    check result.isOk
+    check "lcm" in result.value
+
+  test "Analysis: inf":
+    let result = latexToMathML(r"\inf S")
+    check result.isOk
+    check "inf" in result.value
+
+  test "Analysis: sup":
+    let result = latexToMathML(r"\sup S")
+    check result.isOk
+    check "sup" in result.value
+
+  test "Analysis: liminf":
+    let result = latexToMathML(r"\liminf_{n \to \infty} a_n")
+    check result.isOk
+    check "liminf" in result.value
+
+  test "Analysis: limsup":
+    let result = latexToMathML(r"\limsup_{n \to \infty} a_n")
+    check result.isOk
+    check "limsup" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 244**
+**Total Unimplemented Commands: 217**
 
 **Last Updated:** 2025-11-07
 
@@ -20,27 +20,19 @@ The unicode-math variants (`\varGamma`, `\varDelta`, …, `\varsupsetneqq`) now 
 
 ---
 
-## 3. Trigonometric Functions - 12 commands
+## 3. Trigonometric Functions - 0 commands (Completed)
 
-```latex
-\sin        \cos        \tan        \cot        \sec        \csc
-\sinh       \cosh       \tanh       \coth
-\arcsin     \arccos     \arctan
-```
+All 13 trigonometric functions (basic, hyperbolic, and inverse) are now implemented. The commands included: `\sin`, `\cos`, `\tan`, `\cot`, `\sec`, `\csc`, `\sinh`, `\cosh`, `\tanh`, `\coth`, `\arcsin`, `\arccos`, `\arctan`.
 
-**Priority:** HIGH - These are extremely common in mathematical expressions.
+**Priority:** n/a – section complete.
 
 ---
 
-## 4. Mathematical Functions - 14 commands
+## 4. Mathematical Functions - 0 commands (Completed)
 
-```latex
-\arg        \deg        \det        \dim        \exp        \gcd
-\hom        \inf        \ker        \log        \sup
-\liminf     \limsup     \lcm
-```
+All 14 mathematical functions are now implemented. The commands included: `\arg`, `\deg`, `\det`, `\dim`, `\exp`, `\gcd`, `\hom`, `\inf`, `\ker`, `\log`, `\sup`, `\liminf`, `\limsup`, `\lcm`.
 
-**Priority:** HIGH - Commonly used in calculus, algebra, and analysis.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -331,14 +323,14 @@ These are variants of cap, cup, and shifts.
 
 ## Summary by Priority
 
-### HIGH Priority (Very Common) - ~50 commands
-- Trigonometric functions (12)
-- Mathematical functions (14)
-- Fractions: `\dfrac`, `\tfrac`, `\binom`
-- Delimiters: `\lVert`, `\rVert`, `\mid`
-- Common symbols: `\ell`, `\hbar`, `\imath`, `\jmath`
-- Positioning: `\overset`, `\underset`
-- Styling: `\boldsymbol`, `\not`
+### HIGH Priority (Very Common) - ~23 commands
+- Trigonometric functions (0) ✓ Completed
+- Mathematical functions (0) ✓ Completed
+- Fractions: `\dfrac`, `\tfrac`, `\binom` (5)
+- Delimiters: `\lVert`, `\rVert`, `\mid` (4)
+- Common symbols: `\ell`, `\hbar`, `\imath`, `\jmath` (4+)
+- Positioning: `\overset`, `\underset` (2)
+- Styling: `\boldsymbol`, `\not` (2+)
 
 ### MEDIUM Priority (Moderately Common) - ~150 commands
 - Arrows (39)
@@ -389,8 +381,8 @@ These require special handling:
 
 ## Implementation Strategy
 
-### Phase 1: Functions (HIGH Impact, Easy)
-Add all trigonometric and mathematical functions - these are extremely common and trivial to implement.
+### Phase 1: Functions (HIGH Impact, Easy) ✓ COMPLETED
+All trigonometric and mathematical functions have been implemented (27 commands: 13 trig + 14 math).
 
 ### Phase 2: Fraction Variants (HIGH Impact, Medium Difficulty)
 Implement `\dfrac`, `\tfrac`, `\binom` and variants.

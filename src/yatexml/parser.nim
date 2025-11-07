@@ -327,6 +327,7 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["det"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["dim"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["gcd"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
+  result["lcm"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["hom"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["inf"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
   result["ker"] = CommandInfo(cmdType: ctFunction, numArgs: 0)
