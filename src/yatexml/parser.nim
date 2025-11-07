@@ -286,6 +286,33 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["llcorner"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["lrcorner"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
+  # Harpoons
+  result["leftharpoonup"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leftharpoondown"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightharpoonup"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightharpoondown"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["leftrightharpoons"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightleftharpoons"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["upharpoonleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["upharpoonright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["downharpoonleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["downharpoonright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Other relations
+  result["ni"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["shortparallel"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["shortmid"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Perp"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Three-times symbols
+  result["leftthreetimes"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rightthreetimes"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ltimes"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["rtimes"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Additional inequality
+  result["lll"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
   # Styles
   result["mathbf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathit"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
@@ -805,6 +832,29 @@ proc operatorToUnicode(name: string): string =
   of "urcorner": "\u231D"
   of "llcorner": "\u231E"
   of "lrcorner": "\u231F"
+  # Harpoons
+  of "leftharpoonup": "\u21BC"
+  of "leftharpoondown": "\u21BD"
+  of "rightharpoonup": "\u21C0"
+  of "rightharpoondown": "\u21C1"
+  of "leftrightharpoons": "\u21CB"
+  of "rightleftharpoons": "\u21CC"
+  of "upharpoonleft": "\u21BF"
+  of "upharpoonright": "\u21BE"
+  of "downharpoonleft": "\u21C3"
+  of "downharpoonright": "\u21C2"
+  # Other relations
+  of "ni": "\u220B"
+  of "shortparallel": "\u2225"
+  of "shortmid": "\u2223"
+  of "Perp": "\u2AEB"
+  # Three-times symbols
+  of "leftthreetimes": "\u22CB"
+  of "rightthreetimes": "\u22CC"
+  of "ltimes": "\u22C9"
+  of "rtimes": "\u22CA"
+  # Additional inequality
+  of "lll": "\u22D8"
   else: name
 
 # Parser implementation

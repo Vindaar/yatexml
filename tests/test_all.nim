@@ -1352,6 +1352,69 @@ suite "Special Symbol Tests":
     check "⌞" in result.value
     check "⌟" in result.value
 
+suite "Harpoon Tests":
+  test "Left harpoons: up and down":
+    let result = latexToMathML(r"A \leftharpoonup B \leftharpoondown C")
+    check result.isOk
+    check "↼" in result.value
+    check "↽" in result.value
+
+  test "Right harpoons: up and down":
+    let result = latexToMathML(r"A \rightharpoonup B \rightharpoondown C")
+    check result.isOk
+    check "⇀" in result.value
+    check "⇁" in result.value
+
+  test "Bidirectional harpoons":
+    let result = latexToMathML(r"A \leftrightharpoons B \rightleftharpoons C")
+    check result.isOk
+    check "⇋" in result.value
+    check "⇌" in result.value
+
+  test "Vertical harpoons":
+    let result = latexToMathML(r"\upharpoonleft \upharpoonright \downharpoonleft \downharpoonright")
+    check result.isOk
+    check "↿" in result.value
+    check "↾" in result.value
+    check "⇃" in result.value
+    check "⇂" in result.value
+
+suite "Additional Relation Tests":
+  test "Relations: ni (reverse element of)":
+    let result = latexToMathML(r"S \ni x")
+    check result.isOk
+    check "∋" in result.value
+
+  test "Relations: short variants":
+    let result = latexToMathML(r"a \shortparallel b, c \shortmid d")
+    check result.isOk
+    check "∥" in result.value
+    check "∣" in result.value
+
+  test "Relations: Perp":
+    let result = latexToMathML(r"a \Perp b")
+    check result.isOk
+    check "⫫" in result.value
+
+suite "Three-Times Symbol Tests":
+  test "Left and right three-times":
+    let result = latexToMathML(r"G \leftthreetimes H \rightthreetimes K")
+    check result.isOk
+    check "⋋" in result.value
+    check "⋌" in result.value
+
+  test "Semidirect products: ltimes and rtimes":
+    let result = latexToMathML(r"G \ltimes H \rtimes K")
+    check result.isOk
+    check "⋉" in result.value
+    check "⋊" in result.value
+
+suite "Additional Inequality Tests":
+  test "Much less than: lll":
+    let result = latexToMathML(r"x \lll y")
+    check result.isOk
+    check "⋘" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

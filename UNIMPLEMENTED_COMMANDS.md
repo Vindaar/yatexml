@@ -2,7 +2,7 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 190**
+**Total Unimplemented Commands: 171**
 
 **Last Updated:** 2025-11-07
 
@@ -52,24 +52,19 @@ The paired arrow macros (`\leftleftarrows`, `\rightrightarrows`, `\leftrightarro
 
 ---
 
-## 7. Harpoons - 10 commands
+## 7. Harpoons - 0 commands (Completed)
 
-```latex
-\leftharpoonup          \leftharpoondown        \rightharpoonup
-\rightharpoondown       \leftrightharpoons      \rightleftharpoons
-\upharpoonleft          \upharpoonright         \downharpoonleft
-\downharpoonright
-```
+All 10 harpoon commands have been implemented: `\leftharpoonup`, `\leftharpoondown`, `\rightharpoonup`, `\rightharpoondown`, `\leftrightharpoons`, `\rightleftharpoons`, `\upharpoonleft`, `\upharpoonright`, `\downharpoonleft`, `\downharpoonright`.
 
-**Priority:** MEDIUM - Used in chemistry and physics.
+**Priority:** n/a – section complete.
 
 ---
 
-## 8. Three-Times Symbols - 3 commands
+## 8. Three-Times Symbols - 0 commands (Completed)
 
-```latex
-\leftthreetimes         \rightthreetimes        \ltimes         \rtimes
-```
+All 4 three-times and semidirect product symbols have been implemented: `\leftthreetimes`, `\rightthreetimes`, `\ltimes`, `\rtimes`.
+
+**Priority:** n/a – section complete.
 
 ---
 
@@ -226,24 +221,19 @@ All 4 delimiter and norm commands have been implemented: `\lVert` (‖), `\rVert
 
 ---
 
-## 20. Dots and Ellipses - 1 command
+## 20. Dots and Ellipses - 0 commands (Completed)
 
-```latex
-\lll
-```
+The `\lll` command (also written as `\llless`, meaning "much less than") has been implemented.
 
-**Note:** Also written as `\llless` (much less than).
+**Priority:** n/a – section complete.
 
 ---
 
-## 21. Other Relations - 7 commands
+## 21. Other Relations - 0 commands (Completed)
 
-```latex
-\ni             \propto         \varpropto      \parallel
-\shortparallel  \shortmid       \Perp
-```
+All 7 relation commands have been implemented: `\ni` (reverse element of ∋), `\propto` (proportional to ∝), `\varpropto`, `\parallel` (∥), `\shortparallel`, `\shortmid`, and `\Perp` (⫫).
 
-**Priority:** MEDIUM - `\ni` (reverse element of) and `\propto` (proportional to) are common.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -314,14 +304,16 @@ These are variants of cap, cup, and shifts.
 - Positioning: `\overset`, `\underset` (2)
 - Styling: `\boldsymbol`, `\not` (2+, package-dependent)
 
-### MEDIUM Priority (Moderately Common) - ~150 commands
-- Arrows (39)
-- Harpoons (10)
-- Advanced relations (35)
+### MEDIUM Priority (Moderately Common) - ~130 commands
+- Arrows (39) - Most already implemented
+- Harpoons (0) ✓ Completed
+- Advanced relations (35) - Most already implemented
+- Other relations (0) ✓ Completed
+- Three-times symbols (0) ✓ Completed
+- Additional inequalities (0) ✓ Completed
 - Set theory relations (12)
 - Negated relations (44)
 - Binary operators (25)
-- Special symbols subset
 - Large operators (8)
 - Accents (6)
 
