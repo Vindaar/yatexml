@@ -1676,6 +1676,288 @@ suite "Binomial Coefficients":
     check "linethickness=\"0px\"" in result.value
     check "displaystyle=\"true\"" in result.value
 
+suite "Overset and Underset Tests":
+  test "Simple overset":
+    let result = latexToMathML(r"\overset{a}{=}")
+    check result.isOk
+    check "<mover>" in result.value
+    check "=" in result.value
+    check "a" in result.value
+
+  test "Simple underset":
+    let result = latexToMathML(r"\underset{n}{x}")
+    check result.isOk
+    check "<munder>" in result.value
+    check "x" in result.value
+    check "n" in result.value
+
+  test "Overset with exclamation":
+    let result = latexToMathML(r"\overset{!}{=}")
+    check result.isOk
+    check "<mover>" in result.value
+    check "=" in result.value
+    check "!" in result.value
+
+  test "Underset with limit notation":
+    let result = latexToMathML(r"\underset{n \to \infty}{\lim}")
+    check result.isOk
+    check "<munder>" in result.value
+    check "lim" in result.value
+    check "→" in result.value or "\\to" in result.value
+    check "∞" in result.value or "\\infty" in result.value
+
+  test "Overset and underset in expression":
+    let result = latexToMathML(r"A \overset{!}{=} B + \underset{k}{C}")
+    check result.isOk
+    check "<mover>" in result.value
+    check "<munder>" in result.value
+    check "A" in result.value
+    check "B" in result.value
+    check "C" in result.value
+
+suite "Negated Relation Tests":
+  test "Negated inequalities: nless":
+    let result = latexToMathML(r"a \nless b")
+    check result.isOk
+    check "≮" in result.value
+
+  test "Negated inequalities: nleq":
+    let result = latexToMathML(r"a \nleq b")
+    check result.isOk
+    check "≰" in result.value
+
+  test "Negated inequalities: ngeq":
+    let result = latexToMathML(r"a \ngeq b")
+    check result.isOk
+    check "≱" in result.value
+
+  test "Negated similarity: nsim":
+    let result = latexToMathML(r"a \nsim b")
+    check result.isOk
+    check "≁" in result.value
+
+  test "Negated congruence: ncong":
+    let result = latexToMathML(r"a \ncong b")
+    check result.isOk
+    check "≇" in result.value
+
+  test "Negated arrows: nleftarrow":
+    let result = latexToMathML(r"a \nleftarrow b")
+    check result.isOk
+    check "↚" in result.value
+
+  test "Negated arrows: nrightarrow":
+    let result = latexToMathML(r"a \nrightarrow b")
+    check result.isOk
+    check "↛" in result.value
+
+  test "Negated double arrows: nRightarrow":
+    let result = latexToMathML(r"P \nRightarrow Q")
+    check result.isOk
+    check "⇏" in result.value
+
+  test "Negated set theory: nsubseteq":
+    let result = latexToMathML(r"A \nsubseteq B")
+    check result.isOk
+    check "⊈" in result.value
+
+  test "Negated set theory: nsupseteq":
+    let result = latexToMathML(r"A \nsupseteq B")
+    check result.isOk
+    check "⊉" in result.value
+
+  test "Negated triangles: ntriangleleft":
+    let result = latexToMathML(r"a \ntriangleleft b")
+    check result.isOk
+    check "⋪" in result.value
+
+  test "Negated parallel: nparallel":
+    let result = latexToMathML(r"a \nparallel b")
+    check result.isOk
+    check "∦" in result.value
+
+  test "Negated vdash: nvdash":
+    let result = latexToMathML(r"\Gamma \nvdash \phi")
+    check result.isOk
+    check "⊬" in result.value
+
+suite "Ordering Relation Tests":
+  test "Basic ordering: prec":
+    let result = latexToMathML(r"a \prec b")
+    check result.isOk
+    check "≺" in result.value
+
+  test "Basic ordering: succ":
+    let result = latexToMathML(r"a \succ b")
+    check result.isOk
+    check "≻" in result.value
+
+  test "Ordering with equality: preceq":
+    let result = latexToMathML(r"a \preceq b")
+    check result.isOk
+    check "⪯" in result.value
+
+  test "Ordering with equality: succeq":
+    let result = latexToMathML(r"a \succeq b")
+    check result.isOk
+    check "⪰" in result.value
+
+  test "Curly ordering: preccurlyeq":
+    let result = latexToMathML(r"a \preccurlyeq b")
+    check result.isOk
+    check "≼" in result.value
+
+  test "Curly ordering: succcurlyeq":
+    let result = latexToMathML(r"a \succcurlyeq b")
+    check result.isOk
+    check "≽" in result.value
+
+  test "Similarity ordering: precsim":
+    let result = latexToMathML(r"a \precsim b")
+    check result.isOk
+    check "≾" in result.value
+
+  test "Approximate ordering: precapprox":
+    let result = latexToMathML(r"a \precapprox b")
+    check result.isOk
+    check "⪷" in result.value
+
+  test "Negated ordering: precnapprox":
+    let result = latexToMathML(r"a \precnapprox b")
+    check result.isOk
+    check "⪹" in result.value
+
+suite "Special Shapes and Symbols Tests":
+  test "Modal logic: Box":
+    let result = latexToMathML(r"\Box \phi")
+    check result.isOk
+    check "□" in result.value
+
+  test "Modal logic: Diamond":
+    let result = latexToMathML(r"\Diamond \psi")
+    check result.isOk
+    check "◇" in result.value
+
+  test "Lozenge symbols":
+    let result = latexToMathML(r"\lozenge \blacklozenge")
+    check result.isOk
+    check "◊" in result.value
+    check "⧫" in result.value
+
+  test "Square symbols":
+    let result = latexToMathML(r"\blacksquare")
+    check result.isOk
+    check "■" in result.value
+
+  test "Triangle variants":
+    let result = latexToMathML(r"a \triangleq b")
+    check result.isOk
+    check "≜" in result.value
+
+  test "Triangle down":
+    let result = latexToMathML(r"\triangledown")
+    check result.isOk
+    check "▽" in result.value
+
+  test "Smile and frown":
+    let result = latexToMathML(r"\smile \frown")
+    check result.isOk
+    check "⌣" in result.value
+    check "⌢" in result.value
+
+  test "Vdash variants":
+    let result = latexToMathML(r"\Gamma \Vdash \phi")
+    check result.isOk
+    check "⊩" in result.value
+
+  test "Dashv":
+    let result = latexToMathML(r"a \dashv b")
+    check result.isOk
+    check "⊣" in result.value
+
+  test "Multimap":
+    let result = latexToMathML(r"f \multimap g")
+    check result.isOk
+    check "⊸" in result.value
+
+suite "Miscellaneous Uppercase Symbols Tests":
+  test "Double cap: Cap":
+    let result = latexToMathML(r"A \Cap B")
+    check result.isOk
+    check "⋒" in result.value
+
+  test "Double cup: Cup":
+    let result = latexToMathML(r"A \Cup B")
+    check result.isOk
+    check "⋓" in result.value
+
+  test "Left shift: Lsh":
+    let result = latexToMathML(r"a \Lsh b")
+    check result.isOk
+    check "↰" in result.value
+
+  test "Right shift: Rsh":
+    let result = latexToMathML(r"a \Rsh b")
+    check result.isOk
+    check "↱" in result.value
+
+suite "Additional Special Symbols Tests":
+  test "Double logical and: And":
+    let result = latexToMathML(r"P \And Q")
+    check result.isOk
+    check "⩓" in result.value
+
+  test "Double logical or: Or":
+    let result = latexToMathML(r"P \Or Q")
+    check result.isOk
+    check "⩔" in result.value
+
+suite "Other Special Symbols Tests":
+  test "Backslash symbol":
+    let result = latexToMathML(r"A \backslash B")
+    check result.isOk
+    check "∖" in result.value
+
+  test "Blackboard bold k":
+    let result = latexToMathML(r"\Bbbk")
+    check result.isOk
+    check "𝕜" in result.value
+
+  test "Turned F (Finv)":
+    let result = latexToMathML(r"\Finv")
+    check result.isOk
+    check "Ⅎ" in result.value
+
+  test "Game symbol":
+    let result = latexToMathML(r"\Game")
+    check result.isOk
+    check "⅁" in result.value
+
+  test "Not prefix operator":
+    let result = latexToMathML(r"a \not= b")
+    check result.isOk
+    # The \not command adds a combining overlay character
+    check result.isOk
+
+suite "Math Size Command Tests":
+  test "Tiny size":
+    let result = latexToMathML(r"{\tiny x}")
+    check result.isOk
+    check "<mstyle" in result.value
+    check "mathsize=\"70%\"" in result.value
+
+  test "Normal size":
+    let result = latexToMathML(r"{\normalsize x}")
+    check result.isOk
+    check "<mstyle" in result.value
+    check "mathsize=\"100%\"" in result.value
+
+  test "Large size":
+    let result = latexToMathML(r"{\large x}")
+    check result.isOk
+    check "<mstyle" in result.value
+    check "mathsize=\"120%\"" in result.value
+
 suite "Compile-Time Tests":
   test "Static conversion":
     # TODO: Fix compile-time execution (requires compile-time table initialization)

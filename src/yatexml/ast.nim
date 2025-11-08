@@ -20,6 +20,7 @@ type
     nkAccent              ## Accent: \hat, \bar, \tilde, \vec, etc.
     nkStyle               ## Style: \mathbf, \mathit, etc.
     nkMathStyle           ## Math style: \displaystyle, \scriptstyle, etc.
+    nkMathSize            ## Math size: \tiny, \normalsize, \large
     nkColor               ## Color: \color{red}
     nkPhantom             ## Phantom: \mathstrut
 
@@ -90,6 +91,12 @@ type
     mskTextstyle          ## \textstyle - scriptlevel=0, displaystyle=false
     mskScriptstyle        ## \scriptstyle - scriptlevel=1, displaystyle=false
     mskScriptscriptstyle  ## \scriptscriptstyle - scriptlevel=2, displaystyle=false
+
+  MathSizeKind* = enum
+    ## Different math size settings
+    mszkTiny              ## \tiny - very small
+    mszkNormal            ## \normalsize - normal
+    mszkLarge             ## \large - large
 
   FracStyle* = enum
     ## Display style for fractions and binomials
@@ -262,6 +269,10 @@ type
       mathStyleKind*: MathStyleKind  ## Type of display style
       mathStyleBase*: AstNode        ## Styled expression
 
+    of nkMathSize:
+      mathSizeKind*: MathSizeKind    ## Type of size setting
+      mathSizeBase*: AstNode         ## Sized expression
+
     of nkColor:
       colorName*: string          ## Color name or value
       colorBase*: AstNode         ## Colored expression
@@ -399,6 +410,10 @@ proc newStyle*(kind: StyleKind, base: AstNode): AstNode =
 proc newMathStyle*(kind: MathStyleKind, base: AstNode): AstNode =
   ## Create a math style node
   AstNode(kind: nkMathStyle, mathStyleKind: kind, mathStyleBase: base)
+
+proc newMathSize*(kind: MathSizeKind, base: AstNode): AstNode =
+  ## Create a math size node
+  AstNode(kind: nkMathSize, mathSizeKind: kind, mathSizeBase: base)
 
 proc newColor*(color: string, base: AstNode): AstNode =
   ## Create a color node

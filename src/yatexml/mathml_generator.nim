@@ -251,6 +251,18 @@ proc generateMathStyle(node: AstNode, options: MathMLOptions): string =
   # Wrap in mstyle with scriptlevel and displaystyle
   tag("mstyle", base, [("scriptlevel", scriptlevel), ("displaystyle", displaystyle)])
 
+proc generateMathSize(node: AstNode, options: MathMLOptions): string =
+  ## Generate math size element with mathsize attribute
+  let base = generateNode(node.mathSizeBase, options)
+
+  let mathsize = case node.mathSizeKind
+    of mszkTiny: "70%"
+    of mszkNormal: "100%"
+    of mszkLarge: "120%"
+
+  # Wrap in mstyle with mathsize
+  tag("mstyle", base, [("mathsize", mathsize)])
+
 proc generatePhantom(node: AstNode, options: MathMLOptions): string =
   ## Generate phantom element (mathstrut)
   ## Creates an invisible vertical strut: <mpadded width="0px"><mphantom>...</mphantom></mpadded>
@@ -641,6 +653,8 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateStyle(node, options)
   of nkMathStyle:
     generateMathStyle(node, options)
+  of nkMathSize:
+    generateMathSize(node, options)
   of nkColor:
     generateColor(node, options)
   of nkPhantom:

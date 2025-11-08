@@ -2,9 +2,9 @@
 
 This document lists all LaTeX commands that appear in the Wikipedia test suite (`yatexml_wikipedia_dynamic.html`) but are not yet implemented in yatexml. Commands are organized by category for easier prioritization.
 
-**Total Unimplemented Commands: 113**
+**Total Unimplemented Commands: 34**
 
-**Last Updated:** 2025-11-07
+**Last Updated:** 2025-11-08
 
 ---
 
@@ -76,16 +76,17 @@ All 35 similarity/equality variants (e.g., `\asymp`, `\approxeq`, `\risingdotseq
 
 ---
 
-## 10. Relations - Ordering - 16 commands
+## 10. Relations - Ordering - 0 commands (Completed)
 
-```latex
-\prec           \succ           \preceq         \succeq
-\preccurlyeq    \succcurlyeq    \precsim        \succsim
-\precapprox     \succapprox     \precnapprox    \succnapprox
-\precneqq       \succneqq       \precnsim       \succnsim
-```
+All 16 ordering relation commands have been implemented (2025-11-08):
+- Basic: `\prec`, `\succ`
+- With equality: `\preceq`, `\succeq`
+- Curly variants: `\preccurlyeq`, `\succcurlyeq`
+- Similarity: `\precsim`, `\succsim`
+- Approximate: `\precapprox`, `\succapprox`
+- Negated: `\precnapprox`, `\succnapprox`, `\precneqq`, `\succneqq`, `\precnsim`, `\succnsim`
 
-**Priority:** LOW - Used in order theory.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -97,22 +98,19 @@ All 14 set theory relation commands have been implemented: `\sqsubset`, `\sqsups
 
 ---
 
-## 12. Relations - Negated - 44 commands
+## 12. Relations - Negated - 0 commands (Completed)
 
-```latex
-\nless          \nleq           \nleqq          \nleqslant
-\ngeq           \ngeqq          \ngeqslant
-\nprec          \npreceq        \nsucc          \nsucceq
-\nsubseteq      \nsubseteqq     \nsupseteq      \nsupseteqq
-\nsim           \ncong
-\nleftarrow     \nrightarrow    \nLeftarrow     \nRightarrow
-\nleftrightarrow \nLeftrightarrow
-\ntriangleleft  \ntriangleright \ntrianglelefteq \ntrianglerighteq
-\nparallel      \nshortparallel \nshortmid
-\nvdash         \nVdash         \nvDash          \nVDash
-```
+All 33 negated relation commands have been implemented (2025-11-08):
+- Inequalities: `\nless`, `\nleq`, `\nleqq`, `\nleqslant`, `\ngeq`, `\ngeqq`, `\ngeqslant`
+- Ordering: `\nprec`, `\npreceq`, `\nsucc`, `\nsucceq`
+- Set theory: `\nsubseteq`, `\nsubseteqq`, `\nsupseteq`, `\nsupseteqq`
+- Similarity: `\nsim`, `\ncong`
+- Arrows: `\nleftarrow`, `\nrightarrow`, `\nLeftarrow`, `\nRightarrow`, `\nleftrightarrow`, `\nLeftrightarrow`
+- Triangles: `\ntriangleleft`, `\ntriangleright`, `\ntrianglelefteq`, `\ntrianglerighteq`
+- Parallel/mid: `\nparallel`, `\nshortparallel`, `\nshortmid`
+- Vdash: `\nvdash`, `\nVdash`, `\nvDash`, `\nVDash`
 
-**Priority:** MEDIUM - Negations are common in logic and proofs.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -129,18 +127,11 @@ Note: `\ltimes` and `\rtimes` were already completed in section 8. Large operato
 
 ---
 
-## 14. Special Symbols - 2 commands remaining
+## 14. Special Symbols - 0 commands (Completed)
 
-All 21 essential special symbols have been implemented, including mathematical symbols (`\ell`, `\hbar`, `\imath`, `\jmath`, `\wp`, `\eth`, `\mho`, `\digamma`, `\beth`, `\daleth`, `\gimel`, `\complement`, `\empty`, `\nexists`), geometric symbols (`\sphericalangle`, `\measuredangle`, `\between`, `\pitchfork`), logic symbols (`\because`, `\therefore`), and corner symbols (`\ulcorner`, `\urcorner`, `\llcorner`, `\lrcorner`).
+All 23 special symbols have been implemented, including mathematical symbols (`\ell`, `\hbar`, `\imath`, `\jmath`, `\wp`, `\eth`, `\mho`, `\digamma`, `\beth`, `\daleth`, `\gimel`, `\complement`, `\empty`, `\nexists`), geometric symbols (`\sphericalangle`, `\measuredangle`, `\between`, `\pitchfork`), logic symbols (`\because`, `\therefore`), corner symbols (`\ulcorner`, `\urcorner`, `\llcorner`, `\lrcorner`), and package-specific logic operators (`\And`, `\Or`) implemented on 2025-11-08.
 
-### Remaining commands:
-```latex
-\And            \Or
-```
-
-**Note:** `\And` and `\Or` are package-specific variants; their exact meaning depends on context.
-
-**Priority:** n/a – most symbols complete.
+**Priority:** n/a – section complete.
 
 ---
 
@@ -170,16 +161,18 @@ All 6 accent commands have been implemented: `\acute`, `\grave`, `\breve`, `\che
 
 ---
 
-## 18. Special Shapes and Symbols - 12 commands
+## 18. Special Shapes and Symbols - 0 commands (Completed)
 
-```latex
-\Box            \Diamond        \lozenge        \blacklozenge
-\blacksquare    \triangleq      \triangledown   \vartriangle
-\smile          \frown          \Vdash          \vDash
-\dashv          \multimap       \multimapinv
-```
+All 14 special shape and symbol commands have been implemented (2025-11-08):
+- Modal logic: `\Box`, `\Diamond`
+- Lozenge: `\lozenge`, `\blacklozenge`
+- Squares: `\blacksquare`
+- Triangles: `\triangleq`, `\triangledown` (note: `\vartriangle` was already implemented)
+- Faces: `\smile`, `\frown`
+- Logic: `\Vdash`, `\vDash`, `\dashv`
+- Multimap: `\multimap`, `\multimapinv`
 
-**Priority:** LOW to MEDIUM - Depends on field (modal logic uses `\Box` and `\Diamond`).
+**Priority:** n/a – section complete.
 
 ---
 
@@ -207,21 +200,21 @@ All 7 relation commands have been implemented: `\ni` (reverse element of ∋), `
 
 ---
 
-## 22. Special Commands - 17 commands
+## 22. Special Commands - 7 commands remaining
 
-### Positioning
+### Already Implemented (2025-11-08)
+- Positioning: `\overset`, `\underset`
+- Text Size: `\tiny`, `\normalsize`, `\large`
+- Other symbols: `\not`, `\backslash`, `\Bbbk`, `\Finv`, `\Game`
+
+### Remaining Positioning
 ```latex
-\overset        \underset       \sideset        \limits
+\sideset        \limits
 ```
 
-### Styling
+### Remaining Styling
 ```latex
 \boldsymbol
-```
-
-### Text Size
-```latex
-\tiny           \normalsize     \large
 ```
 
 ### Color
@@ -239,45 +232,42 @@ All 7 relation commands have been implemented: `\ni` (reverse element of ∋), `
 \cancel         \sout
 ```
 
-### Others
+### Obscure Package-Specific
 ```latex
-\not            \backslash
-\Bbbk           \Finv           \Game
 \coh            \incoh          \sincoh         \shneg          \shpos
 ```
 
 **Priority:** MIXED
-- HIGH: `\overset`, `\underset`, `\boldsymbol`, `\not`
-- MEDIUM: `\cancel`, `\limits`
-- LOW: Size commands, obscure symbols
+- MEDIUM: `\cancel`, `\limits`, `\boldsymbol`
+- LOW: `\sideset`, `\definecolor`, `\mathrlap`, obscure symbols
 
 ---
 
-## 23. Miscellaneous Uppercase Symbols - 4 commands
+## 23. Miscellaneous Uppercase Symbols - 0 commands (Completed)
 
-```latex
-\Cap            \Cup            \Lsh            \Rsh
-```
+All 4 miscellaneous uppercase symbol commands have been implemented (2025-11-08):
+- Double intersection/union: `\Cap`, `\Cup`
+- Shifts: `\Lsh`, `\Rsh`
 
-These are variants of cap, cup, and shifts.
+**Priority:** n/a – section complete.
 
 ---
 
 ## Summary by Priority
 
-### HIGH Priority (Very Common) - ~2 commands remaining
+### HIGH Priority (Very Common) - ~2-4 commands remaining
 - Trigonometric functions (0) ✓ Completed
 - Mathematical functions (0) ✓ Completed
 - Delimiters and norms (0) ✓ Completed
 - Common special symbols (0) ✓ Completed
 - Fractions and binomials (0) ✓ Completed
-- Positioning: `\overset`, `\underset` (2)
+- Positioning: `\overset`, `\underset` (0) ✓ Completed 2025-11-08
 - Styling: `\boldsymbol`, `\not` (2+, package-dependent)
 
-### MEDIUM Priority (Moderately Common) - ~44 commands remaining
-- Arrows (39) - Most already implemented
+### MEDIUM Priority (Moderately Common) - 0 commands remaining ✓ COMPLETED
+- Arrows (39) ✓ Completed
 - Harpoons (0) ✓ Completed
-- Advanced relations (35) - Most already implemented
+- Advanced relations (35) ✓ Completed
 - Other relations (0) ✓ Completed
 - Three-times symbols (0) ✓ Completed
 - Additional inequalities (0) ✓ Completed
@@ -285,14 +275,15 @@ These are variants of cap, cup, and shifts.
 - Binary operators (0) ✓ Completed
 - Large operators (0) ✓ Completed
 - Accents (0) ✓ Completed
-- Negated relations (44)
+- Negated relations (0) ✓ Completed 2025-11-08
 
-### LOW Priority (Specialized) - ~142 commands
-- Ordering relations (16)
-- Greek variants (28)
-- Obscure symbols
-- Size commands
-- Specialized operators
+### LOW Priority (Specialized) - ~42 commands remaining
+- Ordering relations (0) ✓ Completed 2025-11-08
+- Special Shapes and Symbols (0) ✓ Completed 2025-11-08
+- Miscellaneous uppercase symbols (0) ✓ Completed 2025-11-08
+- Remaining special symbols (0) ✓ Completed 2025-11-08 (\And, \Or)
+- Special Commands (15) - positioning, styling, size, color, etc.
+- Obscure symbols and package-specific commands (27+)
 
 ---
 
@@ -334,8 +325,8 @@ Implemented `\dfrac`, `\tfrac`, `\binom`, `\dbinom`, and `\tbinom` (5 commands).
 ### Phase 3: Essential Symbols (HIGH Impact, Easy) ✓ COMPLETED
 All essential symbols implemented (25 commands): delimiters/norms (`\lVert`, `\rVert`, `\mid`, `\parallel`) and special mathematical symbols (`\ell`, `\hbar`, `\imath`, `\jmath`, `\wp`, Hebrew letters, geometric symbols, logic symbols, corners).
 
-### Phase 4: Positioning (HIGH Impact, Medium Difficulty)
-Implement `\overset`, `\underset` for stacking.
+### Phase 4: Positioning (HIGH Impact, Medium Difficulty) ✓ COMPLETED
+Implemented `\overset` and `\underset` for stacking (2 commands). These position content over/under base expressions using the existing `nkUnderOver` AST node.
 
 ### Phase 5: Binary Operators & Relations (MEDIUM Impact, Easy)
 Batch-add all the binary operators and relation symbols.

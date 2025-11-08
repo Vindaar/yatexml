@@ -13,7 +13,7 @@ type
     ctFrac, ctBinomial, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor, ctPhantom,
     ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac,
-    ctOperatorName, ctBmod, ctPmod
+    ctOperatorName, ctBmod, ctPmod, ctOverUnder, ctMathSize
 
   CommandInfo = object
     cmdType: CommandType
@@ -37,6 +37,10 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["binom"] = CommandInfo(cmdType: ctBinomial, numArgs: 2)    # Binomial coefficient
   result["dbinom"] = CommandInfo(cmdType: ctBinomial, numArgs: 2)   # Display style binomial
   result["tbinom"] = CommandInfo(cmdType: ctBinomial, numArgs: 2)   # Text style binomial
+
+  # Overset and underset (positioning)
+  result["overset"] = CommandInfo(cmdType: ctOverUnder, numArgs: 2)  # \overset{above}{base}
+  result["underset"] = CommandInfo(cmdType: ctOverUnder, numArgs: 2) # \underset{below}{base}
 
   # Infix fraction-like commands
   result["over"] = CommandInfo(cmdType: ctInfixFrac, numArgs: 0)
@@ -254,6 +258,112 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["varsubsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["varsupsetneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["varsupsetneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated relations - inequalities
+  result["nless"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nleq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nleqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nleqslant"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ngeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ngeqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ngeqslant"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated relations - ordering
+  result["nprec"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["npreceq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nsucc"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nsucceq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated relations - set theory
+  result["nsubseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nsubseteqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nsupseteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nsupseteqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated relations - similarity
+  result["nsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ncong"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated arrows
+  result["nleftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nLeftarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nRightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nleftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nLeftrightarrow"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated triangles
+  result["ntriangleleft"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ntriangleright"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ntrianglelefteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["ntrianglerighteq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated parallel and mid
+  result["nparallel"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nshortparallel"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nshortmid"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Negated vdash variants
+  result["nvdash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nVdash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nvDash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["nVDash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Ordering relations
+  result["prec"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succ"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["preceq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["preccurlyeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succcurlyeq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["precsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["precapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["precnapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succnapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["precneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["precnsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["succnsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Special shapes and symbols
+  result["Box"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Diamond"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["lozenge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["blacklozenge"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["blacksquare"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["triangleq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["triangledown"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["smile"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["frown"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Vdash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["vDash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["dashv"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["multimap"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["multimapinv"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Miscellaneous uppercase symbols
+  result["Cap"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Cup"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Lsh"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Rsh"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Additional special symbols (package-specific)
+  result["And"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Or"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Other special symbols
+  result["backslash"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Bbbk"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Finv"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Game"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["not"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+
+  # Math size commands
+  result["tiny"] = CommandInfo(cmdType: ctMathSize, numArgs: 0)
+  result["normalsize"] = CommandInfo(cmdType: ctMathSize, numArgs: 0)
+  result["large"] = CommandInfo(cmdType: ctMathSize, numArgs: 0)
 
   # Delimiters and norms
   result["lVert"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -977,6 +1087,94 @@ proc operatorToUnicode(name: string): string =
   of "smallsetminus": "\u2216"
   of "setminus": "\u2216"
   of "bigstar": "\u2605"
+  # Negated relations - inequalities
+  of "nless": "\u226E"
+  of "nleq": "\u2270"
+  of "nleqq": "\u2270"
+  of "nleqslant": "\u2A7D\u0338"
+  of "ngeq": "\u2271"
+  of "ngeqq": "\u2271"
+  of "ngeqslant": "\u2A7E\u0338"
+  # Negated relations - ordering
+  of "nprec": "\u2280"
+  of "npreceq": "\u22E0"
+  of "nsucc": "\u2281"
+  of "nsucceq": "\u22E1"
+  # Negated relations - set theory
+  of "nsubseteq": "\u2288"
+  of "nsubseteqq": "\u2AC5\u0338"
+  of "nsupseteq": "\u2289"
+  of "nsupseteqq": "\u2AC6\u0338"
+  # Negated relations - similarity
+  of "nsim": "\u2241"
+  of "ncong": "\u2247"
+  # Negated arrows
+  of "nleftarrow": "\u219A"
+  of "nrightarrow": "\u219B"
+  of "nLeftarrow": "\u21CD"
+  of "nRightarrow": "\u21CF"
+  of "nleftrightarrow": "\u21AE"
+  of "nLeftrightarrow": "\u21CE"
+  # Negated triangles
+  of "ntriangleleft": "\u22EA"
+  of "ntriangleright": "\u22EB"
+  of "ntrianglelefteq": "\u22EC"
+  of "ntrianglerighteq": "\u22ED"
+  # Negated parallel and mid
+  of "nparallel": "\u2226"
+  of "nshortparallel": "\u2226"
+  of "nshortmid": "\u2224"
+  # Negated vdash variants
+  of "nvdash": "\u22AC"
+  of "nVdash": "\u22AE"
+  of "nvDash": "\u22AD"
+  of "nVDash": "\u22AF"
+  # Ordering relations
+  of "prec": "\u227A"
+  of "succ": "\u227B"
+  of "preceq": "\u2AAF"
+  of "succeq": "\u2AB0"
+  of "preccurlyeq": "\u227C"
+  of "succcurlyeq": "\u227D"
+  of "precsim": "\u227E"
+  of "succsim": "\u227F"
+  of "precapprox": "\u2AB7"
+  of "succapprox": "\u2AB8"
+  of "precnapprox": "\u2AB9"
+  of "succnapprox": "\u2ABA"
+  of "precneqq": "\u2AB5"
+  of "succneqq": "\u2AB6"
+  of "precnsim": "\u22E8"
+  of "succnsim": "\u22E9"
+  # Special shapes and symbols
+  of "Box": "\u25A1"
+  of "Diamond": "\u25C7"
+  of "lozenge": "\u25CA"
+  of "blacklozenge": "\u29EB"
+  of "blacksquare": "\u25A0"
+  of "triangleq": "\u225C"
+  of "triangledown": "\u25BD"
+  of "smile": "\u2323"
+  of "frown": "\u2322"
+  of "Vdash": "\u22A9"
+  of "vDash": "\u22A8"
+  of "dashv": "\u22A3"
+  of "multimap": "\u22B8"
+  of "multimapinv": "\u27DC"
+  # Miscellaneous uppercase symbols
+  of "Cap": "\u22D2"
+  of "Cup": "\u22D3"
+  of "Lsh": "\u21B0"
+  of "Rsh": "\u21B1"
+  # Additional special symbols (package-specific)
+  of "And": "\u2A53"  # Double logical and
+  of "Or": "\u2A54"   # Double logical or
+  # Other special symbols
+  of "backslash": "\u2216"  # Set minus / backslash
+  of "Bbbk": "\u{1D55C}"  # Blackboard bold k (mathematical double-struck small k)
+  of "Finv": "\u2132"  # Turned F
+  of "Game": "\u2141"  # Game symbol
+  of "not": "\u0338"  # Combining long solidus overlay (negation)
   else: name
 
 # Parser implementation
@@ -1544,6 +1742,20 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
                     else: fsNormal
         return ok(newBinomial(topResult.value, bottomResult.value, style))
 
+      of ctOverUnder:
+        # Parse \overset{above}{base} or \underset{below}{base}
+        let firstResult = parseGroup(stream)
+        if not firstResult.isOk:
+          return err[AstNode](firstResult.error)
+        let secondResult = parseGroup(stream)
+        if not secondResult.isOk:
+          return err[AstNode](secondResult.error)
+        # For \overset, first arg goes over (nil under), for \underset, first arg goes under (nil over)
+        if cmdName == "overset":
+          return ok(newUnderOver(secondResult.value, nil, firstResult.value))
+        else:  # underset
+          return ok(newUnderOver(secondResult.value, firstResult.value, nil))
+
       of ctSqrt:
         # Check for optional argument [n] for nth root
         if stream.match(tkLeftBracket):
@@ -1602,6 +1814,19 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         if not argResult.isOk:
           return err[AstNode](argResult.error)
         return ok(newMathStyle(mathStyleKind, argResult.value))
+
+      of ctMathSize:
+        let mathSizeKind = case cmdName
+          of "tiny": mszkTiny
+          of "normalsize": mszkNormal
+          of "large": mszkLarge
+          else: mszkNormal
+
+        # Parse the rest of the current group (declaration-style command)
+        let argResult = parseRestOfGroup(stream)
+        if not argResult.isOk:
+          return err[AstNode](argResult.error)
+        return ok(newMathSize(mathSizeKind, argResult.value))
 
       of ctPhantom:
         # Phantom elements like \mathstrut have no arguments
