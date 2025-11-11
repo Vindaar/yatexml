@@ -2,6 +2,14 @@
 
 **Yet Another TeX to MathML Compiler**
 
+*NOTE*: I did not write a single line of code in this repository. It
+was a case study to see how well Claude Code can do useful stuff
+nowadays. I normally use MathJax when exporting Emacs Org mode to HTML for
+LaTeX rendering, but I've never been very happy with it. Thought we
+might be at the point where I can have my own simple library for it
+and this kind of proves we are. All code was written by Claude Sonnet
+4.5 from Claude Code.
+
 A Nim library for compiling LaTeX math expressions to MathML, targeting both JS and native backends, with compile-time execution support.
 
 ## Features
