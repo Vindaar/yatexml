@@ -84,6 +84,7 @@ type
     skFraktur             ## \mathfrak - fraktur
     skSansSerif           ## \mathsf - sans serif
     skMonospace           ## \mathtt - monospace/typewriter
+    skBoldItalic          ## \boldsymbol - bold italic
 
   MathStyleKind* = enum
     ## Different display styles
@@ -343,6 +344,7 @@ type
       bigopLower*: AstNode        ## Lower limit (can be nil)
       bigopUpper*: AstNode        ## Upper limit (can be nil)
       bigopBase*: AstNode         ## Base expression (can be nil)
+      bigopForceLimits*: bool     ## Force limits above/below (\\limits command)
 
     of nkUnderOver:
       underoverBase*: AstNode     ## Base expression
@@ -467,9 +469,9 @@ proc newFunction*(name: string, arg: AstNode): AstNode =
   ## Create a function node
   AstNode(kind: nkFunction, funcName: name, funcArg: arg)
 
-proc newBigOp*(kind: BigOpKind, lower: AstNode = nil, upper: AstNode = nil, base: AstNode = nil): AstNode =
+proc newBigOp*(kind: BigOpKind, lower: AstNode = nil, upper: AstNode = nil, base: AstNode = nil, forceLimits: bool = false): AstNode =
   ## Create a big operator node
-  AstNode(kind: nkBigOp, bigopKind: kind, bigopLower: lower, bigopUpper: upper, bigopBase: base)
+  AstNode(kind: nkBigOp, bigopKind: kind, bigopLower: lower, bigopUpper: upper, bigopBase: base, bigopForceLimits: forceLimits)
 
 proc newUnderOver*(base: AstNode, under: AstNode = nil, over: AstNode = nil): AstNode =
   ## Create an under/over node (for overbrace/underbrace with scripts)

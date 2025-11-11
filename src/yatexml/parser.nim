@@ -217,7 +217,7 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["gvertneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
 
   # Additional symbols
-  result["partial"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["partial"] = CommandInfo(cmdType: ctGreek, numArgs: 0)
   result["vdots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["cdots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["ldots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -490,6 +490,8 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["mathfrak"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathsf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
   result["mathtt"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
+  result["boldsymbol"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
+  result["textsf"] = CommandInfo(cmdType: ctStyle, numArgs: 1)
 
   # Math display styles
   result["displaystyle"] = CommandInfo(cmdType: ctMathStyle, numArgs: 1)
@@ -655,6 +657,8 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["num"] = CommandInfo(cmdType: ctSIunitx, numArgs: 1)
   result["si"] = CommandInfo(cmdType: ctSIunitx, numArgs: 1)
   result["SI"] = CommandInfo(cmdType: ctSIunitx, numArgs: 2)
+  result["numrange"] = CommandInfo(cmdType: ctSIunitx, numArgs: 2)
+  result["SIrange"] = CommandInfo(cmdType: ctSIunitx, numArgs: 3)
 
   # SI base units
   result["meter"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
@@ -790,17 +794,18 @@ proc greekToUnicode(name: string): string =
   of "varphi": "\u03D5"
   of "varkappa": "\u03F0"
   # Variants - uppercase
-  of "varGamma": "\U0001D6E4"
-  of "varDelta": "\U0001D6E5"
-  of "varTheta": "\U0001D6E9"
-  of "varLambda": "\U0001D6EC"
-  of "varXi": "\U0001D6EF"
-  of "varPi": "\U0001D6F1"
-  of "varSigma": "\U0001D6F4"
-  of "varUpsilon": "\U0001D6F6"
-  of "varPhi": "\U0001D6F7"
-  of "varPsi": "\U0001D6F9"
-  of "varOmega": "\U0001D6FA"
+  of "varGamma": "𝛤"
+  of "varDelta": "𝛥"
+  of "varTheta": "𝛩"
+  of "varLambda": "𝛬"
+  of "varXi": "𝛯"
+  of "varPi": "𝛱"
+  of "varSigma": "𝛴"
+  of "varUpsilon": "𝛶"
+  of "varPhi": "𝛷"
+  of "varPsi": "𝛹"
+  of "varOmega": "𝛺"
+  of "partial": "\u2202"
   else: "?"
 
 proc operatorToUnicode(name: string): string =
@@ -1794,6 +1799,8 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           of "mathfrak": skFraktur
           of "mathsf": skSansSerif
           of "mathtt": skMonospace
+          of "boldsymbol": skBoldItalic
+          of "textsf": skSansSerif
           else: skRoman
 
         let argResult = parseGroup(stream)
@@ -1887,6 +1894,14 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
           of "min": boMin
           else: boSum
 
+        # Check for \limits modifier
+        var forceLimits = false
+        if stream.match(tkCommand):
+          let nextToken = stream.peek()
+          if nextToken.value == "limits":
+            discard stream.advance()  # consume \limits
+            forceLimits = true
+
         # Parse optional subscript and superscript
         var lower, upper: AstNode = nil
 
@@ -1906,7 +1921,7 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
             return err[AstNode](upperResult.error)
           upper = upperResult.value
 
-        return ok(newBigOp(bigopKind, lower, upper))
+        return ok(newBigOp(bigopKind, lower, upper, nil, forceLimits))
 
       of ctFunction:
         # Function name becomes identifier in roman style
@@ -2137,10 +2152,40 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
             textContent.add("]")
             lastPos = textToken.position + 1
           of tkCommand:
-            # Handle escaped characters in text mode
-            textContent.add("\\")
-            textContent.add(textToken.value)
-            lastPos = textToken.position + 1 + textToken.value.len
+            # Handle commands in text mode
+            # For style commands like \textsf, we need to recursively parse them
+            let cmdName = textToken.value
+            if commandTable.hasKey(cmdName) and commandTable[cmdName].cmdType == ctStyle:
+              # Command token already consumed by line 2126, now parse the styled content
+              # Parse the argument in braces
+              if stream.match(tkLeftBrace):
+                discard stream.advance()  # consume {
+                var styledContent = ""
+                while not stream.match(tkRightBrace) and not stream.isAtEnd():
+                  let innerToken = stream.advance()
+                  case innerToken.kind
+                  of tkIdentifier, tkNumber:
+                    styledContent.add(innerToken.value)
+                  of tkOperator:
+                    styledContent.add(innerToken.value)
+                  else:
+                    styledContent.add(innerToken.value)
+
+                if stream.match(tkRightBrace):
+                  discard stream.advance()  # consume }
+                  textContent.add(styledContent)
+                  if not stream.isAtEnd():
+                    lastPos = stream.peek().position
+              else:
+                # No braces, just add as text
+                textContent.add("\\")
+                textContent.add(cmdName)
+                lastPos = textToken.position + 1 + cmdName.len
+            else:
+              # For non-style commands, just add as text
+              textContent.add("\\")
+              textContent.add(textToken.value)
+              lastPos = textToken.position + 1 + textToken.value.len
           else:
             # For other tokens, just add their value
             textContent.add(textToken.value)
@@ -2332,6 +2377,95 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
             return err[AstNode](ekMismatchedBraces, "Expected } after unit", token.position)
 
           return ok(newSIValue(valueStr, unitResult.value))
+
+        elif cmdName == "numrange":
+          # \numrange{low}{high}
+          # First argument: low value
+          let lowBraceResult = stream.expect(tkLeftBrace)
+          if not lowBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\numrange", token.position)
+
+          var lowStr = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let lowToken = stream.advance()
+            lowStr.add(lowToken.value)
+
+          let lowCloseResult = stream.expect(tkRightBrace)
+          if not lowCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after low value", token.position)
+
+          # Second argument: high value
+          let highBraceResult = stream.expect(tkLeftBrace)
+          if not highBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { for high value", token.position)
+
+          var highStr = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let highToken = stream.advance()
+            highStr.add(highToken.value)
+
+          let highCloseResult = stream.expect(tkRightBrace)
+          if not highCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after high value", token.position)
+
+          # Create a row with: low, separator (en-dash), high
+          return ok(newRow(@[
+            newNum(lowStr),
+            newText("\u2013"),  # en-dash
+            newNum(highStr)
+          ]))
+
+        elif cmdName == "SIrange":
+          # \SIrange{low}{high}{unit}
+          # First argument: low value
+          let lowBraceResult = stream.expect(tkLeftBrace)
+          if not lowBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { after \\SIrange", token.position)
+
+          var lowStr = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let lowToken = stream.advance()
+            lowStr.add(lowToken.value)
+
+          let lowCloseResult = stream.expect(tkRightBrace)
+          if not lowCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after low value", token.position)
+
+          # Second argument: high value
+          let highBraceResult = stream.expect(tkLeftBrace)
+          if not highBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { for high value", token.position)
+
+          var highStr = ""
+          while not stream.match(tkRightBrace) and not stream.isAtEnd():
+            let highToken = stream.advance()
+            highStr.add(highToken.value)
+
+          let highCloseResult = stream.expect(tkRightBrace)
+          if not highCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after high value", token.position)
+
+          # Third argument: unit
+          let unitBraceResult = stream.expect(tkLeftBrace)
+          if not unitBraceResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected { for unit", token.position)
+
+          # Parse unit expression
+          let unitResult = parseSIUnitExpr(stream)
+          if not unitResult.isOk:
+            return err[AstNode](unitResult.error)
+
+          let unitCloseResult = stream.expect(tkRightBrace)
+          if not unitCloseResult.isOk:
+            return err[AstNode](ekMismatchedBraces, "Expected } after unit", token.position)
+
+          # Create a row with: low, separator (en-dash), high, space, unit
+          let thinSpace = newSpace("0.167em")
+          return ok(newRow(@[
+            newSIValue(lowStr, unitResult.value),
+            newText("\u2013"),  # en-dash
+            newSIValue(highStr, unitResult.value)
+          ]))
 
         else:
           return err[AstNode](ekInvalidCommand, "Unknown siunitx command: \\" & cmdName, token.position)

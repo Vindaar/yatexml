@@ -4,6 +4,7 @@
 
 import ast
 import strutils
+import unicode
 
 type
   MathMLOptions* = object
@@ -30,6 +31,95 @@ proc escapeXml(s: string): string =
   result = result.replace(">", "&gt;")
   result = result.replace("\"", "&quot;")
   result = result.replace("'", "&apos;")
+
+proc convertToStyledUnicode(text: string, styleKind: StyleKind): string =
+  ## Convert text to styled Unicode characters when possible
+  result = ""
+  for ch in text:
+    let converted = case styleKind
+      of skBlackboard:
+        # Blackboard bold (double-struck) - U+1D538 onwards
+        case ch
+        of 'A'..'Z': $Rune(0x1D538 + (ord(ch) - ord('A')))
+        of 'a'..'z': $Rune(0x1D552 + (ord(ch) - ord('a')))
+        of '0'..'9': $Rune(0x1D7D8 + (ord(ch) - ord('0')))
+        else: $ch
+      of skBold:
+        # Bold - U+1D400 onwards for uppercase, U+1D41A for lowercase
+        case ch
+        of 'A'..'Z': $Rune(0x1D400 + (ord(ch) - ord('A')))
+        of 'a'..'z': $Rune(0x1D41A + (ord(ch) - ord('a')))
+        of '0'..'9': $Rune(0x1D7CE + (ord(ch) - ord('0')))
+        else: $ch
+      of skItalic:
+        # Italic - U+1D434 onwards (note: 'h' is special at U+210E)
+        case ch
+        of 'A'..'Z': $Rune(0x1D434 + (ord(ch) - ord('A')))
+        of 'a'..'g': $Rune(0x1D44E + (ord(ch) - ord('a')))
+        of 'h': "\u210E"  # Special case for italic h
+        of 'i'..'z': $Rune(0x1D44E + (ord(ch) - ord('a')))
+        else: $ch
+      of skFraktur:
+        # Fraktur - U+1D504 onwards
+        case ch
+        of 'A'..'Z':
+          # Special cases in Fraktur
+          case ch
+          of 'C': "\u212D"  # BLACK-LETTER CAPITAL C
+          of 'H': "\u210C"  # BLACK-LETTER CAPITAL H
+          of 'I': "\u2111"  # BLACK-LETTER CAPITAL I
+          of 'R': "\u211C"  # BLACK-LETTER CAPITAL R
+          of 'Z': "\u2128"  # BLACK-LETTER CAPITAL Z
+          else: $Rune(0x1D504 + (ord(ch) - ord('A')))
+        of 'a'..'z': $Rune(0x1D51E + (ord(ch) - ord('a')))
+        else: $ch
+      of skCalligraphic:
+        # Script/Calligraphic - U+1D49C onwards
+        case ch
+        of 'A'..'Z':
+          # Special cases in Script
+          case ch
+          of 'B': "\u212C"  # SCRIPT CAPITAL B
+          of 'E': "\u2130"  # SCRIPT CAPITAL E
+          of 'F': "\u2131"  # SCRIPT CAPITAL F
+          of 'H': "\u210B"  # SCRIPT CAPITAL H
+          of 'I': "\u2110"  # SCRIPT CAPITAL I
+          of 'L': "\u2112"  # SCRIPT CAPITAL L
+          of 'M': "\u2133"  # SCRIPT CAPITAL M
+          of 'R': "\u211B"  # SCRIPT CAPITAL R
+          else: $Rune(0x1D49C + (ord(ch) - ord('A')))
+        of 'a'..'z':
+          # Special cases for lowercase script
+          case ch
+          of 'e': "\u212F"  # SCRIPT SMALL E
+          of 'g': "\u210A"  # SCRIPT SMALL G
+          of 'o': "\u2134"  # SCRIPT SMALL O
+          else: $Rune(0x1D4B6 + (ord(ch) - ord('a')))
+        else: $ch
+      of skSansSerif:
+        # Sans-serif - U+1D5A0 onwards
+        case ch
+        of 'A'..'Z': $Rune(0x1D5A0 + (ord(ch) - ord('A')))
+        of 'a'..'z': $Rune(0x1D5BA + (ord(ch) - ord('a')))
+        of '0'..'9': $Rune(0x1D7E2 + (ord(ch) - ord('0')))
+        else: $ch
+      of skMonospace:
+        # Monospace - U+1D670 onwards
+        case ch
+        of 'A'..'Z': $Rune(0x1D670 + (ord(ch) - ord('A')))
+        of 'a'..'z': $Rune(0x1D68A + (ord(ch) - ord('a')))
+        of '0'..'9': $Rune(0x1D7F6 + (ord(ch) - ord('0')))
+        else: $ch
+      of skBoldItalic:
+        # Bold Italic - U+1D468 onwards
+        case ch
+        of 'A'..'Z': $Rune(0x1D468 + (ord(ch) - ord('A')))
+        of 'a'..'z': $Rune(0x1D482 + (ord(ch) - ord('a')))
+        of '0'..'9': $Rune(0x1D7CE + (ord(ch) - ord('0')))  # Same as bold
+        else: $ch
+      else:
+        $ch  # For skRoman and other styles, keep original
+    result.add(converted)
 
 proc tag(name: string, content: string, attrs: openArray[(string, string)] = []): string =
   ## Create an XML tag
@@ -223,20 +313,24 @@ proc generateAccent(node: AstNode, options: MathMLOptions): string =
 
 proc generateStyle(node: AstNode, options: MathMLOptions): string =
   ## Generate styled element with mathvariant attribute
-  let base = generateNode(node.styleBase, options)
+  let baseContent = generateNode(node.styleBase, options)
 
-  let variant = case node.styleKind
-    of skBold: "bold"
-    of skItalic: "italic"
-    of skRoman: "normal"
-    of skBlackboard: "double-struck"
-    of skCalligraphic: "script"
-    of skFraktur: "fraktur"
-    of skSansSerif: "sans-serif"
-    of skMonospace: "monospace"
-
-  # Wrap in mstyle with mathvariant
-  tag("mstyle", base, [("mathvariant", variant)])
+  if node.styleBase.kind in [nkIdentifier, nkSymbol]:
+    let text = if node.styleBase.kind == nkIdentifier: node.styleBase.identName else: node.styleBase.symbolValue
+    let converted = convertToStyledUnicode(text, node.styleKind)
+    tag("mi", converted)
+  else:
+    let variant = case node.styleKind
+      of skBold: "bold"
+      of skItalic: "italic"
+      of skRoman: "normal"
+      of skBlackboard: "double-struck"
+      of skCalligraphic: "script"
+      of skFraktur: "fraktur"
+      of skSansSerif: "sans-serif"
+      of skMonospace: "monospace"
+      of skBoldItalic: "bold-italic"
+    tag("mstyle", baseContent, [("mathvariant", variant)])
 
 proc generateMathStyle(node: AstNode, options: MathMLOptions): string =
   ## Generate math style element with scriptlevel and displaystyle attributes
@@ -319,12 +413,16 @@ proc generateSizedDelimiter(node: AstNode, options: MathMLOptions): string =
 
 proc generateFunction(node: AstNode, options: MathMLOptions): string =
   ## Generate function application
-  let funcName = tag("mi", node.funcName)
+  let funcName = tag("mi", node.funcName, [("mathvariant", "normal")])
   if node.funcArg != nil:
     let arg = generateNode(node.funcArg, options)
-    tag("mrow", funcName & arg)
+    # Add invisible function application operator and a small space
+    # The thin space (0.1667em) provides proper spacing between function name and argument
+    tag("mrow", funcName & tag("mo", "\u2061") & tag("mspace", [("width", "0.1667em")]) & arg)
   else:
-    funcName
+    # Even without explicit argument, wrap with invisible operator and trailing space
+    # This ensures proper spacing with the following expression (e.g., "\sin a")
+    tag("mrow", funcName & tag("mo", "\u2061") & tag("mspace", [("width", "0.1667em")]))
 
 proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   ## Generate big operator with limits
@@ -353,7 +451,7 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
     of boMin: "min"
 
   let opNode = if node.bigopKind in {boLim, boMax, boMin}:
-    tag("mo", opSymbol)
+    tag("mi", opSymbol, [("mathvariant", "normal")])
   else:
     # Use movablelimits="false" to force limits above/below (not to the side)
     # Operator size is controlled by display="block" on the <math> element
@@ -362,30 +460,37 @@ proc generateBigOp(node: AstNode, options: MathMLOptions): string =
   # Handle limits
   # Integrals use msub/msup (limits to the side) because they're tall operators
   # Other operators (sum, prod, etc.) use munder/mover (limits above/below)
+  # However, if \limits is used (bigopForceLimits), force munder/mover for all operators
   let isIntegral = node.bigopKind in {boInt, boIInt, boIIInt, boIIIInt, boOint, boOIInt, boOIIInt}
+  let useLimitsAboveBelow = node.bigopForceLimits or not isIntegral
 
   if node.bigopLower != nil and node.bigopUpper != nil:
     let lower = generateNode(node.bigopLower, options)
     let upper = generateNode(node.bigopUpper, options)
-    if isIntegral:
-      tag("msubsup", opNode & lower & upper)
-    else:
+    if useLimitsAboveBelow:
       tag("mrow", tag("munderover", opNode & lower & upper))
+    else:
+      tag("msubsup", opNode & lower & upper)
   elif node.bigopLower != nil:
     let lower = generateNode(node.bigopLower, options)
-    if isIntegral:
-      tag("msub", opNode & lower)
-    else:
+    if useLimitsAboveBelow:
       tag("mrow", tag("munder", opNode & lower))
+    else:
+      tag("msub", opNode & lower)
   elif node.bigopUpper != nil:
     let upper = generateNode(node.bigopUpper, options)
-    if isIntegral:
-      tag("msup", opNode & upper)
-    else:
+    if useLimitsAboveBelow:
       tag("mrow", tag("mover", opNode & upper))
+    else:
+      tag("msup", opNode & upper)
   else:
-    # Bare operators without limits - no mrow wrapper to avoid extra spacing
-    opNode
+    # Bare operators without limits (e.g., \max a, \min b, \lim x)
+    # Wrap with spacing to separate from surrounding expressions
+    # Leading space separates from previous expression, trailing space from next
+    if node.bigopKind in {boLim, boMax, boMin}:
+      tag("mrow", tag("mspace", [("width", "0.1667em")]) & opNode & tag("mo", "\u2061") & tag("mspace", [("width", "0.1667em")]))
+    else:
+      opNode
 
 proc generateUnderOver(node: AstNode, options: MathMLOptions): string =
   ## Generate under/over construction (for overbrace/underbrace with scripts)
