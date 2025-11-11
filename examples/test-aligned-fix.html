@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Aligned Environment Fix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .test-section {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+    .tml-right { text-align: right; }
+    .tml-left { text-align: left; }
+    .tml-center { text-align: center; }
+    h3 { margin-top: 0; color: #2c3e50; }
+    .result { margin: 20px 0; padding: 15px; background: white; }
+  </style>
+</head>
+<body>
+  <h1>Aligned Environment Fix Test</h1>
+
+  <div class="test-section">
+    <h3>Test: Multiple Steps Alignment</h3>
+    <p>LaTeX code:</p>
+    <pre>\begin{aligned}
+(a + b)^2 &= (a + b)(a + b) \\
+          &= a^2 + ab + ba + b^2 \\
+          &= a^2 + 2ab + b^2
+\end{aligned}</pre>
+
+    <p>Rendered (should have empty cells before = signs in rows 2 and 3):</p>
+    <div class="result">
+      $$\begin{aligned}
+      (a + b)^2 &= (a + b)(a + b) \\
+                &= a^2 + ab + ba + b^2 \\
+                &= a^2 + 2ab + b^2
+      \end{aligned}$$
+    </div>
+  </div>
+
+  <div class="test-section">
+    <h3>Expected Structure</h3>
+    <p>Each row should have:</p>
+    <ul>
+      <li><strong>Row 1:</strong> Left cell: <code>(a + b)^2</code>, Right cell: <code>= (a + b)(a + b)</code></li>
+      <li><strong>Row 2:</strong> Left cell: <strong>EMPTY</strong>, Right cell: <code>= a^2 + ab + ba + b^2</code></li>
+      <li><strong>Row 3:</strong> Left cell: <strong>EMPTY</strong>, Right cell: <code>= a^2 + 2ab + b^2</code></li>
+    </ul>
+    <p>The equals signs should all line up vertically on the left side of the right column.</p>
+  </div>
+
+  <div id="verification" style="margin-top: 40px; padding: 20px; background: #e3f2fd;">
+    <h3>Verification Results</h3>
+    <div id="results"></div>
+  </div>
+
+  <script src="./latexToMathML.js"></script>
+  <script src="./yatexml-autorender.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Testing aligned environment fix...');
+
+      // Run auto-render
+      yatexml.autoRender(document.body);
+
+      // Verify the results
+      setTimeout(() => {
+        const mathElements = document.querySelectorAll('math');
+        const resultsDiv = document.getElementById('results');
+
+        if (mathElements.length === 0) {
+          resultsDiv.innerHTML = '<p style="color: red;">❌ No math elements found!</p>';
+          return;
+        }
+
+        // Find the aligned mtable
+        const mtables = document.querySelectorAll('mtable[columnalign]');
+        if (mtables.length === 0) {
+          resultsDiv.innerHTML = '<p style="color: red;">❌ No aligned table found!</p>';
+          return;
+        }
+
+        const table = mtables[0];
+        const rows = table.querySelectorAll('mtr');
+
+        resultsDiv.innerHTML = `<p><strong>Found ${rows.length} rows</strong></p>`;
+
+        let allCorrect = true;
+        rows.forEach((row, idx) => {
+          const cells = row.querySelectorAll('mtd');
+          // Should have 4 cells: [padding] [left-content] [right-content] [padding]
+          const cellCount = cells.length;
+          const hasRightAlign = cells.length > 1 && cells[1].className.includes('tml-right');
+          const hasLeftAlign = cells.length > 2 && cells[2].className.includes('tml-left');
+
+          const status = cellCount === 4 && hasRightAlign && hasLeftAlign ? '✓' : '✗';
+          if (cellCount !== 4 || !hasRightAlign || !hasLeftAlign) allCorrect = false;
+
+          resultsDiv.innerHTML += `<p>${status} Row ${idx + 1}: ${cellCount} cells (expected 4)</p>`;
+        });
+
+        if (allCorrect) {
+          resultsDiv.innerHTML += '<p style="color: green; font-weight: bold; margin-top: 20px;">✓ All rows have correct structure!</p>';
+        } else {
+          resultsDiv.innerHTML += '<p style="color: orange; font-weight: bold; margin-top: 20px;">⚠ Some rows may have issues - check output</p>';
+        }
+      }, 200);
+    });
+  </script>
+</body>
+</html>

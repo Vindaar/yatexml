@@ -2604,6 +2604,10 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
 
     # Check for column separator (&)
     elif token.kind == tkAmpersand:
+      # If we're at the start of a cell when we encounter &, it means the
+      # cell before & is empty. Add an empty cell before consuming the &.
+      if startOfCell:
+        currentRow.add(newRow(@[]))
       discard stream.advance()
       startOfCell = true
 

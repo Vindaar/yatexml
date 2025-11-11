@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Parenthesis Superscript</title>
+</head>
+<body>
+  <h1>Test (a + b)^2 Rendering</h1>
+
+  <h3>Test 1: Simple inline</h3>
+  <p>$$(a + b)^2$$</p>
+
+  <h3>Test 2: In aligned environment</h3>
+  <p>$$\begin{aligned}
+  (a + b)^2 &= (a + b)(a + b)
+  \end{aligned}$$</p>
+
+  <div id="debug"></div>
+
+  <script src="./latexToMathML.js"></script>
+  <script src="./yatexml-autorender.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      yatexml.autoRender(document.body);
+
+      setTimeout(() => {
+        const debug = document.getElementById('debug');
+        const mathElements = document.querySelectorAll('math');
+
+        debug.innerHTML = '<h3>Generated MathML:</h3>';
+        mathElements.forEach((math, idx) => {
+          debug.innerHTML += `<h4>Math ${idx + 1}:</h4>`;
+          debug.innerHTML += `<pre>${math.outerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>`;
+        });
+      }, 100);
+    });
+  </script>
+</body>
+</html>

@@ -379,13 +379,13 @@ proc generateDelimited(node: AstNode, options: MathMLOptions): string =
   ## Generate delimited expression with fences
   let content = generateNode(node.delimContent, options)
 
-  # For parentheses in function calls, use form attributes instead of fence
+  # For parentheses, use form attributes instead of fence
   # This matches TeMML's approach and produces better spacing
+  # Always wrap in mrow to keep elements together (important for superscripts)
   if node.delimLeft == "(" and node.delimRight == ")":
     let leftFence = tag("mo", "(", [("form", "prefix"), ("stretchy", "false")])
     let rightFence = tag("mo", ")", [("form", "postfix"), ("stretchy", "false")])
-    # Return flat - no mrow wrapper
-    return leftFence & content & rightFence
+    return tag("mrow", leftFence & content & rightFence)
   else:
     # For other delimiters (brackets, braces, etc), keep current behavior
     let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true")])
