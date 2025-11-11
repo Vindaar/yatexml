@@ -793,8 +793,11 @@ proc generateMathML*(ast: AstNode, options: MathMLOptions = defaultOptions()): s
   ## Wraps the result in <math> tags
   var attrs: seq[(string, string)] = @[("xmlns", "http://www.w3.org/1998/Math/MathML")]
 
+  # Explicitly set display attribute for both inline and block modes
   if options.displayStyle:
     attrs.add(("display", "block"))
+  else:
+    attrs.add(("display", "inline"))
 
   let content = generateNode(ast, options)
   tag("math", content, attrs)

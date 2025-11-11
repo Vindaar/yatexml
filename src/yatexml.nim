@@ -64,6 +64,32 @@ proc latexToMathML*(latex: string, options: MathMLOptions = defaultOptions()): R
   let mathml = generateMathML(parseResult.value, options)
   return ok(mathml)
 
+proc latexToMathML*(latex: string, displayStyle: bool, options: MathMLOptions = defaultOptions()): Result[string] =
+  ## Convert LaTeX math to MathML with explicit display style control
+  ##
+  ## This is a convenience overload that allows you to easily specify inline vs block math.
+  ##
+  ## Parameters:
+  ## - latex: LaTeX math expression (without $ delimiters)
+  ## - displayStyle: true for block/display math (like $$...$$), false for inline math (like $...$)
+  ## - options: MathML generation options (displayStyle field will be overridden)
+  ##
+  ## Returns:
+  ## - Result[string]: Success with MathML string, or error
+  ##
+  ## Example:
+  ##
+  ## .. code-block:: nim
+  ##   # Inline math (like $E = mc^2$)
+  ##   let inline = latexToMathML(r"E = mc^2", false)
+  ##
+  ##   # Block/display math (like $$\int_a^b f(x)dx$$)
+  ##   let block = latexToMathML(r"\int_a^b f(x)dx", true)
+
+  var opts = options
+  opts.displayStyle = displayStyle
+  return latexToMathML(latex, opts)
+
 proc latexToMathMLStatic*(latex: static[string]): string =
   ## Compile-time conversion of LaTeX to MathML
   ##

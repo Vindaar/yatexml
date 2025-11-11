@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Inline vs Block Math</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .test-section {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .result {
+      margin: 10px 0;
+      padding: 10px;
+      background: white;
+      border-left: 4px solid #4CAF50;
+    }
+    code {
+      background: #e8e8e8;
+      padding: 2px 6px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inline vs Block Math Display Test</h1>
+
+  <div class="test-section">
+    <h3>Test 1: Inline Math with $...$</h3>
+    <p>This text has inline math: $E = mc^2$ and more text after it.</p>
+    <p>Expected: The math should appear inline with the text, not on a separate line.</p>
+  </div>
+
+  <div class="test-section">
+    <h3>Test 2: Block Math with $$...$$</h3>
+    <p>This text is followed by block math:</p>
+    $$\int_a^b f(x)dx$$
+    <p>Expected: The integral should be centered and on its own line.</p>
+  </div>
+
+  <div class="test-section">
+    <h3>Test 3: Inline with \(...\)</h3>
+    <p>Inline formula \(\frac{a}{b}\) should appear within this sentence.</p>
+  </div>
+
+  <div class="test-section">
+    <h3>Test 4: Block with \[...\]</h3>
+    <p>Block formula:</p>
+    \[\sum_{i=0}^n i^2\]
+    <p>Should be centered and on its own line.</p>
+  </div>
+
+  <div class="test-section">
+    <h3>Test 5: Mixed Inline</h3>
+    <p>Here are multiple inline formulas: $x^2$, $y^3$, and $z^4$ in one sentence.</p>
+    <p>Expected: All three should appear inline, not breaking the text flow.</p>
+  </div>
+
+  <div id="verification" style="margin-top: 40px; padding: 20px; background: #e3f2fd; border-left: 4px solid #2196F3;">
+    <h3>Verification (check with browser inspector)</h3>
+    <div id="results"></div>
+  </div>
+
+  <script src="./latexToMathML.js"></script>
+  <script src="./yatexml-autorender.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Testing inline vs block rendering...');
+
+      // Run auto-render
+      yatexml.autoRender(document.body);
+
+      // Verify the results
+      setTimeout(() => {
+        const results = [];
+        const mathElements = document.querySelectorAll('math');
+
+        mathElements.forEach((math, idx) => {
+          const display = math.getAttribute('display');
+          results.push(`Math element ${idx + 1}: display="${display}"`);
+        });
+
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '<ul>' + results.map(r => '<li>' + r + '</li>').join('') + '</ul>';
+
+        // Log to console
+        console.log('Results:', results);
+
+        // Count inline vs block
+        const inlineCount = Array.from(mathElements).filter(m => m.getAttribute('display') === 'inline').length;
+        const blockCount = Array.from(mathElements).filter(m => m.getAttribute('display') === 'block').length;
+
+        resultsDiv.innerHTML += `<p><strong>Summary:</strong> ${inlineCount} inline, ${blockCount} block</p>`;
+        console.log(`Summary: ${inlineCount} inline, ${blockCount} block`);
+
+        // Check if working correctly
+        if (inlineCount > 0 && blockCount > 0) {
+          resultsDiv.innerHTML += '<p style="color: green; font-weight: bold;">✓ Both inline and block math detected correctly!</p>';
+        } else {
+          resultsDiv.innerHTML += '<p style="color: red; font-weight: bold;">✗ Issue detected - check console</p>';
+        }
+      }, 100);
+    });
+  </script>
+</body>
+</html>

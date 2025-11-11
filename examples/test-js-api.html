@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test JavaScript API</title>
+</head>
+<body>
+  <h1>Testing latexToMathML JavaScript API</h1>
+  <div id="results"></div>
+
+  <script src="./latexToMathML.js"></script>
+  <script>
+    const results = [];
+
+    // Test 1: Inline math
+    try {
+      const inline = latexToMathML("E = mc^2", false);
+      results.push("Test 1 (inline): " + (inline !== "ERROR" && inline.includes('display="inline"') ? "PASS ✓" : "FAIL ✗"));
+      console.log("Inline result:", inline);
+    } catch (e) {
+      results.push("Test 1 (inline): ERROR - " + e.message);
+      console.error("Test 1 error:", e);
+    }
+
+    // Test 2: Block math
+    try {
+      const block = latexToMathML("\\int_a^b f(x)dx", true);
+      results.push("Test 2 (block): " + (block !== "ERROR" && block.includes('display="block"') ? "PASS ✓" : "FAIL ✗"));
+      console.log("Block result:", block);
+    } catch (e) {
+      results.push("Test 2 (block): ERROR - " + e.message);
+      console.error("Test 2 error:", e);
+    }
+
+    // Test 3: Simple fraction inline
+    try {
+      const frac = latexToMathML("\\frac{a}{b}", false);
+      results.push("Test 3 (fraction): " + (frac !== "ERROR" && frac.includes('display="inline"') ? "PASS ✓" : "FAIL ✗"));
+      console.log("Fraction result:", frac);
+    } catch (e) {
+      results.push("Test 3 (fraction): ERROR - " + e.message);
+      console.error("Test 3 error:", e);
+    }
+
+    // Display results
+    document.getElementById('results').innerHTML = '<ul>' + results.map(r => '<li>' + r + '</li>').join('') + '</ul>';
+
+    if (results.every(r => r.includes('PASS'))) {
+      document.getElementById('results').innerHTML += '<p style="color: green; font-weight: bold;">All tests passed! ✓</p>';
+    } else {
+      document.getElementById('results').innerHTML += '<p style="color: red; font-weight: bold;">Some tests failed - check console</p>';
+    }
+  </script>
+</body>
+</html>
