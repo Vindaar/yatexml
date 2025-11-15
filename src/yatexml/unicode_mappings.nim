@@ -109,6 +109,7 @@ proc initUnicodeMappings*() =
   unicodeToLatex["÷"] = UnicodeMapping(latex: "÷", category: mcOperator)
   unicodeToLatex["±"] = UnicodeMapping(latex: "±", category: mcOperator)
   unicodeToLatex["∓"] = UnicodeMapping(latex: "∓", category: mcOperator)
+  unicodeToLatex["−"] = UnicodeMapping(latex: "−", category: mcOperator)  # Unicode minus sign U+2212
   unicodeToLatex["⊕"] = UnicodeMapping(latex: "⊕", category: mcOperator)
   unicodeToLatex["⊗"] = UnicodeMapping(latex: "⊗", category: mcOperator)
   unicodeToLatex["⊖"] = UnicodeMapping(latex: "⊖", category: mcOperator)
@@ -143,7 +144,7 @@ proc initUnicodeMappings*() =
   unicodeToLatex["⇐"] = UnicodeMapping(latex: "⇐", category: mcRelation)
   unicodeToLatex["⇔"] = UnicodeMapping(latex: "⇔", category: mcRelation)
 
-  # Superscript digits (U+2070-U+2079)
+  # Superscript digits and signs (U+2070-U+2079, U+207B)
   unicodeToLatex["⁰"] = UnicodeMapping(latex: "0", category: mcSuperscript)
   unicodeToLatex["¹"] = UnicodeMapping(latex: "1", category: mcSuperscript)
   unicodeToLatex["²"] = UnicodeMapping(latex: "2", category: mcSuperscript)
@@ -154,6 +155,8 @@ proc initUnicodeMappings*() =
   unicodeToLatex["⁷"] = UnicodeMapping(latex: "7", category: mcSuperscript)
   unicodeToLatex["⁸"] = UnicodeMapping(latex: "8", category: mcSuperscript)
   unicodeToLatex["⁹"] = UnicodeMapping(latex: "9", category: mcSuperscript)
+  unicodeToLatex["⁻"] = UnicodeMapping(latex: "-", category: mcSuperscript)  # Superscript minus U+207B
+  unicodeToLatex["⁺"] = UnicodeMapping(latex: "+", category: mcSuperscript)  # Superscript plus U+207A
 
   # Subscript digits (U+2080-U+2089)
   unicodeToLatex["₀"] = UnicodeMapping(latex: "0", category: mcSubscript)

@@ -386,8 +386,13 @@ proc generateDelimited(node: AstNode, options: MathMLOptions): string =
     let leftFence = tag("mo", "(", [("form", "prefix"), ("stretchy", "false")])
     let rightFence = tag("mo", ")", [("form", "postfix"), ("stretchy", "false")])
     return tag("mrow", leftFence & content & rightFence)
+  elif node.delimLeft == "[" and node.delimRight == "]":
+    # For brackets, use minimal spacing to avoid gaps with adjacent text
+    let leftFence = tag("mo", "[", [("fence", "true"), ("stretchy", "true"), ("lspace", "0"), ("rspace", "0")])
+    let rightFence = tag("mo", "]", [("fence", "true"), ("stretchy", "true"), ("lspace", "0"), ("rspace", "0")])
+    return tag("mrow", leftFence & content & rightFence)
   else:
-    # For other delimiters (brackets, braces, etc), keep current behavior
+    # For other delimiters (braces, etc), keep current behavior
     let leftFence = tag("mo", node.delimLeft, [("fence", "true"), ("stretchy", "true")])
     let rightFence = tag("mo", node.delimRight, [("fence", "true"), ("stretchy", "true")])
     return tag("mrow", leftFence & content & rightFence)
@@ -631,8 +636,32 @@ proc generateNum(node: AstNode, options: MathMLOptions): string =
 
 proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
   ## Generate SI unit expression
-  # Helper to convert unit component to string
-  proc unitToString(comp: SIUnitComponent): string =
+  # Helper to convert a single digit to its Unicode superscript
+  proc digitToSuperscript(d: char): string =
+    case d
+    of '0': "⁰"
+    of '1': "¹"
+    of '2': "²"
+    of '3': "³"
+    of '4': "⁴"
+    of '5': "⁵"
+    of '6': "⁶"
+    of '7': "⁷"
+    of '8': "⁸"
+    of '9': "⁹"
+    of '-': "⁻"
+    of '+': "⁺"
+    else: $d
+
+  # Helper to convert a number to Unicode superscript
+  proc numberToSuperscript(n: int): string =
+    let s = $n
+    result = ""
+    for c in s:
+      result.add(digitToSuperscript(c))
+
+  # Helper to generate MathML for a unit component with power
+  proc generateUnitComponent(comp: SIUnitComponent): string =
     let unitStr = case comp.unit
       of ukMeter: "m"
       of ukSecond: "s"
@@ -660,7 +689,7 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
       of ukBecquerel: "Bq"
       of ukGray: "Gy"
       of ukSievert: "Sv"
-      of ukCustom: comp.customUnit  # Use the preserved custom unit string
+      of ukCustom: comp.customUnit
 
     let prefixStr = case comp.prefix
       of pkNone: ""
@@ -685,38 +714,88 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
       of pkZetta: "Z"
       of pkYotta: "Y"
 
-    result = prefixStr & unitStr
-    if comp.power != 1:
-      result.add(case comp.power
-        of 2: "²"
-        of 3: "³"
-        else: "^" & $comp.power)
+    let baseUnit = prefixStr & unitStr
+
+    if comp.power == 1:
+      # No power, just render the unit
+      tag("mi", baseUnit, [("mathvariant", "normal")])
+    else:
+      # Render unit with superscript power
+      let unitTag = tag("mi", baseUnit, [("mathvariant", "normal")])
+      let powerTag = tag("mn", numberToSuperscript(comp.power))
+      tag("msup", unitTag & powerTag)
 
   var content = ""
 
-  # Generate numerator units
+  # Generate all units from numerator with their signed powers
   for i, comp in node.unitNumerator:
     if i > 0:
-      # Use thin space between units (much smaller than normal space)
-      content.add(tag("mspace", [("width", "0.167em")]))
-    # Units should be upright (normal/roman), not italic
-    content.add(tag("mi", unitToString(comp), [("mathvariant", "normal")]))
+      # Use centered dot between units
+      content.add(tag("mo", "·"))
+    content.add(generateUnitComponent(comp))
 
-  # Generate denominator units (if any)
+  # For backward compatibility, also handle denominator if present (shouldn't happen with new parser)
   if node.unitDenominator.len > 0:
     content.add(tag("mo", "/"))
     for i, comp in node.unitDenominator:
       if i > 0:
-        # Use thin space between units
-        content.add(tag("mspace", [("width", "0.167em")]))
-      # Units should be upright (normal/roman), not italic
-      content.add(tag("mi", unitToString(comp), [("mathvariant", "normal")]))
+        content.add(tag("mo", "·"))
+      content.add(generateUnitComponent(comp))
 
   tag("mrow", content)
 
 proc generateSIValue(node: AstNode, options: MathMLOptions): string =
-  ## Generate SI value with unit
-  let valueNode = tag("mn", escapeXml(node.siValue))
+  ## Generate SI value with unit, converting scientific notation to proper format
+  ## e.g., "5e-10" → "5·10⁻¹⁰"
+
+  # Helper to convert digit to superscript (reused from generateSIUnit)
+  proc digitToSuperscript(d: char): string =
+    case d
+    of '0': "⁰"
+    of '1': "¹"
+    of '2': "²"
+    of '3': "³"
+    of '4': "⁴"
+    of '5': "⁵"
+    of '6': "⁶"
+    of '7': "⁷"
+    of '8': "⁸"
+    of '9': "⁹"
+    of '-': "⁻"
+    of '+': "⁺"
+    else: $d
+
+  proc numberToSuperscript(n: string): string =
+    result = ""
+    for c in n:
+      result.add(digitToSuperscript(c))
+
+  # Check if value contains scientific notation (e or E)
+  let value = node.siValue
+  var valueNode = ""
+
+  # Find 'e' or 'E' in the value
+  let ePos = if value.find('e') >= 0: value.find('e')
+              elif value.find('E') >= 0: value.find('E')
+              else: -1
+
+  if ePos > 0:
+    # Parse scientific notation: mantissa e exponent
+    let mantissa = value[0..<ePos]
+    let exponent = value[ePos+1..^1]
+
+    # Generate: mantissa × 10^exponent
+    let mantissaTag = tag("mn", escapeXml(mantissa))
+    let timesTag = tag("mo", "·")  # center dot
+    let tenTag = tag("mn", "10")
+    let exponentTag = tag("mn", numberToSuperscript(exponent))
+    let powerTag = tag("msup", tenTag & exponentTag)
+
+    valueNode = tag("mrow", mantissaTag & timesTag & powerTag)
+  else:
+    # No scientific notation, render as normal number
+    valueNode = tag("mn", escapeXml(value))
+
   let unitNode = generateNode(node.siUnit, options)
   let space = tag("mspace", [("width", "0.167em")])  # Thin space between value and unit
   tag("mrow", valueNode & space & unitNode)

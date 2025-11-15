@@ -27,6 +27,8 @@
       { left: '\\begin{equation*}', right: '\\end{equation*}', display: true },
       { left: '\\begin{align}', right: '\\end{align}', display: true },
       { left: '\\begin{align*}', right: '\\end{align*}', display: true },
+      { left: '\\begin{aligned}', right: '\\end{aligned}', display: true },
+      { left: '\\begin{aligned*}', right: '\\end{aligned*}', display: true },
       { left: '\\begin{gather}', right: '\\end{gather}', display: true },
       { left: '\\begin{gather*}', right: '\\end{gather*}', display: true },
 
@@ -62,7 +64,7 @@
    * Find all LaTeX expressions in text using configured delimiters
    */
   function findMathInText(text, delimiters) {
-    const results = [];
+      const results = [];
 
     for (const delim of delimiters) {
       const leftEsc = escapeRegex(delim.left);
@@ -80,8 +82,13 @@
 
       let match;
       while ((match = pattern.exec(text)) !== null) {
+        // For \begin{...}\end{...} environments, keep the full match (including delimiters)
+        // For math mode delimiters like $$...$$ or \[...\], strip the delimiters
+        const isEnvironment = delim.left.startsWith('\\begin{');
+        const latexContent = isEnvironment ? match[0].trim() : match[1].trim();
+
         results.push({
-          latex: match[1].trim(),
+          latex: latexContent,
           start: match.index,
           end: match.index + match[0].length,
           display: delim.display,
@@ -147,7 +154,8 @@
           throw new Error('latexToMathML function not found. Make sure latexToMathML.js is loaded.');
         }
 
-        // Pass displayStyle parameter: true for block math ($$...$$), false for inline ($...$)
+          // Pass displayStyle parameter: true for block math ($$...$$), false for inline ($...$)
+	  console.log("Passing match: ", match.latex);
         let mathml = latexToMathML(match.latex, match.display);
 
         // Handle ERROR response

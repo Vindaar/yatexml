@@ -1402,14 +1402,12 @@ proc parseShorthandUnits(s: string): tuple[numerator: seq[SIUnitComponent], deno
 
     if matched:
       let component = if customUnitStr.len > 0:
-        newCustomUnitComponent(customUnitStr, pkNone, abs(power))  # Never use prefix with custom units
+        newCustomUnitComponent(customUnitStr, pkNone, power)  # Keep signed power
       else:
-        newSIUnitComponent(prefix, unit, abs(power))
+        newSIUnitComponent(prefix, unit, power)
 
-      if power < 0:
-        denominator.add(component)
-      else:
-        numerator.add(component)
+      # Keep all units in numerator with their signed powers
+      numerator.add(component)
 
   result = (numerator: numerator, denominator: denominator)
 
@@ -1707,6 +1705,16 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
     if not closeResult.isOk:
       return err[AstNode](closeResult.error)
     return ok(newDelimited("(", ")", exprResult.value))
+
+  of tkLeftBracket:
+    discard stream.advance()
+    let exprResult = parseExpression(stream)
+    if not exprResult.isOk:
+      return err[AstNode](exprResult.error)
+    let closeResult = stream.expect(tkRightBracket)
+    if not closeResult.isOk:
+      return err[AstNode](closeResult.error)
+    return ok(newDelimited("[", "]", exprResult.value))
 
   of tkCommand:
     discard stream.advance()
