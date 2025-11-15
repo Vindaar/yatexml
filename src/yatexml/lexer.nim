@@ -186,12 +186,12 @@ proc lexUnicodeChar(lex: var Lexer): Result[seq[Token]] =
   var tokens: seq[Token] = @[]
 
   case mapping.category
-  of mcGreekLetter, mcCommand:
-    # Greek letters and commands become command tokens: α → \alpha, √ → \sqrt
+  of mcGreekLetter, mcCommand, mcSymbol:
+    # Greek letters, symbols, and commands become command tokens: α → \alpha, ∂ → \partial, √ → \sqrt
     tokens.add(Token(kind: tkCommand, value: mapping.latex, position: startPos))
 
-  of mcOperator, mcRelation, mcSymbol, mcBigOp:
-    # Operators and symbols keep their Unicode representation
+  of mcOperator, mcRelation, mcBigOp:
+    # Operators keep their Unicode representation
     tokens.add(Token(kind: tkOperator, value: mapping.latex, position: startPos))
 
   of mcSuperscript:

@@ -218,6 +218,7 @@ proc initCommandTable(): Table[string, CommandInfo] =
 
   # Additional symbols
   result["partial"] = CommandInfo(cmdType: ctGreek, numArgs: 0)
+  result["∂"] = CommandInfo(cmdType: ctGreek, numArgs: 0)  # Direct Unicode input
   result["vdots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["cdots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["ldots"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -806,6 +807,7 @@ proc greekToUnicode(name: string): string =
   of "varPsi": "𝛹"
   of "varOmega": "𝛺"
   of "partial": "\u2202"
+  of "∂": "\u2202"  # Direct Unicode input maps to same output
   else: "?"
 
 proc operatorToUnicode(name: string): string =
@@ -943,6 +945,7 @@ proc operatorToUnicode(name: string): string =
   of "varsupsetneq": "\u228B"
   of "varsupsetneqq": "\u2ACC\uFE00"
   of "partial": "\u2202"
+  of "∂": "\u2202"  # Direct Unicode input maps to same output
   of "vdots": "\u22EE"
   of "cdots": "\u22EF"
   of "ldots", "dots": "\u2026"
