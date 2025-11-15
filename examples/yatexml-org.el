@@ -1,4 +1,4 @@
-;;; yatexml-org.el --- Org-mode export filter for yatexml MathML conversion
+;;; yatexml-org.el --- Org-mode export filter for yatexml MathML conversion -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -14,224 +14,192 @@
 ;;
 ;; Installation:
 ;;
-;; 1. Compile yatexml to JavaScript:
+;; 1. Compile yatexml to native binary:
 ;;    cd /path/to/yatexml/examples
-;;    nim js -d:release latexToMathML.nim
+;;    nim c -d:release latexToMathML.nim
 ;;
 ;; 2. Add to your Emacs init file:
 ;;    (load-file "/path/to/yatexml/examples/yatexml-org.el")
-;;    (setq yatexml-js-path "/path/to/yatexml/examples/latexToMathML.js")
+;;    (setq yatexml-binary-path "/path/to/yatexml/examples/latexToMathML")
 ;;    (yatexml-org-mode 1)
 ;;
 ;; 3. Export your Org file to HTML (C-c C-e h h)
 ;;
-;; The LaTeX fragments will be converted to MathML inline, and the HTML
-;; will also include the yatexml-autorender.js script for any remaining
-;; LaTeX that needs client-side rendering.
+;; The LaTeX fragments will be converted to MathML natively, with no
+;; JavaScript dependencies required during export.
 
 ;;; Code:
 
 (require 'ox-html)
-(require 'json)
+(require 'subr-x)
 
 (defgroup yatexml nil
   "Convert LaTeX to MathML using yatexml during Org export."
   :group 'org-export)
 
-(defcustom yatexml-js-path nil
-  "Path to the latexToMathML.js file.
-This should be the compiled JavaScript output from yatexml."
+(defcustom yatexml-binary-path nil
+  "Path to the latexToMathML native binary.
+This should be the compiled executable from examples/latexToMathML.nim"
   :type 'file
   :group 'yatexml)
 
-(defcustom yatexml-autorender-js-path nil
-  "Path to the yatexml-autorender.js file.
-If nil, will look in the same directory as `yatexml-js-path'."
-  :type '(choice (const :tag "Auto-detect" nil)
-                 (file :tag "Custom path"))
-  :group 'yatexml)
-
-(defcustom yatexml-node-executable "node"
-  "Path to the Node.js executable."
-  :type 'string
-  :group 'yatexml)
-
-(defcustom yatexml-export-mode 'hybrid
+(defcustom yatexml-export-mode 'server-side
   "How to handle LaTeX to MathML conversion during export.
 
-- `server-side': Convert all LaTeX to MathML during export using Node.js
-- `client-side': Include raw LaTeX and autorender script in HTML
-- `hybrid': Convert during export, but include autorender as fallback"
-  :type '(choice (const :tag "Server-side only" server-side)
-                 (const :tag "Client-side only" client-side)
-                 (const :tag "Hybrid (recommended)" hybrid))
-  :group 'yatexml)
-
-(defcustom yatexml-fallback-to-mathjax nil
-  "If non-nil, fall back to MathJax for conversion errors.
-Otherwise, displays an error message inline."
-  :type 'boolean
+- `server-side': Convert all LaTeX to MathML during export using native binary
+- `none': Don't convert LaTeX (useful if you have another method)"
+  :type '(choice (const :tag "Server-side (recommended)" server-side)
+                 (const :tag "No conversion" none))
   :group 'yatexml)
 
 (defvar yatexml--conversion-cache (make-hash-table :test 'equal)
   "Cache for LaTeX to MathML conversions to avoid redundant calls.")
 
-(defun yatexml--get-autorender-path ()
-  "Get the path to yatexml-autorender.js."
-  (or yatexml-autorender-js-path
-      (when yatexml-js-path
-        (expand-file-name "yatexml-autorender.js"
-                          (file-name-directory yatexml-js-path)))))
+(defun yatexml--binary-path-error ()
+  "Return an error message if `yatexml-binary-path' is invalid.
+Returns nil when the path looks usable."
+  (cond
+   ((not yatexml-binary-path)
+    "yatexml-binary-path is not set. Please configure the path to latexToMathML binary.")
+   ((not (stringp yatexml-binary-path))
+    (format "yatexml-binary-path must be a string, got: %S" yatexml-binary-path))
+   ((string-empty-p yatexml-binary-path)
+    "yatexml-binary-path must not be empty.")
+   ((not (file-exists-p yatexml-binary-path))
+    (format "latexToMathML binary not found at: %s" yatexml-binary-path))
+   ((not (file-executable-p yatexml-binary-path))
+    (format "latexToMathML binary is not executable: %s" yatexml-binary-path))))
 
-(defun yatexml--convert-latex (latex)
-  "Convert LATEX string to MathML using yatexml via Node.js.
+(defun yatexml--ensure-binary-path ()
+  "Signal a user-friendly error when the binary path isn't usable."
+  (let ((err (yatexml--binary-path-error)))
+    (when err
+      (error "%s" err))))
+
+(defun yatexml--binary-path-ready-p ()
+  "Return non-nil when `yatexml-binary-path' points to an executable."
+  (null (yatexml--binary-path-error)))
+
+(defun yatexml--shell-quote-argument (arg)
+  "Quote ARG for safe shell execution.
+This is more robust than `shell-quote-argument' for complex LaTeX strings."
+  ;; Use single quotes and escape any single quotes in the string
+  (concat "'" (replace-regexp-in-string "'" "'\\\\''" arg) "'"))
+
+(defun yatexml--convert-latex (latex &optional display-style)
+  "Convert LATEX string to MathML using yatexml native binary.
+If DISPLAY-STYLE is non-nil, use block/display math mode.
 Returns the MathML string or nil on error."
-  (unless yatexml-js-path
-    (error "yatexml-js-path is not set. Please configure the path to latexToMathML.js"))
-
-  (unless (file-exists-p yatexml-js-path)
-    (error "latexToMathML.js not found at: %s" yatexml-js-path))
-
-  ;; Check cache first
-  (let ((cached (gethash latex yatexml--conversion-cache)))
+  (yatexml--ensure-binary-path)
+  (let* ((cache-key (cons latex display-style))
+         (cached (gethash cache-key yatexml--conversion-cache)))
     (if cached
         cached
-      ;; Not in cache, perform conversion
-      (let* ((temp-file (make-temp-file "yatexml-" nil ".js"))
-             (latex-escaped (json-encode-string latex))
-             (script (format "
-const fs = require('fs');
-const path = require('path');
-
-// Load the yatexml library
-const Module = require('%s');
-
-// Wait for WASM/module initialization if needed
-setTimeout(() => {
-  try {
-    const latex = %s;
-    const result = latexToMathML(latex);
-
-    if (result === 'ERROR' || !result) {
-      console.error('YATEXML_ERROR: Conversion failed');
-      process.exit(1);
-    }
-
-    process.stdout.write(result);
-    process.exit(0);
-  } catch (err) {
-    console.error('YATEXML_ERROR:', err.message);
-    process.exit(1);
-  }
-}, 100);
-"
-                             (expand-file-name yatexml-js-path)
-                             latex-escaped)))
+      (let* ((output-buffer (generate-new-buffer " *yatexml-output*"))
+             (stderr-file (make-temp-file "yatexml-stderr"))
+             (args (list (concat "--tex=" latex))))
+        (when display-style
+          (setq args (append args '("--asBlock"))))
         (unwind-protect
-            (progn
-              (with-temp-file temp-file
-                (insert script))
-              (let* ((output-buffer (generate-new-buffer " *yatexml-output*"))
-                     (exit-code (call-process yatexml-node-executable
-                                              nil
-                                              output-buffer
-                                              nil
-                                              temp-file))
-                     (output (with-current-buffer output-buffer
-                               (buffer-string))))
-                (kill-buffer output-buffer)
+            (let* ((exit-code (apply #'call-process
+                                     yatexml-binary-path
+                                     nil
+                                     (list output-buffer stderr-file)
+                                     nil
+                                     args))
+                   (output (with-current-buffer output-buffer
+                             (buffer-string)))
+                   (error-output (if (file-exists-p stderr-file)
+                                     (with-temp-buffer
+                                       (insert-file-contents stderr-file)
+                                       (buffer-string))
+                                   "")))
+              (condition-case err
+                  (if (and (= exit-code 0)
+                           (not (string-match-p "ERROR" output))
+                           (not (string-match-p "Error" error-output)))
+                      (let ((mathml (string-trim output)))
+                        (puthash cache-key mathml yatexml--conversion-cache)
+                        mathml)
+                    (message "yatexml conversion failed for: %s (exit=%d, output-len=%d, error-len=%d)"
+                             (if latex
+                                 (substring latex 0 (min 50 (length latex)))
+                               "<nil>")
+                             exit-code
+                             (length output)
+                             (length error-output))
+                    (when (> (length error-output) 0)
+                      (message "yatexml error output: %s" error-output))
+                    nil)
+                (error
+                 (message "yatexml exception: %S" err)
+                 nil)))
+          (when (buffer-live-p output-buffer)
+            (kill-buffer output-buffer))
+          (when (and stderr-file (file-exists-p stderr-file))
+            (delete-file stderr-file)))))))
 
-                (if (and (= exit-code 0)
-                         (not (string-match-p "YATEXML_ERROR" output)))
-                    (let ((mathml (string-trim output)))
-                      ;; Cache the result
-                      (puthash latex mathml yatexml--conversion-cache)
-                      mathml)
-                  ;; Conversion failed
-                  (message "yatexml conversion failed for: %s"
-                           (substring latex 0 (min 50 (length latex))))
-                  nil)))
-          (delete-file temp-file))))))
-
-(defun yatexml--latex-fragment-filter (text backend info)
-  "Convert LaTeX fragments in TEXT to MathML for HTML export.
-BACKEND and INFO are provided by the Org export system."
-  (when (org-export-derived-backend-p backend 'html)
-    (cond
-     ;; Client-side mode: leave LaTeX as-is
-     ((eq yatexml-export-mode 'client-side)
-      text)
-
-     ;; Server-side or hybrid mode: convert to MathML
-     ((memq yatexml-export-mode '(server-side hybrid))
-      ;; Try to extract LaTeX from the HTML fragment
-      (let* ((latex (yatexml--extract-latex-from-html text))
-             (mathml (when latex (yatexml--convert-latex latex))))
-        (if mathml
-            ;; Successful conversion
-            (format "<span class=\"yatexml-rendered\">%s</span>" mathml)
-          ;; Conversion failed
-          (if yatexml-fallback-to-mathjax
-              text  ; Keep original (MathJax will handle it)
-            ;; Show error or keep original for client-side rendering in hybrid mode
-            (if (eq yatexml-export-mode 'hybrid)
-                text  ; Keep original, autorender will try client-side
-              (format "<span class=\"yatexml-error\" style=\"color: red;\">Error converting: %s</span>"
-                      (or latex (substring text 0 (min 50 (length text))))))))))))
-  text)
+(defun yatexml--is-display-math-p (html-fragment)
+  "Determine if HTML-FRAGMENT represents display math.
+Returns t for display math (\\[...\\] or $$...$$), nil for inline."
+  (or (string-match-p "class=\"[^\"]*math[^\"]*display[^\"]*\"" html-fragment)
+      (string-match-p "\\\\\\[" html-fragment)
+      (string-match-p "\\$\\$" html-fragment)))
 
 (defun yatexml--extract-latex-from-html (html-fragment)
   "Extract LaTeX source from an HTML fragment exported by Org.
 Returns the LaTeX string or nil if not found."
   (cond
-   ;; MathJax-style span
-   ((string-match "class=\"math[^\"]*\">\\\\(\\(.*?\\)\\\\)</span>" html-fragment)
+   ;; Inline math: \(...\)
+   ((string-match "\\\\(\\(.*?\\)\\\\)" html-fragment)
     (match-string 1 html-fragment))
 
-   ;; Display math
-   ((string-match "class=\"math[^\"]*\">\\\\\\[\\(.*?\\)\\\\\\]</span>" html-fragment)
+   ;; Display math: \[...\]
+   ((string-match "\\\\\\[\\(.*?\\)\\\\\\]" html-fragment)
     (match-string 1 html-fragment))
 
-   ;; Script tag approach
-   ((string-match "type=\"math/tex[^\"]*\">\\(.*?\\)</script>" html-fragment)
+   ;; Dollar signs: $...$
+   ((string-match "\\$\\(.*?\\)\\$" html-fragment)
     (match-string 1 html-fragment))
 
-   ;; Fallback: try to find any LaTeX-like content
-   ((string-match ">\\(\\\\.*?\\)<" html-fragment)
+   ;; Double dollar signs: $$...$$
+   ((string-match "\\$\\$\\(.*?\\)\\$\\$" html-fragment)
+    (match-string 1 html-fragment))
+
+   ;; Script tag approach (MathJax)
+   ((string-match "type=['\"]math/tex[^'\"]*['\"]>\\(.*?\\)</script>" html-fragment)
+    (match-string 1 html-fragment))
+
+   ;; With span class wrapper
+   ((string-match "<span[^>]*class=\"[^\"]*math[^\"]*\"[^>]*>\\\\(\\(.*?\\)\\\\)</span>" html-fragment)
     (match-string 1 html-fragment))
 
    (t nil)))
 
-(defun yatexml--insert-autorender-script (output backend info)
-  "Insert yatexml scripts into HTML OUTPUT if needed.
+(defun yatexml--latex-fragment-filter (text backend _info)
+  "Convert LaTeX fragments in TEXT to MathML for HTML export.
 BACKEND and INFO are provided by the Org export system."
-  (when (org-export-derived-backend-p backend 'html)
-    (when (memq yatexml-export-mode '(client-side hybrid))
-      (let ((autorender-path (yatexml--get-autorender-path)))
-        (when (and yatexml-js-path (file-exists-p yatexml-js-path)
-                   autorender-path (file-exists-p autorender-path))
-          ;; Insert scripts before closing body tag
-          (setq output
-                (replace-regexp-in-string
-                 "</body>"
-                 (format "<!-- yatexml auto-render -->
-<script src=\"%s\"></script>
-<script src=\"%s\"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof yatexml !== 'undefined' && typeof yatexml.autoRender === 'function') {
-      yatexml.autoRender(document.body);
-    }
-  });
-</script>
-</body>"
-                         (file-name-nondirectory yatexml-js-path)
-                         (file-name-nondirectory autorender-path))
-                 output
-                 t t))))))
-  output)
+  (if (and (org-export-derived-backend-p backend 'html)
+           (eq yatexml-export-mode 'server-side))
+      ;; Try to extract LaTeX from the HTML fragment
+      (let* ((latex (yatexml--extract-latex-from-html text))
+             (is-display (yatexml--is-display-math-p text))
+             (mathml (when latex (yatexml--convert-latex latex is-display))))
+        (if mathml
+            ;; Successful conversion
+            (progn
+              (message "yatexml: Converted %s to MathML" (substring latex 0 (min 30 (length latex))))
+              (if is-display
+                  (format "<div class=\"yatexml-display\">%s</div>" mathml)
+                (format "<span class=\"yatexml-inline\">%s</span>" mathml)))
+          ;; Conversion failed - return original text
+          (progn
+            (message "yatexml: Failed to convert, latex=%S text=%S" latex (substring text 0 (min 100 (length text))))
+            text)))
+    ;; Not HTML backend or not server-side mode - return original
+    text))
 
-(defun yatexml--add-mathml-css (output backend info)
+(defun yatexml--add-mathml-css (output backend _info)
   "Add CSS for MathML alignment environments to OUTPUT.
 BACKEND and INFO are provided by the Org export system."
   (when (org-export-derived-backend-p backend 'html)
@@ -253,7 +221,13 @@ BACKEND and INFO are provided by the Org export system."
     margin: 1em 0;
   }
 
-  /* Chromium-specific overrides */
+  /* Inline math */
+  .yatexml-inline {
+    display: inline;
+    margin-right: 0.2em;
+  }
+
+  /* Chromium-specific overrides for alignment */
   @supports (not (-webkit-backdrop-filter: blur(1px))) and (not (-moz-appearance: none)) {
     .tml-right { text-align: -webkit-right; }
     .tml-left { text-align: -webkit-left; }
@@ -275,17 +249,12 @@ BACKEND and INFO are provided by the Org export system."
         (add-to-list 'org-export-filter-latex-fragment-functions
                      #'yatexml--latex-fragment-filter)
         (add-to-list 'org-export-filter-final-output-functions
-                     #'yatexml--insert-autorender-script)
-        (add-to-list 'org-export-filter-final-output-functions
                      #'yatexml--add-mathml-css)
-        (message "yatexml-org-mode enabled"))
+        (message "yatexml-org-mode enabled (native binary mode)"))
     ;; Disable filters
     (setq org-export-filter-latex-fragment-functions
           (remove #'yatexml--latex-fragment-filter
                   org-export-filter-latex-fragment-functions))
-    (setq org-export-filter-final-output-functions
-          (remove #'yatexml--insert-autorender-script
-                  org-export-filter-final-output-functions))
     (setq org-export-filter-final-output-functions
           (remove #'yatexml--add-mathml-css
                   org-export-filter-final-output-functions))
@@ -297,6 +266,38 @@ BACKEND and INFO are provided by the Org export system."
   (interactive)
   (clrhash yatexml--conversion-cache)
   (message "yatexml cache cleared"))
+
+;;;###autoload
+(defun yatexml-test-conversion ()
+  "Test yatexml conversion with a simple example."
+  (interactive)
+  (let ((path-error (yatexml--binary-path-error)))
+    (if path-error
+        (message "%s" path-error)
+      (let* ((test-latex "E = mc^2")
+             (result (yatexml--convert-latex test-latex nil)))
+        (if result
+            (message "Success! MathML: %s" result)
+          (message "Conversion failed. Check yatexml-binary-path and binary compilation."))))))
+
+;;;###autoload
+(defun yatexml-debug-filter ()
+  "Enable debug messages for yatexml filter.
+This will show what text is being passed to the filter and whether
+LaTeX extraction is working."
+  (interactive)
+  (defvar yatexml--debug-enabled t)
+  (message "yatexml debug mode enabled. Export an Org file to see debug messages."))
+
+;;;###autoload
+(defun yatexml-show-org-html-mathjax-options ()
+  "Show current Org HTML MathJax options.
+This helps diagnose how Org is exporting math."
+  (interactive)
+  (message "org-html-mathjax-options: %S" org-html-mathjax-options)
+  (message "org-html-mathjax-template: %S" (if (boundp 'org-html-mathjax-template)
+                                               org-html-mathjax-template
+                                             "not set")))
 
 (provide 'yatexml-org)
 

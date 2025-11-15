@@ -863,4 +863,4 @@ proc generateMathML*(ast: AstNode, options: MathMLOptions = defaultOptions()): s
     attrs.add(("display", "inline"))
 
   let content = generateNode(ast, options)
-  tag("math", content, attrs)
+  result = tag("math", content, attrs)
