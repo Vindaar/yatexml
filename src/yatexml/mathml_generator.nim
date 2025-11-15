@@ -636,30 +636,6 @@ proc generateNum(node: AstNode, options: MathMLOptions): string =
 
 proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
   ## Generate SI unit expression
-  # Helper to convert a single digit to its Unicode superscript
-  proc digitToSuperscript(d: char): string =
-    case d
-    of '0': "⁰"
-    of '1': "¹"
-    of '2': "²"
-    of '3': "³"
-    of '4': "⁴"
-    of '5': "⁵"
-    of '6': "⁶"
-    of '7': "⁷"
-    of '8': "⁸"
-    of '9': "⁹"
-    of '-': "⁻"
-    of '+': "⁺"
-    else: $d
-
-  # Helper to convert a number to Unicode superscript
-  proc numberToSuperscript(n: int): string =
-    let s = $n
-    result = ""
-    for c in s:
-      result.add(digitToSuperscript(c))
-
   # Helper to generate MathML for a unit component with power
   proc generateUnitComponent(comp: SIUnitComponent): string =
     let unitStr = case comp.unit
@@ -717,12 +693,19 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
     let baseUnit = prefixStr & unitStr
 
     if comp.power == 1:
-      # No power, just render the unit
-      tag("mi", baseUnit, [("mathvariant", "normal")])
+      # No power, just render the unit with tight spacing (matches TeMML)
+      tag("mpadded", tag("mi", baseUnit, [("mathvariant", "normal")]), [("lspace", "0")])
     else:
-      # Render unit with superscript power
-      let unitTag = tag("mi", baseUnit, [("mathvariant", "normal")])
-      let powerTag = tag("mn", numberToSuperscript(comp.power))
+      # Render unit with superscript power using regular numbers (not unicode superscripts)
+      # This matches TeMML and provides better-sized superscripts
+      let unitTag = tag("mpadded", tag("mi", baseUnit, [("mathvariant", "normal")]), [("lspace", "0")])
+      let powerTag = if comp.power < 0:
+        # For negative powers, use minus operator with tight spacing (matches TeMML)
+        let minusOp = tag("mo", "\u2212", [("lspace", "0em"), ("rspace", "0em")])
+        let absValue = tag("mn", $(abs(comp.power)))
+        tag("mrow", minusOp & absValue)
+      else:
+        tag("mn", $comp.power)
       tag("msup", unitTag & powerTag)
 
   var content = ""
@@ -730,8 +713,8 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
   # Generate all units from numerator with their signed powers
   for i, comp in node.unitNumerator:
     if i > 0:
-      # Use centered dot between units
-      content.add(tag("mo", "·"))
+      # Use thin space between units (matches TeMML approach)
+      content.add(tag("mspace", [("width", "0.1667em")]))
     content.add(generateUnitComponent(comp))
 
   # For backward compatibility, also handle denominator if present (shouldn't happen with new parser)
@@ -739,7 +722,8 @@ proc generateSIUnit(node: AstNode, options: MathMLOptions): string =
     content.add(tag("mo", "/"))
     for i, comp in node.unitDenominator:
       if i > 0:
-        content.add(tag("mo", "·"))
+        # Use thin space between units (matches TeMML approach)
+        content.add(tag("mspace", [("width", "0.1667em")]))
       content.add(generateUnitComponent(comp))
 
   tag("mrow", content)
