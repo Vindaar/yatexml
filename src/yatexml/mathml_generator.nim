@@ -387,9 +387,9 @@ proc generateDelimited(node: AstNode, options: MathMLOptions): string =
     let rightFence = tag("mo", ")", [("form", "postfix"), ("stretchy", "false")])
     return tag("mrow", leftFence & content & rightFence)
   elif node.delimLeft == "[" and node.delimRight == "]":
-    # For brackets, use minimal spacing to avoid gaps with adjacent text
-    let leftFence = tag("mo", "[", [("fence", "true"), ("stretchy", "true"), ("lspace", "0"), ("rspace", "0")])
-    let rightFence = tag("mo", "]", [("fence", "true"), ("stretchy", "true"), ("lspace", "0"), ("rspace", "0")])
+    # For brackets, use form attributes instead of fence (matches parentheses)
+    let leftFence = tag("mo", "[", [("form", "prefix"), ("stretchy", "false")])
+    let rightFence = tag("mo", "]", [("form", "postfix"), ("stretchy", "false")])
     return tag("mrow", leftFence & content & rightFence)
   else:
     # For other delimiters (braces, etc), keep current behavior
