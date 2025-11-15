@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Autorender with Aligned</title>
+  <script src="../src/yatexml.js"></script>
+  <script src="yatexml-autorender.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .test-case {
+      margin: 30px 0;
+      padding: 20px;
+      border: 2px solid #333;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .source {
+      background: #e8e8e8;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #666;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+    .output {
+      margin-top: 15px;
+      padding: 15px;
+      background: white;
+      border: 1px solid #ccc;
+      min-height: 50px;
+    }
+    .info {
+      background: #d4edff;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Autorender with Aligned Environment</h1>
+
+  <div class="info">
+    <strong>Testing:</strong> The autorender should now correctly handle <code>\begin{aligned}...\end{aligned}</code>
+    by keeping the environment markers (not stripping them like it does for <code>$$...$$</code>).
+  </div>
+
+  <div class="test-case">
+    <h2>Test 1: Simple Aligned Environment</h2>
+    <div class="source">Source LaTeX in HTML:
+\begin{aligned}
+a &= b + c \\
+x &= y - z
+\end{aligned}</div>
+    <div class="output" id="test1">
+\begin{aligned}
+a &= b + c \\
+x &= y - z
+\end{aligned}
+    </div>
+  </div>
+
+  <div class="test-case">
+    <h2>Test 2: Aligned with Fractions and Text</h2>
+    <div class="source">Source LaTeX in HTML:
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= v & \text{velocity} \\
+\frac{\mathrm{d}v}{\mathrm{d}t} &= a & \text{acceleration}
+\end{aligned}</div>
+    <div class="output" id="test2">
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= v & \text{velocity} \\
+\frac{\mathrm{d}v}{\mathrm{d}t} &= a & \text{acceleration}
+\end{aligned}
+    </div>
+  </div>
+
+  <div class="test-case">
+    <h2>Test 3: User's Complex Example</h2>
+    <div class="source">Source LaTeX in HTML (the full aligned from your system):</div>
+    <div class="output" id="test3">
+\begin{aligned}
+\frac{\mathrm{d}\text{EP}}{\mathrm{d}t} &= I(t) − κ_d·\text{EP} − κ_{\text{EP}}·u_{\text{EP}}(t) & \text{inputs minus dissipation minus control} \\
+\frac{\mathrm{d}f}{\mathrm{d}t} &= β_R·R(t) − β_d·D(t) + κ_f·u_f(t) & \text{repair signals − damage + training/therapy} \\
+y(t) &= α·\text{GDF15}(t) + β·\text{EE}(t) + γ·(\text{VO}_2\text{max}(t))⁻¹ & \text{observable estimator } E[\text{eR}]
+\end{aligned}
+    </div>
+  </div>
+
+  <div class="test-case">
+    <h2>Test 4: Math Mode Delimiters (should still work)</h2>
+    <div class="source">Source: Inline $x = y$ and display $$a = b$$</div>
+    <div class="output" id="test4">
+      Inline $x = y$ and display $$a = b$$
+    </div>
+  </div>
+
+  <div class="test-case">
+    <h2>Test 5: Bracket delimiters (should still work)</h2>
+    <div class="source">Source: \[ E = mc^2 \]</div>
+    <div class="output" id="test5">
+      \[ E = mc^2 \]
+    </div>
+  </div>
+
+  <script>
+    console.log('Starting autorender...');
+    document.addEventListener('DOMContentLoaded', () => {
+      // Autorender each test case
+      yatexml.autoRender(document.getElementById('test1'));
+      yatexml.autoRender(document.getElementById('test2'));
+      yatexml.autoRender(document.getElementById('test3'));
+      yatexml.autoRender(document.getElementById('test4'));
+      yatexml.autoRender(document.getElementById('test5'));
+      console.log('Autorender complete!');
+    });
+  </script>
+</body>
+</html>

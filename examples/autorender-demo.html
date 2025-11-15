@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatexml Auto-Render Demo</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    .example-section {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f8f9fa;
+      border-left: 4px solid #4CAF50;
+    }
+
+    .example-section h3 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+
+    code {
+      background: #e8e8e8;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* MathML alignment classes for align/aligned/gather/gathered environments */
+    .tml-right { text-align: right; }
+    .tml-left { text-align: left; }
+    .tml-center { text-align: center; }
+
+    /* Chromium-specific overrides */
+    @supports (not (-webkit-backdrop-filter: blur(1px))) and (not (-moz-appearance: none)) {
+      .tml-right { text-align: -webkit-right; }
+      .tml-left { text-align: -webkit-left; }
+    }
+
+    .info {
+      background: #e3f2fd;
+      border-left: 4px solid #2196F3;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .yatexml-error {
+      background: #ffebee;
+      color: #c62828;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+
+    /* Loading indicator */
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>yatexml Auto-Render Demo</h1>
+
+  <div class="info">
+    <strong>How it works:</strong> This page contains LaTeX math written directly in the HTML.
+    When the page loads, <code>yatexml-autorender.js</code> scans all text nodes and converts
+    LaTeX delimiters to MathML, which renders natively in your browser.
+  </div>
+
+  <div class="example-section">
+    <h3>Inline Math with $ ... $</h3>
+    <p>
+      The quadratic formula is $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, which gives
+      the roots of any quadratic equation $ax^2 + bx + c = 0$.
+    </p>
+    <p>
+      Einstein's famous equation $E = mc^2$ relates energy and mass. The speed of light
+      $c \approx 3 \times 10^8$ m/s.
+    </p>
+  </div>
+
+  <div class="example-section">
+    <h3>Display Math with $$ ... $$</h3>
+    <p>The Pythagorean theorem:</p>
+    $$a^2 + b^2 = c^2$$
+    <p>Euler's identity:</p>
+    $$e^{i\pi} + 1 = 0$$
+  </div>
+
+  <div class="example-section">
+    <h3>LaTeX-style delimiters \( ... \) and \[ ... \]</h3>
+    <p>
+      Inline with backslash-paren: \(f(x) = x^2 + 2x + 1\) is a parabola.
+    </p>
+    <p>Display with backslash-bracket:</p>
+    \[\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}\]
+  </div>
+
+  <div class="example-section">
+    <h3>Summations and Products</h3>
+    <p>The sum of the first $n$ integers:</p>
+    $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
+    <p>The factorial can be written as:</p>
+    $$n! = \prod_{i=1}^n i$$
+  </div>
+
+  <div class="example-section">
+    <h3>Matrices</h3>
+    <p>A rotation matrix:</p>
+    $$R(\theta) = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$$
+  </div>
+
+  <div class="example-section">
+    <h3>Greek Letters and Symbols</h3>
+    <p>
+      In mathematics, we often use Greek letters like $\alpha$, $\beta$, $\gamma$, $\delta$,
+      $\epsilon$, $\theta$, $\lambda$, $\mu$, $\pi$, $\sigma$, $\omega$, and $\Omega$.
+    </p>
+    <p>Common relations: $\le$, $\ge$, $\ne$, $\approx$, $\equiv$, $\in$, $\subset$, $\subseteq$.</p>
+  </div>
+
+  <div class="example-section">
+    <h3>Fractions and Roots</h3>
+    <p>Nested fractions:</p>
+    $$\frac{1}{1 + \frac{1}{1 + \frac{1}{1 + \frac{1}{x}}}}$$
+    <p>Square and nth roots: $\sqrt{2}$, $\sqrt[3]{8}$, $\sqrt[n]{x^n} = x$</p>
+  </div>
+
+  <div class="example-section">
+    <h3>Alignment Environments</h3>
+    <p>System of equations:</p>
+    $$\begin{align}
+    x + y &= 5 \\
+    2x - y &= 1
+    \end{align}$$
+
+    <p>Multiple steps:</p>
+    $$\begin{aligned}
+    (a + b)^2 &= (a + b)(a + b) \\
+              &= a^2 + ab + ba + b^2 \\
+              &= a^2 + 2ab + b^2
+    \end{aligned}$$
+  </div>
+
+  <div class="example-section">
+    <h3>Calculus</h3>
+    <p>The fundamental theorem of calculus:</p>
+    $$\int_a^b f(x)\,dx = F(b) - F(a)$$
+    <p>where $F'(x) = f(x)$.</p>
+
+    <p>Partial derivatives:</p>
+    $$\frac{\partial^2 f}{\partial x \partial y}$$
+  </div>
+
+  <div class="example-section">
+    <h3>Limits</h3>
+    <p>Definition of derivative:</p>
+    $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+  </div>
+
+  <div class="example-section">
+    <h3>Trigonometry</h3>
+    <p>Basic identity:</p>
+    $$\sin^2\theta + \cos^2\theta = 1$$
+    <p>Tangent definition: $\tan\theta = \frac{\sin\theta}{\cos\theta}$</p>
+  </div>
+
+  <div class="example-section">
+    <h3>Text in Math Mode</h3>
+    <p>
+      $$\text{volume} = \frac{4}{3}\pi r^3$$
+    </p>
+  </div>
+
+  <div class="example-section">
+    <h3>Complex Expressions</h3>
+    <p>The Gaussian integral:</p>
+    $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+
+    <p>Cauchy's integral formula:</p>
+    $$f(a) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z-a} dz$$
+  </div>
+
+
+  <div class="example-section">
+    <h3>Aligned Expressions</h3>
+
+    \begin{aligned}
+      \frac{\mathrm{d}\text{EP}}{\mathrm{d}t} &= I(t) − κ_d·\text{EP} - κ_{\text{EP}}·u_{\text{EP}}(t)           & \text{inputs minus dissipation minus control} \\
+      \frac{\mathrm{d}f}{\mathrm{d}t}  &= β_R·R(t) - β_d·D(t) + κ_f·u_f(t)     & \text{repair signals minus damage plus training/therapy} \\
+      y(t)   &= α·\text{GDF15}(t) + β·\text{EE}(t) + γ·(\text{VO}_2\text{max}(t))⁻¹ & \text{observable estimator } E[\text{eR}] \\
+    \end{aligned}
+
+  </div>
+
+
+  <h2>Browser Support</h2>
+  <div class="info">
+    MathML is natively supported in:
+    <ul>
+      <li><strong>Firefox:</strong> Full support (always has been)</li>
+      <li><strong>Safari:</strong> Full support (macOS and iOS)</li>
+      <li><strong>Chrome/Edge:</strong> Full support (version 109+, released Jan 2023)</li>
+    </ul>
+    If you're on an older browser, you may see raw MathML or formatting issues.
+  </div>
+
+  <!-- Load the converter library first -->
+  <script src="./latexToMathML.js"></script>
+
+  <!-- Load the auto-render script -->
+  <script src="./yatexml-autorender.js"></script>
+
+  <!-- Initialize auto-rendering when DOM is ready -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Starting yatexml auto-render...');
+      const startTime = performance.now();
+
+      // Run the auto-renderer on the entire document body
+      yatexml.autoRender(document.body, {
+        // Optional: custom error handler
+        onError: (latex, error) => {
+          console.error('Failed to convert:', latex, error);
+          // Return an error message to display inline
+          return `<span class="yatexml-error">Error: ${latex}</span>`;
+        }
+      });
+
+      const endTime = performance.now();
+      console.log(`Auto-render complete in ${(endTime - startTime).toFixed(2)}ms`);
+    });
+  </script>
+</body>
+</html>
