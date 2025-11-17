@@ -51,6 +51,9 @@ type
     nkSIUnit              ## SI unit expression: \si{\meter\per\second}
     nkSIValue             ## SI value with unit: \SI{3.14}{\meter}
 
+    # mhchem nodes
+    nkChemical            ## Chemical expression: \ce{H2O}
+
   AccentKind* = enum
     ## Different kinds of accents
     akHat                 ## \hat
@@ -367,6 +370,10 @@ type
       siValue*: string            ## Value/number
       siUnit*: AstNode            ## Unit expression (nkSIUnit)
 
+    # mhchem nodes
+    of nkChemical:
+      chemicalExpr*: AstNode      ## Parsed chemical expression
+
 # Constructor helpers
 
 proc newNumber*(value: string): AstNode =
@@ -496,6 +503,10 @@ proc newSIUnitComponent*(prefix: SIPrefixKind, unit: SIUnitKind, power: int = 1)
 proc newCustomUnitComponent*(customUnit: string, prefix: SIPrefixKind = pkNone, power: int = 1): SIUnitComponent =
   ## Create a custom SI unit component (for unknown units)
   SIUnitComponent(unit: ukCustom, customUnit: customUnit, prefix: prefix, power: power)
+
+proc newChemical*(expr: AstNode): AstNode =
+  ## Create a chemical expression node
+  AstNode(kind: nkChemical, chemicalExpr: expr)
 
 # Helper functions
 

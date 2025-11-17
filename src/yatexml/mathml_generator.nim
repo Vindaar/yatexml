@@ -317,8 +317,13 @@ proc generateStyle(node: AstNode, options: MathMLOptions): string =
 
   if node.styleBase.kind in [nkIdentifier, nkSymbol]:
     let text = if node.styleBase.kind == nkIdentifier: node.styleBase.identName else: node.styleBase.symbolValue
-    let converted = convertToStyledUnicode(text, node.styleKind)
-    tag("mi", converted)
+
+    # For skRoman, use mathvariant="normal" attribute instead of Unicode conversion
+    if node.styleKind == skRoman:
+      tag("mi", escapeXml(text), [("mathvariant", "normal")])
+    else:
+      let converted = convertToStyledUnicode(text, node.styleKind)
+      tag("mi", converted)
   else:
     let variant = case node.styleKind
       of skBold: "bold"
@@ -847,6 +852,9 @@ proc generateNode(node: AstNode, options: MathMLOptions): string =
     generateSIUnit(node, options)
   of nkSIValue:
     generateSIValue(node, options)
+  of nkChemical:
+    # Chemical expressions - just generate the inner expression
+    generateNode(node.chemicalExpr, options)
   else:
     # Not implemented yet
     tag("mtext", "[" & $node.kind & "]")

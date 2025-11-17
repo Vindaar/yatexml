@@ -13,7 +13,7 @@ type
     ctFrac, ctBinomial, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor, ctPhantom,
     ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac,
-    ctOperatorName, ctBmod, ctPmod, ctOverUnder, ctMathSize
+    ctOperatorName, ctBmod, ctPmod, ctOverUnder, ctMathSize, ctChemical
 
   CommandInfo = object
     cmdType: CommandType
@@ -660,6 +660,9 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["SI"] = CommandInfo(cmdType: ctSIunitx, numArgs: 2)
   result["numrange"] = CommandInfo(cmdType: ctSIunitx, numArgs: 2)
   result["SIrange"] = CommandInfo(cmdType: ctSIunitx, numArgs: 3)
+
+  # mhchem commands
+  result["ce"] = CommandInfo(cmdType: ctChemical, numArgs: 1)
 
   # SI base units
   result["meter"] = CommandInfo(cmdType: ctSIUnit, numArgs: 0)
@@ -1413,6 +1416,318 @@ proc parseShorthandUnits(s: string): tuple[numerator: seq[SIUnitComponent], deno
       numerator.add(component)
 
   result = (numerator: numerator, denominator: denominator)
+
+# Helper: Parse chemical expression for \ce command
+proc parseChemicalExpr(stream: var TokenStream): Result[AstNode] =
+  ## Parse a chemical expression in mhchem syntax
+  ## This handles: H2O, H+, 2 H2O, A -> B, ^{227}_{90}Th, (NH4)2SO4, etc.
+
+  var children: seq[AstNode] = @[]
+
+  proc addChild(node: AstNode) =
+    if node != nil:
+      children.add(node)
+
+  proc collectUntil(stop: set[TokenKind]): string =
+    ## Collect token values until we hit one of the stop tokens
+    result = ""
+    while not stream.isAtEnd() and not (stream.peek().kind in stop):
+      result.add(stream.advance().value)
+
+  while not stream.match(tkRightBrace) and not stream.isAtEnd():
+    let token = stream.peek()
+
+    case token.kind
+    of tkNumber:
+      # Could be stoichiometric coefficient, subscript, or part of charge
+      let numToken = stream.advance()
+      let num = numToken.value
+
+      # Check what follows
+      if not stream.isAtEnd():
+        let next = stream.peek()
+        if next.kind == tkIdentifier and next.value[0].isUpperAscii():
+          # Stoichiometric coefficient before element: "2 H2O"
+          addChild(newNumber(num))
+          addChild(newSpace("0.167em"))  # Thin space
+        elif children.len > 0:
+          # Subscript for previous element
+          let base = children[^1]
+          children[^1] = newSub(base, newNumber(num))
+        else:
+          # Standalone number
+          addChild(newNumber(num))
+      elif children.len > 0:
+        # Subscript for previous element
+        let base = children[^1]
+        children[^1] = newSub(base, newNumber(num))
+      else:
+        # Standalone number
+        addChild(newNumber(num))
+
+    of tkIdentifier:
+      # Chemical element or text
+      let textToken = stream.advance()
+      var text = textToken.value
+
+      # Determine if this is an element (starts with uppercase)
+      if text.len > 0 and text[0].isUpperAscii():
+        # Look ahead for lowercase letter (multi-letter element like "He", "Cr")
+        if not stream.isAtEnd() and stream.peek().kind == tkIdentifier:
+          let nextToken = stream.peek()
+          if nextToken.value.len > 0 and nextToken.value[0].isLowerAscii():
+            # Combine uppercase and lowercase into one element
+            text = text & nextToken.value
+            discard stream.advance()  # consume the lowercase letter
+
+        # Now create the element node
+        var elemNode: AstNode = newStyle(skRoman, newIdentifier(text))
+
+        # Check if followed by a subscript number (without ^ or _)
+        if not stream.isAtEnd() and stream.peek().kind == tkNumber:
+          let subToken = stream.advance()
+          elemNode = newSub(elemNode, newNumber(subToken.value))
+
+        addChild(elemNode)
+      else:
+        # Lowercase identifier (like in state symbols)
+        addChild(newStyle(skRoman, newIdentifier(text)))
+
+    of tkOperator:
+      # Handle +, -, =, etc.
+      let opToken = stream.advance()
+      let opValue = opToken.value
+
+      if opValue == "+":
+        # Check if this is a charge (follows an element) or part of reaction
+        # It's a charge if last child is a plain identifier or style node
+        # But NOT if it's a subscripted element (like O2 in a reaction)
+        # or a standalone number (stoichiometric coefficient)
+        var isCharge = false
+        if children.len > 0:
+          let lastKind = children[^1].kind
+          if lastKind in {nkIdentifier, nkStyle, nkOperator}:
+            # Check if it's a closing paren/bracket operator
+            if lastKind == nkOperator:
+              if children[^1].opValue in [")", "]"]:
+                isCharge = true
+            else:
+              isCharge = true
+
+        if isCharge:
+          let base = children[^1]
+          children[^1] = newSup(base, newOperator("charge", "+", "postfix"))
+        else:
+          addChild(newOperator("plus", "+", "infix"))
+      elif opValue == "-":
+        # Could be minus sign in reaction or charge
+        # Check if followed by > for reaction arrow
+        if not stream.isAtEnd() and stream.peek().kind == tkOperator and stream.peek().value == ">":
+          discard stream.advance()  # consume >
+          # Reaction arrow: check for labels in brackets
+          var upperLabel: AstNode = nil
+          var lowerLabel: AstNode = nil
+
+          # Check for [label] or [][label]
+          if not stream.isAtEnd() and stream.peek().kind == tkLeftBracket:
+            discard stream.advance()  # consume [
+            # Parse upper label
+            if not stream.match(tkRightBracket):
+              var labelTokens: seq[AstNode] = @[]
+              while not stream.match(tkRightBracket) and not stream.isAtEnd():
+                let labelToken = stream.advance()
+                labelTokens.add(newIdentifier(labelToken.value))
+              if labelTokens.len > 0:
+                upperLabel = if labelTokens.len == 1: labelTokens[0] else: newRow(labelTokens)
+            if not stream.match(tkRightBracket):
+              return err[AstNode](ekMismatchedBraces, "Expected ] in reaction arrow label", token.position)
+            discard stream.advance()  # consume ]
+
+            # Check for second label (lower)
+            if not stream.isAtEnd() and stream.peek().kind == tkLeftBracket:
+              discard stream.advance()  # consume [
+              if not stream.match(tkRightBracket):
+                var labelTokens: seq[AstNode] = @[]
+                while not stream.match(tkRightBracket) and not stream.isAtEnd():
+                  let labelToken = stream.advance()
+                  labelTokens.add(newIdentifier(labelToken.value))
+                if labelTokens.len > 0:
+                  lowerLabel = if labelTokens.len == 1: labelTokens[0] else: newRow(labelTokens)
+              if not stream.match(tkRightBracket):
+                return err[AstNode](ekMismatchedBraces, "Expected ] in reaction arrow label", token.position)
+              discard stream.advance()  # consume ]
+
+          # Create reaction arrow with labels
+          let arrow = newOperator("rightarrow", "\u2192", "infix")
+          let arrowNode = if upperLabel != nil or lowerLabel != nil:
+            newUnderOver(arrow, lowerLabel, upperLabel)
+          else:
+            arrow
+
+          # Add spacing around arrow
+          addChild(newSpace("0.278em"))
+          addChild(arrowNode)
+          addChild(newSpace("0.278em"))
+        else:
+          # Check if this is a charge (same logic as +)
+          var isCharge = false
+          if children.len > 0:
+            let lastKind = children[^1].kind
+            if lastKind in {nkIdentifier, nkStyle, nkOperator}:
+              if lastKind == nkOperator:
+                if children[^1].opValue in [")", "]"]:
+                  isCharge = true
+              else:
+                isCharge = true
+
+          if isCharge:
+            let base = children[^1]
+            children[^1] = newSup(base, newOperator("charge", "\u2212", "postfix"))
+          else:
+            addChild(newOperator("minus", "\u2212", "infix"))
+      elif opValue == "=":
+        addChild(newOperator("equals", "=", "infix"))
+      else:
+        addChild(newOperator("op", opValue, "infix"))
+
+    of tkSuperscript:
+      # Superscript - handle charges or isotopes
+      discard stream.advance()  # consume ^
+
+      # Check for braces
+      if not stream.isAtEnd() and stream.peek().kind == tkLeftBrace:
+        discard stream.advance()  # consume {
+        var supContent: seq[AstNode] = @[]
+        while not stream.match(tkRightBrace) and not stream.isAtEnd():
+          let supToken = stream.advance()
+          if supToken.kind == tkNumber:
+            supContent.add(newNumber(supToken.value))
+          elif supToken.kind == tkOperator and (supToken.value == "+" or supToken.value == "-"):
+            supContent.add(newOperator("charge", supToken.value, "postfix"))
+          else:
+            supContent.add(newIdentifier(supToken.value))
+        if not stream.match(tkRightBrace):
+          return err[AstNode](ekMismatchedBraces, "Expected } after superscript", token.position)
+        discard stream.advance()  # consume }
+
+        let supNode = if supContent.len == 1: supContent[0] else: newRow(supContent)
+        # Apply superscript to last child
+        if children.len > 0:
+          let base = children[^1]
+          children[^1] = newSup(base, supNode)
+      else:
+        # Single character superscript - but check for charge notation like ^2- or ^3+
+        if not stream.isAtEnd():
+          var supContent: seq[AstNode] = @[]
+          let supToken = stream.advance()
+
+          if supToken.kind == tkNumber:
+            supContent.add(newNumber(supToken.value))
+            # Check if followed by + or - (charge notation)
+            if not stream.isAtEnd() and stream.peek().kind == tkOperator:
+              let nextOp = stream.peek()
+              if nextOp.value in ["+", "-"]:
+                discard stream.advance()  # consume the charge sign
+                supContent.add(newOperator("charge", nextOp.value, "postfix"))
+          elif supToken.kind == tkOperator and (supToken.value == "+" or supToken.value == "-"):
+            supContent.add(newOperator("charge", supToken.value, "postfix"))
+          else:
+            supContent.add(newIdentifier(supToken.value))
+
+          let supNode = if supContent.len == 1: supContent[0] else: newRow(supContent)
+          if children.len > 0:
+            let base = children[^1]
+            children[^1] = newSup(base, supNode)
+
+    of tkSubscript:
+      # Subscript - handle element counts or isotopes
+      discard stream.advance()  # consume _
+
+      # Check for braces
+      if not stream.isAtEnd() and stream.peek().kind == tkLeftBrace:
+        discard stream.advance()  # consume {
+        var subContent: seq[AstNode] = @[]
+        while not stream.match(tkRightBrace) and not stream.isAtEnd():
+          let subToken = stream.advance()
+          subContent.add(newNumber(subToken.value))
+        if not stream.match(tkRightBrace):
+          return err[AstNode](ekMismatchedBraces, "Expected } after subscript", token.position)
+        discard stream.advance()  # consume }
+
+        let subNode = if subContent.len == 1: subContent[0] else: newRow(subContent)
+        # Apply subscript to last child
+        if children.len > 0:
+          let base = children[^1]
+          children[^1] = newSub(base, subNode)
+      else:
+        # Single character subscript
+        if not stream.isAtEnd():
+          let subToken = stream.advance()
+          let subNode = newNumber(subToken.value)
+
+          if children.len > 0:
+            let base = children[^1]
+            children[^1] = newSub(base, subNode)
+
+    of tkLeftParen:
+      # Parentheses in chemical formula: (NH4)2
+      discard stream.advance()  # consume (
+      addChild(newOperator("lparen", "(", "prefix"))
+
+    of tkRightParen:
+      # Closing parenthesis
+      discard stream.advance()  # consume )
+      var parenNode = newOperator("rparen", ")", "postfix")
+
+      # Check if followed by subscript number: (NH4)2
+      if not stream.isAtEnd() and stream.peek().kind == tkNumber:
+        let subToken = stream.advance()
+        parenNode = newSub(parenNode, newNumber(subToken.value))
+
+      addChild(parenNode)
+
+    of tkLeftBracket:
+      # Square brackets for complex ions: [AgCl2]-
+      discard stream.advance()  # consume [
+      addChild(newOperator("lbracket", "[", "prefix"))
+
+    of tkRightBracket:
+      # Closing bracket
+      discard stream.advance()  # consume ]
+      var bracketNode = newOperator("rbracket", "]", "postfix")
+
+      # Check if followed by subscript number
+      if not stream.isAtEnd() and stream.peek().kind == tkNumber:
+        let subToken = stream.advance()
+        bracketNode = newSub(bracketNode, newNumber(subToken.value))
+
+      addChild(bracketNode)
+
+    of tkLeftBrace:
+      # Braces are used for grouping in mhchem
+      discard stream.advance()  # consume {
+      addChild(newOperator("lbrace", "{", "prefix"))
+
+    of tkCommand:
+      # Handle LaTeX commands within \ce (like $...$, \text{}, etc.)
+      let cmdToken = stream.advance()
+      let cmdName = cmdToken.value
+
+      # Special handling for common cases
+      # For now, just add as text
+      addChild(newText("\\" & cmdName))
+
+    else:
+      # Unknown token, skip it
+      discard stream.advance()
+
+  # Return row of all children
+  if children.len == 0:
+    return ok(newRow(@[]))
+  elif children.len == 1:
+    return ok(children[0])
+  else:
+    return ok(newRow(children))
 
 # Helper: Parse SI unit expression
 proc parseSIUnitExpr(stream: var TokenStream): Result[AstNode] =
@@ -2480,6 +2795,23 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
 
         else:
           return err[AstNode](ekInvalidCommand, "Unknown siunitx command: \\" & cmdName, token.position)
+
+      of ctChemical:
+        # Parse \ce{chemical expression}
+        let braceResult = stream.expect(tkLeftBrace)
+        if not braceResult.isOk:
+          return err[AstNode](ekMismatchedBraces, "Expected { after \\ce", token.position)
+
+        # Parse chemical expression
+        let chemResult = parseChemicalExpr(stream)
+        if not chemResult.isOk:
+          return err[AstNode](chemResult.error)
+
+        let closeResult = stream.expect(tkRightBrace)
+        if not closeResult.isOk:
+          return err[AstNode](ekMismatchedBraces, "Expected } after chemical expression", token.position)
+
+        return ok(newChemical(chemResult.value))
 
       of ctMacroDef:
         # Handle \def and \newcommand - these don't produce AST nodes
