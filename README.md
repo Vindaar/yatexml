@@ -17,9 +17,15 @@ A Nim library for compiling LaTeX math expressions to MathML, targeting both JS 
 - **Full Compiler Pipeline**: LaTeX → Lexer → Parser → AST → MathML
 - **Cross-Platform**: Works on both native (C) and JavaScript backends
 - **Compile-Time Execution**: Convert LaTeX to MathML at compile time using Nim macros
-- **Comprehensive**: Supports most common LaTeX math features (fractions, roots, scripts, Greek letters, etc.)
+- **Comprehensive**: 300+ LaTeX commands including advanced packages
+  - Core math: fractions, roots, scripts, matrices, alignment environments
+  - Chemistry notation: mhchem `\ce` command for chemical formulas and reactions
+  - SI units: siunitx package with ranges, prefixes, and custom units
+  - Symbols: Greek letters, operators, relations, arrows, delimiters
+  - Styling: Multiple font variants with proper Unicode rendering
 - **Clean API**: Simple, Result-based error handling
 - **Type-Safe**: Strong typing throughout the compilation pipeline
+- **Production Ready**: Used for real-world HTML export from Emacs Org mode
 
 ## Installation
 
@@ -82,14 +88,18 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
 - Combined: `x_i^2`
 
 ✅ **Commands**
-- Fractions: `\frac{a}{b}`
+- Fractions: `\frac{a}{b}`, `\dfrac{a}{b}`, `\tfrac{a}{b}`
+- Binomials: `\binom{n}{k}`, `\dbinom{n}{k}`, `\tbinom{n}{k}`
 - Square roots: `\sqrt{x}`, `\sqrt[n]{x}`
 - Greek letters: `\alpha`, `\beta`, `\gamma`, etc.
 - Operators: `\times`, `\div`, `\pm`, `\cdot`, etc.
-- Relations: `\ne`, `\le`, `\ge`, `\equiv`, `\approx`, etc.
+- Relations: `\ne`, `\le`, `\ge`, `\equiv`, `\approx`, `\prec`, `\succ`, etc.
+- Negated relations: `\nless`, `\nleq`, `\nsubseteq`, `\ncong`, etc. (33 commands)
+- Chemistry: `\ce{H2O}`, `\ce{CO2 + C -> 2 CO}` (mhchem notation)
 
 ✅ **Styling**
 - `\mathbf{text}` - Bold
+- `\boldsymbol{α}` - Bold italic (for symbols)
 - `\mathit{text}` - Italic
 - `\mathrm{text}` - Roman (upright)
 - `\mathbb{R}` - Blackboard bold
@@ -97,6 +107,8 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
 - `\mathfrak{A}` - Fraktur
 - `\mathsf{text}` - Sans-serif
 - `\mathtt{code}` - Monospace
+- `\textsf{text}` - Sans-serif (in text mode)
+- Font styles use proper Unicode characters for accurate rendering
 
 ✅ **Accents**
 - `\hat{x}`, `\bar{y}`, `\tilde{a}`
@@ -104,10 +116,20 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
 - `\widehat{abc}`, `\widetilde{xyz}`
 - `\overline{AB}`, `\underline{AB}`
 
+✅ **Positioning**
+- `\overset{above}{base}` - Place content above
+- `\underset{below}{base}` - Place content below
+
+✅ **Size Commands**
+- `\tiny` - Tiny text (70%)
+- `\normalsize` - Normal size (100%)
+- `\large` - Large text (120%)
+
 ✅ **Big Operators**
 - `\sum_{i=0}^n` - Summation
 - `\prod_{i=1}^n` - Product
 - `\int_a^b` - Integral
+- `\int\limits_a^b` - Integral with limits above/below (use `\limits` modifier)
 - `\lim_{x \to 0}` - Limit
 - `\max`, `\min` - Max/min
 
@@ -151,6 +173,8 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
 - `\SI{3.14}{\meter\per\second}` - Value with unit
 - `\si{\newton\meter}` - Unit only
 - `\num{1234567}` - Number formatting
+- `\SIrange{10}{20}{\meter}` - Range with unit (10 – 20 m)
+- `\numrange{1}{100}` - Number range (1 – 100)
 - Full SI prefix support (yocto through yotta)
 - 26 SI units (base and derived)
 - Shorthand notation: `\si{km}`, `\si{m.s^{-2}}`
@@ -158,6 +182,16 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
   - Example: `\SI{10}{ft.lbf}` renders "ft·lbf" (imperial units)
   - Example: `\SI{5}{mph}` renders "mph"
   - No fallback to default units - your input is preserved
+
+✅ **Chemistry Notation (mhchem)**
+- `\ce{H2O}` - Chemical formulas with automatic subscripting
+- `\ce{CO2 + C -> 2 CO}` - Chemical reactions with arrows
+- `\ce{H+}`, `\ce{SO4^2-}` - Ion charges as superscripts
+- `\ce{CrO4^2-}`, `\ce{[AgCl2]-}` - Complex ions with brackets
+- `\ce{(NH4)2S}` - Parentheses with subscripts
+- Multi-letter element names (Si, Cr, Fe, etc.) automatically recognized
+- Stoichiometric coefficients with proper spacing
+- Proper upright rendering for chemical elements
 
 ✅ **Unicode Characters**
 - Greek letters: α, β, γ, etc. (direct Unicode input)
@@ -173,12 +207,18 @@ Or copy the styles from `yatexml.css` into your existing stylesheet. These style
 - Argument substitution: `#1`, `#2`, etc.
 - Macro expansion at parse time
 
-### Planned Features (See IMPLEMENTATION_PLAN.md)
+### Recent Enhancements (Nov 2025)
 
-⏳ **Future Enhancements**
-- Advanced compile-time features
-- Macro DSL integration
-- Additional environments (aligned, gather, etc.)
+✅ **Completed**
+- ✅ Chemistry notation (mhchem `\ce` command)
+- ✅ Enhanced siunitx support with range commands
+- ✅ Positioning commands (`\overset`, `\underset`)
+- ✅ Size commands (`\tiny`, `\normalsize`, `\large`)
+- ✅ Fraction and binomial variants
+- ✅ 79 additional symbols and operators
+- ✅ Improved font rendering with Unicode characters
+- ✅ Inline vs block display modes
+- ✅ Alignment environments (aligned, gather, gathered)
 
 ## Architecture
 
@@ -292,12 +332,69 @@ latexToMathML(r"\si{km.s^{-2}}")
 latexToMathML(r"\num{1234567}")
 # Number with formatting
 
+# Range commands
+latexToMathML(r"\SIrange{10}{20}{\meter}")
+# 10 – 20 m (with en-dash)
+
+latexToMathML(r"\numrange{1.5}{2.5}")
+# 1.5 – 2.5
+
 # Custom/unknown units (imperial, etc.) are preserved
 latexToMathML(r"\SI{10}{ft.lbf}")
 # 10 ft·lbf (foot-pound force)
 
 latexToMathML(r"\SI{65}{mph}")
 # 65 mph (miles per hour)
+```
+
+### Chemistry Notation
+
+```nim
+# Chemical formulas
+latexToMathML(r"\ce{H2O}")
+# H₂O
+
+latexToMathML(r"\ce{CaCO3}")
+# CaCO₃
+
+# Chemical reactions
+latexToMathML(r"\ce{CO2 + C -> 2 CO}")
+# CO₂ + C → 2 CO
+
+latexToMathML(r"\ce{2 H2 + O2 -> 2 H2O}")
+# 2 H₂ + O₂ → 2 H₂O
+
+# Ions and charges
+latexToMathML(r"\ce{H+}")
+# H⁺
+
+latexToMathML(r"\ce{SO4^2-}")
+# SO₄²⁻
+
+latexToMathML(r"\ce{[AgCl2]-}")
+# [AgCl₂]⁻
+
+# Complex formulas
+latexToMathML(r"\ce{(NH4)2S}")
+# (NH₄)₂S
+```
+
+### Positioning and Size
+
+```nim
+# Positioning commands
+latexToMathML(r"\overset{def}{=}")
+# Places "def" above =
+
+latexToMathML(r"\underset{x \to 0}{\lim}")
+# Places "x → 0" below lim
+
+# Size commands
+latexToMathML(r"\large E = mc^2")
+# Large equation
+
+latexToMathML(r"\tiny \text{small text}")
+# Tiny text
 ```
 
 ## API Reference
@@ -358,15 +455,29 @@ nimble testjs    # Test JS backend only
 
 ## Development Status
 
-**Current Phase**: Phase 1 Complete ✅
+**Current Status**: Core Implementation Complete ✅ (70% of planned commands implemented)
 
-The foundation is complete with:
-- Working lexer, parser, and MathML generator
-- Support for basic LaTeX math features
-- Full test suite
-- Both runtime and compile-time execution
+yatexml now includes:
+- **Complete foundation**: Working lexer, parser, and MathML generator
+- **300+ LaTeX commands**: Comprehensive coverage of mathematical notation
+- **Advanced features**:
+  - Chemistry notation (mhchem `\ce` command)
+  - SI units with ranges (siunitx package)
+  - User-defined macros and styling
+  - Inline and block display modes
+  - Alignment environments with proper CSS
+- **Full test suite**: Both C and JS backends
+- **Compile-time execution**: Zero runtime overhead option
+- **Production ready**: Used for Emacs Org mode HTML export
 
-See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for the complete roadmap.
+Recent additions (Nov 2025):
+- 79 new commands (positioning, negated relations, ordering, symbols, sizing)
+- Chemistry notation support
+- Enhanced font rendering with Unicode characters
+- siunitx range commands
+- Fraction and binomial variants
+
+See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for remaining features and roadmap.
 
 ## Contributing
 
