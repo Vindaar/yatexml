@@ -118,10 +118,15 @@
   /**
    * Pre-scan document to collect all labels and assign equation numbers
    * This must be done in a first pass before rendering
+   *
+   * IMPORTANT: We must find all numbered environments and sort by position
+   * to assign numbers in document order, not by delimiter type order.
    */
   function prescanForLabels(element, config) {
     const text = element.textContent || element.innerText || '';
+    const allMatches = [];
 
+    // Collect all numbered environment matches with their positions
     for (const delim of config.delimiters) {
       if (!delim.numbered) continue;
 
@@ -131,13 +136,23 @@
 
       let match;
       while ((match = pattern.exec(text)) !== null) {
-        equationCounter++;
-        const content = match[1];
-        const labelInfo = extractLabel(content);
+        allMatches.push({
+          start: match.index,
+          content: match[1]
+        });
+      }
+    }
 
-        if (labelInfo.label) {
-          labelMap[labelInfo.label] = equationCounter;
-        }
+    // Sort by position in document
+    allMatches.sort((a, b) => a.start - b.start);
+
+    // Assign equation numbers in document order
+    for (const match of allMatches) {
+      equationCounter++;
+      const labelInfo = extractLabel(match.content);
+
+      if (labelInfo.label) {
+        labelMap[labelInfo.label] = equationCounter;
       }
     }
 
