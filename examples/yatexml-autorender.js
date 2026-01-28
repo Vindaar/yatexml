@@ -221,7 +221,19 @@
     const text = textNode.textContent;
     const matches = findMathInText(text, config.delimiters);
 
-    if (matches.length === 0) return;
+    // Check if there are any references to process (even without math)
+    const hasReferences = /\\(eq)?ref\{[^}]+\}/.test(text);
+
+    if (matches.length === 0 && !hasReferences) return;
+
+    // If no math but has references, just process references
+    if (matches.length === 0 && hasReferences) {
+      const processedText = processReferences(text);
+      const span = document.createElement('span');
+      span.innerHTML = processedText;
+      textNode.parentNode.replaceChild(span, textNode);
+      return;
+    }
 
     // Build a document fragment with text and MathML nodes
     const fragment = document.createDocumentFragment();
