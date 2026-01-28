@@ -113,6 +113,13 @@ proc initCommandTable(): Table[string, CommandInfo] =
   result["ll"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["gg"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["equiv"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["coloneq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["coloneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Coloneqq"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["eqqcolon"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["Eqqcolon"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["colonapprox"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
+  result["colonsim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["sim"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["approx"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
   result["asymp"] = CommandInfo(cmdType: ctOperator, numArgs: 0)
@@ -840,6 +847,12 @@ proc operatorToUnicode(name: string): string =
   of "ll": "\u226A"
   of "gg": "\u226B"
   of "equiv": "\u2261"
+  of "coloneq", "coloneqq": "\u2254"  # ≔ COLON EQUALS
+  of "Coloneqq": "\u2A74"             # ⩴ DOUBLE COLON EQUAL
+  of "eqqcolon": "\u2255"             # ≕ EQUALS COLON
+  of "Eqqcolon": "\u2A75"             # ⩵ TWO CONSECUTIVE EQUALS SIGNS (fallback)
+  of "colonapprox": "\u2A70"          # ⩰ APPROXIMATELY EQUAL OR EQUAL TO
+  of "colonsim": "\u2A73"             # ⩳ EQUALS SIGN ABOVE TILDE OPERATOR
   of "sim": "\u223C"
   of "approx": "\u2248"
   of "gets": "\u2190"
