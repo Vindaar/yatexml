@@ -143,6 +143,8 @@ proc initUnicodeMappings*() =
   unicodeToLatex["⇒"] = UnicodeMapping(latex: "⇒", category: mcRelation)
   unicodeToLatex["⇐"] = UnicodeMapping(latex: "⇐", category: mcRelation)
   unicodeToLatex["⇔"] = UnicodeMapping(latex: "⇔", category: mcRelation)
+  unicodeToLatex["↦"] = UnicodeMapping(latex: "↦", category: mcRelation)  # mapsto U+21A6
+  unicodeToLatex["⟼"] = UnicodeMapping(latex: "⟼", category: mcRelation)  # longmapsto U+27FC
 
   # Superscript digits and signs (U+2070-U+2079, U+207B)
   unicodeToLatex["⁰"] = UnicodeMapping(latex: "0", category: mcSuperscript)

@@ -4,6 +4,11 @@
  * Automatically converts LaTeX math delimiters in HTML documents to MathML.
  * Supports: $...$, $$...$$, \(...\), \[...\], \begin{equation}...\end{equation}
  *
+ * Features:
+ * - Automatic equation numbering for numbered environments
+ * - Label support with \label{...}
+ * - Reference support with \ref{...} and \eqref{...}
+ *
  * Usage:
  *   <script src="latexToMathML.js"></script>
  *   <script src="yatexml-autorender.js"></script>
@@ -17,24 +22,31 @@
 (function(global) {
   'use strict';
 
+  // Global state for equation numbering and labels
+  let equationCounter = 0;
+  const labelMap = {}; // Maps label names to equation numbers
+
   // Default configuration
   const defaultConfig = {
     delimiters: [
-      // Display math (block-level)
-      { left: '$$', right: '$$', display: true },
-      { left: '\\[', right: '\\]', display: true },
-      { left: '\\begin{equation}', right: '\\end{equation}', display: true },
-      { left: '\\begin{equation*}', right: '\\end{equation*}', display: true },
-      { left: '\\begin{align}', right: '\\end{align}', display: true },
-      { left: '\\begin{align*}', right: '\\end{align*}', display: true },
-      { left: '\\begin{aligned}', right: '\\end{aligned}', display: true },
-      { left: '\\begin{aligned*}', right: '\\end{aligned*}', display: true },
-      { left: '\\begin{gather}', right: '\\end{gather}', display: true },
-      { left: '\\begin{gather*}', right: '\\end{gather*}', display: true },
+      // Display math (block-level) - numbered environments
+      { left: '\\begin{equation}', right: '\\end{equation}', display: true, numbered: true },
+      { left: '\\begin{align}', right: '\\end{align}', display: true, numbered: true },
+      { left: '\\begin{gather}', right: '\\end{gather}', display: true, numbered: true },
+
+      // Display math (block-level) - unnumbered environments
+      { left: '$$', right: '$$', display: true, numbered: false },
+      { left: '\\[', right: '\\]', display: true, numbered: false },
+      { left: '\\begin{equation*}', right: '\\end{equation*}', display: true, numbered: false },
+      { left: '\\begin{align*}', right: '\\end{align*}', display: true, numbered: false },
+      { left: '\\begin{aligned}', right: '\\end{aligned}', display: true, numbered: false },
+      { left: '\\begin{aligned*}', right: '\\end{aligned*}', display: true, numbered: false },
+      { left: '\\begin{gather*}', right: '\\end{gather*}', display: true, numbered: false },
+      { left: '\\begin{gathered}', right: '\\end{gathered}', display: true, numbered: false },
 
       // Inline math
-      { left: '$', right: '$', display: false },
-      { left: '\\(', right: '\\)', display: false },
+      { left: '$', right: '$', display: false, numbered: false },
+      { left: '\\(', right: '\\)', display: false, numbered: false },
     ],
 
     // Elements to ignore (won't scan for LaTeX inside these)
@@ -42,6 +54,9 @@
 
     // Class to add to processed elements (to avoid re-processing)
     processedClass: 'yatexml-processed',
+
+    // Enable equation numbering
+    equationNumbering: true,
 
     // Error handling
     onError: (latex, error) => {
@@ -61,10 +76,80 @@
   }
 
   /**
+   * Extract label from LaTeX string
+   * Returns { label: string|null, latex: string } where latex has label removed
+   */
+  function extractLabel(latex) {
+    const labelMatch = latex.match(/\\label\{([^}]+)\}/);
+    if (labelMatch) {
+      return {
+        label: labelMatch[1],
+        latex: latex.replace(/\\label\{[^}]+\}\s*/g, '')
+      };
+    }
+    return { label: null, latex: latex };
+  }
+
+  /**
+   * Replace \ref{...} and \eqref{...} with equation numbers
+   */
+  function processReferences(text) {
+    // Replace \eqref{label} with (number) as a link
+    text = text.replace(/\\eqref\{([^}]+)\}/g, (match, label) => {
+      const eqNum = labelMap[label];
+      if (eqNum !== undefined) {
+        return `<a href="#eq:${label}" class="eqref">(${eqNum})</a>`;
+      }
+      return `<span class="eqref-error">(??)</span>`;
+    });
+
+    // Replace \ref{label} with number as a link
+    text = text.replace(/\\ref\{([^}]+)\}/g, (match, label) => {
+      const eqNum = labelMap[label];
+      if (eqNum !== undefined) {
+        return `<a href="#eq:${label}" class="eqref">${eqNum}</a>`;
+      }
+      return `<span class="eqref-error">??</span>`;
+    });
+
+    return text;
+  }
+
+  /**
+   * Pre-scan document to collect all labels and assign equation numbers
+   * This must be done in a first pass before rendering
+   */
+  function prescanForLabels(element, config) {
+    const text = element.textContent || element.innerText || '';
+
+    for (const delim of config.delimiters) {
+      if (!delim.numbered) continue;
+
+      const leftEsc = escapeRegex(delim.left);
+      const rightEsc = escapeRegex(delim.right);
+      const pattern = new RegExp(`${leftEsc}([\\s\\S]*?)${rightEsc}`, 'g');
+
+      let match;
+      while ((match = pattern.exec(text)) !== null) {
+        equationCounter++;
+        const content = match[1];
+        const labelInfo = extractLabel(content);
+
+        if (labelInfo.label) {
+          labelMap[labelInfo.label] = equationCounter;
+        }
+      }
+    }
+
+    // Reset counter for actual rendering pass
+    equationCounter = 0;
+  }
+
+  /**
    * Find all LaTeX expressions in text using configured delimiters
    */
   function findMathInText(text, delimiters) {
-      const results = [];
+    const results = [];
 
     for (const delim of delimiters) {
       const leftEsc = escapeRegex(delim.left);
@@ -92,6 +177,7 @@
           start: match.index,
           end: match.index + match[0].length,
           display: delim.display,
+          numbered: delim.numbered,
           fullMatch: match[0],
         });
       }
@@ -145,7 +231,26 @@
       // Add text before the match
       if (match.start > lastIndex) {
         const textBefore = text.substring(lastIndex, match.start);
-        fragment.appendChild(document.createTextNode(textBefore));
+        // Process references in the text before
+        const processedText = processReferences(textBefore);
+        if (processedText !== textBefore) {
+          const span = document.createElement('span');
+          span.innerHTML = processedText;
+          fragment.appendChild(span);
+        } else {
+          fragment.appendChild(document.createTextNode(textBefore));
+        }
+      }
+
+      // Extract label and prepare latex
+      const labelInfo = extractLabel(match.latex);
+      let eqNumber = null;
+      let eqLabel = labelInfo.label;
+
+      // Assign equation number for numbered environments
+      if (match.numbered && config.equationNumbering) {
+        equationCounter++;
+        eqNumber = equationCounter;
       }
 
       // Convert LaTeX to MathML
@@ -154,31 +259,58 @@
           throw new Error('latexToMathML function not found. Make sure latexToMathML.js is loaded.');
         }
 
-          // Pass displayStyle parameter: true for block math ($$...$$), false for inline ($...$)
-	  console.log("Passing match: ", match.latex);
-        let mathml = latexToMathML(match.latex, match.display);
+        // Pass displayStyle parameter: true for block math ($$...$$), false for inline ($...$)
+        let mathml = latexToMathML(labelInfo.latex, match.display);
 
         // Handle ERROR response
         if (mathml === 'ERROR' || !mathml || typeof mathml !== 'string') {
           throw new Error('Conversion returned error');
         }
 
-        // Wrap in a span to mark as processed and control display
-        const span = document.createElement('span');
-        span.classList.add('yatexml-rendered');
-        if (match.display) {
-          span.classList.add('yatexml-display');
-          span.style.display = 'block';
-          span.style.textAlign = 'center';
-          span.style.margin = '1em 0';
-        } else {
-          span.classList.add('yatexml-inline');
-          span.style.display = 'inline';
-        }
+        if (match.display && eqNumber !== null) {
+          // Create equation container with number
+          const container = document.createElement('div');
+          container.className = 'equation-container yatexml-rendered';
+          if (eqLabel) {
+            container.id = `eq:${eqLabel}`;
+          }
 
-        // Insert the MathML
-        span.innerHTML = mathml;
-        fragment.appendChild(span);
+          // Equation content (centered)
+          const eqContent = document.createElement('div');
+          eqContent.className = 'equation-content';
+          eqContent.innerHTML = mathml;
+
+          // Equation number (right-aligned)
+          const eqNumSpan = document.createElement('span');
+          eqNumSpan.className = 'equation-number';
+          eqNumSpan.textContent = `(${eqNumber})`;
+
+          container.appendChild(eqContent);
+          container.appendChild(eqNumSpan);
+          fragment.appendChild(container);
+        } else {
+          // Regular display or inline math (no number)
+          const span = document.createElement('span');
+          span.classList.add('yatexml-rendered');
+
+          if (eqLabel) {
+            span.id = `eq:${eqLabel}`;
+          }
+
+          if (match.display) {
+            span.classList.add('yatexml-display');
+            span.style.display = 'block';
+            span.style.textAlign = 'center';
+            span.style.margin = '1em 0';
+          } else {
+            span.classList.add('yatexml-inline');
+            span.style.display = 'inline';
+          }
+
+          // Insert the MathML
+          span.innerHTML = mathml;
+          fragment.appendChild(span);
+        }
 
       } catch (err) {
         // Error handling
@@ -200,7 +332,16 @@
 
     // Add remaining text
     if (lastIndex < text.length) {
-      fragment.appendChild(document.createTextNode(text.substring(lastIndex)));
+      const textAfter = text.substring(lastIndex);
+      // Process references in the text after
+      const processedText = processReferences(textAfter);
+      if (processedText !== textAfter) {
+        const span = document.createElement('span');
+        span.innerHTML = processedText;
+        fragment.appendChild(span);
+      } else {
+        fragment.appendChild(document.createTextNode(textAfter));
+      }
     }
 
     // Replace the text node with the fragment
@@ -236,6 +377,16 @@
   }
 
   /**
+   * Reset equation numbering (call before re-rendering)
+   */
+  function resetNumbering() {
+    equationCounter = 0;
+    for (const key in labelMap) {
+      delete labelMap[key];
+    }
+  }
+
+  /**
    * Main auto-render function
    */
   function autoRender(element, userConfig = {}) {
@@ -252,6 +403,16 @@
       return;
     }
 
+    // Reset state for fresh render
+    resetNumbering();
+
+    // First pass: collect labels and assign equation numbers
+    prescanForLabels(element, config);
+
+    // Reset counter for actual rendering
+    equationCounter = 0;
+
+    // Second pass: render equations and resolve references
     walkNode(element, config);
   }
 
@@ -279,11 +440,20 @@
     }
   }
 
+  /**
+   * Get the current label map (for debugging)
+   */
+  function getLabels() {
+    return { ...labelMap };
+  }
+
   // Export API
   const yatexml = {
     autoRender,
     renderToString,
-    version: '1.0.0',
+    resetNumbering,
+    getLabels,
+    version: '1.1.0',
   };
 
   // Export to global scope

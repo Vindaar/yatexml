@@ -529,7 +529,7 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
   var tableContent = ""
 
   # Check if this is an alignment environment (needs padding columns)
-  let isAlignmentEnv = node.matrixType in ["align", "aligned", "gather", "gathered"]
+  let isAlignmentEnv = node.matrixType in ["align", "aligned", "gather", "gathered", "equation"]
 
   for row in node.matrixRows:
     var rowContent = ""
@@ -555,7 +555,7 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
           let padding = if cellIdx mod 2 == 0: "padding-left:1em;padding-right:0em;"
                         else: "padding-left:0em;padding-right:0em;"
           cellAttrs.add(("style", padding))
-        of "gather", "gathered":
+        of "gather", "gathered", "equation":
           # Center alignment with symmetric padding
           cellAttrs.add(("class", "tml-center"))
           cellAttrs.add(("style", "padding-left:0em;padding-right:0em;"))
@@ -588,8 +588,8 @@ proc generateMatrix(node: AstNode, options: MathMLOptions): string =
     # Add displaystyle and width for proper rendering
     tableAttrs.add(("displaystyle", "true"))
     tableAttrs.add(("style", "width:100%"))
-  of "gather", "gathered":
-    # Gather environments: center all equations with padding
+  of "gather", "gathered", "equation":
+    # Gather/equation environments: center all equations with padding
     if node.matrixRows.len > 0 and node.matrixRows[0].len > 0:
       var colAlign = "center"  # Left padding
       for i in 0 ..< node.matrixRows[0].len:

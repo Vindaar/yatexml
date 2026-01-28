@@ -13,7 +13,7 @@ type
     ctFrac, ctBinomial, ctSqrt, ctGreek, ctOperator, ctStyle, ctMathStyle, ctAccent,
     ctBigOp, ctFunction, ctDelimiter, ctSizedDelimiter, ctMatrix, ctText, ctSpace, ctColor, ctPhantom,
     ctSIunitx, ctSIUnit, ctSIPrefix, ctSIUnitOp, ctMacroDef, ctInfixFrac,
-    ctOperatorName, ctBmod, ctPmod, ctOverUnder, ctMathSize, ctChemical
+    ctOperatorName, ctBmod, ctPmod, ctOverUnder, ctMathSize, ctChemical, ctLabel
 
   CommandInfo = object
     cmdType: CommandType
@@ -502,6 +502,9 @@ proc initCommandTable(): Table[string, CommandInfo] =
 
   # Phantom elements
   result["mathstrut"] = CommandInfo(cmdType: ctPhantom, numArgs: 0)
+
+  # Label (consumed but produces no output)
+  result["label"] = CommandInfo(cmdType: ctLabel, numArgs: 1)
 
   # Accents
   result["hat"] = CommandInfo(cmdType: ctAccent, numArgs: 1)
@@ -2165,6 +2168,15 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
         # Phantom elements like \mathstrut have no arguments
         return ok(newPhantom())
 
+      of ctLabel:
+        # Label command - consume the argument but produce no output
+        # Used for equation/section labels in LaTeX, not relevant for MathML rendering
+        let argResult = parseGroup(stream)
+        if not argResult.isOk:
+          return err[AstNode](argResult.error)
+        # Return empty row (produces no MathML output)
+        return ok(newRow(@[]))
+
       of ctAccent:
         let accentKind = case cmdName
           of "hat": akHat
@@ -2431,7 +2443,7 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
 
           # Check if it's a matrix or alignment environment
           if envName in ["matrix", "pmatrix", "bmatrix", "vmatrix", "Vmatrix", "cases",
-                         "align", "aligned", "gather", "gathered"]:
+                         "align", "aligned", "gather", "gathered", "equation"]:
             return parseMatrixEnvironment(stream, envName)
           else:
             return err[AstNode](ekInvalidCommand, "Unknown environment: " & envName, token.position)
@@ -2891,7 +2903,7 @@ proc parseMatrixEnvironment(stream: var TokenStream, matrixType: string): Result
   var currentRow: seq[AstNode] = @[]
 
   # Check if this is an alignment environment (needs expression-level parsing)
-  let isAlignmentEnv = matrixType in ["align", "aligned", "gather", "gathered"]
+  let isAlignmentEnv = matrixType in ["align", "aligned", "gather", "gathered", "equation"]
 
   # Track if we're at the start of a new cell
   var startOfCell = true

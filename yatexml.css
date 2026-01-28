@@ -34,3 +34,39 @@
     text-align: -webkit-left;
   }
 }
+
+/* Equation numbering styles */
+.equation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+.equation-content {
+  flex: 1;
+  text-align: center;
+}
+
+.equation-number {
+  position: absolute;
+  right: 0;
+  font-size: 1em;
+  color: inherit;
+}
+
+/* Equation references */
+a.eqref {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.eqref:hover {
+  text-decoration: underline;
+}
+
+.eqref-error {
+  color: red;
+}
