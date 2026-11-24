@@ -1607,6 +1607,16 @@ suite "Accent Tests":
     check "⏜" in result.value
 
 suite "Fraction Variants":
+  test "Unbraced fraction arguments consume one token each":
+    for (short, grouped) in [(r"\tfrac12 at^2", r"\tfrac{1}{2} at^2"),
+                             (r"\frac123", r"\frac{1}{2}3"),
+                             (r"\dfrac1{23}", r"\dfrac{1}{23}"),
+                             (r"\frac xy", r"\frac{x}{y}")]:
+      let result = latexToMathML(short)
+      require result.isOk
+      check result.value == latexToMathML(grouped).value
+    check not latexToMathML(r"\frac1").isOk
+
   test "Display style fraction (\\dfrac)":
     let result = latexToMathML(r"\dfrac{a}{b}")
     check result.isOk

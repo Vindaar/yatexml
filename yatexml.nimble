@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "yatexml contributors"
 description   = "Yet Another TeX to MathML Compiler - A Nim library for compiling LaTeX math to MathML"
 license       = "MIT"

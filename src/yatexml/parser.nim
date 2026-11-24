@@ -2009,6 +2009,15 @@ proc expandMacroInStream(stream: var TokenStream, macroName: string, macroDef: m
   let expandedTokens = macro_module.expandMacro(globalMacroRegistry, macroDef, args)
   return ok(expandedTokens)
 
+proc parseFractionArgument(stream: var TokenStream): Result[AstNode] =
+  # TeX takes a single token for an unbraced argument. The lexer groups digits.
+  let token = stream.peek()
+  if token.kind == tkNumber and token.value.len > 1:
+    stream.tokens[stream.position].value = token.value[1 .. ^1]
+    inc stream.tokens[stream.position].position
+    return ok(newNumber(token.value[0 .. 0]))
+  return parsePrimary(stream)
+
 proc parsePrimary(stream: var TokenStream): Result[AstNode] =
   ## Parse a primary expression (atom)
   let token = stream.peek()
@@ -2061,10 +2070,10 @@ proc parsePrimary(stream: var TokenStream): Result[AstNode] =
       case cmdInfo.cmdType
       of ctFrac:
         # Parse numerator and denominator
-        let numResult = parseGroup(stream)
+        let numResult = parseFractionArgument(stream)
         if not numResult.isOk:
           return err[AstNode](numResult.error)
-        let denomResult = parseGroup(stream)
+        let denomResult = parseFractionArgument(stream)
         if not denomResult.isOk:
           return err[AstNode](denomResult.error)
         # \cfrac is a continued fraction that should maintain display style
